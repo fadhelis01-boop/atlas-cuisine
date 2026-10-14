@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.tmp/
+# données personnelles : jamais publiées
+recettes-classees/prive/
+# matière de travail des illustrations (volumineuse ; les choix et crédits sont dans selections.json et images.json)
+illustrations/candidats/
+illustrations/originaux/
+illustrations/planches/
+illustrations/*.log
+illustrations/apercu*.jpg
+__pycache__/

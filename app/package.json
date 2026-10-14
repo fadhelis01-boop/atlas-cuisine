@@ -1,0 +1,29 @@
+{
+  "name": "atlas-cuisine",
+  "version": "1.0.0",
+  "description": "ATLAS — cuisines du monde, faites maison en France : recettes par région, par nom ou par ingrédients, sans porc / sans alcool avec substitutions, audio, techniques, pains, sauces, fêtes, zéro déchet.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "cd ../bible && python export_app_data.py",
+    "dev": "vite",
+    "test": "rolldown tests/engine.test.ts --platform node --format esm -o .tmp/engine.mjs --log-level warn && node .tmp/engine.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run test && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && node scripts/deploy.mjs",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "rolldown": "*",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
+}
