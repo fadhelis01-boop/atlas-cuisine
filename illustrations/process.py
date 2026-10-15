@@ -41,11 +41,22 @@ def crop43(im, fx=0.5, fy=0.5, zoom=1.0):
     x0 = min(max(0, fx * w - cw / 2), w - cw); y0 = min(max(0, fy * h - ch / 2), h - ch)
     return im.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch)))
 
+def write_manifests(man, full_path, man_path):
+    """Trois fichiers : le complet (ici), l'essentiel pour l'appli (chargé au démarrage : chemin, tailles, couleur)
+    et les crédits (chargés seulement quand on les affiche), pour ne pas alourdir le démarrage de l'application."""
+    json.dump(man, open(full_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {})} for k, v in man.items()}
+    json.dump(lite, open(man_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    cred = {k: {f: v.get(f, "") for f in ("author", "license", "licenseUrl", "page", "source", "title")} for k, v in man.items()}
+    json.dump(cred, open(os.path.join(os.path.dirname(man_path), "credits.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+
 def run(only=""):
     cand = json.load(open(os.path.join(HERE, "candidats.json"), encoding="utf-8"))
     sel = json.load(open(os.path.join(HERE, "selections.json"), encoding="utf-8"))
     man_path = os.path.join(APP, "src", "data", "images.json")
-    man = json.load(open(man_path, encoding="utf-8")) if os.path.exists(man_path) else {}
+    full_path = os.path.join(HERE, "images_full.json")  # manifeste complet (source de vérité, crédits compris)
+    src = full_path if os.path.exists(full_path) else man_path
+    man = json.load(open(src, encoding="utf-8")) if os.path.exists(src) else {}
     cache = os.path.join(HERE, "originaux"); os.makedirs(cache, exist_ok=True)
     for key, s in sel.items():
         if only and only not in key: continue
@@ -63,7 +74,7 @@ def run(only=""):
         im = Image.open(src_file); im = ImageOps.exif_transpose(im).convert("RGB")
         im = grade(crop43(im, s.get("fx", 0.5), s.get("fy", 0.5), s.get("zoom", 1.0)), s.get("warm", 1.0))
         os.makedirs(os.path.join(OUT, kind), exist_ok=True)
-        for w in SIZES:
+        for w in (SIZES[:2] if kind == "ingredient" else SIZES):  # vignettes du dictionnaire : 1200 px inutile
             if im.width < w * 0.75 and w != SIZES[0]: continue  # pas d'agrandissement artificiel
             im.resize((w, int(w / RATIO)), Image.LANCZOS).save(os.path.join(OUT, kind, f"{ident}-{w}.webp"), "WEBP", quality=78, method=6)
         sizes = [w for w in SIZES if os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.webp"))]
@@ -71,9 +82,14 @@ def run(only=""):
         man[key] = {"path": f"img/{kind}/{ident}", "sizes": sizes, "color": "#%02x%02x%02x" % avg, "author": c["author"] or "Auteur·e inconnu·e",
                     "license": c["license"], "licenseUrl": c["license_url"], "page": c["page"], "source": c["src"], "title": c["title"], "kind": "photo"}
         print("ok", key, sizes, flush=True)
-    json.dump(dict(sorted(man.items())), open(man_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    write_manifests(dict(sorted(man.items())), full_path, man_path)
     total = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(OUT) for f in fs)
     print(f"{len(man)} images · {total / 1e6:.1f} Mo")
 
 if __name__ == "__main__":
-    run(sys.argv[1] if len(sys.argv) > 1 else "")
+    if sys.argv[1:] == ["--manifestes"]:  # régénère seulement les manifestes de l'appli à partir du complet
+        full = os.path.join(HERE, "images_full.json")
+        mp = os.path.join(APP, "src", "data", "images.json")
+        write_manifests(json.load(open(full if os.path.exists(full) else mp, encoding="utf-8")), full, mp)
+    else:
+        run(sys.argv[1] if len(sys.argv) > 1 else "")
