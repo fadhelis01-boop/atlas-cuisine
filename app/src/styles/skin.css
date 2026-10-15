@@ -207,3 +207,4 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .salt-line .qty { font-weight: 700; }
 .beginner { display: flex; gap: 12px; align-items: center; margin: 12px 0; color: var(--text); text-decoration: none; border-left: 5px solid var(--saffron); }
 .beginner-ic { font-size: 2rem; }
+.search-filters { margin: 10px 0; } .search-filters summary { cursor: pointer; font-weight: 600; min-height: 40px; display: flex; align-items: center; }
