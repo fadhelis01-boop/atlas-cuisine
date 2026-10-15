@@ -3,6 +3,9 @@ import App from "./App";
 import "./styles/app.css";
 import "./styles/skin.css";
 import { registerServiceWorker } from "./lib/pwa";
+import { installErrorLog } from "./lib/errlog";
+
+installErrorLog();
 
 createRoot(document.getElementById("root")!).render(<App />);
 registerServiceWorker();

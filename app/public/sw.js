@@ -46,13 +46,21 @@ async function networkFirst(req, fallbackUrl) {
   }
 }
 
+// plafond du cache photos (audit dév 🟠 8) : environ 400 images, soit 15 à 25 Mo ; les plus anciennes partent d'abord
+const IMG_MAX = 400;
+let imgPuts = 0;
+async function trimImages(cache) {
+  const keys = await cache.keys(); // ordre d'insertion
+  for (const k of keys.slice(0, Math.max(0, keys.length - IMG_MAX))) await cache.delete(k);
+}
+
 async function imgCache(req) {
   const cache = await caches.open(IMG_CACHE);
   const hit = await cache.match(req);
   if (hit) return hit;
   try {
     const res = await fetch(req);
-    if (res.ok) cache.put(req, res.clone());
+    if (res.ok) { await cache.put(req, res.clone()); if (++imgPuts % 25 === 0) trimImages(cache); }
     return res;
   } catch (e) {
     return Response.error(); // hors ligne et photo jamais vue : l'appli affiche l'illustration de secours

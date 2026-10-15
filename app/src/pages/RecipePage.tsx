@@ -1,4 +1,4 @@
-import { finishFor } from "../lib/dressage";
+import { balanceOf, finishFor } from "../lib/dressage";
 import { rescueFor } from "../lib/rescue";
 import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
@@ -8,7 +8,7 @@ import { ALLERGENS, INGREDIENTS, MACRO_BY_ID, RECIPE_BY_ID } from "../lib/data";
 import { evaluateLines, verdict } from "../lib/engine";
 import { href } from "../lib/router";
 import { pushRecent, setState, toggleFavorite, uid, useProfile, useStore } from "../lib/store";
-import { durationsIn, minutes, plain, scaleQty } from "../lib/text";
+import { durationsIn, gestureLabel, minutes, ovenPlan, plain, scaleQty } from "../lib/text";
 import { speak, stopSpeaking, ttsAvailable } from "../lib/speech";
 import { startTimer } from "../lib/timers";
 import { techniqueFor, youtubeSearch } from "../lib/techniques";
@@ -38,8 +38,7 @@ function SeasonBadge({ r }: { r: Recipe }) {
 /** Ce qu'un débutant doit savoir avant d'allumer le feu : matériel, préchauffage, ingrédients à sortir à l'avance. */
 function BeforeYouStart({ r }: { r: Recipe }) {
   const all = r.steps.join(" ");
-  const temp = all.match(/(\d{2,3}) ?°C(?: \(th\. ?[\d-]+\))?/);
-  const oven = /four|enfourn/i.test(all) && temp;
+  const oven = ovenPlan(r.steps);
   const soft = /pommade|beurre mou|température ambiante|sors .{0,40}avant/i.test(all + " " + r.ingredients.map((l) => l.label).join(" "));
   const longRest = r.rest >= 240;
   return (
@@ -48,7 +47,7 @@ function BeforeYouStart({ r }: { r: Recipe }) {
       <ul className="small">
         <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
         {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
-        {oven && <li>Préchauffe le four à <strong>{temp![0]}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
+        {oven && <li>Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
         {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
         {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
       </ul>
@@ -85,6 +84,7 @@ function FinishBlock({ r }: { r: Recipe }) {
       {f.taste && <p><strong>Goûte et rectifie.</strong> {f.taste}</p>}
       <p>{f.plate}</p>
       {f.green && <p className="small">{f.green}</p>}
+      {balanceOf(r) && <p className="small">🥗 {balanceOf(r)}</p>}
       <p className="small"><a href={href("/technique/presenter-une-assiette")}>Les gestes pour présenter une assiette →</a></p>
     </div>
   );
@@ -240,7 +240,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
                 <Rich text={s} />
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
-                    {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · étape ${i + 1}`, d.seconds, r.id)}>⏱ {d.label}</button>)}
+                    {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}>⏱ {d.label}</button>)}
                   </div>
                 )}
               </li>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { href, useRoute } from "./lib/router";
 import { useStore } from "./lib/store";
 import { useTimerLoop } from "./lib/timers";
@@ -9,27 +9,32 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Region from "./pages/Region";
 import Search from "./pages/Search";
-import Frigo from "./pages/Frigo";
-import Courses from "./pages/Courses";
 import RecipePage from "./pages/RecipePage";
-import Cook from "./pages/Cook";
-import { TechniquesPage, TechniquePage } from "./pages/Techniques";
-import Pains from "./pages/Pains";
-import Sauces from "./pages/Sauces";
-import Fetes from "./pages/Fetes";
-import MenuPage from "./pages/Menu";
-import ZeroDechet from "./pages/ZeroDechet";
-import Enfants from "./pages/Enfants";
-import Imports from "./pages/Imports";
-import Biblio from "./pages/Biblio";
-import Profil from "./pages/Profil";
-import Onboarding from "./pages/Onboarding";
-import Credits from "./pages/Credits";
 import { DictionaryPage, IngredientPage } from "./pages/Dictionnaire";
-import Catalogue from "./pages/Catalogue";
-import Apprendre from "./pages/Apprendre";
-import Semaine from "./pages/Semaine";
 import ErrorBoundary from "./components/ErrorBoundary";
+
+// pages chargées à la demande (audit dév 🟠 8) : l'accueil, les fiches et la recherche restent dans le fichier principal
+const Frigo = lazy(() => import("./pages/Frigo"));
+const Courses = lazy(() => import("./pages/Courses"));
+const Cook = lazy(() => import("./pages/Cook"));
+const TechniquesPage = lazy(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquesPage })));
+const TechniquePage = lazy(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquePage })));
+const Pains = lazy(() => import("./pages/Pains"));
+const Sauces = lazy(() => import("./pages/Sauces"));
+const Fetes = lazy(() => import("./pages/Fetes"));
+const MenuPage = lazy(() => import("./pages/Menu"));
+const ZeroDechet = lazy(() => import("./pages/ZeroDechet"));
+const Enfants = lazy(() => import("./pages/Enfants"));
+const Imports = lazy(() => import("./pages/Imports"));
+const Biblio = lazy(() => import("./pages/Biblio"));
+const Profil = lazy(() => import("./pages/Profil"));
+const Onboarding = lazy(() => import("./pages/Onboarding"));
+const Credits = lazy(() => import("./pages/Credits"));
+const Catalogue = lazy(() => import("./pages/Catalogue"));
+const Apprendre = lazy(() => import("./pages/Apprendre"));
+const Semaine = lazy(() => import("./pages/Semaine"));
+
+const Loading = () => <main className="page" aria-busy="true"><p className="meta">Chargement…</p></main>;
 
 const TABS = [
   { to: "/", label: "Accueil", icon: "🏠", match: [""] },
@@ -65,8 +70,8 @@ export default function App() {
   }, []);
 
   const [p0, p1] = route.path;
-  if (p0 === "cuisine" && p1) return <Cook id={p1} />;
-  if (!onboarded && p0 !== "profil") return <Onboarding />;
+  if (p0 === "cuisine" && p1) return <Suspense fallback={<Loading />}><Cook id={p1} /></Suspense>;
+  if (!onboarded && p0 !== "profil") return <Suspense fallback={<Loading />}><Onboarding /></Suspense>;
 
   let page;
   switch (p0 ?? "") {
@@ -113,7 +118,7 @@ export default function App() {
         {pwa.updateReady && (
           <div className="update" role="status">Une nouvelle version d'ATLAS est prête. <button className="btn small" onClick={applyUpdate}>Mettre à jour</button></div>
         )}
-        <ErrorBoundary resetKey={route.path.join("/")}>{page}</ErrorBoundary>
+        <ErrorBoundary resetKey={route.path.join("/")}><Suspense fallback={<Loading />}>{page}</Suspense></ErrorBoundary>
       </div>
       <TimerDock />
       <VideoHost />

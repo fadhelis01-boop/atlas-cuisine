@@ -8,6 +8,25 @@ import { exportData, importData, resetAll, setState, useStore } from "../lib/sto
 import { frenchVoices, speak, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { checkForAppUpdate, isIos, isStandalone, promptInstall, usePwa } from "../lib/pwa";
 import type { Profile } from "../lib/types";
+import { clearErrors, readErrors } from "../lib/errlog";
+
+/** Journal d'erreurs local : à copier pour signaler un problème (rien n'est envoyé automatiquement). */
+function ErrorLog() {
+  const [list, setList] = useState(readErrors);
+  const [copied, setCopied] = useState(false);
+  if (!list.length) return <p className="small">Aucune erreur enregistrée sur cet appareil. 👍</p>;
+  const text = list.map((e) => `${e.at} · ${e.where} · ${e.msg}`).join("\n");
+  return (
+    <>
+      <p className="small">{list.length} erreur(s) récente(s), gardées seulement sur cet appareil. Copie-les pour signaler un problème.</p>
+      <pre className="errlog">{text}</pre>
+      <div className="row">
+        <button className="btn small ghost" onClick={() => { void navigator.clipboard?.writeText(text).then(() => setCopied(true)); }}>{copied ? "Copié" : "Copier"}</button>
+        <button className="btn small ghost" onClick={() => { clearErrors(); setList([]); }}>Effacer le journal</button>
+      </div>
+    </>
+  );
+}
 
 const EQUIP = [
   ["four", "Four"], ["plaques", "Plaques (gaz, induction, vitro)"], ["poele", "Poêle"], ["casserole", "Casseroles"], ["cocotte", "Cocotte en fonte"],
@@ -174,8 +193,11 @@ export default function Profil() {
         </div>
         {msg && <p role="status">{msg}</p>}
       </Section>
+      <Section title="Journal des erreurs">
+        <ErrorLog />
+      </Section>
       <Section title="À propos">
-        <p className="small">ATLAS v1 · {RECIPES.length} recettes complètes (Tomes 11 et 12 de la bible) · moteur diététique testé (30 contrôles automatiques). Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester ». Les photos et vidéos de l'équipe ne sont pas encore tournées : les vidéos proposées renvoient vers des recherches et vers tes favoris importés.</p>
+        <p className="small">ATLAS · {RECIPES.length} recettes (Tomes 11 à 13 de la bible) · moteur diététique et planificateur vérifiés par 59 contrôles automatiques à chaque publication. Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester » : note tes essais dans « Mes recettes › Mon carnet d'essais ». Les photos viennent de Wikimedia Commons et d'Openverse (licences libres, voir les crédits) ; les vidéos sont celles des créatrices et créateurs, lues avec leurs lecteurs officiels.</p>
         <p className="small">Limites des applications web sur iPhone : un minuteur ne peut pas sonner quand l'application est fermée (une notification s'affiche si tu l'as autorisée) ; la commande vocale dépend de Safari. Ces points seront levés par la version native (Tome 1 §17).</p>
       </Section>
     </Page>

@@ -1,11 +1,12 @@
 import { Component, type ReactNode } from "react";
+import { logError } from "../lib/errlog";
 
 /** Une erreur dans une page ne doit pas effacer toute l'application : message clair, retour à l'accueil, rechargement. */
 export default class ErrorBoundary extends Component<{ children: ReactNode; resetKey: string }, { error: Error | null }> {
   state = { error: null as Error | null };
   static getDerivedStateFromError(error: Error) { return { error }; }
   componentDidUpdate(prev: { resetKey: string }) { if (prev.resetKey !== this.props.resetKey && this.state.error) this.setState({ error: null }); }
-  componentDidCatch(error: Error) { console.error("ATLAS :", error); }
+  componentDidCatch(error: Error) { console.error("ATLAS :", error); logError(location.hash || "/", error); }
   render() {
     if (!this.state.error) return this.props.children;
     return (

@@ -128,3 +128,22 @@ export function splitStep(step: string): string[] {
   if (out.length <= 1) return [step];
   return out.map((p, k) => `${label ? `${label.replace(/\.?\*\*$/, "")} (${k + 1}/${out.length}).** ` : ""}${p.replace(/^./, (c) => c.toUpperCase())}`);
 }
+
+/** Nom court d'un geste pour un minuteur : le titre en gras de l'étape (« Choux (2/3) »), sinon ses premiers mots. */
+export function gestureLabel(step: string, n: number): string {
+  const b = step.match(/^\*\*(.+?)\.?\*\*/);
+  if (b) return b[1].replace(/\.$/, "");
+  const words = plain(step).replace(/[,;:.].*$/, "").split(/\s+/).slice(0, 5).join(" ");
+  return words.length > 3 ? words : `étape ${n}`;
+}
+
+/** Préchauffage : à quelle étape enfourne-t-on, et à quelle température ? (pour prévenir une étape avant) */
+export function ovenPlan(steps: string[]): { at: number; temp: string } | null {
+  // four nommé, ou une température de four (≥ 120 °C) qui n'est ni un bain de friture, ni un sucre cuit, ni une température à cœur
+  const isOven = (s: string) => /enfourn|au four|four (chaud|à|préchauffé)|gratine/i.test(s)
+    || (/(1[2-9]\d|2[0-7]\d) ?°C/.test(s) && !/huile|friture|frit|cœur|coeur|sucre|sirop|caramel|thermomètre/i.test(s));
+  const at = steps.findIndex(isOven);
+  if (at < 0) return null;
+  const t = steps[at].match(/(\d{2,3}) ?°C/) ?? steps.slice(0, at).join(" ").match(/(\d{3}) ?°C/);
+  return t ? { at, temp: `${t[1]} °C` } : null;
+}

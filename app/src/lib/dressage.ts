@@ -1,6 +1,7 @@
 // Finition et dressage (audit, regard du chef 🟠 7) : une ligne de présentation par fiche, et le réflexe
 // « goûte et rectifie » pour le salé. Règles par famille de plats, du plus précis au plus général.
 // Rédaction NON TESTÉE en cuisine (Tome 7 §2) ; ce sont les gestes classiques de la restauration.
+import { INGREDIENTS } from "./data";
 import { flatten } from "./engine";
 import { norm } from "./text";
 import type { Recipe } from "./types";
@@ -40,4 +41,15 @@ export function finishFor(r: Recipe): Finish {
   const hasHerb = flatten(r.ingredients).some((l) => HERBS.test(norm(`${l.ref ?? ""} ${l.label}`)));
   const green = salty && !hasHerb && /Plat|Entrée|Accompagnement/.test(r.kind) ? "Pour la couleur : quelques brins d'herbe fraîche (persil, ciboulette, coriandre) ciselés au dernier moment rendent l'assiette plus appétissante." : null;
   return { taste, plate, green };
+}
+
+/** Repère d'équilibre (audit 🟢 9), sans culpabiliser : ce qu'il manque pour un repas complet. */
+export function balanceOf(r: Recipe): string | null {
+  if (r.role !== "plat") return null;
+  const secs = flatten(r.ingredients).filter((l) => l.ref && l.weight >= 1).map((l) => INGREDIENTS[l.ref!]?.section ?? "");
+  const veg = secs.some((x) => /^Légumes/.test(x));
+  const starch = secs.some((x) => /^(Légumineuses|Farines)/.test(x)) || flatten(r.ingredients).some((l) => /pomme de terre|patate|manioc|igname|plantain|riz|pâtes|semoule|pain/i.test(l.ref ?? ""));
+  const prot = secs.some((x) => /^(Viandes|Poissons|Porc|Œufs)/.test(x)) || secs.some((x) => /^Légumineuses/.test(x));
+  const add = [!veg && "des légumes ou une salade", !starch && "un féculent (pain, riz, semoule ou pommes de terre)", !prot && "une source de protéines (œuf, légumineuses, fromage, poisson)"].filter(Boolean);
+  return add.length ? `Pour un repas complet, ajoute ${add.join(" et ")} ; un fruit ou un laitage en dessert.` : "Assiette complète : légumes, féculent et protéines ; un fruit ou un laitage en dessert suffit.";
 }

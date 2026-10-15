@@ -6,13 +6,13 @@ const LEFT = await loadLeftovers();
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
-import { splitStep } from "../src/lib/text";
+import { gestureLabel, ovenPlan, splitStep } from "../src/lib/text";
 import { TECHNIQUES, techniqueFor } from "../src/lib/techniques";
 import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
-import { finishFor } from "../src/lib/dressage";
+import { balanceOf, finishFor } from "../src/lib/dressage";
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
@@ -208,6 +208,10 @@ console.log("   dressage :", fin("tarte_poireaux").slice(0, 40), "|", fin("tarte
 check("58 dressage : chaque fiche a une finition ; tarte salée ≠ tarte sucrée ; le salé sans « goûte » reçoit le rappel",
   RECIPES.every((r) => finishFor(r).plate.length > 40) && fin("tarte_poireaux") !== fin("tarte_tatin") && /tiédir/.test(fin("lasagnes_bolognaise"))
   && /couteau/.test(fin("tarte_tatin")) && RECIPES.filter((r) => r.role === "plat").filter((r) => finishFor(r).taste).length > 150 && !finishFor(RECIPE_BY_ID["tarte_tatin"]).taste);
+const oc = ovenPlan(RECIPE_BY_ID["gratin_courgettes"].steps.flatMap(splitStep));
+console.log("   minuteur :", gestureLabel(sp[1], 2), "· four :", oc?.temp, "à l'étape", (oc?.at ?? -1) + 1, "· équilibre :", balanceOf(RECIPE_BY_ID["omelette_fines_herbes"]));
+check("59 minuteurs nommés par le geste ; préchauffage repéré avant d'enfourner ; repère d'équilibre pour chaque plat",
+  gestureLabel(sp[1], 2) === "Choux (2/3)" && !!oc && /°C/.test(oc.temp) && RECIPES.filter((r) => r.role === "plat").every((r) => !!balanceOf(r)) && !!TECHNIQUES.find((t) => t.id === "convertir-mesures") && !!TECHNIQUES.find((t) => t.id === "presenter-une-assiette"));
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

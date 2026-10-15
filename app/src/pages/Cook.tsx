@@ -3,7 +3,7 @@ import { RECIPE_BY_ID } from "../lib/data";
 import { verdict } from "../lib/engine";
 import { go, href, useRoute } from "../lib/router";
 import { setState, useProfile } from "../lib/store";
-import { durationsIn, scaleQty, splitStep } from "../lib/text";
+import { durationsIn, gestureLabel, ovenPlan, scaleQty, splitStep } from "../lib/text";
 import { listen, speak, stopSpeaking, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { startTimer, useWakeLock } from "../lib/timers";
 import { Rich } from "./RecipePage";
@@ -30,6 +30,7 @@ export default function Cook({ id }: { id: string }) {
   const v = r ? verdict(r, p) : null;
   const lines = r && v?.adapted && route.query.get("adapte") === "1" ? v.adapted.lines : r?.ingredients ?? [];
   const steps = useMemo(() => (r?.steps ?? []).flatMap(splitStep), [r]); // un geste par écran
+  const oven = useMemo(() => ovenPlan(steps), [steps]); // préchauffage : prévenir avant d'enfourner
 
   const say = useCallback((idx: number) => {
     if (!r || !ttsAvailable()) return;
@@ -89,6 +90,7 @@ export default function Cook({ id }: { id: string }) {
             <h1 className="cook-step-n">Mise en place</h1>
             <p className="small">Sors et pèse tout avant d'allumer le feu. Coche au fur et à mesure.</p>
             <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
+            {oven && oven.at <= 1 && <p className="banner warn">🔥 Allume le four maintenant à <strong>{oven.temp}</strong> : il lui faut 15 à 20 min pour chauffer.</p>}
             <ul className="mise">
               {lines.map((l, k) => (
                 <li key={k}>
@@ -102,9 +104,10 @@ export default function Cook({ id }: { id: string }) {
           <>
             <p className="cook-step-n">Étape {i + 1} / {steps.length}</p>
             <p className="cook-step"><Rich text={step!} /></p>
+            {oven && oven.at > 1 && i === oven.at - 2 && <p className="banner warn">🔥 Pense à préchauffer le four à <strong>{oven.temp}</strong> maintenant : on enfourne dans 2 étapes.</p>}
             {durationsIn(step!).length > 0 && (
               <div className="timers-inline big">
-                {durationsIn(step!).map((d, k) => <button key={k} className="chip big" onClick={() => startTimer(`${r.title.split(" (")[0]} · étape ${i + 1}`, d.seconds, id)}>⏱ Lancer {d.label}</button>)}
+                {durationsIn(step!).map((d, k) => <button key={k} className="chip big" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(step!, i + 1)}`, d.seconds, id)}>⏱ Lancer {d.label}</button>)}
               </div>
             )}
             {termsIn(step!).length > 0 && (
