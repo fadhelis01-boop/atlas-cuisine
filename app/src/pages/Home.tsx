@@ -13,6 +13,7 @@ import { MONTHS_FULL, SEASON_LABEL, type Zone, marketOfMonth, seasonFit, seasonO
 import { INGREDIENTS } from "../lib/data";
 import { sectionLook } from "./Dictionnaire";
 import { momentOf, propose } from "../lib/propose";
+import { PARCOURS } from "../lib/parcours";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
@@ -97,6 +98,21 @@ function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
   );
 }
 
+/** Accueil personnalisé (audit UX 7) : tant qu'on a très peu cuisiné, le parcours débutant passe en premier. */
+function Beginner() {
+  const cooked = useStore((s) => Object.values(s.cooked).reduce((a, n) => a + n, 0));
+  const learned = useStore((s) => s.learned?.length ?? 0);
+  if (cooked >= 3 || learned >= PARCOURS.length) return null;
+  const next = PARCOURS[learned];
+  return (
+    <a className="card pad beginner" href={href("/apprendre")}>
+      <span className="beginner-ic" aria-hidden="true">🎓</span>
+      <span><strong>{learned ? `J'apprends à cuisiner : étape ${learned + 1} sur ${PARCOURS.length}` : "Tu débutes ? Apprends pas à pas"}</strong><br />
+        <span className="small">{learned ? `Prochaine étape : ${next.title}.` : "15 étapes courtes, du couteau aux sauces, avec une recette facile à chaque fois."}</span></span>
+    </a>
+  );
+}
+
 export default function Home() {
   const [q, setQ] = useState("");
   const [craving, setCraving] = useState<string | null>(null);
@@ -157,6 +173,7 @@ export default function Home() {
         </Section>
       )}
 
+      <Beginner />
       <ProposeMoi visible={visible} zone={zone} />
 
       <nav className="entries" aria-label="Rubriques">
