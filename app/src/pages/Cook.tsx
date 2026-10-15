@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { RECIPE_BY_ID } from "../lib/data";
 import { verdict } from "../lib/engine";
 import { go, href, useRoute } from "../lib/router";
 import { setState, useProfile } from "../lib/store";
-import { durationsIn, scaleQty } from "../lib/text";
+import { durationsIn, scaleQty, splitStep } from "../lib/text";
 import { listen, speak, stopSpeaking, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { startTimer, useWakeLock } from "../lib/timers";
 import { Rich } from "./RecipePage";
@@ -29,7 +29,7 @@ export default function Cook({ id }: { id: string }) {
 
   const v = r ? verdict(r, p) : null;
   const lines = r && v?.adapted && route.query.get("adapte") === "1" ? v.adapted.lines : r?.ingredients ?? [];
-  const steps = r?.steps ?? [];
+  const steps = useMemo(() => (r?.steps ?? []).flatMap(splitStep), [r]); // un geste par écran
 
   const say = useCallback((idx: number) => {
     if (!r || !ttsAvailable()) return;

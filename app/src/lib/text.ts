@@ -115,3 +115,16 @@ export function scaleQty(qty: string, factor: number): string {
     return Math.floor(r) ? (frac ? `${Math.floor(r)} ${frac}` : String(Math.floor(r))) : frac ?? String(Math.round(v * 10) / 10).replace(".", ",");
   });
 }
+
+/** Découpe une étape en gestes unitaires pour le mode cuisine (une action par écran) : phrases et points-virgules,
+ *  en gardant le titre en gras (« **Sauce.** ») devant chaque morceau. Les morceaux trop courts restent groupés. */
+export function splitStep(step: string): string[] {
+  const m = step.match(/^(\*\*[^*]+\*\*)\s*/);
+  const label = m ? m[1] : "";
+  const body = m ? step.slice(m[0].length) : step;
+  const parts = body.split(/(?<=[.;!?])\s+(?=[A-ZÀÂÉÈÊÎÔÛÇ0-9«(])|;\s+/).map((x) => x.trim()).filter(Boolean);
+  const out: string[] = [];
+  for (const p of parts) { if (out.length && (p.length < 28 || out[out.length - 1].length < 28)) out[out.length - 1] += " " + p; else out.push(p); }
+  if (out.length <= 1) return [step];
+  return out.map((p, k) => `${label ? `${label.replace(/\.?\*\*$/, "")} (${k + 1}/${out.length}).** ` : ""}${p.replace(/^./, (c) => c.toUpperCase())}`);
+}

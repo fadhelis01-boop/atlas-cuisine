@@ -6,6 +6,7 @@ const LEFT = await loadLeftovers();
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
+import { splitStep } from "../src/lib/text";
 import { TECHNIQUES, techniqueFor } from "../src/lib/techniques";
 import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
@@ -176,5 +177,10 @@ check("49 rattrapages : pour des éclairs, « les choux sont retombés » vient 
 check("50 lexique : « déglace » et « bec d'oiseau » expliqués", termsIn("Déglace au bouillon").some((t) => t.term === "Déglacer") && termsIn("jusqu'au bec d'oiseau").length > 0);
 check("51 lexique : chaque terme renvoie à une fiche technique existante", GLOSSAIRE.every((t) => !t.tech || !!TECHNIQUES.find((x) => x.id === t.tech)));
 check("52 parcours débutant : 15 étapes, recettes et techniques existantes", PARCOURS.length === 15 && PARCOURS.every((s) => s.recipes.every((id) => !!RECIPE_BY_ID[id]) && s.techs.every((t) => !!TECHNIQUES.find((x) => x.id === t))));
+
+const sp = splitStep("**Choux.** Eau, lait, beurre, sel, sucre à ébullition ; farine d'un coup, dessèche 1 min ; hors du feu, les œufs un à un jusqu'au « bec d'oiseau ».");
+console.log("   découpage :", sp.join(" | "), "· gestes/recette :", (RECIPES.reduce((a, r) => a + r.steps.flatMap(splitStep).length, 0) / RECIPES.length).toFixed(1));
+check("53 mode cuisine : une étape dense devient plusieurs gestes, titre conservé ",
+  sp.length === 3 && sp.every((x) => x.startsWith("**Choux (")) && RECIPES.reduce((a, r) => a + r.steps.flatMap(splitStep).length, 0) / RECIPES.length > 3.3);
 
 console.log(`\n${passed} contrôles OK`);
