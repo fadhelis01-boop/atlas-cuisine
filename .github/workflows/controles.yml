@@ -1,0 +1,26 @@
+# Contrôles automatiques : à chaque envoi qui touche l'application ou la bible, rejoue les tests du moteur,
+# la vérification des types et la construction. Rien n'est publié ici.
+name: Contrôles
+on:
+  push:
+    branches: [main]
+    paths: [app/**, bible/**]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: app/package-lock.json }
+      - name: Les données exportées correspondent à la bible
+        working-directory: bible
+        run: python export_app_data.py && git diff --stat --exit-code -- ../app/src/data
+      - name: Tests, types et construction
+        working-directory: app
+        run: npm ci && npm run build
