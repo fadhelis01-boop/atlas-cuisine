@@ -117,3 +117,28 @@
 | 🟠 7 | Dressage : une ligne de finition par fiche, fiches techniques « présenter une assiette » | Chef |
 | 🟠 8 | AVIF, aperçus flous, plafond du cache photos, pages chargées à la demande | Dév |
 | 🟢 9 | Batch cooking, repères nutritionnels, conversions d'unités | Quotidien |
+
+---
+
+## 6. Mise en œuvre des recommandations (15/10/2026, deuxième passe)
+
+Tout ce qui suit est en ligne et vérifié par **61 contrôles automatiques**, rejoués par GitHub à chaque envoi (automatisation « Contrôles »). Les recettes elles-mêmes restent **non testées en cuisine**.
+
+| Recommandation | Ce qui a été fait | État |
+|---|---|---|
+| 🔴 1 Tester en cuisine | « Mes recettes › Mon carnet d'essais » : note sur 5 et corrections après chaque essai, **export en tableau** (fichier `.md`) à renvoyer pour corriger les fiches. Les tests eux-mêmes demandent une vraie cuisine. | Outil prêt, tests à faire |
+| 🔴 2 Gestes unitaires, repères, sel dosé | Découpage d'un geste par écran (déjà fait) ; **repères visuels automatiques** sous les étapes (oignon translucide, frémissement, sauce qui nappe, pousse, blancs fermes, caramel, friture…) sur 289 fiches ; **sel dosé calculé** pour les 231 plats et entrées qui n'en indiquaient pas (≈ 1,2 g par portion, moitié moins avec des ingrédients salés, eau de cuisson à 10 g/L) ; **minuteurs nommés par geste** ; **rappel « préchauffe le four maintenant »** en mode cuisine. La réécriture à la main reste souhaitable pour les fiches à étapes très denses. | Fait (automatique) ; relecture humaine à prévoir |
+| 🔴 3 Photos | Photos choisies une à une sur planches contact : **{PHOTOS_R}** ; dictionnaire : **{PHOTOS_I}**. Photos d'étapes : inventaire de Wikimedia Commons (`illustrations/etapes_scan.py`) : les séries d'une même recette sont rares (frites, thiéboudienne…) ; les gestes des fiches techniques sont illustrés à la place (« Le geste en photos »). | Fait pour les plats et ingrédients |
+| 🔴 4 Planificateur | Page **« Ma semaine »** : 7 jours midi et/ou soir, plats de saison, rapides en semaine (temps réglable), protéines variées, **restes d'un plat réutilisés le lendemain** (signalés ♻️), « 📅 Planifier » sur chaque plat, **courses regroupées** (un article par produit, quantités additionnées et arrondies à l'achat, épices « vérifie ton placard »), **préparation à l'avance** (tâches de la veille, légumes à couper d'un coup). | Fait |
+| 🟠 5 Menus de fête | Quantités **calculées pour N convives** et regroupées dans les courses ; pour chaque menu : ce qui se fait **la veille** et ce qui **se congèle** ; conseils de **grande tablée** à partir de 10 personnes ; rétroplanning J-2/J-1/J. | Fait |
+| 🟠 6 Recherche, « propose-moi » | **« 🎲 Pas d'idée ? Propose-moi »** sur l'accueil : 3 idées de 3 cuisines différentes selon l'heure, la saison du lieu, le temps disponible et le frigo ; **filtres repliables** dans la recherche (type, 30 min, facile) ; « Ma biblio » renommée **« Mes recettes »** ; **sommaire collant** sur les fiches ; parcours débutant en tête d'accueil tant qu'on a peu cuisiné. | Fait |
+| 🟠 7 Dressage | Bloc **« Finition et dressage »** sur chaque fiche (règles par famille de plats, salé et sucré distingués), **« goûte et rectifie »** pour le salé, touche verte si la fiche n'a pas d'herbes ; fiche technique **« Présenter une assiette »**. | Fait |
+| 🟠 8 Performance | **Pages chargées à la demande** (démarrage 427 → 395 Ko compressés avant les photos) ; **manifeste photos allégé**, crédits chargés à l'affichage ; **cache photos plafonné** (400 images) ; vignettes d'ingrédients en 400/800 px seulement. **AVIF** : Pillow 12.3 installé dans `illustrations/.venv` ; chaque photo existe en AVIF (≈ 30 % plus léger) avec repli WebP, le navigateur choisit. Découper les recettes par région : non fait (gain modeste, risque élevé). | Fait |
+| 🟢 9 Quotidien | Cuisine en lot dans « Ma semaine » ; **repère d'équilibre** de l'assiette sur chaque plat (sans culpabiliser) ; fiche **« Convertir les mesures »** (tasses, onces, °F) pour les chaînes anglophones. | Fait |
+| Dév | **Automatisation GitHub activée** : « Ajouter des recettes » (coller des liens dans `recettes-classees/a_ajouter.md` sur github.com → classement, contrôles et publication automatiques) et « Contrôles » à chaque envoi ; **journal d'erreurs local** dans le profil. Tests d'interface de bout en bout : non faits. | Fait |
+
+### Deuxième demande du 15/10 : AVIF, photos d'étapes, icônes
+
+- **Icônes** : 69 icônes SVG maison (`app/src/components/icons.tsx`, planche de contrôle sur `#/icones` en développement) remplacent les émoticônes de l'interface : onglets, tuiles, envies, régions, familles d'ingrédients, boutons, badges, minuteurs. Même trait (1,8 px arrondi), aplat teinté à 18 %, couleur héritée ; lisibles en clair et en sombre ; plus de carrés vides sous Windows 10. Les couvertures illustrées des quelques fiches sans photo gardent leur pictogramme de plat.
+- **AVIF** : voir le tableau ci-dessus.
+- **Photos d'étapes** : voir le tableau ; choix relus un à un sur planches contact (`etapes_sheets.py`).

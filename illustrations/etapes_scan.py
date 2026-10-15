@@ -61,6 +61,16 @@ def count(cat):
 def main():
     out_p = os.path.join(HERE, "etapes_scan.json")
     out = json.load(open(out_p, encoding="utf-8")) if os.path.exists(out_p) else {"recettes": {}, "techniques": {}}
+    for tid, qs in TECH.items():
+        if tid in out["techniques"]: continue
+        cands = []
+        for q in qs:
+            try: cands += commons(q, 12)
+            except Exception as e: print("commons", q, e)
+        seen = set(); uniq = [c for c in cands if not (c["page"] in seen or seen.add(c["page"]))]
+        out["techniques"][tid] = uniq[:16]
+        print(f"technique {tid}: {len(uniq)} candidates", flush=True)
+        json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     rec = [(k, v) for k, v in ALL.items() if k.startswith("recette/")]
     for i, (k, qs) in enumerate(rec):
         if k in out["recettes"]: continue
@@ -74,16 +84,6 @@ def main():
         out["recettes"][k] = [f for f in found if f[1] >= 3]
         print(f"[{i+1}/{len(rec)}] {k}: {out['recettes'][k]}", flush=True)
         if i % 20 == 0: json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    for tid, qs in TECH.items():
-        if tid in out["techniques"]: continue
-        cands = []
-        for q in qs:
-            try: cands += commons(q, 12)
-            except Exception as e: print("commons", q, e)
-        seen = set(); uniq = [c for c in cands if not (c["page"] in seen or seen.add(c["page"]))]
-        out["techniques"][tid] = uniq[:16]
-        print(f"technique {tid}: {len(uniq)} candidates", flush=True)
-        json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("recettes avec série d'étapes :", sum(1 for v in out["recettes"].values() if v))
 

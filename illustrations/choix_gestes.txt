@@ -1,0 +1,97 @@
+geste/ciseler-oignon|5|Oignon rouge coupé en deux puis ciselé sur la planche, couteau bien à plat
+geste/ciseler-oignon|6|Le résultat : des dés réguliers, qui cuiront tous en même temps
+geste/faire-revenir|0|Faire revenir oignon et poivron : feu moyen, on remue souvent à la spatule
+geste/faire-revenir|10|Oignons qui suent : translucides, ils commencent à peine à blondir
+geste/faire-revenir|3|Après 25 min à feu doux : oignons caramélisés, brun doré et fondants
+geste/mijoter|1|Mijoter : à couvert, un frémissement à peine visible, on remue de temps en temps à la cuillère en bois
+geste/mijoter|3|Le bon feu pour mijoter : de petites bulles qui éclatent doucement, jamais de gros bouillons
+geste/rotir-volaille|1|Volaille rôtie avec ses légumes : peau dorée et croustillante, jus clair quand on pique la cuisse
+geste/cuire-pates|2|Une grande casserole d'eau à pleine ébullition avant d'y verser les pâtes
+geste/cuire-pates|9|Les pâtes dans beaucoup d'eau bouillante salée : elles doivent nager librement
+geste/cuire-riz|1|Cuisson par absorption : le riz recouvert juste de la bonne quantité de liquide
+geste/cuire-riz|0|À la fin, tout le liquide est absorbé : des grains bien séparés, on égrène à la fourchette
+geste/reduire|0|Réduire : la sauce frémit à découvert jusqu'à napper le dos de la cuillère
+geste/bouillon|0|Le bouillon cuit longuement dans une grande marmite, à petit frémissement
+geste/oeufs-cuissons|13|Œuf à la coque : le blanc pris, le jaune encore coulant (3 min dans l'eau frémissante)
+geste/oeufs-cuissons|14|Œuf mollet (6 min) : écalé, il se tient, mais le jaune reste fondant
+geste/oeufs-cuissons|12|Œuf dur (9 à 10 min) : jaune entièrement pris, sans cerne vert s'il n'a pas trop cuit
+geste/oeufs-cuissons|11|Œuf poché : le blanc enveloppe le jaune, sans filaments
+geste/bain-marie|2|Le bain-marie : un récipient posé sur une casserole d'eau qui frémit, sans que l'eau touche le fond
+geste/bain-marie|1|Le chocolat fond doucement, on mélange quand il est presque entièrement fondu
+geste/pate-brisee|2|Étaler la pâte au rouleau sur un plan fariné, en tournant la pâte d'un quart de tour
+geste/pate-brisee|10|Foncer le moule : la pâte bien appliquée dans les angles, sans l'étirer
+geste/pate-brisee|8|Cuire à blanc : papier cuisson et légumes secs pour que le fond ne gonfle pas
+geste/pate-brisee|9|Le fond précuit, doré et sec, prêt à être garni
+geste/pate-crepes|0|Verser la pâte dans la poêle chaude, juste assez pour un voile fin
+geste/pate-crepes|5|Retourner quand les bords se décollent et que le dessous est doré
+geste/petrir|0|Pétrir à la main : pousser la pâte avec la paume, la replier, recommencer
+geste/petrir|15|La pâte est pétrie quand elle devient lisse, souple et ne colle plus au plan
+geste/pointage|8|Le pâton en boule avant la pousse
+geste/pointage|10|Après la pousse : la pâte a doublé de volume, elle est gonflée et bullée
+geste/pointage|7|Apprêt dans le moule : la pâte monte au-dessus du bord avant d'enfourner
+geste/faconner|0|Baguettes façonnées, posées sur la couche farinée pour leur dernière pousse
+geste/frire|5|Frites dans le panier : l'huile ne dépasse pas la moitié de la casserole, jamais sans surveillance
+geste/frire|7|Beignets qui gonflent et dorent : on les retourne une fois, à l'écumoire
+geste/frire|13|Le résultat d'une double cuisson : frites dorées et croustillantes, égouttées sur papier
+geste/torrefier|8|Moudre les épices torréfiées au pilon : on écrase en tournant, sans taper
+geste/torrefier|14|Épices entières (cannelle, clous de girofle, muscade) avant torréfaction
+geste/infuser|3|Verser l'eau frémissante sur les feuilles ou les fleurs, puis couvrir pendant l'infusion
+geste/infuser|0|Une infusion d'hibiscus (bissap) bien colorée, filtrée
+geste/wok|4|Sauter au wok : feu vif, la spatule fait circuler les ingrédients sans arrêt
+geste/wok|5|Le « souffle du wok » : une flamme haute et une cuisson de quelques minutes seulement
+geste/laquer-cuisson-peau|0|Saumon cuit côté peau : peau croustillante en haut, sauce dessous
+geste/creme-patissiere|9|Jaunes d'œufs et sucre dans un bol
+geste/creme-patissiere|8|On fouette jusqu'à ce que le mélange blanchisse, puis on ajoute la fécule
+geste/creme-patissiere|6|Le lait chauffe ; on en verse une partie sur les jaunes en fouettant, puis tout retourne dans la casserole
+geste/creme-patissiere|7|Cuisson en fouettant sans arrêt jusqu'à épaississement, puis le beurre hors du feu
+geste/creme-patissiere|0|La crème pâtissière refroidie : lisse, épaisse et brillante
+geste/pate-a-choux|12|Coucher les choux à la poche, douille ronde, bien espacés sur la plaque
+geste/pate-a-choux|3|Choux cuits : bien dorés jusque dans les fentes, ils ne retomberont pas
+geste/creme-chantilly-ganache-montee|2|Fouetter la crème bien froide : elle épaissit et garde la trace du fouet
+geste/creme-chantilly-ganache-montee|0|Chantilly prête : elle tient au fouet en pointes souples, on s'arrête là (au-delà, elle tourne en beurre)
+geste/caramel-sucre|14|Un caramel ambré : on arrête la cuisson dès la couleur noisette
+geste/temperer-chocolat|5|Hacher finement le chocolat pour qu'il fonde régulièrement
+geste/temperer-chocolat|6|Fondre à 45-50 °C (chocolat noir), au thermomètre
+geste/temperer-chocolat|2|Refroidir en remuant jusqu'à 27-28 °C
+geste/temperer-chocolat|3|Remonter doucement à 31-32 °C : c'est la température de travail
+geste/temperer-chocolat|9|Chocolat bien tempéré : brillant, il durcit vite et casse net
+geste/ganache|1|Ganache lisse et brillante : on mélange du centre vers les bords jusqu'à l'émulsion
+geste/ganache|5|Glacer un gâteau : la ganache tiède coule d'un seul geste au centre
+geste/levain-maison|1|Un levain actif : plein de bulles, il a doublé dans le bocal quelques heures après le rafraîchi
+geste/levain-maison|0|Vu de dessus : surface bombée et bullée, odeur acidulée et agréable
+geste/pate-levee-feuilletee|1|L'intérieur d'un croissant réussi : des alvéoles en nid d'abeille, signe d'un tourage régulier
+geste/pate-levee-feuilletee|0|Croissant bien doré, feuilletage visible sur les côtés
+geste/lever-filets|4|Le couteau à fileter : lame fine et souple, qui suit l'arête
+geste/lever-filets|9|Lever les filets : la lame glisse le long de l'arête centrale, de la tête vers la queue
+geste/crevettes-calamars|10|Crevettes décortiquées et déveinées, prêtes à cuire (1 à 2 min suffisent)
+geste/cuisson-viande-rouge|5|Une pièce saisie puis reposée : croûte brune dehors, cœur rosé
+geste/cuisson-viande-rouge|15|Coupe d'une pièce à point : rose uniforme, le jus reste dans la viande grâce au repos
+geste/basse-temperature|2|La viande mise sous vide avant la cuisson basse température
+geste/basse-temperature|4|Le sachet plonge dans l'eau tenue à température exacte par le thermoplongeur
+geste/attendrir-viande|7|Morceaux de poulet dans leur marinade, au frais, couverts
+geste/rotir-viande-four|12|Rôtir au thermomètre : la sonde dans la partie la plus épaisse, sans toucher l'os
+geste/rotir-viande-four|0|Gigot rôti avec ses légumes, à laisser reposer 15 min avant de trancher
+geste/omelette-brouilles|3|Verser les œufs battus dans la poêle à feu moyen-doux
+geste/omelette-brouilles|4|Œufs brouillés : remuer doucement, ramener les bords vers le centre
+geste/omelette-brouilles|5|Retirer du feu encore crémeux : la chaleur finit la cuisson dans l'assiette
+geste/vapeur-papillote|1|Poisson en papillote : bien fermée, elle gonfle au four et le poisson cuit dans sa vapeur
+geste/vapeur-papillote|0|À l'ouverture : chair nacrée, jus parfumé au fond de la papillote
+geste/vapeur-papillote|13|Le panier vapeur en bambou posé sur une casserole d'eau frémissante
+geste/griller-barbecue|9|Crevettes grillées : elles virent au orange et se recourbent, c'est cuit
+geste/frire-tempura|7|Tempura : une pâte très légère et glacée, une friture pâle et croustillante
+geste/frire-tempura|11|Assortiment de tempura (crevette, légumes), servi aussitôt sorti de l'huile
+geste/condiments-maison|0|Oignons rouges au vinaigre maison : roses et croquants après 1 h
+geste/condiments-maison|3|Pickles en bocaux propres, légumes bien couverts de liquide
+geste/presenter-une-assiette|1|Dresser : poser chaque élément avec précision, en gardant le bord de l'assiette propre
+geste/presenter-une-assiette|2|La finition à la pince : herbes et touches de sauce au dernier moment
+etape/thieboudienne|6|Piler le roff (persil, ail, piment, oignon) au mortier
+etape/thieboudienne|7|Farcir le poisson de roff par de petites entailles
+etape/thieboudienne|8|Faire frire le poisson farci, puis le réserver
+etape/thieboudienne|0|Faire revenir le concentré de tomate dans l'huile de cuisson du poisson
+etape/thieboudienne|9|Cuire les légumes dans le bouillon, le riz à la vapeur au-dessus
+etape/thieboudienne|2|Remettre le poisson et laisser mijoter avec les légumes
+etape/thieboudienne|10|Servir : le riz au fond, poisson et légumes par-dessus
+etape/frites_maison|3|Tailler les pommes de terre en bâtonnets réguliers
+etape/frites_maison|13|Première cuisson à 150 °C : les frites cuisent sans colorer
+etape/frites_maison|1|Égoutter, laisser reposer, puis seconde cuisson à 180 °C
+etape/frites_maison|8|Les frites dorées et croustillantes, égouttées dans le panier

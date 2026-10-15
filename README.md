@@ -16,7 +16,7 @@
 ```bash
 cd app && npm install
 npm run dev        # http://localhost:5196
-npm run build      # 60 contrôles (moteur, planificateur, dressage…) + typage + version de production (dist/)
+npm run build      # 61 contrôles (moteur, planificateur, dressage…) + typage + version de production (dist/)
 npm run deploy     # publication sur GitHub Pages (branche gh-pages)
 ```
 

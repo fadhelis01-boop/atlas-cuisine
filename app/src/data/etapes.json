@@ -1,1 +1,474 @@
-{}
+{
+ "technique/ciseler-oignon": [
+  {
+   "k": "geste/ciseler-oignon-1",
+   "c": "Oignon rouge coupé en deux puis ciselé sur la planche, couteau bien à plat"
+  },
+  {
+   "k": "geste/ciseler-oignon-2",
+   "c": "Le résultat : des dés réguliers, qui cuiront tous en même temps"
+  }
+ ],
+ "technique/faire-revenir": [
+  {
+   "k": "geste/faire-revenir-1",
+   "c": "Faire revenir oignon et poivron : feu moyen, on remue souvent à la spatule"
+  },
+  {
+   "k": "geste/faire-revenir-2",
+   "c": "Oignons qui suent : translucides, ils commencent à peine à blondir"
+  },
+  {
+   "k": "geste/faire-revenir-3",
+   "c": "Après 25 min à feu doux : oignons caramélisés, brun doré et fondants"
+  }
+ ],
+ "technique/mijoter": [
+  {
+   "k": "geste/mijoter-1",
+   "c": "Mijoter : à couvert, un frémissement à peine visible, on remue de temps en temps à la cuillère en bois"
+  },
+  {
+   "k": "geste/mijoter-2",
+   "c": "Le bon feu pour mijoter : de petites bulles qui éclatent doucement, jamais de gros bouillons"
+  }
+ ],
+ "technique/rotir-volaille": [
+  {
+   "k": "geste/rotir-volaille-1",
+   "c": "Volaille rôtie avec ses légumes : peau dorée et croustillante, jus clair quand on pique la cuisse"
+  }
+ ],
+ "technique/cuire-pates": [
+  {
+   "k": "geste/cuire-pates-1",
+   "c": "Une grande casserole d'eau à pleine ébullition avant d'y verser les pâtes"
+  },
+  {
+   "k": "geste/cuire-pates-2",
+   "c": "Les pâtes dans beaucoup d'eau bouillante salée : elles doivent nager librement"
+  }
+ ],
+ "technique/cuire-riz": [
+  {
+   "k": "geste/cuire-riz-1",
+   "c": "Cuisson par absorption : le riz recouvert juste de la bonne quantité de liquide"
+  },
+  {
+   "k": "geste/cuire-riz-2",
+   "c": "À la fin, tout le liquide est absorbé : des grains bien séparés, on égrène à la fourchette"
+  }
+ ],
+ "technique/reduire": [
+  {
+   "k": "geste/reduire-1",
+   "c": "Réduire : la sauce frémit à découvert jusqu'à napper le dos de la cuillère"
+  }
+ ],
+ "technique/bouillon": [
+  {
+   "k": "geste/bouillon-1",
+   "c": "Le bouillon cuit longuement dans une grande marmite, à petit frémissement"
+  }
+ ],
+ "technique/oeufs-cuissons": [
+  {
+   "k": "geste/oeufs-cuissons-1",
+   "c": "Œuf à la coque : le blanc pris, le jaune encore coulant (3 min dans l'eau frémissante)"
+  },
+  {
+   "k": "geste/oeufs-cuissons-2",
+   "c": "Œuf mollet (6 min) : écalé, il se tient, mais le jaune reste fondant"
+  },
+  {
+   "k": "geste/oeufs-cuissons-3",
+   "c": "Œuf dur (9 à 10 min) : jaune entièrement pris, sans cerne vert s'il n'a pas trop cuit"
+  },
+  {
+   "k": "geste/oeufs-cuissons-4",
+   "c": "Œuf poché : le blanc enveloppe le jaune, sans filaments"
+  }
+ ],
+ "technique/bain-marie": [
+  {
+   "k": "geste/bain-marie-1",
+   "c": "Le bain-marie : un récipient posé sur une casserole d'eau qui frémit, sans que l'eau touche le fond"
+  },
+  {
+   "k": "geste/bain-marie-2",
+   "c": "Le chocolat fond doucement, on mélange quand il est presque entièrement fondu"
+  }
+ ],
+ "technique/pate-brisee": [
+  {
+   "k": "geste/pate-brisee-1",
+   "c": "Étaler la pâte au rouleau sur un plan fariné, en tournant la pâte d'un quart de tour"
+  },
+  {
+   "k": "geste/pate-brisee-2",
+   "c": "Foncer le moule : la pâte bien appliquée dans les angles, sans l'étirer"
+  },
+  {
+   "k": "geste/pate-brisee-3",
+   "c": "Cuire à blanc : papier cuisson et légumes secs pour que le fond ne gonfle pas"
+  },
+  {
+   "k": "geste/pate-brisee-4",
+   "c": "Le fond précuit, doré et sec, prêt à être garni"
+  }
+ ],
+ "technique/pate-crepes": [
+  {
+   "k": "geste/pate-crepes-1",
+   "c": "Verser la pâte dans la poêle chaude, juste assez pour un voile fin"
+  },
+  {
+   "k": "geste/pate-crepes-2",
+   "c": "Retourner quand les bords se décollent et que le dessous est doré"
+  }
+ ],
+ "technique/petrir": [
+  {
+   "k": "geste/petrir-1",
+   "c": "Pétrir à la main : pousser la pâte avec la paume, la replier, recommencer"
+  },
+  {
+   "k": "geste/petrir-2",
+   "c": "La pâte est pétrie quand elle devient lisse, souple et ne colle plus au plan"
+  }
+ ],
+ "technique/pointage": [
+  {
+   "k": "geste/pointage-1",
+   "c": "Le pâton en boule avant la pousse"
+  },
+  {
+   "k": "geste/pointage-2",
+   "c": "Après la pousse : la pâte a doublé de volume, elle est gonflée et bullée"
+  },
+  {
+   "k": "geste/pointage-3",
+   "c": "Apprêt dans le moule : la pâte monte au-dessus du bord avant d'enfourner"
+  }
+ ],
+ "technique/faconner": [
+  {
+   "k": "geste/faconner-1",
+   "c": "Baguettes façonnées, posées sur la couche farinée pour leur dernière pousse"
+  }
+ ],
+ "technique/frire": [
+  {
+   "k": "geste/frire-1",
+   "c": "Frites dans le panier : l'huile ne dépasse pas la moitié de la casserole, jamais sans surveillance"
+  },
+  {
+   "k": "geste/frire-2",
+   "c": "Beignets qui gonflent et dorent : on les retourne une fois, à l'écumoire"
+  },
+  {
+   "k": "geste/frire-3",
+   "c": "Le résultat d'une double cuisson : frites dorées et croustillantes, égouttées sur papier"
+  }
+ ],
+ "technique/torrefier": [
+  {
+   "k": "geste/torrefier-1",
+   "c": "Moudre les épices torréfiées au pilon : on écrase en tournant, sans taper"
+  },
+  {
+   "k": "geste/torrefier-2",
+   "c": "Épices entières (cannelle, clous de girofle, muscade) avant torréfaction"
+  }
+ ],
+ "technique/infuser": [
+  {
+   "k": "geste/infuser-1",
+   "c": "Verser l'eau frémissante sur les feuilles ou les fleurs, puis couvrir pendant l'infusion"
+  },
+  {
+   "k": "geste/infuser-2",
+   "c": "Une infusion d'hibiscus (bissap) bien colorée, filtrée"
+  }
+ ],
+ "technique/wok": [
+  {
+   "k": "geste/wok-1",
+   "c": "Sauter au wok : feu vif, la spatule fait circuler les ingrédients sans arrêt"
+  },
+  {
+   "k": "geste/wok-2",
+   "c": "Le « souffle du wok » : une flamme haute et une cuisson de quelques minutes seulement"
+  }
+ ],
+ "technique/laquer-cuisson-peau": [
+  {
+   "k": "geste/laquer-cuisson-peau-1",
+   "c": "Saumon cuit côté peau : peau croustillante en haut, sauce dessous"
+  }
+ ],
+ "technique/creme-patissiere": [
+  {
+   "k": "geste/creme-patissiere-1",
+   "c": "Jaunes d'œufs et sucre dans un bol"
+  },
+  {
+   "k": "geste/creme-patissiere-2",
+   "c": "On fouette jusqu'à ce que le mélange blanchisse, puis on ajoute la fécule"
+  },
+  {
+   "k": "geste/creme-patissiere-3",
+   "c": "Le lait chauffe ; on en verse une partie sur les jaunes en fouettant, puis tout retourne dans la casserole"
+  },
+  {
+   "k": "geste/creme-patissiere-4",
+   "c": "Cuisson en fouettant sans arrêt jusqu'à épaississement, puis le beurre hors du feu"
+  },
+  {
+   "k": "geste/creme-patissiere-5",
+   "c": "La crème pâtissière refroidie : lisse, épaisse et brillante"
+  }
+ ],
+ "technique/pate-a-choux": [
+  {
+   "k": "geste/pate-a-choux-1",
+   "c": "Coucher les choux à la poche, douille ronde, bien espacés sur la plaque"
+  },
+  {
+   "k": "geste/pate-a-choux-2",
+   "c": "Choux cuits : bien dorés jusque dans les fentes, ils ne retomberont pas"
+  }
+ ],
+ "technique/creme-chantilly-ganache-montee": [
+  {
+   "k": "geste/creme-chantilly-ganache-montee-1",
+   "c": "Fouetter la crème bien froide : elle épaissit et garde la trace du fouet"
+  },
+  {
+   "k": "geste/creme-chantilly-ganache-montee-2",
+   "c": "Chantilly prête : elle tient au fouet en pointes souples, on s'arrête là (au-delà, elle tourne en beurre)"
+  }
+ ],
+ "technique/caramel-sucre": [
+  {
+   "k": "geste/caramel-sucre-1",
+   "c": "Un caramel ambré : on arrête la cuisson dès la couleur noisette"
+  }
+ ],
+ "technique/temperer-chocolat": [
+  {
+   "k": "geste/temperer-chocolat-1",
+   "c": "Hacher finement le chocolat pour qu'il fonde régulièrement"
+  },
+  {
+   "k": "geste/temperer-chocolat-2",
+   "c": "Fondre à 45-50 °C (chocolat noir), au thermomètre"
+  },
+  {
+   "k": "geste/temperer-chocolat-3",
+   "c": "Refroidir en remuant jusqu'à 27-28 °C"
+  },
+  {
+   "k": "geste/temperer-chocolat-4",
+   "c": "Remonter doucement à 31-32 °C : c'est la température de travail"
+  },
+  {
+   "k": "geste/temperer-chocolat-5",
+   "c": "Chocolat bien tempéré : brillant, il durcit vite et casse net"
+  }
+ ],
+ "technique/ganache": [
+  {
+   "k": "geste/ganache-1",
+   "c": "Ganache lisse et brillante : on mélange du centre vers les bords jusqu'à l'émulsion"
+  },
+  {
+   "k": "geste/ganache-2",
+   "c": "Glacer un gâteau : la ganache tiède coule d'un seul geste au centre"
+  }
+ ],
+ "technique/levain-maison": [
+  {
+   "k": "geste/levain-maison-1",
+   "c": "Un levain actif : plein de bulles, il a doublé dans le bocal quelques heures après le rafraîchi"
+  },
+  {
+   "k": "geste/levain-maison-2",
+   "c": "Vu de dessus : surface bombée et bullée, odeur acidulée et agréable"
+  }
+ ],
+ "technique/pate-levee-feuilletee": [
+  {
+   "k": "geste/pate-levee-feuilletee-1",
+   "c": "L'intérieur d'un croissant réussi : des alvéoles en nid d'abeille, signe d'un tourage régulier"
+  },
+  {
+   "k": "geste/pate-levee-feuilletee-2",
+   "c": "Croissant bien doré, feuilletage visible sur les côtés"
+  }
+ ],
+ "technique/lever-filets": [
+  {
+   "k": "geste/lever-filets-1",
+   "c": "Le couteau à fileter : lame fine et souple, qui suit l'arête"
+  },
+  {
+   "k": "geste/lever-filets-2",
+   "c": "Lever les filets : la lame glisse le long de l'arête centrale, de la tête vers la queue"
+  }
+ ],
+ "technique/crevettes-calamars": [
+  {
+   "k": "geste/crevettes-calamars-1",
+   "c": "Crevettes décortiquées et déveinées, prêtes à cuire (1 à 2 min suffisent)"
+  }
+ ],
+ "technique/cuisson-viande-rouge": [
+  {
+   "k": "geste/cuisson-viande-rouge-1",
+   "c": "Une pièce saisie puis reposée : croûte brune dehors, cœur rosé"
+  },
+  {
+   "k": "geste/cuisson-viande-rouge-2",
+   "c": "Coupe d'une pièce à point : rose uniforme, le jus reste dans la viande grâce au repos"
+  }
+ ],
+ "technique/basse-temperature": [
+  {
+   "k": "geste/basse-temperature-1",
+   "c": "La viande mise sous vide avant la cuisson basse température"
+  },
+  {
+   "k": "geste/basse-temperature-2",
+   "c": "Le sachet plonge dans l'eau tenue à température exacte par le thermoplongeur"
+  }
+ ],
+ "technique/attendrir-viande": [
+  {
+   "k": "geste/attendrir-viande-1",
+   "c": "Morceaux de poulet dans leur marinade, au frais, couverts"
+  }
+ ],
+ "technique/rotir-viande-four": [
+  {
+   "k": "geste/rotir-viande-four-1",
+   "c": "Rôtir au thermomètre : la sonde dans la partie la plus épaisse, sans toucher l'os"
+  },
+  {
+   "k": "geste/rotir-viande-four-2",
+   "c": "Gigot rôti avec ses légumes, à laisser reposer 15 min avant de trancher"
+  }
+ ],
+ "technique/omelette-brouilles": [
+  {
+   "k": "geste/omelette-brouilles-1",
+   "c": "Verser les œufs battus dans la poêle à feu moyen-doux"
+  },
+  {
+   "k": "geste/omelette-brouilles-2",
+   "c": "Œufs brouillés : remuer doucement, ramener les bords vers le centre"
+  },
+  {
+   "k": "geste/omelette-brouilles-3",
+   "c": "Retirer du feu encore crémeux : la chaleur finit la cuisson dans l'assiette"
+  }
+ ],
+ "technique/vapeur-papillote": [
+  {
+   "k": "geste/vapeur-papillote-1",
+   "c": "Poisson en papillote : bien fermée, elle gonfle au four et le poisson cuit dans sa vapeur"
+  },
+  {
+   "k": "geste/vapeur-papillote-2",
+   "c": "À l'ouverture : chair nacrée, jus parfumé au fond de la papillote"
+  },
+  {
+   "k": "geste/vapeur-papillote-3",
+   "c": "Le panier vapeur en bambou posé sur une casserole d'eau frémissante"
+  }
+ ],
+ "technique/griller-barbecue": [
+  {
+   "k": "geste/griller-barbecue-1",
+   "c": "Crevettes grillées : elles virent au orange et se recourbent, c'est cuit"
+  }
+ ],
+ "technique/frire-tempura": [
+  {
+   "k": "geste/frire-tempura-1",
+   "c": "Tempura : une pâte très légère et glacée, une friture pâle et croustillante"
+  },
+  {
+   "k": "geste/frire-tempura-2",
+   "c": "Assortiment de tempura (crevette, légumes), servi aussitôt sorti de l'huile"
+  }
+ ],
+ "technique/condiments-maison": [
+  {
+   "k": "geste/condiments-maison-1",
+   "c": "Oignons rouges au vinaigre maison : roses et croquants après 1 h"
+  },
+  {
+   "k": "geste/condiments-maison-2",
+   "c": "Pickles en bocaux propres, légumes bien couverts de liquide"
+  }
+ ],
+ "technique/presenter-une-assiette": [
+  {
+   "k": "geste/presenter-une-assiette-1",
+   "c": "Dresser : poser chaque élément avec précision, en gardant le bord de l'assiette propre"
+  },
+  {
+   "k": "geste/presenter-une-assiette-2",
+   "c": "La finition à la pince : herbes et touches de sauce au dernier moment"
+  }
+ ],
+ "recette/thieboudienne": [
+  {
+   "k": "etape/thieboudienne-1",
+   "c": "Piler le roff (persil, ail, piment, oignon) au mortier"
+  },
+  {
+   "k": "etape/thieboudienne-2",
+   "c": "Farcir le poisson de roff par de petites entailles"
+  },
+  {
+   "k": "etape/thieboudienne-3",
+   "c": "Faire frire le poisson farci, puis le réserver"
+  },
+  {
+   "k": "etape/thieboudienne-4",
+   "c": "Faire revenir le concentré de tomate dans l'huile de cuisson du poisson"
+  },
+  {
+   "k": "etape/thieboudienne-5",
+   "c": "Cuire les légumes dans le bouillon, le riz à la vapeur au-dessus"
+  },
+  {
+   "k": "etape/thieboudienne-6",
+   "c": "Remettre le poisson et laisser mijoter avec les légumes"
+  },
+  {
+   "k": "etape/thieboudienne-7",
+   "c": "Servir : le riz au fond, poisson et légumes par-dessus"
+  }
+ ],
+ "recette/frites_maison": [
+  {
+   "k": "etape/frites_maison-1",
+   "c": "Tailler les pommes de terre en bâtonnets réguliers"
+  },
+  {
+   "k": "etape/frites_maison-2",
+   "c": "Première cuisson à 150 °C : les frites cuisent sans colorer"
+  },
+  {
+   "k": "etape/frites_maison-3",
+   "c": "Égoutter, laisser reposer, puis seconde cuisson à 180 °C"
+  },
+  {
+   "k": "etape/frites_maison-4",
+   "c": "Les frites dorées et croustillantes, égouttées dans le panier"
+  }
+ ]
+}

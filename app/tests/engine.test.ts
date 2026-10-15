@@ -14,6 +14,8 @@ import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
 import { balanceOf, finishFor } from "../src/lib/dressage";
 import { cuesIn, saltDose } from "../src/lib/cues";
+import etapes from "../src/data/etapes.json";
+import images from "../src/data/images.json";
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
@@ -219,6 +221,9 @@ console.log("   sel :", saltDose(RECIPE_BY_ID["coq_au_vin"])?.text.slice(0, 50),
 check("60 sel dosé : toute fiche salée a soit une ligne de sel, soit un dosage calculé ; moitié moins avec sauce soja ; repères visuels sur plus de la moitié des fiches",
   savory.every((r) => flatten(r.ingredients).some((l) => l.ref?.startsWith("Sel")) || !!saltDose(r)) && saltDose(RECIPE_BY_ID["pad_thai"])!.grams < saltDose(RECIPE_BY_ID["coq_au_vin"])!.grams
   && cuesIn("Fais suer l'oignon 5 min").some((c) => c.startsWith("Oignon prêt")) && !cuesIn("Enlève la peau").some((c) => c.startsWith("Pousse")) && withCue > RECIPES.length / 2);
+const ET = etapes as Record<string, { k: string; c: string }[]>; const IM = images as Record<string, { avif?: number }>;
+check("61 photos de gestes et d'étapes : chaque sujet existe (technique ou recette), chaque photo est traitée en AVIF, légende sans numéro",
+  Object.keys(ET).length >= 40 && Object.entries(ET).every(([k, v]) => (k.startsWith("technique/") ? !!TECHNIQUES.find((t) => t.id === k.slice(10)) : !!RECIPE_BY_ID[k.slice(8)]) && v.every((x) => IM[x.k]?.avif && !/^\d/.test(x.c))));
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

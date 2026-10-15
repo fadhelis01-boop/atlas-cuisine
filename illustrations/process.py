@@ -76,14 +76,19 @@ def run(only=""):
             except Exception as e:  # refus temporaire : on passe, une prochaine exécution reprendra
                 print("plus tard", key, str(e)[:60], flush=True); continue
             open(src_file, "wb").write(b)
+        done = [w for w in SIZES if os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.webp"))]
+        if done and not s.get("refresh") and key in man and (not AVIF or all(os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.avif")) for w in done)):
+            man[key]["avif"] = AVIF or man[key].get("avif", False); continue
         im = Image.open(src_file); im = ImageOps.exif_transpose(im).convert("RGB")
         im = grade(crop43(im, s.get("fx", 0.5), s.get("fy", 0.5), s.get("zoom", 1.0)), s.get("warm", 1.0))
         os.makedirs(os.path.join(OUT, kind), exist_ok=True)
         for w in (SIZES[:2] if kind == "ingredient" else SIZES):  # vignettes du dictionnaire : 1200 px inutile
             if im.width < w * 0.75 and w != SIZES[0]: continue  # pas d'agrandissement artificiel
             small = im.resize((w, int(w / RATIO)), Image.LANCZOS)
-            small.save(os.path.join(OUT, kind, f"{ident}-{w}.webp"), "WEBP", quality=78, method=6)
-            if AVIF: small.save(os.path.join(OUT, kind, f"{ident}-{w}.avif"), "AVIF", quality=52, speed=6)  # ~30 % plus léger
+            webp = os.path.join(OUT, kind, f"{ident}-{w}.webp"); avif = os.path.join(OUT, kind, f"{ident}-{w}.avif")
+            # on ne réécrit pas un fichier existant (sauf « refresh ») : Git ne revoit pas 1 000 photos identiques
+            if s.get("refresh") or not os.path.exists(webp): small.save(webp, "WEBP", quality=78, method=6)
+            if AVIF and (s.get("refresh") or not os.path.exists(avif)): small.save(avif, "AVIF", quality=52, speed=6)  # ~30 % plus léger
         sizes = [w for w in SIZES if os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.webp"))]
         avif = all(os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.avif")) for w in sizes)
         avg = im.resize((1, 1), Image.BOX).getpixel((0, 0))
