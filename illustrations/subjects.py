@@ -138,3 +138,12 @@ FETES = {
 
 ALL = {**{f"recette/{k}": v for k, v in RECIPES.items()}, **{f"technique/{k}": v for k, v in TECHNIQUES.items()},
        **{f"region/{k}": v for k, v in REGIONS.items()}, **{f"rubrique/{k}": v for k, v in RUBRIQUES.items()}, **{f"fete/{k}": v for k, v in FETES.items()}}
+
+# Vague 2 (Tome 13) et dictionnaire illustré des ingrédients
+from subjects_v2 import RECIPES_V2
+ALL.update({f"recette/{k}": v for k, v in RECIPES_V2.items()})
+try:
+    from dico_subjects import DICO
+    ALL.update({f"ingredient/{k}": v for k, v in DICO.items()})
+except ImportError:
+    pass

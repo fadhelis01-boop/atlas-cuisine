@@ -1,3 +1,4 @@
+import { ZONE_LABEL, detectZone } from "../lib/season";
 import { useEffect, useRef, useState } from "react";
 import { ALLERGENS, RECIPES } from "../lib/data";
 import { Page, Section } from "../components/ui";
@@ -136,6 +137,16 @@ export default function Profil() {
             <input type="range" min={0.9} max={1.6} step={0.1} value={settings.textScale} onChange={(e) => setS((s) => { s.textScale = +e.target.value; })} />
           </label>
           <label className="switch"><input type="checkbox" checked={settings.readableFont} onChange={(e) => setS((s) => { s.readableFont = e.target.checked; })} /> Police plus lisible (dyslexie)</label>
+        </div>
+      </Section>
+      <Section title="Saisons de ton lieu" id="saisons">
+        <div className="form">
+          <p className="small">Le menu du jour, le « marché du mois » et la pastille « de saison » suivent les saisons de l'endroit où tu cuisines. ATLAS ne te localise pas : la zone est déduite du fuseau horaire de ton appareil (détecté : <strong>{ZONE_LABEL[detectZone()].split(" (")[0]}</strong>), et tu peux la choisir ici.</p>
+          <div className="radio-row" role="radiogroup" aria-label="Zone de saisons">
+            {(["auto", "nord", "sud", "tropical"] as const).map((v) => (
+              <label key={v} className="radio"><input type="radio" name="zone" checked={settings.zone === v} onChange={() => setS((s) => { s.zone = v; })} /> {v === "auto" ? "Automatique (fuseau horaire)" : ZONE_LABEL[v]}</label>
+            ))}
+          </div>
         </div>
       </Section>
       <Section title="Installer ATLAS sur tes appareils">

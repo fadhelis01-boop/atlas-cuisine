@@ -1,6 +1,6 @@
 // Tests du moteur (équivalents TypeScript de bible/test_engine.py + contrôles sur les 70 fiches réelles).
 // Lancement : npm test
-import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID } from "../src/lib/data";
+import { IMPORT_LIBRARY, INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID } from "../src/lib/data";
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
@@ -159,5 +159,10 @@ check("45 repères de sécurité : viande hachée 70 °C, volaille 74 °C", !!vi
   && TECHNIQUES.some((t) => t.steps.join(" ").includes("74 °C")));
 check("46 condiments maison (bouillon cube, nokoss) présents ; couverture illustrée pour chaque fiche",
   !!RECIPE_BY_ID["bouillon_cube_maison"] && !!RECIPE_BY_ID["nokoss"] && RECIPES.every((r) => dishEmoji(r).length > 0));
+
+// 47-48 chaînes YouTube (Tome 13 §10)
+const ytLib = IMPORT_LIBRARY.filter((i) => i.source === "YouTube");
+check("47 YouTube : plus de 1 500 vidéos classées, toutes lisibles dans l'appli, 13 chaînes", ytLib.length > 1500 && ytLib.every((i) => /^y[ts]:[\w-]{11}$/.test(i.embed)) && new Set(ytLib.map((i) => i.author)).size === 13);
+check("48 Shorts YouTube reconnus et lus en vertical", embedOf("https://www.youtube.com/shorts/gZQa_cAAfus") === "ys:gZQa_cAAfus" && ytLib.some((i) => i.embed.startsWith("ys:")));
 
 console.log(`\n${passed} contrôles OK`);

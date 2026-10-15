@@ -34,7 +34,7 @@ export interface State {
   timers: Timer[];
   cooked: Record<string, number>; // recette → nombre de fois cuisinée
   recipeVideos: Record<string, string[]>; // recette → liens vidéo ajoutés par l'utilisateur
-  settings: { theme: "auto" | "light" | "dark"; textScale: number; readableFont: boolean; rate: number; voiceURI: string | null; units: "metric" };
+  settings: { theme: "auto" | "light" | "dark"; textScale: number; readableFont: boolean; rate: number; voiceURI: string | null; units: "metric"; zone: "auto" | "nord" | "sud" | "tropical" };
   recent: string[];
 }
 
@@ -42,7 +42,7 @@ const KEY = "atlas-state-v1";
 const DEFAULT: State = {
   profile: { noPork: false, alcohol: "allowed", strict: false, vegetarian: false, allergens: [], adult: false, kidsAge: null, equipment: ["four", "plaques", "poele", "casserole", "mixeur"], onboarded: false },
   favorites: [], fridge: [], shopping: [], imports: [], menus: [], timers: [], cooked: {}, recipeVideos: {}, recent: [],
-  settings: { theme: "auto", textScale: 1, readableFont: false, rate: 1, voiceURI: null, units: "metric" },
+  settings: { theme: "auto", textScale: 1, readableFont: false, rate: 1, voiceURI: null, units: "metric", zone: "auto" },
 };
 
 function load(): State {

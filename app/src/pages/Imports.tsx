@@ -154,18 +154,31 @@ function Bibliotheque({ cat0 }: { cat0: string | null }) {
   const [source, setSource] = useState<string | null>(null);
   const [q, setQ] = useState("");
   const [noPork, setNoPork] = useState(false);
+  const [noAlcohol, setNoAlcohol] = useState(false);
+  const [channel, setChannel] = useState<string | null>(null);
+  const [frOnly, setFrOnly] = useState(false);
+  const channels = useMemo(() => [...new Set(IMPORT_LIBRARY.filter((i) => i.source === "YouTube").map((i) => i.author))], []);
   const counts = useMemo(() => IMPORT_LIBRARY.reduce<Record<string, number>>((a, i) => ((a[i.cat] = (a[i.cat] ?? 0) + 1), a), {}), []);
-  let list = IMPORT_LIBRARY.filter((i) => (!cat || i.cat === cat) && (!source || i.source === source) && (!noPork || !i.pork));
+  let list = IMPORT_LIBRARY.filter((i) => (!cat || i.cat === cat) && (!source || i.source === source) && (!noPork || !i.pork) && (!noAlcohol || !i.alcohol)
+    && (!channel || i.author === channel) && (!frOnly || !i.lang));
   if (q.trim()) list = search(list, q, (i) => [i.title, i.author, i.sub], 300);
   return (
     <>
-      <p className="small">Tes favoris TikTok (585 recettes) et les 339 recettes du site Cooking with Morgane, classés le 14/10/2026. Les pastilles 🐖/🍷 viennent de la légende : à confirmer.</p>
+      <p className="small">{IMPORT_LIBRARY.length} recettes en vidéo classées : tes favoris TikTok, les comptes La cuisine de Marina et NiangCook, le site Cooking with Morgane et 13 chaînes YouTube (Le Riz Jaune, L'Ardoise Porto-Vecchio, Armand Hasanpapaj, CookWithBash, ChesterFoodies, Cook with Nabeela…). Les pastilles 🐖/🍷 viennent du titre ou de la légende : à confirmer.</p>
       <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Chercher dans les favoris" aria-label="Chercher dans les favoris classés" />
       <div className="chips">
         <Chip on={!source} onClick={() => setSource(null)}>Toutes sources</Chip>
         {[...new Set(IMPORT_LIBRARY.map((i) => i.source))].map((s) => <Chip key={s} on={source === s} onClick={() => setSource(s)}>{s}</Chip>)}
         <Chip on={noPork} onClick={() => setNoPork(!noPork)}>Masquer 🐖</Chip>
+        <Chip on={noAlcohol} onClick={() => setNoAlcohol(!noAlcohol)}>Masquer 🍷</Chip>
+        <Chip on={frOnly} onClick={() => setFrOnly(!frOnly)}>En français seulement</Chip>
       </div>
+      {source === "YouTube" && (
+        <div className="chips chips-scroll" role="group" aria-label="Chaînes YouTube">
+          <Chip on={!channel} onClick={() => setChannel(null)}>Toutes les chaînes</Chip>
+          {channels.map((c) => <Chip key={c} on={channel === c} onClick={() => setChannel(channel === c ? null : c)}>▶ {c}</Chip>)}
+        </div>
+      )}
       <div className="chips">
         <Chip on={!cat} onClick={() => setCat(null)}>Toutes</Chip>
         {Object.entries(IMPORT_CATS).filter(([k]) => counts[k]).map(([k, l]) => <Chip key={k} on={cat === k} onClick={() => setCat(k)}>{l} ({counts[k]})</Chip>)}

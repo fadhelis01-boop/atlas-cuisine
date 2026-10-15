@@ -201,7 +201,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
           "Pains, pâtes": "pains", "Sauces": "sauces", "Fait maison sans additifs": "fait_maison", "Desserts": "desserts", "Boissons": "boissons",
           "Techniques": "techniques", "Zéro déchet": "zero_dechet", "À vérifier": "a_verifier", "Hors cuisine": None, "Moyen-Orient": "moyen_orient"}
 imports = []
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""
@@ -215,16 +215,17 @@ for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tikto
         if not m or sec in (None, "skip"): continue
         rest = m.group(3)
         if "rangée aussi" in rest: continue
-        author = (re.search(r"@([\w.]+)", rest) or [None, ""])[1] if source == "TikTok" else "Cooking with Morgane"
+        author = (re.search(r"@([\w.]+)", rest) or [None, ""])[1] if source == "TikTok" else                  ((re.search(r"▶ ([^·]+)", rest) or [None, ""])[1].strip() if source == "YouTube" else "Cooking with Morgane")
         title = m.group(1).strip()
         if re.match(r"(?i)voir la recette", title):  # texte de lien générique sur l'index du site : titre tiré de l'adresse
             from urllib.parse import unquote
             slug = unquote(m.group(2).rsplit("/", 1)[-1].rsplit(".", 1)[0]).replace("-", " ").strip()
             title = slug[:1].upper() + slug[1:]
-        if source != "TikTok":  # titre et sous-titre du site collés : « Mafé de pouletLe plat star… » → « Mafé de poulet : le plat star… »
+        if source == "Cooking with Morgane":  # titre et sous-titre du site collés : « Mafé de pouletLe plat star… » → « Mafé de poulet : le plat star… »
             title = re.sub(r"(?<=[a-zà-ÿ0-9)\]])(?=[A-ZÀ-Ý][a-zà-ÿ])", " : ", title, count=1)
         imports.append({"title": title, "url": m.group(2), "source": source, "author": author, "cat": sec, "sub": subsec,
-                        "pork": "🐖" in rest, "alcohol": "🍷" in rest, "fete": "🎉" in rest, "photo": "carrousel" in rest})
+                        "pork": "🐖" in rest, "alcohol": "🍷" in rest, "fete": "🎉" in rest, "photo": "carrousel" in rest,
+                        **({"lang": l} if (l := next((c for f, c in (("🇬🇧", "en"), ("🇩🇪", "de"), ("🇳🇱", "nl")) if f in rest), "")) else {})})
 
 # ---------------------------------------------------------------- vidéos : lecture dans l'application
 # TikTok : intégration officielle (tiktok.com/embed/v2/<id>) pour les vidéos ; les carrousels photo s'ouvrent dans TikTok.
@@ -234,7 +235,8 @@ ytp = os.path.join(IMP, "cookingwithmorgane_videos.json")
 if os.path.exists(ytp): YT = json.load(open(ytp, encoding="utf-8"))
 for it in imports:
     m = re.search(r"tiktok\.com/@[^/]+/video/(\d+)", it["url"])
-    it["embed"] = f"tt:{m.group(1)}" if m else (f"yt:{YT[it['url']]}" if it["url"] in YT else "")
+    ys = re.search(r"youtube\.com/shorts/([\w-]{11})", it["url"]); yw = re.search(r"youtube\.com/watch\?v=([\w-]{11})", it["url"])
+    it["embed"] = f"tt:{m.group(1)}" if m else f"ys:{ys.group(1)}" if ys else f"yt:{yw.group(1)}" if yw else (f"yt:{YT[it['url']]}" if it["url"] in YT else "")
 
 import unicodedata
 def nrm(t): return unicodedata.normalize("NFD", t.lower().replace("œ", "oe")).encode("ascii", "ignore").decode()
@@ -318,6 +320,32 @@ imports = list(by_url.values())
 
 def dump(name, obj):
     with open(os.path.join(OUT, name), "w", encoding="utf-8") as f: json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
+# ---------------------------------------------------------------- dictionnaire illustré + saisons (Tome 13 §8-9)
+import sys as _sys
+_sys.path.insert(0, os.path.join(HERE, "..", "illustrations"))
+from dictionnaire_data import DICO, ALIAS
+from dico_subjects import slug as _slug
+def months(spec):
+    if not spec: return []
+    a, b = (int(x) for x in spec.split("-"))
+    return [((a - 1 + i) % 12) + 1 for i in range(((b - a) % 12) + 1)]
+dico = {}
+for n in ingredients:
+    tgt = ALIAS.get(n, n)
+    q, what, use, season = DICO[tgt]
+    ingredients[n]["slug"] = _slug(tgt)
+    ingredients[n]["season"] = months(season)
+    if n == tgt:
+        dico[_slug(n)] = {"name": n, "section": ingredients[n]["section"], "what": what, "use": use, "season": months(season),
+                          "aliases": sorted(a for a, b in ALIAS.items() if b == n)}
+used = {}
+for r in recipes:
+    for ln in r["ingredients"]:
+        if ln["ref"] and not ln["ref"].startswith("SUB:"):
+            used.setdefault(ingredients[ln["ref"]]["slug"], set()).add(r["id"])
+for k, v in dico.items(): v["recipes"] = sorted(used.get(k, []))
+print(f"dictionnaire : {len(dico)} fiches, {sum(1 for v in dico.values() if v['season'])} avec saison, {sum(1 for v in dico.values() if v['recipes'])} utilisées dans les recettes")
+dump("dico.json", dico)
 dump("ingredients.json", ingredients); dump("recipes.json", recipes); dump("rules.json", RULES)
 dump("catalogue.json", catalogue); dump("imports.json", imports)
 print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for r in recipes if r['leftovers'])} fiches")

@@ -8,7 +8,8 @@ const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "
   "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
 
 const CATS = [
-  { to: "/techniques", icon: "🔪", label: "Techniques de cuisine", sub: "30 fiches pas à pas" },
+  { to: "/techniques", icon: "🔪", label: "Techniques de cuisine", sub: "69 fiches : chef, pâtissier, boulanger, chocolatier" },
+  { to: "/dictionnaire", icon: "📖", label: "Dictionnaire des ingrédients", sub: "655 fiches illustrées, saisons, substituts" },
   { to: "/pains", icon: "🥖", label: "Pains, pâtes & bases", sub: "baguette, pizza, naan, crêpes…" },
   { to: "/sauces", icon: "🥫", label: "Sauces maison", sub: "mayo, algérienne, samouraï, frites…" },
   { to: "/enfants", icon: "🧒", label: "Recettes pour enfants", sub: "par âge, avec sécurité" },

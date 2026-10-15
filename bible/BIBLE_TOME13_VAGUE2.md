@@ -13664,3 +13664,47 @@ Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **1153 ingrédients e
 - **D23** : matcha et café soluble n'ont pas d'entrée au Tome 3 (référence vide) : à ajouter avec la mention « théine / caféine » pour le filtre enfants ?
 - **D24** : fiches à poisson cru (gravlax, ceviche, poisson cru tahitien, kokoda, tataki, poke) : afficher un bandeau « publics fragiles » plus visible que l'astuce ?
 - **D25** : priorité des tests en cuisine de la vague 2 (proposition : pâtisserie et chocolat d'abord, les dosages y sont le moins tolérants).
+
+---
+
+## 8. Dictionnaire illustré des ingrédients
+
+**655 fiches** couvrent les 701 lignes du Tome 3 (46 doublons de la section « Produits du monde » renvoient à leur fiche). Chaque fiche : ce que c'est, comment l'utiliser, la saison en France métropolitaine, la disponibilité (Tome 3), les allergènes et dérivés porc/alcool calculés, l'astuce du référentiel (substitut, zéro déchet), les recettes ATLAS qui l'utilisent, et une photo sous licence libre quand une image juste a été trouvée (sinon pictogramme de la famille). Source unique : `bible/dico_1.py` à `dico_4.py`, exportée dans `app/src/data/dico.json` (chargée à la demande, disponible hors connexion). Chaque ingrédient d'une recette renvoie à sa fiche.
+
+Exemples de fiches pour des produits peu connus : **passata** (purée de tomates crues tamisée), **soumbala / netetou** (graines de néré fermentées d'Afrique de l'Ouest, le « bouillon cube » traditionnel), galanga, tahini, gochujang, ful medames, achiote, asafoetida, amchur, berbéré, niter kibbeh, katsuobushi, mahleb, farofa, colombo…
+
+---
+
+## 9. Saisonnalité selon le lieu d'utilisation
+
+- **Zone** : déduite du fuseau horaire de l'appareil (aucune géolocalisation, aucune donnée envoyée) et modifiable dans le profil : hémisphère nord tempéré, hémisphère sud tempéré (calendrier décalé de 6 mois), zone tropicale (pas d'hiver : produits tropicaux et plats frais privilégiés).
+- **Calendrier** : 106 produits frais datés (légumes, fruits, herbes, poissons, quelques fromages), mois de pleine récolte en France métropolitaine.
+- **Score de saison d'une recette** : + produits structurants de saison, − produits structurants hors saison, + plat réconfortant (mijotés, soupes, gratins) en hiver et à l'automne, + plat frais (salades, grillades, boissons fraîches) en été et sous les tropiques.
+- **Usages** : menu du jour (entrée, plat, dessert tirés du tiers le mieux accordé à la saison, stables sur la journée), « marché du mois », envie « De saison », pastille « de saison / hors saison » sur chaque fiche (avec le conseil : surgelés et conserves de qualité conviennent souvent).
+- **Limites** : le calendrier tropical est simplifié (pas de saisons des pluies) ; les zones méditerranéennes ou de montagne suivent le calendrier tempéré.
+
+- **D26** : faut-il un calendrier propre aux Antilles, à La Réunion et à l'Afrique de l'Ouest (saisons de la mangue, du letchi, de l'igname) ?
+
+---
+
+## 10. Chaînes YouTube de recettes (corpus vidéo)
+
+Relevé du 15/10/2026, à la demande : Le Riz Jaune, La cuisine de Marina, L'Ardoise Porto-Vecchio, Armand Hasanpapaj, AlexCook'in, Britney Breaks Bread, Tinas Kitchenworld, Shota Horii · Aisle to Tokyo, CookWithBash, ChesterFoodies, Dishcovery, Cook with Nabeela, Kookmutsjes (vidéos et Shorts les plus récents, 400 au plus par chaîne). Tri **automatique** d'après le titre (`recettes-classees/build_youtube.py`), avec la cuisine de la chaîne par défaut ; hors-recette écarté ; porc et alcool repérés dans le titre et signalés ; titres étrangers gardés dans leur langue et signalés. Lecture dans l'application par le lecteur officiel YouTube (youtube-nocookie ; Shorts en vertical). Les vidéos sont aussi liées automatiquement aux fiches ATLAS de même nom.
+
+| Chaîne | Spécialité | Retenues | Écartées |
+|---|---|---|---|
+| [Le Riz Jaune](https://www.youtube.com/@lerizjaune) | cuisines d'Asie en français (Chine, Thaïlande, Laos, Vietnam, Japon, Corée) | 392 | 8 |
+| [La cuisine de Marina](https://www.youtube.com/@lacuisinedemarina1039/videos) | cuisine camerounaise et d'Afrique centrale | 398 | 2 |
+| [L'Ardoise Porto-Vecchio](https://www.youtube.com/@lardoiseportovecchio/videos) | chef corse : fait maison contre l'industriel, sauces, bistrot | 113 | 1 |
+| [Armand Hasanpapaj](https://www.youtube.com/@armandhasanpapaj) | pains, viennoiseries et cuisine des Balkans | 192 | 3 |
+| [AlexCook'in](https://www.youtube.com/@alexcook.in4) | plats familiaux rapides | 31 | 3 |
+| [Britney Breaks Bread](https://www.youtube.com/@britneybreaksbread3824) | pâtisserie et comfort food américaine (en anglais) | 128 | 2 |
+| [Tinas Kitchenworld](https://www.youtube.com/@TinasKitchenworld) | pains, brioches et gâteaux des Balkans et d'Allemagne (en allemand) | 62 | 0 |
+| [Shota Horii · Aisle to Tokyo](https://www.youtube.com/@aisletotokyo) | 100 recettes japonaises du quotidien (en anglais) | 48 | 0 |
+| [CookWithBash](https://www.youtube.com/@Cookwithbash) | cuisine algérienne, maghrébine et du monde | 151 | 17 |
+| [ChesterFoodies](https://www.youtube.com/@Chester_Foodies) | cuisine française familiale et franc-comtoise | 149 | 1 |
+| [Dishcovery](https://www.youtube.com/@Dishcovery_) | nouilles et plats asiatiques fusion (en anglais) | 62 | 1 |
+| [Cook with Nabeela](https://www.youtube.com/@CookwithNabeela) | cuisine pakistanaise, indienne et du monde (en anglais) | 294 | 6 |
+| [Kookmutsjes](https://www.youtube.com/@kookmutsjes) | pâtisseries, gâteaux et snacks (néerlandais/anglais) | 53 | 1 |
+
+- **Limites** : tri par mots-clés (quelques erreurs possibles, signalables) ; vidéos plus anciennes que les 400 dernières non relevées ; pas de traduction des titres anglais, allemands et néerlandais.

@@ -22,7 +22,7 @@ const BY_WORD: [RegExp, string][] = [
   [/salade|taboule|fattouche|coleslaw|som tam|larb|panzanella/, "🥗"], [/pates|spaghetti|lasagne|macaroni|gnocchi|risotto|crozet|spatzle|cacio/, "🍝"],
   [/riz|paella|jollof|thieb|pilaf|tahdig|nasi|bibimbap|mujaddara|koshari/, "🍚"], [/couscous|semoule|tajine|tagine/, "🥘"],
   [/fondue|tartiflette|raclette|aligot|truffade|fromage|gougere|camembert|cheddar|mac and cheese|khachapuri|pao de queijo/, "🧀"],
-  [/oeuf|omelette|chakchouka|shakshuka|menemen|tortilla de patatas|tortilla espanola/, "🍳"], [/frite|patatas|pommes de terre|puree|gratin|sarladaise|stoemp|rosti|poutine/, "🍟"],
+  [/\boeufs?\b|omelette|chakchouka|shakshuka|menemen|tortilla de patatas|tortilla espanola/, "🍳"], [/frite|patatas|pommes de terre|puree|gratin|sarladaise|stoemp|rosti|poutine/, "🍟"],
   [/poulet|volaille|chicken|nugget|coq|pintade|dinde|yassa|souvlaki|chich/, "🍗"], [/canard|magret|confit/, "🍗"], [/agneau|gigot|souris|navarin|mechoui|dibi|stew/, "🍖"],
   [/boeuf|steak|cote de|entrecote|bourguignon|daube|joue|pot-au-feu|goulash|carbonade|bulgogi|suya|lomo|chili/, "🥩"],
   [/crevette|gambas|scampi/, "🦐"], [/moule|huitre|coque|palourde|saint-jacques/, "🦪"], [/calamar|poulpe|seiche|tielle/, "🦑"],

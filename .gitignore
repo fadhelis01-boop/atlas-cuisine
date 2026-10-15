@@ -10,3 +10,5 @@ illustrations/planches/
 illustrations/*.log
 illustrations/apercu*.jpg
 __pycache__/
+illustrations/planches_v2/
+illustrations/candidats_ingredients.json

@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 
 // Estampille le service worker à chaque compilation : les appareils
 // détectent ainsi la nouvelle version et proposent la mise à jour.
@@ -10,7 +10,9 @@ function stampServiceWorker(): Plugin {
     apply: "build",
     closeBundle() {
       const f = "dist/sw.js";
-      if (existsSync(f)) writeFileSync(f, readFileSync(f, "utf8").replaceAll("__BUILD__", new Date().toISOString()));
+      // tous les fichiers compilés (y compris les morceaux chargés à la demande, comme le dictionnaire) sont mis en cache à l'installation
+      const assets = existsSync("dist/assets") ? readdirSync("dist/assets").map((n) => `./assets/${n}`) : [];
+      if (existsSync(f)) writeFileSync(f, readFileSync(f, "utf8").replaceAll("__BUILD__", new Date().toISOString()).replace('"__ASSETS__"', JSON.stringify(assets).slice(1, -1) || '""'));
     },
   };
 }

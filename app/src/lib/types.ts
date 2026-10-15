@@ -9,6 +9,8 @@ export interface IngredientRef {
   dispo: string; // 🟢 supermarché · 🟡 rayon monde/bio · 🟠 épicerie spécialisée · 🔴 difficile
   section: string; // famille du référentiel, sert aussi de rayon pour la liste de courses
   note: string; // notes du Tome 3 (substitut sans alcool, alternative…)
+  slug: string; // fiche du dictionnaire illustré (/ingredient/<slug>)
+  season: number[]; // mois de récolte en France métropolitaine (vide = toute l'année ou produit transformé)
 }
 
 export interface RecipeLine {
@@ -99,6 +101,7 @@ export interface CatalogueEntry {
 }
 
 export interface ImportEntry {
+  lang?: "en" | "de" | "nl"; // titre et vidéo dans une autre langue (chaînes YouTube étrangères)
   title: string;
   url: string;
   source: string;

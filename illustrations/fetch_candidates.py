@@ -12,18 +12,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CAND = os.path.join(HERE, "candidats"); os.makedirs(CAND, exist_ok=True)
 SHEETS = os.path.join(HERE, "planches"); os.makedirs(SHEETS, exist_ok=True)
 CTX = ssl.create_default_context(cafile=r"C:\IA\tools\combined_cacert.pem")  # interception TLS d'Avast (voir mémoire A1111)
-UA = {"User-Agent": "ATLAS-cuisine-illustrations/1.0 (personal project; openly licensed images with credit)"}  # ASCII seulement : sinon 403
+UA = {"User-Agent": "ATLAS-cuisine-illustrations/1.1 (https://github.com/fadhelis01-boop/atlas-cuisine; personal non-commercial project; openly licensed images with credit) python-urllib"}  # ASCII seulement : sinon 403
 
 def get(url, raw=False, tries=6):
     for k in range(tries):
         try:
-            time.sleep(0.4)  # politesse envers les API publiques
+            time.sleep(1.0)  # politesse envers les API publiques : une requête par seconde, en série
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), context=CTX, timeout=40) as r:
                 b = r.read()
                 return b if raw else json.loads(b)
         except Exception as e:  # noqa: BLE001
             if k == tries - 1: raise
-            wait = 30 * (k + 1) if "429" in str(e) else 2 + 3 * k  # 429 : on attend vraiment
+            ra = getattr(e, "headers", None) and e.headers.get("Retry-After")
+            wait = (int(ra) if ra and ra.isdigit() else 60 * (k + 1)) if "429" in str(e) else 2 + 3 * k  # 429 : on respecte Retry-After
             time.sleep(wait)
 
 def strip_html(s): return re.sub(r"<[^>]+>", "", s or "").replace("&#160;", " ").replace("&amp;", "&").strip()
@@ -32,7 +33,7 @@ def ok_license(l):
     if any(x in l for x in ("nc", "nd", "all rights")): return False
     return any(x in l for x in ("cc0", "public domain", "pdm", "cc by", "by-sa", "by ", "cc-by")) or l in ("by", "by-sa", "cc0", "pdm")
 
-def commons(q, n=12):
+def commons(q, n=24):
     u = ("https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=%d"
          "&gsrsearch=%s&prop=imageinfo&iiprop=url|size|extmetadata|mime&iiurlwidth=480") % (n, urllib.parse.quote(q + " filetype:bitmap"))
     out = []
@@ -46,11 +47,14 @@ def commons(q, n=12):
                     "license_url": m.get("LicenseUrl", {}).get("value", ""), "author": strip_html(m.get("Artist", {}).get("value", ""))[:120]})
     return out
 
+OV_OFF = False  # quota anonyme Openverse (~200 requêtes/jour) : au premier refus, on s'arrête pour la journée
 def openverse(q, n=12):
+    global OV_OFF
+    if OV_OFF: return []
     u = "https://api.openverse.org/v1/images/?q=%s&license=by,by-sa,cc0,pdm&page_size=%d&mature=false" % (urllib.parse.quote(q), n)
     out = []
-    try: res = get(u).get("results", [])
-    except Exception: return out  # quota anonyme atteint : Commons suffit
+    try: res = get(u, tries=1).get("results", [])
+    except Exception: OV_OFF = True; return out  # quota anonyme atteint : Commons suffit
     for x in res:
         if x.get("source") == "wikimedia": continue  # déjà couvert par Commons
         out.append({"src": f"Openverse ({x.get('source')})", "title": x.get("title") or "", "w": x.get("width") or 0, "h": x.get("height") or 0,
@@ -66,11 +70,11 @@ def candidates(key, queries):
     tries = []
     for q in queries:  # Wikimedia exige tous les mots : on raccourcit la requête si elle ne trouve rien
         w = q.split()
-        tries += [" ".join(w[:n]) for n in range(len(w), 1 if len(w) > 1 else 0, -1)]
+        tries += [" ".join(w[:n]) for n in range(len(w), 1 if len(w) > 1 else 0, -1)][:2]  # 2 variantes au plus par requête
     com = []
     for q in tries:
         com += [c for c in commons(q) if keep(c)]
-        if len(com) >= 8: break
+        if len(com) >= 6: break
     ov = [c for c in openverse(queries[-1]) + (openverse(queries[0]) if len(queries) > 1 else []) if keep(c)]
     seen, out = set(), []
     for c in com[:6] + ov[:4] + com[6:] + ov[4:]:  # variété : 6 de Commons, 4 d'Openverse (Flickr surtout)

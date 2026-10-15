@@ -13,7 +13,8 @@ self.addEventListener("install", (event) => {
       try {
         const html = await (await fetch("./index.html", { cache: "reload" })).text();
         const assets = [...html.matchAll(/(?:src|href)="(\.\/assets\/[^"]+)"/g)].map((m) => m[1]);
-        await cache.addAll(assets);
+        const all = ["__ASSETS__"].filter((a) => a && !a.startsWith("__")); // liste complète écrite à la compilation
+        await cache.addAll([...new Set([...assets, ...all])]);
       } catch (e) {
         /* hors ligne pendant l'installation */
       }

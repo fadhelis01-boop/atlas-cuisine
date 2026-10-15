@@ -9,6 +9,9 @@ import type { Recipe } from "../lib/types";
 import { Grid, RecipeCard, Section, useVisible } from "../components/ui";
 import { Photo, photoOf } from "../components/photo";
 import { HeroArt } from "../components/art";
+import { MONTHS_FULL, SEASON_LABEL, type Zone, marketOfMonth, seasonFit, seasonOf, zoneOf } from "../lib/season";
+import { INGREDIENTS } from "../lib/data";
+import { sectionLook } from "./Dictionnaire";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
@@ -20,7 +23,8 @@ const ENTRIES = [
   { to: "/techniques", icon: "🔪", label: "Techniques", sub: "chef, pâtissier, boulanger", tone: "aubergine" },
   { to: "/fetes", icon: "🎉", label: "Fêtes & menus", sub: "entrée, plat, dessert", tone: "berry" },
   { to: "/zero-dechet", icon: "♻️", label: "Zéro déchet", sub: "tout utiliser", tone: "herb" },
-  { to: "/imports", icon: "📲", label: "Mes imports", sub: "TikTok & co", tone: "ocean" },
+  { to: "/dictionnaire", icon: "📖", label: "Dictionnaire", sub: "ingrédients illustrés", tone: "ocean" },
+  { to: "/imports", icon: "📲", label: "Mes imports", sub: "TikTok & co", tone: "crust" },
 ];
 const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "/frigo": "rubrique/frigo", "/enfants": "rubrique/enfants", "/pains": "rubrique/pains",
   "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
@@ -29,7 +33,9 @@ const PASTRY = /choux|patissiere|sucree|feuilletage|meringue|ganache|temperer|ma
 const has = (r: Recipe, re: RegExp) => re.test(norm(r.title)) || r.ingredients.some((l) => re.test(norm(l.label)));
 
 /** Envies : des filtres d'un geste, affichés en rangée sous le bandeau. */
+let ZONE: Zone = "nord"; // zone courante, fixée au rendu (les tests d'envies en ont besoin)
 const CRAVINGS: { id: string; icon: string; label: string; test: (r: Recipe) => boolean }[] = [
+  { id: "saison", icon: "🌱", label: "De saison", test: (r) => r.role !== "autre" && seasonFit(r, ZONE).score >= 2 },
   { id: "rapide", icon: "⏱️", label: "Prêt en 30 min", test: (r) => r.role === "plat" && r.active + r.rest <= 30 },
   { id: "chocolat", icon: "🍫", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
   { id: "patisserie", icon: "🧁", label: "Pâtisserie", test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")) },
@@ -58,6 +64,11 @@ function daily<T>(list: T[], n: number, salt: number) {
   return out;
 }
 
+function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
+  const f = seasonFit(r, zone);
+  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> 🌱 {f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> {f.mood === "chaud" ? "🔥 plat réconfortant" : "❄️ plat frais"}</span>}</p>;
+}
+
 export default function Home() {
   const [q, setQ] = useState("");
   const [craving, setCraving] = useState<string | null>(null);
@@ -67,9 +78,20 @@ export default function Home() {
   const nextFetes = FETES.filter((f) => f.month && (f.month === month || f.month === (month % 12) + 1));
   const visible = useVisible(RECIPES);
   const g = greeting(new Date().getHours());
-  const plats = visible.filter((r) => r.role === "plat");
-  const today = daily(plats, 1, 0)[0] ?? null;
-  const dessert = daily(visible.filter((r) => r.role === "dessert"), 1, 3)[0] ?? null;
+  const zone = zoneOf(useStore((st) => st.settings.zone));
+  ZONE = zone;
+  const season = seasonOf(zone);
+  // Menu du jour : parmi les recettes les mieux accordées à la saison du lieu (produits de saison, plat chaud ou frais selon le climat)
+  const seasonal = (role: string, salt: number) => {
+    const ranked = visible.filter((r) => r.role === role).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
+    const top = ranked.slice(0, Math.max(12, Math.round(ranked.length * 0.3))).map(([r]) => r);
+    return daily(top, 1, salt)[0] ?? null;
+  };
+  const entree = seasonal("entree", 7);
+  const today = seasonal("plat", 0);
+  const dessert = seasonal("dessert", 3);
+  const market = useMemo(() => marketOfMonth(zone).filter((n) => INGREDIENTS[n]?.slug), [zone]);
+  const monthName = MONTHS_FULL[new Date().getMonth()];
   const news = useMemo(() => daily(visible.filter((r) => r.source.includes("vague 2") && r.role !== "autre"), 8, 1), [visible]);
   const pastry = useMemo(() => daily(visible.filter(CRAVINGS[2].test), 8, 2), [visible]);
   const picked = craving ? CRAVINGS.find((c) => c.id === craving) : null;
@@ -120,8 +142,27 @@ export default function Home() {
       </nav>
 
       {(today || dessert) && (
-        <Section title="Le menu du jour">
-          <Grid>{today && <RecipeCard r={today} note={<p className="tag-day">Le plat</p>} />}{dessert && <RecipeCard r={dessert} note={<p className="tag-day">Le dessert</p>} />}</Grid>
+        <Section title={`Le menu du jour · ${SEASON_LABEL[season]}`} more={<a href={href("/profil")}>Ma zone de saisons →</a>}>
+          <Grid>
+            {entree && <RecipeCard r={entree} note={<SeasonNote r={entree} zone={zone} label="L'entrée" />} />}
+            {today && <RecipeCard r={today} note={<SeasonNote r={today} zone={zone} label="Le plat" />} />}
+            {dessert && <RecipeCard r={dessert} note={<SeasonNote r={dessert} zone={zone} label="Le dessert" />} />}
+          </Grid>
+        </Section>
+      )}
+      {market.length > 0 && (
+        <Section title={zone === "tropical" ? "Le marché des tropiques" : `Le marché ${/^[aeiou]/.test(monthName) ? "d'" : "de "}${monthName}`} more={<a href={href("/dictionnaire")}>Dictionnaire →</a>}>
+          <div className="market">
+            {market.slice(0, 24).map((n) => {
+              const ing = INGREDIENTS[n]; const k = `ingredient/${ing.slug}`; const [, icon, tone] = sectionLook(ing.section);
+              return (
+                <a key={n} href={href(`/ingredient/${ing.slug}`)} className="market-item">
+                  <span className={`dico-thumb round tone-${tone}`}>{photoOf(k) ? <Photo k={k} alt="" sizes="96px" /> : <span aria-hidden="true">{icon}</span>}</span>
+                  <span className="market-name">{n.split(/ \/ | \(/)[0]}</span>
+                </a>
+              );
+            })}
+          </div>
         </Section>
       )}
       {news.length > 0 && (

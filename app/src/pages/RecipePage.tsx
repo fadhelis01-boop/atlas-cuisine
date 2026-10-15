@@ -1,3 +1,4 @@
+import { SEASON_LABEL, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { useEffect, useMemo, useState } from "react";
 import { ALLERGENS, INGREDIENTS, MACRO_BY_ID, RECIPE_BY_ID } from "../lib/data";
 import { evaluateLines, verdict } from "../lib/engine";
@@ -19,6 +20,15 @@ export function Rich({ text }: { text: string }) {
   // **gras** → <strong>
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return <>{parts.map((p, i) => (p.startsWith("**") ? <strong key={i}>{p.slice(2, -2)}</strong> : <span key={i}>{p}</span>))}</>;
+}
+
+function SeasonBadge({ r }: { r: Recipe }) {
+  const zone = zoneOf(useStore((st) => st.settings.zone));
+  const f = seasonFit(r, zone);
+  const s = seasonOf(zone);
+  if (f.inSeason.length && f.score > 0) return <p className="meta season-ok">🌱 De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}</p>;
+  if (f.outSeason.length) return <p className="meta season-out">🕰️ Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité conviennent souvent).</p>;
+  return null;
 }
 
 export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }) {
@@ -87,6 +97,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}>▶ Voir la vidéo</button>}
           <p className="meta">⏱ {minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · Niveau {r.level} · {r.cost}</p>
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
+          <SeasonBadge r={r} />
           <div className="row actions">
             <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}>▶ Cuisiner</a>
             {ttsAvailable() && <button className="btn ghost" onClick={() => read("tout")} aria-pressed={reading !== null}>{reading !== null ? "⏹ Arrêter" : "🔊 Écouter"}</button>}
@@ -128,7 +139,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {lines.map((l, i) => (
               <li key={i} className={l.optional ? "opt" : ""}>
                 <span className="qty">{scaleQty(l.qty, factor)}</span>{" "}
-                {l.ref?.startsWith("SUB:") ? <a href={href(`/recette/${l.ref.slice(4)}`)}>{l.label}</a> : l.label}
+                {l.ref?.startsWith("SUB:") ? <a href={href(`/recette/${l.ref.slice(4)}`)}>{l.label}</a> : l.ref && INGREDIENTS[l.ref]?.slug ? <a className="ing-link" href={href(`/ingredient/${INGREDIENTS[l.ref].slug}`)} title={`${l.ref} : voir le dictionnaire`}>{l.label}</a> : l.label}
                 {l.optional && <span className="meta"> (facultatif)</span>}
                 {l.replaces && <span className="meta repl"> · remplace {l.replaces}</span>}
                 {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && <span className="meta" title="Disponibilité en France"> · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}</span>}

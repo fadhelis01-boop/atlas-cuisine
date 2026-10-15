@@ -25,10 +25,11 @@ import Biblio from "./pages/Biblio";
 import Profil from "./pages/Profil";
 import Onboarding from "./pages/Onboarding";
 import Credits from "./pages/Credits";
+import { DictionaryPage, IngredientPage } from "./pages/Dictionnaire";
 
 const TABS = [
   { to: "/", label: "Accueil", icon: "🏠", match: [""] },
-  { to: "/explorer", label: "Explorer", icon: "🧭", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet"] },
+  { to: "/explorer", label: "Explorer", icon: "🧭", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient"] },
   { to: "/frigo", label: "Frigo", icon: "🥕", match: ["frigo", "courses"] },
   { to: "/biblio", label: "Ma biblio", icon: "📚", match: ["biblio", "imports"] },
   { to: "/profil", label: "Profil", icon: "👤", match: ["profil", "credits"] },
@@ -84,6 +85,8 @@ export default function App() {
     case "biblio": page = <Biblio />; break;
     case "profil": page = <Profil />; break;
     case "credits": page = <Credits />; break;
+    case "dictionnaire": page = <DictionaryPage q0={route.query.get("q") ?? ""} />; break;
+    case "ingredient": page = <IngredientPage key={p1} slug={p1} />; break;
     default: page = <main className="page"><h1>Page introuvable</h1><a href={href("/")}>Retour à l'accueil</a></main>;
   }
   const active = TABS.find((t) => t.match.includes(p0 ?? "")) ?? (p0 === "recette" ? null : TABS[0]);

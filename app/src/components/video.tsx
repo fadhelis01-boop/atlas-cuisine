@@ -9,8 +9,10 @@ import type { ImportEntry } from "../lib/types";
 
 export interface PlayableVideo { title: string; url: string; embed: string; source: string; author?: string }
 
-/** « tt:<id> » ou « yt:<id> » à partir d'un lien, ou chaîne vide si la vidéo n'est pas intégrable. */
+/** « tt:<id> », « yt:<id> » ou « ys:<id> » (YouTube Short, vertical) à partir d'un lien, ou chaîne vide si la vidéo n'est pas intégrable. */
 export function embedOf(url: string): string {
+  const ys = url.match(/youtube\.com\/shorts\/([\w-]{11})/);
+  if (ys) return `ys:${ys[1]}`;
   const tt = url.match(/tiktok\.com\/@[^/]+\/video\/(\d+)/) ?? url.match(/tiktok\.com\/(?:player\/v1|embed(?:\/v2)?)\/(\d+)/);
   if (tt) return `tt:${tt[1]}`;
   const yt = url.match(/(?:youtube(?:-nocookie)?\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/)|youtu\.be\/)([\w-]{11})/);
@@ -22,7 +24,7 @@ function playerSrc(embed: string): string {
   const [kind, id] = embed.split(":");
   // embed/v2 : intégration officielle qui fonctionne aussi hors du domaine tiktok.com (le lecteur player/v1 a échoué au test)
   if (kind === "tt") return `https://www.tiktok.com/embed/v2/${id}?lang=fr-FR`;
-  if (kind === "yt") return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
+  if (kind === "yt" || kind === "ys") return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
   return "";
 }
 
@@ -47,7 +49,7 @@ export function VideoHost() {
     return () => window.removeEventListener("keydown", onKey);
   }, [v]);
   if (!v) return null;
-  const vertical = v.embed.startsWith("tt:");
+  const vertical = v.embed.startsWith("tt:") || v.embed.startsWith("ys:");
   return (
     <div className="video-layer" role="dialog" aria-modal="true" aria-label={`Vidéo : ${v.title}`} onClick={closeVideo}>
       <div className={`video-box ${vertical ? "vertical" : ""}`} onClick={(e) => e.stopPropagation()}>
@@ -57,7 +59,7 @@ export function VideoHost() {
         </div>
         <iframe src={playerSrc(v.embed)} title={v.title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
         <p className="small video-foot">
-          {v.source}{v.author && v.source === "TikTok" ? ` · @${v.author}` : ""} · vidéo de son auteur·e, lue depuis {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}.{" "}
+          {v.source}{v.author && v.source === "TikTok" ? ` · @${v.author}` : v.author && v.author !== v.source ? ` · ${v.author}` : ""} · vidéo de son auteur·e, lue depuis {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}.{" "}
           <a href={v.url} target="_blank" rel="noopener noreferrer">Ouvrir dans {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}</a>
         </p>
       </div>
@@ -82,7 +84,7 @@ export function ImportRow({ i, extra }: { i: ImportEntry; extra?: string }) {
       <PlayButton v={v} />
       <span>
         <a href={i.url} target="_blank" rel="noopener noreferrer">{i.title}</a>{" "}
-        <span className="meta">· {i.source === "TikTok" ? `@${i.author}` : i.source}{i.sub ? ` · ${i.sub}` : ""}{i.pork ? " · 🐖" : ""}{i.alcohol ? " · 🍷" : ""}{i.fete ? " · 🎉" : ""}{i.photo ? " · photos" : ""}{extra ? ` · ${extra}` : ""}</span>
+        <span className="meta">· {i.source === "TikTok" ? `@${i.author}` : i.source === "YouTube" ? `▶ ${i.author}` : i.source}{i.lang ? ` · ${{ en: "🇬🇧 en anglais", de: "🇩🇪 en allemand", nl: "🇳🇱 en néerlandais" }[i.lang]}` : ""}{i.embed?.startsWith("ys:") ? " · short" : ""}{i.sub ? ` · ${i.sub}` : ""}{i.pork ? " · 🐖" : ""}{i.alcohol ? " · 🍷" : ""}{i.fete ? " · 🎉" : ""}{i.photo ? " · photos" : ""}{extra ? ` · ${extra}` : ""}</span>
       </span>
     </li>
   );
