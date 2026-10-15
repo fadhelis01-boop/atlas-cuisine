@@ -35,7 +35,7 @@ const TABS = [
   { to: "/", label: "Accueil", icon: "🏠", match: [""] },
   { to: "/explorer", label: "Explorer", icon: "🧭", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient", "recettes", "apprendre"] },
   { to: "/frigo", label: "Frigo", icon: "🥕", match: ["frigo", "courses", "semaine"] },
-  { to: "/biblio", label: "Ma biblio", icon: "📚", match: ["biblio", "imports"] },
+  { to: "/biblio", label: "Mes recettes", icon: "📚", match: ["biblio", "imports"] },
   { to: "/profil", label: "Profil", icon: "👤", match: ["profil", "credits"] },
 ];
 

@@ -1,3 +1,4 @@
+import { finishFor } from "../lib/dressage";
 import { rescueFor } from "../lib/rescue";
 import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
@@ -66,11 +67,34 @@ function Lexique({ text }: { text: string }) {
   );
 }
 
+const TOC: [string, string][] = [["r-ingredients", "Ingrédients"], ["r-etapes", "Étapes"], ["r-finition", "Finition"], ["r-aide", "Si ça rate"]];
+/** Sommaire collant (audit UX 5) : sur téléphone, sauter d'un bloc à l'autre d'une fiche longue. Boutons et non ancres : le routeur utilise le #. */
+function RecipeToc() {
+  return (
+    <nav className="recipe-toc" aria-label="Sommaire de la recette">
+      {TOC.map(([id, l]) => <button key={id} type="button" className="chip" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}>{l}</button>)}
+    </nav>
+  );
+}
+
+function FinishBlock({ r }: { r: Recipe }) {
+  const f = finishFor(r);
+  return (
+    <div className="finish card pad" id="r-finition">
+      <h3 className="h4">🍽 Finition et dressage</h3>
+      {f.taste && <p><strong>Goûte et rectifie.</strong> {f.taste}</p>}
+      <p>{f.plate}</p>
+      {f.green && <p className="small">{f.green}</p>}
+      <p className="small"><a href={href("/technique/presenter-une-assiette")}>Les gestes pour présenter une assiette →</a></p>
+    </div>
+  );
+}
+
 function RescueBlock({ r }: { r: Recipe }) {
   const list = rescueFor(r);
   if (!list.length) return null;
   return (
-    <Section title="🆘 Si ça ne se passe pas comme prévu">
+    <Section title="🆘 Si ça ne se passe pas comme prévu" id="r-aide">
       <div className="rescue">
         {list.map((x) => (
           <details key={x.problem} className="card pad">
@@ -185,8 +209,9 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       <p className="intro"><Rich text={r.intro} /></p>
       <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
 
+      <RecipeToc />
       <div className="two-col">
-        <Section title="Ingrédients">
+        <Section title="Ingrédients" id="r-ingredients">
           <div className="portions" role="group" aria-label="Nombre de portions">
             <button className="btn small ghost" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
             <span><strong>{portions}</strong> {r.role === "boisson" || r.kind === "Sauce" ? "portions" : "personnes"}</span>
@@ -207,7 +232,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           <Leftovers r={r} />
         </Section>
 
-        <Section title="Étapes">
+        <Section title="Étapes" id="r-etapes">
           <BeforeYouStart r={r} />
           <ol className="steps">
             {r.steps.map((s, i) => (
@@ -222,6 +247,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             ))}
           </ol>
           <Lexique text={r.steps.join(" ")} />
+          <FinishBlock r={r} />
         </Section>
       </div>
 

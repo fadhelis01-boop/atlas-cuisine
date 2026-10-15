@@ -12,6 +12,7 @@ import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
+import { finishFor } from "../src/lib/dressage";
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
@@ -202,6 +203,11 @@ console.log("   courses :", eggs?.label);
 check("56 courses regroupées : un produit commun à deux recettes = une seule ligne qui cite les deux", !!eggs && new Set(shopLines.map((l) => l.ref)).size === shopLines.length);
 const pa = prepAhead(["pot_au_feu", "pates_pesto", "salade_lentilles"]);
 console.log("   à l'avance :", pa.tasks.map((t) => t.recipe).join(", "), "· légumes :", pa.veg.join(", "));
+const fin = (id: string) => finishFor(RECIPE_BY_ID[id]).plate;
+console.log("   dressage :", fin("tarte_poireaux").slice(0, 40), "|", fin("tarte_tatin").slice(0, 40), "|", fin("lasagnes_bolognaise").slice(0, 40));
+check("58 dressage : chaque fiche a une finition ; tarte salée ≠ tarte sucrée ; le salé sans « goûte » reçoit le rappel",
+  RECIPES.every((r) => finishFor(r).plate.length > 40) && fin("tarte_poireaux") !== fin("tarte_tatin") && /tiédir/.test(fin("lasagnes_bolognaise"))
+  && /couteau/.test(fin("tarte_tatin")) && RECIPES.filter((r) => r.role === "plat").filter((r) => finishFor(r).taste).length > 150 && !finishFor(RECIPE_BY_ID["tarte_tatin"]).taste);
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

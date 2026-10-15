@@ -189,3 +189,15 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .week-add p { margin: 0 0 8px; }
 .week-add-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 .week-add-day { display: inline-flex; flex-direction: column; gap: 4px; align-items: stretch; text-transform: capitalize; }
+.finish { margin-top: 14px; border-left: 5px solid var(--olive-text); }
+.finish h3 { margin: 0 0 6px; }
+.finish p { margin: 4px 0; }
+.propose { margin: 12px 0; }
+.propose-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; }
+.propose-head h2 { margin: 0; flex: 1 1 220px; }
+.propose .grid { margin-top: 12px; }
+/* Sommaire collant de la fiche recette */
+.recipe-toc { position: sticky; top: 0; z-index: 15; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0; margin: 8px 0; background: var(--bg); scrollbar-width: none; }
+.recipe-toc::-webkit-scrollbar { display: none; }
+.recipe-toc .chip { min-height: 36px; padding: 0 12px; flex: none; font-size: .9rem; }
+#r-ingredients, #r-etapes, #r-finition, #r-aide { scroll-margin-top: 60px; }

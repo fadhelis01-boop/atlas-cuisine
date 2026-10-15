@@ -8,11 +8,29 @@ export default function Biblio() {
   const menus = useStore((s) => s.menus);
   const imports = useStore((s) => s.imports);
   const cooked = useStore((s) => s.cooked);
+  const journal = useStore((s) => s.journal) ?? {};
+  const tried = Object.entries(journal).sort((a, b) => b[1].date.localeCompare(a[1].date)).filter(([id]) => RECIPE_BY_ID[id]);
+  const exportTests = () => {
+    // Protocole de test (audit 🔴 1) : un fichier texte à renvoyer pour corriger les fiches dans la bible
+    const lines = ["# Essais en cuisine — carnet ATLAS", `Exporté le ${new Date().toLocaleDateString("fr-FR")} · ${tried.length} recette(s)`, "",
+      "| Recette | Identifiant | Note /5 | Fois | Date | Ce qu'il faut changer |", "|---|---|---|---|---|---|",
+      ...tried.map(([id, e]) => `| ${RECIPE_BY_ID[id].title} | ${id} | ${e.rating || "-"} | ${cooked[id] ?? 0} | ${new Date(e.date).toLocaleDateString("fr-FR")} | ${e.note.replace(/[|\n]/g, " ") || "-"} |`)];
+    const url = URL.createObjectURL(new Blob([lines.join("\n") + "\n"], { type: "text/markdown" }));
+    const a = document.createElement("a"); a.href = url; a.download = `atlas-essais-${new Date().toISOString().slice(0, 10)}.md`; a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
   const cookedList = Object.entries(cooked).sort((a, b) => b[1] - a[1]).map(([id, n]) => ({ r: RECIPE_BY_ID[id], n })).filter((x) => x.r);
   return (
-    <Page title="Ma bibliothèque" sub="Favoris, menus, imports et recettes déjà cuisinées.">
+    <Page title="Mes recettes" sub="Favoris, carnet, menus, imports et recettes déjà cuisinées.">
       <Section title={`Favoris (${favs.length})`}>
         {favs.length ? <Grid>{favs.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid> : <Empty>Touche ♡ sur une recette pour la retrouver ici.</Empty>}
+      </Section>
+      <p><a className="btn ghost" href={href("/semaine")}>📅 Ma semaine : menus et courses</a></p>
+      <Section title={`Mon carnet d'essais (${tried.length})`} more={tried.length ? <button className="btn small ghost" onClick={exportTests}>Exporter</button> : undefined}>
+        <p className="small">Les recettes d'ATLAS n'ont pas encore été testées en cuisine. Après chaque essai, note-la sur 5 et écris ce qu'il faut changer
+          (sel, temps, quantités, ordre des gestes) : l'export produit un tableau à renvoyer pour corriger les fiches.</p>
+        {tried.length ? <ul>{tried.map(([id, e]) => <li key={id}><a href={href(`/recette/${id}`)}>{RECIPE_BY_ID[id].title}</a> <span className="meta">· {e.rating ? "★".repeat(e.rating) : "sans note"} · {new Date(e.date).toLocaleDateString("fr-FR")}</span>{e.note && <><br /><span className="small">{e.note}</span></>}</li>)}</ul>
+          : <Empty>Après avoir cuisiné (mode cuisine, dernière étape) ou sur une fiche, remplis « 📝 Mon carnet ».</Empty>}
       </Section>
       <Section title={`Menus (${menus.length})`}>
         {menus.length ? menus.map((m) => (

@@ -192,4 +192,17 @@ export const MORE_TECHNIQUES: Technique[] = [
     why: "La base des sauces de restaurant : on rôtit, on mouille, on réduit. Rien d'industriel.", gear: "Plaque, grande casserole, chinois, bacs à glaçons.",
     steps: ["Fumet : arêtes et têtes de poisson blanc (sans ouïes) rincées, suées avec échalote et fenouil, mouillées à l'eau froide, 20 min seulement (au-delà : amertume). Filtre.", "Fond brun : os de veau ou de volaille et carcasses rôtis 45 min à 220 °C, garniture (carotte, oignon) et concentré de tomate rôtis 10 min ; déglace, mouille d'eau froide, 4 h à frémissement, écume.", "Glace de viande : réduis le fond filtré jusqu'à ce qu'il nappe la cuillère (10 fois moins de volume). En glaçons : une sauce en 2 minutes."],
     errors: ["Fond trouble : il a bouilli ; garde un frémissement.", "Fumet amer : cuit trop longtemps."], keys: ["fumet", "fond brun", "glace de viande", "fond de veau"], query: "fond brun maison fumet de poisson glace de viande" },
+  // ——— Dressage (audit 2026-10-15, regard du chef) ———
+  { id: "presenter-une-assiette", name: "Présenter une assiette (dressage)", family: "Dressage & finition", level: 1,
+    why: "On mange d'abord avec les yeux : les mêmes ingrédients, bien présentés, paraissent meilleurs. Cinq gestes suffisent, sans matériel de chef.", gear: "Assiettes unies (blanches de préférence), cuillère à soupe, pince, papier absorbant ; facultatif : cercle, pipette ou poche.",
+    steps: ["Température : assiettes chaudes pour un plat chaud (2 min au four à 60 °C ou passées sous l'eau très chaude puis essuyées), froides pour une entrée froide ou un dessert glacé.",
+      "Hauteur et volume : pose l'élément principal légèrement décentré, appuyé sur la garniture ; un plat en hauteur paraît plus généreux qu'étalé.",
+      "Sauce : en dessous ou en cordon à côté pour ce qui doit rester croustillant (peau de poisson, pané) ; nappée par-dessus pour un mijoté. Une virgule à la cuillère : une goutte, puis tire-la avec le dos de la cuillère.",
+      "Contrastes : une couleur vive (herbe, piment, zeste, grenade), un croquant (graines torréfiées, oignon frit, chapelure dorée), un acide (citron, pickles) ajoutés au dernier moment.",
+      "Nombre impair : 3 ou 5 éléments (Saint-Jacques, boulettes, quartiers) se lisent mieux que 2 ou 4.",
+      "Finition : essuie les bords de l'assiette avec un papier, puis fleur de sel, poivre du moulin ou filet d'huile juste avant d'envoyer."],
+    errors: ["Assiette trop pleine : laisse le bord libre (environ un tiers de l'assiette), c'est le « cadre ».", "Herbes ou salade fanées : elles ont été posées sur un plat chaud trop tôt ; ajoute-les au moment de servir.", "Sauce qui coule partout : réduis-la davantage ou sers-la à part.", "Plat refroidi pendant le dressage : prépare tout (garniture, herbes ciselées, sauce) avant de sortir l'élément principal."],
+    noGear: "Sans cercle : un petit bol huilé retourné pour mouler le riz ou un tartare ; sans pipette : une petite cuillère.",
+    table: { title: "Finitions qui changent tout", rows: [["Fleur de sel", "Viande, poisson, légumes rôtis, chocolat"], ["Zeste d'agrume", "Poisson, desserts, couscous, crèmes"], ["Huile d'olive crue", "Soupes, légumineuses, salades, burrata"], ["Herbes ciselées", "Tous les plats salés, au tout dernier moment"], ["Graines torréfiées", "Salades, bols, currys, houmous"], ["Sucre glace tamisé", "Tartes et gâteaux, jamais à l'avance"]] },
+    keys: ["dressage", "dresser", "présentation", "présenter", "napper", "finition"], query: "dressage assiette maison conseils chef" },
 ];

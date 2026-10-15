@@ -12,6 +12,7 @@ import { HeroArt } from "../components/art";
 import { MONTHS_FULL, SEASON_LABEL, type Zone, marketOfMonth, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { INGREDIENTS } from "../lib/data";
 import { sectionLook } from "./Dictionnaire";
+import { momentOf, propose } from "../lib/propose";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
@@ -68,6 +69,32 @@ function daily<T>(list: T[], n: number, salt: number) {
 function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
   const f = seasonFit(r, zone);
   return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> 🌱 {f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> {f.mood === "chaud" ? "🔥 plat réconfortant" : "❄️ plat frais"}</span>}</p>;
+}
+
+const TIMES: [number, string][] = [[20, "20 min"], [45, "45 min"], [999, "J'ai le temps"]];
+
+/** « Pas d'idée ? » : trois suggestions en un geste (heure, saison, temps disponible, frigo). */
+function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
+  const fridge = useStore((s) => s.fridge);
+  const [time, setTime] = useState(45);
+  const [seed, setSeed] = useState(0);
+  const hour = new Date().getHours();
+  const props = useMemo(() => (seed ? propose(visible, { hour, zone, maxMinutes: time, fridge: fridge.map((f) => f.ref), seed }) : []), [seed, time, visible, zone, fridge, hour]);
+  return (
+    <section className="section propose card pad" aria-label="Propose-moi">
+      <div className="propose-head">
+        <h2 className="h3">🎲 Pas d'idée ? <span className="meta">{momentOf(hour).label}</span></h2>
+        <span className="chips" role="group" aria-label="Temps disponible">
+          {TIMES.map(([m, l]) => <button key={m} type="button" className={`chip ${time === m ? "on" : ""}`} aria-pressed={time === m} onClick={() => { setTime(m); if (seed) setSeed(seed + 1); }}>{l}</button>)}
+        </span>
+        <button type="button" className="btn" onClick={() => setSeed(Date.now())}>{seed ? "Autres idées" : "Propose-moi"}</button>
+      </div>
+      {seed > 0 && (props.length
+        ? <Grid>{props.map((x) => <RecipeCard key={x.r.id} r={x.r} note={<span className="meta">{x.why.join(" · ")}</span>} />)}</Grid>
+        : <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>)}
+      {seed > 0 && !fridge.length && <p className="small">Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.</p>}
+    </section>
+  );
 }
 
 export default function Home() {
@@ -129,6 +156,8 @@ export default function Home() {
           {cravingList.length ? <div className="rail">{cravingList.map((r) => <RecipeCard key={r.id} r={r} />)}</div> : <p className="small">Rien pour ce filtre avec les réglages de ton foyer.</p>}
         </Section>
       )}
+
+      <ProposeMoi visible={visible} zone={zone} />
 
       <nav className="entries" aria-label="Rubriques">
         {ENTRIES.map((e) => {
