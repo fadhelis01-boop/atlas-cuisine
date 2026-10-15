@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
@@ -31,7 +32,7 @@ function SeasonBadge({ r }: { r: Recipe }) {
   const zone = zoneOf(useStore((st) => st.settings.zone));
   const f = seasonFit(r, zone);
   const s = seasonOf(zone);
-  if (f.inSeason.length && f.score > 0) return <p className="meta season-ok">🌱 De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}</p>;
+  if (f.inSeason.length && f.score > 0) return <p className="meta season-ok"><Icon name="sprout" size={16} className="ic-inline" /> De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}</p>;
   if (f.outSeason.length) return <p className="meta season-out">🕰️ Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité conviennent souvent).</p>;
   return null;
 }
@@ -61,7 +62,7 @@ function Lexique({ text }: { text: string }) {
   if (!terms.length) return null;
   return (
     <details className="card pad lexique">
-      <summary><strong>📖 Les mots de cuisine de cette recette ({terms.length})</strong></summary>
+      <summary><strong><Icon name="dictionary" size={18} className="ic-inline" /> Les mots de cuisine de cette recette ({terms.length})</strong></summary>
       <dl>{terms.map((t) => <div key={t.term}><dt>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</dt><dd>{t.def}</dd></div>)}</dl>
     </details>
   );
@@ -81,11 +82,11 @@ function FinishBlock({ r }: { r: Recipe }) {
   const f = finishFor(r);
   return (
     <div className="finish card pad" id="r-finition">
-      <h3 className="h4">🍽 Finition et dressage</h3>
+      <h3 className="h4"><Icon name="plate" size={22} className="ic-inline" /> Finition et dressage</h3>
       {f.taste && <p><strong>Goûte et rectifie.</strong> {f.taste}</p>}
       <p>{f.plate}</p>
       {f.green && <p className="small">{f.green}</p>}
-      {balanceOf(r) && <p className="small">🥗 {balanceOf(r)}</p>}
+      {balanceOf(r) && <p className="small"><Icon name="broccoli" size={16} className="ic-inline" /> {balanceOf(r)}</p>}
       <p className="small"><a href={href("/technique/presenter-une-assiette")}>Les gestes pour présenter une assiette →</a></p>
     </div>
   );
@@ -95,7 +96,7 @@ function RescueBlock({ r }: { r: Recipe }) {
   const list = rescueFor(r);
   if (!list.length) return null;
   return (
-    <Section title="🆘 Si ça ne se passe pas comme prévu" id="r-aide">
+    <Section title={<><Icon name="lifebuoy" size={24} className="ic-inline" /> Si ça ne se passe pas comme prévu</>} id="r-aide">
       <div className="rescue">
         {list.map((x) => (
           <details key={x.problem} className="card pad">
@@ -178,18 +179,18 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {r.origin && r.origin !== r.title && <p className="origin" lang="und">{r.origin}</p>}
           <p className="meta">{r.regionPath.join(" › ")} · {r.kind}</p>
           {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}>🌐 Food fusion</a> : {r.fusionNote}</p>}
-          {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}>▶ Voir la vidéo</button>}
-          <p className="meta">⏱ {minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · Niveau {r.level} · {r.cost}</p>
+          {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}><Icon name="play" size={16} className="ic-inline" /> Voir la vidéo</button>}
+          <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · Niveau {r.level} · {r.cost}</p>
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
           <SeasonBadge r={r} />
           <div className="row actions">
-            <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}>▶ Cuisiner</a>
-            {ttsAvailable() && <button className="btn ghost" onClick={() => read("tout")} aria-pressed={reading !== null}>{reading !== null ? "⏹ Arrêter" : "🔊 Écouter"}</button>}
-            {ttsAvailable() && reading === null && <button className="btn ghost" onClick={() => read("resume")}>🔊 Résumé</button>}
-            <button className="btn ghost" onClick={addToShopping}>🛒 Courses</button>
-            {r.role === "plat" && <a className="btn ghost" href={href(`/semaine?ajout=${r.id}`)}>📅 Planifier</a>}
-            <a className="btn ghost" href={href(`/menu/${r.id}`)}>🍽 Compléter le menu</a>
-            <button className={`btn ghost ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav}>{fav ? "♥ Favori" : "♡ Favori"}</button>
+            <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
+            {ttsAvailable() && <button className="btn ghost" onClick={() => read("tout")} aria-pressed={reading !== null}>{reading !== null ? "⏹ Arrêter" : <><Icon name="speaker" size={20} /> Écouter</>}</button>}
+            {ttsAvailable() && reading === null && <button className="btn ghost" onClick={() => read("resume")}><Icon name="speaker" size={20} /> Résumé</button>}
+            <button className="btn ghost" onClick={addToShopping}><Icon name="cart" size={20} /> Courses</button>
+            {r.role === "plat" && <a className="btn ghost" href={href(`/semaine?ajout=${r.id}`)}><Icon name="calendar" size={20} /> Planifier</a>}
+            <a className="btn ghost" href={href(`/menu/${r.id}`)}><Icon name="plate" size={20} /> Compléter le menu</a>
+            <button className={`btn ghost ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav}><Icon name="heart" size={20} className={fav ? "ic-on" : ""} /> Favori</button>
           </div>
           {msg && <p role="status" className="small">{msg} <a href={href("/courses")}>Voir la liste</a></p>}
         </div>
@@ -243,10 +244,10 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {r.steps.map((s, i) => (
               <li key={i}>
                 <Rich text={s} />
-                {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}>👀 {c} </span>)}</p>}
+                {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}><Icon name="eye" size={16} className="ic-inline" /> {c} </span>)}</p>}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
-                    {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}>⏱ {d.label}</button>)}
+                    {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}><Icon name="timer" size={15} className="ic-inline" />{d.label}</button>)}
                   </div>
                 )}
               </li>

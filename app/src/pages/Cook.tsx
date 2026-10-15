@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { RECIPE_BY_ID } from "../lib/data";
 import { verdict } from "../lib/engine";
@@ -92,7 +93,7 @@ export default function Cook({ id }: { id: string }) {
             <p className="small">Sors et pèse tout avant d'allumer le feu. Coche au fur et à mesure.</p>
             <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
             {saltDose(r) && <p className="small"><strong>Sel :</strong> {saltDose(r)!.text}</p>}
-            {oven && oven.at <= 1 && <p className="banner warn">🔥 Allume le four maintenant à <strong>{oven.temp}</strong> : il lui faut 15 à 20 min pour chauffer.</p>}
+            {oven && oven.at <= 1 && <p className="banner warn"><Icon name="flame" size={20} className="ic-inline" /> Allume le four maintenant à <strong>{oven.temp}</strong> : il lui faut 15 à 20 min pour chauffer.</p>}
             <ul className="mise">
               {lines.map((l, k) => (
                 <li key={k}>
@@ -106,19 +107,19 @@ export default function Cook({ id }: { id: string }) {
           <>
             <p className="cook-step-n">Étape {i + 1} / {steps.length}</p>
             <p className="cook-step"><Rich text={step!} /></p>
-            {cuesIn(step!).map((c) => <p key={c} className="cue big">👀 {c}</p>)}
-            {oven && oven.at > 1 && i === oven.at - 2 && <p className="banner warn">🔥 Pense à préchauffer le four à <strong>{oven.temp}</strong> maintenant : on enfourne dans 2 étapes.</p>}
+            {cuesIn(step!).map((c) => <p key={c} className="cue big"><Icon name="eye" size={20} className="ic-inline" /> {c}</p>)}
+            {oven && oven.at > 1 && i === oven.at - 2 && <p className="banner warn"><Icon name="flame" size={20} className="ic-inline" /> Pense à préchauffer le four à <strong>{oven.temp}</strong> maintenant : on enfourne dans 2 étapes.</p>}
             {durationsIn(step!).length > 0 && (
               <div className="timers-inline big">
-                {durationsIn(step!).map((d, k) => <button key={k} className="chip big" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(step!, i + 1)}`, d.seconds, id)}>⏱ Lancer {d.label}</button>)}
+                {durationsIn(step!).map((d, k) => <button key={k} className="chip big" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(step!, i + 1)}`, d.seconds, id)}><Icon name="timer" size={22} className="ic-inline" /> Lancer {d.label}</button>)}
               </div>
             )}
             {termsIn(step!).length > 0 && (
-              <details className="cook-help"><summary>📖 Je ne comprends pas un mot</summary>
+              <details className="cook-help"><summary><Icon name="dictionary" size={20} className="ic-inline" /> Je ne comprends pas un mot</summary>
                 <dl>{termsIn(step!).map((t) => <div key={t.term}><dt>{t.term}</dt><dd>{t.def}</dd></div>)}</dl>
               </details>
             )}
-            <details className="cook-help"><summary>🆘 Ça ne se passe pas comme prévu</summary>
+            <details className="cook-help"><summary><Icon name="lifebuoy" size={20} className="ic-inline" /> Ça ne se passe pas comme prévu</summary>
               <ul>{rescueFor(r, 8).map((x) => <li key={x.problem}><strong>{x.problem} :</strong> {x.fix}</li>)}</ul>
             </details>
           </>

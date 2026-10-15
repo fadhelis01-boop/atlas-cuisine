@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useMemo, useState } from "react";
 import { RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { FETES } from "../lib/content";
@@ -17,17 +18,17 @@ import { PARCOURS } from "../lib/parcours";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
-  { to: "/explorer", icon: "🌍", label: "Cuisines du monde", sub: "par région", tone: "tomato" },
-  { to: "/frigo", icon: "🥕", label: "Avec ce que j'ai", sub: "par ingrédients", tone: "saffron" },
-  { to: "/semaine", icon: "📅", label: "Ma semaine", sub: "menus + courses", tone: "herb" },
-  { to: "/enfants", icon: "🧒", label: "Enfants", sub: "âges, sécurité", tone: "pistachio" },
-  { to: "/pains", icon: "🥖", label: "Pains & bases", sub: "pizza, naan, crêpes", tone: "crust" },
-  { to: "/sauces", icon: "🥫", label: "Sauces maison", sub: "sans additifs", tone: "chili" },
-  { to: "/techniques", icon: "🔪", label: "Techniques", sub: "chef, pâtissier, boulanger", tone: "aubergine" },
-  { to: "/fetes", icon: "🎉", label: "Fêtes & menus", sub: "entrée, plat, dessert", tone: "berry" },
-  { to: "/zero-dechet", icon: "♻️", label: "Zéro déchet", sub: "tout utiliser", tone: "herb" },
-  { to: "/dictionnaire", icon: "📖", label: "Dictionnaire", sub: "ingrédients illustrés", tone: "ocean" },
-  { to: "/imports", icon: "📲", label: "Mes imports", sub: "TikTok & co", tone: "crust" },
+  { to: "/explorer", icon: "globe", label: "Cuisines du monde", sub: "par région", tone: "tomato" },
+  { to: "/frigo", icon: "carrot", label: "Avec ce que j'ai", sub: "par ingrédients", tone: "saffron" },
+  { to: "/semaine", icon: "calendar", label: "Ma semaine", sub: "menus + courses", tone: "herb" },
+  { to: "/enfants", icon: "kid", label: "Enfants", sub: "âges, sécurité", tone: "pistachio" },
+  { to: "/pains", icon: "bread", label: "Pains & bases", sub: "pizza, naan, crêpes", tone: "crust" },
+  { to: "/sauces", icon: "sauce", label: "Sauces maison", sub: "sans additifs", tone: "chili" },
+  { to: "/techniques", icon: "knife", label: "Techniques", sub: "chef, pâtissier, boulanger", tone: "aubergine" },
+  { to: "/fetes", icon: "cake", label: "Fêtes & menus", sub: "entrée, plat, dessert", tone: "berry" },
+  { to: "/zero-dechet", icon: "recycle", label: "Zéro déchet", sub: "tout utiliser", tone: "herb" },
+  { to: "/dictionnaire", icon: "dictionary", label: "Dictionnaire", sub: "ingrédients illustrés", tone: "ocean" },
+  { to: "/imports", icon: "phone", label: "Mes imports", sub: "TikTok & co", tone: "crust" },
 ];
 const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "/frigo": "rubrique/frigo", "/enfants": "rubrique/enfants", "/pains": "rubrique/pains",
   "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
@@ -38,16 +39,16 @@ const has = (r: Recipe, re: RegExp) => re.test(norm(r.title)) || r.ingredients.s
 /** Envies : des filtres d'un geste, affichés en rangée sous le bandeau. */
 let ZONE: Zone = "nord"; // zone courante, fixée au rendu (les tests d'envies en ont besoin)
 const CRAVINGS: { id: string; icon: string; label: string; test: (r: Recipe) => boolean }[] = [
-  { id: "saison", icon: "🌱", label: "De saison", test: (r) => r.role !== "autre" && seasonFit(r, ZONE).score >= 2 },
-  { id: "rapide", icon: "⏱️", label: "Prêt en 30 min", test: (r) => r.role === "plat" && r.active + r.rest <= 30 },
-  { id: "chocolat", icon: "🍫", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
-  { id: "patisserie", icon: "🧁", label: "Pâtisserie", test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")) },
-  { id: "street", icon: "🌯", label: "Street-food", test: (r) => /taco|burger|kebab|bao|banh|bokit|fataya|empanada|samoussa|falafel|souvlaki|suya|arepa|lahmacun|pan bagnat|bourek|briouat|nem|gyoza|frites|churros|elote|pizza|croque|poutine/.test(norm(r.title)) },
-  { id: "vege", icon: "🥦", label: "Végétarien", test: (r) => r.role === "plat" && evaluate(r).flesh.length === 0 },
-  { id: "mer", icon: "🐟", label: "Poissons & mer", test: (r) => r.role !== "dessert" && r.profile.includes("poisson") },
-  { id: "epice", icon: "🌶️", label: "Ça pique", test: (r) => r.profile.includes("epice") && r.role === "plat" },
-  { id: "fusion", icon: "🌐", label: "Food fusion", test: (r) => r.cats.includes("fusion") },
-  { id: "boissons", icon: "🍹", label: "Boissons", test: (r) => r.role === "boisson" },
+  { id: "saison", icon: "sprout", label: "De saison", test: (r) => r.role !== "autre" && seasonFit(r, ZONE).score >= 2 },
+  { id: "rapide", icon: "timer", label: "Prêt en 30 min", test: (r) => r.role === "plat" && r.active + r.rest <= 30 },
+  { id: "chocolat", icon: "chocolate", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
+  { id: "patisserie", icon: "cupcake", label: "Pâtisserie", test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")) },
+  { id: "street", icon: "taco", label: "Street-food", test: (r) => /taco|burger|kebab|bao|banh|bokit|fataya|empanada|samoussa|falafel|souvlaki|suya|arepa|lahmacun|pan bagnat|bourek|briouat|nem|gyoza|frites|churros|elote|pizza|croque|poutine/.test(norm(r.title)) },
+  { id: "vege", icon: "broccoli", label: "Végétarien", test: (r) => r.role === "plat" && evaluate(r).flesh.length === 0 },
+  { id: "mer", icon: "fish", label: "Poissons & mer", test: (r) => r.role !== "dessert" && r.profile.includes("poisson") },
+  { id: "epice", icon: "chili", label: "Ça pique", test: (r) => r.profile.includes("epice") && r.role === "plat" },
+  { id: "fusion", icon: "fusion", label: "Food fusion", test: (r) => r.cats.includes("fusion") },
+  { id: "boissons", icon: "drink", label: "Boissons", test: (r) => r.role === "boisson" },
 ];
 
 function greeting(h: number) {
@@ -69,7 +70,7 @@ function daily<T>(list: T[], n: number, salt: number) {
 
 function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
   const f = seasonFit(r, zone);
-  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> 🌱 {f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> {f.mood === "chaud" ? "🔥 plat réconfortant" : "❄️ plat frais"}</span>}</p>;
+  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> <Icon name="sprout" size={14} className="ic-inline" />{f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> {f.mood === "chaud" ? "🔥 plat réconfortant" : "❄️ plat frais"}</span>}</p>;
 }
 
 const TIMES: [number, string][] = [[20, "20 min"], [45, "45 min"], [999, "J'ai le temps"]];
@@ -84,14 +85,14 @@ function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
   return (
     <section className="section propose card pad" aria-label="Propose-moi">
       <div className="propose-head">
-        <h2 className="h3">🎲 Pas d'idée ? <span className="meta">{momentOf(hour).label}</span></h2>
+        <h2 className="h3"><Icon name="dice" size={22} /> Pas d'idée ? <span className="meta">{momentOf(hour).label}</span></h2>
         <span className="chips" role="group" aria-label="Temps disponible">
           {TIMES.map(([m, l]) => <button key={m} type="button" className={`chip ${time === m ? "on" : ""}`} aria-pressed={time === m} onClick={() => { setTime(m); if (seed) setSeed(seed + 1); }}>{l}</button>)}
         </span>
         <button type="button" className="btn" onClick={() => setSeed(Date.now())}>{seed ? "Autres idées" : "Propose-moi"}</button>
       </div>
       {seed > 0 && (props.length
-        ? <Grid>{props.map((x) => <RecipeCard key={x.r.id} r={x.r} note={<span className="meta">{x.why.join(" · ")}</span>} />)}</Grid>
+        ? <Grid>{props.map((x) => <RecipeCard key={x.r.id} r={x.r} note={<span className="meta why">{x.why.map(([ic, t]) => <span key={t}><Icon name={ic} size={14} className="ic-inline" />{t}</span>)}</span>} />)}</Grid>
         : <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>)}
       {seed > 0 && !fridge.length && <p className="small">Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.</p>}
     </section>
@@ -106,7 +107,7 @@ function Beginner() {
   const next = PARCOURS[learned];
   return (
     <a className="card pad beginner" href={href("/apprendre")}>
-      <span className="beginner-ic" aria-hidden="true">🎓</span>
+      <span className="beginner-ic" aria-hidden="true"><Icon name="cap" size={34} /></span>
       <span><strong>{learned ? `J'apprends à cuisiner : étape ${learned + 1} sur ${PARCOURS.length}` : "Tu débutes ? Apprends pas à pas"}</strong><br />
         <span className="small">{learned ? `Prochaine étape : ${next.title}.` : "15 étapes courtes, du couteau aux sauces, avec une recette facile à chaque fois."}</span></span>
     </a>
@@ -163,12 +164,12 @@ export default function Home() {
       <div className="cravings" role="group" aria-label="Envies du moment">
         {CRAVINGS.map((c) => (
           <button key={c.id} type="button" className={`craving ${craving === c.id ? "on" : ""}`} aria-pressed={craving === c.id} onClick={() => setCraving(craving === c.id ? null : c.id)}>
-            <span aria-hidden="true">{c.icon}</span> {c.label}
+            <Icon name={c.icon} size={20} /> {c.label}
           </button>
         ))}
       </div>
       {picked && (
-        <Section title={`${picked.icon} ${picked.label}`} more={<button type="button" className="btn ghost small" onClick={() => setCraving(null)}>Fermer</button>}>
+        <Section title={picked.label} more={<button type="button" className="btn ghost small" onClick={() => setCraving(null)}>Fermer</button>}>
           {cravingList.length ? <div className="rail">{cravingList.map((r) => <RecipeCard key={r.id} r={r} />)}</div> : <p className="small">Rien pour ce filtre avec les réglages de ton foyer.</p>}
         </Section>
       )}
@@ -182,7 +183,7 @@ export default function Home() {
           return (
             <a key={e.to} href={href(e.to)} className={`entry tone-${e.tone} ${ph ? "has-photo" : ""}`}>
               {ph && <Photo k={pk} alt="" sizes="(min-width: 700px) 200px, 33vw" />}
-              <span className="entry-ic" aria-hidden="true">{e.icon}</span><span className="entry-lb">{e.label}</span><span className="entry-sub">{e.sub}</span>
+              <span className="entry-ic" aria-hidden="true"><Icon name={e.icon} size={34} /></span><span className="entry-lb">{e.label}</span><span className="entry-sub">{e.sub}</span>
             </a>
           );
         })}

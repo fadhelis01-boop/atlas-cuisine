@@ -1,3 +1,4 @@
+import { Icon } from "./icons";
 import { useState } from "react";
 import { setState, useStore } from "../lib/store";
 
@@ -13,7 +14,7 @@ export default function Journal({ id, compact, onSaved }: { id: string; compact?
   };
   return (
     <div className={`card pad journal ${compact ? "compact" : ""}`}>
-      <strong>📝 Mon carnet</strong>
+      <strong><Icon name="star" size={18} className="ic-inline" /> Mon carnet</strong>
       <div className="stars" role="radiogroup" aria-label="Ma note">
         {[1, 2, 3, 4, 5].map((n) => <button key={n} type="button" role="radio" aria-checked={rating === n} aria-label={`${n} sur 5`} className={n <= rating ? "on" : ""} onClick={() => setRating(n)}>★</button>)}
       </div>

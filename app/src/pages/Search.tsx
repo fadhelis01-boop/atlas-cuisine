@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { ImportRow } from "../components/video";
 import { useState } from "react";
 import { CATALOGUE, useImportLibrary, INGREDIENTS, INGREDIENT_NAMES, MACROS, RECIPES } from "../lib/data";
@@ -35,7 +36,7 @@ export default function Search({ q }: { q: string }) {
         <button className="btn" type="submit">Chercher</button>
       </form>
       {q && !total && <Empty>Rien trouvé pour « {q} ». Essaie un ingrédient dans <a href={href("/frigo")}>Avec ce que j'ai</a>.</Empty>}
-      {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}>{m.emoji} {m.name}</a>)}</div></Section>}
+      {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}><Icon name={m.icon} size={18} className="ic-inline" /> {m.name}</a>)}</div></Section>}
       {recipesAll.length > 0 && (
         <details className="search-filters" open={nFilters > 0}>
           <summary>Filtrer les recettes{nFilters ? ` (${nFilters})` : ""}</summary>
@@ -48,8 +49,8 @@ export default function Search({ q }: { q: string }) {
       )}
       {recipesAll.length > 0 && !recipes.length && <p className="small">Aucune recette avec ces filtres : retire-en un.</p>}
       {recipes.length > 0 && <Section title={`Recettes (${recipes.length})`} more={<a href={href(`/recettes?q=${encodeURIComponent(q)}`)}>Plus de filtres →</a>}><Grid>{recipes.slice(0, 60).map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>{recipes.length > 60 && <p className="small">Les 60 premières sont affichées : ajoute un filtre ou précise ta recherche.</p>}</Section>}
-      {ings.length > 0 && <Section title="Dictionnaire des ingrédients"><div className="links">{ings.map((n) => <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}>📖 {n}</a>)}</div></Section>}
-      {techs.length > 0 && <Section title="Techniques"><div className="links">{techs.map((t) => <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}>🔪 {t.name}</a>)}</div></Section>}
+      {ings.length > 0 && <Section title="Dictionnaire des ingrédients"><div className="links">{ings.map((n) => <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}><Icon name="dictionary" size={18} className="ic-inline" /> {n}</a>)}</div></Section>}
+      {techs.length > 0 && <Section title="Techniques"><div className="links">{techs.map((t) => <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}><Icon name="knife" size={18} className="ic-inline" /> {t.name}</a>)}</div></Section>}
       {myImps.length > 0 && <Section title="Mes imports"><ul className="links-list">{myImps.map((i) => <li key={i.id}><a href={i.url || "#/imports"} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul></Section>}
       {imps.length > 0 && <Section title="Favoris TikTok et sites classés"><ul className="links-list">{imps.map((i) => <ImportRow key={i.url} i={i} />)}</ul></Section>}
       {cat.length > 0 && <Section title="Au programme (fiches à venir)"><ul className="cat-list">{cat.map((c) => <li key={c.title + c.region}>{c.title} <span className="meta">· {c.region}</span></li>)}</ul></Section>}

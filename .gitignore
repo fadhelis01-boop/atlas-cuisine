@@ -13,3 +13,4 @@ __pycache__/
 illustrations/planches_v2/
 illustrations/candidats_ingredients.json
 outils/gh_refresh.log
+illustrations/.venv/

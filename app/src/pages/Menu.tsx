@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useMemo, useState } from "react";
 import { RECIPE_BY_ID } from "../lib/data";
 import { composeMenus } from "../lib/menu";
@@ -19,8 +20,8 @@ function Ahead({ ids }: { ids: string[] }) {
   if (!tasks.length && !frozen.length) return null;
   return (
     <div className="small ahead">
-      {tasks.length > 0 && <p><strong>📆 La veille :</strong> {tasks.map((t) => `${t.recipe} (${t.task.split(/[.;:]/)[0].toLowerCase()})`).join(" ; ")}.</p>}
-      {frozen.length > 0 && <p><strong>❄️ Se congèle (à faire jusqu'à 1 mois avant) :</strong> {frozen.map((r) => r.title.split(" (")[0]).join(", ")}.</p>}
+      {tasks.length > 0 && <p><strong><Icon name="calendar" size={15} className="ic-inline" /> La veille :</strong> {tasks.map((t) => `${t.recipe} (${t.task.split(/[.;:]/)[0].toLowerCase()})`).join(" ; ")}.</p>}
+      {frozen.length > 0 && <p><strong><Icon name="snowflake" size={15} className="ic-inline" /> Se congèle (à faire jusqu'à 1 mois avant) :</strong> {frozen.map((r) => r.title.split(" (")[0]).join(", ")}.</p>}
     </div>
   );
 }

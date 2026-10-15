@@ -5,7 +5,7 @@ import imagesJson from "../data/images.json";
 // avec la couleur dominante comme fond pendant le chargement et le crédit de l'auteur·e (licences libres).
 // Le manifeste chargé au démarrage ne garde que l'essentiel ; les crédits (auteur·e, licence, source) sont chargés
 // à la première photo affichée avec son crédit (audit dév 🟠 8 : démarrage plus léger avec 1 000+ photos).
-export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia" }
+export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia"; avif?: 1 }
 export interface PhotoCredit { author: string; license: string; licenseUrl: string; page: string; source: string; title: string }
 export const IMAGES = imagesJson as unknown as Record<string, PhotoMeta>;
 
@@ -21,22 +21,34 @@ export function useCredits(): Record<string, PhotoCredit> | null {
 }
 export const photoOf = (key: string): PhotoMeta | undefined => IMAGES[key];
 
+// AVIF lisible par ce navigateur ? (pour télécharger le bon format hors connexion)
+let avifP: Promise<boolean> | null = null;
+export function supportsAvif(): Promise<boolean> {
+  avifP ??= new Promise((ok) => {
+    const i = new Image(); i.onload = () => ok(i.width === 2); i.onerror = () => ok(false);
+    i.src = "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADrbWV0YQAAAAAAAAAhaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAETAAAAJgAAAChpaW5mAAAAAAABAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAABqaXBycAAAAEtpcGNvAAAAFGlzcGUAAAAAAAAAAgAAAAIAAAAQcGl4aQAAAAADCAgIAAAADGF2MUOBAAwAAAAAE2NvbHJuY2x4AAEADQAGgAAAABdpcG1hAAAAAAAAAAEAAQQBAoMEAAAALm1kYXQSAAoIGAA2iAhoNCAyGBxHh4Xd0000wsAAAJA1jjx+yg1QWM/bnA==";
+  });
+  return avifP;
+}
+
 /** <img> responsive ; `sizes` décrit la largeur affichée pour que le téléphone ne télécharge que la taille utile. */
 export function Photo({ k, alt, sizes = "(min-width: 900px) 33vw, 100vw", className = "", eager = false }: { k: string; alt: string; sizes?: string; className?: string; eager?: boolean }) {
   const m = IMAGES[k];
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   if (!m || failed) return null;
-  const srcSet = m.sizes.map((w) => `./${m.path}-${w}.webp ${w}w`).join(", ");
-  return (
+  const srcSet = (ext: string) => m.sizes.map((w) => `./${m.path}-${w}.${ext} ${w}w`).join(", ");
+  const img = (
     <img
       className={`photo ${loaded ? "loaded" : ""} ${className}`}
       src={`./${m.path}-${m.sizes[Math.min(1, m.sizes.length - 1)]}.webp`}
-      srcSet={srcSet} sizes={sizes} alt={alt} width={4} height={3}
+      srcSet={srcSet("webp")} sizes={sizes} alt={alt} width={4} height={3}
       loading={eager ? "eager" : "lazy"} decoding="async" style={{ backgroundColor: m.color }}
       onLoad={() => setLoaded(true)} onError={() => setFailed(true)}
     />
   );
+  // AVIF (≈ 30 % plus léger) pour les navigateurs qui le lisent, WebP sinon ; <picture> laisse le navigateur choisir
+  return m.avif ? <picture className="photo-pic"><source type="image/avif" srcSet={srcSet("avif")} sizes={sizes} />{img}</picture> : img;
 }
 
 /** Crédit obligatoire (CC BY / BY-SA) : auteur·e, licence, lien vers l'original. */

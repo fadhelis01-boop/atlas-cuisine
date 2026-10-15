@@ -1,3 +1,4 @@
+import { ICON_NAMES, Icon } from "./components/icons";
 import { Suspense, lazy, useEffect } from "react";
 import { href, useRoute } from "./lib/router";
 import { useStore } from "./lib/store";
@@ -37,11 +38,11 @@ const Semaine = lazy(() => import("./pages/Semaine"));
 const Loading = () => <main className="page" aria-busy="true"><p className="meta">Chargement…</p></main>;
 
 const TABS = [
-  { to: "/", label: "Accueil", icon: "🏠", match: [""] },
-  { to: "/explorer", label: "Explorer", icon: "🧭", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient", "recettes", "apprendre"] },
-  { to: "/frigo", label: "Frigo", icon: "🥕", match: ["frigo", "courses", "semaine"] },
-  { to: "/biblio", label: "Mes recettes", icon: "📚", match: ["biblio", "imports"] },
-  { to: "/profil", label: "Profil", icon: "👤", match: ["profil", "credits"] },
+  { to: "/", label: "Accueil", icon: "home", match: [""] },
+  { to: "/explorer", label: "Explorer", icon: "compass", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient", "recettes", "apprendre"] },
+  { to: "/frigo", label: "Frigo", icon: "fridge", match: ["frigo", "courses", "semaine"] },
+  { to: "/biblio", label: "Mes recettes", icon: "book", match: ["biblio", "imports"] },
+  { to: "/profil", label: "Profil", icon: "chef", match: ["profil", "credits"] },
 ];
 
 export default function App() {
@@ -95,6 +96,7 @@ export default function App() {
     case "profil": page = <Profil />; break;
     case "credits": page = <Credits />; break;
     case "apprendre": page = <Apprendre />; break;
+    case "icones": if (!import.meta.env.DEV) { page = null; break; } page = <main className="page"><h1>Icônes ATLAS</h1><div className="icon-sheet">{ICON_NAMES.map((n) => <figure key={n}><Icon name={n} size={40} /><figcaption>{n}</figcaption></figure>)}</div></main>; break;
     case "semaine": page = <Semaine key={route.query.get("ajout") ?? ""} add={route.query.get("ajout")} />; break;
     case "recettes": page = <Catalogue q0={route.query.get("q") ?? ""} />; break;
     case "dictionnaire": page = <DictionaryPage q0={route.query.get("q") ?? ""} />; break;
@@ -110,7 +112,7 @@ export default function App() {
         <a className="brand" href={href("/")}><img src="./icons/icon.svg" alt="" width="32" height="32" /> <span>ATLAS</span></a>
         {TABS.map((t) => (
           <a key={t.to} href={href(t.to)} className={`tab ${active === t ? "on" : ""}`} aria-current={active === t ? "page" : undefined}>
-            <span className="tab-ic" aria-hidden="true">{t.icon}</span><span className="tab-lb">{t.label}</span>
+            <span className="tab-ic" aria-hidden="true"><Icon name={t.icon} size={26} /></span><span className="tab-lb">{t.label}</span>
           </a>
         ))}
       </nav>

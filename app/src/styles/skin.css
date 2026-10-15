@@ -208,3 +208,27 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .beginner { display: flex; gap: 12px; align-items: center; margin: 12px 0; color: var(--text); text-decoration: none; border-left: 5px solid var(--saffron); }
 .beginner-ic { font-size: 2rem; }
 .search-filters { margin: 10px 0; } .search-filters summary { cursor: pointer; font-weight: 600; min-height: 40px; display: flex; align-items: center; }
+.photo-pic { display: contents; }
+
+/* ---------------------------------------------------------------- Icônes ATLAS (components/icons.tsx) */
+.ic { display: inline-block; flex: none; vertical-align: middle; }
+.ic .ic-duo { fill: currentColor; stroke: none; opacity: .18; }
+.ic .ic-fill { fill: currentColor; stroke: none; }
+.ic .ic-dot { stroke-width: 2.6; }
+.ic-inline { margin: -3px 2px 0 0; }
+.btn .ic { margin: -2px 2px 0 -2px; }
+.ic.ic-on .ic-duo { opacity: 1; }
+.tab .ic { transition: transform 200ms var(--ease); }
+.tab.on .ic .ic-duo { opacity: .3; }
+.tab.on .ic { transform: translateY(-1px) scale(1.06); }
+.craving .ic { margin-right: 2px; }
+.entry-ic .ic { filter: none; }
+.entry:not(.has-photo) .entry-ic { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: color-mix(in srgb, currentColor 10%, transparent); filter: none; }
+.macro-ic .ic { color: var(--action); }
+.entry.has-photo .entry-ic { display: grid; place-items: center; position: absolute; z-index: 1; top: 8px; left: 8px; width: 38px; height: 38px; border-radius: 12px; background: var(--tone, var(--tomato)); color: #fff; box-shadow: 0 2px 6px rgb(0 0 0 / 25%); }
+.entry.has-photo .entry-ic .ic { width: 24px; height: 24px; }
+.icon-sheet { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; }
+.icon-sheet figure { margin: 0; display: grid; place-items: center; gap: 4px; padding: 12px 4px; border-radius: 12px; background: var(--surface); color: var(--action); }
+.icon-sheet figcaption { font-size: .75rem; color: var(--text-2); }
+.why { display: flex; flex-wrap: wrap; gap: 2px 10px; }
+.fav { display: grid; place-items: center; } .fav.on .ic .ic-duo { opacity: 1; } .beginner-ic { color: var(--saffron); }

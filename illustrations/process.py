@@ -12,6 +12,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 APP = os.path.join(HERE, "..", "app")
 OUT = os.path.join(APP, "public", "img")
 SIZES = (400, 800, 1200)
+try:  # AVIF : Pillow 11.3+ (environnement illustrations/.venv) ; sinon WebP seul
+    from PIL import features as _f
+    AVIF = bool(_f.check("avif"))
+except Exception:
+    AVIF = False
 RATIO = 4 / 3
 
 def full_url(c):
@@ -45,7 +50,7 @@ def write_manifests(man, full_path, man_path):
     """Trois fichiers : le complet (ici), l'essentiel pour l'appli (chargé au démarrage : chemin, tailles, couleur)
     et les crédits (chargés seulement quand on les affiche), pour ne pas alourdir le démarrage de l'application."""
     json.dump(man, open(full_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {})} for k, v in man.items()}
+    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {})} for k, v in man.items()}
     json.dump(lite, open(man_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     cred = {k: {f: v.get(f, "") for f in ("author", "license", "licenseUrl", "page", "source", "title")} for k, v in man.items()}
     json.dump(cred, open(os.path.join(os.path.dirname(man_path), "credits.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
@@ -76,11 +81,14 @@ def run(only=""):
         os.makedirs(os.path.join(OUT, kind), exist_ok=True)
         for w in (SIZES[:2] if kind == "ingredient" else SIZES):  # vignettes du dictionnaire : 1200 px inutile
             if im.width < w * 0.75 and w != SIZES[0]: continue  # pas d'agrandissement artificiel
-            im.resize((w, int(w / RATIO)), Image.LANCZOS).save(os.path.join(OUT, kind, f"{ident}-{w}.webp"), "WEBP", quality=78, method=6)
+            small = im.resize((w, int(w / RATIO)), Image.LANCZOS)
+            small.save(os.path.join(OUT, kind, f"{ident}-{w}.webp"), "WEBP", quality=78, method=6)
+            if AVIF: small.save(os.path.join(OUT, kind, f"{ident}-{w}.avif"), "AVIF", quality=52, speed=6)  # ~30 % plus léger
         sizes = [w for w in SIZES if os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.webp"))]
+        avif = all(os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.avif")) for w in sizes)
         avg = im.resize((1, 1), Image.BOX).getpixel((0, 0))
         man[key] = {"path": f"img/{kind}/{ident}", "sizes": sizes, "color": "#%02x%02x%02x" % avg, "author": c["author"] or "Auteur·e inconnu·e",
-                    "license": c["license"], "licenseUrl": c["license_url"], "page": c["page"], "source": c["src"], "title": c["title"], "kind": "photo"}
+                    "license": c["license"], "licenseUrl": c["license_url"], "page": c["page"], "source": c["src"], "title": c["title"], "kind": "photo", "avif": avif}
         print("ok", key, sizes, flush=True)
     write_manifests(dict(sorted(man.items())), full_path, man_path)
     total = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(OUT) for f in fs)

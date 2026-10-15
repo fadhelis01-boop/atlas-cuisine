@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useEffect, useMemo, useState } from "react";
 import { RECIPE_BY_ID, loadLeftovers } from "../lib/data";
 import { DAY_NAMES, autoPlan, consolidate, leftoverLink, prepAhead, weekDays, type Slot, type WeekPlan } from "../lib/planner";
@@ -97,7 +98,7 @@ export default function Semaine({ add }: { add: string | null }) {
         <button className="btn ghost small" disabled={offset === 0} onClick={() => setOffset(0)}>Cette semaine</button>
         <button className="btn ghost small" disabled={offset === 1} onClick={() => setOffset(1)}>Semaine prochaine</button>
         <span className="grow" />
-        <button className="btn" disabled={!left} onClick={() => fill(plan)}>✨ Compléter les cases vides</button>
+        <button className="btn" disabled={!left} onClick={() => fill(plan)}><Icon name="calendar" size={20} /> Compléter les cases vides</button>
         <button className="btn ghost" disabled={!left} onClick={() => { if (!planned.length || confirm("Remplacer tous les plats de cette semaine ?")) fill(clearWeek()); }}>Tout reproposer</button>
       </div>
       {msg && <p role="status" className="banner info">{msg} <a href={href("/courses")}>Voir les courses</a></p>}
@@ -118,11 +119,11 @@ export default function Semaine({ add }: { add: string | null }) {
                       <a className="week-meal" href={href(`/recette/${r.id}?portions=${prefs.people}`)}>
                         <Cover r={r} />
                         <span><strong>{r.title.split(" (")[0]}</strong><br /><span className="meta">{minutes(r.active)}{r.rest > 0 ? ` + ${minutes(r.rest)} sans rien faire` : ""}</span>
-                          {link && <><br /><span className="small week-left">♻️ utilise le reste de {link} de la veille</span></>}</span>
+                          {link && <><br /><span className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> utilise le reste de {link} de la veille</span></>}</span>
                       </a>
                       <span className="week-acts">
-                        <button className="btn ghost small" title="Proposer un autre plat" aria-label={`Autre plat pour ${DAY_NAMES[i]} ${s}`} onClick={() => reroll(d, s)}>↻</button>
-                        <button className="btn ghost small" title="Retirer" aria-label={`Retirer le plat de ${DAY_NAMES[i]} ${s}`} onClick={() => remove(d, s)}>✕</button>
+                        <button className="btn ghost small" title="Proposer un autre plat" aria-label={`Autre plat pour ${DAY_NAMES[i]} ${s}`} onClick={() => reroll(d, s)}><Icon name="refresh" size={18} /></button>
+                        <button className="btn ghost small" title="Retirer" aria-label={`Retirer le plat de ${DAY_NAMES[i]} ${s}`} onClick={() => remove(d, s)}><Icon name="close" size={18} /></button>
                       </span>
                     </>
                   ) : (
@@ -139,13 +140,13 @@ export default function Semaine({ add }: { add: string | null }) {
       {planned.length > 0 && (
         <>
           <section className="section">
-            <h2 className="h3">🛒 Les courses de la semaine</h2>
+            <h2 className="h3"><Icon name="cart" size={22} className="ic-inline" /> Les courses de la semaine</h2>
             <p className="small">Un seul article par produit, quantités additionnées et calculées pour {prefs.people} personne{prefs.people > 1 ? "s" : ""}. Vérifie ton placard avant de partir.</p>
             <button className="btn" onClick={shop}>Mettre la semaine dans la liste de courses</button>
           </section>
           {(prep.tasks.length > 0 || prep.veg.length > 0) && (
             <section className="section">
-              <h2 className="h3">🧺 À préparer à l'avance (le dimanche ou la veille)</h2>
+              <h2 className="h3"><Icon name="knife" size={22} className="ic-inline" /> À préparer à l'avance (le dimanche ou la veille)</h2>
               {prep.veg.length > 0 && <p>Lave et coupe d'un coup : {prep.veg.join(", ").toLowerCase()}. Range-les dans des boîtes fermées au frigo (3 jours au plus).</p>}
               <ul>{prep.tasks.map((t, k) => <li key={k}><strong>{t.recipe} :</strong> {t.task}</li>)}</ul>
             </section>

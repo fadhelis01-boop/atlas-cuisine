@@ -24,7 +24,7 @@ export default function Region({ id }: { id: string }) {
   const imports = IMPORT_LIBRARY.filter((i) => importCats.includes(i.cat)).slice(0, id === "fusion" ? 60 : 12);
 
   return (
-    <Page photo={`region/${m.id}`} title={`${m.emoji} ${m.name}`} sub={m.blurb} back="/explorer">
+    <Page photo={`region/${m.id}`} title={m.name} sub={m.blurb} back="/explorer">
       <div className="chips" role="group" aria-label="Type de plat">
         <Chip on={!role} onClick={() => setRole(null)}>Tout</Chip>
         {Object.entries(ROLE_LABEL).filter(([k]) => all.some((r) => r.role === k)).map(([k, l]) => <Chip key={k} on={role === k} onClick={() => setRole(k)}>{l}</Chip>)}

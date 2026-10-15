@@ -25,20 +25,20 @@ export function useImportLibrary(): ImportEntry[] {
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);
 
-export const MACROS: { id: MacroId; name: string; emoji: string; blurb: string }[] = [
-  { id: "france", name: "France", emoji: "🥖", blurb: "Régions, terroirs et Outre-mer : de la galette bretonne aux accras antillais." },
-  { id: "europe_sud", name: "Europe du Sud", emoji: "🍅", blurb: "Italie, Espagne, Portugal, Grèce : huile d'olive, tomates, herbes." },
-  { id: "europe_nord", name: "Europe du Nord, Centrale & de l'Est", emoji: "🥨", blurb: "Belgique, Allemagne, Scandinavie, Europe de l'Est : pains, choux, fumaisons." },
-  { id: "maghreb", name: "Maghreb & Égypte", emoji: "🍵", blurb: "Algérie, Maroc, Tunisie, Égypte : épices douces, semoule, tajines et thé à la menthe." },
-  { id: "afrique", name: "Afrique subsaharienne", emoji: "🌶️", blurb: "Sénégal, Mali, Côte d'Ivoire, Nigeria, Éthiopie : mafés, yassa, jollof, bissap." },
-  { id: "moyen_orient", name: "Moyen-Orient & Caucase", emoji: "🧆", blurb: "Liban, Turquie, Iran, Syrie : mezzés, herbes fraîches, grenade et sésame." },
-  { id: "asie_sud", name: "Asie du Sud", emoji: "🍛", blurb: "Inde, Pakistan, Sri Lanka : dals, currys, pains plats, lassi." },
-  { id: "asie_est", name: "Asie de l'Est", emoji: "🥢", blurb: "Chine, Japon, Corée, Taïwan : riz, nouilles, sautés, fermentations." },
-  { id: "asie_sud_est", name: "Asie du Sud-Est", emoji: "🍜", blurb: "Thaïlande, Vietnam, Indonésie, Philippines : herbes, citron vert, lait de coco." },
-  { id: "amerique_nord", name: "Amérique du Nord", emoji: "🍔", blurb: "États-Unis, Canada, cuisine cajun : barbecue, pancakes, comfort food." },
-  { id: "amerique_latine", name: "Amérique latine & Caraïbes", emoji: "🌮", blurb: "Mexique, Brésil, Pérou, Antilles : maïs, haricots, piments, agrumes." },
-  { id: "oceanie", name: "Océanie", emoji: "🥝", blurb: "Australie, Nouvelle-Zélande, Pacifique." },
-  { id: "fusion", name: "Food fusion", emoji: "🌐", blurb: "Les recettes qui mélangent plusieurs traditions ou dont l'origine ne tient pas dans un seul pays : tex-mex, pizza au butter chicken, fish & chips en feuille de riz, couscous-tiep…" },
+export const MACROS: { id: MacroId; name: string; emoji: string; icon: string; blurb: string }[] = [
+  { id: "france", name: "France", emoji: "🥖", icon: "bread", blurb: "Régions, terroirs et Outre-mer : de la galette bretonne aux accras antillais." },
+  { id: "europe_sud", name: "Europe du Sud", emoji: "🍅", icon: "tomato", blurb: "Italie, Espagne, Portugal, Grèce : huile d'olive, tomates, herbes." },
+  { id: "europe_nord", name: "Europe du Nord, Centrale & de l'Est", emoji: "🥨", icon: "pretzel", blurb: "Belgique, Allemagne, Scandinavie, Europe de l'Est : pains, choux, fumaisons." },
+  { id: "maghreb", name: "Maghreb & Égypte", emoji: "🍵", icon: "teapot", blurb: "Algérie, Maroc, Tunisie, Égypte : épices douces, semoule, tajines et thé à la menthe." },
+  { id: "afrique", name: "Afrique subsaharienne", emoji: "🌶️", icon: "pot", blurb: "Sénégal, Mali, Côte d'Ivoire, Nigeria, Éthiopie : mafés, yassa, jollof, bissap." },
+  { id: "moyen_orient", name: "Moyen-Orient & Caucase", emoji: "🧆", icon: "pomegranate", blurb: "Liban, Turquie, Iran, Syrie : mezzés, herbes fraîches, grenade et sésame." },
+  { id: "asie_sud", name: "Asie du Sud", emoji: "🍛", icon: "curry", blurb: "Inde, Pakistan, Sri Lanka : dals, currys, pains plats, lassi." },
+  { id: "asie_est", name: "Asie de l'Est", emoji: "🥢", icon: "chopsticks", blurb: "Chine, Japon, Corée, Taïwan : riz, nouilles, sautés, fermentations." },
+  { id: "asie_sud_est", name: "Asie du Sud-Est", emoji: "🍜", icon: "noodles", blurb: "Thaïlande, Vietnam, Indonésie, Philippines : herbes, citron vert, lait de coco." },
+  { id: "amerique_nord", name: "Amérique du Nord", emoji: "🍔", icon: "burger", blurb: "États-Unis, Canada, cuisine cajun : barbecue, pancakes, comfort food." },
+  { id: "amerique_latine", name: "Amérique latine & Caraïbes", emoji: "🌮", icon: "taco", blurb: "Mexique, Brésil, Pérou, Antilles : maïs, haricots, piments, agrumes." },
+  { id: "oceanie", name: "Océanie", emoji: "🥝", icon: "kiwi", blurb: "Australie, Nouvelle-Zélande, Pacifique." },
+  { id: "fusion", name: "Food fusion", emoji: "🌐", icon: "fusion", blurb: "Les recettes qui mélangent plusieurs traditions ou dont l'origine ne tient pas dans un seul pays : tex-mex, pizza au butter chicken, fish & chips en feuille de riz, couscous-tiep…" },
 ];
 export const MACRO_BY_ID = Object.fromEntries(MACROS.map((m) => [m.id, m])) as Record<MacroId, (typeof MACROS)[number]>;
 

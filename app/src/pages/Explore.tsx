@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useState } from "react";
 import { CATALOGUE, useImportLibrary, MACROS, recipesOfMacro } from "../lib/data";
 import { go, href } from "../lib/router";
@@ -8,15 +9,15 @@ const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "
   "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
 
 const CATS = [
-  { to: "/recettes", icon: "🔎", label: "Toutes les recettes, avec filtres", sub: "type, temps, niveau, budget, occasion" },
-  { to: "/apprendre", icon: "🎓", label: "J'apprends à cuisiner", sub: "un parcours pas à pas pour débuter" },
-  { to: "/techniques", icon: "🔪", label: "Techniques de cuisine", sub: "69 fiches : chef, pâtissier, boulanger, chocolatier" },
-  { to: "/dictionnaire", icon: "📖", label: "Dictionnaire des ingrédients", sub: "655 fiches illustrées, saisons, substituts" },
-  { to: "/pains", icon: "🥖", label: "Pains, pâtes & bases", sub: "baguette, pizza, naan, crêpes…" },
-  { to: "/sauces", icon: "🥫", label: "Sauces maison", sub: "mayo, algérienne, samouraï, frites…" },
-  { to: "/enfants", icon: "🧒", label: "Recettes pour enfants", sub: "par âge, avec sécurité" },
-  { to: "/fetes", icon: "🎉", label: "Repas de fêtes", sub: "calendrier, menus, boissons" },
-  { to: "/zero-dechet", icon: "♻️", label: "Zéro déchet", sub: "restes, épluchures, conservation" },
+  { to: "/recettes", icon: "search", label: "Toutes les recettes, avec filtres", sub: "type, temps, niveau, budget, occasion" },
+  { to: "/apprendre", icon: "cap", label: "J'apprends à cuisiner", sub: "un parcours pas à pas pour débuter" },
+  { to: "/techniques", icon: "knife", label: "Techniques de cuisine", sub: "71 fiches : chef, pâtissier, boulanger, chocolatier" },
+  { to: "/dictionnaire", icon: "dictionary", label: "Dictionnaire des ingrédients", sub: "655 fiches illustrées, saisons, substituts" },
+  { to: "/pains", icon: "bread", label: "Pains, pâtes & bases", sub: "baguette, pizza, naan, crêpes…" },
+  { to: "/sauces", icon: "sauce", label: "Sauces maison", sub: "mayo, algérienne, samouraï, frites…" },
+  { to: "/enfants", icon: "kid", label: "Recettes pour enfants", sub: "par âge, avec sécurité" },
+  { to: "/fetes", icon: "cake", label: "Repas de fêtes", sub: "calendrier, menus, boissons" },
+  { to: "/zero-dechet", icon: "recycle", label: "Zéro déchet", sub: "restes, épluchures, conservation" },
 ];
 
 export default function Explore() {
@@ -37,7 +38,7 @@ export default function Explore() {
             return (
               <a key={m.id} href={href(`/region/${m.id}`)} className="macro card">
                 {!list && photoOf(`region/${m.id}`) && <div className="thumb43"><Photo k={`region/${m.id}`} alt="" sizes="(min-width: 900px) 300px, 100vw" /></div>}
-                <span className="macro-ic" aria-hidden="true">{m.emoji}</span>
+                <span className="macro-ic" aria-hidden="true"><Icon name={m.icon} size={30} /></span>
                 <span className="macro-name">{m.name}</span>
                 {!list && <span className="small">{m.blurb}</span>}
                 <span className="meta">{n} recette{n > 1 ? "s" : ""} complète{n > 1 ? "s" : ""} · {c} {m.id === "fusion" ? "dans tes favoris" : "au programme"}</span>
@@ -49,7 +50,7 @@ export default function Explore() {
       <Section title="Rubriques">
         <nav className="entries">
           {CATS.map((e) => (() => { const pk = TILE_PHOTO[e.to]; const has = pk && photoOf(pk); return (
-          <a key={e.to} href={href(e.to)} className={`entry ${has ? "has-photo" : ""}`}>{has && <Photo k={pk} alt="" sizes="(min-width: 700px) 200px, 33vw" />}<span className="entry-ic" aria-hidden="true">{e.icon}</span><span className="entry-lb">{e.label}</span><span className="entry-sub">{e.sub}</span></a>); })())}
+          <a key={e.to} href={href(e.to)} className={`entry ${has ? "has-photo" : ""}`}>{has && <Photo k={pk} alt="" sizes="(min-width: 700px) 200px, 33vw" />}<span className="entry-ic" aria-hidden="true"><Icon name={e.icon} size={34} /></span><span className="entry-lb">{e.label}</span><span className="entry-sub">{e.sub}</span></a>); })())}
         </nav>
       </Section>
     </Page>

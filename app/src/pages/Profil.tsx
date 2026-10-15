@@ -2,7 +2,7 @@ import { ZONE_LABEL, detectZone } from "../lib/season";
 import { useEffect, useRef, useState } from "react";
 import { ALLERGENS, RECIPES } from "../lib/data";
 import { Page, Section } from "../components/ui";
-import { IMAGES } from "../components/photo";
+import { IMAGES, supportsAvif } from "../components/photo";
 import { href } from "../lib/router";
 import { exportData, importData, resetAll, setState, useStore } from "../lib/store";
 import { frenchVoices, speak, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
@@ -88,8 +88,9 @@ function OfflinePhotos() {
   const all = Object.values(IMAGES);
   const run = async () => {
     let done = 0;
+    const avif = await supportsAvif();
     for (const m of all) {
-      for (const w of m.sizes.filter((x) => x <= 800)) { try { await fetch(`./${m.path}-${w}.webp`); } catch { /* hors ligne */ } }
+      for (const w of m.sizes.filter((x) => x <= 800)) { try { await fetch(`./${m.path}-${w}.${m.avif && avif ? "avif" : "webp"}`); } catch { /* hors ligne */ } }
       done++; if (done % 10 === 0 || done === all.length) setStateLocal(`${done} / ${all.length} photos enregistrées`);
     }
   };

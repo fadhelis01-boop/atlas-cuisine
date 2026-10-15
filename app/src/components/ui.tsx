@@ -1,3 +1,4 @@
+import { Icon } from "./icons";
 import type { ReactNode } from "react";
 import { ALLERGENS, MACRO_BY_ID } from "../lib/data";
 import { evaluate, evaluateLines, verdict, type Verdict } from "../lib/engine";
@@ -38,13 +39,13 @@ export function DietBadges({ r, v, lines }: { r: Recipe; v?: Verdict; lines?: Re
   const vv = v ?? verdict(r, p);
   const out: ReactNode[] = [];
   const porkLabel = ev.pork === "ok" ? "Sans porc" : ev.pork === "uncertain" ? "Porc possible" : null;
-  if (porkLabel) out.push(<span key="p" className={`badge ${ev.pork === "ok" ? "ok" : "warn"}`}>{ev.pork === "ok" ? "✓" : "?"} {porkLabel}</span>);
-  else out.push(<span key="p" className="badge bad">🐖 Contient du porc</span>);
-  if (ev.alcohol === "ok") out.push(<span key="a" className="badge ok">✓ Sans alcool</span>);
+  if (porkLabel) out.push(<span key="p" className={`badge ${ev.pork === "ok" ? "ok" : "warn"}`}>{ev.pork === "ok" ? <Icon name="check" size={15} className="ic-inline" /> : <Icon name="alert" size={15} className="ic-inline" />} {porkLabel}</span>);
+  else out.push(<span key="p" className="badge bad"><Icon name="pig" size={15} className="ic-inline" /> Contient du porc</span>);
+  if (ev.alcohol === "ok") out.push(<span key="a" className="badge ok"><Icon name="check" size={15} className="ic-inline" /> Sans alcool</span>);
   else if (ev.alcohol === "trace") out.push(<span key="a" className="badge info">~ Traces d'alcool</span>);
-  else out.push(<span key="a" className="badge bad">🍷 {ev.alcohol === "violates" ? "Contient de l'alcool" : "Alcool possible"}</span>);
-  if (vv.availability === "adaptable") out.push(<span key="v" className="badge info">🔄 {lines ? "Version adaptée affichée" : "Version adaptée disponible"} (à tester)</span>);
-  if (vv.availability === "hidden") out.push(<span key="h" className="badge bad">⛔ Ne convient pas à ton foyer</span>);
+  else out.push(<span key="a" className="badge bad"><Icon name="wine" size={15} className="ic-inline" /> {ev.alcohol === "violates" ? "Contient de l'alcool" : "Alcool possible"}</span>);
+  if (vv.availability === "adaptable") out.push(<span key="v" className="badge info"><Icon name="swap" size={15} className="ic-inline" /> {lines ? "Version adaptée affichée" : "Version adaptée disponible"} (à tester)</span>);
+  if (vv.availability === "hidden") out.push(<span key="h" className="badge bad"><Icon name="ban" size={15} className="ic-inline" /> Ne convient pas à ton foyer</span>);
   if (ev.allergens.size) out.push(<span key="al" className="badge neutral">Allergènes : {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}</span>);
   return <div className="badges">{out}</div>;
 }
@@ -59,20 +60,20 @@ export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
         <Cover r={r} />
         <div className="rcard-body">
           <h3>{r.title}</h3>
-          <p className="meta">{MACRO_BY_ID[r.macro]?.emoji} {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · ⏱ {minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {"●".repeat(r.level)}{"○".repeat(3 - Math.min(3, r.level))}</p>
-          {v.availability === "adaptable" && <p className="meta adapt">🔄 {v.adapted?.variantName}</p>}
-          {v.availability === "hidden" && <p className="meta bad-text">⛔ {v.reasons[0]}</p>}
+          <p className="meta"><Icon name={MACRO_BY_ID[r.macro]?.icon ?? "globe"} size={15} className="ic-inline" /> {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · <Icon name="timer" size={14} className="ic-inline" />{minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {"●".repeat(r.level)}{"○".repeat(3 - Math.min(3, r.level))}</p>
+          {v.availability === "adaptable" && <p className="meta adapt"><Icon name="swap" size={15} className="ic-inline" /> {v.adapted?.variantName}</p>}
+          {v.availability === "hidden" && <p className="meta bad-text"><Icon name="ban" size={15} className="ic-inline" /> {v.reasons[0]}</p>}
           {note}
         </div>
       </a>
-      <button className={`fav ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav} aria-label={fav ? `Retirer ${r.title} des favoris` : `Ajouter ${r.title} aux favoris`}>{fav ? "♥" : "♡"}</button>
+      <button className={`fav ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav} aria-label={fav ? `Retirer ${r.title} des favoris` : `Ajouter ${r.title} aux favoris`}><Icon name="heart" size={22} className={fav ? "ic-on" : ""} /></button>
     </article>
   );
 }
 
 export function Grid({ children }: { children: ReactNode }) { return <div className="grid">{children}</div>; }
 
-export function Section({ title, children, more, id }: { title: string; children: ReactNode; more?: ReactNode; id?: string }) {
+export function Section({ title, children, more, id }: { title: ReactNode; children: ReactNode; more?: ReactNode; id?: string }) {
   return (
     <section className="section" id={id}>
       <div className="section-head"><h2>{title}</h2>{more}</div>

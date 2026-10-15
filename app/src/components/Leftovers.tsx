@@ -1,3 +1,4 @@
+import { Icon } from "./icons";
 import { useState } from "react";
 import { RECIPE_BY_ID, useLeftovers } from "../lib/data";
 import { verdict } from "../lib/engine";
@@ -8,8 +9,8 @@ import type { Recipe } from "../lib/types";
 // Zéro déchet ingrédient par ingrédient (Tome 12 §6) : pour chaque ingrédient entamé de la recette,
 // ce qui reste, comment le garder sans risque, et quoi en faire (repas en cours, autre plat, hors cuisine).
 const KIND: Record<string, { icon: string; label: string }> = {
-  repas: { icon: "🍽", label: "Dans ce repas" }, plat: { icon: "🍲", label: "Un autre plat" },
-  conserver: { icon: "🧊", label: "Conserver" }, hors: { icon: "🌱", label: "Hors cuisine" },
+  repas: { icon: "plate", label: "Dans ce repas" }, plat: { icon: "pot", label: "Un autre plat" },
+  conserver: { icon: "snowflake", label: "Conserver" }, hors: { icon: "sprout", label: "Hors cuisine" },
 };
 const ORDER = ["repas", "plat", "conserver", "hors"];
 const short = (n: string) => n.split(" (")[0].split(" / ")[0];
@@ -42,7 +43,7 @@ export default function Leftovers({ r }: { r: Recipe }) {
                   const hidden = rec && verdict(rec, p).availability === "hidden";
                   return (
                     <li key={n} className={hidden ? "dim" : ""}>
-                      <span className="zw-kind" title={KIND[i.kind].label}>{KIND[i.kind].icon} {KIND[i.kind].label}</span>{" "}
+                      <span className="zw-kind" title={KIND[i.kind].label}><Icon name={KIND[i.kind].icon} size={16} className="ic-inline" /> {KIND[i.kind].label}</span>{" "}
                       {i.text}{rec && !hidden && <> · <a href={href(`/recette/${rec.id}`)}>{rec.title.split(" (")[0]}</a></>}
                       {hidden && <span className="meta"> (recette liée non adaptée à ton foyer)</span>}
                     </li>

@@ -4,7 +4,7 @@ import { flatten } from "./engine";
 import { seasonFit, type Zone } from "./season";
 import type { Recipe } from "./types";
 
-export interface Proposal { r: Recipe; why: string[] }
+export interface Proposal { r: Recipe; why: [icon: string, text: string][] }
 
 /** Le moment de la journée décide du type de recette : plat aux repas, goûter l'après-midi et le matin. */
 export function momentOf(hour: number): { label: string; test: (r: Recipe) => boolean } {
@@ -30,11 +30,11 @@ export function propose(list: Recipe[], o: { hour: number; zone: Zone; maxMinute
   for (const x of scored) {
     if (out.length === 3) break;
     if (out.some((p) => p.r.macro === x.r.macro)) continue; // trois cuisines différentes
-    const why: string[] = [];
-    if (x.used.length) why.push(`🧊 avec ton ${x.used.slice(0, 2).map((n) => n.split(/ \/ | \(/)[0].toLowerCase()).join(" et ")}`);
-    if (x.fit.inSeason.length) why.push(`🌱 ${x.fit.inSeason.slice(0, 2).map((n) => n.split(/ \/ | \(/)[0].toLowerCase()).join(", ")} de saison`);
-    else if (x.fit.mood) why.push(x.fit.mood === "chaud" ? "🔥 réconfortant" : "❄️ frais");
-    why.push(`⏱ ${x.r.active + x.r.rest} min en tout`);
+    const why: [string, string][] = [];
+    if (x.used.length) why.push(["fridge", `avec ton ${x.used.slice(0, 2).map((n) => n.split(/ \/ | \(/)[0].toLowerCase()).join(" et ")}`]);
+    if (x.fit.inSeason.length) why.push(["sprout", `${x.fit.inSeason.slice(0, 2).map((n) => n.split(/ \/ | \(/)[0].toLowerCase()).join(", ")} de saison`]);
+    else if (x.fit.mood) why.push(x.fit.mood === "chaud" ? ["flame", "réconfortant"] : ["snowflake", "frais"]);
+    why.push(["timer", `${x.r.active + x.r.rest} min en tout`]);
     out.push({ r: x.r, why });
   }
   return out;
