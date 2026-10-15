@@ -232,3 +232,11 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .icon-sheet figcaption { font-size: .75rem; color: var(--text-2); }
 .why { display: flex; flex-wrap: wrap; gap: 2px 10px; }
 .fav { display: grid; place-items: center; } .fav.on .ic .ic-duo { opacity: 1; } .beginner-ic { color: var(--saffron); }
+.step-photos { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-auto-flow: column; grid-auto-columns: min(78%, 300px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+.step-photos li { scroll-snap-align: start; }
+.step-photos figure { margin: 0; }
+.step-photos .thumb43 { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: var(--alt); }
+.step-photos .thumb43 .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 250ms; }
+.step-photos .thumb43 .photo.loaded { opacity: 1; }
+.step-photos figcaption { font-size: .9rem; margin-top: 6px; }
+.dico-thumb { color: #fff; } .dico-thumb .ic { filter: drop-shadow(0 1px 2px rgb(0 0 0 / 25%)); } .dico-thumb .ic .ic-duo { opacity: .28; }

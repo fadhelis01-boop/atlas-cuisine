@@ -1,3 +1,4 @@
+import StepPhotos from "../components/StepPhotos";
 import { Icon } from "../components/icons";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
@@ -258,6 +259,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         </Section>
       </div>
 
+      <StepPhotos subject={`recette/${r.id}`} title="Pas à pas en photos" />
       <RescueBlock r={r} />
       {((cookedN ?? 0) > 0 || journalEntry) && <Section title="Mon carnet"><Journal id={r.id} /></Section>}
       {r.tips.length > 0 && <Section title="Astuces du chef"><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></Section>}

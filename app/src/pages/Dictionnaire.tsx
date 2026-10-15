@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useEffect, useMemo, useState } from "react";
 import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID } from "../lib/data";
 import { href } from "../lib/router";
@@ -23,11 +24,11 @@ export function useDico() {
 }
 
 const SECTION_ICON: [RegExp, string, string][] = [
-  [/Viandes/, "🥩", "tomato"], [/Porc/, "🥓", "berry"], [/Huiles|sucrants|chocolat/, "🍯", "saffron"], [/Poissons/, "🐟", "ocean"], [/Œufs|laitiers/, "🧀", "crust"],
-  [/Produits du monde/, "🌍", "aubergine"], [/Légumes/, "🥕", "herb"], [/Fruits/, "🍓", "chili"], [/Alcools/, "🍷", "berry"], [/Légumineuses|céréales/, "🌾", "crust"],
-  [/Farines|pains/, "🍞", "saffron"], [/Herbes/, "🌿", "pistachio"], [/Épices/, "🌶️", "chili"], [/Condiments/, "🥫", "tomato"],
+  [/Viandes/, "steak", "tomato"], [/Porc/, "sausage", "berry"], [/Huiles|sucrants|chocolat/, "honey", "saffron"], [/Poissons/, "fish", "ocean"], [/Œufs|laitiers/, "cheese", "crust"],
+  [/Produits du monde/, "globe", "aubergine"], [/Légumes/, "carrot", "herb"], [/Fruits/, "strawberry", "chili"], [/Alcools/, "wine", "berry"], [/Légumineuses|céréales/, "wheat", "crust"],
+  [/Farines|pains/, "bread", "saffron"], [/Herbes/, "leaf", "pistachio"], [/Épices/, "chili", "chili"], [/Condiments/, "sauce", "tomato"],
 ];
-export const sectionLook = (s: string) => SECTION_ICON.find(([re]) => re.test(s)) ?? [/./, "🍽️", "tomato"];
+export const sectionLook = (s: string) => SECTION_ICON.find(([re]) => re.test(s)) ?? [/./, "plate", "tomato"];
 const DISPO: Record<string, string> = { "🟢": "En supermarché", "🟡": "Rayon monde ou bio", "🟠": "Épicerie spécialisée", "🔴": "Difficile à trouver en France" };
 
 function Thumb({ slug, section, big }: { slug: string; section: string; big?: boolean }) {
@@ -35,7 +36,7 @@ function Thumb({ slug, section, big }: { slug: string; section: string; big?: bo
   const [, icon, tone] = sectionLook(section);
   return (
     <div className={`dico-thumb tone-${tone} ${big ? "big" : ""}`}>
-      {photoOf(k) ? <Photo k={k} alt="" eager={big} sizes={big ? "(min-width: 760px) 420px, 100vw" : "160px"} /> : <span aria-hidden="true">{icon}</span>}
+      {photoOf(k) ? <Photo k={k} alt="" eager={big} sizes={big ? "(min-width: 760px) 420px, 100vw" : "160px"} /> : <span aria-hidden="true"><Icon name={icon} size={big ? 72 : 48} /></span>}
     </div>
   );
 }
@@ -77,7 +78,7 @@ export function DictionaryPage({ q0 = "" }: { q0?: string }) {
       <div className="chips chips-scroll" role="group" aria-label="Familles">
         <button className={`chip ${seasonOnly ? "on" : ""}`} aria-pressed={seasonOnly} onClick={() => setSeasonOnly(!seasonOnly)}>🌱 De saison ce mois-ci</button>
         <button className={`chip ${!sec ? "on" : ""}`} aria-pressed={!sec} onClick={() => setSec(null)}>Tout</button>
-        {sections.map((s) => <button key={s} className={`chip ${sec === s ? "on" : ""}`} aria-pressed={sec === s} onClick={() => setSec(sec === s ? null : s)}>{sectionLook(s)[1]} {s.split(/,| &| \(/)[0]}</button>)}
+        {sections.map((s) => <button key={s} className={`chip ${sec === s ? "on" : ""}`} aria-pressed={sec === s} onClick={() => setSec(sec === s ? null : s)}><Icon name={sectionLook(s)[1]} size={18} /> {s.split(/,| &| \(/)[0]}</button>)}
       </div>
       <p className="meta" role="status">{list.length} ingrédient{list.length > 1 ? "s" : ""}</p>
       {!q && !sec && !seasonOnly && <nav className="letters" aria-label="Lettres">{letters.map((l) => <a key={l} href={`#lettre-${l}`} onClick={(e) => { e.preventDefault(); document.getElementById(`lettre-${l}`)?.scrollIntoView({ behavior: "smooth" }); }}>{l}</a>)}</nav>}
@@ -116,7 +117,7 @@ export function IngredientPage({ slug }: { slug: string }) {
         <figure className="hero-fig"><Thumb slug={slug} section={e.section} big /><figcaption><Credit k={`ingredient/${slug}`} note={false} /></figcaption></figure>
         <div>
           <h1>{e.name}</h1>
-          <p className="meta">{sectionLook(e.section)[1]} {e.section}{e.aliases.length ? ` · aussi : ${e.aliases.join(", ")}` : ""}</p>
+          <p className="meta"><Icon name={sectionLook(e.section)[1]} size={16} className="ic-inline" /> {e.section}{e.aliases.length ? ` · aussi : ${e.aliases.join(", ")}` : ""}</p>
           <p className="intro">{e.what}</p>
           <div className="card pad"><strong>En cuisine :</strong> {e.use}</div>
           {ref?.note && <div className="card pad zw"><strong>Astuce du référentiel :</strong> {ref.note}</div>}

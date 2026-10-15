@@ -1,3 +1,4 @@
+import StepPhotos from "../components/StepPhotos";
 import { ImportRow, PlayButton } from "../components/video";
 import { Photo, photoOf } from "../components/photo";
 import { useImportLibrary, RECIPES } from "../lib/data";
@@ -44,6 +45,7 @@ export function TechniquePage({ id }: { id: string }) {
     <Page photo={`technique/${t.id}`} title={t.name} sub={t.why} back="/techniques">
       <p className="meta">{t.family} · Niveau {t.level}</p>
       <div className="card pad"><strong>Matériel :</strong> {t.gear}</div>
+      <StepPhotos subject={`technique/${t.id}`} title="Le geste en photos" />
       <Section title="Pas à pas"><ol className="steps">{t.steps.map((s, i) => <li key={i}>{s}</li>)}</ol></Section>
       {t.table && (
         <Section title={t.table.title}>

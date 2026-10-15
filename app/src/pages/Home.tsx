@@ -205,7 +205,7 @@ export default function Home() {
               const ing = INGREDIENTS[n]; const k = `ingredient/${ing.slug}`; const [, icon, tone] = sectionLook(ing.section);
               return (
                 <a key={n} href={href(`/ingredient/${ing.slug}`)} className="market-item">
-                  <span className={`dico-thumb round tone-${tone}`}>{photoOf(k) ? <Photo k={k} alt="" sizes="96px" /> : <span aria-hidden="true">{icon}</span>}</span>
+                  <span className={`dico-thumb round tone-${tone}`}>{photoOf(k) ? <Photo k={k} alt="" sizes="96px" /> : <span aria-hidden="true"><Icon name={icon} size={34} /></span>}</span>
                   <span className="market-name">{n.split(/ \/ | \(/)[0]}</span>
                 </a>
               );
