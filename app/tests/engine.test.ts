@@ -12,6 +12,7 @@ import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
+import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
 let passed = 0;
@@ -182,5 +183,25 @@ const sp = splitStep("**Choux.** Eau, lait, beurre, sel, sucre à ébullition ; 
 console.log("   découpage :", sp.join(" | "), "· gestes/recette :", (RECIPES.reduce((a, r) => a + r.steps.flatMap(splitStep).length, 0) / RECIPES.length).toFixed(1));
 check("53 mode cuisine : une étape dense devient plusieurs gestes, titre conservé ",
   sp.length === 3 && sp.every((x) => x.startsWith("**Choux (")) && RECIPES.reduce((a, r) => a + r.steps.flatMap(splitStep).length, 0) / RECIPES.length > 3.3);
+
+// 54-57 planificateur de la semaine (audit 🔴 4)
+const wk = weekDays(0, new Date("2026-10-15T12:00:00"));
+const noPork: Profile = { noPork: true, alcohol: "none", strict: true, vegetarian: false, allergens: [], adult: true, kidsAge: null, equipment: ["four", "plaques", "poele", "casserole", "mixeur"], onboarded: true };
+const wp = autoPlan(wk, {}, { slots: ["midi", "soir"], weekdayMax: 45, zone: "nord", profile: noPork, leftovers: LEFT, seed: 42 });
+const ids = wk.flatMap((d) => [wp[d]?.midi, wp[d]?.soir]).filter(Boolean) as string[];
+console.log("   semaine :", wk[0], "→", wk[6], "·", ids.slice(0, 4).join(", "), "…");
+check("54 semaine : du lundi au dimanche, 14 repas tous différents, tous des plats compatibles avec le profil",
+  wk[0] === "2026-10-12" && wk[6] === "2026-10-18" && ids.length === 14 && new Set(ids).size === 14
+  && ids.every((i) => RECIPE_BY_ID[i].role === "plat" && verdict(RECIPE_BY_ID[i], noPork).availability !== "hidden"));
+check("55 semaine : le soir en semaine reste rapide ; deux repas de suite ont rarement la même protéine animale",
+  wk.slice(0, 5).every((d) => { const r = RECIPE_BY_ID[wp[d].soir!]; return r.active + r.rest <= 45 || (r.active <= 25 && r.rest <= 60); })
+  && ids.slice(1).filter((x, i) => proteinOf(RECIPE_BY_ID[x]) === proteinOf(RECIPE_BY_ID[ids[i]]) && proteinOf(RECIPE_BY_ID[x]) !== "vegetal").length <= 2);
+const shopLines = consolidate([{ id: "omelette_fines_herbes", factor: 1 }, { id: "oeufs_cocotte", factor: 2 }]);
+const eggs = shopLines.find((l) => l.from.length === 2);
+console.log("   courses :", eggs?.label);
+check("56 courses regroupées : un produit commun à deux recettes = une seule ligne qui cite les deux", !!eggs && new Set(shopLines.map((l) => l.ref)).size === shopLines.length);
+const pa = prepAhead(["pot_au_feu", "pates_pesto", "salade_lentilles"]);
+console.log("   à l'avance :", pa.tasks.map((t) => t.recipe).join(", "), "· légumes :", pa.veg.join(", "));
+check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

@@ -1,3 +1,4 @@
+import { href } from "../lib/router";
 import { setState, useStore } from "../lib/store";
 import { Empty, Page } from "../components/ui";
 
@@ -14,14 +15,14 @@ export default function Courses() {
   };
   return (
     <Page title="Liste de courses" sub="Ajoutée depuis les recettes et les menus. Coche en faisant les courses." back="/frigo">
-      {!items.length ? <Empty>Ta liste est vide. Sur une recette, touche « 🛒 Courses ».</Empty> : (
+      {!items.length ? <Empty>Ta liste est vide. Sur une recette, touche « 🛒 Courses », ou prépare <a href={href("/semaine")}>ta semaine</a>.</Empty> : (
         <>
           <div className="row">
             <button className="btn" onClick={() => void share()}>Partager ou copier</button>
             <button className="btn ghost" onClick={() => setState((s) => { s.shopping = s.shopping.filter((i) => !i.done); })}>Retirer les articles cochés</button>
             <button className="btn ghost danger" onClick={() => { if (confirm("Vider toute la liste ?")) setState((s) => { s.shopping = []; }); }}>Tout vider</button>
           </div>
-          <p className="small">Les quantités viennent de chaque recette : additionne les doublons d'un même produit (ex. 2 recettes avec des oignons). Achète au plus juste pour ne rien jeter.</p>
+          <p className="small">Depuis « Ma semaine », les produits communs sont déjà regroupés et les quantités additionnées. Depuis une recette seule, les quantités sont celles de la fiche. Achète au plus juste pour ne rien jeter.</p>
           {sections.map((sec) => (
             <section key={sec} className="section">
               <h2 className="h3">{sec.split(" (")[0]}</h2>

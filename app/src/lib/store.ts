@@ -39,6 +39,8 @@ export interface State {
   recent: string[];
   learned?: string[]; // étapes du parcours « J'apprends à cuisiner » validées
   journal?: Record<string, { rating: number; note: string; date: string }>; // mon carnet : note et remarques après avoir cuisiné
+  week?: Record<string, { midi?: string; soir?: string }>; // planificateur : date ISO → plats du midi et du soir
+  weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number };
 }
 
 const KEY = "atlas-state-v1";

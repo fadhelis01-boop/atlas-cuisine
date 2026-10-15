@@ -28,12 +28,13 @@ import Credits from "./pages/Credits";
 import { DictionaryPage, IngredientPage } from "./pages/Dictionnaire";
 import Catalogue from "./pages/Catalogue";
 import Apprendre from "./pages/Apprendre";
+import Semaine from "./pages/Semaine";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 const TABS = [
   { to: "/", label: "Accueil", icon: "🏠", match: [""] },
   { to: "/explorer", label: "Explorer", icon: "🧭", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient", "recettes", "apprendre"] },
-  { to: "/frigo", label: "Frigo", icon: "🥕", match: ["frigo", "courses"] },
+  { to: "/frigo", label: "Frigo", icon: "🥕", match: ["frigo", "courses", "semaine"] },
   { to: "/biblio", label: "Ma biblio", icon: "📚", match: ["biblio", "imports"] },
   { to: "/profil", label: "Profil", icon: "👤", match: ["profil", "credits"] },
 ];
@@ -89,6 +90,7 @@ export default function App() {
     case "profil": page = <Profil />; break;
     case "credits": page = <Credits />; break;
     case "apprendre": page = <Apprendre />; break;
+    case "semaine": page = <Semaine key={route.query.get("ajout") ?? ""} add={route.query.get("ajout")} />; break;
     case "recettes": page = <Catalogue q0={route.query.get("q") ?? ""} />; break;
     case "dictionnaire": page = <DictionaryPage q0={route.query.get("q") ?? ""} />; break;
     case "ingredient": page = <IngredientPage key={p1} slug={p1} />; break;

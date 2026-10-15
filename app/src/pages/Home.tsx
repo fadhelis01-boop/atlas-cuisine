@@ -17,6 +17,7 @@ import { sectionLook } from "./Dictionnaire";
 const ENTRIES = [
   { to: "/explorer", icon: "🌍", label: "Cuisines du monde", sub: "par région", tone: "tomato" },
   { to: "/frigo", icon: "🥕", label: "Avec ce que j'ai", sub: "par ingrédients", tone: "saffron" },
+  { to: "/semaine", icon: "📅", label: "Ma semaine", sub: "menus + courses", tone: "herb" },
   { to: "/enfants", icon: "🧒", label: "Enfants", sub: "âges, sécurité", tone: "pistachio" },
   { to: "/pains", icon: "🥖", label: "Pains & bases", sub: "pizza, naan, crêpes", tone: "crust" },
   { to: "/sauces", icon: "🥫", label: "Sauces maison", sub: "sans additifs", tone: "chili" },

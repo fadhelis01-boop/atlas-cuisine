@@ -90,12 +90,13 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const fav = useStore((s) => s.favorites.includes(id));
   const cookedN = useStore((s) => s.cooked[id]);
   const journalEntry = useStore((s) => s.journal?.[id]);
-  const [portions, setPortions] = useState(r?.portions ?? 4);
+  const asked = Number(q.get("portions")) || 0;
+  const [portions, setPortions] = useState(asked || r?.portions || 4);
   const [useAdapted, setUseAdapted] = useState(true);
   const [reading, setReading] = useState<number | null>(null);
   const [showAnyway, setShowAnyway] = useState(q.get("voir") === "1");
   const [msg, setMsg] = useState("");
-  useEffect(() => { if (r) { pushRecent(r.id); setPortions(r.portions); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || r.portions); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const v = useMemo(() => (r ? verdict(r, p) : null), [r, p]);
   if (!r || !v) return <Page title="Recette introuvable" back="/explorer">{null}</Page>;
 
@@ -158,6 +159,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {ttsAvailable() && <button className="btn ghost" onClick={() => read("tout")} aria-pressed={reading !== null}>{reading !== null ? "⏹ Arrêter" : "🔊 Écouter"}</button>}
             {ttsAvailable() && reading === null && <button className="btn ghost" onClick={() => read("resume")}>🔊 Résumé</button>}
             <button className="btn ghost" onClick={addToShopping}>🛒 Courses</button>
+            {r.role === "plat" && <a className="btn ghost" href={href(`/semaine?ajout=${r.id}`)}>📅 Planifier</a>}
             <a className="btn ghost" href={href(`/menu/${r.id}`)}>🍽 Compléter le menu</a>
             <button className={`btn ghost ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav}>{fav ? "♥ Favori" : "♡ Favori"}</button>
           </div>
