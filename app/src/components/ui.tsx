@@ -6,28 +6,28 @@ import { toggleFavorite, useProfile, useStore } from "../lib/store";
 import { minutes } from "../lib/text";
 import type { Recipe, RecipeLine } from "../lib/types";
 import { Credit, Photo, photoOf } from "./photo";
+import { IllustratedCover, MACRO_HUE, PatternBand, dishEmoji } from "./art";
 
-/** Visuel de couverture généré (en attendant les photos du tournage, Tome 6). */
-const KIND_EMOJI: Record<string, string> = { Pain: "🥖", Sauce: "🥫", Boisson: "🥤", Dessert: "🍰", "Goûter / dessert": "🥞", Entrée: "🥗", Base: "🫕", Accompagnement: "🍟", Plat: "🍲" };
+/** Emoji choisis à la main pour les fiches étalons ; les autres sont déduits du titre (art.tsx). */
 const SPECIAL: Record<string, string> = {
-  tajine_poulet_olives: "🫒", poulet_yassa: "🍋", dal_tadka: "🍛", spaghetti_carbonara: "🍝", boeuf_bourguignon: "🍷", pad_thai: "🍜", ratatouille: "🍆",
-  baguette_24h: "🥖", mayonnaise: "🥚", crepes_bretonnes: "🥞", pizza_margherita: "🍕", pate_pizza: "🍕", naan: "🫓", pain_pita: "🫓", focaccia: "🌿",
+  tajine_poulet_olives: "🥗", poulet_yassa: "🍋", dal_tadka: "🍛", spaghetti_carbonara: "🍝", boeuf_bourguignon: "🍷", pad_thai: "🍜", ratatouille: "🍆",
+  baguette_24h: "🥖", mayonnaise: "🥚", crepes_bretonnes: "🥞", pizza_margherita: "🍕", pate_pizza: "🍕", naan: "🥙", pain_pita: "🥙", focaccia: "🌿",
   galette_complete: "🍳", frites_maison: "🍟", pesto: "🌿", guacamole: "🥑", chili_con_carne: "🌶️", riz_cantonais: "🍚", poulet_teriyaki: "🍗",
   houmous: "🧆", taboule_libanais: "🌿", shakshuka: "🍳", accras_morue: "🐟", veloute_potiron: "🎃", poulet_roti: "🍗", mousse_chocolat: "🍫",
-  meringues: "☁️", banana_bread: "🍌", tiramisu: "☕", oranges_cannelle: "🍊", bissap: "🌺", citronnade_menthe: "🍋", lassi_mangue: "🥭", the_menthe: "🫖",
-  jus_gingembre: "🫚", galette_rois: "👑", ketchup: "🍅", sauce_tomate: "🍅", harissa: "🌶️", mafe_poulet: "🥜", chorba: "🥣", quiche_lorraine: "🥧",
+  meringues: "☁️", banana_bread: "🍌", tiramisu: "☕", oranges_cannelle: "🍊", bissap: "🌺", citronnade_menthe: "🍋", lassi_mangue: "🥭", the_menthe: "🍵",
+  jus_gingembre: "🍹", galette_rois: "👑", ketchup: "🍅", sauce_tomate: "🍅", harissa: "🌶️", mafe_poulet: "🥜", chorba: "🥣", quiche_lorraine: "🥧",
   gratin_dauphinois: "🥔", bouillon_volaille: "🍲", bouillon_legumes: "🥕", salade_carottes_cumin: "🥕", tzatziki: "🥒", pain_perdu: "🍞", riz_au_lait: "🍚",
 };
-const MACRO_HUE: Record<string, number> = { france: 12, europe_sud: 28, europe_nord: 200, maghreb: 38, afrique: 20, moyen_orient: 45, asie_sud: 32, asie_est: 0, asie_sud_est: 150, amerique_nord: 8, amerique_latine: 90, oceanie: 180 };
 
 export function Cover({ r, big }: { r: Recipe; big?: boolean }) {
   const hue = MACRO_HUE[r.macro] ?? 20;
   const k = `recette/${r.id}`;
+  const m = photoOf(k);
   return (
-    <div className={big ? "cover cover-big" : "cover"} style={{ background: photoOf(k)?.color ?? `linear-gradient(135deg, hsl(${hue} 55% 82%), hsl(${(hue + 30) % 360} 45% 68%))` }}>
-      {photoOf(k)
+    <div className={big ? "cover cover-big" : "cover"} style={m ? { background: m.color ?? `hsl(${hue} 55% 82%)` } : undefined}>
+      {m
         ? <Photo k={k} alt={big ? `${r.title} (photo d'illustration)` : ""} eager={big} sizes={big ? "(min-width: 760px) 360px, 100vw" : "(min-width: 900px) 280px, (min-width: 600px) 45vw, 100vw"} />
-        : <span aria-hidden="true">{SPECIAL[r.id] ?? KIND_EMOJI[r.kind] ?? "🍽️"}</span>}
+        : <IllustratedCover r={r} emoji={dishEmoji(r, SPECIAL[r.id])} />}
     </div>
   );
 }
@@ -93,7 +93,7 @@ export function Page({ title, sub, children, back, photo }: { title: string; sub
           <div className="photo-band"><Photo k={photo!} alt="" eager sizes="(min-width: 900px) 1056px, 100vw" /><div className="band-text"><h1>{title}</h1></div></div>
           <figcaption><Credit k={photo!} note={false} /></figcaption>
         </figure>
-      ) : <h1>{title}</h1>}
+      ) : <PatternBand seed={title}><h1>{title}</h1></PatternBand>}
       {sub && <p className="lead">{sub}</p>}
       {children}
     </main>

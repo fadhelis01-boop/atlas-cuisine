@@ -17,7 +17,7 @@ ALLER = {"GL": "gluten", "CR": "crustacés", "OE": "œufs", "PO": "poissons", "A
          "CE": "céleri", "MO": "moutarde", "SE": "sésame", "SU": "sulfites", "LU": "lupin", "MM": "mollusques"}
 ING = {n: Ingredient(n, {k: v for k, v in r["derivs"].items() if k in ("pork", "alcohol")}, set(r["allergens"]), "C") for n, r in REF.items()}
 V0 = set(X.EXTRA)  # les 11 fiches du Tome 11
-WAVE1 = [d for d in RECIPES if d["id"] not in V0]
+WAVE1 = [d for d in RECIPES if d["id"] not in V0 and d.get("vague") != 2]  # la vague 2 a son propre tome (13)
 TITLE = {d["id"]: d["title"] for d in RECIPES}
 
 RS = OrderedDict()

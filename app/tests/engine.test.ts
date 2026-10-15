@@ -4,6 +4,8 @@ import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID } from "../src/lib
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
+import { TECHNIQUES, techniqueFor } from "../src/lib/techniques";
+import { dishEmoji } from "../src/components/art";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
 let passed = 0;
@@ -145,5 +147,17 @@ const mayoLo = RECIPE_BY_ID["mayonnaise"].leftovers.find((l) => l.ref === "Jaune
 check("40 zéro déchet : la mayonnaise laisse des blancs → meringues proposées", !!mayoLo && mayoLo.parts[0].ideas.some((i) => i.recipe === "meringues"));
 check("41 zéro déchet : chaque idée liée pointe vers une recette existante, jamais vers elle-même",
   RECIPES.every((r) => r.leftovers.every((l) => l.parts.every((p) => p.ideas.every((i) => !i.recipe || (i.recipe !== r.id && !!RECIPE_BY_ID[i.recipe]))))));
+
+// 42-46 vague 2 (Tome 13) : volume, techniques de chef, condiments, habillage
+const v2 = RECIPES.filter((r) => r.source.includes("vague 2"));
+check("42 vague 2 : au moins 500 nouvelles fiches, identifiants uniques", v2.length >= 500 && new Set(RECIPES.map((r) => r.id)).size === RECIPES.length);
+check("43 techniques : pâtisserie, chocolat, boulangerie, poissons, viandes, œufs et condiments présents",
+  ["Pâtisserie française", "Chocolat", "Boulangerie & viennoiserie", "Poissons & fruits de mer", "Viandes & volailles", "Œufs", "Condiments & marinades maison"].every((f) => TECHNIQUES.some((t) => t.family === f)));
+check("44 techniques des fiches de la vague 2 toutes reliées à une fiche technique", v2.every((r) => r.techniques.every((t) => !!techniqueFor(t))));
+const viande = TECHNIQUES.find((t) => t.id === "cuisson-viande-rouge");
+check("45 repères de sécurité : viande hachée 70 °C, volaille 74 °C", !!viande?.table?.rows.some(([a, b]) => a.includes("hachée") && b.includes("70 °C"))
+  && TECHNIQUES.some((t) => t.steps.join(" ").includes("74 °C")));
+check("46 condiments maison (bouillon cube, nokoss) présents ; couverture illustrée pour chaque fiche",
+  !!RECIPE_BY_ID["bouillon_cube_maison"] && !!RECIPE_BY_ID["nokoss"] && RECIPES.every((r) => dishEmoji(r).length > 0));
 
 console.log(`\n${passed} contrôles OK`);

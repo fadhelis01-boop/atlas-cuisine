@@ -15,10 +15,10 @@ export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.m
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);
 
 export const MACROS: { id: MacroId; name: string; emoji: string; blurb: string }[] = [
-  { id: "france", name: "France", emoji: "🇫🇷", blurb: "Régions, terroirs et Outre-mer : de la galette bretonne aux accras antillais." },
+  { id: "france", name: "France", emoji: "🥖", blurb: "Régions, terroirs et Outre-mer : de la galette bretonne aux accras antillais." },
   { id: "europe_sud", name: "Europe du Sud", emoji: "🍅", blurb: "Italie, Espagne, Portugal, Grèce : huile d'olive, tomates, herbes." },
   { id: "europe_nord", name: "Europe du Nord, Centrale & de l'Est", emoji: "🥨", blurb: "Belgique, Allemagne, Scandinavie, Europe de l'Est : pains, choux, fumaisons." },
-  { id: "maghreb", name: "Maghreb & Égypte", emoji: "🫖", blurb: "Algérie, Maroc, Tunisie, Égypte : épices douces, semoule, tajines et thé à la menthe." },
+  { id: "maghreb", name: "Maghreb & Égypte", emoji: "🍵", blurb: "Algérie, Maroc, Tunisie, Égypte : épices douces, semoule, tajines et thé à la menthe." },
   { id: "afrique", name: "Afrique subsaharienne", emoji: "🌶️", blurb: "Sénégal, Mali, Côte d'Ivoire, Nigeria, Éthiopie : mafés, yassa, jollof, bissap." },
   { id: "moyen_orient", name: "Moyen-Orient & Caucase", emoji: "🧆", blurb: "Liban, Turquie, Iran, Syrie : mezzés, herbes fraîches, grenade et sésame." },
   { id: "asie_sud", name: "Asie du Sud", emoji: "🍛", blurb: "Inde, Pakistan, Sri Lanka : dals, currys, pains plats, lassi." },

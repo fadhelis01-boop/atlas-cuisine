@@ -21,6 +21,7 @@
 | **8** | `BIBLE_TOME8_ADR_ET_MOTEURS.md` | **17 décisions d'architecture (ADR)**, spécification des moteurs (diététique, substitution, suggestion ✅ **testés** ; menu, anti-gaspi, import, synchronisation, audio, recalcul 🟡 spécifiés), SLO ; **code de référence Python + 28 contrôles passés** | 544 |
 | **11** | `BIBLE_TOME11_VAGUE0_RECETTES_ETALONS.md` | **11 fiches étalons** (tajine, yassa, dal, carbonara, bourguignon, pad thaï, ratatouille, baguette, mayonnaise, sauce algérienne, crêpes) au format du Tome 6, reliées ligne à ligne au référentiel (Tome 3), **badges calculés par le moteur (Tome 8)**, variantes sans porc / sans alcool / sans œuf **à tester**, démonstration de suggestion, **rapport d'écarts du référentiel** ; **non testées en cuisine** | 917 |
 | **12** | `BIBLE_TOME12_VAGUE1_ET_APPLICATION.md` | **59 fiches de la vague 1** (pains et bases, sauces maison et frites, plats et entrées du monde, desserts, fêtes, anti-gaspi, boissons sans alcool), badges calculés par le moteur ; **corpus importé** (585 favoris TikTok + 339 recettes Cooking with Morgane classés), catégorie **Food fusion**, **vidéos liées aux fiches et lues dans l'application** ; **41 règles de substitution génériques** ; **application v1** : choix techniques, couverture des 10 modules, limites, vérifications (41 tests), **comptes La cuisine de Marina et NiangCook**, **zéro déchet ingrédient par ingrédient** (§6), **138 photos sous licence libre** (§7), mode d'emploi ; décisions D13-D20 ; **non testées en cuisine** | 3333 |
+| **13** | `BIBLE_TOME13_VAGUE2.md` | **506 fiches de la vague 2** : France région par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, **pâtisserie française**, **chocolats d'occasion**, **condiments et marinades maison** (bouillon cube, nokoss…), sauces à frites, boulangerie, enfants, quotidien, anti-gaspi, boissons sans alcool, cahier du chef ; **39 nouvelles techniques** (pâtisserie, chocolat, boulangerie, poissons, viandes, cuissons, œufs, condiments) avec tableaux de températures ; **habillage graphique** ; décisions D21-D25 ; **non testées en cuisine** | 13666 |
 
 ---
 
@@ -126,6 +127,7 @@ T3 + T6 + T8 ─► T11 / T12 fiches ─► export_app_data.py ─► applicatio
 | **10** | **Go-to-market** : positionnement, ASO, SEO des pages recettes, partenariats, plan de lancement, métriques d'acquisition | Faire connaître le produit |
 | **11** | **Catalogue complet des 600 recettes** : fiches de brief remplies vague par vague | **Vague 0 (11 fiches, T11) et vague 1 (59 fiches, T12) livrées** ; reste ≈ 530 fiches |
 | ~~12~~ | ~~Vague 1 + application~~ | ✅ **Livré** : `BIBLE_TOME12_VAGUE1_ET_APPLICATION.md` |
+| ~~13~~ | ~~Vague 2 + techniques de chef~~ | ✅ **Livré** : `BIBLE_TOME13_VAGUE2.md` |
 | **13** | **Plan de formation / onboarding** des chefs, testeurs, modérateurs | Industrialiser la qualité |
 
 ---

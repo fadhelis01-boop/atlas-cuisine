@@ -2,6 +2,8 @@
 // Vidéos : ATLAS n'a pas encore tourné ses démonstrations (Tome 6) ; chaque fiche renvoie vers une recherche
 // YouTube et vers les favoris TikTok importés qui traitent du sujet. Rédaction : NON TESTÉE (Tome 7 §2).
 
+import { MORE_TECHNIQUES } from "./techniques2";
+
 export interface Technique {
   id: string;
   name: string;
@@ -12,11 +14,12 @@ export interface Technique {
   steps: string[];
   errors: string[];
   noGear?: string;
+  table?: { title: string; rows: [string, string][] }; // repères de cuisson (températures, temps)
   keys: string[]; // mots qui relient la fiche aux recettes (champ « techniques ») et aux imports
   query: string; // recherche vidéo
 }
 
-export const TECHNIQUES: Technique[] = [
+const BASE: Technique[] = [
   { id: "tenir-couteau", name: "Tenir un couteau et protéger ses doigts", family: "Couteaux & coupes", level: 1,
     why: "La base de toute la cuisine : couper vite, régulier et sans se blesser.", gear: "Couteau de chef (20 cm) bien aiguisé, planche stable (un torchon humide dessous).",
     steps: ["Pince la lame entre le pouce et l'index, juste devant le manche ; les autres doigts tiennent le manche.", "Main qui guide en « griffe » : bout des doigts repliés, les phalanges contre la lame.", "Coupe en avançant la lame, pointe posée sur la planche, comme un mouvement de bascule.", "Recule la griffe au fur et à mesure, sans jamais déplier les doigts."],
@@ -64,11 +67,11 @@ export const TECHNIQUES: Technique[] = [
   { id: "emulsionner", name: "Émulsionner (mayonnaise, vinaigrette)", family: "Sauces & liaisons", level: 1,
     why: "Lier l'huile et l'eau en une sauce onctueuse : mayonnaise, vinaigrette, sauces froides.", gear: "Bol, fouet ou mixeur plongeur et bocal étroit.",
     steps: ["Tous les ingrédients à la même température.", "Mayonnaise : jaune + moutarde + acide, puis l'huile goutte à goutte jusqu'à ce que ça prenne, puis en filet.", "Vinaigrette : sel dissous dans l'acide, moutarde, puis l'huile ; secoue en bocal.", "Mixeur plongeur : tout dans un bocal étroit, mixeur au fond, remonte lentement."],
-    errors: ["Huile trop vite : la mayonnaise tranche. Rattrapage : 1 c. à c. de moutarde dans un bol propre, incorpore la sauce ratée peu à peu."], keys: ["émulsionner", "émulsionner au mixeur", "émulsion"], query: "réussir une mayonnaise maison émulsion" },
+    errors: ["Huile trop vite : la mayonnaise tranche. Rattrapage : 1 c. à c. de moutarde dans un bol propre, incorpore la sauce ratée peu à peu."], keys: ["émulsionner", "émulsionner au mixeur", "émulsion", "monter au beurre"], query: "réussir une mayonnaise maison émulsion" },
   { id: "roux-bechamel", name: "Faire un roux (béchamel)", family: "Sauces & liaisons", level: 1,
     why: "La liaison de base des sauces blanches, gratins, croque-monsieur, sauce fromagère.", gear: "Casserole, fouet.",
     steps: ["Fonds poids égal de beurre et de farine, remue 2 min sans coloration.", "Hors du feu, verse le liquide froid d'un coup et fouette.", "Remets sur le feu et fouette jusqu'à l'ébullition, puis 2 min."],
-    errors: ["Roux chaud + lait chaud = grumeaux. Un des deux doit être froid."], keys: ["faire un roux", "lier une sauce", "lier à la farine"], query: "faire une béchamel sans grumeaux roux" },
+    errors: ["Roux chaud + lait chaud = grumeaux. Un des deux doit être froid."], keys: ["faire un roux", "lier une sauce", "lier à la farine", "gratiner"], query: "faire une béchamel sans grumeaux roux" },
   { id: "reduire", name: "Réduire une sauce", family: "Sauces & liaisons", level: 1,
     why: "Concentrer le goût et épaissir sans farine.", gear: "Sauteuse large (plus la surface est grande, plus ça va vite).",
     steps: ["Laisse bouillonner à découvert.", "Teste : une cuillère trempée reste nappée ; un trait au doigt sur le dos de la cuillère ne se referme pas.", "Sale à la fin : la réduction concentre aussi le sel."],
@@ -151,12 +154,14 @@ export const TECHNIQUES: Technique[] = [
     errors: ["Trop d'ingrédients à la fois : ça bout au lieu de sauter.", "Sur induction : poêle à fond plat plutôt qu'un wok rond."], keys: ["sauter au wok"], query: "sauter au wok à la maison induction" },
 ];
 
+export const TECHNIQUES: Technique[] = [...BASE, ...MORE_TECHNIQUES];
+
 export const TECH_BY_ID = Object.fromEntries(TECHNIQUES.map((t) => [t.id, t]));
 
 /** Associe un libellé de technique d'une recette à une fiche. */
 export function techniqueFor(label: string): Technique | undefined {
   const l = label.toLowerCase();
-  return TECHNIQUES.find((t) => t.keys.some((k) => l === k || l.includes(k) || k.includes(l)));
+  return TECHNIQUES.find((t) => t.keys.some((key) => { const k = key.toLowerCase(); return l === k || l.includes(k) || k.includes(l); }));
 }
 
 export const youtubeSearch = (q: string) => `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;

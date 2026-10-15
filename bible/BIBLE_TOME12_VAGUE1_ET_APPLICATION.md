@@ -75,7 +75,7 @@
 
 **Légende** : identique au Tome 11 §1. **🔄** = version adaptée par une variante de la fiche ou une règle générique (§4), **à tester**. **Enfants dès** : âge minimal conseillé (Tome 1 §7.6).
 
-**Couverture des rubriques demandées** (vague 0 + vague 1) : pains : 17 · sauces : 16 · enfants : 45 · fetes : 22 · zero_dechet : 17 · boissons : 5 · techniques : 1.
+**Couverture des rubriques demandées** (vague 0 + vague 1) : pains : 38 · sauces : 78 · enfants : 314 · fetes : 28 · zero_dechet : 80 · boissons : 26 · techniques : 1.
 
 ---
 
@@ -3111,7 +3111,7 @@ Pour les recettes **dont l'origine ne se rattache pas à un seul pays** ou qui *
 
 ### 3.5 Vidéos des recettes, lues dans l'application
 
-- **48 fiches sur 70** sont reliées à **106 vidéos existantes** (favoris TikTok, vidéos YouTube de Cooking with Morgane), choisies par mots-clés relus à la main pour chaque fiche (`VIDEO_KEYS` dans `export_app_data.py`), les versions sans porc ni alcool d'abord.
+- **102 fiches sur 576** sont reliées à **224 vidéos existantes** (favoris TikTok, vidéos YouTube de Cooking with Morgane), choisies par mots-clés relus à la main pour chaque fiche (`VIDEO_KEYS` dans `export_app_data.py`), les versions sans porc ni alcool d'abord.
 - **920 des 988 recettes importées** se lisent **dans l'application** : TikTok par l'intégration officielle (`tiktok.com/embed/v2/<id>`), YouTube par `youtube-nocookie.com` ; les 339 identifiants YouTube ont été relevés sur les pages du site (`recettes-classees/cookingwithmorgane_videos.json`). Les carrousels photo TikTok s'ouvrent dans TikTok.
 - La lecture se lance **dans une fenêtre de l'application** (fiche recette, mode cuisine, listes de favoris) ; **rien n'est chargé chez TikTok ou YouTube avant d'appuyer sur ▶** (RGPD). Chaque fiche permet aussi d'**ajouter son propre lien vidéo**.
 - Ce sont les vidéos de leurs auteur·e·s : crédit et lien vers l'original sous chaque lecture ; aucune vidéo n'est copiée (D15). Une vidéo supprimée ou rendue privée par son auteur·e ne se lit plus.
@@ -3215,9 +3215,9 @@ Quand une fiche n'a pas de variante pour le régime du foyer, l'application appl
 
 ### 5.4 Vérifications faites
 
-- `export_app_data.py` : **toutes** les références d'ingrédients des 70 fiches et de leurs variantes existent dans le Tome 3 (sinon l'export s'arrête) ; 29 lignes « implicites » (eau, café, thé vert : à ajouter au Tome 3).
+- `export_app_data.py` : **toutes** les références d'ingrédients des 70 fiches et de leurs variantes existent dans le Tome 3 (sinon l'export s'arrête) ; 84 lignes « implicites » (eau, café, thé vert : à ajouter au Tome 3).
 - `npm test` (application) : **36 contrôles** (invariants du moteur, 2 000 recettes aléatoires × 4 profils, les 70 fiches en profil le plus strict, suggestion, import et cas piégés du Tome 7 §7.3).
-- Ce tome : badges recalculés par `atlas_engine.py` ; fiches présentes des deux côtés : 70/70.
+- Ce tome : badges recalculés par `atlas_engine.py` ; fiches présentes des deux côtés : 576/576.
 - Parcours de tous les écrans dans le navigateur (mobile et grand écran, clair et sombre) sans erreur ; version de production installable, **service worker actif, fonctionnement hors connexion** vérifié.
 
 ### 5.5 Faire évoluer
@@ -3235,7 +3235,7 @@ Ajouter une recette = l'écrire dans un fichier `recipes_v1_*.py` au format du T
 
 ## 6. Zéro déchet ingrédient par ingrédient
 
-Chaque fiche liste automatiquement **les ingrédients qu'elle n'utilise pas en entier** et ce qu'on peut faire de chaque reste. Couverture : **188 ingrédients entamés dans 65 fiches sur 70** ; les autres n'utilisent que des produits du placard en entier.
+Chaque fiche liste automatiquement **les ingrédients qu'elle n'utilise pas en entier** et ce qu'on peut faire de chaque reste. Couverture : **1341 ingrédients entamés dans 515 fiches sur 576** ; les autres n'utilisent que des produits du placard en entier.
 
 **Comment c'est calculé** : `zero_dechet_data.py` décrit, pour chaque ingrédient du Tome 3 souvent entamé, comment il s'achète (botte, pot, tube, boîte…), quand une ligne de recette signale un usage partiel (« ½ bouquet », « jus de citron », « 2 c. à s. de concentré »…), ce qui reste (tiges, zeste, blancs d'œufs, carcasse, eau de cuisson…), **comment le garder sans risque**, et **quatre familles d'idées** dans cet ordre : 🍽 *dans le repas en cours* (entrée, accompagnement), 🍲 *un autre plat* (lié à une fiche ATLAS), 🧊 *conserver*, 🌱 *hors cuisine* (compost, jardin, ménage). L'export vérifie chaque ingrédient et chaque recette liée ; l'application masque une recette liée qui ne convient pas au foyer et propose d'**ajouter le reste au frigo virtuel** (il remonte alors dans « Avec ce que j'ai »).
 
@@ -3305,7 +3305,7 @@ Chaque fiche liste automatiquement **les ingrédients qu'elle n'utilise pas en e
 
 ## 7. Illustrations : photos sous licence libre
 
-**133 photos** illustrent l'application : 12 fetes, 69 recettes, 12 regions, 9 rubriques, 31 techniques.
+**135 photos** illustrent l'application : 12 fetes, 69 recettes, 12 regions, 9 rubriques, 33 techniques.
 
 **Méthode (illustrations/)** : `fetch_candidates.py` rassemble 10 candidates par sujet sur Wikimedia Commons et Openverse (Flickr), **uniquement sous CC0, domaine public, CC BY ou CC BY-SA** (usage commercial et modification permis ; NC, ND et GFDL seule refusées) ; planches contact relues **une à une** ; choix dans `selections.json` ; `process.py` recadre en 4:3 (point d'intérêt réglable), applique un étalonnage commun discret (contraste, chaleur, saturation, piqué), produit du WebP 400/800/1200 px et la couleur dominante (fond pendant le chargement), et écrit les crédits (`app/src/data/images.json`).
 

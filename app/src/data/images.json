@@ -1914,6 +1914,38 @@
   "title": "Soft Boiled Egg",
   "kind": "photo"
  },
+ "technique/pate-brisee": {
+  "path": "img/technique/pate-brisee",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#af9461",
+  "author": "Romain Behar",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Recette_pate_brisee_etape_3.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Recette pate brisee etape 3.jpg",
+  "kind": "photo"
+ },
+ "technique/pate-crepes": {
+  "path": "img/technique/pate-crepes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#716653",
+  "author": "Didriks",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pouring_cr%C3%AApe_batter,_2013.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pouring crêpe batter, 2013.jpg",
+  "kind": "photo"
+ },
  "technique/petrir": {
   "path": "img/technique/petrir",
   "sizes": [

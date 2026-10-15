@@ -43,6 +43,11 @@ export function TechniquePage({ id }: { id: string }) {
       <p className="meta">{t.family} · Niveau {t.level}</p>
       <div className="card pad"><strong>Matériel :</strong> {t.gear}</div>
       <Section title="Pas à pas"><ol className="steps">{t.steps.map((s, i) => <li key={i}>{s}</li>)}</ol></Section>
+      {t.table && (
+        <Section title={t.table.title}>
+          <table className="tech-table"><tbody>{t.table.rows.map(([a, b]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td></tr>)}</tbody></table>
+        </Section>
+      )}
       <Section title="Erreurs fréquentes"><ul>{t.errors.map((e) => <li key={e}>{e}</li>)}</ul></Section>
       {t.noGear && <Section title="Sans équipement spécial"><p>{t.noGear}</p></Section>}
       <Section title="Voir le geste">

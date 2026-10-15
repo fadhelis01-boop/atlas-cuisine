@@ -275,3 +275,9 @@ details > summary { cursor: pointer; min-height: 32px; }
 .zw-ideas li.dim { opacity: 0.6; }
 .zw-kind { display: inline-block; min-width: 9.5em; font-weight: 600; font-size: 0.8125rem; }
 .zw a { color: inherit; font-weight: 600; }
+
+/* Repères de cuisson des techniques */
+.tech-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.tech-table th, .tech-table td { text-align: left; vertical-align: top; padding: .55rem .6rem; border-bottom: 1px solid var(--line, rgba(0,0,0,.12)); }
+.tech-table th { font-weight: 600; width: 42%; }
+.tech-table tr:nth-child(odd) { background: color-mix(in srgb, currentColor 4%, transparent); }

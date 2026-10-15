@@ -8,6 +8,7 @@ import json, os, re, sys
 from load_ref import parse_tome3
 import recipes_data
 import recipes_v1_pains, recipes_v1_sauces, recipes_v1_plats, recipes_v1_desserts  # noqa: F401 (enregistrent leurs recettes)
+import recipes_v2_all  # noqa: F401 (vague 2, Tome 13)
 from recipes_data import RECIPES
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -48,6 +49,9 @@ for d in RECIPES:
 
 # ---------------------------------------------------------------- vérification des références
 ids = {d["id"] for d in RECIPES}
+import collections as _c
+_dup = [k for k, n in _c.Counter(d["id"] for d in RECIPES).items() if n > 1]
+assert not _dup, f"identifiants de recettes en double : {_dup}"
 errors, gaps = [], []
 def check(name, rid):
     if name is None: return
@@ -146,7 +150,7 @@ for d in RECIPES:
         "storage": d["conservation"], "zeroWaste": d["zero_dechet"], "drinksNoAlcohol": d["accords_sa"], "drinksAlcohol": d["accords_a"],
         "techniques": d["techniques"], "kids": d["enfants"], "age": d.get("age"), "cats": d.get("cats", []),
         "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""),
-        "source": "Tome 11 (vague 0)" if d["id"] in EXTRA else "Tome 12 (vague 1)", "verified": "C",
+        "source": "Tome 11 (vague 0)" if d["id"] in EXTRA else ("Tome 13 (vague 2)" if d.get("vague") == 2 else "Tome 12 (vague 1)"), "verified": "C",
     })
 
 # ---------------------------------------------------------------- zéro déchet ingrédient par ingrédient (Tome 12 §6)
@@ -279,8 +283,15 @@ VIDEO_KEYS = {
  "galette_rois": (r"galette des rois", None), "bissap": (r"bissap", None), "citronnade_menthe": (r"citronnade|limonade", None), "lassi_mangue": (r"\blassi\b", None),
  "the_menthe": (r"the a la menthe|\batay\b", None), "jus_gingembre": (r"jus de gingembre|gnamakoudji|ginger (shot|juice)", None),
 }
-missing_keys = [r["id"] for r in recipes if r["id"] not in VIDEO_KEYS]
-if missing_keys: print("⚠️ fiches sans mots-clés vidéo :", missing_keys)
+# vague 2 : pas de mots-clés relus un à un ; on cherche le nom exact du plat (avant la parenthèse) dans le titre de la vidéo
+for r in recipes:
+    if r["id"] not in VIDEO_KEYS:
+        words = nrm(re.split(r" \(| :| ,", r["title"])[0]).replace("'", " ").split()
+        stop = {"a", "au", "aux", "de", "du", "des", "la", "le", "les", "en", "et", "l", "d"}
+        core = words[:2]
+        while len(core) < len(words) and core[-1] in stop: core = words[:len(core) + 1]  # « soupe a l oignon »
+        name = " ".join(core)
+        if len(name) >= 5: VIDEO_KEYS[r["id"]] = (r"\b" + re.escape(name).replace(r"\ ", r"\W+") + r"\b", None)
 VIDEOS = {}
 for r in recipes:
     inc, exc = VIDEO_KEYS.get(r["id"], (None, None))
