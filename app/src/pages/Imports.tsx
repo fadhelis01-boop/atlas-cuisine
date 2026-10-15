@@ -1,6 +1,6 @@
 import { ImportRow, PlayButton, embedOf } from "../components/video";
 import { useMemo, useRef, useState } from "react";
-import { IMPORT_CATS, IMPORT_LIBRARY, INGREDIENTS } from "../lib/data";
+import { IMPORT_CATS, useImportLibrary, INGREDIENTS } from "../lib/data";
 import { classify, linksFromExport, sourceOf, titleFromUrl, type Classified } from "../lib/classify";
 import { getState, setState, uid, useStore, type MyImport } from "../lib/store";
 import { search } from "../lib/text";
@@ -9,6 +9,7 @@ import { Chip, Empty, Page, Section } from "../components/ui";
 type Tab = "importer" | "mes" | "biblio";
 
 export default function Imports({ q }: { q: URLSearchParams }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const shared = q.get("partage");
   const [tab, setTab] = useState<Tab>(shared ? "importer" : q.get("cat") ? "biblio" : "mes");
   const mine = useStore((s) => s.imports);
@@ -27,6 +28,7 @@ export default function Imports({ q }: { q: URLSearchParams }) {
 }
 
 function Importer({ initial, onDone }: { initial: string; onDone: () => void }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const initUrl = initial.match(/https?:\/\/\S+/)?.[0] ?? "";
   const [url, setUrl] = useState(initUrl);
   const [caption, setCaption] = useState(initial.replace(initUrl, "").trim());
@@ -150,6 +152,7 @@ function MesImports() {
 }
 
 function Bibliotheque({ cat0 }: { cat0: string | null }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const [cat, setCat] = useState<string | null>(cat0);
   const [source, setSource] = useState<string | null>(null);
   const [q, setQ] = useState("");
@@ -157,8 +160,8 @@ function Bibliotheque({ cat0 }: { cat0: string | null }) {
   const [noAlcohol, setNoAlcohol] = useState(false);
   const [channel, setChannel] = useState<string | null>(null);
   const [frOnly, setFrOnly] = useState(false);
-  const channels = useMemo(() => [...new Set(IMPORT_LIBRARY.filter((i) => i.source === "YouTube").map((i) => i.author))], []);
-  const counts = useMemo(() => IMPORT_LIBRARY.reduce<Record<string, number>>((a, i) => ((a[i.cat] = (a[i.cat] ?? 0) + 1), a), {}), []);
+  const channels = useMemo(() => [...new Set(IMPORT_LIBRARY.filter((i) => i.source === "YouTube").map((i) => i.author))], [IMPORT_LIBRARY]);
+  const counts = useMemo(() => IMPORT_LIBRARY.reduce<Record<string, number>>((a, i) => ((a[i.cat] = (a[i.cat] ?? 0) + 1), a), {}), [IMPORT_LIBRARY]);
   let list = IMPORT_LIBRARY.filter((i) => (!cat || i.cat === cat) && (!source || i.source === source) && (!noPork || !i.pork) && (!noAlcohol || !i.alcohol)
     && (!channel || i.author === channel) && (!frOnly || !i.lang));
   if (q.trim()) list = search(list, q, (i) => [i.title, i.author, i.sub], 300);

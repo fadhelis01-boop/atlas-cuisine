@@ -1,6 +1,6 @@
 import { ImportRow } from "../components/video";
 import { useState } from "react";
-import { IMPORT_LIBRARY, RECIPES } from "../lib/data";
+import { useImportLibrary, RECIPES } from "../lib/data";
 import { href } from "../lib/router";
 import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
 
@@ -46,6 +46,7 @@ function DoughCalc() {
 }
 
 export default function Pains() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const list = useVisible(RECIPES.filter((r) => r.cats.includes("pains")));
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "pains");
   return (

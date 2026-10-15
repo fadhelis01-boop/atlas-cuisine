@@ -1,6 +1,7 @@
 // Tests du moteur (équivalents TypeScript de bible/test_engine.py + contrôles sur les 70 fiches réelles).
 // Lancement : npm test
-import { IMPORT_LIBRARY, INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID } from "../src/lib/data";
+import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID, loadImports } from "../src/lib/data";
+const IMPORT_LIBRARY = await loadImports();
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";

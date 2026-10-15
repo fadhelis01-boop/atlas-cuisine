@@ -1,6 +1,6 @@
 import { ImportRow } from "../components/video";
 import { useState } from "react";
-import { CATALOGUE, IMPORT_LIBRARY, INGREDIENTS, INGREDIENT_NAMES, MACROS, RECIPES } from "../lib/data";
+import { CATALOGUE, useImportLibrary, INGREDIENTS, INGREDIENT_NAMES, MACROS, RECIPES } from "../lib/data";
 import { TECHNIQUES } from "../lib/techniques";
 import { go, href } from "../lib/router";
 import { search } from "../lib/text";
@@ -8,6 +8,7 @@ import { Empty, Grid, Page, RecipeCard, Section } from "../components/ui";
 import { useStore } from "../lib/store";
 
 export default function Search({ q }: { q: string }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const [v, setV] = useState(q);
   const mine = useStore((s) => s.imports);
   const recipes = search(RECIPES, q, (r) => [r.title, r.origin, r.regionPath.join(" "), r.ingredients.map((i) => i.label).join(" "), r.cats.join(" "), r.fetes.join(" ")]);

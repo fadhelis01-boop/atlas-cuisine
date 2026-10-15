@@ -1,15 +1,26 @@
+import { useSyncExternalStore } from "react";
 import ingredientsJson from "../data/ingredients.json";
 import recipesJson from "../data/recipes.json";
 import rulesJson from "../data/rules.json";
 import catalogueJson from "../data/catalogue.json";
-import importsJson from "../data/imports.json";
 import type { CatalogueEntry, ImportEntry, IngredientRef, MacroId, Recipe, Rule } from "./types";
 
 export const INGREDIENTS = ingredientsJson as unknown as Record<string, IngredientRef>;
 export const RECIPES = recipesJson as unknown as Recipe[];
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];
-export const IMPORT_LIBRARY = importsJson as unknown as ImportEntry[];
+// Bibliothèque de vidéos classées (3 000 et plus) : chargée à la demande pour garder l'ouverture de l'application rapide.
+let IMP: ImportEntry[] | null = null;
+let impP: Promise<ImportEntry[]> | null = null;
+const impListeners = new Set<() => void>();
+export function loadImports(): Promise<ImportEntry[]> {
+  impP ??= import("../data/imports.json").then((m) => { IMP = m.default as unknown as ImportEntry[]; impListeners.forEach((l) => l()); return IMP; });
+  return impP;
+}
+const NO_IMPORTS: ImportEntry[] = [];
+export function useImportLibrary(): ImportEntry[] {
+  return useSyncExternalStore((cb) => { impListeners.add(cb); void loadImports(); return () => { impListeners.delete(cb); }; }, () => IMP ?? NO_IMPORTS);
+}
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);

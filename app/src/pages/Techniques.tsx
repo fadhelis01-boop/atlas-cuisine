@@ -1,12 +1,13 @@
 import { ImportRow, PlayButton } from "../components/video";
 import { Photo, photoOf } from "../components/photo";
-import { IMPORT_LIBRARY, RECIPES } from "../lib/data";
+import { useImportLibrary, RECIPES } from "../lib/data";
 import { TECH_BY_ID, TECHNIQUES, techniqueFor, youtubeSearch } from "../lib/techniques";
 import { href } from "../lib/router";
 import { search } from "../lib/text";
 import { Grid, Page, RecipeCard, Section } from "../components/ui";
 
 export function TechniquesPage() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const families = [...new Set(TECHNIQUES.map((t) => t.family))];
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "techniques");
   return (
@@ -34,6 +35,7 @@ export function TechniquesPage() {
 }
 
 export function TechniquePage({ id }: { id: string }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const t = TECH_BY_ID[id];
   if (!t) return <Page title="Technique introuvable" back="/techniques">{null}</Page>;
   const recipes = RECIPES.filter((r) => r.techniques.some((x) => techniqueFor(x)?.id === t.id));

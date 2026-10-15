@@ -1,6 +1,6 @@
 import { ImportRow } from "../components/video";
 import { useState } from "react";
-import { IMPORT_LIBRARY, RECIPES } from "../lib/data";
+import { useImportLibrary, RECIPES } from "../lib/data";
 import { useProfile } from "../lib/store";
 import { Chip, Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
 
@@ -61,6 +61,7 @@ function Builder() {
 }
 
 export default function Sauces() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const list = useVisible(RECIPES.filter((r) => r.cats.includes("sauces")));
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "sauces" || i.cat === "fait_maison");
   return (

@@ -1,6 +1,6 @@
 import { ImportRow } from "../components/video";
 import { useState } from "react";
-import { IMPORT_LIBRARY, RECIPES, RECIPE_BY_ID } from "../lib/data";
+import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { FETES, PAR_CONVIVE } from "../lib/content";
 import { go, href } from "../lib/router";
 import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
@@ -13,6 +13,7 @@ const FETE_PHOTO: Record<string, string> = {
 };
 
 export default function Fetes() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const [pick, setPick] = useState("");
   const plats = useVisible(RECIPES.filter((r) => r.role === "plat" || r.role === "entree" || r.role === "dessert"));
   const month = new Date().getMonth() + 1;

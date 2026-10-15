@@ -7,7 +7,7 @@
   "scripts": {
     "data": "cd ../bible && python export_app_data.py",
     "dev": "vite",
-    "test": "rolldown tests/engine.test.ts --platform node --format esm -o .tmp/engine.mjs --log-level warn && node .tmp/engine.mjs",
+    "test": "rolldown tests/engine.test.ts --platform node --format esm -d .tmp/test --entry-file-names [name].mjs --log-level warn && node .tmp/test/engine.test.mjs",
     "typecheck": "tsc --noEmit",
     "build": "npm run test && tsc --noEmit && vite build",
     "preview": "vite preview",

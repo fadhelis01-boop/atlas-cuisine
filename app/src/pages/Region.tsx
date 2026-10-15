@@ -1,6 +1,6 @@
 import { ImportRow } from "../components/video";
 import { useMemo, useState } from "react";
-import { CATALOGUE, IMPORT_CAT_TO_MACRO, IMPORT_LIBRARY, MACRO_BY_ID, recipesOfMacro } from "../lib/data";
+import { CATALOGUE, IMPORT_CAT_TO_MACRO, useImportLibrary, MACRO_BY_ID, recipesOfMacro } from "../lib/data";
 import { useProfile } from "../lib/store";
 import { Chip, Empty, Grid, Page, RecipeCard, Section } from "../components/ui";
 import { verdict } from "../lib/engine";
@@ -9,6 +9,7 @@ import type { MacroId } from "../lib/types";
 const ROLE_LABEL: Record<string, string> = { entree: "Entrées", plat: "Plats", dessert: "Desserts", boisson: "Boissons", autre: "Pains, sauces & bases" };
 
 export default function Region({ id }: { id: string }) {
+  const IMPORT_LIBRARY = useImportLibrary();
   const m = MACRO_BY_ID[id as MacroId];
   const p = useProfile();
   const [role, setRole] = useState<string | null>(null);

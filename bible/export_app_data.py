@@ -285,6 +285,12 @@ VIDEO_KEYS = {
  "galette_rois": (r"galette des rois", None), "bissap": (r"bissap", None), "citronnade_menthe": (r"citronnade|limonade", None), "lassi_mangue": (r"\blassi\b", None),
  "the_menthe": (r"the a la menthe|\batay\b", None), "jus_gingembre": (r"jus de gingembre|gnamakoudji|ginger (shot|juice)", None),
 }
+# vague 2 : quelques plats au nom court ou multiple, relus à la main
+VIDEO_KEYS.update({"pho_boeuf": (r"\bpho\b", r"bun bo|ga\b"), "bo_bun": (r"\bbo bun\b|\bbun bo nam bo\b", None), "ramen_shoyu": (r"\bramen\b", r"burger|tsukemen"),
+                   "nems_poulet": (r"\bnems?\b", None), "bibimbap": (r"\bbibimbap\b", None), "tom_kha_kai": (r"\btom kha\b", None), "laksa": (r"\blaksa\b", None),
+                   "falafels": (r"\bfalafels?\b", None), "butter_chicken": (r"butter chicken|poulet au beurre|murgh makhani", None), "biryani_poulet": (r"\bbiryani\b", None),
+                   "mafe_boeuf": (r"\bmafe\b", None), "ndole": (r"\bndole\b", None), "kimchi_maison": (r"\bkimchi\b", r"riz|fried rice|ramen|jjigae|nouilles"),
+                   "okonomiyaki": (r"\bokonomiyaki\b", None), "katsu_poulet": (r"\bkatsu\b", r"sando|don\b"), "char_siu_poulet": (r"char siu", None)})
 # vague 2 : pas de mots-clés relus un à un ; on cherche le nom exact du plat (avant la parenthèse) dans le titre de la vidéo
 for r in recipes:
     if r["id"] not in VIDEO_KEYS:
@@ -293,13 +299,27 @@ for r in recipes:
         core = words[:2]
         while len(core) < len(words) and core[-1] in stop: core = words[:len(core) + 1]  # « soupe a l oignon »
         name = " ".join(core)
-        if len(name) >= 5: VIDEO_KEYS[r["id"]] = (r"\b" + re.escape(name).replace(r"\ ", r"\W+") + r"\b", None)
+        alts = [name] if len(name) >= 5 else []
+        on = nrm(re.split(r" \(|,", r["origin"])[0]).replace("'", " ").strip()  # nom d'origine (« ceebu jen », « tartiflette »)
+        if on and on != name and 4 <= len(on) <= 40 and len(on.split()) <= 4: alts.append(on)
+        if alts: VIDEO_KEYS[r["id"]] = ("|".join(r"\b" + re.escape(a).replace(r"\ ", r"\W+") + r"\b" for a in alts), None)
+        # repli : le premier mot seul quand il désigne un plat précis (tajine, gyoza, bibimbap…), jamais un mot générique
+        GENERIC = {"soupe", "salade", "poulet", "tarte", "gateau", "gateaux", "sauce", "riz", "pain", "pains", "pates", "creme", "mousse", "gratin", "boeuf", "agneau",
+                   "poisson", "crevettes", "nouilles", "curry", "brochettes", "beignets", "galette", "galettes", "crepes", "cookies", "muffins", "glace", "jus", "the",
+                   "cafe", "chocolat", "pommes", "legumes", "oeufs", "oeuf", "filet", "cote", "pave", "roti", "bouillon", "marinade", "petits", "petites", "mini", "pate",
+                   "lait", "sirop", "fondant", "biscuits", "veloute", "chips", "compote", "puree", "quiche", "tartines", "sandwich", "boulettes", "saucisses", "cake",
+                   "bowl", "porc", "canard", "lapin", "dinde", "saumon", "thon", "cabillaud", "moules", "huile", "vinaigrette", "smoothie", "limonade", "punch", "bonbons",
+                   "truffes", "tablette", "sucettes", "fruits", "salade", "carottes", "ragout", "spaghetti", "fondue", "pickles", "macarons", "risotto", "lasagnes", "tagliatelles", "biscuit", "flan", "beignet", "pancakes", "omelette", "frites", "wraps", "tacos", "haricots", "lentilles", "pois", "chou", "champignons", "aubergines", "courgettes"}
+        first = words[0] if words else ""
+        if len(first) >= 4 and first not in GENERIC: VIDEO_KEYS[r["id"] + "#large"] = (r"\b" + re.escape(first) + r"s?\b", None)
 VIDEOS = {}
 for r in recipes:
     inc, exc = VIDEO_KEYS.get(r["id"], (None, None))
     if not inc: continue
-    hits = [it for it in imports if it.get("embed") is not None and it["cat"] != "a_verifier" and re.search(inc, nrm(it["title"]))
-            and not (exc and re.search(exc, nrm(it["title"])))]
+    def find(rx): return [it for it in imports if it.get("embed") is not None and it["cat"] != "a_verifier" and re.search(rx, nrm(it["title"]))
+                          and not (exc and re.search(exc, nrm(it["title"])))]
+    hits = find(inc)
+    if not hits and (r["id"] + "#large") in VIDEO_KEYS: hits = find(VIDEO_KEYS[r["id"] + "#large"][0])
     hits = list({it["url"]: it for it in hits}.values())
     hits.sort(key=lambda it: (it["source"] != "Cooking with Morgane", not it.get("embed"), it["pork"] or it["alcohol"]))
     if hits: VIDEOS[r["id"]] = [{"url": it["url"], "title": it["title"], "source": it["source"], "author": it["author"], "embed": it.get("embed", ""),

@@ -1,10 +1,11 @@
 import { ImportRow } from "../components/video";
-import { IMPORT_LIBRARY, RECIPES, RECIPE_BY_ID } from "../lib/data";
+import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { ANATOMIE, CONSERVATION, DLC_DDM } from "../lib/content";
 import { href } from "../lib/router";
 import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
 
 export default function ZeroDechet() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const list = useVisible(RECIPES.filter((r) => r.cats.includes("zero_dechet")));
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "zero_dechet" || i.cat === "fait_maison");
   return (

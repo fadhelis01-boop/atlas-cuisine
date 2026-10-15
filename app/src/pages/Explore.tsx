@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CATALOGUE, IMPORT_LIBRARY, MACROS, recipesOfMacro } from "../lib/data";
+import { CATALOGUE, useImportLibrary, MACROS, recipesOfMacro } from "../lib/data";
 import { go, href } from "../lib/router";
 import { Page, Section } from "../components/ui";
 import { Photo, photoOf } from "../components/photo";
@@ -18,6 +18,7 @@ const CATS = [
 ];
 
 export default function Explore() {
+  const IMPORT_LIBRARY = useImportLibrary();
   const [q, setQ] = useState("");
   const [list, setList] = useState(false);
   return (
