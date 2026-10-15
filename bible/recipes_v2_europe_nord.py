@@ -77,7 +77,7 @@ K("currywurst_volaille", "Currywurst (saucisses de volaille)", "Currywurst", f"{
 K("spaetzle_fromage", "Käsespätzle (spätzle gratinés à l'oignon frit)", "Käsespätzle", f"{M} › Allemagne › Souabe", "P", 2, 4, 25, 20, "€", "Casserole, râpe à spätzle ou passoire, poêle.",
   "Pâtes fraîches irrégulières en couches avec fromage fondu et oignons croustillants : la tartiflette souabe.",
   ["1|recette de spätzle (recette liée)|SUB:spatzle|3", "200 g|d'emmental ou de bergkäse râpé|Gruyère / comté / emmental / beaufort|3", f"3|oignons|{OIG}|2", f"40 g|de beurre|{BEURRE}|2", "1 c. à s.|de ciboulette|Ciboulette|0"],
-  ["**Oignons.** En rondelles fines, dorés au beurre 15 min jusqu'à croustillants.", "**Couches.** Spätzle chauds et fromage en alternance dans un plat chaud.", "**Finir.** 5 min au four, oignons dessus, ciboulette."],
+  ["**Oignons.** En rondelles fines, dorés au beurre 15 min jusqu'à croustillants.", "**Couches.** Spätzle chauds et fromage en alternance dans un plat chaud.", "**Finir.** 5 min au four à 220 °C (th. 7-8) : le fromage bulle. Oignons dessus, ciboulette."],
   age=1, cats=["enfants"], profil=["gras"])
 
 K("apfelstrudel", "Apfelstrudel (strudel aux pommes)", "Apfelstrudel", f"{M} › Autriche › Vienne", "D", 2, 8, 30, 40, "€", "Plaque, torchon, pinceau.",

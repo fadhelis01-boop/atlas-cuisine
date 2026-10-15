@@ -1,3 +1,6 @@
+import { rescueFor } from "../lib/rescue";
+import Journal from "../components/Journal";
+import { termsIn } from "../lib/glossaire";
 import { SEASON_LABEL, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { useEffect, useMemo, useState } from "react";
 import { ALLERGENS, INGREDIENTS, MACRO_BY_ID, RECIPE_BY_ID } from "../lib/data";
@@ -31,10 +34,62 @@ function SeasonBadge({ r }: { r: Recipe }) {
   return null;
 }
 
+/** Ce qu'un débutant doit savoir avant d'allumer le feu : matériel, préchauffage, ingrédients à sortir à l'avance. */
+function BeforeYouStart({ r }: { r: Recipe }) {
+  const all = r.steps.join(" ");
+  const temp = all.match(/(\d{2,3}) ?°C(?: \(th\. ?[\d-]+\))?/);
+  const oven = /four|enfourn/i.test(all) && temp;
+  const soft = /pommade|beurre mou|température ambiante|sors .{0,40}avant/i.test(all + " " + r.ingredients.map((l) => l.label).join(" "));
+  const longRest = r.rest >= 240;
+  return (
+    <div className="card pad before">
+      <strong>Avant de commencer</strong>
+      <ul className="small">
+        <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
+        {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
+        {oven && <li>Préchauffe le four à <strong>{temp![0]}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
+        {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
+        {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
+      </ul>
+    </div>
+  );
+}
+
+function Lexique({ text }: { text: string }) {
+  const terms = termsIn(text);
+  if (!terms.length) return null;
+  return (
+    <details className="card pad lexique">
+      <summary><strong>📖 Les mots de cuisine de cette recette ({terms.length})</strong></summary>
+      <dl>{terms.map((t) => <div key={t.term}><dt>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</dt><dd>{t.def}</dd></div>)}</dl>
+    </details>
+  );
+}
+
+function RescueBlock({ r }: { r: Recipe }) {
+  const list = rescueFor(r);
+  if (!list.length) return null;
+  return (
+    <Section title="🆘 Si ça ne se passe pas comme prévu">
+      <div className="rescue">
+        {list.map((x) => (
+          <details key={x.problem} className="card pad">
+            <summary><strong>{x.problem}</strong></summary>
+            <p>{x.fix}</p>
+            {x.tech && <p className="small"><a href={href(`/technique/${x.tech}`)}>Voir la technique pas à pas →</a></p>}
+          </details>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }) {
   const r = RECIPE_BY_ID[id];
   const p = useProfile();
   const fav = useStore((s) => s.favorites.includes(id));
+  const cookedN = useStore((s) => s.cooked[id]);
+  const journalEntry = useStore((s) => s.journal?.[id]);
   const [portions, setPortions] = useState(r?.portions ?? 4);
   const [useAdapted, setUseAdapted] = useState(true);
   const [reading, setReading] = useState<number | null>(null);
@@ -151,6 +206,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         </Section>
 
         <Section title="Étapes">
+          <BeforeYouStart r={r} />
           <ol className="steps">
             {r.steps.map((s, i) => (
               <li key={i}>
@@ -163,9 +219,12 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
               </li>
             ))}
           </ol>
+          <Lexique text={r.steps.join(" ")} />
         </Section>
       </div>
 
+      <RescueBlock r={r} />
+      {((cookedN ?? 0) > 0 || journalEntry) && <Section title="Mon carnet"><Journal id={r.id} /></Section>}
       {r.tips.length > 0 && <Section title="Astuces du chef"><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></Section>}
       {r.variants.length > 0 && (
         <Section title="Variantes et substitutions">
@@ -190,7 +249,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         </Section>
       )}
       <RecipeVideos r={r} />
-      <p className="small source">Source : bible ATLAS, {r.source}. Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À tester : {r.tests}</p>
+      <p className="small source">Source : bible ATLAS, {r.source}. Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).</p>
     </main>
   );
 }

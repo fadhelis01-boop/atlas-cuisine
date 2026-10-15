@@ -99,7 +99,7 @@ K("curry_poudre_maison", "Curry en poudre maison (doux)", "Curry powder", "Asie 
 K("dukkah", "Dukkah (mélange égyptien noisettes-épices)", "Dukkah", "Afrique du Nord › Égypte", "Ba", 1, 15, 15, 0, "€", "Poêle, mortier.",
   "Noisettes, sésame, coriandre et cumin concassés : on trempe le pain dans l'huile d'olive puis dans le dukkah.",
   ["100 g|de noisettes|Noisette|3", "40 g|de sésame|Sésame (blanc/noir)|2", "2 c. à s.|de coriandre en graines|Coriandre (graines)|2", "1 c. à s.|de cumin|Cumin (graines / moulu)|2", "1 c. à c.|de poivre noir|Poivre noir / blanc / vert|1", f"1 c. à c.|de fleur de sel|{SEL}|1"],
-  ["**Torréfier.** Noisettes 10 min au four, graines et sésame 2 min à la poêle.", "**Concasser.** Grossièrement au mortier, avec sel et poivre."],
+  ["**Torréfier.** Noisettes 10 min au four à 160 °C (th. 5-6), jusqu'à ce que la peau craque ; graines et sésame 2 min à la poêle, jusqu'à ce qu'ils sentent bon.", "**Concasser.** Grossièrement au mortier, avec sel et poivre."],
   keep="1 mois en bocal.", age=3, cats=["sauces"], fetes=["Apéritif dînatoire"], profil=["gras"], tips=["⚠️ Fruits à coque et sésame : allergènes."])
 
 K("zaatar_maison", "Zaatar maison", "Za'atar", "Moyen-Orient & Caucase › Liban", "Ba", 1, 15, 10, 0, "€", "Poêle.",

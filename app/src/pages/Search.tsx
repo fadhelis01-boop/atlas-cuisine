@@ -27,7 +27,7 @@ export default function Search({ q }: { q: string }) {
       </form>
       {q && !total && <Empty>Rien trouvé pour « {q} ». Essaie un ingrédient dans <a href={href("/frigo")}>Avec ce que j'ai</a>.</Empty>}
       {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}>{m.emoji} {m.name}</a>)}</div></Section>}
-      {recipes.length > 0 && <Section title={`Recettes (${recipes.length})`}><Grid>{recipes.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid></Section>}
+      {recipes.length > 0 && <Section title={`Recettes (${recipes.length})`} more={<a href={href(`/recettes?q=${encodeURIComponent(q)}`)}>Filtrer ces recettes →</a>}><Grid>{recipes.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid></Section>}
       {ings.length > 0 && <Section title="Dictionnaire des ingrédients"><div className="links">{ings.map((n) => <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}>📖 {n}</a>)}</div></Section>}
       {techs.length > 0 && <Section title="Techniques"><div className="links">{techs.map((t) => <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}>🔪 {t.name}</a>)}</div></Section>}
       {myImps.length > 0 && <Section title="Mes imports"><ul className="links-list">{myImps.map((i) => <li key={i.id}><a href={i.url || "#/imports"} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul></Section>}

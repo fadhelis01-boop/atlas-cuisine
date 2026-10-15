@@ -65,10 +65,9 @@ export interface Recipe {
   cats: string[];
   fetes: string[];
   profile: string[];
-  tests: string;
   source: string;
   verified: "A" | "B" | "C";
-  leftovers: Leftover[]; // ingrédients entamés et quoi en faire (Tome 12 §6)
+  leftovers?: Leftover[]; // ingrédients entamés et quoi en faire (Tome 12 §6) : chargés à la demande (leftovers.json)
   videos: VideoLink[]; // vidéos existantes (favoris TikTok, Cooking with Morgane) liées à la fiche
   fusionNote?: string; // « Food fusion » : de quelles traditions la recette est le mélange
 }

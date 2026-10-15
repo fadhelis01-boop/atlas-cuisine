@@ -20,6 +20,7 @@ export interface MyImport {
   steps: string[];
   added: string;
   notes: string;
+  author?: string; // auteur·e lu·e sur la plateforme (oEmbed)
 }
 export interface SavedMenu { id: string; name: string; recipeIds: string[]; drinks: string[]; date: string; guests: number }
 export interface Timer { id: string; label: string; endAt: number; recipeId: string | null; done: boolean }
@@ -36,6 +37,8 @@ export interface State {
   recipeVideos: Record<string, string[]>; // recette → liens vidéo ajoutés par l'utilisateur
   settings: { theme: "auto" | "light" | "dark"; textScale: number; readableFont: boolean; rate: number; voiceURI: string | null; units: "metric"; zone: "auto" | "nord" | "sud" | "tropical" };
   recent: string[];
+  learned?: string[]; // étapes du parcours « J'apprends à cuisiner » validées
+  journal?: Record<string, { rating: number; note: string; date: string }>; // mon carnet : note et remarques après avoir cuisiné
 }
 
 const KEY = "atlas-state-v1";

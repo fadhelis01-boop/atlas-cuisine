@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RECIPE_BY_ID } from "../lib/data";
+import { RECIPE_BY_ID, useLeftovers } from "../lib/data";
 import { verdict } from "../lib/engine";
 import { href } from "../lib/router";
 import { getState, setState, useProfile } from "../lib/store";
@@ -15,6 +15,7 @@ const ORDER = ["repas", "plat", "conserver", "hors"];
 const short = (n: string) => n.split(" (")[0].split(" / ")[0];
 
 export default function Leftovers({ r }: { r: Recipe }) {
+  const leftovers = useLeftovers(r.id);
   const p = useProfile();
   const [added, setAdded] = useState<string[]>([]);
   const toFridge = (ref: string, part: string) => {
@@ -27,8 +28,9 @@ export default function Leftovers({ r }: { r: Recipe }) {
     <div className="zw card pad">
       <h3>♻️ Zéro déchet : ce qu'il te restera, et quoi en faire</h3>
       {r.zeroWaste.length > 0 && <ul className="zw-chef">{r.zeroWaste.map((z, i) => <li key={i}>{z.replace(/\*\*/g, "")}</li>)}</ul>}
-      {r.leftovers.length === 0 && <p className="small">Cette recette utilise ses ingrédients en entier ou des produits du placard qui se gardent : rien à jeter.</p>}
-      {r.leftovers.map((lo) => (
+      {leftovers === null && <p className="small">Chargement des idées zéro déchet…</p>}
+      {leftovers?.length === 0 && <p className="small">Cette recette utilise ses ingrédients en entier ou des produits du placard qui se gardent : rien à jeter.</p>}
+      {(leftovers ?? []).map((lo) => (
         <details key={lo.ref} className="zw-item">
           <summary><strong>{short(lo.ref)}</strong> <span className="meta">· tu achètes : {lo.sold} · la recette en utilise : {lo.line}</span></summary>
           {lo.parts.map((pt) => (

@@ -7,6 +7,9 @@ import { durationsIn, scaleQty } from "../lib/text";
 import { listen, speak, stopSpeaking, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { startTimer, useWakeLock } from "../lib/timers";
 import { Rich } from "./RecipePage";
+import Journal from "../components/Journal";
+import { termsIn } from "../lib/glossaire";
+import { rescueFor } from "../lib/rescue";
 import TimerDock from "../components/TimerDock";
 import { VideoHost, playVideo } from "../components/video";
 
@@ -104,11 +107,20 @@ export default function Cook({ id }: { id: string }) {
                 {durationsIn(step!).map((d, k) => <button key={k} className="chip big" onClick={() => startTimer(`${r.title.split(" (")[0]} · étape ${i + 1}`, d.seconds, id)}>⏱ Lancer {d.label}</button>)}
               </div>
             )}
+            {termsIn(step!).length > 0 && (
+              <details className="cook-help"><summary>📖 Je ne comprends pas un mot</summary>
+                <dl>{termsIn(step!).map((t) => <div key={t.term}><dt>{t.term}</dt><dd>{t.def}</dd></div>)}</dl>
+              </details>
+            )}
+            <details className="cook-help"><summary>🆘 Ça ne se passe pas comme prévu</summary>
+              <ul>{rescueFor(r, 8).map((x) => <li key={x.problem}><strong>{x.problem} :</strong> {x.fix}</li>)}</ul>
+            </details>
           </>
         )}
         {i === steps.length - 1 && (
           <div className="cook-end">
-            <p>Bon appétit ! 🍽</p>
+            <p>Bon appétit ! 🍽 Comment c'était ?</p>
+            <Journal id={id} compact />
             <button className="btn" onClick={() => { setState((s) => { s.cooked[id] = (s.cooked[id] ?? 0) + 1; }); go(`/recette/${id}`); }}>J'ai terminé</button>
           </div>
         )}

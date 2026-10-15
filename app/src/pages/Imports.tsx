@@ -1,15 +1,36 @@
 import { ImportRow, PlayButton, embedOf } from "../components/video";
-import { useMemo, useRef, useState } from "react";
-import { IMPORT_CATS, useImportLibrary, INGREDIENTS } from "../lib/data";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { IMPORT_CATS, useImportLibrary, INGREDIENTS, loadImports } from "../lib/data";
 import { classify, linksFromExport, sourceOf, titleFromUrl, type Classified } from "../lib/classify";
+import { canFetchMeta, fetchMeta } from "../lib/oembed";
 import { getState, setState, uid, useStore, type MyImport } from "../lib/store";
 import { search } from "../lib/text";
 import { Chip, Empty, Page, Section } from "../components/ui";
 
 type Tab = "importer" | "mes" | "biblio";
 
+// À l'ouverture de « Mes imports » : les liens encore non lus (titre = adresse, catégorie « à vérifier ») sont relus et triés.
+let enriching = false;
+async function enrichPending() {
+  if (enriching || !navigator.onLine) return;
+  enriching = true;
+  try {
+    const todo = getState().imports.filter((i) => i.cat === "a_verifier" && !i.caption && canFetchMeta(i.url)).slice(0, 40);
+    for (const it of todo) {
+      const m = await fetchMeta(it.url, 8000, 1);
+      if (m) {
+        const c0 = classify(m.title, it.url);
+        const ac = c0.cat === "a_verifier" && m.author ? await creatorCat(m.author) : null;
+        setState((s) => { const x = s.imports.find((i) => i.id === it.id); if (x) { x.title = c0.title || m.title; x.caption = m.title; x.cat = ac ?? c0.cat; x.macro = c0.macro; x.pork = c0.pork; x.alcohol = c0.alcohol; x.ingredients = c0.ingredients; x.author = m.author; } });
+      }
+      await new Promise((r) => setTimeout(r, 300));
+    }
+  } finally { enriching = false; }
+}
+
 export default function Imports({ q }: { q: URLSearchParams }) {
   const IMPORT_LIBRARY = useImportLibrary();
+  useEffect(() => { void enrichPending(); }, []);
   const shared = q.get("partage");
   const [tab, setTab] = useState<Tab>(shared ? "importer" : q.get("cat") ? "biblio" : "mes");
   const mine = useStore((s) => s.imports);
@@ -27,6 +48,15 @@ export default function Imports({ q }: { q: URLSearchParams }) {
   );
 }
 
+/** Spécialité d'un créateur déjà classé (catégorie la plus fréquente) : sert quand le titre seul ne suffit pas. */
+async function creatorCat(author: string): Promise<string | null> {
+  const lib = await loadImports();
+  const k = (a: string) => a.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const cnt = new Map<string, number>();
+  for (const i of lib) if (i.author && i.cat !== "a_verifier" && k(i.author) === k(author)) cnt.set(i.cat, (cnt.get(i.cat) ?? 0) + 1);
+  return [...cnt].sort((x, y) => y[1] - x[1])[0]?.[0] ?? null;
+}
+
 function Importer({ initial, onDone }: { initial: string; onDone: () => void }) {
   const IMPORT_LIBRARY = useImportLibrary();
   const initUrl = initial.match(/https?:\/\/\S+/)?.[0] ?? "";
@@ -39,13 +69,32 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
   const [msg, setMsg] = useState("");
   const file = useRef<HTMLInputElement>(null);
 
-  const analyse = () => { const c = classify(caption, url); setRes(c); setTitle(c.title); setCat(c.cat); };
-  const save = () => {
-    if (!res) return;
-    const item: MyImport = { id: uid(), url, title: title || titleFromUrl(url), caption, source: sourceOf(url), cat, macro: res.macro, pork: res.pork, alcohol: res.alcohol, ingredients: res.ingredients, steps: res.steps, added: new Date().toISOString(), notes: "" };
-    setState((s) => { s.imports.unshift(item); });
-    setUrl(""); setCaption(""); setRes(null); setMsg("Recette importée et classée."); onDone();
+  const [author, setAuthor] = useState("");
+  const [busy, setBusy] = useState(false);
+  const analyse = (cap = caption, u = url) => { const c = classify(cap, u); setRes(c); setTitle(c.title); setCat(c.cat); return c; };
+  // Coller (ou partager) un lien suffit : titre, légende et auteur sont lus sur TikTok / YouTube / Vimeo, puis la recette est triée.
+  const auto = async (u: string, cap: string, saveAfter = false) => {
+    if (!/^https?:\/\//.test(u)) return;
+    let text = cap;
+    if (canFetchMeta(u)) {
+      setBusy(true);
+      const m = await fetchMeta(u);
+      setBusy(false);
+      if (m) { setAuthor(m.author); if (!text) { text = m.title; setCaption(m.title); } }
+      const c0 = classify(text, u);
+      if (c0.cat === "a_verifier" && m?.author) { const ac = await creatorCat(m.author); if (ac) { const c = { ...c0, cat: ac }; setRes(c); setTitle(c.title); setCat(ac); if (saveAfter) doSave(c, u, text, c.title, ac, m.author); return; } }
+    }
+    const c = analyse(text, u);
+    if (saveAfter) doSave(c, u, text, c.title, c.cat);
   };
+  const doSave = (r: Classified, u: string, cap: string, t: string, ct: string, au = author) => {
+    if (getState().imports.some((i) => i.url === u)) { setMsg("Ce lien est déjà dans tes imports."); return; }
+    const item: MyImport = { id: uid(), url: u, title: t || titleFromUrl(u), caption: cap, source: sourceOf(u), cat: ct, macro: r.macro, pork: r.pork, alcohol: r.alcohol, ingredients: r.ingredients, steps: r.steps, added: new Date().toISOString(), notes: "", author: au };
+    setState((s) => { s.imports.unshift(item); });
+    setUrl(""); setCaption(""); setRes(null); setAuthor(""); setMsg(`Recette importée et classée dans « ${IMPORT_CATS[ct] ?? ct} ».`); onDone();
+  };
+  const save = () => { if (res) doSave(res, url, caption, title, cat); };
+  useEffect(() => { if (initUrl) void auto(initUrl, caption, true); }, []); // partage depuis TikTok, YouTube… : tri et enregistrement immédiats
   const saveLinks = (links: string[]) => {
     const existing = new Set(useStoreSnapshot().map((i) => i.url));
     const fresh = links.filter((l) => !existing.has(l));
@@ -57,7 +106,24 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
           pork: known ? (known.pork ? "oui" : "doute") : "doute", alcohol: known ? (known.alcohol ? "oui" : "doute") : "doute", ingredients: [], steps: [], added: new Date().toISOString(), notes: "" });
       }
     });
-    setMsg(`${fresh.length} lien(s) ajouté(s)${links.length - fresh.length ? `, ${links.length - fresh.length} déjà présent(s)` : ""}. Ceux sans légende sont dans « À vérifier » : ajoute la légende pour un tri précis.`);
+    setMsg(`${fresh.length} lien(s) ajouté(s)${links.length - fresh.length ? `, ${links.length - fresh.length} déjà présent(s)` : ""}. Lecture des titres et tri automatique en cours…`);
+    void enrich(fresh.filter((l) => !lib.has(l.split("?")[0]) && canFetchMeta(l)));
+  };
+  // tri automatique des liens importés en masse : un par un, gentiment (300 ms entre deux)
+  const enrich = async (links: string[]) => {
+    let n = 0;
+    for (const l of links) {
+      const m = await fetchMeta(l);
+      if (m) {
+        const c0 = classify(m.title, l);
+        const ac = c0.cat === "a_verifier" && m.author ? await creatorCat(m.author) : null;
+        const c = ac ? { ...c0, cat: ac } : c0;
+        setState((s) => { const it = s.imports.find((i) => i.url === l); if (it) { it.title = c.title || m.title; it.caption = m.title; it.cat = c.cat; it.macro = c.macro; it.pork = c.pork; it.alcohol = c.alcohol; it.ingredients = c.ingredients; it.author = m.author; } });
+        n++;
+      }
+      await new Promise((r) => setTimeout(r, 300));
+    }
+    setMsg(`${n} lien(s) classé(s) automatiquement à partir de leur titre et de leur légende.`);
   };
 
   return (
@@ -65,12 +131,15 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
       <Section title="Une recette">
         <div className="form">
           <label className="field">Lien de la vidéo ou de la page
-            <input type="url" inputMode="url" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://www.tiktok.com/@…/video/…" />
+            <input type="url" inputMode="url" value={url} onChange={(e) => { setUrl(e.target.value); if (/^https?:\/\/\S+$/.test(e.target.value.trim()) && e.target.value.length - url.length > 10) void auto(e.target.value.trim(), caption); }} onBlur={() => { if (url && !res) void auto(url.trim(), caption); }} placeholder="https://www.tiktok.com/@…/video/…" />
           </label>
+          {busy && <p className="small" role="status">Lecture du titre et de la légende…</p>}
+          {author && <p className="small">Auteur·e : <strong>{author}</strong></p>}
           <label className="field">Légende ou texte de la recette (copie-colle la description de la vidéo)
             <textarea rows={6} value={caption} onChange={(e) => setCaption(e.target.value)} placeholder={"Poulet yassa 🍋\nIngrédients : 4 cuisses de poulet, 6 oignons, 4 citrons…"} />
           </label>
-          <button className="btn" onClick={analyse} disabled={!url && !caption}>Analyser et trier</button>
+          <button className="btn" onClick={() => void auto(url.trim(), caption)} disabled={(!url && !caption) || busy}>Analyser et trier</button>
+          <p className="small">Astuce : colle juste le lien (TikTok, YouTube, Vimeo) : titre, légende et auteur sont lus automatiquement. Sur Android, utilise « Partager › ATLAS » depuis l'application TikTok ou YouTube : la recette est classée et enregistrée d'un geste.</p>
         </div>
         {res && (
           <div className="card pad">
@@ -136,7 +205,7 @@ function MesImports() {
         {list.map((i) => (
           <li key={i.id} className="card pad">
             <span className="row"><PlayButton v={{ title: i.title, url: i.url, embed: embedOf(i.url), source: i.source }} /><a href={i.url} target="_blank" rel="noopener noreferrer"><strong>{i.title}</strong></a></span>
-            <p className="meta">{i.source} · ajouté le {new Date(i.added).toLocaleDateString("fr-FR")} · 🐖 {i.pork} · 🍷 {i.alcohol}</p>
+            <p className="meta">{i.source}{i.author ? ` · ${i.author}` : ""} · ajouté le {new Date(i.added).toLocaleDateString("fr-FR")} · 🐖 {i.pork} · 🍷 {i.alcohol}</p>
             <div className="row">
               <select aria-label="Catégorie" value={i.cat} onChange={(e) => setState((s) => { const x = s.imports.find((y) => y.id === i.id); if (x) x.cat = e.target.value; })}>
                 {Object.entries(IMPORT_CATS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}

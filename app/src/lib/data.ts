@@ -3,7 +3,7 @@ import ingredientsJson from "../data/ingredients.json";
 import recipesJson from "../data/recipes.json";
 import rulesJson from "../data/rules.json";
 import catalogueJson from "../data/catalogue.json";
-import type { CatalogueEntry, ImportEntry, IngredientRef, MacroId, Recipe, Rule } from "./types";
+import type { CatalogueEntry, ImportEntry, IngredientRef, Leftover, MacroId, Recipe, Rule } from "./types";
 
 export const INGREDIENTS = ingredientsJson as unknown as Record<string, IngredientRef>;
 export const RECIPES = recipesJson as unknown as Recipe[];
@@ -68,3 +68,16 @@ export const CATEGORY_LABEL: Record<string, string> = {
 
 /** Recettes d'une entrée de l'atlas (la « Food fusion » est une rubrique transversale, pas une macro-région). */
 export const recipesOfMacro = (id: MacroId) => RECIPES.filter((r) => (id === "fusion" ? r.cats.includes("fusion") : r.macro === id));
+
+// Restes zéro déchet de chaque recette (Tome 12 §6) : 35 % des données de recettes, chargés seulement quand une fiche s'ouvre.
+let LEFT: Record<string, Leftover[]> | null = null;
+let leftP: Promise<Record<string, Leftover[]>> | null = null;
+const leftListeners = new Set<() => void>();
+export function loadLeftovers(): Promise<Record<string, Leftover[]>> {
+  leftP ??= import("../data/leftovers.json").then((m) => { LEFT = m.default as unknown as Record<string, Leftover[]>; leftListeners.forEach((l) => l()); return LEFT; });
+  return leftP;
+}
+const NO_LEFT: Leftover[] = [];
+export function useLeftovers(id: string): Leftover[] | null {
+  return useSyncExternalStore((cb) => { leftListeners.add(cb); void loadLeftovers(); return () => { leftListeners.delete(cb); }; }, () => (LEFT ? LEFT[id] ?? NO_LEFT : null));
+}

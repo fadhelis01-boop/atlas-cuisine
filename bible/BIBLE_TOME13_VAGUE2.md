@@ -6035,7 +6035,7 @@ Noisettes, sésame, coriandre et cumin concassés : on trempe le pain dans l'hui
 
 **Ingrédients** : 100 g de noisettes · 40 g de sésame · 2 c. à s. de coriandre en graines · 1 c. à s. de cumin · 1 c. à c. de poivre noir · 1 c. à c. de fleur de sel
 
-1. **Torréfier.** Noisettes 10 min au four, graines et sésame 2 min à la poêle.
+1. **Torréfier.** Noisettes 10 min au four à 160 °C (th. 5-6), jusqu'à ce que la peau craque ; graines et sésame 2 min à la poêle, jusqu'à ce qu'ils sentent bon.
 2. **Concasser.** Grossièrement au mortier, avec sel et poivre.
 
 - ⚠️ Fruits à coque et sésame : allergènes.
@@ -6714,7 +6714,7 @@ Pâtes fraîches irrégulières en couches avec fromage fondu et oignons crousti
 
 1. **Oignons.** En rondelles fines, dorés au beurre 15 min jusqu'à croustillants.
 2. **Couches.** Spätzle chauds et fromage en alternance dans un plat chaud.
-3. **Finir.** 5 min au four, oignons dessus, ciboulette.
+3. **Finir.** 5 min au four à 220 °C (th. 7-8) : le fromage bulle. Oignons dessus, ciboulette.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 

@@ -1,12 +1,16 @@
 // Tests du moteur (équivalents TypeScript de bible/test_engine.py + contrôles sur les 70 fiches réelles).
 // Lancement : npm test
-import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID, loadImports } from "../src/lib/data";
+import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID, loadImports, loadLeftovers } from "../src/lib/data";
 const IMPORT_LIBRARY = await loadImports();
+const LEFT = await loadLeftovers();
 import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
 import { TECHNIQUES, techniqueFor } from "../src/lib/techniques";
 import { dishEmoji } from "../src/components/art";
+import { rescueFor } from "../src/lib/rescue";
+import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
+import { PARCOURS } from "../src/lib/parcours";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
 let passed = 0;
@@ -144,10 +148,10 @@ check("38 food fusion : pizza au butter chicken triée en fusion", classify("But
 check("39 food fusion : chili con carne (tex-mex) dans la rubrique ; vidéos liées à 40 fiches ou plus", RECIPE_BY_ID["chili_con_carne"].cats.includes("fusion") && RECIPES.filter((r) => r.videos.length).length >= 40);
 
 // 40-41 zéro déchet par ingrédient
-const mayoLo = RECIPE_BY_ID["mayonnaise"].leftovers.find((l) => l.ref === "Jaune d'œuf");
+const mayoLo = LEFT["mayonnaise"].find((l) => l.ref === "Jaune d'œuf");
 check("40 zéro déchet : la mayonnaise laisse des blancs → meringues proposées", !!mayoLo && mayoLo.parts[0].ideas.some((i) => i.recipe === "meringues"));
 check("41 zéro déchet : chaque idée liée pointe vers une recette existante, jamais vers elle-même",
-  RECIPES.every((r) => r.leftovers.every((l) => l.parts.every((p) => p.ideas.every((i) => !i.recipe || (i.recipe !== r.id && !!RECIPE_BY_ID[i.recipe]))))));
+  RECIPES.every((r) => (LEFT[r.id] ?? []).every((l) => l.parts.every((p) => p.ideas.every((i) => !i.recipe || (i.recipe !== r.id && !!RECIPE_BY_ID[i.recipe]))))));
 
 // 42-46 vague 2 (Tome 13) : volume, techniques de chef, condiments, habillage
 const v2 = RECIPES.filter((r) => r.source.includes("vague 2"));
@@ -165,5 +169,12 @@ check("46 condiments maison (bouillon cube, nokoss) présents ; couverture illus
 const ytLib = IMPORT_LIBRARY.filter((i) => i.source === "YouTube");
 check("47 YouTube : plus de 1 500 vidéos classées, toutes lisibles dans l'appli, 13 chaînes", ytLib.length > 1500 && ytLib.every((i) => /^y[ts]:[\w-]{11}$/.test(i.embed)) && new Set(ytLib.map((i) => i.author)).size === 13);
 check("48 Shorts YouTube reconnus et lus en vertical", embedOf("https://www.youtube.com/shorts/gZQa_cAAfus") === "ys:gZQa_cAAfus" && ytLib.some((i) => i.embed.startsWith("ys:")));
+
+// 49-52 aide au débutant (Tome 13 §11)
+check("49 rattrapages : pour des éclairs, « les choux sont retombés » vient en premier ; toute fiche salée a au moins 3 conseils",
+  rescueFor(RECIPE_BY_ID["eclairs_chocolat"])[0].problem.includes("choux") && RECIPES.filter((r) => r.role === "plat").every((r) => rescueFor(r).length >= 3));
+check("50 lexique : « déglace » et « bec d'oiseau » expliqués", termsIn("Déglace au bouillon").some((t) => t.term === "Déglacer") && termsIn("jusqu'au bec d'oiseau").length > 0);
+check("51 lexique : chaque terme renvoie à une fiche technique existante", GLOSSAIRE.every((t) => !t.tech || !!TECHNIQUES.find((x) => x.id === t.tech)));
+check("52 parcours débutant : 15 étapes, recettes et techniques existantes", PARCOURS.length === 15 && PARCOURS.every((s) => s.recipes.every((id) => !!RECIPE_BY_ID[id]) && s.techs.every((t) => !!TECHNIQUES.find((x) => x.id === t))));
 
 console.log(`\n${passed} contrôles OK`);

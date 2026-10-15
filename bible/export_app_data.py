@@ -201,7 +201,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
           "Pains, pâtes": "pains", "Sauces": "sauces", "Fait maison sans additifs": "fait_maison", "Desserts": "desserts", "Boissons": "boissons",
           "Techniques": "techniques", "Zéro déchet": "zero_dechet", "À vérifier": "a_verifier", "Hors cuisine": None, "Moyen-Orient": "moyen_orient"}
 imports = []
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""
@@ -215,7 +215,7 @@ for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tikto
         if not m or sec in (None, "skip"): continue
         rest = m.group(3)
         if "rangée aussi" in rest: continue
-        author = (re.search(r"@([\w.]+)", rest) or [None, ""])[1] if source == "TikTok" else                  ((re.search(r"▶ ([^·]+)", rest) or [None, ""])[1].strip() if source == "YouTube" else "Cooking with Morgane")
+        author = (re.search(r"@([\w.]+)", rest) or [None, ""])[1] if source == "TikTok" else                  ((re.search(r"▶ ([^·]+)", rest) or [None, ""])[1].strip() if source in ("YouTube", "Ajouts") else "Cooking with Morgane")
         title = m.group(1).strip()
         if re.match(r"(?i)voir la recette", title):  # texte de lien générique sur l'index du site : titre tiré de l'adresse
             from urllib.parse import unquote
@@ -366,9 +366,13 @@ for r in recipes:
 for k, v in dico.items(): v["recipes"] = sorted(used.get(k, []))
 print(f"dictionnaire : {len(dico)} fiches, {sum(1 for v in dico.values() if v['season'])} avec saison, {sum(1 for v in dico.values() if v['recipes'])} utilisées dans les recettes")
 dump("dico.json", dico)
+# chargés à la demande par l'application (fiche recette) : les restes zéro déchet ; le texte « tests » est le même partout
+LEFT = {r["id"]: r.pop("leftovers") for r in recipes}
+for r in recipes: r.pop("tests", None)
+dump("leftovers.json", LEFT)
 dump("ingredients.json", ingredients); dump("recipes.json", recipes); dump("rules.json", RULES)
 dump("catalogue.json", catalogue); dump("imports.json", imports)
-print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for r in recipes if r['leftovers'])} fiches")
+print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for v in LEFT.values() if v)} fiches")
 print(f"vidéos liées : {sum(len(v) for v in VIDEOS.values())} sur {len(VIDEOS)} fiches ; imports lisibles dans l'app : {sum(1 for i in imports if i.get('embed'))}")
 print(f"ingrédients {len(ingredients)} · recettes {len(recipes)} · règles {len(RULES)} · catalogue {len(catalogue)} · imports {len(imports)}")
 print(f"écarts (ingrédients hors référentiel, ref=None) : {len(gaps)}")

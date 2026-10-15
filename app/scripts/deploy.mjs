@@ -4,7 +4,9 @@ import { execSync } from "node:child_process";
 import { writeFileSync, rmSync } from "node:fs";
 
 const run = (cmd, cwd = ".") => execSync(cmd, { cwd, stdio: "inherit" });
-const remote = execSync("git remote get-url origin").toString().trim();
+let remote = execSync("git remote get-url origin").toString().trim();
+// dans l'automatisation GitHub (ajout de recettes) : on publie avec le jeton fourni par GitHub Actions
+if (process.env.GITHUB_TOKEN) remote = remote.replace("https://", `https://x-access-token:${process.env.GITHUB_TOKEN}@`);
 
 writeFileSync("dist/.nojekyll", ""); // GitHub Pages sert tel quel
 rmSync("dist/.git", { recursive: true, force: true });

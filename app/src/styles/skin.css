@@ -154,3 +154,16 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .chips-scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
 .chips-scroll .chip { flex: none; }
 @media (min-width: 900px) { .chips-scroll { flex-wrap: wrap; } }
+
+/* ---- aide au débutant : avant de commencer, lexique, rattrapages */
+.before { border-left: 5px solid var(--herb); margin-bottom: 12px; } .before ul { margin: 6px 0 0; }
+.lexique dl { margin: 8px 0 0; } .lexique dt { font-weight: 700; margin-top: 8px; } .lexique dd { margin: 2px 0 0; color: var(--text-2); }
+.rescue { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.rescue details { margin: 0; border-left: 5px solid var(--saffron); } .rescue summary { cursor: pointer; }
+.filters { background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: 8px 12px; margin: 8px 0; }
+.filters .chips { margin: 4px 0; } .filters select { width: auto; min-height: 40px; }
+.progress { height: 10px; background: var(--alt); border-radius: 99px; overflow: hidden; margin: 8px 0; } .progress span { display: block; height: 100%; background: var(--herb); }
+.journal .stars { display: flex; gap: 4px; margin: 6px 0; } .journal .stars button { font-size: 1.8rem; line-height: 1; background: none; border: 0; color: var(--alt); cursor: pointer; min-width: 44px; min-height: 44px; }
+.journal .stars button.on { color: var(--saffron); }
+.cook-help { margin-top: 14px; font-size: 1.05rem; background: var(--surface); border-radius: var(--r-ctl); padding: 10px 14px; box-shadow: var(--shadow); }
+.cook-help summary { cursor: pointer; font-weight: 600; min-height: 32px; } .cook-help dt { font-weight: 700; margin-top: 6px; }
