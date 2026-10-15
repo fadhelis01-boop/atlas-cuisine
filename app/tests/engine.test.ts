@@ -3,7 +3,7 @@
 import { INGREDIENTS, INGREDIENT_NAMES, RECIPES, RECIPE_BY_ID, loadImports, loadLeftovers } from "../src/lib/data";
 const IMPORT_LIBRARY = await loadImports();
 const LEFT = await loadLeftovers();
-import { evaluate, evaluateLines, suggest, verdict } from "../src/lib/engine";
+import { evaluate, evaluateLines, flatten, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
 import { gestureLabel, ovenPlan, splitStep } from "../src/lib/text";
@@ -13,6 +13,7 @@ import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
 import { balanceOf, finishFor } from "../src/lib/dressage";
+import { cuesIn, saltDose } from "../src/lib/cues";
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
@@ -212,6 +213,12 @@ const oc = ovenPlan(RECIPE_BY_ID["gratin_courgettes"].steps.flatMap(splitStep));
 console.log("   minuteur :", gestureLabel(sp[1], 2), "· four :", oc?.temp, "à l'étape", (oc?.at ?? -1) + 1, "· équilibre :", balanceOf(RECIPE_BY_ID["omelette_fines_herbes"]));
 check("59 minuteurs nommés par le geste ; préchauffage repéré avant d'enfourner ; repère d'équilibre pour chaque plat",
   gestureLabel(sp[1], 2) === "Choux (2/3)" && !!oc && /°C/.test(oc.temp) && RECIPES.filter((r) => r.role === "plat").every((r) => !!balanceOf(r)) && !!TECHNIQUES.find((t) => t.id === "convertir-mesures") && !!TECHNIQUES.find((t) => t.id === "presenter-une-assiette"));
+const savory = RECIPES.filter((r) => r.role === "plat" || r.role === "entree");
+const withCue = RECIPES.filter((r) => r.steps.some((st) => cuesIn(st).length > 0)).length;
+console.log("   sel :", saltDose(RECIPE_BY_ID["coq_au_vin"])?.text.slice(0, 50), "| pad thaï :", saltDose(RECIPE_BY_ID["pad_thai"])?.grams, "g · repères visuels sur", withCue, "fiches");
+check("60 sel dosé : toute fiche salée a soit une ligne de sel, soit un dosage calculé ; moitié moins avec sauce soja ; repères visuels sur plus de la moitié des fiches",
+  savory.every((r) => flatten(r.ingredients).some((l) => l.ref?.startsWith("Sel")) || !!saltDose(r)) && saltDose(RECIPE_BY_ID["pad_thai"])!.grams < saltDose(RECIPE_BY_ID["coq_au_vin"])!.grams
+  && cuesIn("Fais suer l'oignon 5 min").some((c) => c.startsWith("Oignon prêt")) && !cuesIn("Enlève la peau").some((c) => c.startsWith("Pousse")) && withCue > RECIPES.length / 2);
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

@@ -10,6 +10,7 @@ import { Rich } from "./RecipePage";
 import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
 import { rescueFor } from "../lib/rescue";
+import { cuesIn, saltDose } from "../lib/cues";
 import TimerDock from "../components/TimerDock";
 import { VideoHost, playVideo } from "../components/video";
 
@@ -90,6 +91,7 @@ export default function Cook({ id }: { id: string }) {
             <h1 className="cook-step-n">Mise en place</h1>
             <p className="small">Sors et pèse tout avant d'allumer le feu. Coche au fur et à mesure.</p>
             <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
+            {saltDose(r) && <p className="small"><strong>Sel :</strong> {saltDose(r)!.text}</p>}
             {oven && oven.at <= 1 && <p className="banner warn">🔥 Allume le four maintenant à <strong>{oven.temp}</strong> : il lui faut 15 à 20 min pour chauffer.</p>}
             <ul className="mise">
               {lines.map((l, k) => (
@@ -104,6 +106,7 @@ export default function Cook({ id }: { id: string }) {
           <>
             <p className="cook-step-n">Étape {i + 1} / {steps.length}</p>
             <p className="cook-step"><Rich text={step!} /></p>
+            {cuesIn(step!).map((c) => <p key={c} className="cue big">👀 {c}</p>)}
             {oven && oven.at > 1 && i === oven.at - 2 && <p className="banner warn">🔥 Pense à préchauffer le four à <strong>{oven.temp}</strong> maintenant : on enfourne dans 2 étapes.</p>}
             {durationsIn(step!).length > 0 && (
               <div className="timers-inline big">

@@ -202,3 +202,6 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .recipe-toc .chip { min-height: 36px; padding: 0 12px; flex: none; font-size: .9rem; }
 #r-ingredients, #r-etapes, #r-finition, #r-aide { scroll-margin-top: 60px; }
 .errlog { max-height: 200px; overflow: auto; white-space: pre-wrap; font-size: .8rem; background: var(--alt); padding: 8px; border-radius: 8px; }
+.cue { margin: 4px 0 0; font-size: .88rem; color: var(--olive-text); }
+.cue.big { font-size: 1.05rem; }
+.salt-line .qty { font-weight: 700; }

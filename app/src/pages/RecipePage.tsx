@@ -1,4 +1,5 @@
 import { balanceOf, finishFor } from "../lib/dressage";
+import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
 import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
@@ -127,6 +128,9 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const adapted = v.availability === "adaptable" && useAdapted ? v.adapted : null;
   const lines: RecipeLine[] = adapted ? adapted.lines : r.ingredients;
   const factor = portions / r.portions;
+  const salt = saltDose(r, portions);
+  // repères visuels : chacun n'apparaît qu'à sa première étape, pour ne pas répéter
+  const cues = (() => { const seen = new Set<string>(); return r.steps.map((st) => cuesIn(st).filter((c) => !seen.has(c) && (seen.add(c), true))); })();
   const ev = evaluateLines(lines);
   const kidsAlert = p.kidsAge !== null && r.age !== null && p.kidsAge < r.age;
   const showAlcoholDrinks = p.adult && p.alcohol === "allowed";
@@ -227,6 +231,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
                 {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && <span className="meta" title="Disponibilité en France"> · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}</span>}
               </li>
             ))}
+            {salt && <li className="salt-line"><span className="qty">Sel</span> {salt.text}{salt.water && <span className="meta"> · Eau de cuisson des pâtes ou des légumes : 10 g de sel par litre (2 c. à c. rases).</span>}</li>}
           </ul>
           {ev.allergens.size > 0 && <p className="small"><strong>Allergènes :</strong> {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}{ev.maybeAllergens.size > ev.allergens.size ? ` ; possibles selon la marque : ${[...ev.maybeAllergens].filter((a) => !ev.allergens.has(a)).map((a) => ALLERGENS[a]).join(", ")}` : ""}.</p>}
           <Leftovers r={r} />
@@ -238,6 +243,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {r.steps.map((s, i) => (
               <li key={i}>
                 <Rich text={s} />
+                {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}>👀 {c} </span>)}</p>}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
                     {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}>⏱ {d.label}</button>)}
