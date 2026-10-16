@@ -1,8 +1,8 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (506 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (643 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **506 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **576 recettes complètes** ;
-> 2. **39 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
+> 1. **643 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **713 recettes complètes** ;
+> 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
 > **Statut des fiches : « Brouillon rédactionnel prêt pour le Test 1 »**, comme aux Tomes 11 et 12. **Aucune n'a été testée en cuisine.** Badges porc / alcool / allergènes **calculés** par le moteur de référence sur le référentiel du Tome 3 (confiance C). Variantes : **à tester**.
@@ -198,6 +198,32 @@
 | Cookies avoine-banane (2 ingrédients + pépites) | Cuisine des enfants | GL | ✅ | ✅ | ✅ | ✅ | 1 |
 | Soupe de légumes aux pâtes alphabet | Cuisine des enfants | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
+### Vague 3 · Petits-déjeuners et brunchs du monde (audit UX du 16/10/2026 : « ≈ 14 petits-déjeuners, trou dans la journée »). (21)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Porridge crémeux, banane et cannelle | Écosse | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Overnight oats aux fruits rouges | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Granola maison aux noix et au miel | États-Unis | FC, GL | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bircher muesli à la pomme râpée | Suisse | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pancakes banane-avoine sans farine | États-Unis | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pudding de chia au lait de coco et à la mangue | Australie | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Smoothie bowl aux fruits rouges | Brésil | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tartines ricotta, figues et miel | Italie | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Huevos rancheros | Mexique | OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Breakfast burrito (œufs, pommes de terre, fromage) | Nouveau-Mexique | GL, LA, OE | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Congee (porridge de riz salé) | Chine | CE, GL, OE, SE, SO | 🟡 | 🟡 traces | 🔄 | 🔄 | 1 |
+| Tamagoyaki (omelette roulée japonaise) | Japon | GL, OE, SO | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Baghrir (crêpes mille trous) | Maroc | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Muffins aux œufs, épinards et fromage | États-Unis | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tartines de labneh, zaatar et légumes croquants | Liban | GL, LA, SE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Kaiserschmarrn (crêpe déchirée de l'empereur) | Autriche | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Dutch baby (pancake soufflé au four) | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Chilaquiles (chips de tortilla en sauce, œuf) | Mexique | LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tartines beurre de cacahuète, banane et miel | États-Unis | AR, GL | ✅ | ✅ | ✅ | ✅ | 3 |
+| Verrines yaourt, fruits et granola | États-Unis | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Œufs cocotte aux épinards et au saumon fumé | Cuisine du quotidien | LA, OE, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+
 ### Cahier du chef : viandes, volailles, poissons, fruits de mer et œufs, pour pratiquer les cuissons. (27)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -349,6 +375,55 @@
 | Spanakopita (feuilleté épinards-feta) | Grèce | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Yaourt grec, miel et noix | Grèce | FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
+### Vague 3 · Plats express (20 min au plus, du placard au plat) : réponse à l'audit UX du 16/10/2026 (44)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Pâtes au citron et parmesan | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâtes au thon, tomate et câpres | Cuisine du quotidien | GL, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâtes au brocoli, ail et piment | Pouilles | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Nouilles sautées aux légumes et à l'œuf | Chine | GL, OE, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Riz sauté à l'œuf et aux petits pois | Chine | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Omelette courgette, menthe et feta | Grèce | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Toasts aux œufs brouillés et saumon fumé | Cuisine du quotidien | GL, LA, OE, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Quesadillas haricots noirs et cheddar | Mexique | GL, LA | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Wraps au poulet, crudités et sauce yaourt | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Wraps houmous, légumes croquants et feta | Liban | GL, LA, SE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tartines avocat, œuf mollet et piment | Cuisine du quotidien | GL, OE, SE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Pavé de saumon poêlé, haricots verts au citron | Cuisine du quotidien | LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Crevettes sautées coco-citron vert | Thaïlande | CR, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Émincé de poulet à la moutarde | Cuisine du quotidien | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Escalopes de dinde à la crème et aux champignons | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Curry de pois chiches express | Inde | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Udon sautées aux légumes et sauce soja-miel | Japon | GL, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Gnocchi poêlés, tomates cerises et basilic | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâtes crémeuses aux épinards et au chèvre | Cuisine du quotidien | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Soupe de tomate rôtie express | Cuisine du quotidien | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Velouté de petits pois à la menthe | Cuisine du quotidien | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Bol de riz au thon, avocat et sésame | Japon | GL, MO, OE, PO, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Bol de tofu croustillant, brocoli et sauce cacahuète | Food fusion | AR, GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Poulet sauté au basilic thaï (pad kra pao) | Thaïlande | GL, MM, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Tacos de poisson, chou croquant et sauce citron vert | Basse-Californie | LA, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Pitas au poulet mariné, tzatziki et tomates | Grèce | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Quinoa sauté aux légumes et à l'œuf | Pérou | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Couscous express aux légumes et pois chiches | Maroc | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Spaghetti à la tomate fraîche et au basilic | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tartines de champignons à l'ail, œuf au plat | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Frittata aux courgettes et parmesan | Italie | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Burrito bowl végétarien | Tex-Mex | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Cabillaud vapeur, gingembre et cébette | Chine | GL, PO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Poulet sauté à la citronnelle | Vietnam | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tartines de sardines, citron et persil | Portugal | GL, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Pâtes aux courgettes, feta et citron | Grèce | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pizzas express sur tortilla | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Steak haché maison aux oignons, purée minute | Cuisine du quotidien | LA, MO, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Nouilles froides au beurre de cacahuète | Food fusion | AR, GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Tagliatelles au saumon fumé et citron | Cuisine du quotidien | GL, LA, OE, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Croque au poulet, pesto et mozzarella | Cuisine du quotidien | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Galettes de courgette à la feta | Grèce | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Riz sauté végétarien aux légumes croquants | Chine | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Soupe de nouilles au miso, tofu et épinards | Japon | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+
 ### France (1/3) : Bretagne, Normandie, Nord, Est. (21)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -495,6 +570,42 @@
 | Buddha bowl falafels, houmous et légumes rôtis | États-Unis | GL, SE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Crumble de légumes au parmesan | Cuisine du quotidien | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
+### Vague 3 · Classiques manquants et régions sous-représentées (audit UX du 16/10/2026) : (31)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Fajitas au poulet et aux poivrons | Tex-Mex | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Shawarma de poulet au four, sauce à l'ail | Liban | GL, LA | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Poulet pané croustillant au four | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Cordon bleu maison (dinde, jambon de dinde, emmental) | Suisse | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Raclette à la maison (sans appareil possible) | Valais | LA | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Tarte aux pommes de grand-mère (compote et lamelles) | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Meat pie australien | Australie | CE, GL, OE, PO | 🟡 | ✅ | 🔄 | ✅ | 3 |
+| Damper (pain du bush australien) | Australie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Sapasui (vermicelles sautés samoans) | Samoa | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Palusami (feuilles au lait de coco) | Samoa | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pikelets (petites crêpes épaisses) | Nouvelle-Zélande | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Soupe de potiron rôti à l'australienne | Australie | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poulet et légumes racines façon hangi (au four) | Nouvelle-Zélande | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mee goreng (nouilles sautées malaisiennes) | Malaisie | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Gado-gado (légumes, œuf et sauce cacahuète) | Java | AR, OE, SO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Satay de poulet, sauce cacahuète | Madura | AR, GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Adobo de poulet (Philippines) | Philippines | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sinigang aux crevettes (soupe aigre au tamarin) | Philippines | CR, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bánh xèo (crêpes croustillantes vietnamiennes) | Sud | CR, PO, SO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Poulet caramélisé au gingembre (gà kho gừng) | Vietnam | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Lumpia (rouleaux frits philippins au poulet) | Philippines | AR, GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Pilau aux épices (riz de la côte swahilie) | Zanzibar | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Sukuma wiki (chou kale sauté à la tomate) | Kenya | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Ugali (pâte ferme de maïs) | Kenya | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Nyama choma (viande grillée kényane, kachumbari) | Kenya | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Mandazi (beignets swahilis à la cardamome) | Côte swahilie | AR, GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Shiro (crème de pois chiche éthiopienne au berbéré) | Éthiopie | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Injera (galette fermentée de teff) | Éthiopie | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Arroz con pollo (riz au poulet latino) | Pérou | CE | 🟡 | ✅ | 🔄 | ✅ | 1 |
+| Gallo pinto (riz aux haricots noirs) | Costa Rica | OE, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Ropa vieja (bœuf effiloché cubain) | Cuba | – | ✅ | ✅ | ✅ | ✅ | 3 |
+
 ### Moyen-Orient & Caucase, Asie du Sud. (29)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -597,6 +708,31 @@
 | Pudding au pain rassis (diplomate des familles) | Anti-gaspi | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Compote-smoothie des fruits abîmés | Anti-gaspi | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
+### Vague 3 · Salades complètes, un repas à elles seules (audit UX du 16/10/2026 : « ≈ 14 salades complètes »). (20)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Salade César au poulet | Tijuana | LA, MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Salade de quinoa, feta, grenade et herbes | Food fusion | FC, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade de pâtes au pesto, tomates et mozzarella | Italie | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Salade de riz, thon, maïs et œufs | Cuisine du quotidien | MO, OE, PO, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Salade de pois chiches, concombre et herbes | Israël | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade thaïe au poulet et à la mangue | Thaïlande | AR, PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Salade de nouilles soba au sésame | Japon | GL, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Salade de betterave, chèvre, noix et lentilles | Cuisine du quotidien | FC, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade piémontaise | Cuisine du quotidien | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Salade Cobb | Hollywood | LA, MO, OE, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Salade de chou kale, parmesan et pommes | Californie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade avocat, crevettes et pamplemousse | Cuisine du quotidien | CR | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade de couscous perlé, légumes rôtis et herbes | Liban | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade de haricots blancs, thon et oignon rouge | Toscane | PO, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Salade de tomates anciennes et burrata | Pouilles | LA, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Salade Waldorf (pomme, céleri, noix) | New York | CE, FC, LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Concombre frappé à l'ail et au sésame | Sichuan | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Salade mexicaine haricots, maïs et avocat | Mexique | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade de lentilles au saumon fumé et à l'aneth | Cuisine du quotidien | LA, MO, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Salade tiède de patate douce rôtie, poulet et épinards | Nouvelle-Zélande | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+
 ### Sauces : sauces à frites (inspiration : sélection Femme Actuelle des sauces pour frites, noms seulement) (25)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -627,7 +763,33 @@
 | Sauce moutarde-miel | États-Unis | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Mojo rojo et mojo verde | Canaries | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 
-**Rubriques couvertes par la vague 2** : enfants : 269 · zero_dechet : 63 · sauces : 62 · boissons : 21 · pains : 21 · fusion : 11 · fetes : 6.
+### Vague 3 · Plats végétariens complets du monde (audit UX du 16/10/2026 : « ≈ 27 % de plats sans viande ni poisson »). (21)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Curry de légumes au lait de coco | Kerala | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Lasagnes aux légumes et à la ricotta | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Risotto à la courge et à la sauge | Lombardie | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Hachis de lentilles à la purée de patate douce | Royaume-Uni | LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tajine de légumes aux pois chiches et abricots | Maroc | SU | ✅ | ✅ | ✅ | ✅ | 1 |
+| Curry vert au tofu et aux légumes | Thaïlande | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Aubergines à la parmesane | Campanie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Poivrons et tomates farcis au riz et aux herbes | Grèce | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Boulettes de lentilles en sauce tomate | Italie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Quiche épinards et feta | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Enchiladas aux haricots noirs et patate douce | Mexique | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Biryani aux légumes | Hyderabad | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Cannellonis épinards-ricotta | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Polenta crémeuse aux champignons | Vénétie | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Burger végétarien aux haricots rouges | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Dal aux épinards et au lait de coco | Inde | MO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Œufs pochés aux haricots blancs et poivrons | Tunisie | OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tatin de tomates cerises et oignons rouges | Cuisine du quotidien | GL, LA, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Pad thaï au tofu | Thaïlande | AR, GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Gratin de chou-fleur et lentilles corail au curry | Cuisine du quotidien | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Galettes de sarrasin aux champignons, œuf et emmental | Bretagne | LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+
+**Rubriques couvertes par la vague 2** : enfants : 328 · zero_dechet : 70 · sauces : 62 · express : 44 · vegetarien : 28 · brunch : 24 · pains : 23 · boissons : 22 · salade : 20 · fusion : 13 · fetes : 6.
 
 ---
 
@@ -4342,7 +4504,537 @@ Un velouté doux de légumes et des petites lettres à pêcher : on écrit son p
 
 ---
 
-## 2.7 Cahier du chef : viandes, volailles, poissons, fruits de mer et œufs, pour pratiquer les cuissons.
+## 2.7 Vague 3 · Petits-déjeuners et brunchs du monde (audit UX du 16/10/2026 : « ≈ 14 petits-déjeuners, trou dans la journée »).
+
+### Porridge crémeux, banane et cannelle
+
+*Porridge · Europe du Nord › Royaume-Uni › Écosse · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 3 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole.
+
+Flocons d'avoine cuits doucement dans le lait jusqu'à devenir crémeux, banane, cannelle et miel : chaud, doux, il tient jusqu'à midi.
+
+**Ingrédients** : 80 g de flocons d'avoine · 40 cl de lait (ou boisson végétale) · 1 banane · 1 pincée de cannelle · 1 c. à s. de miel · 1 pincée de sel
+
+1. **Cuire.** Flocons, lait et sel dans la casserole, feu doux 5-6 min en remuant : ça épaissit et devient crémeux.
+2. **Garnir.** Banane en rondelles, cannelle, miel ; quelques noix si tu en as.
+
+- Plus épais ou plus fluide : ajoute du lait en fin de cuisson jusqu'à la texture que tu aimes.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Overnight oats aux fruits rouges
+
+*Overnight oats · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 8 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Bocaux.
+
+Préparés la veille en 5 minutes, les flocons gonflent dans le lait et le yaourt pendant la nuit : un petit-déjeuner frais à emporter.
+
+**Ingrédients** : 80 g de flocons d'avoine · 15 cl de lait · 125 g de yaourt · 1 c. à s. de graines de chia (facultatif) *(facultatif)* · 150 g de fruits rouges (frais ou surgelés) · 1 c. à s. de miel
+
+1. **Mélanger.** Flocons, lait, yaourt, chia, miel dans deux bocaux.
+2. **Reposer.** Une nuit au frigo : c'est épais et crémeux.
+3. **Garnir.** Fruits rouges le matin.
+
+**Conservation** : 2 jours au frigo, fermé.
+
+---
+
+### Granola maison aux noix et au miel
+
+*Granola · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 10 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Four, plaque.
+
+Flocons, noix, graines, miel et huile, dorés au four en grappes croustillantes : bien moins sucré que celui du commerce.
+
+**Ingrédients** : 300 g de flocons d'avoine · 100 g de noix ou amandes · 50 g de graines de courge ou tournesol · 100 g de miel · 5 c. à s. d'huile neutre · 1 c. à c. de cannelle · 80 g de raisins secs *(facultatif)* · 1 pincée de sel
+
+1. **Mélanger.** Flocons, noix concassées, graines, cannelle, sel ; miel et huile tiédis versés dessus.
+2. **Cuire.** Étalé sur la plaque, 160 °C, 25 min en remuant à mi-cuisson : doré et parfumé.
+3. **Refroidir.** Sans toucher : il durcit en grappes ; raisins secs ensuite.
+
+**Conservation** : 1 mois dans un bocal fermé.
+
+---
+
+### Bircher muesli à la pomme râpée
+
+*Birchermüesli · Europe du Nord › Suisse · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 8 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Saladier, râpe.
+
+La recette du docteur Bircher (Zurich, 1900) : flocons trempés, pomme râpée, yaourt, citron et noisettes.
+
+**Ingrédients** : 80 g de flocons d'avoine · 1 pomme · 125 g de yaourt · 10 cl de lait · ½ citron · 30 g de noisettes · 1 c. à s. de miel
+
+1. **Tremper.** Flocons et lait, une nuit au frigo.
+2. **Le matin.** Pomme râpée avec sa peau, citron, yaourt, miel.
+3. **Servir.** Noisettes concassées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pancakes banane-avoine sans farine
+
+*Banana oat pancakes · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, poêle.
+
+Banane, œufs et flocons d'avoine mixés, cuits en petits pancakes moelleux : sans sucre ajouté, sans farine.
+
+**Ingrédients** : 2 bananes mûres · 2 œufs · 60 g de flocons d'avoine · ½ c. à c. de levure chimique · 1 pincée de cannelle · 1 c. à c. d'huile
+
+1. **Mixer.** Tout, 30 s : pâte épaisse.
+2. **Cuire.** Petites louches dans la poêle huilée, feu moyen ; retourne quand des bulles crèvent la surface (2 min), puis 1 min.
+3. **Servir.** Fruits, yaourt ou un filet de miel.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pudding de chia au lait de coco et à la mangue
+
+*Chia pudding · Océanie › Australie · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Bocaux.
+
+Les graines de chia gonflent dans le lait de coco et font une crème : à préparer la veille, avec de la mangue fraîche.
+
+**Ingrédients** : 4 c. à s. de graines de chia · 25 cl de lait de coco · 1 mangue · 1 c. à s. de sirop d'érable ou de miel · ½ citron vert *(facultatif)*
+
+1. **Mélanger.** Chia, lait de coco, sirop ; remue 1 min, puis encore une fois 10 min plus tard (sinon il fait des grumeaux).
+2. **Reposer.** 4 h ou une nuit au frigo : ça prend comme une crème.
+3. **Servir.** Mangue en dés, zeste de citron vert.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Smoothie bowl aux fruits rouges
+
+*Smoothie bowl · Amérique latine › Brésil · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur.
+
+Un smoothie épais de fruits surgelés et banane, mangé à la cuillère, avec granola et fruits frais par-dessus.
+
+**Ingrédients** : 250 g de fruits rouges surgelés · 1 banane (congelée de préférence) · 100 g de yaourt · 4 c. à s. de granola *(facultatif)* · 1 c. à s. de noix de coco râpée *(facultatif)*
+
+1. **Mixer.** Fruits surgelés, banane, yaourt : très épais (ajoute un peu de lait seulement si le mixeur bloque).
+2. **Garnir.** Dans un bol, granola, coco, fruits frais en rangs.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tartines ricotta, figues et miel
+
+*Bruschetta dolce · Europe du Sud › Italie · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 3 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grille-pain.
+
+Pain grillé, ricotta fraîche, figues (ou poire), miel et noix : le brunch italien en 8 minutes.
+
+**Ingrédients** : 2 tranches de pain de campagne · 150 g de ricotta · 3 figues (ou 1 poire) · 2 c. à s. de miel · 20 g de noix
+
+1. **Griller.** Le pain.
+2. **Garnir.** Ricotta généreuse, figues en quartiers, noix, miel en filet.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Huevos rancheros
+
+*Huevos rancheros · Amérique latine › Mexique · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Le petit-déjeuner des ranchs mexicains : œufs au plat sur tortilla, sauce tomate pimentée, haricots et avocat.
+
+**Ingrédients** : 4 œufs · 4 tortillas de maïs · 400 g de tomates pelées · 1 oignon · 1 piment · 200 g de haricots noirs · 1 avocat *(facultatif)* · ½ bouquet de coriandre
+
+1. **Sauce.** Oignon et piment 3 min, tomates, 10 min : épaisse ; sel.
+2. **Œufs.** Au plat, 3 min : jaune coulant ; tortillas chauffées à sec.
+3. **Dresser.** Tortilla, haricots chauds, œufs, sauce, avocat, coriandre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Breakfast burrito (œufs, pommes de terre, fromage)
+
+*Breakfast burrito · Amérique du Nord › États-Unis › Nouveau-Mexique · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Salsa du commerce
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Œufs brouillés, pommes de terre rissolées, fromage et salsa roulés dans une tortilla : le brunch à emporter du sud-ouest américain.
+
+**Ingrédients** : 2 grandes tortillas de blé · 4 œufs · 2 pommes de terre · 60 g de cheddar · 4 c. à s. de salsa · 1 poivron *(facultatif)*
+
+1. **Rissoler.** Pommes de terre en petits dés, 12 min à la poêle huilée couverte puis découverte : tendres et dorées ; sel, paprika.
+2. **Œufs.** Brouillés crémeux.
+3. **Rouler.** Tortilla chaude, pommes de terre, œufs, fromage, salsa ; replie et roule serré ; 1 min par face à la poêle.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Congee (porridge de riz salé)
+
+*Zhōu · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 1 h 00 · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : céleri, gluten, œufs, sésame, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole.
+
+Le petit-déjeuner de toute l'Asie : riz cuit longtemps dans beaucoup d'eau jusqu'à devenir une crème, garni de gingembre, cébette et œuf.
+
+**Ingrédients** : 120 g de riz · 1 morceau (3 cm) de gingembre · 3 cébettes · 2 c. à s. de sauce soja · 4 œufs mollets (facultatif) *(facultatif)* · 1 c. à c. d'huile de sésame · 1,5 l de bouillon (ou d'eau)
+
+1. **Cuire.** Riz rincé, bouillon et gingembre en lamelles ; frémissement 1 h en remuant de temps en temps : les grains éclatent et font une crème.
+2. **Assaisonner.** Sel ; plus fluide ou plus épais selon ton goût (eau).
+3. **Garnir.** Cébette, soja, huile de sésame, œuf mollet coupé en deux.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tamagoyaki (omelette roulée japonaise)
+
+*Tamagoyaki · Asie de l'Est › Japon · Entrée*
+
+Niveau ⭐⭐ · 2 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Sauce soja claire, Mirin
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle (rectangulaire de préférence), baguettes.
+
+Fines couches d'omelette sucrée-salée roulées les unes sur les autres : un rouleau moelleux, tranché, pour le petit-déjeuner ou le bento.
+
+**Ingrédients** : 4 œufs · 1 c. à s. de sucre · 1 c. à c. de sauce soja · 1 c. à s. de mirin (facultatif) *(facultatif)* · 1 c. à s. d'huile
+
+1. **Battre.** Œufs, sucre, soja, mirin, sans faire mousser.
+2. **Rouler.** Poêle huilée feu moyen-doux ; une fine couche ; quand elle est presque prise, roule-la vers toi ; pousse le rouleau au fond, nouvelle couche en soulevant le rouleau pour qu'elle passe dessous ; recommence 4-5 fois.
+3. **Former.** Roulé serré dans un papier cuisson 5 min ; tranché.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : omelette baveuse
+
+---
+
+### Baghrir (crêpes mille trous)
+
+*Baghrir · Afrique du Nord › Maroc · Goûter / dessert* · Fêtes : Ramadan / Aïd
+
+Niveau ⭐ · 15 portions · actif 15 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, poêle anti-adhésive.
+
+Crêpes de semoule cuites d'un seul côté, couvertes de petits trous qui boivent le beurre fondu au miel : le petit-déjeuner du Ramadan et des fêtes.
+
+**Ingrédients** : 250 g de semoule fine · 100 g de farine · 1 c. à c. de levure boulangère · 1 c. à c. de levure chimique · 50 cl d'eau tiède · 50 g de beurre · 4 c. à s. de miel
+
+1. **Mixer.** Semoule, farine, levures, sel et eau tiède, 2 min : pâte fluide ; 30 min au chaud : elle mousse.
+2. **Cuire.** Une louche dans la poêle moyenne, sans retourner : des trous apparaissent partout ; quand le dessus n'est plus brillant (2 min), c'est cuit.
+3. **Napper.** Beurre fondu avec le miel, versé sur les crêpes empilées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Muffins aux œufs, épinards et fromage
+
+*Egg muffins · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à muffins, four.
+
+Œufs battus avec épinards, poivron et fromage, cuits en petits moules : à préparer d'avance, se réchauffent en 30 s.
+
+**Ingrédients** : 8 œufs · 100 g d'épinards · 1 poivron · 80 g de fromage râpé · 5 cl de lait
+
+1. **Préchauffer.** Four 180 °C ; moule huilé.
+2. **Répartir.** Légumes hachés et fromage dans les moules ; œufs battus avec lait, sel, poivre, aux trois quarts.
+3. **Cuire.** 18-20 min : gonflés, pris au centre (la lame ressort propre).
+
+**Conservation** : 4 jours au frigo ; 30 s au micro-ondes.
+
+---
+
+### Tartines de labneh, zaatar et légumes croquants
+
+*Labneh w zaatar · Moyen-Orient › Liban · Entrée*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, sésame
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Planche.
+
+Fromage de yaourt épais, zaatar, huile d'olive, concombre, tomate et menthe sur pain plat : le petit-déjeuner libanais.
+
+**Ingrédients** : 200 g de labneh (ou yaourt grec égoutté) · 2 pains libanais · 1 c. à s. de zaatar · 3 c. à s. d'huile d'olive · ½ concombre · 1 tomate · 6 feuilles de menthe · 6 olives *(facultatif)*
+
+1. **Étaler.** Labneh sur l'assiette, creusé à la cuillère.
+2. **Arroser.** Huile d'olive, zaatar.
+3. **Servir.** Avec le pain, les légumes en tranches, menthe et olives.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Kaiserschmarrn (crêpe déchirée de l'empereur)
+
+*Kaiserschmarrn · Europe du Nord › Autriche · Dessert*
+
+Niveau ⭐⭐ · 3 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle.
+
+Une crêpe épaisse et soufflée, déchirée à la spatule dans la poêle et caramélisée, avec compote : le brunch des refuges autrichiens.
+
+**Ingrédients** : 4 œufs · 125 g de farine · 25 cl de lait · 30 g de sucre · 30 g de beurre · 40 g de raisins secs *(facultatif)* · 2 c. à s. de sucre glace · 4 c. à s. de compote
+
+1. **Pâte.** Jaunes, farine, lait, pincée de sel : lisse ; blancs montés avec le sucre, incorporés délicatement.
+2. **Cuire.** Beurre, pâte (2 cm d'épaisseur), raisins, feu moyen couvert 5 min : le dessous dore ; retourne par quarts.
+3. **Déchirer.** En morceaux avec deux spatules, 2 min : ils caramélisent. Sucre glace, compote.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : monter des blancs, incorporer délicatement
+
+---
+
+### Dutch baby (pancake soufflé au four)
+
+*Dutch baby · Amérique du Nord › États-Unis · Dessert*
+
+Niveau ⭐ · 3 portions · actif 5 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle allant au four (fonte), mixeur.
+
+Une pâte à crêpe versée dans une poêle brûlante au four : elle gonfle comme un nuage et retombe en coupe dorée. Citron et sucre glace.
+
+**Ingrédients** : 3 œufs · 70 g de farine · 15 cl de lait · 30 g de beurre · 1 citron · 2 c. à s. de sucre glace · 150 g de fruits rouges (facultatif) *(facultatif)*
+
+1. **Chauffer.** Poêle vide au four à 220 °C, 10 min.
+2. **Pâte.** Œufs, farine, lait, pincée de sel, 30 s au mixeur.
+3. **Cuire.** Beurre dans la poêle brûlante, pâte d'un coup ; 18 min sans ouvrir : très gonflé et doré. Citron, sucre glace, fruits.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Chilaquiles (chips de tortilla en sauce, œuf)
+
+*Chilaquiles · Amérique latine › Mexique · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Triangles de tortilla dorés, mijotés une minute dans une sauce tomate-piment, fromage, crème, oignon rouge et œuf : l'anti-gaspi mexicain du matin.
+
+**Ingrédients** : 6 tortillas de maïs (un peu rassises) · 400 g de tomates pelées · 1 piment · 1 gousse d'ail · 2 œufs · 60 g de feta ou queso fresco · 3 c. à s. de crème · ¼ oignon rouge
+
+1. **Chips.** Tortillas en triangles, dorées à la poêle huilée ou au four : croustillantes.
+2. **Sauce.** Tomates, piment, ail mixés, 8 min à frémissement ; les chips 1 min dedans (elles restent un peu croquantes).
+3. **Garnir.** Œuf au plat, fromage, crème, oignon, coriandre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tartines beurre de cacahuète, banane et miel
+
+*PB & banana toast · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 2 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grille-pain.
+
+Pain complet grillé, beurre de cacahuète, banane, miel et cannelle : énergie pour toute la matinée.
+
+**Ingrédients** : 2 tranches de pain complet · 2 c. à s. de beurre de cacahuète · 1 banane · 1 c. à c. de miel · 1 pincée de cannelle
+
+1. **Griller.** Le pain.
+2. **Tartiner.** Beurre de cacahuète, banane en rondelles, miel, cannelle.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Verrines yaourt, fruits et granola
+
+*Parfait · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Verrines.
+
+Couches de yaourt grec, fruits frais et granola croustillant : le petit-déjeuner qui se monte en 8 minutes et se mange avec les yeux.
+
+**Ingrédients** : 300 g de yaourt grec · 200 g de fruits frais de saison · 6 c. à s. de granola · 2 c. à c. de miel
+
+1. **Monter.** Yaourt, fruits, granola, recommence.
+2. **Finir.** Miel ; le granola au dernier moment pour qu'il reste croquant.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Œufs cocotte aux épinards et au saumon fumé
+
+*Œufs cocotte · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 12 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé
+- ⚠️ **Allergènes** : lait, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Ramequins, plat à four.
+
+Œuf cuit au bain-marie sur un lit d'épinards et de saumon fumé, crème et ciboulette : à tremper avec des mouillettes.
+
+**Ingrédients** : 4 œufs · 100 g d'épinards · 80 g de saumon fumé · 4 c. à s. de crème · 1 c. à s. de ciboulette
+
+1. **Préchauffer.** Four 180 °C ; ramequins beurrés.
+2. **Garnir.** Épinards tombés à la poêle, saumon, 1 c. à s. de crème, l'œuf cassé dessus.
+3. **Cuire.** Au bain-marie 10-12 min : blanc pris, jaune coulant. Ciboulette.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : œufs cocotte
+
+---
+
+## 2.8 Cahier du chef : viandes, volailles, poissons, fruits de mer et œufs, pour pratiquer les cuissons.
 
 ### Côte de bœuf, beurre maître d'hôtel
 
@@ -5077,7 +5769,7 @@ L'œuf cuit 45 min à 64 °C : blanc et jaune ont la même texture crémeuse. Su
 
 ---
 
-## 2.8 Chocolaterie maison : gâteaux, confiseries et cadeaux pour toutes les occasions.
+## 2.9 Chocolaterie maison : gâteaux, confiseries et cadeaux pour toutes les occasions.
 
 ### Truffes au chocolat noir
 
@@ -5617,7 +6309,7 @@ Tablettes épaisses fourrées au praliné croustillant, ou nature décorées : �
 
 ---
 
-## 2.9 Condiments, bases et marinades maison, sans additifs (bouillon cube, nokoss, épices, marinades du monde).
+## 2.10 Condiments, bases et marinades maison, sans additifs (bouillon cube, nokoss, épices, marinades du monde).
 
 ### Bouillon « cube » maison de légumes (pâte)
 
@@ -6415,7 +7107,7 @@ Un beurre mou parfumé roulé en boudin : une rondelle sur une viande, un poisso
 
 ---
 
-## 2.10 Europe du Nord & Centrale : Royaume-Uni, Irlande, Belgique, Allemagne, Europe centrale, Scandinavie, Europe de l'Est.
+## 2.11 Europe du Nord & Centrale : Royaume-Uni, Irlande, Belgique, Allemagne, Europe centrale, Scandinavie, Europe de l'Est.
 
 ### Fish and chips (pâte à la bière ou pétillante)
 
@@ -6973,7 +7665,7 @@ Petites crêpes épaisses et aérées, au sarrasin et à la levure : avec crème
 
 ---
 
-## 2.11 Europe du Sud : Italie, Espagne, Portugal, Grèce.
+## 2.12 Europe du Sud : Italie, Espagne, Portugal, Grèce.
 
 ### Spaghetti aglio, olio e peperoncino
 
@@ -7628,7 +8320,1149 @@ Le dessert le plus simple de Grèce : un yaourt épais, un miel de thym et des n
 
 ---
 
-## 2.12 France (1/3) : Bretagne, Normandie, Nord, Est.
+## 2.13 Vague 3 · Plats express (20 min au plus, du placard au plat) : réponse à l'audit UX du 16/10/2026
+
+### Pâtes au citron et parmesan
+
+*Pasta al limone · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, râpe.
+
+Zeste et jus de citron, beurre, parmesan et l'eau de cuisson qui fait la sauce : 15 minutes, et c'est d'une fraîcheur étonnante.
+
+**Ingrédients** : 400 g de spaghetti · 2 citrons non traités · 40 g de beurre · 80 g de parmesan râpé · 1 pincée de poivre · 1 c. à s. de persil (facultatif) *(facultatif)*
+
+1. **Cuire.** Pâtes dans une grande casserole d'eau salée (10 g de sel par litre), 1 min de moins que le paquet ; garde un verre d'eau de cuisson.
+2. **Sauce.** Dans la casserole égouttée, hors du feu : beurre, zeste et jus des citrons, parmesan, 1/2 verre d'eau de cuisson ; remue vivement : la sauce devient crémeuse et nappe les pâtes.
+3. **Servir.** Poivre, persil ; ajoute un peu d'eau de cuisson si ça sèche.
+
+- Le secret : l'amidon de l'eau de cuisson lie le beurre et le fromage, comme une crème sans crème.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : cuire les pâtes
+
+---
+
+### Pâtes au thon, tomate et câpres
+
+*Pâtes au thon · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Le grand classique du placard : sauce tomate express au thon, ail et câpres. Tout s'achète en conserve.
+
+**Ingrédients** : 400 g de pâtes courtes · 2 boîtes (280 g) de thon au naturel · 400 g de tomates pelées · 2 gousses d'ail · 1 c. à s. de câpres *(facultatif)* · 2 c. à s. d'huile d'olive · 1 pincée d'origan
+
+1. **Cuire.** Pâtes à l'eau bouillante salée.
+2. **Sauce.** Ail émincé 1 min dans l'huile (il blondit à peine), tomates écrasées, origan ; 8 min à frémissement.
+3. **Finir.** Thon émietté et câpres, 1 min ; mélange avec les pâtes égouttées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : cuire les pâtes
+
+---
+
+### Pâtes au brocoli, ail et piment
+
+*Orecchiette con cime di rapa · Europe du Sud › Italie › Pouilles · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande casserole, poêle.
+
+Le brocoli cuit avec les pâtes dans la même eau, puis sauté à l'ail et au piment : un plat des Pouilles, végétarien et vert.
+
+**Ingrédients** : 400 g de pâtes (orecchiette, penne) · 1 gros brocoli · 3 gousses d'ail · 1 pincée de piment · 4 c. à s. d'huile d'olive · 40 g de parmesan *(facultatif)*
+
+1. **Cuire ensemble.** Brocoli en petits bouquets dans l'eau salée des pâtes, 5 min avant la fin de leur cuisson.
+2. **Sauter.** Ail émincé et piment dans l'huile, 1 min ; ajoute pâtes et brocoli égouttés, une louche d'eau de cuisson ; écrase un peu le brocoli : il fait la sauce.
+3. **Servir.** Parmesan ou chapelure dorée.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Nouilles sautées aux légumes et à l'œuf
+
+*Chǎo miàn · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou grande poêle.
+
+Nouilles, chou, carotte, œuf brouillé et sauce soja : le plat sauté du soir, prêt avant que l'eau du thé ne bouille.
+
+**Ingrédients** : 200 g de nouilles aux œufs · 2 œufs · 1 carotte · ¼ chou chinois · 2 cébettes · 3 c. à s. de sauce soja · 1 c. à c. d'huile de sésame *(facultatif)* · 1 c. à s. d'huile neutre
+
+1. **Préparer.** Nouilles cuites 3 min, rincées à l'eau froide ; légumes en fines lanières.
+2. **Sauter.** Wok très chaud : œufs brouillés 30 s, réservés ; légumes 2 min, ils restent croquants.
+3. **Finir.** Nouilles, sauce soja, œufs, 1 min en remuant ; huile de sésame, cébette.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Riz sauté à l'œuf et aux petits pois
+
+*Dàn chǎofàn · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Wok ou poêle.
+
+Le meilleur usage du riz de la veille : œuf, petits pois, cébette, sauce soja. Le riz froid se sépare et grille sans coller.
+
+**Ingrédients** : 400 g de riz cuit froid · 3 œufs · 100 g de petits pois surgelés · 2 cébettes · 2 c. à s. de sauce soja · 1 c. à s. d'huile neutre
+
+1. **Œufs.** Battus, versés dans l'huile très chaude, brouillés grossièrement 30 s.
+2. **Riz.** Ajoute riz et petits pois ; écrase les mottes, saute 4 min : les grains se séparent et grésillent.
+3. **Assaisonner.** Sauce soja en filet sur le bord du wok, cébette ; goûte.
+
+- Riz cuit et refroidi au frigo (24 h au plus) : jamais laissé à température ambiante.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Omelette courgette, menthe et feta
+
+*Omeléta · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle 24 cm.
+
+Courgette râpée revenue, œufs battus, feta et menthe : grecque, légère et prête en 12 minutes.
+
+**Ingrédients** : 5 œufs · 1 courgette · 80 g de feta · 4 feuilles de menthe · 1 c. à s. d'huile d'olive · 1 pincée de poivre
+
+1. **Courgette.** Râpée, pressée dans les mains, revenue 3 min : elle ne rend plus d'eau.
+2. **Cuire.** Œufs battus sur la courgette, feu moyen ; ramène les bords vers le centre 2 min ; feta émiettée.
+3. **Plier.** Quand le dessus est encore baveux, plie et glisse sur l'assiette ; menthe.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : omelette baveuse
+
+---
+
+### Toasts aux œufs brouillés et saumon fumé
+
+*Scrambled eggs & smoked salmon · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé
+- ⚠️ **Allergènes** : gluten, lait, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, grille-pain.
+
+Œufs brouillés crémeux sur pain grillé, saumon fumé et ciboulette : un dîner chic en 10 minutes.
+
+**Ingrédients** : 4 œufs · 100 g de saumon fumé · 2 tranches de pain de campagne · 15 g de beurre · 1 c. à s. de ciboulette · 1 c. à s. de crème fraîche *(facultatif)*
+
+1. **Brouiller.** Œufs battus, beurre, feu doux ; remue sans arrêt à la spatule 4-5 min : de petits grumeaux crémeux se forment.
+2. **Arrêter.** Retire du feu quand c'est encore brillant ; crème : la chaleur finit la cuisson.
+3. **Dresser.** Sur le pain grillé, saumon, ciboulette, poivre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : œufs brouillés
+
+---
+
+### Quesadillas haricots noirs et cheddar
+
+*Quesadillas de frijoles · Amérique latine › Mexique · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Salsa du commerce
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Tortillas pliées sur des haricots écrasés au cumin et du fromage fondant, dorées à la poêle : croustillantes dehors, filantes dedans.
+
+**Ingrédients** : 8 tortillas de blé · 400 g de haricots noirs (boîte) · 150 g de cheddar râpé · 1 c. à c. de cumin · ½ oignon rouge · 1 c. à s. de coriandre *(facultatif)* · 4 c. à s. de salsa *(facultatif)*
+
+1. **Garniture.** Haricots rincés, écrasés à la fourchette avec cumin, sel, oignon haché.
+2. **Garnir.** Sur une moitié de tortilla : haricots, fromage ; plie.
+3. **Dorer.** Poêle sèche, feu moyen, 2 min par face : dorée, le fromage fond.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Wraps au poulet, crudités et sauce yaourt
+
+*Chicken wrap · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Lanières de poulet saisies au paprika, salade, tomate, carotte et sauce yaourt-citron, roulées dans une tortilla : le déjeuner à emporter.
+
+**Ingrédients** : 4 tortillas de blé · 2 blancs de poulet · 1 c. à c. de paprika · 4 feuilles de salade · 1 tomate · 1 carotte râpée · 4 c. à s. de yaourt grec · ½ citron
+
+1. **Saisir.** Poulet en lanières, paprika, sel ; poêle chaude 5-6 min : doré, jus clair quand on le coupe.
+2. **Sauce.** Yaourt, jus de citron, sel, poivre.
+3. **Rouler.** Tortilla tiédie 10 s, sauce, salade, crudités, poulet ; replie les côtés puis roule serré.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Wraps houmous, légumes croquants et feta
+
+*Wrap végétarien · Moyen-Orient › Liban · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, sésame
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Planche.
+
+Houmous, concombre, carotte, poivron, feta et menthe dans un pain plat : végétarien, sans cuisson, en 10 minutes.
+
+**Ingrédients** : 2 tortillas ou pains plats · 4 c. à s. d'houmous · ½ concombre · 1 carotte · ½ poivron · 60 g de feta · 4 feuilles de menthe *(facultatif)*
+
+1. **Tailler.** Légumes en bâtonnets fins.
+2. **Garnir.** Houmous étalé, légumes, feta émiettée, menthe ; sel, poivre.
+3. **Rouler.** Serré, coupé en deux en biais.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tartines avocat, œuf mollet et piment
+
+*Avocado toast · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 6 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs, sésame
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, grille-pain.
+
+Pain grillé, avocat écrasé au citron vert, œuf mollet qui coule et une pincée de piment : un repas complet en 11 minutes.
+
+**Ingrédients** : 2 tranches de pain de campagne · 1 avocat mûr · 2 œufs · ½ citron vert · 1 pincée de piment *(facultatif)* · 1 c. à c. de graines de sésame
+
+1. **Œufs.** 6 min dans l'eau bouillante, puis 1 min à l'eau froide ; écale doucement.
+2. **Avocat.** Écrasé avec citron vert, sel.
+3. **Dresser.** Pain grillé, avocat, œuf ouvert en deux (le jaune coule), piment, sésame.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : œuf mollet
+
+---
+
+### Pavé de saumon poêlé, haricots verts au citron
+
+*Saumon poêlé · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, casserole.
+
+Saumon cuit côté peau jusqu'à ce qu'elle croustille, haricots verts au beurre citronné : le dîner équilibré qui fait plaisir.
+
+**Ingrédients** : 2 pavés de saumon avec peau · 300 g de haricots verts (surgelés extra-fins) · 20 g de beurre · 1 citron · 1 c. à s. d'huile · 1 c. à s. d'aneth (facultatif) *(facultatif)*
+
+1. **Haricots.** 6-7 min à l'eau bouillante salée : ils restent légèrement croquants ; égouttés, beurre, zeste de citron.
+2. **Saumon.** Côté peau dans la poêle chaude huilée, 5 min sans y toucher : la chair devient opaque aux deux tiers ; retourne 1 min.
+3. **Servir.** Jus de citron, fleur de sel, aneth.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : cuire côté peau
+
+---
+
+### Crevettes sautées coco-citron vert
+
+*Kung phat kati · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle ou wok, casserole (riz).
+
+Crevettes saisies, lait de coco, citron vert, ail et coriandre : une sauce parfumée à servir sur du riz, en 18 minutes avec la cuisson du riz.
+
+**Ingrédients** : 300 g de crevettes crues décortiquées · 20 cl de lait de coco · 1 citron vert · 2 gousses d'ail · 1 c. à s. de sauce de poisson · ½ bouquet de coriandre · 150 g de riz
+
+1. **Riz.** Cuit à l'avance ou en même temps (12 min).
+2. **Crevettes.** Saisies 1 min par face dans l'huile chaude avec l'ail : elles deviennent roses et se recourbent ; réservées.
+3. **Sauce.** Lait de coco, sauce de poisson, 3 min à frémissement ; crevettes, zeste et jus de citron vert, coriandre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Émincé de poulet à la moutarde
+
+*Poulet à la moutarde · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 8 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde à l'ancienne
+- ⚠️ **Allergènes** : lait, moutarde ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Lanières de poulet dorées, crème et moutarde à l'ancienne : la sauce du dimanche en 20 minutes, avec des pâtes ou du riz.
+
+**Ingrédients** : 4 blancs de poulet · 20 cl de crème · 2 c. à s. de moutarde à l'ancienne · 1 échalote · 10 g de beurre · 1 c. à s. de persil
+
+1. **Dorer.** Poulet en lanières, sel, poivre ; sauteuse chaude, beurre ; 5 min : doré sur toutes les faces.
+2. **Sauce.** Échalote hachée 1 min ; crème et moutarde ; 4 min à frémissement : la sauce nappe la cuillère.
+3. **Goûter.** Sel, poivre ; persil.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : saisir, réduire
+
+---
+
+### Escalopes de dinde à la crème et aux champignons
+
+*Escalope à la crème · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 8 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Escalopes dorées, champignons poêlés, crème : simple, tendre et très familial.
+
+**Ingrédients** : 4 escalopes de dinde · 250 g de champignons de Paris · 20 cl de crème · 1 échalote · 15 g de beurre · 1 c. à s. de farine
+
+1. **Saisir.** Escalopes farinées légèrement, 3 min par face au beurre : dorées ; réservées au chaud.
+2. **Champignons.** Émincés, échalote, 5 min : ils rendent leur eau puis dorent.
+3. **Sauce.** Crème, 2 min ; remets les escalopes 1 min ; goûte.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : saisir
+
+---
+
+### Curry de pois chiches express
+
+*Chana masala rapide · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse, casserole (riz).
+
+Oignon, ail, gingembre, épices, tomates et pois chiches en boîte : un curry végétarien plein de goût en 20 minutes.
+
+**Ingrédients** : 2 boîtes (530 g égouttés) de pois chiches · 400 g de tomates pelées · 1 oignon · 2 gousses d'ail · 1 morceau (2 cm) de gingembre · 2 c. à c. de garam masala · 1 c. à c. de cumin · 10 cl de lait de coco *(facultatif)* · ½ bouquet de coriandre *(facultatif)*
+
+1. **Base.** Oignon haché 5 min à l'huile : il blondit ; ail, gingembre râpé, épices 1 min : ça sent très bon.
+2. **Mijoter.** Tomates, pois chiches rincés, 10 min à frémissement ; écrase quelques pois chiches pour épaissir.
+3. **Finir.** Lait de coco, sel, coriandre ; avec du riz ou du pain naan.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : torréfier les épices
+
+---
+
+### Udon sautées aux légumes et sauce soja-miel
+
+*Yaki udon végétarien · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou poêle.
+
+Nouilles épaisses et moelleuses, champignons, chou, carotte, sauce soja-miel : végétarien, réconfortant, très rapide.
+
+**Ingrédients** : 400 g de nouilles udon (précuites) · 150 g de champignons · ¼ chou chinois · 1 carotte · 3 c. à s. de sauce soja · 1 c. à c. de miel · 1 c. à s. d'huile neutre · 1 c. à c. de sésame
+
+1. **Légumes.** En lanières, sautés 3 min à feu vif.
+2. **Nouilles.** Passées 1 min sous l'eau chaude, ajoutées avec soja et miel ; 2 min en remuant : la sauce les enrobe et brille.
+3. **Servir.** Sésame.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Gnocchi poêlés, tomates cerises et basilic
+
+*Gnocchi in padella · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Gnocchi dorés directement à la poêle, sans les bouillir, avec tomates cerises éclatées et mozzarella : croustillants et fondants.
+
+**Ingrédients** : 500 g de gnocchi · 250 g de tomates cerises · 1 boule de mozzarella · 2 c. à s. d'huile d'olive · 1 gousse d'ail · 6 feuilles de basilic
+
+1. **Dorer.** Gnocchi dans l'huile chaude, 6-7 min en remuant de temps en temps : dorés et croustillants.
+2. **Tomates.** Ail, tomates cerises, 4 min : elles éclatent et font une petite sauce.
+3. **Finir.** Mozzarella en morceaux, basilic, poivre ; sers tout de suite.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pâtes crémeuses aux épinards et au chèvre
+
+*Pâtes épinards-chèvre · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole.
+
+Épinards qui tombent dans les pâtes chaudes, chèvre frais fondu et noix : végétarien, doux et prêt en un quart d'heure.
+
+**Ingrédients** : 400 g de pâtes · 200 g de jeunes pousses d'épinard · 150 g de chèvre frais · 40 g de noix *(facultatif)* · 1 gousse d'ail · 1 pincée de muscade
+
+1. **Cuire.** Pâtes à l'eau salée ; garde un verre d'eau de cuisson.
+2. **Épinards.** Dans la casserole égouttée, avec l'ail râpé : ils tombent en 1 min.
+3. **Lier.** Pâtes, chèvre, eau de cuisson, muscade ; remue : crémeux ; noix concassées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Soupe de tomate rôtie express
+
+*Soupe de tomate · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, mixeur.
+
+Tomates pelées, oignon, ail, un peu de sucre et de crème : une soupe veloutée en 20 minutes, avec des tartines au fromage.
+
+**Ingrédients** : 800 g de tomates pelées · 1 oignon · 2 gousses d'ail · 50 cl d'eau ou de bouillon · 1 c. à c. de sucre · 4 c. à s. de crème *(facultatif)* · 6 feuilles de basilic *(facultatif)*
+
+1. **Suer.** Oignon et ail 5 min à l'huile : translucides.
+2. **Cuire.** Tomates, bouillon, sucre, 10 min à frémissement.
+3. **Mixer.** Lisse ; crème, basilic ; goûte le sel.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Velouté de petits pois à la menthe
+
+*Pea soup · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, mixeur.
+
+Petits pois surgelés, oignon et menthe : vert éclatant, doux, prêt en 17 minutes ; chaud l'hiver, froid l'été.
+
+**Ingrédients** : 500 g de petits pois surgelés · 1 oignon · 60 cl de bouillon de légumes · 8 feuilles de menthe · 3 c. à s. de crème *(facultatif)*
+
+1. **Suer.** Oignon 4 min au beurre.
+2. **Cuire.** Petits pois et bouillon, 6 min seulement : ils restent bien verts.
+3. **Mixer.** Avec la menthe ; crème ; goûte.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Bol de riz au thon, avocat et sésame
+
+*Tuna rice bowl · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, moutarde, œufs, poissons, sésame, soja ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Bols.
+
+Riz tiède, thon assaisonné soja-citron, avocat, concombre et sésame : l'esprit poke, avec des ingrédients de supermarché.
+
+**Ingrédients** : 300 g de riz cuit · 1 boîte (140 g) de thon · 1 avocat · ½ concombre · 2 c. à s. de sauce soja · ½ citron vert · 1 c. à s. de graines de sésame · 1 c. à s. de mayonnaise (facultatif) *(facultatif)*
+
+1. **Assaisonner.** Thon émietté, soja, citron vert.
+2. **Tailler.** Avocat et concombre en dés.
+3. **Dresser.** Riz, garnitures en rangs, sésame, un trait de mayonnaise.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Bol de tofu croustillant, brocoli et sauce cacahuète
+
+*Crispy tofu bowl · Asie du Sud-Est › Food fusion · Plat*
+
+Niveau ⭐ · 2 portions · actif 12 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, casserole.
+
+Cubes de tofu dorés et croustillants, brocoli, riz et sauce au beurre de cacahuète : végétarien et très gourmand.
+
+**Ingrédients** : 200 g de tofu ferme · 1 c. à s. de fécule de maïs · 1 brocoli · 300 g de riz cuit · 2 c. à s. de beurre de cacahuète · 2 c. à s. de sauce soja · ½ citron vert · 2 c. à s. d'huile
+
+1. **Tofu.** Épongé, en cubes, roulé dans la fécule ; poêle chaude huilée 6-8 min en le retournant : doré sur toutes les faces.
+2. **Brocoli.** 4 min à l'eau bouillante salée.
+3. **Sauce.** Beurre de cacahuète, soja, citron vert, 3 c. à s. d'eau chaude : lisse. Dresse et nappe.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Poulet sauté au basilic thaï (pad kra pao)
+
+*Phat kaphrao · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, mollusques, œufs, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Wok, casserole (riz).
+
+Le plat de rue le plus populaire de Thaïlande : poulet haché sauté à l'ail, au piment et au basilic, servi sur riz avec un œuf frit.
+
+**Ingrédients** : 300 g de poulet haché (ou blanc haché au couteau) · 3 gousses d'ail · 1-2 piments · 1 poignée de basilic thaï (ou basilic) · 1 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 2 œufs · 300 g de riz cuit
+
+1. **Sauter.** Ail et piment pilés 20 s dans l'huile chaude ; poulet, 4 min en l'émiettant : il n'est plus rose.
+2. **Assaisonner.** Sauce d'huître, soja, une pincée de sucre, basilic : il tombe en 10 s.
+3. **Œuf.** Frit dans beaucoup d'huile chaude : bords croustillants, jaune coulant. Sur le riz, avec le poulet.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Tacos de poisson, chou croquant et sauce citron vert
+
+*Tacos de pescado · Amérique latine › Mexique › Basse-Californie · Plat*
+
+Niveau ⭐ · 4 portions · actif 12 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Poisson blanc saisi au cumin et paprika, chou finement émincé, sauce crème-citron vert : les tacos de Basse-Californie.
+
+**Ingrédients** : 400 g de poisson blanc (cabillaud, lieu) · 8 tortillas de maïs ou de blé · ¼ chou blanc · 1 c. à c. de cumin · 1 c. à c. de paprika · 4 c. à s. de crème · 1 citron vert · ½ bouquet de coriandre
+
+1. **Sauce.** Crème, jus de citron vert, sel ; chou émincé très fin, salé.
+2. **Poisson.** En gros morceaux, épices, sel ; 2-3 min par face : il s'effeuille.
+3. **Garnir.** Tortillas chaudes, chou, poisson, sauce, coriandre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pitas au poulet mariné, tzatziki et tomates
+
+*Pita kotópoulo · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 4 portions · actif 12 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle ou gril.
+
+Poulet citron-origan saisi, tzatziki, tomates et oignon rouge dans un pain pita chaud : le souvlaki de la maison.
+
+**Ingrédients** : 3 blancs de poulet · 4 pains pita · 1 citron · 1 c. à c. d'origan · 2 tomates · ½ oignon rouge · 200 g de tzatziki
+
+1. **Mariner.** Poulet en lanières, citron, origan, huile, sel, 5 min.
+2. **Saisir.** Poêle très chaude 6 min : doré, jus clair.
+3. **Garnir.** Pitas chauffées, tzatziki, poulet, tomates, oignon.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Quinoa sauté aux légumes et à l'œuf
+
+*Quinoa sauté · Amérique latine › Pérou · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Le quinoa remplace le riz dans un sauté : poivron, courgette, maïs, œuf et sauce soja. Complet, végétarien, sans gluten.
+
+**Ingrédients** : 150 g de quinoa · 1 poivron · 1 courgette · 100 g de maïs · 2 œufs · 2 c. à s. de sauce soja
+
+1. **Cuire.** Quinoa rincé, 12 min à l'eau bouillante salée ; égoutté.
+2. **Sauter.** Légumes en dés 5 min ; œufs brouillés à côté.
+3. **Mélanger.** Quinoa, soja, 2 min ; goûte.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Couscous express aux légumes et pois chiches
+
+*Couscous rapide · Afrique du Nord › Maroc · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, saladier.
+
+Semoule gonflée en 5 minutes, légumes sautés au ras el-hanout, pois chiches et raisins : le goût du couscous un soir de semaine.
+
+**Ingrédients** : 250 g de semoule moyenne · 2 courgettes · 2 carottes · 1 boîte de pois chiches · 2 c. à c. de ras el-hanout · 40 g de raisins secs *(facultatif)* · 20 g de beurre · 25 cl de bouillon de légumes
+
+1. **Semoule.** Arrosée de 25 cl de bouillon bouillant, couverte 5 min ; égrenée à la fourchette avec le beurre.
+2. **Légumes.** En dés, sautés 8 min avec les épices ; pois chiches et raisins 2 min.
+3. **Servir.** La semoule, les légumes par-dessus ; harissa à part.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Spaghetti à la tomate fraîche et au basilic
+
+*Spaghetti al pomodoro · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Tomates cerises éclatées dans l'huile d'olive et l'ail, basilic : la sauce la plus simple d'Italie, prête pendant que l'eau bout.
+
+**Ingrédients** : 400 g de spaghetti · 500 g de tomates cerises · 2 gousses d'ail · 4 c. à s. d'huile d'olive · 1 bouquet de basilic · 40 g de parmesan *(facultatif)*
+
+1. **Sauce.** Ail écrasé dans l'huile 1 min, tomates coupées en deux, 8 min : elles éclatent ; écrase-les un peu.
+2. **Lier.** Spaghetti cuits, 1 louche d'eau de cuisson, 1 min dans la sauce.
+3. **Servir.** Basilic déchiré, parmesan.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : cuire les pâtes
+
+---
+
+### Tartines de champignons à l'ail, œuf au plat
+
+*Mushrooms on toast · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Champignons dorés au beurre, ail et persil sur pain grillé, couronnés d'un œuf au plat : rustique et rassasiant.
+
+**Ingrédients** : 250 g de champignons · 2 tranches de pain de campagne · 2 œufs · 20 g de beurre · 1 gousse d'ail · 1 c. à s. de persil
+
+1. **Champignons.** Poêle chaude, beurre, champignons en lamelles sans les remuer 3 min : ils dorent ; ail, persil, sel.
+2. **Œufs.** Au plat à côté, 3 min : blanc pris, jaune coulant.
+3. **Dresser.** Pain grillé, champignons, œuf, poivre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Frittata aux courgettes et parmesan
+
+*Frittata di zucchine · Europe du Sud › Italie · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 8 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle allant au four (ou couvercle).
+
+Omelette épaisse aux courgettes et au parmesan, finie sous le gril : se mange chaude, tiède ou froide en pique-nique.
+
+**Ingrédients** : 6 œufs · 2 courgettes · 40 g de parmesan · 1 oignon · 2 c. à s. d'huile d'olive · 6 feuilles de basilic *(facultatif)*
+
+1. **Légumes.** Oignon et courgettes en fines rondelles, 6 min : tendres et un peu dorés.
+2. **Œufs.** Battus avec parmesan, sel ; versés, feu doux 6 min sans remuer : les bords prennent.
+3. **Finir.** 2-3 min sous le gril du four (ou couvert) : le dessus est pris et gonflé.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Burrito bowl végétarien
+
+*Burrito bowl · Amérique du Nord › États-Unis › Tex-Mex · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Riz, haricots noirs au cumin, maïs, tomate, avocat, cheddar et salsa : tout ce qu'il y a dans un burrito, sans la tortilla.
+
+**Ingrédients** : 400 g de riz cuit · 400 g de haricots noirs · 150 g de maïs · 1 avocat · 2 tomates · 80 g de cheddar · 1 citron vert · 1 c. à c. de cumin
+
+1. **Haricots.** Chauffés 3 min avec cumin, sel et un peu d'eau.
+2. **Préparer.** Tomates et avocat en dés, citron vert.
+3. **Dresser.** Riz, rangs de haricots, maïs, tomate, avocat, fromage, salsa.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Cabillaud vapeur, gingembre et cébette
+
+*Qīngzhēng yú · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, poissons, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Panier vapeur ou assiette sur casserole.
+
+Poisson cuit à la vapeur, arrosé d'huile chaude sur gingembre et cébette, sauce soja : délicat, très léger, cantonais.
+
+**Ingrédients** : 2 dos de cabillaud · 1 morceau (4 cm) de gingembre · 3 cébettes · 2 c. à s. de sauce soja · 2 c. à s. d'huile neutre · ½ bouquet de coriandre *(facultatif)*
+
+1. **Vapeur.** Poisson sur une assiette, au-dessus de l'eau frémissante, couvert, 8-10 min : la chair devient nacrée et s'effeuille.
+2. **Garnir.** Gingembre et cébette en fins bâtonnets sur le poisson ; soja.
+3. **Grésiller.** Huile très chaude versée dessus : ça crépite et parfume. Avec du riz.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : cuire à la vapeur
+
+---
+
+### Poulet sauté à la citronnelle
+
+*Gà xào sả ớt · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐ · 4 portions · actif 12 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok, casserole (riz).
+
+Poulet sauté à la citronnelle, à l'ail et au piment, un peu caramélisé à la sauce de poisson : parfumé et rapide.
+
+**Ingrédients** : 4 cuisses de poulet désossées (ou blancs) · 2 tiges de citronnelle · 2 gousses d'ail · 1 piment *(facultatif)* · 2 c. à s. de sauce de poisson · 1 c. à s. de sucre · 1 oignon
+
+1. **Préparer.** Citronnelle (partie tendre) hachée très fin, ail, piment ; poulet en morceaux.
+2. **Sauter.** Poulet 5 min à feu vif : doré ; oignon, citronnelle, ail 2 min.
+3. **Caraméliser.** Sucre et sauce de poisson, 1 min : ça brille et colle légèrement. Avec du riz.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tartines de sardines, citron et persil
+
+*Tostas de sardinha · Europe du Sud › Portugal · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grille-pain.
+
+Sardines à l'huile écrasées avec citron, persil et oignon rouge sur pain grillé frotté à l'ail : un dîner portugais en 10 minutes.
+
+**Ingrédients** : 1 boîte de sardines à l'huile · 4 tranches de pain de campagne · ½ citron · 1 c. à s. de persil · ¼ oignon rouge · 1 gousse d'ail
+
+1. **Griller.** Pain grillé, frotté à l'ail.
+2. **Écraser.** Sardines (arêtes comprises : elles sont tendres et riches en calcium), citron, persil, oignon.
+3. **Tartiner.** Poivre ; une salade verte à côté.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pâtes aux courgettes, feta et citron
+
+*Pâtes d'été · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Courgettes poêlées à l'ail, feta, zeste de citron et menthe : des pâtes d'été légères et fraîches.
+
+**Ingrédients** : 400 g de pâtes · 3 courgettes · 150 g de feta · 1 citron · 2 gousses d'ail · 6 feuilles de menthe · 3 c. à s. d'huile d'olive
+
+1. **Courgettes.** En demi-rondelles, poêle chaude 6 min : dorées sur les bords ; ail 1 min.
+2. **Lier.** Pâtes, un peu d'eau de cuisson, zeste et jus de citron.
+3. **Finir.** Feta émiettée, menthe, poivre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pizzas express sur tortilla
+
+*Pizza tortilla · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 8 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Four, plaque.
+
+Une tortilla comme pâte fine et croustillante : tomate, mozzarella, garniture au choix, 8 minutes au four. Les enfants garnissent eux-mêmes.
+
+**Ingrédients** : 4 tortillas de blé · 8 c. à s. de sauce tomate · 1 boule de mozzarella · 100 g de champignons *(facultatif)* · 1 poivron *(facultatif)* · 1 pincée d'origan
+
+1. **Préchauffer.** Four à 220 °C.
+2. **Garnir.** Sauce en couche fine, mozzarella, légumes en fines tranches, origan.
+3. **Cuire.** 7-8 min : le bord est doré et croustillant, le fromage bulle.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Steak haché maison aux oignons, purée minute
+
+*Steak haché · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : lait, moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Steaks hachés saisis, oignons fondus au beurre et déglacés : le classique du soir, bien fait.
+
+**Ingrédients** : 4 steaks hachés (5 %) · 2 oignons · 15 g de beurre · 1 c. à c. de moutarde · 1 c. à c. de vinaigre *(facultatif)*
+
+1. **Oignons.** Émincés, beurre, feu moyen 8 min : fondants et dorés ; un trait de vinaigre, réservés.
+2. **Saisir.** Steaks dans la poêle très chaude, 2-3 min par face (cuits à cœur pour les enfants : 70 °C, plus de rose).
+3. **Servir.** Oignons dessus, moutarde ; purée ou salade.
+
+- Viande hachée : toujours cuite à cœur pour les enfants, les femmes enceintes et les personnes fragiles.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : saisir
+
+---
+
+### Nouilles froides au beurre de cacahuète
+
+*Peanut noodles · Asie de l'Est › Food fusion · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Nouilles enrobées d'une sauce beurre de cacahuète, soja, citron vert et sésame, concombre croquant : tiède ou froid, végétarien.
+
+**Ingrédients** : 200 g de nouilles (blé ou riz) · 3 c. à s. de beurre de cacahuète · 2 c. à s. de sauce soja · 1 citron vert · 1 c. à c. de miel · ½ concombre · 1 c. à s. de cacahuètes *(facultatif)* · 2 cébettes
+
+1. **Cuire.** Nouilles selon le paquet, rincées à l'eau froide.
+2. **Sauce.** Beurre de cacahuète, soja, citron vert, miel, 4 c. à s. d'eau chaude : lisse et nappante.
+3. **Mélanger.** Nouilles, sauce, concombre en bâtonnets, cébette, cacahuètes.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tagliatelles au saumon fumé et citron
+
+*Pâtes au saumon · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé
+- ⚠️ **Allergènes** : gluten, lait, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole.
+
+Crème citronnée, saumon fumé en lanières, aneth : les pâtes du dimanche soir, en 15 minutes.
+
+**Ingrédients** : 400 g de tagliatelles · 150 g de saumon fumé · 20 cl de crème · 1 citron · 1 c. à s. d'aneth *(facultatif)*
+
+1. **Cuire.** Tagliatelles.
+2. **Sauce.** Crème, zeste de citron, poivre, chauffée 2 min (pas de sel : le saumon est salé).
+3. **Mélanger.** Pâtes, sauce, saumon en lanières hors du feu, aneth.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Croque au poulet, pesto et mozzarella
+
+*Croque pesto · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle ou appareil à croque.
+
+Pain de mie, pesto, poulet cuit, mozzarella et tomate, doré à la poêle : un croque sans jambon, très gourmand.
+
+**Ingrédients** : 4 tranches de pain de mie · 100 g de poulet cuit (reste de rôti) · 2 c. à s. de pesto · ½ boule de mozzarella · 1 tomate · 10 g de beurre
+
+1. **Monter.** Pesto, poulet, tomate, mozzarella entre deux tranches.
+2. **Dorer.** Beurré dehors, poêle moyenne couverte 3 min par face : doré, le fromage fond.
+3. **Couper.** En triangles ; salade.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Galettes de courgette à la feta
+
+*Kolokithokeftedes · Europe du Sud › Grèce · Plat* · Fêtes : Apéritif dînatoire
+
+Niveau ⭐ · 4 portions · actif 12 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Courgette râpée, feta, menthe, œuf et farine, en petites galettes dorées : végétarien, avec une sauce yaourt.
+
+**Ingrédients** : 2 courgettes · 120 g de feta · 1 œuf · 4 c. à s. de farine · 6 feuilles de menthe · 4 c. à s. d'huile · 4 c. à s. de yaourt grec *(facultatif)*
+
+1. **Presser.** Courgettes râpées, salées, pressées fort dans un torchon : il faut enlever l'eau.
+2. **Mélanger.** Feta, œuf, farine, menthe, poivre.
+3. **Cuire.** Cuillerées aplaties dans l'huile chaude, 3 min par face : dorées. Avec le yaourt.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Riz sauté végétarien aux légumes croquants
+
+*Riz sauté aux légumes · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Wok.
+
+Riz de la veille sauté avec carotte, poivron, petits pois, maïs, œuf et sauce soja : vide-frigo coloré.
+
+**Ingrédients** : 600 g de riz cuit froid · 1 carotte · 1 poivron · 100 g de petits pois · 100 g de maïs · 2 œufs · 3 c. à s. de sauce soja
+
+1. **Légumes.** En petits dés, 3 min à feu vif.
+2. **Œufs.** Poussés sur le côté, brouillés.
+3. **Riz.** Ajouté, émietté, 4 min : il grésille ; soja ; goûte.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Soupe de nouilles au miso, tofu et épinards
+
+*Miso rāmen végétarien · Asie de l'Est › Japon · Entrée*
+
+Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Miso
+- ⚠️ **Allergènes** : gluten, sésame, soja ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole.
+
+Bouillon au miso, nouilles, tofu, épinards et cébette : un bol chaud et complet en un quart d'heure.
+
+**Ingrédients** : 150 g de nouilles (ramen ou soba) · 2 c. à s. de miso · 150 g de tofu · 100 g d'épinards · 2 cébettes · 1 c. à c. de sésame
+
+1. **Bouillon.** 80 cl d'eau frémissante ; miso délayé dans une louche puis ajouté (il ne doit pas bouillir).
+2. **Cuire.** Nouilles à part ; tofu en dés et épinards 1 min dans le bouillon.
+3. **Servir.** Nouilles dans les bols, bouillon, cébette, sésame.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+## 2.14 France (1/3) : Bretagne, Normandie, Nord, Est.
 
 ### Far breton aux pruneaux
 
@@ -8205,7 +10039,7 @@ Le choc thermique (pâte froide, four chaud) fait la fameuse bosse. Moelleuses, 
 
 ---
 
-## 2.13 France (2/3) : Est, Bourgogne, Alpes, Lyonnais, Provence, Corse.
+## 2.15 France (2/3) : Est, Bourgogne, Alpes, Lyonnais, Provence, Corse.
 
 ### Baeckeoffe de la semaine (version simple)
 
@@ -8744,7 +10578,7 @@ Un gâteau sans farine, léger et citronné, au fromage frais corse (ou à la ri
 
 ---
 
-## 2.14 France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer.
+## 2.16 France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer.
 
 ### Cassoulet de Castelnaudary (version canard-bœuf)
 
@@ -9429,7 +11263,7 @@ Des pains frits gonflés qu'on ouvre et garnit : poulet, crudités, sauce chien,
 
 ---
 
-## 2.15 Afrique du Nord : Maroc, Algérie, Tunisie, Égypte, Libye.
+## 2.17 Afrique du Nord : Maroc, Algérie, Tunisie, Égypte, Libye.
 
 ### Tajine de poulet au citron confit et aux olives
 
@@ -9931,7 +11765,7 @@ Gâteau de semoule au yaourt et à la noix de coco, imbibé de sirop citronné :
 
 ---
 
-## 2.16 Food fusion et compléments du monde (classiques manquants, plats de rue, végétarien).
+## 2.18 Food fusion et compléments du monde (classiques manquants, plats de rue, végétarien).
 
 ### French tacos maison (poulet, frites, sauce fromagère)
 
@@ -10739,7 +12573,798 @@ Légumes fondants sous un crumble croustillant au parmesan et aux noisettes : le
 
 ---
 
-## 2.17 Moyen-Orient & Caucase, Asie du Sud.
+## 2.19 Vague 3 · Classiques manquants et régions sous-représentées (audit UX du 16/10/2026) :
+
+### Fajitas au poulet et aux poivrons
+
+*Fajitas de pollo · Amérique du Nord › États-Unis › Tex-Mex · Plat* · Fêtes : Apéritif dînatoire, Anniversaire
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 12 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle ou plancha.
+
+Lanières de poulet marinées citron vert-épices, poivrons et oignons saisis à feu vif, tortillas chaudes, guacamole et crème : chacun garnit la sienne.
+
+**Ingrédients** : 3 blancs de poulet · 8 tortillas de blé · 3 poivrons de couleurs · 2 oignons · 2 c. à c. de mélange fajitas (ou cumin + paprika + origan) · 2 citrons verts · 1 avocat *(facultatif)* · 4 c. à s. de crème *(facultatif)* · ½ bouquet de coriandre *(facultatif)*
+
+1. **Mariner.** Poulet en lanières, épices, jus d'un citron vert, huile, sel, 10 min.
+2. **Saisir.** Poêle fumante : poulet 5 min, réservé ; poivrons et oignons en lanières 5 min : colorés mais croquants ; poulet remis.
+3. **Servir.** Tortillas chauffées, avocat écrasé au citron vert, crème, coriandre ; chacun roule la sienne.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Shawarma de poulet au four, sauce à l'ail
+
+*Shawarma djaj · Moyen-Orient › Liban · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichons, oignons au vinaigre
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Four, plaque.
+
+Cuisses de poulet marinées aux épices (cumin, paprika, cannelle, citron), rôties puis émincées, dans un pain avec toum, pickles et tomates.
+
+**Ingrédients** : 6 cuisses de poulet désossées · 4 pains libanais · 1 c. à c. de cumin · 1 c. à c. de paprika · ½ c. à c. de cannelle · 1 citron · 125 g de yaourt · 4 c. à s. de toum (ou sauce yaourt-ail) · 4 cornichons ou navets au vinaigre · 2 tomates
+
+1. **Mariner.** Poulet, yaourt, épices, citron, ail, sel ; 1 h (ou la veille).
+2. **Rôtir.** 220 °C, 25 min, puis 3 min sous le gril : bords grillés et caramélisés ; émincé finement.
+3. **Rouler.** Pain, toum, poulet, tomates, pickles ; roulé serré, 1 min à la poêle.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Poulet pané croustillant au four
+
+*Poulet pané · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Four, plaque, 3 assiettes creuses.
+
+Lanières de poulet passées dans la farine, l'œuf et la chapelure au parmesan, cuites au four : croustillantes sans friture.
+
+**Ingrédients** : 4 blancs de poulet · 100 g de chapelure (ou panko) · 30 g de parmesan · 2 œufs · 50 g de farine · 1 c. à c. de paprika · 3 c. à s. d'huile
+
+1. **Paner.** Lanières dans la farine, puis l'œuf battu salé, puis la chapelure au parmesan et paprika (une main sèche, une main mouillée).
+2. **Cuire.** Plaque huilée, un filet d'huile dessus ; 210 °C, 18-20 min en retournant à mi-cuisson : dorés, jus clair.
+3. **Servir.** Citron, sauce yaourt ou ketchup maison, frites au four.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : paner à l'anglaise
+
+---
+
+### Cordon bleu maison (dinde, jambon de dinde, emmental)
+
+*Cordon bleu · Europe du Nord › Suisse · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, 3 assiettes, film.
+
+Escalope aplatie, roulée autour de jambon et de fromage, panée et dorée : le cordon bleu fait maison, sans porc ici, filant au cœur.
+
+**Ingrédients** : 4 escalopes de dinde fines · 4 tranches de jambon de dinde · 4 tranches d'emmental · 2 œufs · 50 g de farine · 100 g de chapelure · 30 g de beurre · 3 c. à s. d'huile
+
+1. **Aplatir.** Escalopes entre deux films, au fond d'une casserole : 5 mm d'épaisseur.
+2. **Garnir et fermer.** Jambon et fromage sur une moitié, plie, presse les bords ; farine, œuf, chapelure (deux couches sur les bords pour que le fromage ne s'échappe pas).
+3. **Cuire.** Huile et beurre moyens, 6-7 min par face : bien doré ; 2 min de repos.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : paner à l'anglaise
+
+---
+
+### Raclette à la maison (sans appareil possible)
+
+*Raclette · Europe du Nord › Suisse › Valais · Plat* · Fêtes : Repas de famille, Noël
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichons, oignons au vinaigre
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Appareil à raclette, ou plat à four.
+
+Fromage à raclette fondu sur des pommes de terre en robe des champs, cornichons, oignons au vinaigre et viande séchée : le dîner d'hiver convivial.
+
+**Ingrédients** : 1,2 kg de fromage à raclette · 1,5 kg de petites pommes de terre · 200 g de viande séchée (Grisons, bresaola) · 1 bocal de cornichons et oignons au vinaigre · 1 salade verte · 1 pincée de poivre
+
+1. **Pommes de terre.** Avec la peau, 20-25 min à l'eau salée : la lame entre sans forcer ; gardées au chaud sous un torchon.
+2. **Fondre.** Dans les poêlons de l'appareil, ou en tranches sur un plat au four sous le gril (3 min : ça bulle).
+3. **Servir.** Le fromage nappé sur les pommes de terre ouvertes, poivre, cornichons, viande, salade verte (indispensable).
+
+**Conservation** : Les restes de fromage : en croque-monsieur ou en gratin de pâtes.
+
+---
+
+### Tarte aux pommes de grand-mère (compote et lamelles)
+
+*Tarte aux pommes · France › Cuisine du quotidien · Dessert* · Fêtes : Repas de famille
+
+Niveau ⭐ · 8 portions · actif 30 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à tarte, four.
+
+Pâte sablée, une couche de compote maison, des lamelles de pommes en rosace dorées au beurre et au sucre : la tarte de toutes les familles.
+
+**Ingrédients** : 1 pâte brisée ou sablée · 6 pommes (dont 2 pour la compote) · 40 g de sucre · 30 g de beurre · ½ c. à c. de cannelle *(facultatif)* · 2 c. à s. de confiture d'abricot (nappage) *(facultatif)*
+
+1. **Compote.** 2 pommes en dés, 2 c. à s. d'eau, 10 g de sucre, 10 min couvert : écrasées à la fourchette.
+2. **Monter.** Pâte dans le moule piquée, compote, 4 pommes en fines lamelles en rosace serrée ; beurre en noisettes, sucre, cannelle.
+3. **Cuire.** 190 °C, 40 min : bords bien dorés, pommes légèrement caramélisées ; confiture chauffée au pinceau.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : foncer une pâte
+
+---
+
+### Meat pie australien
+
+*Aussie meat pie · Océanie › Australie · Plat* · Fêtes : Anniversaire
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 35 min · coût €€
+
+- 🟡 Porc possible : Bouillon cube bœuf
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, œufs, poissons ; **possibles selon marque** : lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moules à tartelette (ou un moule à tourte), four.
+
+La tourte individuelle des stades australiens : bœuf haché mijoté en sauce brune épaisse, pâte brisée dessous, feuilletée dessus, et ketchup.
+
+**Ingrédients** : 600 g de bœuf haché · 1 pâte brisée · 1 pâte feuilletée · 1 oignon · 40 cl de bouillon de bœuf · 2 c. à s. de sauce Worcestershire · 2 c. à s. de concentré de tomate · 2 c. à s. de farine · 1 œuf (dorure)
+
+1. **Garniture.** Oignon, viande 8 min : dorée ; farine 1 min ; bouillon, sauces ; 20 min : très épaisse (elle ne doit pas couler). Refroidir.
+2. **Monter.** Pâte brisée dans les moules, garniture, couvercle de feuilletée soudé à l'eau ; une entaille, dorure.
+3. **Cuire.** 200 °C, 30-35 min : gonflé et doré.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Damper (pain du bush australien)
+
+*Damper · Océanie › Australie · Pain*
+
+Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Four (ou cocotte en fonte).
+
+Le pain des stockmen australiens, cuit autrefois dans les braises : farine, levure chimique, beurre et lait, prêt en 40 minutes, sans pétrissage.
+
+**Ingrédients** : 450 g de farine · 4 c. à c. de levure chimique · 60 g de beurre froid · 30 cl de lait · 1 c. à c. de sel
+
+1. **Sabler.** Farine, levure, sel ; beurre en dés frotté du bout des doigts : sable grossier.
+2. **Former.** Lait d'un coup, mélange juste ; boule aplatie, croix au couteau.
+3. **Cuire.** 200 °C, 30 min : creux quand on tape dessous. Tiède avec beurre et golden syrup (ou miel).
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Sapasui (vermicelles sautés samoans)
+
+*Sapasui · Océanie › Samoa · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou grande sauteuse.
+
+Le chop suey des îles Samoa, plat de toutes les fêtes : vermicelles de soja, bœuf (ou poulet), légumes, sauce soja et gingembre.
+
+**Ingrédients** : 200 g de vermicelles de soja · 400 g de bœuf en lanières (ou poulet) · 1 oignon · 2 carottes · ¼ chou · 4 c. à s. de sauce soja · 1 morceau (3 cm) de gingembre · 2 gousses d'ail
+
+1. **Tremper.** Vermicelles 10 min dans l'eau chaude, égouttés, coupés aux ciseaux.
+2. **Sauter.** Viande 3 min à feu vif ; ail, gingembre, légumes en lanières 4 min.
+3. **Lier.** Vermicelles, soja, un verre d'eau ; 5 min en remuant : ils boivent la sauce et deviennent brillants.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Palusami (feuilles au lait de coco)
+
+*Palusami · Océanie › Samoa · Entrée*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four, papier aluminium.
+
+Paquets de feuilles vertes garnis d'oignon et de crème de coco, cuits au four jusqu'à devenir fondants : le plat du four polynésien (umu).
+
+**Ingrédients** : 400 g de feuilles de taro, de manioc ou d'épinard · 40 cl de crème de coco · 1 oignon · 1 citron vert · 1 pincée de sel
+
+1. **Garnir.** Feuilles en coupelles (plusieurs épaisseurs), oignon émincé, crème de coco salée et citronnée.
+2. **Fermer.** Chaque paquet dans du papier aluminium.
+3. **Cuire.** 180 °C, 40 min : feuilles fondantes, crème épaisse. Avec du taro, de la patate douce ou du riz.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pikelets (petites crêpes épaisses)
+
+*Pikelets · Océanie › Nouvelle-Zélande · Goûter / dessert*
+
+Niveau ⭐ · 20 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Les petites crêpes épaisses du goûter néo-zélandais : une pâte simple, cuites en ronds de la taille d'une paume, avec beurre et confiture.
+
+**Ingrédients** : 200 g de farine · 2 c. à c. de levure chimique · 1 œuf · 20 cl de lait · 40 g de sucre · 20 g de beurre fondu
+
+1. **Pâte.** Farine, levure, sucre ; œuf, lait, beurre : épaisse, sans grumeaux.
+2. **Cuire.** Cuillerées dans la poêle beurrée moyenne ; retourne quand des bulles apparaissent (1-2 min), puis 1 min.
+3. **Servir.** Tièdes, beurre et confiture.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Soupe de potiron rôti à l'australienne
+
+*Pumpkin soup · Océanie › Australie · Entrée*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Four, casserole, mixeur.
+
+Potiron rôti au four avec oignon et ail, mixé avec du bouillon et une pointe de muscade : la soupe préférée des Australiens.
+
+**Ingrédients** : 1,2 kg de potiron ou butternut · 1 oignon · 3 gousses d'ail · 1 l de bouillon de légumes · 1 pincée de muscade · 10 cl de crème *(facultatif)* · 2 c. à s. de graines de courge *(facultatif)*
+
+1. **Rôtir.** Potiron en morceaux, oignon, ail en chemise ; huile, sel ; 200 °C, 35 min : caramélisé sur les bords.
+2. **Mixer.** Avec le bouillon chaud, ail pressé hors de sa peau, muscade : très lisse.
+3. **Servir.** Crème en tourbillon, graines grillées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Poulet et légumes racines façon hangi (au four)
+
+*Hāngī · Océanie › Nouvelle-Zélande · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grand plat à four, papier aluminium.
+
+Le hangi maori cuit dans un four creusé dans la terre ; à la maison : poulet, patate douce (kumara), potiron et chou cuits longtemps à l'étouffée, fondants et fumés.
+
+**Ingrédients** : 6 cuisses de poulet · 3 patates douces · 600 g de potiron · 4 pommes de terre · ¼ chou vert · 2 c. à c. de paprika fumé · 1 c. à c. de thym · 20 cl d'eau
+
+1. **Préparer.** Légumes en gros morceaux au fond du plat, poulet dessus, paprika fumé (pour le goût de la terre), thym, sel, eau.
+2. **Étouffer.** Feuilles de chou par-dessus, papier aluminium bien serré.
+3. **Cuire.** 170 °C, 1 h 30 : la viande se détache, les légumes fondent ; 10 min découvert pour dorer.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Mee goreng (nouilles sautées malaisiennes)
+
+*Mee goreng mamak · Asie du Sud-Est › Malaisie · Plat*
+
+Niveau ⭐ · 2 portions · actif 15 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, soja ; **possibles selon marque** : crustacés
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Wok.
+
+Nouilles jaunes sautées à la sauce soja sucrée, sambal, tofu, chou, œuf et citron vert : le plat de rue des échoppes mamak.
+
+**Ingrédients** : 300 g de nouilles aux œufs · 2 c. à s. de kecap manis · 1 c. à s. de sauce soja · 1 c. à c. de sambal oelek · 100 g de tofu · ¼ chou chinois · 2 œufs · 1 citron vert · 2 gousses d'ail
+
+1. **Préparer.** Nouilles cuites 3 min, égouttées ; tofu en dés doré.
+2. **Sauter.** Ail, sambal 30 s ; chou 1 min ; œufs brouillés ; nouilles et sauces, 2 min : elles brillent et caramélisent un peu.
+3. **Servir.** Citron vert pressé.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Gado-gado (légumes, œuf et sauce cacahuète)
+
+*Gado-gado · Asie du Sud-Est › Indonésie › Java · Plat*
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, mixeur.
+
+Légumes cuits et crus, pommes de terre, œuf dur, tofu et une sauce cacahuète épaisse au citron vert : complet, végétarien, festif.
+
+**Ingrédients** : 4 pommes de terre · 200 g de haricots verts · 200 g de chou · 100 g de germes de soja · 4 œufs durs · 200 g de tofu · 150 g de beurre de cacahuète · 1 c. à s. de kecap manis · 1 citron vert · 1 piment *(facultatif)*
+
+1. **Cuire.** Pommes de terre 15 min, haricots 6 min, chou 2 min ; tofu en dés doré.
+2. **Sauce.** Beurre de cacahuète, kecap manis, citron vert, piment, eau chaude : épaisse et nappante.
+3. **Dresser.** Légumes en tas, œufs, tofu, germes crus ; sauce par-dessus.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Satay de poulet, sauce cacahuète
+
+*Sate ayam · Asie du Sud-Est › Indonésie › Madura · Plat* · Fêtes : Barbecue d'été, Apéritif dînatoire
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, soja ; **possibles selon marque** : crustacés
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Brochettes, gril ou poêle-gril.
+
+Petites brochettes de poulet marinées au curcuma et à la citronnelle, grillées, avec une sauce cacahuète : le snack des marchés de nuit.
+
+**Ingrédients** : 600 g de cuisses de poulet désossées · 1 c. à c. de curcuma · 1 tige de citronnelle · 2 c. à s. de sauce soja · 1 c. à s. de sucre · 4 c. à s. de sauce satay · ½ concombre *(facultatif)*
+
+1. **Mariner.** Poulet en petits cubes, curcuma, citronnelle hachée fin, soja, sucre, 30 min ; piqué sur brochettes trempées.
+2. **Griller.** 8-10 min en retournant : bords caramélisés, cuit à cœur.
+3. **Servir.** Sauce satay tiède, concombre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Adobo de poulet (Philippines)
+
+*Adobong manok · Asie du Sud-Est › Philippines · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le plat national philippin : poulet mijoté dans le vinaigre, la sauce soja, l'ail, le laurier et le poivre, puis réduit jusqu'à laquer.
+
+**Ingrédients** : 8 morceaux de poulet (cuisses, pilons) · 10 cl de vinaigre (cidre ou riz) · 8 c. à s. de sauce soja · 1 tête d'ail · 3 feuilles de laurier · 1 c. à c. de poivre en grains · 1 c. à s. de sucre
+
+1. **Mariner.** Poulet, vinaigre, soja, ail écrasé, laurier, poivre, 30 min (facultatif).
+2. **Mijoter.** Tout dans la cocotte avec 20 cl d'eau, 30 min sans remuer au début (le vinaigre s'adoucit).
+3. **Laquer.** Poulet sorti et doré à la poêle ; sauce réduite avec le sucre jusqu'à napper ; remets le poulet. Riz blanc.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Sinigang aux crevettes (soupe aigre au tamarin)
+
+*Sinigang na hipon · Asie du Sud-Est › Philippines · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Faitout.
+
+Bouillon acidulé au tamarin, tomates, radis, haricots verts, épinards et crevettes : la soupe réconfortante des Philippines.
+
+**Ingrédients** : 400 g de crevettes crues · 2 c. à s. de pâte de tamarin · 2 tomates · 1 oignon · 1 radis daikon (ou 6 radis) · 150 g de haricots verts · 100 g d'épinards · 2 c. à s. de sauce de poisson
+
+1. **Bouillon.** 1,5 l d'eau, oignon, tomates en quartiers, 10 min ; tamarin délayé, sauce de poisson : franchement acide.
+2. **Légumes.** Radis en rondelles 5 min, haricots 3 min.
+3. **Finir.** Crevettes 2 min (roses), épinards ; riz à part.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Bánh xèo (crêpes croustillantes vietnamiennes)
+
+*Bánh xèo · Asie du Sud-Est › Vietnam › Sud · Plat* · Fêtes : Apéritif dînatoire
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, poissons, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle anti-adhésive 26 cm avec couvercle.
+
+Crêpe fine à la farine de riz, au curcuma et au lait de coco, croustillante, garnie de crevettes et de germes de soja, mangée dans une feuille de salade avec des herbes et du nuoc-cham.
+
+**Ingrédients** : 200 g de farine de riz · 20 cl de lait de coco · 1 c. à c. de curcuma · 300 g de crevettes · 200 g de germes de soja · 1 salade · 1 bouquet de menthe · 8 c. à s. de nuoc-cham · 2 cébettes
+
+1. **Pâte.** Farine de riz, curcuma, lait de coco, 30 cl d'eau, sel, cébette : fluide comme une pâte à crêpe ; 30 min de repos.
+2. **Cuire.** Poêle très chaude huilée : crevettes 1 min, louche de pâte en tournant (ça grésille), germes ; couvert 2 min, découvert 3 min : les bords décollent et croustillent ; plie en deux.
+3. **Manger.** Un morceau dans une feuille de salade avec la menthe, trempé dans le nuoc-cham.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Poulet caramélisé au gingembre (gà kho gừng)
+
+*Gà kho gừng · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte ou sauteuse.
+
+Morceaux de poulet mijotés dans un caramel salé à la sauce de poisson et au gingembre : sucré-salé, laqué, à manger sur du riz.
+
+**Ingrédients** : 800 g de cuisses de poulet en morceaux · 1 morceau (6 cm) de gingembre · 3 c. à s. de sucre · 3 c. à s. de sauce de poisson · 1 échalote · 1 c. à c. de poivre · 2 cébettes
+
+1. **Caramel.** Sucre et 2 c. à s. d'eau, à sec, jusqu'à brun ambré (odeur de noisette) ; hors du feu, sauce de poisson (attention, ça crache).
+2. **Mijoter.** Poulet, gingembre en bâtonnets, échalote, 15 cl d'eau, couvert 20 min, puis découvert 10 min : la sauce réduit et laque.
+3. **Servir.** Poivre, cébette, riz.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : caramel
+
+---
+
+### Lumpia (rouleaux frits philippins au poulet)
+
+*Lumpiang shanghai · Asie du Sud-Est › Philippines · Entrée* · Fêtes : Anniversaire, Apéritif dînatoire
+
+Niveau ⭐⭐ · 24 portions · actif 40 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre de riz, Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle profonde, thermomètre.
+
+Rouleaux fins comme des cigares, farcis de poulet haché, carotte et oignon, frits jusqu'à être très croustillants : avec une sauce aigre-douce.
+
+**Ingrédients** : 400 g de poulet haché · 24 feuilles de brick ou de riz · 1 carotte · 1 oignon · 2 gousses d'ail · 1 œuf · 1 c. à s. de sauce soja · 1 l d'huile de friture · 1 bol de sauce aigre-douce *(facultatif)*
+
+1. **Farce.** Poulet, carotte et oignon râpés fin, ail, œuf, soja, poivre.
+2. **Rouler.** Un boudin fin de farce sur une feuille, roulé serré, bords collés à l'eau.
+3. **Frire.** 170 °C, 5-6 min : doré et cuit à cœur ; égoutté sur papier. Sauce à part.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : frire en sécurité
+
+---
+
+### Pilau aux épices (riz de la côte swahilie)
+
+*Pilau · Afrique subsaharienne › Tanzanie › Zanzibar · Plat* · Fêtes : Ramadan / Aïd, Repas de famille
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte avec couvercle.
+
+Riz cuit avec bœuf (ou poulet), oignons dorés et le mélange pilau (cumin, cardamome, cannelle, clou, poivre) : le plat des fêtes de Zanzibar à Nairobi.
+
+**Ingrédients** : 400 g de riz basmati · 500 g de bœuf en cubes (ou poulet) · 2 oignons · 3 gousses d'ail · 1 morceau de gingembre · 1 c. à c. de cumin · 4 gousses de cardamome · 1 bâton de cannelle · 4 clous de girofle · 2 tomates *(facultatif)*
+
+1. **Viande.** Mijotée 40 min dans 80 cl d'eau salée avec l'ail et le gingembre ; garde le bouillon.
+2. **Oignons.** Dorés 10 min (bien bruns : ils donnent la couleur) ; épices 1 min ; viande ; riz rincé 2 min.
+3. **Cuire.** 70 cl de bouillon, couvert, feu très doux 15 min ; 10 min de repos. Avec un kachumbari (tomate-oignon-piment).
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Sukuma wiki (chou kale sauté à la tomate)
+
+*Sukuma wiki · Afrique subsaharienne › Kenya · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+« Ce qui fait tenir la semaine » en swahili : chou kale émincé sauté avec oignon et tomate, le légume de tous les repas kenyans, avec l'ugali.
+
+**Ingrédients** : 1 botte de chou kale (ou chou vert) · 1 oignon · 2 tomates · 1 pincée de piment *(facultatif)* · 2 c. à s. d'huile
+
+1. **Émincer.** Le kale en lanières très fines (roulé puis coupé).
+2. **Sauter.** Oignon 4 min, tomates 3 min : une petite sauce ; kale, sel, 5 min : tendre mais encore vert.
+3. **Servir.** Avec ugali, riz ou chapati.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Ugali (pâte ferme de maïs)
+
+*Ugali · Afrique subsaharienne › Kenya · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole à fond épais, spatule solide.
+
+Farine de maïs blanc cuite dans l'eau jusqu'à former une pâte ferme qu'on mange avec les doigts en saucant ragoûts et légumes : le pain de l'Afrique de l'Est.
+
+**Ingrédients** : 250 g de farine de maïs (blanche si possible) · 60 cl d'eau · 1 pincée de sel
+
+1. **Cuire.** Eau salée à ébullition ; farine en pluie en remuant ; ça épaissit vite.
+2. **Travailler.** Feu doux, 6-8 min en écrasant et retournant contre la paroi à la spatule : la pâte se détache des bords et forme une boule.
+3. **Servir.** Démoulée en dôme ; on en prend un morceau, on y creuse un creux du pouce pour saucer.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Nyama choma (viande grillée kényane, kachumbari)
+
+*Nyama choma · Afrique subsaharienne › Kenya · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Barbecue ou gril du four.
+
+La grillade du week-end au Kenya : agneau (ou chèvre, bœuf) mariné au citron et à l'ail, grillé lentement, servi avec kachumbari (salade tomate-oignon-piment).
+
+**Ingrédients** : 1,2 kg d'épaule ou de côtelettes d'agneau · 2 citrons · 4 gousses d'ail · 3 tomates · 1 oignon rouge · 1 piment · ½ bouquet de coriandre
+
+1. **Mariner.** Viande en morceaux, citron, ail, sel, 1 h.
+2. **Griller.** Braise moyenne (ou gril du four), 25-30 min en retournant : croûte dorée, cœur juteux.
+3. **Kachumbari.** Tomates et oignon en petits dés, piment, coriandre, citron, sel ; avec l'ugali.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Mandazi (beignets swahilis à la cardamome)
+
+*Mandazi · Afrique subsaharienne › Tanzanie › Côte swahilie · Goûter / dessert* · Fêtes : Ramadan / Aïd
+
+Niveau ⭐ · 20 portions · actif 25 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole profonde, thermomètre.
+
+Beignets triangulaires au lait de coco et à la cardamome, légers et dorés : le petit-déjeuner et le goûter de toute la côte est-africaine, avec un chai.
+
+**Ingrédients** : 400 g de farine · 20 cl de lait de coco · 60 g de sucre · 1 c. à c. de levure boulangère · ½ c. à c. de cardamome moulue · 1 œuf · 1 l d'huile de friture
+
+1. **Pâte.** Tout mélangé, pétri 5 min : souple ; 45 min au chaud : elle gonfle.
+2. **Couper.** Étalée sur 1 cm, disques coupés en quatre triangles.
+3. **Frire.** 170 °C, 2 min par face : gonflés et dorés ; égouttés.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : frire en sécurité
+
+---
+
+### Shiro (crème de pois chiche éthiopienne au berbéré)
+
+*Shiro wat · Afrique subsaharienne › Éthiopie · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole.
+
+Farine de pois chiche cuite en crème épaisse avec oignon, ail, tomate et berbéré : le plat des jours de jeûne en Éthiopie, végétalien, à saucer avec l'injera ou du pain.
+
+**Ingrédients** : 100 g de farine de pois chiche · 2 oignons · 3 gousses d'ail · 1 tomate · 1 c. à s. de berbéré · 3 c. à s. d'huile
+
+1. **Base.** Oignons hachés très fin, cuits à sec 5 min puis avec l'huile 5 min ; ail, tomate, berbéré 2 min.
+2. **Épaissir.** 60 cl d'eau ; farine en pluie en fouettant.
+3. **Cuire.** 10-15 min à feu doux en remuant : crème lisse et épaisse ; sel.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Injera (galette fermentée de teff)
+
+*Injera · Afrique subsaharienne › Éthiopie · Pain*
+
+Niveau ⭐⭐⭐ · 10 portions · actif 30 min · repos/cuisson 48 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle anti-adhésive avec couvercle, bocal.
+
+La grande crêpe spongieuse et acidulée qui sert d'assiette et de couvert en Éthiopie : farine de teff fermentée deux à trois jours.
+
+**Ingrédients** : 300 g de farine de teff · 60 cl d'eau · 1 pincée de levure boulangère · 1 pincée de sel
+
+1. **Fermenter.** Teff, eau, levure : pâte fluide, couverte d'un torchon, 2 à 3 jours à température ambiante : elle sent aigre et fait des bulles.
+2. **Cuire.** Sel ; une louche en spirale dans la poêle chaude sans matière grasse ; dès que des trous apparaissent partout, couvercle 1 min : sans retourner.
+3. **Servir.** Les plats (shiro, misir wot, doro wat) posés directement dessus.
+
+**Conservation** : 2 jours, emballée.
+
+---
+
+### Arroz con pollo (riz au poulet latino)
+
+*Arroz con pollo · Amérique latine › Pérou · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 35 min · coût €€
+
+- 🟡 Porc possible : Bouillon cube volaille
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri ; **possibles selon marque** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le riz au poulet de toute l'Amérique latine : poulet doré, riz cuit dans un bouillon vert à la coriandre (Pérou), petits pois, poivron et maïs.
+
+**Ingrédients** : 6 cuisses de poulet · 400 g de riz · 1 bouquet de coriandre · 1 poivron · 150 g de petits pois · 100 g de maïs · 1 oignon · 3 gousses d'ail · 80 cl de bouillon de volaille
+
+1. **Dorer.** Poulet 8 min, réservé ; oignon, ail, poivron 5 min.
+2. **Bouillon vert.** Coriandre mixée avec 20 cl de bouillon ; versée avec le reste du bouillon et le riz.
+3. **Cuire.** Poulet par-dessus, couvert 20 min à feu doux ; petits pois et maïs 5 min ; repos 5 min.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Gallo pinto (riz aux haricots noirs)
+
+*Gallo pinto · Amérique latine › Costa Rica · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs, poissons ; **possibles selon marque** : gluten, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Riz et haricots noirs sautés avec oignon, poivron, coriandre et un peu de sauce Worcestershire : le petit-déjeuner national du Costa Rica, avec un œuf.
+
+**Ingrédients** : 400 g de riz cuit (de la veille) · 400 g de haricots noirs · 1 oignon · 1 poivron rouge · ½ bouquet de coriandre · 1 c. à s. de sauce Worcestershire *(facultatif)* · 4 œufs (facultatif) *(facultatif)*
+
+1. **Base.** Oignon et poivron 5 min.
+2. **Sauter.** Haricots avec un peu de leur jus 3 min ; riz, sauce, 5 min : le riz prend la couleur des haricots.
+3. **Servir.** Coriandre ; œuf au plat, avocat, plantain.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Ropa vieja (bœuf effiloché cubain)
+
+*Ropa vieja · Amérique latine › Cuba · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 2 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+« Vieux vêtements » : bœuf mijoté longtemps puis effiloché dans une sauce tomate aux poivrons, oignon, cumin et olives. Avec riz, haricots noirs et plantain.
+
+**Ingrédients** : 1,2 kg de paleron ou bavette · 2 poivrons · 2 oignons · 400 g de tomates pelées · 4 gousses d'ail · 1 c. à c. de cumin · 80 g d'olives vertes · 2 feuilles de laurier
+
+1. **Mijoter.** Bœuf dans l'eau salée avec laurier, 2 h : il se défait à la fourchette ; effiloché.
+2. **Sauce.** Oignons et poivrons en lanières 8 min, ail, cumin, tomates, 20 cl du bouillon ; 10 min.
+3. **Finir.** Bœuf et olives, 15 min : la viande boit la sauce.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+## 2.20 Moyen-Orient & Caucase, Asie du Sud.
 
 ### Falafels croustillants
 
@@ -11468,7 +14093,7 @@ Lentilles corail au lait de coco, curcuma et feuilles de curry : doux, doré, en
 
 ---
 
-## 2.18 Pâtisserie et viennoiserie françaises (cahier du chef pâtissier : recettes de maison, gestes de pro).
+## 2.21 Pâtisserie et viennoiserie françaises (cahier du chef pâtissier : recettes de maison, gestes de pro).
 
 ### Crème pâtissière vanille
 
@@ -12333,7 +14958,7 @@ Beignets fins et croustillants de Mardi gras, saupoudrés de sucre glace.
 
 ---
 
-## 2.19 Le quotidien français (rapide, économique, de saison) et l'anti-gaspi.
+## 2.22 Le quotidien français (rapide, économique, de saison) et l'anti-gaspi.
 
 ### Poireaux vinaigrette, œuf mimosa
 
@@ -12976,7 +15601,508 @@ Fruits trop mûrs ou talés, débarrassés des parties abîmées, mixés avec un
 
 ---
 
-## 2.20 Sauces : sauces à frites (inspiration : sélection Femme Actuelle des sauces pour frites, noms seulement)
+## 2.23 Vague 3 · Salades complètes, un repas à elles seules (audit UX du 16/10/2026 : « ≈ 14 salades complètes »).
+
+### Salade César au poulet
+
+*Caesar salad · Amérique latine › Mexique › Tijuana · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, œufs, poissons ; **possibles selon marque** : gluten, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, saladier.
+
+Inventée à Tijuana en 1924 : romaine croquante, poulet doré, croûtons à l'ail, parmesan et la sauce César crémeuse au citron.
+
+**Ingrédients** : 1 grosse laitue romaine · 2 blancs de poulet · 3 tranches de pain rassis · 60 g de parmesan · 1 jaune d'œuf (ou 3 c. à s. de mayonnaise) · 1 c. à c. de moutarde · 1 citron · 1 gousse d'ail · 4 filets d'anchois (facultatif) *(facultatif)* · 8 c. à s. d'huile d'olive
+
+1. **Sauce.** Jaune, moutarde, ail râpé, jus de citron, anchois écrasés ; huile en filet en fouettant : épaisse ; 2 c. à s. de parmesan.
+2. **Croûtons et poulet.** Pain en dés doré à la poêle avec un peu d'huile et d'ail ; poulet saisi 5-6 min par face, tranché.
+3. **Dresser.** Romaine en morceaux enrobée de sauce, poulet, croûtons, copeaux de parmesan.
+
+- Sans anchois, la sauce reste bonne : ajoute 1 c. à c. de câpres hachées pour le côté salé.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de quinoa, feta, grenade et herbes
+
+*Salade de quinoa · Moyen-Orient › Food fusion · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 12 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Quinoa, concombre, herbes, feta, grenade et pistaches, vinaigrette citron-mélasse de grenade : fraîche, colorée, végétarienne.
+
+**Ingrédients** : 200 g de quinoa · 150 g de feta · 1 grenade · ½ concombre · 1 bouquet de persil · ½ bouquet de menthe · 40 g de pistaches *(facultatif)* · 1 citron · 4 c. à s. d'huile d'olive
+
+1. **Cuire.** Quinoa rincé, 12 min à l'eau salée ; égoutté et refroidi.
+2. **Tailler.** Concombre en dés, herbes hachées, grains de grenade.
+3. **Assembler.** Jus de citron, huile, sel ; feta émiettée et pistaches au dernier moment.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de pâtes au pesto, tomates et mozzarella
+
+*Insalata di pasta · Europe du Sud › Italie · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier.
+
+Pâtes courtes, pesto, tomates cerises, mozzarella et roquette : la salade de pique-nique que tout le monde aime.
+
+**Ingrédients** : 300 g de pâtes courtes · 4 c. à s. de pesto · 250 g de tomates cerises · 1 boule de mozzarella · 1 poignée de roquette · 2 c. à s. d'huile d'olive
+
+1. **Cuire.** Pâtes al dente, rincées à l'eau froide, égouttées, un filet d'huile.
+2. **Mélanger.** Pesto, tomates coupées, mozzarella en dés.
+3. **Servir.** Roquette au dernier moment.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de riz, thon, maïs et œufs
+
+*Salade de riz · France › Cuisine du quotidien · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : moutarde, œufs, poissons, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier.
+
+La salade de riz des étés français : thon, maïs, tomates, poivron, œufs durs et vinaigrette moutardée.
+
+**Ingrédients** : 250 g de riz · 1 boîte de thon · 150 g de maïs · 2 tomates · 1 poivron · 3 œufs durs · 1 c. à s. de moutarde · 2 c. à s. de vinaigre · 6 c. à s. d'huile
+
+1. **Riz.** Cuit à l'eau salée, rincé à l'eau froide, bien égoutté.
+2. **Vinaigrette.** Moutarde, vinaigre, sel, huile.
+3. **Mélanger.** Riz, thon, maïs, légumes en dés, œufs en quartiers.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de pois chiches, concombre et herbes
+
+*Salatet hummus · Moyen-Orient › Israël · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Pois chiches, tomates, concombre, oignon rouge, persil, sumac et citron : sans cuisson, protéinée, végétarienne.
+
+**Ingrédients** : 2 boîtes de pois chiches · 2 tomates · 1 concombre · ½ oignon rouge · 1 bouquet de persil · 1 c. à c. de sumac *(facultatif)* · 1 citron · 4 c. à s. d'huile d'olive · 100 g de feta (facultatif) *(facultatif)*
+
+1. **Tailler.** Légumes en petits dés, persil haché.
+2. **Assaisonner.** Pois chiches rincés, citron, huile, sel, sumac.
+3. **Reposer.** 10 min : les saveurs se mélangent.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade thaïe au poulet et à la mangue
+
+*Yam kai mamuang · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle, saladier.
+
+Poulet grillé, mangue, chou, carotte, herbes et cacahuètes, sauce citron vert-sauce de poisson-piment : sucré, acide, salé, piquant.
+
+**Ingrédients** : 2 blancs de poulet · 1 mangue ferme · ¼ chou chinois · 1 carotte · ½ bouquet de coriandre · ½ bouquet de menthe · 40 g de cacahuètes · 2 citrons verts · 2 c. à s. de sauce de poisson · 1 piment *(facultatif)*
+
+1. **Poulet.** Saisi 6 min par face, tranché.
+2. **Sauce.** Citron vert, sauce de poisson, 1 c. à s. de sucre, piment haché.
+3. **Assembler.** Légumes et mangue en lanières, herbes, poulet, sauce, cacahuètes concassées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de nouilles soba au sésame
+
+*Soba salad · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Nouilles de sarrasin froides, edamame, concombre, carotte et sauce sésame-soja-vinaigre de riz : fraîche et végétarienne.
+
+**Ingrédients** : 250 g de nouilles soba · 150 g d'edamame · ½ concombre · 1 carotte · 3 c. à s. de sauce soja · 2 c. à s. de vinaigre de riz · 1 c. à s. d'huile de sésame · 1 c. à s. de sésame · 2 cébettes
+
+1. **Cuire.** Soba 4-5 min, rincées à l'eau froide en les frottant : elles ne collent plus.
+2. **Sauce.** Soja, vinaigre, huile de sésame, 1 c. à c. de sucre.
+3. **Mélanger.** Légumes en julienne, edamame, sauce, sésame, cébette.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de betterave, chèvre, noix et lentilles
+
+*Salade betterave-chèvre · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Lentilles tièdes, betterave, chèvre frais, noix et vinaigrette au miel : le goût de l'automne, complet et végétarien.
+
+**Ingrédients** : 150 g de lentilles vertes · 2 betteraves cuites · 120 g de chèvre frais · 40 g de noix · 1 poignée de mâche · 1 c. à c. de miel · 1 c. à s. de vinaigre de cidre · 3 c. à s. d'huile de noix
+
+1. **Lentilles.** 20 min à l'eau frémissante (sel à la fin) : tendres mais entières.
+2. **Vinaigrette.** Miel, vinaigre, sel, huile de noix.
+3. **Assembler.** Lentilles tièdes assaisonnées, betterave en dés, mâche, chèvre émietté, noix.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade piémontaise
+
+*Salade piémontaise · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichon, Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier.
+
+Pommes de terre tièdes, œufs durs, tomates, cornichons, jambon de dinde et sauce mayonnaise : le classique des cantines, version maison.
+
+**Ingrédients** : 800 g de pommes de terre · 3 œufs durs · 2 tomates · 6 cornichons · 120 g de jambon de dinde (ou blanc) · 4 c. à s. de mayonnaise · 1 c. à s. de persil
+
+1. **Cuire.** Pommes de terre en dés, 15 min à l'eau salée : tendres (la lame entre sans forcer).
+2. **Mélanger.** Encore tièdes, avec la mayonnaise allongée d'1 c. à s. de vinaigre.
+3. **Ajouter.** Œufs, tomates, cornichons, jambon en dés, persil.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade Cobb
+
+*Cobb salad · Amérique du Nord › États-Unis › Hollywood · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 12 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : lait, moutarde, œufs, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, saladier.
+
+Rangs de poulet, œuf dur, avocat, tomate, bleu et bacon de dinde sur salade, vinaigrette moutardée : la salade d'Hollywood (1937).
+
+**Ingrédients** : 1 laitue · 2 blancs de poulet · 3 œufs durs · 1 avocat · 2 tomates · 80 g de bleu · 6 tranches de bacon de dinde *(facultatif)* · 1 c. à c. de moutarde · 5 c. à s. d'huile · 2 c. à s. de vinaigre de vin
+
+1. **Cuire.** Poulet saisi, en dés ; bacon croustillant à la poêle, émietté.
+2. **Tailler.** Tout en dés réguliers.
+3. **Dresser.** En rangs sur la salade ; vinaigrette à part, mélangée à table.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de chou kale, parmesan et pommes
+
+*Kale salad · Amérique du Nord › États-Unis › Californie · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Le kale massé au citron devient tendre ; pomme croquante, parmesan, graines de courge : une salade d'hiver vitaminée.
+
+**Ingrédients** : 1 botte de chou kale · 1 pomme · 40 g de parmesan · 30 g de graines de courge · 1 citron · 4 c. à s. d'huile d'olive
+
+1. **Masser.** Feuilles sans les côtes, émincées, frottées 2 min avec citron, huile et sel : elles foncent et s'attendrissent.
+2. **Ajouter.** Pomme en lamelles, copeaux de parmesan, graines grillées.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade avocat, crevettes et pamplemousse
+
+*Salade de crevettes · France › Cuisine du quotidien · Entrée* · Fêtes : Noël, Saint-Valentin
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Crevettes, avocat, pamplemousse rose et roquette, sauce citron-ciboulette : fraîche, chic et sans cuisson.
+
+**Ingrédients** : 300 g de crevettes cuites décortiquées · 2 avocats · 1 pamplemousse rose · 2 poignées de roquette · 1 citron vert · 1 c. à s. de ciboulette · 3 c. à s. d'huile d'olive
+
+1. **Peler.** Pamplemousse à vif, en suprêmes (sans peau blanche).
+2. **Tailler.** Avocat en tranches, citronné.
+3. **Dresser.** Roquette, avocat, crevettes, pamplemousse ; citron vert, huile, sel, ciboulette.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : peler à vif
+
+---
+
+### Salade de couscous perlé, légumes rôtis et herbes
+
+*Moghrabieh salad · Moyen-Orient › Liban · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Four, casserole.
+
+Grosses perles de semoule, légumes rôtis, herbes, citron et feta : une salade tiède et généreuse.
+
+**Ingrédients** : 250 g de couscous perlé · 1 aubergine · 1 poivron · 1 courgette · 1 bouquet de persil · 100 g de feta *(facultatif)* · 1 citron · 5 c. à s. d'huile d'olive · 1 c. à c. de cumin
+
+1. **Rôtir.** Légumes en dés, huile, cumin, sel ; 200 °C, 25 min : dorés.
+2. **Cuire.** Couscous perlé 8-10 min à l'eau salée, égoutté, huilé.
+3. **Mélanger.** Tiède : légumes, herbes, citron, feta.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de haricots blancs, thon et oignon rouge
+
+*Insalata di fagioli e tonno · Europe du Sud › Italie › Toscane · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : poissons, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Haricots blancs, thon à l'huile, oignon rouge, persil et huile d'olive : la salade toscane du placard, prête en 10 minutes.
+
+**Ingrédients** : 2 boîtes de haricots blancs · 1 boîte de thon à l'huile · 1 oignon rouge · 1 bouquet de persil · 4 c. à s. d'huile d'olive · 1 c. à s. de vinaigre de vin
+
+1. **Oignon.** Émincé fin, 5 min dans le vinaigre : il s'adoucit.
+2. **Mélanger.** Haricots rincés, thon en gros morceaux, persil, huile, sel, poivre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de tomates anciennes et burrata
+
+*Insalata di pomodori e burrata · Europe du Sud › Italie › Pouilles · Entrée* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre balsamique
+- ⚠️ **Allergènes** : lait, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat.
+
+Tomates mûres de toutes les couleurs, burrata crémeuse, basilic, huile d'olive et fleur de sel : seulement en saison, avec du bon pain.
+
+**Ingrédients** : 800 g de tomates mûres (plusieurs variétés) · 1 burrata (ou mozzarella) · 1 bouquet de basilic · 4 c. à s. d'huile d'olive · 1 c. à s. de vinaigre balsamique *(facultatif)*
+
+1. **Tailler.** Tomates en tranches et quartiers, salées 5 min.
+2. **Dresser.** Burrata au centre, ouverte au dernier moment ; basilic, huile, poivre, balsamique.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade Waldorf (pomme, céleri, noix)
+
+*Waldorf salad · Amérique du Nord › États-Unis › New York · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : céleri, fruits à coque, lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Créée à l'hôtel Waldorf de New York en 1896 : pomme, céleri branche, raisin, noix et sauce yaourt-mayonnaise.
+
+**Ingrédients** : 2 pommes · 3 branches de céleri · 150 g de raisin · 50 g de noix · 3 c. à s. de yaourt · 2 c. à s. de mayonnaise · ½ citron
+
+1. **Tailler.** Pommes en dés citronnés, céleri émincé, raisins coupés.
+2. **Lier.** Yaourt, mayonnaise, sel ; noix grillées au dernier moment.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Concombre frappé à l'ail et au sésame
+
+*Pāi huángguā · Asie de l'Est › Chine › Sichuan · Entrée*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre noir chinois (Chinkiang), Sauce soja claire
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Rouleau ou plat du couteau.
+
+Concombre écrasé (pas coupé : la sauce pénètre mieux), ail, vinaigre noir, huile pimentée et sésame : l'entrée froide du Sichuan.
+
+**Ingrédients** : 2 concombres · 2 gousses d'ail · 1 c. à s. de vinaigre noir (ou de riz) · 1 c. à s. de sauce soja · 1 c. à c. d'huile pimentée *(facultatif)* · 1 c. à c. d'huile de sésame · 1 c. à c. de sésame
+
+1. **Écraser.** Concombre frappé au rouleau, puis en morceaux ; salé 10 min, égoutté.
+2. **Assaisonner.** Ail, vinaigre, soja, sucre (1 pincée), huiles ; sésame.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade mexicaine haricots, maïs et avocat
+
+*Ensalada mexicana · Amérique latine › Mexique · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier.
+
+Haricots rouges, maïs, poivron, tomate, avocat, citron vert et coriandre : colorée, végétarienne, sans cuisson.
+
+**Ingrédients** : 400 g de haricots rouges · 200 g de maïs · 1 poivron · 2 tomates · 1 avocat · ½ oignon rouge · 2 citrons verts · ½ bouquet de coriandre · 1 c. à c. de cumin
+
+1. **Tailler.** Tout en petits dés.
+2. **Assaisonner.** Citron vert, huile, cumin, sel.
+3. **Servir.** Avec des chips de tortilla.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade de lentilles au saumon fumé et à l'aneth
+
+*Salade lentilles-saumon · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé, Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, saladier.
+
+Lentilles vertes tièdes, saumon fumé, échalote, aneth et crème citronnée : un plat de bistrot léger.
+
+**Ingrédients** : 200 g de lentilles vertes · 150 g de saumon fumé · 1 échalote · 1 c. à s. d'aneth · 3 c. à s. de crème · 1 citron · 1 c. à c. de moutarde · 3 c. à s. d'huile
+
+1. **Lentilles.** 20 min à frémissement, égouttées, salées tièdes.
+2. **Vinaigrette.** Moutarde, citron, huile, échalote hachée.
+3. **Assembler.** Lentilles assaisonnées, saumon en lanières, crème citronnée, aneth.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Salade tiède de patate douce rôtie, poulet et épinards
+
+*Salade tiède · Océanie › Nouvelle-Zélande · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Four, saladier.
+
+Patate douce rôtie au paprika, poulet, jeunes épinards, oignon rouge et sauce yaourt-citron : tiède et réconfortante.
+
+**Ingrédients** : 2 patates douces · 2 blancs de poulet · 100 g de jeunes épinards · ½ oignon rouge · 1 c. à c. de paprika fumé · 4 c. à s. de yaourt · 1 citron
+
+1. **Rôtir.** Patates douces en cubes, huile, paprika, sel ; 200 °C, 25 min : dorées et tendres.
+2. **Poulet.** Saisi, tranché.
+3. **Assembler.** Épinards, patate tiède, poulet, oignon ; sauce yaourt-citron.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+## 2.24 Sauces : sauces à frites (inspiration : sélection Femme Actuelle des sauces pour frites, noms seulement)
 
 ### Sauce tartare
 
@@ -13620,6 +16746,545 @@ Les deux sauces des Canaries pour pommes de terre ridées : rouge au paprika et 
 
 ---
 
+## 2.25 Vague 3 · Plats végétariens complets du monde (audit UX du 16/10/2026 : « ≈ 27 % de plats sans viande ni poisson »).
+
+### Curry de légumes au lait de coco
+
+*Vegetable curry · Asie du Sud › Inde › Kerala · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, casserole (riz).
+
+Pommes de terre, chou-fleur, carottes, petits pois et pois chiches dans une sauce coco aux épices douces : le curry de légumes complet.
+
+**Ingrédients** : 2 pommes de terre · ½ chou-fleur · 2 carottes · 100 g de petits pois · 1 boîte de pois chiches · 40 cl de lait de coco · 1 oignon · 2 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à s. de curry · ½ bouquet de coriandre *(facultatif)*
+
+1. **Base.** Oignon 5 min ; ail, gingembre, curry 1 min : ça embaume.
+2. **Mijoter.** Légumes en morceaux, lait de coco, 20 cl d'eau, sel ; 20 min couvert : la lame entre dans la pomme de terre.
+3. **Finir.** Pois chiches et petits pois 5 min ; coriandre ; avec du riz basmati ou du naan.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : torréfier les épices
+
+---
+
+### Lasagnes aux légumes et à la ricotta
+
+*Lasagne alle verdure · Europe du Sud › Italie · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, four.
+
+Courgettes, aubergines et épinards, sauce tomate, ricotta et mozzarella entre les feuilles : généreuses et végétariennes.
+
+**Ingrédients** : 250 g de feuilles de lasagne · 2 courgettes · 1 aubergine · 200 g d'épinards · 250 g de ricotta · 1 boule de mozzarella · 700 g de sauce tomate · 50 g de parmesan · 2 gousses d'ail
+
+1. **Légumes.** En dés, rôtis 20 min à 200 °C avec huile et sel ; épinards tombés à la poêle avec l'ail.
+2. **Monter.** Sauce, feuilles, légumes, ricotta ; trois fois ; finir par sauce, mozzarella, parmesan.
+3. **Cuire.** 180 °C, 40 min : doré et bouillonnant ; 10 min de repos avant de couper.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Risotto à la courge et à la sauge
+
+*Risotto alla zucca · Europe du Sud › Italie › Lombardie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Courge fondue dans un risotto crémeux, sauge croustillante et parmesan : l'automne italien.
+
+**Ingrédients** : 300 g de riz à risotto · 500 g de courge (butternut, potimarron) · 1 oignon · 1 l de bouillon de légumes chaud · 60 g de parmesan · 30 g de beurre · 8 feuilles de sauge
+
+1. **Nacrer.** Oignon 3 min au beurre ; riz 2 min : il devient translucide sur les bords.
+2. **Cuire.** Courge en petits dés ; bouillon louche par louche en remuant, 18 min : le riz est crémeux mais encore un peu ferme.
+3. **Lier.** Hors du feu, beurre et parmesan, 2 min couvert ; sauge frite 30 s dans le beurre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : nacrer
+
+---
+
+### Hachis de lentilles à la purée de patate douce
+
+*Lentil shepherd's pie · Europe du Nord › Royaume-Uni · Plat*
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons ; **possibles selon marque** : gluten, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte, plat à gratin.
+
+Lentilles mijotées aux légumes et à la tomate sous une purée de patate douce gratinée : le shepherd's pie végétarien.
+
+**Ingrédients** : 250 g de lentilles vertes · 1 kg de patates douces · 2 carottes · 1 oignon · 2 c. à s. de concentré de tomate · 1 c. à s. de sauce Worcestershire (ou soja) *(facultatif)* · 60 g de fromage râpé · 20 g de beurre · 1 c. à c. de thym
+
+1. **Lentilles.** Oignon et carottes 5 min, concentré, lentilles, thym, 60 cl d'eau ; 25 min : épaisses ; sel, sauce.
+2. **Purée.** Patates douces cuites 15 min, écrasées au beurre.
+3. **Gratiner.** Lentilles dans le plat, purée, fromage ; 200 °C, 20 min : doré.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tajine de légumes aux pois chiches et abricots
+
+*Tajine khodra · Afrique du Nord › Maroc · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Tajine ou cocotte.
+
+Carottes, courgettes, navets, pois chiches et abricots secs, épices douces et citron confit : sucré-salé, végétarien.
+
+**Ingrédients** : 3 carottes · 2 courgettes · 2 navets · 1 boîte de pois chiches · 80 g d'abricots secs · 1 oignon · 2 c. à c. de ras el-hanout · ½ citron confit *(facultatif)* · ½ bouquet de coriandre
+
+1. **Base.** Oignon 5 min, épices 1 min.
+2. **Mijoter.** Légumes en gros morceaux, abricots, 30 cl d'eau, sel ; couvert 35 min à feu doux.
+3. **Finir.** Pois chiches et citron confit 5 min ; coriandre ; semoule.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Curry vert au tofu et aux légumes
+
+*Kaeng khiao wan phak · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja ; **possibles selon marque** : crustacés, poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Wok ou sauteuse.
+
+Pâte de curry vert, lait de coco, tofu, aubergine, haricots verts et basilic thaï : vif, parfumé, sans viande.
+
+**Ingrédients** : 400 g de tofu ferme · 40 cl de lait de coco · 2 c. à s. de pâte de curry vert · 1 aubergine · 150 g de haricots verts · 1 poignée de basilic thaï · 1 c. à s. de sauce soja · 1 c. à c. de sucre
+
+1. **Pâte.** Curry vert frit 1 min dans 4 c. à s. de crème de coco : l'huile se sépare et ça sent fort.
+2. **Mijoter.** Lait de coco, aubergine en dés, haricots, 10 min.
+3. **Finir.** Tofu en cubes 3 min, soja, sucre, basilic ; riz jasmin.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Aubergines à la parmesane
+
+*Parmigiana di melanzane · Europe du Sud › Italie › Campanie · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Four, plat à gratin.
+
+Tranches d'aubergine rôties, sauce tomate au basilic, mozzarella et parmesan en couches : fondant, gratiné, végétarien.
+
+**Ingrédients** : 3 aubergines · 700 g de sauce tomate · 2 boules de mozzarella · 80 g de parmesan · 1 bouquet de basilic · 6 c. à s. d'huile d'olive · 2 gousses d'ail
+
+1. **Rôtir.** Aubergines en tranches de 1 cm, huilées, salées ; 220 °C, 20 min : dorées et souples (plus léger que frites).
+2. **Sauce.** Ail, tomates, basilic, 15 min.
+3. **Monter et cuire.** Sauce, aubergines, mozzarella, parmesan, trois fois ; 180 °C, 35 min ; repos 15 min.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Poivrons et tomates farcis au riz et aux herbes
+
+*Gemistá · Europe du Sud › Grèce · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four.
+
+Légumes farcis de riz parfumé à la menthe, à l'aneth et au persil, cuits au four avec des pommes de terre : le plat d'été grec.
+
+**Ingrédients** : 4 tomates · 4 poivrons · 200 g de riz rond · 1 oignon · ½ bouquet de menthe · ½ bouquet d'aneth · ½ bouquet de persil · 3 pommes de terre · 10 c. à s. d'huile d'olive
+
+1. **Vider.** Chapeaux coupés ; pulpe des tomates mixée.
+2. **Farce.** Riz cru, pulpe, oignon râpé, herbes, sel, 4 c. à s. d'huile ; légumes remplis aux trois quarts (le riz gonfle).
+3. **Cuire.** Pommes de terre en quartiers autour, huile, 1 verre d'eau ; 180 °C, 1 h : légumes fripés, riz tendre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Boulettes de lentilles en sauce tomate
+
+*Polpette di lenticchie · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Four, sauteuse.
+
+Boulettes de lentilles, chapelure et parmesan, cuites au four puis mijotées dans la sauce tomate : avec des spaghetti, comme des polpette.
+
+**Ingrédients** : 250 g de lentilles cuites · 50 g de chapelure · 40 g de parmesan · 1 œuf · 1 gousse d'ail · ½ bouquet de persil · 500 g de sauce tomate · 300 g de spaghetti
+
+1. **Mélanger.** Lentilles écrasées, chapelure, parmesan, œuf, ail, persil, sel : se tient en boule (sinon un peu de chapelure).
+2. **Cuire.** Boulettes huilées, 200 °C, 15 min : fermes et dorées.
+3. **Mijoter.** 5 min dans la sauce tomate ; sur les spaghetti.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Quiche épinards et feta
+
+*Quiche épinards-feta · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à tarte, four.
+
+Pâte brisée, épinards, feta, œufs et crème, une pointe de muscade : la quiche sans lardons que tout le monde redemande.
+
+**Ingrédients** : 1 pâte brisée · 300 g d'épinards · 150 g de feta · 3 œufs · 20 cl de crème · 1 pincée de muscade
+
+1. **Épinards.** Tombés à la poêle, bien pressés : sinon la quiche sera détrempée.
+2. **Appareil.** Œufs, crème, muscade, poivre (peu de sel : la feta est salée).
+3. **Cuire.** Pâte, épinards, feta, appareil ; 180 °C, 35 min : prise et dorée.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : foncer une pâte
+
+---
+
+### Enchiladas aux haricots noirs et patate douce
+
+*Enchiladas de frijoles · Amérique latine › Mexique · Plat*
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four.
+
+Tortillas roulées sur haricots noirs et patate douce, nappées de sauce tomate pimentée et gratinées : végétariennes et fondantes.
+
+**Ingrédients** : 8 tortillas · 400 g de haricots noirs · 1 patate douce · 500 g de tomates pelées · 1 c. à c. de cumin · 1 c. à c. de paprika fumé · 150 g de cheddar · ½ bouquet de coriandre
+
+1. **Garniture.** Patate douce en dés rôtie 20 min ; mélangée aux haricots, cumin, sel.
+2. **Sauce.** Tomates, paprika, sel, 10 min.
+3. **Monter.** Tortillas garnies roulées, serrées dans le plat, sauce, fromage ; 200 °C, 20 min.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Biryani aux légumes
+
+*Sabzi biryani · Asie du Sud › Inde › Hyderabad · Plat* · Fêtes : Ramadan / Aïd, Diwali
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte avec couvercle.
+
+Riz basmati parfumé en couches avec des légumes épicés au yaourt, oignons frits, safran et herbes : festif et végétarien.
+
+**Ingrédients** : 400 g de riz basmati · ½ chou-fleur · 2 carottes · 150 g de petits pois · 150 g de yaourt · 3 oignons · 2 c. à s. de garam masala · 1 pincée de safran *(facultatif)* · ½ bouquet de menthe · ½ bouquet de coriandre
+
+1. **Oignons.** Émincés, frits doucement 15 min : bruns et croustillants.
+2. **Légumes.** En morceaux, yaourt, garam masala, la moitié des oignons, 10 min. Riz cuit 6 min seulement (aux deux tiers).
+3. **Étager.** Légumes, riz, safran infusé, herbes, oignons ; couvercle serré, feu très doux 25 min.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Cannellonis épinards-ricotta
+
+*Cannelloni ricotta e spinaci · Europe du Sud › Italie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, poche ou cuillère.
+
+Tubes de pâte farcis d'épinards et de ricotta, sous béchamel et sauce tomate : un classique italien du dimanche.
+
+**Ingrédients** : 12 cannellonis (ou feuilles de lasagne roulées) · 400 g d'épinards · 250 g de ricotta · 50 g de parmesan · 400 g de sauce tomate · 40 cl de béchamel · 1 pincée de muscade
+
+1. **Farce.** Épinards tombés, pressés, hachés ; ricotta, parmesan, muscade, sel.
+2. **Garnir.** Cannellonis remplis à la poche (ou un sac coupé).
+3. **Cuire.** Sauce tomate au fond, cannellonis, béchamel, parmesan ; 180 °C, 30 min.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : faire un roux
+
+---
+
+### Polenta crémeuse aux champignons
+
+*Polenta ai funghi · Europe du Sud › Italie › Vénétie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Polenta souple au parmesan, champignons poêlés à l'ail et au thym : réconfortant et prêt en 30 minutes.
+
+**Ingrédients** : 200 g de polenta (cuisson rapide) · 500 g de champignons variés · 60 g de parmesan · 30 g de beurre · 2 gousses d'ail · 1 c. à c. de thym · 1 l d'eau ou de bouillon
+
+1. **Polenta.** En pluie dans le bouillon frémissant en fouettant, 5-8 min : épaisse ; beurre, parmesan.
+2. **Champignons.** Poêle très chaude, sans les remuer d'abord : ils dorent ; ail, thym, sel.
+3. **Servir.** Polenta dans l'assiette creuse, champignons dessus.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Burger végétarien aux haricots rouges
+
+*Bean burger · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Galettes de haricots rouges, flocons d'avoine et paprika fumé, dorées à la poêle, dans un pain brioché avec cheddar et oignons.
+
+**Ingrédients** : 400 g de haricots rouges · 50 g de flocons d'avoine · 1 œuf · 1 c. à c. de paprika fumé · 1 c. à c. de cumin · 4 pains burger · 4 tranches de cheddar · 1 oignon rouge · 4 feuilles de salade
+
+1. **Galettes.** Haricots égouttés et séchés, écrasés ; avoine, œuf, épices, sel ; 4 galettes, 15 min au frais.
+2. **Cuire.** Poêle huilée, 4-5 min par face : croûte dorée ; cheddar sur le dessus, couvert 1 min.
+3. **Monter.** Pain grillé, sauce, salade, galette, oignon.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Dal aux épinards et au lait de coco
+
+*Palak dal · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : moutarde
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole.
+
+Lentilles corail fondues au lait de coco, épinards et tadka (épices grésillantes) : doux, complet, très économique.
+
+**Ingrédients** : 250 g de lentilles corail · 200 g d'épinards · 20 cl de lait de coco · 1 oignon · 2 gousses d'ail · 1 c. à c. de curcuma · 1 c. à c. de cumin en graines · 1 c. à c. de graines de moutarde *(facultatif)*
+
+1. **Cuire.** Lentilles rincées, 70 cl d'eau, curcuma, 20 min : elles se défont ; lait de coco, épinards, sel.
+2. **Tadka.** Huile chaude, cumin, moutarde : ça crépite ; oignon et ail 5 min : dorés.
+3. **Verser.** Le tadka sur le dal ; riz ou naan.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : torréfier les épices
+
+---
+
+### Œufs pochés aux haricots blancs et poivrons
+
+*Shakshuka aux haricots · Afrique du Nord › Tunisie · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse avec couvercle.
+
+Sauce tomate-poivron au cumin enrichie de haricots blancs, œufs pochés dedans : complet en protéines, une seule poêle.
+
+**Ingrédients** : 6 œufs · 400 g de haricots blancs · 2 poivrons · 400 g de tomates pelées · 1 oignon · 1 c. à c. de cumin · 1 c. à c. de harissa *(facultatif)* · ½ bouquet de coriandre
+
+1. **Sauce.** Oignon et poivrons 8 min ; cumin, harissa, tomates, haricots ; 10 min.
+2. **Pocher.** Six creux, un œuf dans chacun ; couvert 6-8 min : blancs pris, jaunes coulants.
+3. **Servir.** Coriandre, pain.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Tatin de tomates cerises et oignons rouges
+
+*Tatin salée · France › Cuisine du quotidien · Plat* · Fêtes : Apéritif dînatoire
+
+Niveau ⭐⭐ · 6 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre balsamique
+- ⚠️ **Allergènes** : gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule à manqué, four.
+
+Tomates cerises et oignons caramélisés au balsamique sous une pâte feuilletée, retournée : chic et facile.
+
+**Ingrédients** : 1 pâte feuilletée · 400 g de tomates cerises · 2 oignons rouges · 2 c. à s. de vinaigre balsamique · 1 c. à s. de sucre · 1 c. à c. de thym · 100 g de chèvre frais *(facultatif)*
+
+1. **Caraméliser.** Oignons en quartiers 10 min à l'huile ; sucre, balsamique : sirupeux.
+2. **Monter.** Dans le moule : oignons, tomates serrées, thym ; pâte par-dessus, bords rentrés.
+3. **Cuire et retourner.** 200 °C, 30 min : pâte gonflée et dorée ; 5 min de repos, retourne ; chèvre émietté.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Pad thaï au tofu
+
+*Phat thai taohu · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐⭐ · 2 portions · actif 25 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok.
+
+Nouilles de riz sautées au tamarin, tofu doré, œuf, germes de soja et cacahuètes : la version végétarienne du plat national thaï.
+
+**Ingrédients** : 200 g de nouilles de riz plates · 200 g de tofu ferme · 2 œufs · 100 g de germes de soja · 2 c. à s. de pâte de tamarin · 2 c. à s. de sauce soja · 1 c. à s. de sucre · 40 g de cacahuètes · 1 citron vert · 3 cébettes
+
+1. **Tremper.** Nouilles 10 min à l'eau tiède : souples mais pas cuites.
+2. **Sauter.** Tofu en dés doré ; œufs brouillés ; nouilles et sauce (tamarin, soja, sucre, 3 c. à s. d'eau), 3 min : elles absorbent.
+3. **Finir.** Germes, cébette 30 s ; cacahuètes concassées, citron vert.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+**Techniques** : wok
+
+---
+
+### Gratin de chou-fleur et lentilles corail au curry
+
+*Gratin curry · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin.
+
+Chou-fleur rôti, lentilles corail au curry doux et fromage gratiné : un gratin complet, sans béchamel.
+
+**Ingrédients** : 1 chou-fleur · 150 g de lentilles corail · 20 cl de lait de coco · 1 c. à s. de curry doux · 80 g de fromage râpé · 1 oignon
+
+1. **Lentilles.** Oignon 5 min, curry, lentilles, lait de coco, 30 cl d'eau, 15 min : crémeuses.
+2. **Chou-fleur.** En bouquets, 6 min à l'eau salée.
+3. **Gratiner.** Le tout dans le plat, fromage, 200 °C, 20 min : doré.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Galettes de sarrasin aux champignons, œuf et emmental
+
+*Galette forestière · France › Bretagne · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle ou crêpière.
+
+Galette de sarrasin, champignons poêlés, œuf et emmental : la complète bretonne en version végétarienne.
+
+**Ingrédients** : 8 galettes de sarrasin (ou pâte maison) · 300 g de champignons · 4 œufs · 120 g d'emmental râpé · 30 g de beurre salé · 1 c. à s. de persil
+
+1. **Champignons.** Poêlés au beurre, persil, sel.
+2. **Garnir.** Galette dans la poêle beurrée ; fromage, œuf au centre (blanc étalé à la spatule), champignons ; 3 min : le blanc prend.
+3. **Plier.** Les bords en carré, le jaune visible au centre.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
 ## 3. Nouvelles fiches techniques (application, rubrique Techniques)
 
 - **Pâtisserie française** : Pâte sucrée et pâte sablée (crémage) (niv. 2) · Crème pâtissière (niv. 1) · Pâte à choux (niv. 2) · Pâte feuilletée rapide (et tours) (niv. 3) · Les trois meringues (française, suisse, italienne) (niv. 2) · Crème anglaise (cuisson à la nappe) (niv. 2) · Chantilly, mascarpone montée et ganache montée (niv. 1) · Les biscuits de base (génoise, joconde, roulé) (niv. 2) · Caramel et cuissons du sucre (niv. 2) · Macaronnage (niv. 3)
@@ -13630,6 +17295,7 @@ Les deux sauces des Canaries pour pommes de terre ridées : rouge au paprika et 
 - **Œufs** : Omelette baveuse et œufs brouillés crémeux (niv. 1) · Les températures des œufs (64 °C, mollet, cocotte) (niv. 2)
 - **Maîtriser les cuissons** : Cuire à la vapeur et en papillote (niv. 1) · Griller et maîtriser le barbecue (niv. 2) · Confire (canard, légumes, agrumes) (niv. 2) · Panures et pâtes à frire (tempura, anglaise) (niv. 2)
 - **Condiments & marinades maison** : Bouillon « cube » maison (pâte et poudre) (niv. 1) · Nokoss sénégalais (pâte aromatique) (niv. 1) · Marinades du monde pour viandes et poissons (niv. 1) · Condiments sans additifs : ketchup, moutarde, harissa, pickles (niv. 1) · Fumet de poisson, fond brun et glace de viande (niv. 2)
+- **Dressage & finition** : Présenter une assiette (dressage) (niv. 1) · Convertir les mesures (tasses, onces, °F) (niv. 1)
 
 Chaque fiche donne : pourquoi, matériel, pas à pas, erreurs fréquentes, solution sans équipement et, quand c'est utile, un **tableau de repères** (températures à cœur des viandes et poissons, temps de cuisson des œufs, courbes de tempérage du chocolat, stades du sucre, proportions de ganache, dosages de crème pâtissière, dix marinades du monde). Les températures de sécurité suivent les recommandations courantes (volaille 74 °C, viande hachée 70 °C, poisson pour publics fragiles 63 °C).
 
@@ -13645,7 +17311,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **1153 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **1500 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 
