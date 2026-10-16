@@ -11917,6 +11917,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/barres_cereales_maison": {
+  "path": "img/recette/barres_cereales_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c8a987",
+  "author": "BrokenSphere",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nature_Valley_Trail_Mix_Bar_-_fruit_%26_nut.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Nature Valley Trail Mix Bar - fruit & nut.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/barszcz": {
   "path": "img/recette/barszcz",
   "sizes": [
@@ -12321,6 +12338,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Bobotie,_South_African_dish.jpg",
   "source": "Wikimedia Commons",
   "title": "Bobotie, South African dish.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/bocadillo_tortilla": {
+  "path": "img/recette/bocadillo_tortilla",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d2932f",
+  "author": "smudie",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "page": "https://www.flickr.com/photos/39283106@N00/21743021500",
+  "source": "Openverse (flickr)",
+  "title": "Bocadillo de tortilla española, Els Tres Tombs, Barcelona",
   "kind": "photo",
   "avif": true
  },
@@ -12763,6 +12797,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Moroccan_food-02.jpg",
   "source": "Wikimedia Commons",
   "title": "Moroccan food-02.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/brochettes_poulet_tandoori_froid": {
+  "path": "img/recette/brochettes_poulet_tandoori_froid",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e6037",
+  "author": "Satdeep Gill",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_in_Araku_Valley,_Andhra_Pradesh_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken tikka in Araku Valley, Andhra Pradesh 01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13854,6 +13905,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/club_sandwich_poulet": {
+  "path": "img/recette/club_sandwich_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a7a198",
+  "author": "Peachyeung316",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Club_sandwiches_in_hong_kong.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Club sandwiches in hong kong.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/cocido_madrileno_version": {
   "path": "img/recette/cocido_madrileno_version",
   "sizes": [
@@ -14007,6 +14075,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/cornish_pasty": {
+  "path": "img/recette/cornish_pasty",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d0a786",
+  "author": "David Johnson [1]",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Cornish_pasty.jpeg",
+  "source": "Wikimedia Commons",
+  "title": "Cornish pasty.jpeg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/cote_boeuf": {
   "path": "img/recette/cote_boeuf",
   "sizes": [
@@ -14055,6 +14140,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Shepherds_pie_-_The_Kew_Greenhouse_Cafe_2025-05-14.jpg",
   "source": "Wikimedia Commons",
   "title": "Shepherds pie - The Kew Greenhouse Cafe 2025-05-14.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/courgettes_scapece": {
+  "path": "img/recette/courgettes_scapece",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#837057",
+  "author": "Marica Massaro",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Zucchine_alla_moresca.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Zucchine alla moresca.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15193,6 +15295,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Flan_Parisien,_Ludivine_Paris,_Los_Angeles_20250625_151737.jpg",
   "source": "Wikimedia Commons",
   "title": "Flan Parisien, Ludivine Paris, Los Angeles 20250625 151737.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/flapjacks": {
+  "path": "img/recette/flapjacks",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a98e68",
+  "author": "Shisma",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Flapjack.jpeg",
+  "source": "Wikimedia Commons",
+  "title": "Flapjack.jpeg",
   "kind": "photo",
   "avif": true
  },
@@ -20171,6 +20290,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pizza_scrolls": {
+  "path": "img/recette/pizza_scrolls",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a27036",
+  "author": "fifikins",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/25925793@N00/5502203952",
+  "source": "Openverse (flickr)",
+  "title": "Pizza scrolls",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pizza_tortilla": {
   "path": "img/recette/pizza_tortilla",
   "sizes": [
@@ -21883,6 +22019,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/salade_pates_grecque": {
+  "path": "img/recette/salade_pates_grecque",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b7783d",
+  "author": "jeffreyw",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pasta_salad_with_olives_and_caper_berries.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pasta salad with olives and caper berries.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/salade_pates_pesto_tomates": {
   "path": "img/recette/salade_pates_pesto_tomates",
   "sizes": [
@@ -23342,6 +23495,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/taboule_chou_fleur": {
+  "path": "img/recette/taboule_chou_fleur",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#968c66",
+  "author": "cyclonebill",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Tabbouleh.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Flickr - cyclonebill - Tabbouleh.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/taboule_libanais": {
   "path": "img/recette/taboule_libanais",
   "sizes": [
@@ -23797,6 +23967,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tempura_01.jpg",
   "source": "Wikimedia Commons",
   "title": "Tempura 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/terrine_legumes": {
+  "path": "img/recette/terrine_legumes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bba491",
+  "author": "H. Alexander Talbot",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:ChickenLiverGaramMasalaRedCabbageTamarind_(8319923540).jpg",
+  "source": "Wikimedia Commons",
+  "title": "ChickenLiverGaramMasalaRedCabbageTamarind (8319923540).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24952,6 +25139,23 @@
   "page": "https://www.flickr.com/photos/8830972@N08/3004024961",
   "source": "Openverse (flickr)",
   "title": "not bad texture! Artisan Bread in Five Minutes a Day",
+  "kind": "photo",
+  "avif": true
+ },
+ "rubrique/pique_nique": {
+  "path": "img/rubrique/pique_nique",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d6b399",
+  "author": "Scott Webb scottwebb",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Beach_Picnic_(Unsplash).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beach Picnic (Unsplash).jpg",
   "kind": "photo",
   "avif": true
  },

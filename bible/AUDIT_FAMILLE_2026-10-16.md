@@ -154,3 +154,5 @@ Les 13 recommandations sont appliquées, toutes vérifiées par des contrôles a
 La page propose cinq paniers tout faits (enfants, à la française, tour du monde, grands, anti-gaspi) et des filtres. Elle couvre aussi la sécurité au soleil (glacière, 2 h au plus hors du froid, 1 h au-dessus de 32 °C, pas de mayonnaise crue), la préparation du sac, le zéro déchet sur la nappe, les restes qui deviennent un pique-nique et la gamelle (thermos, réchauffage).
 
 Le contrôle 75 a écarté de la liste quatre fiches à la mayonnaise (kimbap, banh mi, coleslaw, arepas).
+
+**Photos.** 11 des 22 nouvelles fiches de pique-nique ont une vraie photo libre de droits (`illustrations/choix_v6.txt`), plus une photo d'en-tête pour la rubrique. Les autres candidats montraient des charcuteries de porc sur une fiche sans porc (muffuletta, scotch eggs), un autre plat (onigiri au lieu d'onigirazu) ou des homonymes (des galaxies pour les « pinwheels »). Ces fiches gardent leur icône. L'application compte 1 553 images.

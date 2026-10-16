@@ -1,0 +1,12 @@
+rubrique/pique_nique 2
+recette/terrine_legumes 2
+recette/salade_pates_grecque 4
+recette/taboule_chou_fleur 0
+recette/courgettes_scapece 1
+recette/club_sandwich_poulet 2
+recette/bocadillo_tortilla 7
+recette/pizza_scrolls 2
+recette/brochettes_poulet_tandoori_froid 3
+recette/cornish_pasty 0
+recette/flapjacks 0
+recette/barres_cereales_maison 3
