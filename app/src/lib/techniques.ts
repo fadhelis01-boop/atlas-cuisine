@@ -55,7 +55,7 @@ const BASE: Technique[] = [
   { id: "rotir-volaille", name: "Rôtir une volaille", family: "Cuisson au four", level: 1,
     why: "Peau croustillante et chair juteuse : le plat-mère zéro déchet (carcasse → bouillon).", gear: "Plat à rôtir, four, thermomètre de cuisson (recommandé).",
     steps: ["Sors la volaille 1 h avant, sèche-la, sale dedans et dehors.", "Beurre la peau, aromatise l'intérieur (citron, ail, thym).", "Cuis à 200 °C (th. 6-7) environ 45 min par kg, en arrosant.", "Attention : Cuisson sûre : 74 °C dans la cuisse, jus clair.", "Laisse reposer 10 min avant de découper."],
-    errors: ["Découper aussitôt : le jus coule et la chair sèche."], keys: ["rôtir", "rôtir une volaille", "laisser reposer"], query: "rôtir un poulet parfait four" },
+    errors: ["Découper aussitôt : le jus coule et la chair sèche."], keys: ["rôtir", "rôtir une volaille", "laisser reposer", "températures à cœur"], query: "rôtir un poulet parfait four" },
   { id: "cuire-pates", name: "Cuire les pâtes al dente (et utiliser l'eau)", family: "Pâtes fraîches & riz", level: 1,
     why: "Des pâtes fermes et une sauce liée grâce à l'amidon de l'eau de cuisson.", gear: "Grande casserole, passoire.",
     steps: ["1 L d'eau pour 100 g de pâtes, 10 g de gros sel par litre.", "Plonge les pâtes à gros bouillon et remue la première minute.", "Goûte 1 min avant le temps du paquet : le cœur doit résister légèrement.", "Garde un verre d'eau de cuisson avant d'égoutter ; finis la cuisson dans la sauce."],

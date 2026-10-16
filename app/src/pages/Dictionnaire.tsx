@@ -1,4 +1,5 @@
 import { Icon } from "../components/icons";
+import { substitutOf } from "../lib/substituts";
 import { useEffect, useMemo, useState } from "react";
 import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID } from "../lib/data";
 import { href } from "../lib/router";
@@ -127,6 +128,7 @@ export function IngredientPage({ slug }: { slug: string }) {
           <p className="meta"><Icon name={sectionLook(e.section)[1]} size={16} className="ic-inline" /> {e.section}{e.aliases.length ? ` · aussi : ${e.aliases.join(", ")}` : ""}</p>
           <p className="intro">{e.what}</p>
           <div className="card pad"><strong>En cuisine :</strong> {e.use}</div>
+          {substitutOf(e.name) && <div className="card pad subst-card"><strong>Pas trouvé ? Remplace par :</strong> {substitutOf(e.name)}.</div>}
           {ref?.note && <div className="card pad zw"><strong>Astuce du référentiel :</strong> {ref.note}</div>}
           <div className="badges">
             {ref && <span className="badge info"><Icon name="cart" size={16} className="ic-inline" /> {DISPO[ref.dispo] ?? ref.dispo}</span>}

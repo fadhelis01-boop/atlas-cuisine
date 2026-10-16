@@ -57,12 +57,12 @@ assert all(d["id"] in APP for d in WAVE2), "fiche absente des données de l'appl
 # Lots (un fichier recipes_v2_*.py = un lot éditorial)
 LOTS = OrderedDict()
 for f in sorted(os.listdir(HERE)):
-    m = re.match(r"recipes_v2_(\w+)\.py$", f)
+    m = re.match(r"recipes_v[23]_(\w+)\.py$", f)  # v3 : audit du chef (16/10/2026)
     if not m or m.group(1) in ("base", "all"): continue
     src = open(os.path.join(HERE, f), encoding="utf-8").read()
     doc = re.search(r'"""(.*?)"""', src, re.S).group(1).strip().splitlines()[0]
     ids = [i for i in re.findall(r'(?m)^(?:K|sauce_mayo|drink|fusion)\("([^"]+)"', src) if i in TITLE]
-    LOTS[doc.replace("Vague 2 · ", "")] = ids
+    LOTS[doc.replace("Vague 2 · ", "").replace("Vague 4 · ", "")] = ids
 
 # Techniques ajoutées (lues dans l'application, source unique)
 TS = open(os.path.join(HERE, "..", "app", "src", "lib", "techniques2.ts"), encoding="utf-8").read()

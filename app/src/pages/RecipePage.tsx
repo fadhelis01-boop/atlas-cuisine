@@ -1,6 +1,7 @@
 import StepPhotos from "../components/StepPhotos";
 import { Icon } from "../components/icons";
 import { toast } from "../lib/toast";
+import { substitutOf } from "../lib/substituts";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
@@ -247,7 +248,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
                 {l.ref?.startsWith("SUB:") ? <a href={href(`/recette/${l.ref.slice(4)}`)}>{l.label}</a> : l.ref && INGREDIENTS[l.ref]?.slug ? <a className="ing-link" href={href(`/ingredient/${INGREDIENTS[l.ref].slug}`)} title={`${l.ref} : voir le dictionnaire`}>{l.label}</a> : l.label}
                 {l.optional && <span className="meta"> (facultatif)</span>}
                 {l.replaces && <span className="meta repl"> · remplace {l.replaces}</span>}
-                {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && <span className="meta" title="Disponibilité en France"> · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}</span>}
+                {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && <span className="meta" title="Disponibilité en France"> · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}{substitutOf(l.ref) && <span className="subst"> · sinon : {substitutOf(l.ref)}</span>}</span>}
               </li>
             ))}
             {salt && <li className="salt-line"><span className="qty">Sel</span> {salt.text}{salt.water && <span className="meta"> · Eau de cuisson des pâtes ou des légumes : 10 g de sel par litre (2 c. à c. rases).</span>}</li>}

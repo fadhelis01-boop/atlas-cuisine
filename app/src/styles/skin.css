@@ -334,3 +334,4 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .pill { min-height: 44px; display: inline-flex; align-items: center; }
 .recipe-toc .chip { min-height: 44px; }
 .rescue summary, details.card > summary, .cook-help > summary, .search-filters > summary { min-height: 44px; display: flex; align-items: center; gap: 6px; }
+.subst { color: var(--ok-fg); } .subst-card { border-left: 5px solid var(--ok-fg); }

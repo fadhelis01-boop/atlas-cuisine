@@ -12,6 +12,7 @@ import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
+import { substitutOf } from "../src/lib/substituts";
 import { balanceOf, finishFor } from "../src/lib/dressage";
 import { cuesIn, saltDose } from "../src/lib/cues";
 import { fuzzyRecipes, parseIntents } from "../src/lib/intents";
@@ -242,5 +243,20 @@ check("63 variété (audit UX 2026-10-16) : ≥ 90 plats en 30 min, ≥ 33 % de 
   plats.filter((r) => r.active + r.rest <= 30).length >= 90 && vegShare >= 0.33 && RECIPES.filter((r) => r.cats.includes("brunch")).length >= 20
   && RECIPES.filter((r) => r.cats.includes("salade")).length >= 20 && RECIPES.filter((r) => r.macro === "oceanie").length >= 12 && RECIPES.filter((r) => r.macro === "france").length / RECIPES.length < 0.45);
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
+
+// 65-67 audit du chef (16/10/2026) : classiques manquants, règle D21, ingrédients rares remplaçables
+const CLASSIQUES = ["bucatini_amatriciana", "risotto_milanese", "spaghetti_vongole", "vitello_tonnato", "souffle_fromage", "moules_marinieres", "bouchees_reine",
+  "wiener_schnitzel", "boeuf_stroganov", "gumbo_poulet", "tourtiere_quebec", "mole_poblano_simple", "moqueca", "gyudon", "tempura_legumes_crevettes", "japchae",
+  "poulet_tikka_masala", "massaman_poulet", "tom_yum_crevettes", "couscous_royal", "pastilla_poulet", "tajine_agneau_pruneaux", "fesenjan", "dolma_riz",
+  "canard_laque_four", "apple_pie", "baba_ghanoush", "couscous_sept_legumes", "thali_vegetarien", "egusi_soup"];
+const manquants = CLASSIQUES.filter((id) => !RECIPE_BY_ID[id]);
+check("65 audit du chef : 30 grands classiques présents, ≤ 10 ingrédients et ≥ 3 étapes (Tome 13 §0)" + (manquants.length ? " — manquent " + manquants.join(",") : ""),
+  manquants.length === 0 && CLASSIQUES.every((id) => RECIPE_BY_ID[id].ingredients.length <= 10 && RECIPE_BY_ID[id].steps.length >= 3));
+const d21 = ["sarmale_boeuf", "dan_dan_noodles", "griot_poulet", "bigos_volaille", "full_english_volaille", "tourtiere_quebec", "zha_jiang_mian", "stamppot_boerenkool"];
+check("66 D21 : les versions des plats où le porc est structurant n'en contiennent pas (porc seulement en option signalée)",
+  d21.every((id) => evaluateLines(RECIPE_BY_ID[id].ingredients.filter((l) => !l.optional)).pork === "ok"));
+const rares = ["Gochujang", "Galanga", "Pâte de tamarin", "Mirin", "Berbéré", "Mélasse de grenade", "Aji amarillo", "Poivre du Sichuan", "Huile pimentée chinoise",
+  "Shichimi togarashi", "Mélange cajun", "Feuille de bananier", "Paneer", "Sumac", "Tomatille / nopal", "Piment scotch bonnet"];
+check("67 ingrédients rares : chacun a un substitut de supermarché affiché sur la fiche", rares.every((r) => !!substitutOf(r) && INGREDIENT_NAMES.includes(r)));
 
 console.log(`\n${passed} contrôles OK`);
