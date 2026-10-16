@@ -1,0 +1,24 @@
+{
+  "name": "ATLAS — Cuisines du monde, fait maison",
+  "short_name": "ATLAS",
+  "description": "Recettes du monde par région, par nom ou par ingrédients ; sans porc / sans alcool avec substitutions ; audio ; techniques ; pains ; sauces ; fêtes ; zéro déchet.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FBF6EC",
+  "theme_color": "#A8412C",
+  "categories": ["food", "lifestyle"],
+  "share_target": {
+    "action": "./",
+    "method": "GET",
+    "params": { "title": "share_title", "text": "share_text", "url": "share_url" }
+  },
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
