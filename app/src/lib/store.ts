@@ -43,6 +43,7 @@ export interface State {
   week?: Record<string, { midi?: string; soir?: string }>; // planificateur : date ISO → plats du midi et du soir
   pantry?: string[]; // placard supposé toujours présent (frigo), modifiable
   weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number };
+  restes?: { id: string; cooked: string }[]; // mes restes cuits : type de reste (lib/restes.ts) + date de cuisson, pour l'alerte de conservation
 }
 
 const KEY = "atlas-state-v1";

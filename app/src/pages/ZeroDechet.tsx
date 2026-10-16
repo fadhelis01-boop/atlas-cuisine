@@ -1,4 +1,5 @@
 import { ImportRow } from "../components/video";
+import { Icon } from "../components/icons";
 import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { ANATOMIE, CONSERVATION, DLC_DDM } from "../lib/content";
 import { href } from "../lib/router";
@@ -10,6 +11,7 @@ export default function ZeroDechet() {
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "zero_dechet" || i.cat === "fait_maison");
   return (
     <Page photo="rubrique/zero_dechet" title="Zéro déchet" sub="Chaque ingrédient a plusieurs vies : carcasse, épluchures, fanes, pain rassis, blancs d'œufs… Voici comment tout utiliser." back="/explorer">
+      <div className="card pad zw-links"><p><Icon name="plate" size={20} className="ic-inline" /> <strong>Des restes déjà cuits ?</strong> <a href={href("/restes")}>La cuisine des restes</a> propose une entrée, un plat, un sandwich, un dessert ou un menu complet. <Icon name="cart" size={20} className="ic-inline" /> <a href={href("/bien-choisir")}>Bien choisir, bien rattraper</a> : fruit trop mûr, viande dure, poisson moins frais.</p></div>
       <Section title="L'anatomie des ingrédients">
         <div className="table-wrap">
           <table className="table">

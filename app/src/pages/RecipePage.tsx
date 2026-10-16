@@ -2,6 +2,7 @@ import StepPhotos from "../components/StepPhotos";
 import { Icon } from "../components/icons";
 import { toast } from "../lib/toast";
 import { substitutOf } from "../lib/substituts";
+import { restesOfRecipe } from "../lib/restes";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
@@ -256,6 +257,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {lines.some((l) => /c\. à [sc]\.|pincée/.test(l.qty)) && <p className="small abbr">c. à s. = cuillère à soupe (15 ml) · c. à c. = cuillère à café (5 ml) · pincée = ce qu'on prend entre 2 doigts</p>}
           {ev.allergens.size > 0 && <p className="small"><strong>Allergènes :</strong> {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}{ev.maybeAllergens.size > ev.allergens.size ? ` ; possibles selon la marque : ${[...ev.maybeAllergens].filter((a) => !ev.allergens.has(a)).map((a) => ALLERGENS[a]).join(", ")}` : ""}.</p>}
           <Leftovers r={r} />
+          {restesOfRecipe(r).length > 0 && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> <strong>Il en reste ?</strong> Idées pour le lendemain : <a href={href(`/restes?r=${restesOfRecipe(r).map((x) => x.id).join(",")}`)}>{restesOfRecipe(r).map((x) => x.name.split(" (")[0].split(",")[0].toLowerCase()).join(", ")}</a>.</p>}
         </Section>
 
         <Section title="Étapes" id="r-etapes">

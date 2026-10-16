@@ -2504,6 +2504,22 @@
   "kind": "photo",
   "avif": true
  },
+ "ingredient/beurre-clarifie-ghee": {
+  "path": "img/ingredient/beurre-clarifie-ghee",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#614836",
+  "author": "fishermansdaughter",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/53194155@N00/5224517399",
+  "source": "Openverse (flickr)",
+  "title": "ghee layer",
+  "kind": "photo",
+  "avif": true
+ },
  "ingredient/beurre-de-cacahuete": {
   "path": "img/ingredient/beurre-de-cacahuete",
   "sizes": [
@@ -2757,6 +2773,22 @@
   "page": "https://commons.wikimedia.org/wiki/File:Br%C3%BChw%C3%BCrfel-1.jpg",
   "source": "Wikimedia Commons",
   "title": "Brühwürfel-1.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "ingredient/bouillon-cube-volaille": {
+  "path": "img/ingredient/bouillon-cube-volaille",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#7f7062",
+  "author": "Ryan Snyder",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_Stock_(3138718546).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken Stock (3138718546).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -4472,6 +4504,22 @@
   "kind": "photo",
   "avif": true
  },
+ "ingredient/eglefin": {
+  "path": "img/ingredient/eglefin",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#856a43",
+  "author": "thefoodplace.co.uk",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/41930815@N02/4692289863",
+  "source": "Openverse (flickr)",
+  "title": "Fish and Chips at Fylingdales Inn, Fylingthorpe",
+  "kind": "photo",
+  "avif": true
+ },
  "ingredient/entrecote": {
   "path": "img/ingredient/entrecote",
   "sizes": [
@@ -5992,6 +6040,22 @@
   "kind": "photo",
   "avif": true
  },
+ "ingredient/huile-d-arachide": {
+  "path": "img/ingredient/huile-d-arachide",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#907066",
+  "author": "KISUMAR123",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Groundnut_oil.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Groundnut oil.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "ingredient/huile-d-argan-alimentaire": {
   "path": "img/ingredient/huile-d-argan-alimentaire",
   "sizes": [
@@ -6869,6 +6933,22 @@
   "page": "https://commons.wikimedia.org/wiki/File:Levisticum_officinale_.R.H._10.jpg",
   "source": "Wikimedia Commons",
   "title": "Levisticum officinale .R.H. 10.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "ingredient/lotte": {
+  "path": "img/ingredient/lotte",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#796d5f",
+  "author": "5snake5",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Lophius_piscatorius_-_Seeteufel.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lophius piscatorius - Seeteufel.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -8568,6 +8648,22 @@
   "kind": "photo",
   "avif": true
  },
+ "ingredient/pesto-bocal": {
+  "path": "img/ingredient/pesto-bocal",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#c6bd97",
+  "author": "poppet with a camera",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/30070299@N06/7379212182",
+  "source": "Openverse (flickr)",
+  "title": "pesto!",
+  "kind": "photo",
+  "avif": true
+ },
  "ingredient/petit-suisse": {
   "path": "img/ingredient/petit-suisse",
   "sizes": [
@@ -8789,6 +8885,22 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pear_DS.jpg",
   "source": "Wikimedia Commons",
   "title": "Pear DS.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "ingredient/poireau": {
+  "path": "img/ingredient/poireau",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#778a84",
+  "author": "Jacquesverlaeken",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hochstadt_Pfalz_field_leeks_512.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Hochstadt Pfalz field leeks 512.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -9381,6 +9493,22 @@
   "page": "https://commons.wikimedia.org/wiki/File:Bread,_pork_rillette.jpg",
   "source": "Wikimedia Commons",
   "title": "Bread, pork rillette.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "ingredient/rillettes-de-poulet-thon-saumon": {
+  "path": "img/ingredient/rillettes-de-poulet-thon-saumon",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#dd842f",
+  "author": "kimberlykv",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/87542849@N00/5060740361",
+  "source": "Openverse (flickr)",
+  "title": "Salmon Rillettes",
   "kind": "photo",
   "avif": true
  },
@@ -10760,6 +10888,22 @@
   "kind": "photo",
   "avif": true
  },
+ "ingredient/tripes-gras-double-de-boeuf": {
+  "path": "img/ingredient/tripes-gras-double-de-boeuf",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#cab5a5",
+  "author": "Harald the Bard",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beef_tripe.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beef tripe.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "ingredient/truite": {
   "path": "img/ingredient/truite",
   "sizes": [
@@ -10965,6 +11109,22 @@
   "page": "https://commons.wikimedia.org/wiki/File:Rice_vinegar.jpg",
   "source": "Wikimedia Commons",
   "title": "Rice vinegar.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "ingredient/vinaigre-de-vin-rouge-blanc": {
+  "path": "img/ingredient/vinaigre-de-vin-rouge-blanc",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#7a6b6d",
+  "author": "Exilexi",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vinaigre_estragon_%C3%A9chalote_et_vinaigre_aux_framboises.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Vinaigre estragon échalote et vinaigre aux framboises.jpg",
   "kind": "photo",
   "avif": true
  },

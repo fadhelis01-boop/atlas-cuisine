@@ -1853,5 +1853,15 @@
  "recette/fasolakia_ladera": 0,
  "recette/briam": 1,
  "recette/baked_beans_maison": 0,
- "recette/mafe_vegetarien": 0
+ "recette/mafe_vegetarien": 0,
+ "ingredient/tripes-gras-double-de-boeuf": 2,
+ "ingredient/rillettes-de-poulet-thon-saumon": 3,
+ "ingredient/huile-d-arachide": 1,
+ "ingredient/eglefin": 1,
+ "ingredient/lotte": 1,
+ "ingredient/beurre-clarifie-ghee": 1,
+ "ingredient/poireau": 4,
+ "ingredient/pesto-bocal": 7,
+ "ingredient/vinaigre-de-vin-rouge-blanc": 4,
+ "ingredient/bouillon-cube-volaille": 3
 }

@@ -6,13 +6,15 @@ const LEFT = await loadLeftovers();
 import { evaluate, evaluateLines, flatten, suggest, verdict } from "../src/lib/engine";
 import { classify, linksFromExport } from "../src/lib/classify";
 import { embedOf } from "../src/components/video";
-import { gestureLabel, ovenPlan, splitStep } from "../src/lib/text";
+import { gestureLabel, norm, ovenPlan, splitStep } from "../src/lib/text";
 import { TECHNIQUES, techniqueFor } from "../src/lib/techniques";
 import { dishEmoji } from "../src/components/art";
 import { rescueFor } from "../src/lib/rescue";
 import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
 import { substitutOf } from "../src/lib/substituts";
+import { RESTES, buildMenu, ideasFor, restesOfRecipe, resteStatus } from "../src/lib/restes";
+import { RAYONS, RATTRAPAGES, choixOf } from "../src/lib/marche";
 import { balanceOf, finishFor } from "../src/lib/dressage";
 import { cuesIn, saltDose } from "../src/lib/cues";
 import { fuzzyRecipes, parseIntents } from "../src/lib/intents";
@@ -259,6 +261,25 @@ check("66 D21 : les versions des plats où le porc est structurant n'en contienn
 const rares = ["Gochujang", "Galanga", "Pâte de tamarin", "Mirin", "Berbéré", "Mélasse de grenade", "Aji amarillo", "Poivre du Sichuan", "Huile pimentée chinoise",
   "Shichimi togarashi", "Mélange cajun", "Feuille de bananier", "Paneer", "Sumac", "Tomatille / nopal", "Piment scotch bonnet"];
 check("67 ingrédients rares : chacun a un substitut de supermarché affiché sur la fiche", rares.every((r) => !!substitutOf(r) && INGREDIENT_NAMES.includes(r)));
+
+// 69-70 cuisine des restes et guide « Bien choisir » (16/10/2026)
+const P0 = { noPork: false, alcohol: "allowed" as const, strict: false, vegetarian: false, allergens: [] as string[], adult: false, kidsAge: null, equipment: ["four", "plaques", "poele", "casserole", "mixeur"], onboarded: true };
+const ideasAll = RESTES.flatMap((r) => r.ideas);
+const menuR = buildMenu(["volaille", "riz", "fruits"], P0);
+const interdit = /\b(lardons?|porc|bacon|chorizo|vin|rhum|biere|calvados|cidre doux)\b/;
+console.log("   restes :", RESTES.length, "types ·", ideasAll.length, "idées ·", ideasAll.filter((i) => i.recipe).length, "liées à une fiche · menu :", menuR.entree?.reste.id, menuR.plat?.reste.id, menuR.dessert?.reste.id);
+check("69 restes : fiches liées existantes, ≥ 3 idées par reste, 4 services couverts, menu à 3 restes distincts, végétarien sans chair, riz jeté après 24 h, rien au porc ni à l'alcool",
+  ideasAll.every((i) => !i.recipe || !!RECIPE_BY_ID[i.recipe]) && RESTES.every((r) => r.ideas.length >= 3)
+  && (["entree", "plat", "sandwich", "dessert"] as const).every((c) => ideasAll.filter((i) => i.course === c).length >= 8)
+  && !!menuR.entree && !!menuR.plat && !!menuR.dessert && new Set([menuR.entree.reste.id, menuR.plat.reste.id, menuR.dessert.reste.id]).size === 3
+  && RESTES.filter((r) => r.flesh).every((r) => ideasFor(r, { ...P0, vegetarian: true }).length === 0)
+  && ideasFor(RESTES.find((r) => r.id === "pain")!, { ...P0, allergens: ["GL"] }).length === 0
+  && resteStatus("riz", new Date(Date.now() - 2 * 86400000).toISOString()).level === "jeter"
+  && restesOfRecipe(RECIPE_BY_ID["poulet_roti"]).some((x) => x.id === "volaille")
+  && ideasAll.every((i) => !interdit.test(norm(`${i.title} ${i.how}`))));
+check("70 bien choisir : ingrédients du guide présents au Tome 3, chaque rattrapage de produit animal dit quand jeter, conseil affiché au dictionnaire",
+  RAYONS.every((r) => r.items.every((c) => c.refs.every((x) => INGREDIENT_NAMES.includes(x))))
+  && RATTRAPAGES.filter((x) => /viande|poisson/.test(x.id)).every((x) => !!x.jeter) && !!choixOf("Avocat") && !!choixOf("Bœuf haché"));
 
 // 68 mijotés longs (audit du chef, suite) : trouvables par « mijoté », tripes en version sans alcool, autocuiseur indiqué
 const mij = parseIntents("un plat mijoté");

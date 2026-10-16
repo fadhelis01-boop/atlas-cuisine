@@ -335,3 +335,24 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .recipe-toc .chip { min-height: 44px; }
 .rescue summary, details.card > summary, .cook-help > summary, .search-filters > summary { min-height: 44px; display: flex; align-items: center; gap: 6px; }
 .subst { color: var(--ok-fg); } .subst-card { border-left: 5px solid var(--ok-fg); }
+
+/* Cuisine des restes et guide Bien choisir (audit du chef, 16/10/2026) */
+.reste-group { margin-bottom: 12px; }
+.reste-group h3 { margin: 8px 0 6px; color: var(--muted, inherit); }
+.reste-ideas { list-style: none; padding: 0; display: grid; gap: 10px; }
+.reste-idea { border-left: 4px solid var(--ok-fg); padding: 6px 0 6px 12px; }
+.reste-idea p { margin: 4px 0 6px; }
+.reste-keep p { margin: 4px 0; }
+.restes-saved { list-style: none; padding: 0; display: grid; gap: 8px; }
+.reste-saved { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 10px; background: var(--ok-bg); }
+.reste-saved.bientot { background: var(--warn-bg); }
+.reste-saved.jeter { background: var(--bad-bg); }
+.reste-saved .warn { color: var(--bad-fg); }
+.reste-saved .btn { margin-left: auto; }
+.menu-course { margin-bottom: 10px; }
+.restes-link, .zw-links { border-left: 5px solid var(--ok-fg); }
+.choix-list { display: grid; gap: 10px; }
+.choix summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.choix .jeter { background: var(--bad-bg); color: var(--bad-fg); padding: 8px 10px; border-radius: 8px; }
+.choix-card { border-left: 5px solid var(--info-fg); }
+.toc { margin-bottom: 8px; }

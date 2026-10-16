@@ -12,12 +12,14 @@ const CATS = [
   { to: "/recettes", icon: "search", label: "Toutes les recettes, avec filtres", sub: "type, temps, niveau, budget, occasion" },
   { to: "/apprendre", icon: "cap", label: "J'apprends à cuisiner", sub: "un parcours pas à pas pour débuter" },
   { to: "/techniques", icon: "knife", label: "Techniques de cuisine", sub: "71 fiches : chef, pâtissier, boulanger, chocolatier" },
-  { to: "/dictionnaire", icon: "dictionary", label: "Dictionnaire des ingrédients", sub: "655 fiches illustrées, saisons, substituts" },
+  { to: "/dictionnaire", icon: "dictionary", label: "Dictionnaire des ingrédients", sub: "657 fiches illustrées, saisons, substituts, bien choisir" },
   { to: "/pains", icon: "bread", label: "Pains, pâtes & bases", sub: "baguette, pizza, naan, crêpes…" },
   { to: "/sauces", icon: "sauce", label: "Sauces maison", sub: "mayo, algérienne, samouraï, frites…" },
   { to: "/enfants", icon: "kid", label: "Recettes pour enfants", sub: "par âge, avec sécurité" },
   { to: "/fetes", icon: "cake", label: "Repas de fêtes", sub: "calendrier, menus, boissons" },
-  { to: "/zero-dechet", icon: "recycle", label: "Zéro déchet", sub: "restes, épluchures, conservation" },
+  { to: "/restes", icon: "plate", label: "Cuisine des restes", sub: "entrée, plat, sandwich, dessert ou menu complet" },
+  { to: "/bien-choisir", icon: "cart", label: "Bien choisir, bien rattraper", sub: "maraîcher, boucher, poissonnier ; trop mûr, viande dure" },
+  { to: "/zero-dechet", icon: "recycle", label: "Zéro déchet", sub: "épluchures, carcasses, conservation" },
 ];
 
 export default function Explore() {

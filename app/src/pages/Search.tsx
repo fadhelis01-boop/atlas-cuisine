@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CATALOGUE, useImportLibrary, INGREDIENTS, INGREDIENT_NAMES, MACROS, RECIPES } from "../lib/data";
 import { TECHNIQUES } from "../lib/techniques";
 import { go, href } from "../lib/router";
-import { search } from "../lib/text";
+import { norm, search } from "../lib/text";
 import { Chip, Empty, MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
 import { fuzzyRecipes, parseIntents } from "../lib/intents";
 
@@ -45,6 +45,8 @@ export default function Search({ q }: { q: string }) {
       </form>
       {q && !total && <Empty>Rien trouvé pour « {q} ». Essaie un ingrédient dans <a href={href("/frigo")}>Avec ce que j'ai</a>.</Empty>}
       {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}><Icon name={m.icon} size={18} className="ic-inline" /> {m.name}</a>)}</div></Section>}
+      {/\b(restes?|gaspi|anti gaspi|de la veille|rassis)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> Des restes à utiliser ? <a href={href("/restes")}>La cuisine des restes</a> part de ce que tu as déjà cuit.</p>}
+      {/\b(choisir|trop mur|trop mure|pas mur|viande dure|fraicheur|bien choisir)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="cart" size={20} className="ic-inline" /> <a href={href("/bien-choisir")}>Bien choisir, bien rattraper</a> : maraîcher, boucher, poissonnier, et que faire d'un produit trop mûr ou moins frais.</p>}
       {intents.length > 0 && <p className="small understood"><Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}{rest ? ` · « ${rest} »` : ""}</p>}
       {recipesAll.length > 0 && (
         <details className="search-filters" open={nFilters > 0}>

@@ -26,6 +26,8 @@ const Sauces = lazy(() => import("./pages/Sauces"));
 const Fetes = lazy(() => import("./pages/Fetes"));
 const MenuPage = lazy(() => import("./pages/Menu"));
 const ZeroDechet = lazy(() => import("./pages/ZeroDechet"));
+const Restes = lazy(() => import("./pages/Restes"));
+const Marche = lazy(() => import("./pages/Marche"));
 const Enfants = lazy(() => import("./pages/Enfants"));
 const Imports = lazy(() => import("./pages/Imports"));
 const Biblio = lazy(() => import("./pages/Biblio"));
@@ -92,6 +94,8 @@ export default function App() {
     case "fetes": page = <Fetes />; break;
     case "menu": page = <MenuPage id={p1} />; break;
     case "zero-dechet": page = <ZeroDechet />; break;
+    case "restes": page = <Restes key={route.query.get("r") ?? ""} preset={route.query.get("r")} />; break;
+    case "bien-choisir": page = <Marche />; break;
     case "enfants": page = <Enfants />; break;
     case "imports": page = <Imports key={route.query.toString()} q={route.query} />; break;
     case "biblio": page = <Biblio />; break;
