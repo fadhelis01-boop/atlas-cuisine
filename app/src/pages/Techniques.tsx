@@ -5,7 +5,7 @@ import { useImportLibrary, RECIPES } from "../lib/data";
 import { TECH_BY_ID, TECHNIQUES, techniqueFor, youtubeSearch } from "../lib/techniques";
 import { href } from "../lib/router";
 import { search } from "../lib/text";
-import { Grid, Page, RecipeCard, Section } from "../components/ui";
+import { Grid, MoreList, Page, RecipeCard, Section } from "../components/ui";
 
 export function TechniquesPage() {
   const IMPORT_LIBRARY = useImportLibrary();
@@ -13,8 +13,10 @@ export function TechniquesPage() {
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "techniques");
   return (
     <Page photo="rubrique/techniques" title="Techniques de cuisine" sub="Les gestes de base, pas à pas, avec les erreurs à éviter et une solution sans équipement spécial." back="/explorer">
-      {families.map((f) => (
-        <Section key={f} title={f}>
+      <p className="small">{TECHNIQUES.length} fiches en {families.length} familles : touche une famille pour l'ouvrir.</p>
+      {families.map((f, fi) => (
+        <details key={f} className="section tech-family" open={fi === 0}>
+          <summary className="h3">{f} <span className="meta">({TECHNIQUES.filter((t) => t.family === f).length})</span></summary>
           <div className="tech-list">
             {TECHNIQUES.filter((t) => t.family === f).map((t) => (
               <a key={t.id} href={href(`/technique/${t.id}`)} className="card pad tech">
@@ -24,11 +26,11 @@ export function TechniquesPage() {
               </a>
             ))}
           </div>
-        </Section>
+        </details>
       ))}
       {tiktok.length > 0 && (
         <Section title="Astuces et techniques de tes favoris TikTok">
-          <ul className="links-list">{tiktok.map((i) => <ImportRow key={i.url} i={i} />)}</ul>
+          <MoreList items={tiktok} step={10} render={(i) => <ImportRow key={i.url} i={i} />} />
         </Section>
       )}
     </Page>

@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { ImportRow, PlayButton, embedOf } from "../components/video";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { IMPORT_CATS, useImportLibrary, INGREDIENTS, loadImports } from "../lib/data";
@@ -150,7 +151,7 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
             <p>
               <span className={`badge ${res.pork === "non" ? "ok" : res.pork === "oui" ? "bad" : "warn"}`}>🐖 Porc : {res.pork}</span>{" "}
               <span className={`badge ${res.alcohol === "non" ? "ok" : res.alcohol === "oui" ? "bad" : "warn"}`}>🍷 Alcool : {res.alcohol}</span>{" "}
-              <span className="badge neutral">⚪ Non vérifié</span>
+              <span className="badge neutral">Non vérifié</span>
             </p>
             {res.ingredients.length > 0 && (
               <>
@@ -158,7 +159,7 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
                 <ul>{res.ingredients.map((i, k) => <li key={k}>{i.text} {i.ref ? <span className="meta">→ {i.ref}{INGREDIENTS[i.ref].derivs.pork ? " 🐖" : ""}{INGREDIENTS[i.ref].derivs.alcohol ? " 🍷" : ""}</span> : <span className="meta">→ non reconnu</span>}</li>)}</ul>
               </>
             )}
-            {res.warnings.map((w) => <p key={w} className="warn-text">⚠️ {w}</p>)}
+            {res.warnings.map((w) => <p key={w} className="warn-text"><Icon name="alert" size={16} className="ic-inline" /> {w}</p>)}
             <p className="small">Une recette importée reste « non vérifiée » : en cas de doute, ATLAS indique « doute », jamais « sans porc ».</p>
             <button className="btn" onClick={save}>Enregistrer dans mes imports</button>
           </div>
@@ -241,8 +242,8 @@ function Bibliotheque({ cat0 }: { cat0: string | null }) {
       <div className="chips">
         <Chip on={!source} onClick={() => setSource(null)}>Toutes sources</Chip>
         {[...new Set(IMPORT_LIBRARY.map((i) => i.source))].map((s) => <Chip key={s} on={source === s} onClick={() => setSource(s)}>{s}</Chip>)}
-        <Chip on={noPork} onClick={() => setNoPork(!noPork)}>Masquer 🐖</Chip>
-        <Chip on={noAlcohol} onClick={() => setNoAlcohol(!noAlcohol)}>Masquer 🍷</Chip>
+        <Chip on={noPork} onClick={() => setNoPork(!noPork)}>Sans porc</Chip>
+        <Chip on={noAlcohol} onClick={() => setNoAlcohol(!noAlcohol)}>Sans alcool</Chip>
         <Chip on={frOnly} onClick={() => setFrOnly(!frOnly)}>En français seulement</Chip>
       </div>
       {source === "YouTube" && (

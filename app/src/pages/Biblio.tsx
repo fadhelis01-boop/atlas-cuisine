@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { RECIPE_BY_ID } from "../lib/data";
 import { href } from "../lib/router";
 import { setState, useStore } from "../lib/store";
@@ -23,14 +24,14 @@ export default function Biblio() {
   return (
     <Page title="Mes recettes" sub="Favoris, carnet, menus, imports et recettes déjà cuisinées.">
       <Section title={`Favoris (${favs.length})`}>
-        {favs.length ? <Grid>{favs.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid> : <Empty>Touche ♡ sur une recette pour la retrouver ici.</Empty>}
+        {favs.length ? <Grid>{favs.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid> : <Empty>Touche « Garder » sur une recette pour la retrouver ici.</Empty>}
       </Section>
-      <p><a className="btn ghost" href={href("/semaine")}>📅 Ma semaine : menus et courses</a></p>
+      <p><a className="btn ghost" href={href("/semaine")}><Icon name="calendar" size={20} /> Ma semaine : menus et courses</a></p>
       <Section title={`Mon carnet d'essais (${tried.length})`} more={tried.length ? <button className="btn small ghost" onClick={exportTests}>Exporter</button> : undefined}>
         <p className="small">Les recettes d'ATLAS n'ont pas encore été testées en cuisine. Après chaque essai, note-la sur 5 et écris ce qu'il faut changer
           (sel, temps, quantités, ordre des gestes) : l'export produit un tableau à renvoyer pour corriger les fiches.</p>
         {tried.length ? <ul>{tried.map(([id, e]) => <li key={id}><a href={href(`/recette/${id}`)}>{RECIPE_BY_ID[id].title}</a> <span className="meta">· {e.rating ? "★".repeat(e.rating) : "sans note"} · {new Date(e.date).toLocaleDateString("fr-FR")}</span>{e.note && <><br /><span className="small">{e.note}</span></>}</li>)}</ul>
-          : <Empty>Après avoir cuisiné (mode cuisine, dernière étape) ou sur une fiche, remplis « 📝 Mon carnet ».</Empty>}
+          : <Empty>Après avoir cuisiné (mode cuisine, dernière étape) ou sur une fiche, remplis « Mon carnet ».</Empty>}
       </Section>
       <Section title={`Menus (${menus.length})`}>
         {menus.length ? menus.map((m) => (
@@ -40,7 +41,7 @@ export default function Biblio() {
             <p className="small">Boissons : {m.drinks.join(", ")}</p>
             <button className="btn small ghost danger" onClick={() => setState((s) => { s.menus = s.menus.filter((x) => x.id !== m.id); })}>Supprimer</button>
           </div>
-        )) : <Empty>Compose un menu depuis une recette (« 🍽 Compléter le menu ») ou la rubrique <a href={href("/fetes")}>Fêtes</a>.</Empty>}
+        )) : <Empty>Compose un menu depuis une recette (« Pour recevoir » en bas de fiche) ou la rubrique <a href={href("/fetes")}>Fêtes</a>.</Empty>}
       </Section>
       <Section title={`Mes imports (${imports.length})`} more={<a href={href("/imports")}>Gérer →</a>}>
         {imports.length ? <ul className="links-list">{imports.slice(0, 10).map((i) => <li key={i.id}><a href={i.url} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul> : <Empty>Importe tes recettes TikTok, Instagram ou YouTube depuis <a href={href("/imports")}>Mes imports</a>.</Empty>}

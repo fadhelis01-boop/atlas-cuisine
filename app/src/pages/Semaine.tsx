@@ -8,6 +8,7 @@ import { setState, uid, useProfile, useStore } from "../lib/store";
 import { minutes } from "../lib/text";
 import type { Leftover } from "../lib/types";
 import { Chip, Cover, Page } from "../components/ui";
+import { toast } from "../lib/toast";
 
 const SLOT_LABEL: Record<Slot, string> = { midi: "Midi", soir: "Soir" };
 const DEFAULT_PREFS = { people: 2, slots: ["soir"] as Slot[], weekdayMax: 45 };
@@ -59,6 +60,11 @@ export default function Semaine({ add }: { add: string | null }) {
     });
     setMsg(`${lines.length} articles dans la liste de courses, quantités additionnées pour ${prefs.people} personne${prefs.people > 1 ? "s" : ""}.`);
   };
+  // pour la personne qui fait les courses ou qui cuisine aussi : le planning en texte, à envoyer
+  const shareWeek = async () => {
+    const text = ["Ma semaine ATLAS", ...days.map((d, i) => { const m = (["midi", "soir"] as Slot[]).map((sl) => plan[d]?.[sl] && `${SLOT_LABEL[sl].toLowerCase()} : ${RECIPE_BY_ID[plan[d]![sl]!]?.title.split(" (")[0]}`).filter(Boolean); return m.length ? `${DAY_NAMES[i]} ${shortDate(d)} · ${m.join(" · ")}` : null; }).filter(Boolean)].join("\n");
+    try { if (navigator.share) await navigator.share({ title: "Ma semaine ATLAS", text }); else { await navigator.clipboard.writeText(text); toast("Planning copié : colle-le dans un message"); } } catch { /* annulé */ }
+  };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
   const slotsShown: Slot[] = (["midi", "soir"] as Slot[]).filter((s) => prefs.slots.includes(s) || days.some((d) => plan[d]?.[s]));
 
@@ -99,7 +105,7 @@ export default function Semaine({ add }: { add: string | null }) {
         <button className="btn ghost small" disabled={offset === 1} onClick={() => setOffset(1)}>Semaine prochaine</button>
         <span className="grow" />
         <button className="btn" disabled={!left} onClick={() => fill(plan)}><Icon name="calendar" size={20} /> Compléter les cases vides</button>
-        <button className="btn ghost" disabled={!left} onClick={() => { if (!planned.length || confirm("Remplacer tous les plats de cette semaine ?")) fill(clearWeek()); }}>Tout reproposer</button>
+        <button className="btn ghost" disabled={!left} onClick={() => { const before = structuredClone(plan); fill(clearWeek()); if (planned.length) toast("Nouvelle semaine proposée", { undo: () => save(before) }); }}>Tout reproposer</button>
       </div>
       {msg && <p role="status" className="banner info">{msg} <a href={href("/courses")}>Voir les courses</a></p>}
 
@@ -135,7 +141,7 @@ export default function Semaine({ add }: { add: string | null }) {
           </li>
         ))}
       </ol>
-      <p className="small">Pour placer une recette précise : sur sa fiche, touche « 📅 Planifier ». Les plats proposés respectent ton profil (porc, alcool, allergies) et la saison de l'endroit où tu es.</p>
+      <p className="small">Pour placer une recette précise : sur sa fiche, touche « Planifier ». Les plats proposés respectent ton profil (porc, alcool, allergies) et la saison de l'endroit où tu es.</p>
 
       {planned.length > 0 && (
         <>
@@ -143,6 +149,7 @@ export default function Semaine({ add }: { add: string | null }) {
             <h2 className="h3"><Icon name="cart" size={22} className="ic-inline" /> Les courses de la semaine</h2>
             <p className="small">Un seul article par produit, quantités additionnées et calculées pour {prefs.people} personne{prefs.people > 1 ? "s" : ""}. Vérifie ton placard avant de partir.</p>
             <button className="btn" onClick={shop}>Mettre la semaine dans la liste de courses</button>
+            <button className="btn ghost" onClick={() => void shareWeek()}><Icon name="share" size={20} /> Partager la semaine</button>
           </section>
           {(prep.tasks.length > 0 || prep.veg.length > 0) && (
             <section className="section">

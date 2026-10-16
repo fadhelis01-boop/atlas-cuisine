@@ -5,6 +5,7 @@ import { useStore } from "./lib/store";
 import { useTimerLoop } from "./lib/timers";
 import { applyUpdate, usePwa } from "./lib/pwa";
 import TimerDock from "./components/TimerDock";
+import Toasts from "./components/Toasts";
 import { VideoHost } from "./components/video";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
@@ -57,6 +58,7 @@ export default function App() {
     if (settings.theme === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", settings.theme);
     root.style.setProperty("--scale", String(settings.textScale));
     root.classList.toggle("readable", settings.readableFont);
+    root.classList.toggle("big-text", settings.textScale >= 1.4);
   }, [settings]);
 
   // Partage depuis TikTok / Instagram (Android, application installée) : ?share_url=…
@@ -123,6 +125,7 @@ export default function App() {
         <ErrorBoundary resetKey={route.path.join("/")}><Suspense fallback={<Loading />}>{page}</Suspense></ErrorBoundary>
       </div>
       <TimerDock />
+      <Toasts />
       <VideoHost />
     </div>
   );

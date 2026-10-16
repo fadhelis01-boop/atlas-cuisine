@@ -2,7 +2,8 @@ import { RECIPE_BY_ID } from "../lib/data";
 import { TECH_BY_ID } from "../lib/techniques";
 import { href } from "../lib/router";
 import { setState, useStore } from "../lib/store";
-import { Grid, Page, RecipeCard, Section } from "../components/ui";
+import { Grid, Page, RecipeCard } from "../components/ui";
+import { Icon } from "../components/icons";
 import { PARCOURS } from "../lib/parcours";
 
 
@@ -20,15 +21,16 @@ export default function Apprendre() {
       <div className="card pad progress-card">
         <strong>{n} / {PARCOURS.length} étapes</strong>
         <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={PARCOURS.length} aria-valuenow={n}><span style={{ width: `${(n / PARCOURS.length) * 100}%` }} /></div>
-        {next ? <p className="small">Prochaine étape : <a href={`#etape-${next.id}`}>{next.title}</a></p> : <p className="small">Bravo, parcours terminé : passe aux <a href={href("/fetes")}>menus de fête</a> !</p>}
+        {next ? <p className="small">Prochaine étape : <button type="button" className="linkish" onClick={() => document.getElementById(`etape-${next.id}`)?.scrollIntoView({ behavior: "smooth" })}>{next.title}</button></p> : <p className="small">Bravo, parcours terminé : passe aux <a href={href("/fetes")}>menus de fête</a> !</p>}
       </div>
       {PARCOURS.map((st, i) => (
-        <Section key={st.id} id={`etape-${st.id}`} title={`${done(st) ? "✅" : `${i + 1}.`} ${st.title}`}>
+        <details key={st.id} id={`etape-${st.id}`} className={`section parcours-step ${done(st) ? "done" : ""}`} open={st === next}>
+          <summary className="h3">{done(st) ? <Icon name="check" size={22} className="ic-inline" /> : <span className="step-n">{i + 1}</span>} {st.title}</summary>
           <p>{st.why}</p>
-          <div className="links">{st.techs.map((t) => TECH_BY_ID[t] && <a key={t} className="pill" href={href(`/technique/${t}`)}>🔪 {TECH_BY_ID[t].name}</a>)}</div>
+          <div className="links">{st.techs.map((t) => TECH_BY_ID[t] && <a key={t} className="pill" href={href(`/technique/${t}`)}><Icon name="knife" size={16} className="ic-inline" /> {TECH_BY_ID[t].name}</a>)}</div>
           <Grid>{st.recipes.map((id) => RECIPE_BY_ID[id] && <RecipeCard key={id} r={RECIPE_BY_ID[id]} />)}</Grid>
           <label className="switch"><input type="checkbox" checked={done(st)} onChange={() => toggle(st.id)} /> J'ai réussi cette étape</label>
-        </Section>
+        </details>
       ))}
     </Page>
   );

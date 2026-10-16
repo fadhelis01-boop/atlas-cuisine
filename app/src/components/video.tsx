@@ -1,3 +1,4 @@
+import { Icon } from "./icons";
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import type { ImportEntry } from "../lib/types";
 
@@ -55,7 +56,7 @@ export function VideoHost() {
       <div className={`video-box ${vertical ? "vertical" : ""}`} onClick={(e) => e.stopPropagation()}>
         <div className="video-head">
           <span className="video-title">{v.title}</span>
-          <button ref={close} className="btn small ghost" onClick={closeVideo} aria-label="Fermer la vidéo">✕</button>
+          <button ref={close} className="btn small ghost" onClick={closeVideo} aria-label="Fermer la vidéo"><Icon name="close" size={18} /></button>
         </div>
         <iframe src={playerSrc(v.embed)} title={v.title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
         <p className="small video-foot">

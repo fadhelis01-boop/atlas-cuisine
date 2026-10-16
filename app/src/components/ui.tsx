@@ -1,10 +1,10 @@
 import { Icon } from "./icons";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { ALLERGENS, MACRO_BY_ID } from "../lib/data";
 import { evaluate, evaluateLines, verdict, type Verdict } from "../lib/engine";
-import { href } from "../lib/router";
+import { goBack, href } from "../lib/router";
 import { toggleFavorite, useProfile, useStore } from "../lib/store";
-import { minutes } from "../lib/text";
+import { levelLabel, minutes } from "../lib/text";
 import type { Recipe, RecipeLine } from "../lib/types";
 import { Credit, Photo, photoOf } from "./photo";
 import { IllustratedCover, MACRO_HUE, PatternBand, dishEmoji } from "./art";
@@ -60,7 +60,7 @@ export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
         <Cover r={r} />
         <div className="rcard-body">
           <h3>{r.title}</h3>
-          <p className="meta"><Icon name={MACRO_BY_ID[r.macro]?.icon ?? "globe"} size={15} className="ic-inline" /> {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · <Icon name="timer" size={14} className="ic-inline" />{minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {"●".repeat(r.level)}{"○".repeat(3 - Math.min(3, r.level))}</p>
+          <p className="meta"><Icon name={MACRO_BY_ID[r.macro]?.icon ?? "globe"} size={15} className="ic-inline" /> {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · <Icon name="timer" size={14} className="ic-inline" />{minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {levelLabel(r.level)}</p>
           {v.availability === "adaptable" && <p className="meta adapt"><Icon name="swap" size={15} className="ic-inline" /> {v.adapted?.variantName}</p>}
           {v.availability === "hidden" && <p className="meta bad-text"><Icon name="ban" size={15} className="ic-inline" /> {v.reasons[0]}</p>}
           {note}
@@ -88,7 +88,7 @@ export function Page({ title, sub, children, back, photo }: { title: string; sub
   const withPhoto = photo && photoOf(photo);
   return (
     <main className="page" id="contenu">
-      {back && <a className="back" href={href(back)}>← Retour</a>}
+      {back && <a className="back" href={href(back)} onClick={(e) => { e.preventDefault(); goBack(back); }}><Icon name="back" size={20} /> Retour</a>}
       {withPhoto ? (
         <figure className="hero-fig">
           <div className="photo-band"><Photo k={photo!} alt="" eager sizes="(min-width: 900px) 1056px, 100vw" /><div className="band-text"><h1>{title}</h1></div></div>
@@ -109,4 +109,27 @@ export function useVisible(list: Recipe[], showHidden = false) {
 
 export function Chip({ on, children, onClick }: { on?: boolean; children: ReactNode; onClick: () => void }) {
   return <button className={`chip ${on ? "on" : ""}`} aria-pressed={!!on} onClick={onClick}>{children}</button>;
+}
+
+/** Les longues listes s'affichent par paquets (audit UX 2026-10-16 §2.3) : moins de défilement, de mémoire et de bruit
+ *  pour les lecteurs d'écran. `resetKey` remet le compteur à zéro quand un filtre change. */
+export function useMore<T>(items: T[], step = 12) {
+  const [n, setN] = useState(step);
+  const shown = items.slice(0, n);
+  const more = items.length > n ? (
+    <button type="button" className="btn ghost more-btn" onClick={() => setN(n + step * 2)}>
+      Voir {Math.min(step * 2, items.length - n)} de plus <span className="meta">({items.length - n} restantes)</span>
+    </button>
+  ) : null;
+  return { shown, more, reset: () => setN(step) };
+}
+
+export function MoreGrid({ items, step = 12, note }: { items: Recipe[]; step?: number; note?: (r: Recipe) => ReactNode }) {
+  const { shown, more } = useMore(items, step);
+  return <><Grid>{shown.map((r) => <RecipeCard key={r.id} r={r} note={note?.(r)} />)}</Grid>{more}</>;
+}
+
+export function MoreList<T>({ items, step = 15, render, className = "links-list" }: { items: T[]; step?: number; render: (x: T) => ReactNode; className?: string }) {
+  const { shown, more } = useMore(items, step);
+  return <><ul className={className}>{shown.map(render)}</ul>{more}</>;
 }

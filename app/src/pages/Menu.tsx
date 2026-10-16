@@ -67,11 +67,11 @@ export default function MenuPage({ id }: { id: string }) {
               ))}
             </ol>
             <p className="meta">Temps de préparation cumulé : {minutes(m.activeTotal)}</p>
-            {m.zeroWaste.length > 0 && <p className="small">♻️ {m.zeroWaste.join(" ; ")}.</p>}
+            {m.zeroWaste.length > 0 && <p className="small"><Icon name="recycle" size={16} className="ic-inline" /> {m.zeroWaste.join(" ; ")}.</p>}
             {m.reasons.length > 0 && <p className="small">Pourquoi : {m.reasons.join(", ")}.</p>}
             <div className="drinks">
-              <p><strong>🥤 Boissons sans alcool :</strong> {m.drinks.sa.join(", ")}.</p>
-              {alcoholOk && m.drinks.a.length > 0 && <p><strong>🍷 Avec alcool (adultes) :</strong> {m.drinks.a.join(", ")}. <span className="small">{EVIN}</span></p>}
+              <p><strong><Icon name="drink" size={16} className="ic-inline" /> Boissons sans alcool :</strong> {m.drinks.sa.join(", ")}.</p>
+              {alcoholOk && m.drinks.a.length > 0 && <p><strong><Icon name="wine" size={16} className="ic-inline" /> Avec alcool (adultes) :</strong> {m.drinks.a.join(", ")}. <span className="small">{EVIN}</span></p>}
               <p className="small">{m.drinks.why}</p>
             </div>
             <Ahead ids={m.courses.map((c) => c.recipe.id)} />

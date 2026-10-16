@@ -2,7 +2,7 @@ import { ImportRow } from "../components/video";
 import { useState } from "react";
 import { useImportLibrary, RECIPES } from "../lib/data";
 import { href } from "../lib/router";
-import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
+import { MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
 
 /** Calculateur de pâte en pourcentages boulangers (Tome 1 §10.4). Farine = 100 %. */
 function DoughCalc() {
@@ -51,7 +51,7 @@ export default function Pains() {
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "pains");
   return (
     <Page photo="rubrique/pains" title="Pains, pâtes & bases" sub="Les recettes les plus simples et les plus réussies, faites avec un four ménager et le matériel d'une cuisine française." back="/explorer">
-      <Grid>{list.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>
+      <MoreGrid items={list} />
       <Section title="Calculateur de pâte"><DoughCalc /></Section>
       <Section title="Les bons réflexes au four ménager">
         <ul>
@@ -63,7 +63,7 @@ export default function Pains() {
       </Section>
       {tiktok.length > 0 && (
         <Section title={`Tes favoris TikTok : pains, pizzas, brioches (${tiktok.length})`}>
-          <ul className="links-list">{tiktok.slice(0, 40).map((i) => <ImportRow key={i.url} i={i} />)}</ul>
+          <MoreList items={tiktok} step={10} render={(i) => <ImportRow key={i.url} i={i} />} />
           {tiktok.length > 40 && <a href="#/imports?cat=pains">Voir les {tiktok.length}</a>}
         </Section>
       )}

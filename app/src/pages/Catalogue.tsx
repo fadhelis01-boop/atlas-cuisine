@@ -1,3 +1,4 @@
+import { Icon } from "../components/icons";
 import { useMemo, useState } from "react";
 import { MACROS, RECIPES } from "../lib/data";
 import { evaluate } from "../lib/engine";
@@ -10,7 +11,8 @@ import type { Recipe } from "../lib/types";
 // Toutes les recettes, avec les filtres qu'attend un cuisinier amateur (audit UX, Tome 13 §11) :
 // quoi (type de plat), combien de temps, quelle difficulté, quel budget, pour quelle occasion, et des tris utiles.
 const TYPES: [string, string, (r: Recipe) => boolean][] = [
-  ["entree", "Entrées", (r) => r.role === "entree"], ["plat", "Plats", (r) => r.role === "plat"], ["dessert", "Desserts & goûters", (r) => r.role === "dessert"],
+  ["entree", "Entrées", (r) => r.role === "entree"], ["plat", "Plats", (r) => r.role === "plat"], ["express", "Express 20 min", (r) => r.role === "plat" && r.active + r.rest <= 20],
+  ["brunch", "Petit-déj & brunch", (r) => r.cats.includes("brunch")], ["salade", "Salades repas", (r) => r.cats.includes("salade")], ["dessert", "Desserts & goûters", (r) => r.role === "dessert"],
   ["boisson", "Boissons", (r) => r.role === "boisson"], ["sauce", "Sauces & condiments", (r) => r.kind === "Sauce" || r.kind === "Base"],
   ["pain", "Pains & viennoiseries", (r) => r.kind === "Pain"], ["accomp", "Accompagnements", (r) => r.kind === "Accompagnement"],
 ];
@@ -50,10 +52,10 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
       <div className="searchbar"><input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Nom, ingrédient, région…" aria-label="Chercher dans les recettes" /></div>
       <div className="filters">
         <div className="chips chips-scroll" role="group" aria-label="Type de plat"><Chip on={!type} onClick={() => setType(null)}>Tout</Chip>{TYPES.map(([k, l]) => <Chip key={k} on={type === k} onClick={() => setType(type === k ? null : k)}>{l}</Chip>)}</div>
-        <div className="chips chips-scroll" role="group" aria-label="Temps total">{TIMES.map(([k, l, v]) => <Chip key={k} on={time === v} onClick={() => setTime(time === v ? null : v)}>⏱ {l}</Chip>)}
+        <div className="chips chips-scroll" role="group" aria-label="Temps total">{TIMES.map(([k, l, v]) => <Chip key={k} on={time === v} onClick={() => setTime(time === v ? null : v)}><Icon name="timer" size={16} className="ic-inline" /> {l}</Chip>)}
           <Chip on={level === 1} onClick={() => setLevel(level === 1 ? null : 1)}>● Facile</Chip><Chip on={level === 2} onClick={() => setLevel(level === 2 ? null : 2)}>●● Facile ou moyen</Chip>
           <Chip on={cheap} onClick={() => setCheap(!cheap)}>€ Petit budget</Chip></div>
-        <div className="chips chips-scroll" role="group" aria-label="Préférences"><Chip on={veg} onClick={() => setVeg(!veg)}>🥦 Végétarien</Chip><Chip on={kids} onClick={() => setKids(!kids)}>🧒 Enfants dès 3 ans</Chip><Chip on={video} onClick={() => setVideo(!video)}>▶ Avec vidéo</Chip></div>
+        <div className="chips chips-scroll" role="group" aria-label="Préférences"><Chip on={veg} onClick={() => setVeg(!veg)}><Icon name="broccoli" size={16} className="ic-inline" /> Végétarien</Chip><Chip on={kids} onClick={() => setKids(!kids)}>🧒 Enfants dès 3 ans</Chip><Chip on={video} onClick={() => setVideo(!video)}>▶ Avec vidéo</Chip></div>
         <div className="row">
           <label className="field inline">Occasion <select value={occ ?? ""} onChange={(e) => setOcc(e.target.value || null)}><option value="">Toutes</option>{OCCASIONS.map((o) => <option key={o}>{o}</option>)}</select></label>
           <label className="field inline">Région <select value={macro ?? ""} onChange={(e) => setMacro(e.target.value || null)}><option value="">Toutes</option>{MACROS.filter((m) => m.id !== "fusion").map((m) => <option key={m.id} value={m.id}>{m.name}</option>)}</select></label>

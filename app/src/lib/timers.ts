@@ -1,3 +1,5 @@
+import { toast } from "./toast";
+import { isIos } from "./pwa";
 // Minuteurs multiples et nommés (Tome 1 §8.5). L'échéance est enregistrée (heure de fin) : le minuteur
 // survit à un rechargement ou à une fermeture de l'application. Sonnerie + vibration + notification si autorisée.
 // Limite web : sur iPhone, une application web en arrière-plan ne peut pas sonner ; la notification
@@ -5,8 +7,12 @@
 import { useEffect, useState } from "react";
 import { getState, setState, uid, useStore } from "./store";
 
+let iosWarned = false;
 export function startTimer(label: string, seconds: number, recipeId: string | null = null) {
   void askNotification();
+  // limite des applications web sur iPhone : le dire au moment où ça compte (audit UX 2026-10-16, angles morts)
+  if (!iosWarned && isIos()) { iosWarned = true; toast("Sur iPhone, garde ATLAS ouvert à l'écran : fermé, le minuteur ne peut pas sonner.", { ms: 7000 }); }
+  else toast(`Minuteur lancé : ${label.split(" · ").pop()}`);
   setState((s) => { s.timers.push({ id: uid(), label, endAt: Date.now() + seconds * 1000, recipeId, done: false }); });
 }
 export const removeTimer = (id: string) => setState((s) => { s.timers = s.timers.filter((t) => t.id !== id); });

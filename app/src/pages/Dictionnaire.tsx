@@ -5,8 +5,8 @@ import { href } from "../lib/router";
 import { useStore } from "../lib/store";
 import { norm } from "../lib/text";
 import { MONTHS, localMonth, marketOfMonth, zoneOf } from "../lib/season";
-import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
-import { Credit, Photo, photoOf } from "../components/photo";
+import { Grid, Page, RecipeCard, Section, useVisible, useMore } from "../components/ui";
+import { Credit, Photo, photoOf, useMoreImages } from "../components/photo";
 
 // Dictionnaire illustré des ingrédients (Tome 13 §8) : chargé à la demande (import dynamique) pour garder
 // l'ouverture de l'application rapide ; ensuite en cache hors connexion comme le reste.
@@ -59,48 +59,55 @@ export function SeasonStrip({ months }: { months: number[] }) {
 }
 
 export function DictionaryPage({ q0 = "" }: { q0?: string }) {
+  useMoreImages();
   const dico = useDico();
   const [q, setQ] = useState(q0);
   const [sec, setSec] = useState<string | null>(null);
   const [seasonOnly, setSeasonOnly] = useState(false);
+  const [letter, setLetter] = useState("A");
   const zone = zoneOf(useStore((s) => s.settings.zone));
   const market = useMemo(() => new Set(marketOfMonth(zone)), [zone]);
-  if (!dico) return <Page title="Dictionnaire des ingrédients" photo="rubrique/explorer">{<p>Chargement…</p>}</Page>;
-  const entries = Object.entries(dico);
+  const entries = Object.entries(dico ?? {});
   const sections = [...new Set(entries.map(([, e]) => e.section))];
   const nq = norm(q.trim());
+  const filtering = !!(nq || sec || seasonOnly);
   const list = entries.filter(([, e]) => (!sec || e.section === sec) && (!seasonOnly || market.has(e.name))
     && (!nq || norm(e.name + " " + e.aliases.join(" ") + " " + e.what).includes(nq))).sort((a, b) => a[1].name.localeCompare(b[1].name, "fr"));
   const letters = [...new Set(list.map(([, e]) => norm(e.name)[0].toUpperCase()))];
+  // sans filtre : une lettre à la fois (655 fiches d'un bloc faisaient 89 écrans) ; avec filtre : liste progressive
+  const shownAll = filtering ? list : list.filter(([, e]) => norm(e.name)[0].toUpperCase() === letter);
+  const { shown, more } = useMore(shownAll, 24);
+  if (!dico) return <Page title="Dictionnaire des ingrédients" photo="rubrique/explorer">{<p>Chargement…</p>}</Page>;
   return (
     <Page title="Dictionnaire des ingrédients" sub={`${entries.length} ingrédients expliqués et illustrés : ce que c'est, comment l'utiliser, la saison, où le trouver, par quoi le remplacer, et les recettes qui l'utilisent.`} back="/explorer">
       <div className="searchbar"><input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Passata, soumbala, galanga, tahini…" aria-label="Chercher un ingrédient" /></div>
       <div className="chips chips-scroll" role="group" aria-label="Familles">
-        <button className={`chip ${seasonOnly ? "on" : ""}`} aria-pressed={seasonOnly} onClick={() => setSeasonOnly(!seasonOnly)}>🌱 De saison ce mois-ci</button>
+        <button className={`chip ${seasonOnly ? "on" : ""}`} aria-pressed={seasonOnly} onClick={() => setSeasonOnly(!seasonOnly)}><Icon name="sprout" size={18} /> De saison ce mois-ci</button>
         <button className={`chip ${!sec ? "on" : ""}`} aria-pressed={!sec} onClick={() => setSec(null)}>Tout</button>
         {sections.map((s) => <button key={s} className={`chip ${sec === s ? "on" : ""}`} aria-pressed={sec === s} onClick={() => setSec(sec === s ? null : s)}><Icon name={sectionLook(s)[1]} size={18} /> {s.split(/,| &| \(/)[0]}</button>)}
       </div>
-      <p className="meta" role="status">{list.length} ingrédient{list.length > 1 ? "s" : ""}</p>
-      {!q && !sec && !seasonOnly && <nav className="letters" aria-label="Lettres">{letters.map((l) => <a key={l} href={`#lettre-${l}`} onClick={(e) => { e.preventDefault(); document.getElementById(`lettre-${l}`)?.scrollIntoView({ behavior: "smooth" }); }}>{l}</a>)}</nav>}
-      {letters.map((l) => (
-        <section key={l} className="dico-letter" id={`lettre-${l}`} aria-label={`Lettre ${l}`}>
-          <h2 className="dico-l">{l}</h2>
-          <div className="dico-grid">
-            {list.filter(([, e]) => norm(e.name)[0].toUpperCase() === l).map(([slug, e]) => (
-              <a key={slug} href={href(`/ingredient/${slug}`)} className="card dico-card">
-                <Thumb slug={slug} section={e.section} />
-                <span className="dico-name">{e.name}{market.has(e.name) && <span className="tag-season" title="De saison"> 🌱</span>}</span>
-                <span className="dico-what">{e.what}</span>
-              </a>
-            ))}
-          </div>
-        </section>
-      ))}
+      {!filtering && (
+        <nav className="letters" aria-label="Lettres">
+          {letters.map((l) => <button key={l} type="button" className={l === letter ? "on" : ""} aria-pressed={l === letter} onClick={() => setLetter(l)}>{l}</button>)}
+        </nav>
+      )}
+      <p className="meta" role="status">{filtering ? `${list.length} ingrédient${list.length > 1 ? "s" : ""}` : `Lettre ${letter} : ${shownAll.length} ingrédient${shownAll.length > 1 ? "s" : ""} sur ${entries.length}`}</p>
+      <div className="dico-grid">
+        {shown.map(([slug, e]) => (
+          <a key={slug} href={href(`/ingredient/${slug}`)} className="card dico-card">
+            <Thumb slug={slug} section={e.section} />
+            <span className="dico-name">{e.name}{market.has(e.name) && <span className="tag-season" title="De saison"> <Icon name="sprout" size={14} /></span>}</span>
+            <span className="dico-what">{e.what}</span>
+          </a>
+        ))}
+      </div>
+      {more}
     </Page>
   );
 }
 
 export function IngredientPage({ slug }: { slug: string }) {
+  useMoreImages();
   const dico = useDico();
   const all = useVisible(Object.values(RECIPE_BY_ID));
   if (!dico) return <Page title="Ingrédient" back="/dictionnaire"><p>Chargement…</p></Page>;
@@ -122,9 +129,9 @@ export function IngredientPage({ slug }: { slug: string }) {
           <div className="card pad"><strong>En cuisine :</strong> {e.use}</div>
           {ref?.note && <div className="card pad zw"><strong>Astuce du référentiel :</strong> {ref.note}</div>}
           <div className="badges">
-            {ref && <span className="badge info">🛒 {DISPO[ref.dispo] ?? ref.dispo}</span>}
-            {pork && <span className={`badge ${pork === "certain" ? "bad" : "warn"}`}>🐖 {pork === "certain" ? "Contient du porc" : "Porc possible"}</span>}
-            {alcohol && <span className={`badge ${alcohol === "certain" ? "bad" : "warn"}`}>🍷 {alcohol === "certain" ? "Alcool" : alcohol === "trace" ? "Traces d'alcool possibles" : "Alcool possible"}</span>}
+            {ref && <span className="badge info"><Icon name="cart" size={16} className="ic-inline" /> {DISPO[ref.dispo] ?? ref.dispo}</span>}
+            {pork && <span className={`badge ${pork === "certain" ? "bad" : "warn"}`}><Icon name="pig" size={16} className="ic-inline" /> {pork === "certain" ? "Contient du porc" : "Porc possible"}</span>}
+            {alcohol && <span className={`badge ${alcohol === "certain" ? "bad" : "warn"}`}><Icon name="wine" size={16} className="ic-inline" /> {alcohol === "certain" ? "Alcool" : alcohol === "trace" ? "Traces d'alcool possibles" : "Alcool possible"}</span>}
             {ref?.allergens.length ? <span className="badge neutral">Allergènes : {ref.allergens.map((a) => ALLERGENS[a]).join(", ")}</span> : null}
             {ref && ref.maybe.filter((a) => !ref.allergens.includes(a)).length > 0 && <span className="badge neutral">Possible selon la marque : {ref.maybe.filter((a) => !ref.allergens.includes(a)).map((a) => ALLERGENS[a]).join(", ")}</span>}
           </div>

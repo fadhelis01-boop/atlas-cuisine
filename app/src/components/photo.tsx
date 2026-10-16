@@ -7,7 +7,21 @@ import imagesJson from "../data/images.json";
 // à la première photo affichée avec son crédit (audit dév 🟠 8 : démarrage plus léger avec 1 000+ photos).
 export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia"; avif?: 1 }
 export interface PhotoCredit { author: string; license: string; licenseUrl: string; page: string; source: string; title: string }
-export const IMAGES = imagesJson as unknown as Record<string, PhotoMeta>;
+const CORE = imagesJson as unknown as Record<string, PhotoMeta>;
+// ingrédients, gestes et étapes : chargés à la demande (audit UX 2026-10-16 §2.10)
+let MORE: Record<string, PhotoMeta> | null = null;
+let moreP: Promise<void> | null = null;
+const moreLs = new Set<() => void>();
+export function loadMoreImages() {
+  moreP ??= import("../data/images_more.json").then((m) => { MORE = m.default as unknown as Record<string, PhotoMeta>; Object.assign(IMAGES, MORE); moreLs.forEach((l) => l()); });
+  return moreP;
+}
+/** À appeler dans un écran qui affiche des photos d'ingrédients, de gestes ou d'étapes : il se redessine quand elles arrivent. */
+export function useMoreImages(): boolean {
+  return useSyncExternalStore((cb) => { moreLs.add(cb); void loadMoreImages(); return () => { moreLs.delete(cb); }; }, () => MORE !== null);
+}
+const LAZY = /^(ingredient|geste|etape)\//;
+export const IMAGES: Record<string, PhotoMeta> = { ...CORE };
 
 let CREDITS: Record<string, PhotoCredit> | null = null;
 let credP: Promise<Record<string, PhotoCredit>> | null = null;
@@ -19,7 +33,7 @@ export function loadCredits(): Promise<Record<string, PhotoCredit>> {
 export function useCredits(): Record<string, PhotoCredit> | null {
   return useSyncExternalStore((cb) => { credListeners.add(cb); void loadCredits(); return () => { credListeners.delete(cb); }; }, () => CREDITS);
 }
-export const photoOf = (key: string): PhotoMeta | undefined => IMAGES[key];
+export const photoOf = (key: string): PhotoMeta | undefined => { if (LAZY.test(key) && !MORE) void loadMoreImages(); return IMAGES[key]; };
 
 // AVIF lisible par ce navigateur ? (pour télécharger le bon format hors connexion)
 let avifP: Promise<boolean> | null = null;
@@ -33,6 +47,7 @@ export function supportsAvif(): Promise<boolean> {
 
 /** <img> responsive ; `sizes` décrit la largeur affichée pour que le téléphone ne télécharge que la taille utile. */
 export function Photo({ k, alt, sizes = "(min-width: 900px) 33vw, 100vw", className = "", eager = false }: { k: string; alt: string; sizes?: string; className?: string; eager?: boolean }) {
+  useMoreImages();
   const m = IMAGES[k];
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);

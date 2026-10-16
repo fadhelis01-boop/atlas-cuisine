@@ -51,7 +51,12 @@ def write_manifests(man, full_path, man_path):
     et les crédits (chargés seulement quand on les affiche), pour ne pas alourdir le démarrage de l'application."""
     json.dump(man, open(full_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {})} for k, v in man.items()}
-    json.dump(lite, open(man_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    # au démarrage : les plats, rubriques, régions ; à la demande : ingrédients, gestes et étapes (audit UX 2026-10-16 §2.10)
+    LAZY = ("ingredient/", "geste/", "etape/")
+    core = {k: v for k, v in lite.items() if not k.startswith(LAZY)}
+    more = {k: v for k, v in lite.items() if k.startswith(LAZY)}
+    json.dump(core, open(man_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump(more, open(os.path.join(os.path.dirname(man_path), "images_more.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     cred = {k: {f: v.get(f, "") for f in ("author", "license", "licenseUrl", "page", "source", "title")} for k, v in man.items()}
     json.dump(cred, open(os.path.join(os.path.dirname(man_path), "credits.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 

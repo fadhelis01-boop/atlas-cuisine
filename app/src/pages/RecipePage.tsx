@@ -1,5 +1,6 @@
 import StepPhotos from "../components/StepPhotos";
 import { Icon } from "../components/icons";
+import { toast } from "../lib/toast";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
@@ -7,11 +8,11 @@ import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
 import { SEASON_LABEL, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { useEffect, useMemo, useState } from "react";
-import { ALLERGENS, INGREDIENTS, MACRO_BY_ID, RECIPE_BY_ID } from "../lib/data";
+import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID } from "../lib/data";
 import { evaluateLines, verdict } from "../lib/engine";
-import { href } from "../lib/router";
-import { pushRecent, setState, toggleFavorite, uid, useProfile, useStore } from "../lib/store";
-import { durationsIn, gestureLabel, minutes, ovenPlan, plain, scaleQty } from "../lib/text";
+import { href, goBack } from "../lib/router";
+import { pushRecent, setState, toggleFavorite, uid, useProfile, useStore, getState } from "../lib/store";
+import { durationsIn, gestureLabel, minutes, ovenPlan, plain, scaleQty, scaleStep, costLabel, levelLabel } from "../lib/text";
 import { speak, stopSpeaking, ttsAvailable } from "../lib/speech";
 import { startTimer } from "../lib/timers";
 import { techniqueFor, youtubeSearch } from "../lib/techniques";
@@ -34,7 +35,7 @@ function SeasonBadge({ r }: { r: Recipe }) {
   const f = seasonFit(r, zone);
   const s = seasonOf(zone);
   if (f.inSeason.length && f.score > 0) return <p className="meta season-ok"><Icon name="sprout" size={16} className="ic-inline" /> De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}</p>;
-  if (f.outSeason.length) return <p className="meta season-out">🕰️ Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité conviennent souvent).</p>;
+  if (f.outSeason.length) return <p className="meta season-out"><Icon name="timer" size={16} className="ic-inline" /> Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité conviennent souvent).</p>;
   return null;
 }
 
@@ -122,7 +123,6 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const [useAdapted, setUseAdapted] = useState(true);
   const [reading, setReading] = useState<number | null>(null);
   const [showAnyway, setShowAnyway] = useState(q.get("voir") === "1");
-  const [msg, setMsg] = useState("");
   useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || r.portions); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const v = useMemo(() => (r ? verdict(r, p) : null), [r, p]);
   if (!r || !v) return <Page title="Recette introuvable" back="/explorer">{null}</Page>;
@@ -148,6 +148,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   };
 
   const addToShopping = () => {
+    const before = getState().shopping.length;
     setState((s) => {
       for (const l of lines) {
         if (!l.ref || l.ref.startsWith("SUB:")) continue;
@@ -155,9 +156,18 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         s.shopping.push({ id: uid(), ref: l.ref, label: `${scaleQty(l.qty, factor)} ${l.label}`.trim(), from: r.title, done: false, section: INGREDIENTS[l.ref]?.section ?? "Autres" });
       }
     });
-    setMsg("Ingrédients ajoutés à la liste de courses.");
+    const added = getState().shopping.length - before;
+    toast(added ? `${added} ingrédient${added > 1 ? "s" : ""} ajouté${added > 1 ? "s" : ""} aux courses` : "Déjà dans ta liste de courses",
+      { undo: added ? () => setState((s) => { s.shopping = s.shopping.slice(0, before); }) : undefined, link: { label: "Voir", to: "/courses" } });
   };
 
+  const share = async () => {
+    const url = `${location.origin}${location.pathname}#/recette/${r.id}`;
+    try {
+      if (navigator.share) await navigator.share({ title: r.title, text: `${r.title} : une recette ATLAS`, url });
+      else { await navigator.clipboard.writeText(url); toast("Lien copié : colle-le dans un message"); }
+    } catch { /* partage annulé */ }
+  };
   if (v.availability === "hidden" && !showAnyway) {
     return (
       <Page title={r.title} back="/explorer">
@@ -172,28 +182,36 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
 
   return (
     <main className="page recipe" id="contenu">
-      <a className="back" href={href(`/region/${r.macro}`)}>← {MACRO_BY_ID[r.macro]?.name}</a>
+      <div className="cook-sticky" role="group" aria-label="Cuisiner cette recette">
+        <div className="portions mini" role="group" aria-label="Nombre de portions">
+          <button type="button" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
+          <span><strong>{portions}</strong> pers.</span>
+          <button type="button" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
+        </div>
+        <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}${portions !== r.portions ? `${adapted ? "&" : "?"}portions=${portions}` : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
+      </div>
+      <button type="button" className="back" onClick={() => goBack(`/region/${r.macro}`)}><Icon name="back" size={20} /> Retour</button>
       <div className="recipe-head">
         <figure className="hero-fig"><Cover r={r} big /><figcaption><Credit k={`recette/${r.id}`} /></figcaption></figure>
         <div>
           <h1>{r.title}</h1>
           {r.origin && r.origin !== r.title && <p className="origin" lang="und">{r.origin}</p>}
           <p className="meta">{r.regionPath.join(" › ")} · {r.kind}</p>
-          {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}>🌐 Food fusion</a> : {r.fusionNote}</p>}
+          {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}><Icon name="fusion" size={16} className="ic-inline" /> Food fusion</a> : {r.fusionNote}</p>}
           {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}><Icon name="play" size={16} className="ic-inline" /> Voir la vidéo</button>}
-          <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · Niveau {r.level} · {r.cost}</p>
+          <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}</p>
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
           <SeasonBadge r={r} />
-          <div className="row actions">
-            <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
-            {ttsAvailable() && <button className="btn ghost" onClick={() => read("tout")} aria-pressed={reading !== null}>{reading !== null ? "⏹ Arrêter" : <><Icon name="speaker" size={20} /> Écouter</>}</button>}
-            {ttsAvailable() && reading === null && <button className="btn ghost" onClick={() => read("resume")}><Icon name="speaker" size={20} /> Résumé</button>}
-            <button className="btn ghost" onClick={addToShopping}><Icon name="cart" size={20} /> Courses</button>
-            {r.role === "plat" && <a className="btn ghost" href={href(`/semaine?ajout=${r.id}`)}><Icon name="calendar" size={20} /> Planifier</a>}
-            <a className="btn ghost" href={href(`/menu/${r.id}`)}><Icon name="plate" size={20} /> Compléter le menu</a>
-            <button className={`btn ghost ${fav ? "on" : ""}`} onClick={() => toggleFavorite(r.id)} aria-pressed={fav}><Icon name="heart" size={20} className={fav ? "ic-on" : ""} /> Favori</button>
+          <a className="btn big cook-cta" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}><Icon name="play" size={22} /> Cuisiner pas à pas</a>
+          {/* actions secondaires : icônes légendées de même taille (audit UX 2026-10-16 §2.4) */}
+          <div className="quick-actions" role="group" aria-label="Actions">
+            <button type="button" onClick={() => toggleFavorite(r.id)} aria-pressed={fav}><Icon name="heart" size={24} className={fav ? "ic-on" : ""} /><span>{fav ? "Favori" : "Garder"}</span></button>
+            <button type="button" onClick={addToShopping}><Icon name="cart" size={24} /><span>Courses</span></button>
+            {r.role === "plat" && <a href={href(`/semaine?ajout=${r.id}`)}><Icon name="calendar" size={24} /><span>Planifier</span></a>}
+            {ttsAvailable() && <button type="button" onClick={() => read("tout")} aria-pressed={reading !== null}><Icon name={reading !== null ? "close" : "speaker"} size={24} /><span>{reading !== null ? "Arrêter" : "Écouter"}</span></button>}
+            <button type="button" onClick={() => void share()}><Icon name="share" size={24} /><span>Partager</span></button>
           </div>
-          {msg && <p role="status" className="small">{msg} <a href={href("/courses")}>Voir la liste</a></p>}
+          <p className="small untested"><Icon name="alert" size={15} className="ic-inline" /> Recette pas encore testée dans la cuisine d'ATLAS : après l'avoir faite, note-la dans <a href={href("/biblio")}>ton carnet</a>, ton avis sert à la corriger.</p>
         </div>
       </div>
 
@@ -205,15 +223,14 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             <button className={!useAdapted ? "on" : ""} aria-pressed={!useAdapted} onClick={() => setUseAdapted(false)}>Recette d'origine</button>
           </div>
           {useAdapted && <ul>{v.adapted.notes.map((n, i) => <li key={i}><Rich text={n} /></li>)}</ul>}
-          <p className="small">🧪 <strong>Substitution à tester</strong> : elle n'a pas encore passé la dégustation à l'aveugle (Tome 7 §3). Elle est vérifiée pour ton régime, pas encore pour le goût.</p>
-          {v.adapted.newAllergens.length > 0 && <p className="warn-text">⚠️ Nouvel allergène dans la version adaptée : {v.adapted.newAllergens.map((a) => ALLERGENS[a]).join(", ")}.</p>}
+          <p className="small"><Icon name="alert" size={16} className="ic-inline" /> <strong>Substitution à tester</strong> : elle n'a pas encore passé la dégustation à l'aveugle (Tome 7 §3). Elle est vérifiée pour ton régime, pas encore pour le goût.</p>
+          {v.adapted.newAllergens.length > 0 && <p className="warn-text"><Icon name="alert" size={16} className="ic-inline" /> Nouvel allergène dans la version adaptée : {v.adapted.newAllergens.map((a) => ALLERGENS[a]).join(", ")}.</p>}
         </div>
       )}
       {v.warnings.length > 0 && <div className="banner warn"><strong>À vérifier :</strong> {v.warnings.join(" · ")}. Lis les étiquettes.</div>}
-      {kidsAlert && <div className="banner warn">👶 Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}</div>}
+      {kidsAlert && <div className="banner warn"><Icon name="kid" size={16} className="ic-inline" /> Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}</div>}
 
       <p className="intro"><Rich text={r.intro} /></p>
-      <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
 
       <RecipeToc />
       <div className="two-col">
@@ -235,6 +252,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             ))}
             {salt && <li className="salt-line"><span className="qty">Sel</span> {salt.text}{salt.water && <span className="meta"> · Eau de cuisson des pâtes ou des légumes : 10 g de sel par litre (2 c. à c. rases).</span>}</li>}
           </ul>
+          {lines.some((l) => /c\. à [sc]\.|pincée/.test(l.qty)) && <p className="small abbr">c. à s. = cuillère à soupe (15 ml) · c. à c. = cuillère à café (5 ml) · pincée = ce qu'on prend entre 2 doigts</p>}
           {ev.allergens.size > 0 && <p className="small"><strong>Allergènes :</strong> {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}{ev.maybeAllergens.size > ev.allergens.size ? ` ; possibles selon la marque : ${[...ev.maybeAllergens].filter((a) => !ev.allergens.has(a)).map((a) => ALLERGENS[a]).join(", ")}` : ""}.</p>}
           <Leftovers r={r} />
         </Section>
@@ -244,7 +262,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           <ol className="steps">
             {r.steps.map((s, i) => (
               <li key={i}>
-                <Rich text={s} />
+                <Rich text={scaleStep(s, factor)} />
                 {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}><Icon name="eye" size={16} className="ic-inline" /> {c} </span>)}</p>}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
@@ -263,6 +281,10 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       <RescueBlock r={r} />
       {((cookedN ?? 0) > 0 || journalEntry) && <Section title="Mon carnet"><Journal id={r.id} /></Section>}
       {r.tips.length > 0 && <Section title="Astuces du chef"><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></Section>}
+      <Section title={<><Icon name="plate" size={24} className="ic-inline" /> Pour recevoir</>}>
+        <p>Entrée, dessert et boissons qui vont avec, quantités calculées pour tes invités et ce qui se prépare la veille.</p>
+        <a className="btn ghost" href={href(`/menu/${r.id}`)}>Compléter le menu autour de ce plat</a>
+      </Section>
       {r.variants.length > 0 && (
         <Section title="Variantes et substitutions">
           {r.variants.map((x) => <div key={x.name} className="card pad"><h3>{x.name} {!x.tested && <span className="badge info">à tester</span>}</h3><p><Rich text={x.note} /></p></div>)}

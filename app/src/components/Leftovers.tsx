@@ -27,7 +27,7 @@ export default function Leftovers({ r }: { r: Recipe }) {
   };
   return (
     <div className="zw card pad">
-      <h3>♻️ Zéro déchet : ce qu'il te restera, et quoi en faire</h3>
+      <h3><Icon name="recycle" size={20} className="ic-inline" /> Zéro déchet : ce qu'il te restera, et quoi en faire</h3>
       {r.zeroWaste.length > 0 && <ul className="zw-chef">{r.zeroWaste.map((z, i) => <li key={i}>{z.replace(/\*\*/g, "")}</li>)}</ul>}
       {leftovers === null && <p className="small">Chargement des idées zéro déchet…</p>}
       {leftovers?.length === 0 && <p className="small">Cette recette utilise ses ingrédients en entier ou des produits du placard qui se gardent : rien à jeter.</p>}
@@ -52,7 +52,7 @@ export default function Leftovers({ r }: { r: Recipe }) {
               </ul>
               {!pt.part.match(/coquille|peau|carapace|eau de cuisson|huile|graines|chutes/) && (
                 added.includes(`${lo.ref}|${pt.part}`)
-                  ? <p className="small">✓ Ajouté à ton frigo (date limite à 3 jours, modifiable) : il sera proposé en priorité dans « Avec ce que j'ai ».</p>
+                  ? <p className="small"><Icon name="check" size={16} className="ic-inline" /> Ajouté à ton frigo (date limite à 3 jours, modifiable) : il sera proposé en priorité dans « Avec ce que j'ai ».</p>
                   : <button className="btn small ghost" onClick={() => toFridge(lo.ref, pt.part)}>Ajouter le reste à mon frigo</button>
               )}
             </div>

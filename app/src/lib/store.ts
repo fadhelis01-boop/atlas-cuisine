@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from "react";
 import type { Profile } from "./types";
+import { toast } from "./toast";
 
 // État local de l'application, conservé sur l'appareil (localStorage). Aucune donnée ne quitte le téléphone :
 // les régimes et allergies sont des données sensibles (Tome 1 §19.1).
@@ -40,6 +41,7 @@ export interface State {
   learned?: string[]; // étapes du parcours « J'apprends à cuisiner » validées
   journal?: Record<string, { rating: number; note: string; date: string }>; // mon carnet : note et remarques après avoir cuisiné
   week?: Record<string, { midi?: string; soir?: string }>; // planificateur : date ISO → plats du midi et du soir
+  pantry?: string[]; // placard supposé toujours présent (frigo), modifiable
   weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number };
 }
 
@@ -80,6 +82,11 @@ export const useProfile = () => useStore((s) => s.profile);
 export const uid = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
 
 export function toggleFavorite(id: string) {
+  const was = state.favorites.includes(id);
+  setState((s) => { s.favorites = was ? s.favorites.filter((x) => x !== id) : [id, ...s.favorites]; });
+  toast(was ? "Retiré de tes recettes" : "Gardé dans Mes recettes", { undo: () => toggleFavoriteSilent(id), link: was ? undefined : { label: "Voir", to: "/biblio" } });
+}
+function toggleFavoriteSilent(id: string) {
   setState((s) => { s.favorites = s.favorites.includes(id) ? s.favorites.filter((x) => x !== id) : [id, ...s.favorites]; });
 }
 export function pushRecent(id: string) {

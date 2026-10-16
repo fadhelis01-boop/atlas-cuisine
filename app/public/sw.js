@@ -33,6 +33,7 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("message", (e) => {
   if (e.data === "skip-waiting") self.skipWaiting();
+  if (e.data && e.data.type === "img-max") e.waitUntil(caches.open(IMG_CACHE).then((c) => c.put(CAP_KEY, new Response(String(e.data.value)))));
 });
 
 async function networkFirst(req, fallbackUrl) {
@@ -47,11 +48,15 @@ async function networkFirst(req, fallbackUrl) {
 }
 
 // plafond du cache photos (audit dév 🟠 8) : environ 400 images, soit 15 à 25 Mo ; les plus anciennes partent d'abord
-const IMG_MAX = 400;
+// quand la personne a choisi « enregistrer toutes les photos », le plafond est levé (sinon on effacerait ce qu'elle vient de télécharger)
+let IMG_MAX = 400;
 let imgPuts = 0;
+const CAP_KEY = "./__atlas-img-max";
+async function currentMax(cache) { const r = await cache.match(CAP_KEY); return r ? Number(await r.text()) || IMG_MAX : IMG_MAX; }
 async function trimImages(cache) {
-  const keys = await cache.keys(); // ordre d'insertion
-  for (const k of keys.slice(0, Math.max(0, keys.length - IMG_MAX))) await cache.delete(k);
+  const max = await currentMax(cache);
+  const keys = (await cache.keys()).filter((k) => !k.url.endsWith("__atlas-img-max")); // ordre d'insertion
+  for (const k of keys.slice(0, Math.max(0, keys.length - max))) await cache.delete(k);
 }
 
 async function imgCache(req) {

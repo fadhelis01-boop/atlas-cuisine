@@ -14,8 +14,11 @@ import { GLOSSAIRE, termsIn } from "../src/lib/glossaire";
 import { PARCOURS } from "../src/lib/parcours";
 import { balanceOf, finishFor } from "../src/lib/dressage";
 import { cuesIn, saltDose } from "../src/lib/cues";
+import { fuzzyRecipes, parseIntents } from "../src/lib/intents";
 import etapes from "../src/data/etapes.json";
-import images from "../src/data/images.json";
+import imagesCore from "../src/data/images.json";
+import imagesMore from "../src/data/images_more.json";
+const images = { ...imagesCore, ...imagesMore };
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
@@ -129,7 +132,9 @@ const S = [
 const d = Object.fromEntries(suggest(S, new Set(["Riz long / basmati / thaï", "Cuisse / pilon de poulet", "Oignon jaune"])).map((x) => [x.id, x]));
 check("26 « tu as tout » : riz_oignon", d["riz_oignon"]?.bucket === "all");
 check("27 1 manquant secondaire => « presque »", d["riz_poulet"]?.bucket === "almost" && d["riz_poulet"].missing.join() === "Citron");
-check("28 manquant structurant => exclue", !d["struct"]);
+check("28 manquant structurant => pas « tu as tout » ni « presque », mais « il te faut en plus » avec l'ingrédient à acheter", d["struct"]?.bucket === "start" && d["struct"].missing.includes("Paleron"));
+const one = suggest(RECIPES, new Set(["Blanc de poulet"]));
+check("28b dès un seul ingrédient (blanc de poulet), au moins 10 propositions", one.length >= 10);
 const pair = [mk("a", [L("Riz long / basmati / thaï", 3), L("Oignon jaune", 2)]), mk("b", [L("Riz long / basmati / thaï", 3), L("Citron", 2)])];
 const d4 = Object.fromEntries(suggest(pair, new Set(["Riz long / basmati / thaï", "Oignon jaune", "Citron"]), new Set(["Oignon jaune"])).map((x) => [x.id, x]));
 check("29 bonus anti-gaspi (104 > 100)", d4["a"].score === 104 && d4["b"].score === 100);
@@ -164,6 +169,7 @@ const v2 = RECIPES.filter((r) => r.source.includes("vague 2"));
 check("42 vague 2 : au moins 500 nouvelles fiches, identifiants uniques", v2.length >= 500 && new Set(RECIPES.map((r) => r.id)).size === RECIPES.length);
 check("43 techniques : pâtisserie, chocolat, boulangerie, poissons, viandes, œufs et condiments présents",
   ["Pâtisserie française", "Chocolat", "Boulangerie & viennoiserie", "Poissons & fruits de mer", "Viandes & volailles", "Œufs", "Condiments & marinades maison"].every((f) => TECHNIQUES.some((t) => t.family === f)));
+console.log("   techniques sans fiche :", [...new Set(v2.flatMap((r) => r.techniques).filter((t) => !techniqueFor(t)))].join(" ; "));
 check("44 techniques des fiches de la vague 2 toutes reliées à une fiche technique", v2.every((r) => r.techniques.every((t) => !!techniqueFor(t))));
 const viande = TECHNIQUES.find((t) => t.id === "cuisson-viande-rouge");
 check("45 repères de sécurité : viande hachée 70 °C, volaille 74 °C", !!viande?.table?.rows.some(([a, b]) => a.includes("hachée") && b.includes("70 °C"))
@@ -224,6 +230,17 @@ check("60 sel dosé : toute fiche salée a soit une ligne de sel, soit un dosage
 const ET = etapes as Record<string, { k: string; c: string }[]>; const IM = images as Record<string, { avif?: number }>;
 check("61 photos de gestes et d'étapes : chaque sujet existe (technique ou recette), chaque photo est traitée en AVIF, légende sans numéro",
   Object.keys(ET).length >= 40 && Object.entries(ET).every(([k, v]) => (k.startsWith("technique/") ? !!TECHNIQUES.find((t) => t.id === k.slice(10)) : !!RECIPE_BY_ID[k.slice(8)]) && v.every((x) => IM[x.k]?.avif && !/^\d/.test(x.c))));
+const pi = parseIntents("un dessert facile et pas cher");
+const vegFast = RECIPES.filter((r) => parseIntents("végétarien rapide").intents.every((i) => i.test(r)));
+console.log("   intentions :", pi.intents.map((i) => i.id).join(","), "| reste « " + pi.rest + " » · végé rapide :", vegFast.length, "· creppe →", fuzzyRecipes(RECIPES, "creppe").slice(0, 2).map((r) => r.id).join(","));
+check("62 recherche par intention : « dessert facile pas cher » compris en 3 filtres sans reste ; « creppe » retrouve des crêpes",
+  pi.intents.length === 3 && pi.rest === "" && vegFast.length > 5 && fuzzyRecipes(RECIPES, "creppe").some((r) => /crepe/.test(r.id)) && parseIntents("apéro").intents[0]?.id === "apero");
+const plats = RECIPES.filter((r) => r.role === "plat");
+const vegShare = plats.filter((r) => evaluate(r).flesh.length === 0).length / plats.length;
+console.log("   variété : plats ≤ 30 min", plats.filter((r) => r.active + r.rest <= 30).length, "· végétariens", Math.round(vegShare * 100) + " %", "· brunch", RECIPES.filter((r) => r.cats.includes("brunch")).length, "· Océanie", RECIPES.filter((r) => r.macro === "oceanie").length);
+check("63 variété (audit UX 2026-10-16) : ≥ 90 plats en 30 min, ≥ 33 % de plats végétariens, ≥ 20 brunchs, ≥ 20 salades repas, ≥ 12 recettes d'Océanie, France < 45 %",
+  plats.filter((r) => r.active + r.rest <= 30).length >= 90 && vegShare >= 0.33 && RECIPES.filter((r) => r.cats.includes("brunch")).length >= 20
+  && RECIPES.filter((r) => r.cats.includes("salade")).length >= 20 && RECIPES.filter((r) => r.macro === "oceanie").length >= 12 && RECIPES.filter((r) => r.macro === "france").length / RECIPES.length < 0.45);
 check("57 préparation à l'avance : au moins une tâche et des légumes à couper d'un coup", pa.tasks.length >= 1 && pa.veg.length >= 2);
 
 console.log(`\n${passed} contrôles OK`);

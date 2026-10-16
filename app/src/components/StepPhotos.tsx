@@ -1,5 +1,5 @@
 import etapesJson from "../data/etapes.json";
-import { Credit, Photo, photoOf } from "./photo";
+import { Credit, Photo, photoOf, useMoreImages } from "./photo";
 
 // Photos de gestes et d'étapes (illustrations/etapes_*.py) : sous licence libre, choisies une à une.
 // Clé « technique/<id> » ou « recette/<id> » → liste de { k: clé de photo, c: légende }.
@@ -8,6 +8,7 @@ export const stepPhotosOf = (key: string) => (ETAPES[key] ?? []).filter((x) => p
 
 /** Galerie numérotée, légendée et créditée ; rien si aucune photo n'existe pour ce sujet. */
 export default function StepPhotos({ subject, title }: { subject: string; title: string }) {
+  useMoreImages();
   const list = stepPhotosOf(subject);
   if (!list.length) return null;
   return (

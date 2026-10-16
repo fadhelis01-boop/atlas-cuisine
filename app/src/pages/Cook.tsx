@@ -4,7 +4,7 @@ import { RECIPE_BY_ID } from "../lib/data";
 import { verdict } from "../lib/engine";
 import { go, href, useRoute } from "../lib/router";
 import { setState, useProfile } from "../lib/store";
-import { durationsIn, gestureLabel, ovenPlan, scaleQty, splitStep } from "../lib/text";
+import { durationsIn, gestureLabel, ovenPlan, scaleQty, scaleStep, splitStep } from "../lib/text";
 import { listen, speak, stopSpeaking, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { startTimer, useWakeLock } from "../lib/timers";
 import { Rich } from "./RecipePage";
@@ -31,7 +31,9 @@ export default function Cook({ id }: { id: string }) {
 
   const v = r ? verdict(r, p) : null;
   const lines = r && v?.adapted && route.query.get("adapte") === "1" ? v.adapted.lines : r?.ingredients ?? [];
-  const steps = useMemo(() => (r?.steps ?? []).flatMap(splitStep), [r]); // un geste par écran
+  const portions = Number(route.query.get("portions")) || r?.portions || 1;
+  const factor = r ? portions / r.portions : 1;
+  const steps = useMemo(() => (r?.steps ?? []).flatMap(splitStep).map((st) => scaleStep(st, factor)), [r, factor]); // un geste par écran
   const oven = useMemo(() => ovenPlan(steps), [steps]); // préchauffage : prévenir avant d'enfourner
 
   const say = useCallback((idx: number) => {
@@ -80,16 +82,16 @@ export default function Cook({ id }: { id: string }) {
   return (
     <div className="cook">
       <header className="cook-top">
-        <a className="btn ghost" href={href(`/recette/${id}`)} aria-label="Quitter le mode cuisine">✕</a>
+        <a className="btn ghost" href={href(`/recette/${id}`)} aria-label="Quitter le mode cuisine"><Icon name="close" size={22} /></a>
         <div className="cook-title">{r.title}</div>
-        {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => playVideo(r.videos.find((x) => x.embed)!)}>▶ Vidéo</button>}
+        {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => playVideo(r.videos.find((x) => x.embed)!)}><Icon name="play" size={18} /> Vidéo</button>}
         <div className="cook-progress" aria-hidden="true"><span style={{ width: `${((i + 1) / steps.length) * 100}%` }} /></div>
       </header>
 
       <main className="cook-body" id="contenu" aria-live="polite">
         {i < 0 ? (
           <>
-            <h1 className="cook-step-n">Mise en place</h1>
+            <h1 className="cook-step-n">Mise en place <span className="meta">· pour {portions} personne{portions > 1 ? "s" : ""}</span></h1>
             <p className="small">Sors et pèse tout avant d'allumer le feu. Coche au fur et à mesure.</p>
             <p className="small"><strong>Matériel :</strong> {r.equipment}</p>
             {saltDose(r) && <p className="small"><strong>Sel :</strong> {saltDose(r)!.text}</p>}
@@ -98,7 +100,7 @@ export default function Cook({ id }: { id: string }) {
               {lines.map((l, k) => (
                 <li key={k}>
                   <label><input type="checkbox" checked={checked.has(k)} onChange={() => setChecked((s) => { const n = new Set(s); if (n.has(k)) n.delete(k); else n.add(k); return n; })} />
-                    <span><strong>{scaleQty(l.qty, 1)}</strong> {l.label}{l.optional ? " (facultatif)" : ""}</span></label>
+                    <span><strong>{scaleQty(l.qty, factor)}</strong> {l.label}{l.optional ? " (facultatif)" : ""}</span></label>
                 </li>
               ))}
             </ul>
@@ -126,21 +128,31 @@ export default function Cook({ id }: { id: string }) {
         )}
         {i === steps.length - 1 && (
           <div className="cook-end">
-            <p>Bon appétit ! 🍽 Comment c'était ?</p>
+            <p><strong>Bon appétit !</strong> Comment c'était ?</p>
             <Journal id={id} compact />
             <button className="btn" onClick={() => { setState((s) => { s.cooked[id] = (s.cooked[id] ?? 0) + 1; }); go(`/recette/${id}`); }}>J'ai terminé</button>
+            <details className="cook-help"><summary><Icon name="lifebuoy" size={20} className="ic-inline" /> Ça n'a pas marché ?</summary>
+              <p className="small">Ce n'est pas grave, c'est comme ça qu'on apprend. Voici les causes les plus fréquentes pour ce plat ; note ce qui s'est passé dans ton carnet ci-dessus, tu le retrouveras la prochaine fois.</p>
+              <ul>{rescueFor(r, 6).map((x) => <li key={x.problem}><strong>{x.problem} :</strong> {x.fix}</li>)}</ul>
+            </details>
           </div>
         )}
       </main>
 
+      {/* en paysage sur tablette : les ingrédients restent visibles à côté de l'étape */}
+      {i >= 0 && <aside className="cook-side" aria-label="Ingrédients">
+        <strong>Ingrédients · {portions} pers.</strong>
+        <ul>{lines.map((l, k) => <li key={k}><strong>{scaleQty(l.qty, factor)}</strong> {l.label}</li>)}</ul>
+      </aside>}
+      {/* barre légendée (audit UX 2026-10-16 §2.4) : chaque bouton dit ce qu'il fait */}
       <footer className="cook-bar">
-        <button className="cook-btn" onClick={() => goTo(i - 1)} disabled={i < 0} aria-label="Étape précédente">◀</button>
-        {ttsAvailable() && <button className="cook-btn" onClick={() => say(i)} aria-label="Lire l'étape">🔊</button>}
-        {ttsAvailable() && <button className={`cook-btn ${auto ? "on" : ""}`} onClick={() => { setAuto(!auto); if (!auto) say(i); }} aria-pressed={auto} aria-label="Lecture automatique des étapes">{auto ? "🔁" : "↻"}</button>}
-        {voiceCommandsAvailable() && <button className={`cook-btn ${mic ? "on" : ""}`} onClick={toggleMic} aria-pressed={mic} aria-label={mic ? "Arrêter l'écoute" : "Commandes vocales"}>🎙</button>}
-        <button className="cook-btn primary" onClick={() => goTo(i + 1)} disabled={i >= steps.length - 1} aria-label="Étape suivante">▶</button>
+        <button className="cook-btn" onClick={() => goTo(i - 1)} disabled={i < 0}><Icon name="prev" size={26} /><span>Retour</span></button>
+        {ttsAvailable() && <button className="cook-btn" onClick={() => say(i)}><Icon name="speaker" size={26} /><span>Lire</span></button>}
+        {ttsAvailable() && <button className={`cook-btn ${auto ? "on" : ""}`} onClick={() => { setAuto(!auto); if (!auto) say(i); }} aria-pressed={auto}><Icon name="autoplay" size={26} /><span>{auto ? "Lit tout" : "Tout lire"}</span></button>}
+        {voiceCommandsAvailable() && <button className={`cook-btn ${mic ? "on" : ""}`} onClick={toggleMic} aria-pressed={mic}><Icon name="mic" size={26} /><span>{mic ? "J'écoute" : "À la voix"}</span></button>}
+        <button className="cook-btn primary" onClick={() => goTo(i + 1)} disabled={i >= steps.length - 1}><Icon name="next" size={26} /><span>Suivant</span></button>
       </footer>
-      {mic && <p className="mic-on" role="status">🎙 Écoute active : dis « suivant », « précédent », « répète », « pause » ou « minuteur 10 minutes ».{heard && ` Entendu : « ${heard} »`}</p>}
+      {mic && <p className="mic-on" role="status"><Icon name="mic" size={18} className="ic-inline" /> Je t'écoute, mains libres : dis « suivant », « précédent », « répète », « pause » ou « minuteur 10 minutes ».{heard && ` Entendu : « ${heard} »`}</p>}
       {micMsg && <p className="mic-on warn" role="alert">{micMsg}</p>}
       <TimerDock />
       <VideoHost />

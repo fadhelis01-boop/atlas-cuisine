@@ -63,7 +63,8 @@ export const ALLERGENS: Record<string, string> = {
 
 export const CATEGORY_LABEL: Record<string, string> = {
   pains: "Pains, pâtes & bases", sauces: "Sauces maison", fetes: "Fêtes", enfants: "Enfants", zero_dechet: "Zéro déchet",
-  boissons: "Boissons", techniques: "Techniques", fusion: "Food fusion",
+  boissons: "Boissons", techniques: "Techniques", fusion: "Food fusion", express: "Express (20 min)", brunch: "Petit-déjeuner & brunch",
+  salade: "Salades complètes", vegetarien: "Végétarien",
 };
 
 /** Recettes d'une entrée de l'atlas (la « Food fusion » est une rubrique transversale, pas une macro-région). */

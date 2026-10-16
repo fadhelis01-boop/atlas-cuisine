@@ -240,3 +240,97 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .step-photos .thumb43 .photo.loaded { opacity: 1; }
 .step-photos figcaption { font-size: .9rem; margin-top: 6px; }
 .dico-thumb { color: #fff; } .dico-thumb .ic { filter: drop-shadow(0 1px 2px rgb(0 0 0 / 25%)); } .dico-thumb .ic .ic-duo { opacity: .28; }
+
+/* ---------------------------------------------------------------- Accueil de bienvenue en un écran */
+.onboarding { max-width: 560px; margin: 0 auto; }
+.ob-choices { display: grid; gap: 10px; margin: 14px 0; }
+.ob-choice { display: grid; grid-template-columns: 32px 1fr 26px; gap: 12px; align-items: center; text-align: left; min-height: 64px; padding: 10px 14px; border-radius: var(--r-card); border: 2px solid var(--alt); background: var(--surface); color: var(--text); cursor: pointer; font: inherit; }
+.ob-choice .ic { color: var(--action); }
+.ob-choice.on { border-color: var(--action); background: color-mix(in srgb, var(--action) 8%, var(--surface)); }
+.ob-check { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--border); display: grid; place-items: center; color: var(--action); }
+.ob-choice.on .ob-check { border-color: var(--action); }
+.ob-go { width: 100%; margin-top: 8px; }
+.linkish { background: none; border: 0; padding: 0 2px; color: var(--link); text-decoration: underline; font: inherit; cursor: pointer; min-height: 44px; }
+.strong-label { font-weight: 600; margin-bottom: 0; }
+.more-btn { display: block; width: 100%; margin-top: 12px; }
+.pantry-line { margin: 4px 0; }
+.letters { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+.letters button { min-width: 44px; min-height: 44px; border-radius: 10px; border: 1px solid var(--alt); background: var(--surface); color: var(--action); font-weight: 700; font-size: 1rem; cursor: pointer; }
+.letters button.on { background: var(--action); color: var(--on-action); border-color: var(--action); }
+.tech-family > summary, .parcours-step > summary { cursor: pointer; min-height: 48px; display: flex; align-items: center; gap: 8px; list-style: none; }
+.tech-family > summary::-webkit-details-marker, .parcours-step > summary::-webkit-details-marker { display: none; }
+.tech-family > summary::after, .parcours-step > summary::after { content: "▾"; margin-left: auto; color: var(--text-2); transition: transform 200ms; }
+.tech-family[open] > summary::after, .parcours-step[open] > summary::after { transform: rotate(180deg); }
+.step-n { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--action); color: var(--on-action); font-size: .9rem; flex: none; }
+.parcours-step.done .step-n { background: var(--ok-fg); }
+.understood { color: var(--ok-fg); }
+
+/* ---------------------------------------------------------------- Accueil hiérarchisé (audit UX 2026-10-16) */
+@media (max-width: 599px) {
+  .hero-skin { padding: 16px 14px 14px; }
+  .hero-skin h1 { font-size: 1.45rem; }
+  .hero-sub { display: none; }
+  .hero-skin .hero-art, .hero-skin svg.hero-art { display: none; }
+}
+.propose { background: linear-gradient(135deg, color-mix(in srgb, var(--action) 10%, var(--surface)), var(--surface)); border: 2px solid color-mix(in srgb, var(--action) 35%, transparent); }
+.propose .btn { min-height: 48px; padding: 0 22px; font-size: 1.05rem; }
+.all-rubriques { text-align: center; margin: 4px 0 18px; }
+.all-rubriques .btn { white-space: normal; }
+/* texte des tuiles photo : voile plus dense là où se trouve le texte */
+.entry.has-photo::after { background: linear-gradient(180deg, rgb(0 0 0 / 0%) 15%, rgb(0 0 0 / 55%) 50%, rgb(0 0 0 / 82%)); }
+.entry.has-photo .entry-lb { font-size: .95rem; }
+.entry .entry-sub { font-size: .8rem; }
+.toasts { position: fixed; z-index: 60; left: 50%; transform: translateX(-50%); bottom: calc(76px + env(safe-area-inset-bottom)); width: min(92vw, 520px); display: grid; gap: 8px; pointer-events: none; }
+@media (min-width: 900px) { .toasts { bottom: 24px; } }
+.toast { pointer-events: auto; display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 14px; background: #2A251D; color: #FBF6EC; box-shadow: 0 6px 20px rgb(0 0 0 / 25%); font-size: .95rem; }
+.toast span { flex: 1; }
+.toast a, .toast button { color: #F5C26B; font-weight: 700; background: none; border: 0; font: inherit; cursor: pointer; min-height: 44px; padding: 0 4px; text-decoration: none; }
+
+/* ---------------------------------------------------------------- Fiche recette allégée (audit UX 2026-10-16) */
+.cook-cta { width: 100%; justify-content: center; margin: 10px 0 6px; }
+.quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 6px; margin: 6px 0; }
+.quick-actions > * { display: grid; justify-items: center; gap: 2px; min-height: 60px; padding: 8px 2px; border-radius: 14px; border: 1px solid var(--alt); background: var(--surface); color: var(--action); font: inherit; font-size: .82rem; font-weight: 600; text-decoration: none; cursor: pointer; }
+.quick-actions > * span { color: var(--text); }
+.quick-actions > [aria-pressed="true"] { border-color: var(--action); background: color-mix(in srgb, var(--action) 8%, var(--surface)); }
+.untested { color: var(--text-2); }
+.recipe-head .hero-fig .cover-big { max-height: 42vh; }
+@media (max-width: 899px) { .recipe-head .hero-fig .cover-big { aspect-ratio: 16 / 10; } }
+.cook-sticky { display: none; }
+@media (max-width: 899px) {
+  .cook-sticky { display: flex; position: fixed; z-index: 30; left: 0; right: 0; bottom: calc(64px + env(safe-area-inset-bottom)); gap: 10px; align-items: center; justify-content: space-between; padding: 8px 12px; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(8px); border-top: 1px solid var(--alt); box-shadow: 0 -4px 14px rgb(0 0 0 / 8%); }
+  .cook-sticky .btn { flex: 1; justify-content: center; min-height: 48px; }
+  .page.recipe { padding-bottom: 150px; }
+  body:has(.cook-sticky) .toasts { bottom: calc(140px + env(safe-area-inset-bottom)); }
+}
+.portions.mini { display: flex; align-items: center; gap: 4px; }
+.portions.mini button, .portions .btn.small { min-width: 44px; min-height: 44px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 1.2rem; cursor: pointer; }
+.back { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 4px; background: none; border: 0; color: var(--link); font: inherit; cursor: pointer; text-decoration: none; }
+/* mode cuisine : boutons légendés, paysage */
+.cook-btn { display: grid; justify-items: center; align-content: center; gap: 2px; font-size: .78rem; font-weight: 600; padding: 4px 6px; flex: 1; }
+.cook-btn .ic { width: 26px; height: 26px; }
+.cook-btn.primary { font-size: .9rem; }
+.cook-side { display: none; }
+@media (orientation: landscape) and (min-width: 820px) {
+  .cook { display: grid; grid-template-columns: 1fr 300px; grid-template-rows: auto 1fr; }
+  .cook-top { grid-column: 1 / -1; }
+  .cook-side { display: block; padding: 16px; border-left: 1px solid var(--alt); overflow: auto; max-height: calc(100vh - 160px); position: sticky; top: 0; }
+  .cook-side ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; font-size: 1.05rem; }
+}
+
+/* ---------------------------------------------------------------- Confort : tailles minimales (audit UX 2026-10-16 §2.4-2.5) */
+.meta { font-size: .875rem; }
+.small { font-size: .9375rem; }
+.credit { font-size: .75rem; }
+.tab-lb { font-size: .78rem; }
+.chip { min-height: 44px; }
+.btn.small { min-height: 44px; }
+.seg button, .seg a { min-height: 44px; }
+.recipe-toc .chip { min-height: 40px; }
+.section-head a, .more-link { display: inline-flex; align-items: center; min-height: 44px; }
+.entry .entry-sub { font-size: .8125rem; }
+.rcard h3 { font-size: 1.02rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.big-text .tab-lb { font-size: 11.5px; white-space: nowrap; }
+@media (max-width: 899px) { .cook-cta { display: none; } }
+.pill { min-height: 44px; display: inline-flex; align-items: center; }
+.recipe-toc .chip { min-height: 44px; }
+.rescue summary, details.card > summary, .cook-help > summary, .search-filters > summary { min-height: 44px; display: flex; align-items: center; gap: 6px; }

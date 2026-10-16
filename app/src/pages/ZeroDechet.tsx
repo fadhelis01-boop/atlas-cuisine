@@ -2,7 +2,7 @@ import { ImportRow } from "../components/video";
 import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { ANATOMIE, CONSERVATION, DLC_DDM } from "../lib/content";
 import { href } from "../lib/router";
-import { Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
+import { MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
 
 export default function ZeroDechet() {
   const IMPORT_LIBRARY = useImportLibrary();
@@ -21,7 +21,7 @@ export default function ZeroDechet() {
           </table>
         </div>
       </Section>
-      <Section title="Recettes anti-gaspi"><Grid>{list.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid></Section>
+      <Section title="Recettes anti-gaspi"><MoreGrid items={list} /></Section>
       <Section title="Cuisiner une fois, manger trois fois">
         <ol>
           <li><a href={href("/recette/poulet_roti")}>Poulet rôti</a> le dimanche ;</li>
@@ -34,7 +34,7 @@ export default function ZeroDechet() {
         <p className="small">{DLC_DDM}</p>
         <p>Ton <a href={href("/frigo")}>frigo virtuel</a> classe tes produits par date et propose d'abord les recettes qui utilisent ce qui arrive à échéance.</p>
       </Section>
-      {tiktok.length > 0 && <Section title="Fait maison et anti-gaspi dans tes favoris"><ul className="links-list">{tiktok.map((i) => <ImportRow key={i.url} i={i} />)}</ul></Section>}
+      {tiktok.length > 0 && <Section title="Fait maison et anti-gaspi dans tes favoris"><MoreList items={tiktok} step={10} render={(i) => <ImportRow key={i.url} i={i} />} /></Section>}
     </Page>
   );
 }

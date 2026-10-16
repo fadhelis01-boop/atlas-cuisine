@@ -102,18 +102,41 @@ export function durationsIn(text: string): { label: string; seconds: number }[] 
 }
 
 /** Mise à l'échelle simple des quantités (« 1,2 kg » × 1,5). Les quantités non numériques restent telles quelles. */
+const MEASURE = /^\s*(g|kg|mg|ml|cl|dl|l|L|c\.|cuill|pinc|cm|mm|tasse|verre|bol|poign|brin|feuille|tranche|filet|trait|zeste|bâton|baton|sachet|cube|botte|bouquet)/i;
+function fmtFrac(v: number): string {
+  const r = Math.round(v * 4) / 4;
+  const frac = ({ 0.25: "¼", 0.5: "½", 0.75: "¾" } as Record<number, string>)[r % 1];
+  return Math.floor(r) ? (frac ? `${Math.floor(r)} ${frac}` : String(Math.floor(r))) : frac ?? String(Math.round(v * 10) / 10).replace(".", ",");
+}
+/** Quantité recalculée pour un autre nombre de portions. Les mesures (g, ml, cuillères…) gardent des fractions ;
+ *  les quantités à la pièce (œufs, oignons, gousses) s'arrondissent à l'entier : on ne casse pas « 1 ½ œuf »
+ *  (audit UX 2026-10-16 §2.8). */
+const PLURAL: Record<string, string> = { pincée: "pincées", gousse: "gousses", tranche: "tranches", feuille: "feuilles", branche: "branches", boîte: "boîtes", poignée: "poignées", tige: "tiges", botte: "bottes", brin: "brins", bâton: "bâtons", sachet: "sachets", verre: "verres", tasse: "tasses", bol: "bols", cube: "cubes", morceau: "morceaux", filet: "filets", zeste: "zestes", bouquet: "bouquets" };
 export function scaleQty(qty: string, factor: number): string {
   if (factor === 1) return qty;
+  const out = scaleQtyRaw(qty, factor);
+  // accord : « 2 pincées », « 3 gousses »
+  return out.replace(/^(\d+(?:,\d+)?(?: [½¼¾])?)\s+([a-zàâäéèêëîïôöûüç]+)/i, (m, n: string, w: string) => (parseFloat(n.replace(",", ".")) >= 2 && PLURAL[w] ? `${n} ${PLURAL[w]}` : m));
+}
+function scaleQtyRaw(qty: string, factor: number): string {
   const FR: Record<string, number> = { "½": 0.5, "¼": 0.25, "¾": 0.75 };
-  return qty.replace(/(\d+(?:,\d+)?|½|¼|¾)/, (m) => {
+  return qty.replace(/(\d+(?:,\d+)?|½|¼|¾)/, (m, _g, off: number, all: string) => {
     const v = (FR[m] ?? parseFloat(m.replace(",", "."))) * factor;
     if (v >= 100) return String(Math.round(v / 10) * 10);
     if (v >= 10) return String(Math.round(v));
     if (m.includes(",")) return String(Math.round(v * 10) / 10).replace(".", ","); // « 1,2 kg » reste décimal
-    const r = Math.round(v * 4) / 4;
-    const frac = { 0.25: "¼", 0.5: "½", 0.75: "¾" }[r % 1];
-    return Math.floor(r) ? (frac ? `${Math.floor(r)} ${frac}` : String(Math.floor(r))) : frac ?? String(Math.round(v * 10) / 10).replace(".", ",");
+    const after = all.slice(off + m.length);
+    const piece = !MEASURE.test(after) && !FR[m]; // « 3 », « 3 œufs », « 2 gousses »…
+    if (piece) return String(Math.max(1, Math.round(v)));
+    return fmtFrac(v);
   });
+}
+
+/** Les nombres d'une étape suivent les portions (« les 3 œufs » → « les 2 œufs ») ; jamais les temps, températures ou tailles. */
+const STEP_QTY = /(\d+(?:,\d+)?)(\s*)(g|kg|ml|cl|dl|l|c\. à s\.|c\. à c\.|cuillères?|pincées?|œufs?|oeufs?|jaunes?|blancs?|gousses?|oignons?|échalotes?|tomates?|citrons?|pommes?|carottes?|courgettes?|poivrons?|bananes?|tranches?|filets?|cuisses?|escalopes?|feuilles?|verres?|tasses?)(?![a-zà-ÿ])/gi;
+export function scaleStep(step: string, factor: number): string {
+  if (factor === 1) return step;
+  return step.replace(STEP_QTY, (_m, n: string, sp: string, unit: string) => `${scaleQty(n + sp + unit, factor).replace(/\s+$/, "")}`);
 }
 
 /** Découpe une étape en gestes unitaires pour le mode cuisine (une action par écran) : phrases et points-virgules,
@@ -147,3 +170,7 @@ export function ovenPlan(steps: string[]): { at: number; temp: string } | null {
   const t = steps[at].match(/(\d{2,3}) ?°C/) ?? steps.slice(0, at).join(" ").match(/(\d{3}) ?°C/);
   return t ? { at, temp: `${t[1]} °C` } : null;
 }
+
+/** Mots plutôt que symboles (audit UX 2026-10-16 §2.8) : « ●○○ » et « €€ » ne parlent pas à un débutant. */
+export const levelLabel = (n: number) => (n <= 1 ? "Facile" : n === 2 ? "Moyen" : "Difficile");
+export const costLabel = (c: string) => (c === "€" ? "Économique" : c === "€€" ? "Prix moyen" : "Pour les grandes occasions");

@@ -40,7 +40,7 @@ export const ANATOMIE: { ing: string; parts: string; uses: string; recipes: stri
   { ing: "Bananes très mûres", parts: "Chair", uses: "Banana bread, pancakes, lassi.", recipes: ["banana_bread", "pancakes"] },
   { ing: "Herbes fanées", parts: "Feuilles, tiges", uses: "Pesto, sauce blanche, bouillon, glaçons d'herbes.", recipes: ["pesto", "sauce_blanche", "taboule_libanais"] },
   { ing: "Pois chiches (bocal)", parts: "Jus (aquafaba)", uses: "Mayonnaise sans œuf, meringues véganes.", recipes: ["houmous", "mayonnaise"] },
-  { ing: "Riz ou pâtes cuits", parts: "Restes", uses: "Riz sauté, galettes, gratin (⚠️ riz : frigo, 24 h maximum).", recipes: ["riz_cantonais"] },
+  { ing: "Riz ou pâtes cuits", parts: "Restes", uses: "Riz sauté, galettes, gratin (attention, riz : frigo, 24 h maximum).", recipes: ["riz_cantonais"] },
   { ing: "Tomates trop mûres, poivrons fripés", parts: "Chair", uses: "Sauce tomate, chakchouka, ketchup.", recipes: ["sauce_tomate", "shakshuka", "ketchup"] },
   { ing: "Huile de friture", parts: "Huile filtrée", uses: "Réutilisable 5-6 fois si claire ; jamais à l'évier (déchetterie).", recipes: ["frites_maison"] },
 ];
@@ -49,7 +49,7 @@ export const ANATOMIE: { ing: string; parts: string; uses: string; recipes: stri
 export const CONSERVATION = [
   ["Mayonnaise et sauces à l'œuf cru", "3 jours au frigo (≤ 4 °C)"], ["Sauces au yaourt", "3 à 4 jours"], ["Bouillon maison", "4 jours au frigo, 6 mois au congélateur"],
   ["Riz cuit", "24 h au frigo, refroidi en moins de 2 h"], ["Plats mijotés", "3 à 4 jours au frigo, 3 mois au congélateur"], ["Pâte à pizza ou à pain crue", "3 jours au frigo, 2 mois au congélateur"],
-  ["Huiles aromatisées à l'ail ou aux herbes", "⚠️ au frigo, 4 jours maximum (risque de botulisme)"], ["Herbes fraîches", "Dans un verre d'eau au frigo, ou hachées en glaçons dans l'huile"],
+  ["Huiles aromatisées à l'ail ou aux herbes", "Attention : au frigo, 4 jours maximum (risque de botulisme)"], ["Herbes fraîches", "Dans un verre d'eau au frigo, ou hachées en glaçons dans l'huile"],
 ];
 
 export const DLC_DDM = "DLC (« à consommer jusqu'au ») : date impérative pour les produits frais, à respecter. DDM (« à consommer de préférence avant ») : le produit reste consommable après, il perd seulement en qualité (pâtes, riz, conserves, biscuits).";

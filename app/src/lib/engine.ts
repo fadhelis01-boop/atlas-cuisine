@@ -258,14 +258,14 @@ FAMILIES.forEach((f) => f.forEach((x) => FAMILY_OF.set(x, [...new Set([...(FAMIL
 export interface Suggestion {
   id: string;
   score: number;
-  bucket: "all" | "almost" | "ideas";
+  bucket: "all" | "almost" | "ideas" | "start";
   missing: string[];
   substitutes: Record<string, string[]>;
   usesExpiring: string[];
   coverage: number; // part des ingrédients saisis utilisés (mode « je veux tout utiliser »)
 }
 
-export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<string> = new Set(), subCredit = 0.8): Suggestion[] {
+export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<string> = new Set(), subCredit = 0.8, staples: Set<string> = STAPLES): Suggestion[] {
   const out: Suggestion[] = [];
   for (const r of recipes) {
     const req = flatten(r.ingredients).filter((l) => l.weight > 0 && !l.optional && l.ref);
@@ -276,7 +276,7 @@ export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<stri
     const substitutes: Record<string, string[]> = {};
     for (const l of req) {
       const ref = l.ref!;
-      if (have.has(ref) || STAPLES.has(ref)) got += l.weight;
+      if (have.has(ref) || staples.has(ref)) got += l.weight;
       else {
         const alt = (FAMILY_OF.get(ref) ?? []).filter((x) => have.has(x));
         if (alt.length) { got += l.weight * subCredit; substitutes[ref] = alt; }
@@ -291,10 +291,11 @@ export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<stri
     const usedHave = [...have].filter((h) => refs.has(h) || [...refs].some((x) => FAMILY_OF.get(x)?.includes(h))).length;
     const coverage = have.size ? usedHave / have.size : 0;
     if (have.size && !usedHave) continue; // ne propose pas une recette qui n'utilise aucun des ingrédients saisis
-    const bucket = !missing.length ? "all" : missing.length <= 2 && !missing.some((l) => l.weight === 3) ? "almost" : score >= 60 ? "ideas" : null;
+    // « start » (audit UX 2026-10-16) : dès un seul ingrédient, les recettes qui l'utilisent et ce qu'il faut acheter en plus
+    const bucket = !missing.length ? "all" : missing.length <= 2 && !missing.some((l) => l.weight === 3) ? "almost" : score >= 60 ? "ideas" : missing.length <= 6 ? "start" : null;
     if (bucket) out.push({ id: r.id, score: Math.round(score * 10) / 10, bucket, missing: [...new Set(missing.map((l) => l.ref!))], substitutes, usesExpiring, coverage });
   }
-  return out.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
+  return out.sort((a, b) => (a.bucket === "start" && b.bucket === "start" ? a.missing.length - b.missing.length : 0) || b.score - a.score || a.id.localeCompare(b.id));
 }
 
 /** Liste plate des ingrédients référencés d'une recette (sous-recettes incluses). */

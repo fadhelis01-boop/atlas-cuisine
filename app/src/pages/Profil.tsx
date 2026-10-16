@@ -1,8 +1,9 @@
+import { Icon } from "../components/icons";
 import { ZONE_LABEL, detectZone } from "../lib/season";
 import { useEffect, useRef, useState } from "react";
 import { ALLERGENS, RECIPES } from "../lib/data";
 import { Page, Section } from "../components/ui";
-import { IMAGES, supportsAvif } from "../components/photo";
+import { IMAGES, loadMoreImages, supportsAvif } from "../components/photo";
 import { href } from "../lib/router";
 import { exportData, importData, resetAll, setState, useStore } from "../lib/store";
 import { frenchVoices, speak, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
@@ -14,7 +15,7 @@ import { clearErrors, readErrors } from "../lib/errlog";
 function ErrorLog() {
   const [list, setList] = useState(readErrors);
   const [copied, setCopied] = useState(false);
-  if (!list.length) return <p className="small">Aucune erreur enregistrée sur cet appareil. 👍</p>;
+  if (!list.length) return <p className="small">Aucune erreur enregistrée sur cet appareil.</p>;
   const text = list.map((e) => `${e.at} · ${e.where} · ${e.msg}`).join("\n");
   return (
     <>
@@ -85,19 +86,29 @@ export function ProfileForm() {
 
 function OfflinePhotos() {
   const [state, setStateLocal] = useState<string>("");
-  const all = Object.values(IMAGES);
-  const run = async () => {
+  const favs = useStore((st) => st.favorites);
+  const week = useStore((st) => st.week);
+  const mine = new Set([...favs, ...Object.values(week ?? {}).flatMap((d) => [d.midi, d.soir])].filter(Boolean).map((id) => `recette/${id}`));
+  const run = async (only: "tout" | "mes") => {
+    await loadMoreImages();
+    const everything = Object.entries(IMAGES);
+    const list = only === "tout" ? everything : everything.filter(([k]) => mine.has(k));
+    // lève le plafond du cache photos (sinon les plus anciennes seraient effacées pendant le téléchargement)
+    navigator.serviceWorker?.controller?.postMessage({ type: "img-max", value: only === "tout" ? 6000 : 400 + list.length * 2 });
     let done = 0;
     const avif = await supportsAvif();
-    for (const m of all) {
+    for (const [, m] of list) {
       for (const w of m.sizes.filter((x) => x <= 800)) { try { await fetch(`./${m.path}-${w}.${m.avif && avif ? "avif" : "webp"}`); } catch { /* hors ligne */ } }
-      done++; if (done % 10 === 0 || done === all.length) setStateLocal(`${done} / ${all.length} photos enregistrées`);
+      done++; if (done % 10 === 0 || done === list.length) setStateLocal(`${done} / ${list.length} photos enregistrées`);
     }
   };
   return (
     <>
-      <p className="small">Les photos se gardent sur l'appareil au fur et à mesure que tu les vois. Pour cuisiner sans réseau avec toutes les photos, enregistre-les d'un coup (environ 10 Mo, de préférence en Wi-Fi).</p>
-      <button className="btn ghost" onClick={() => void run()}>Enregistrer toutes les photos</button>
+      <p className="small">Les photos se gardent sur l'appareil au fur et à mesure que tu les vois (les 400 dernières). Pour cuisiner sans réseau, enregistre-les d'avance, de préférence en Wi-Fi :</p>
+      <div className="row">
+        <button className="btn ghost" disabled={!mine.size} onClick={() => void run("mes")}>Mes favoris et ma semaine ({mine.size} photos)</button>
+        <button className="btn ghost" onClick={() => void run("tout")}>Toutes les photos (≈ 70 Mo)</button>
+      </div>
       {state && <p role="status" className="small">{state}</p>}
       <p className="small"><a href={href("/credits")}>Crédits photos</a></p>
     </>
@@ -170,7 +181,7 @@ export default function Profil() {
         </div>
       </Section>
       <Section title="Installer ATLAS sur tes appareils">
-        {isStandalone() ? <p>✓ ATLAS est installée sur cet appareil.</p> : isIos() ? (
+        {isStandalone() ? <p><Icon name="check" size={16} className="ic-inline" /> ATLAS est installée sur cet appareil.</p> : isIos() ? (
           <p><strong>iPhone, iPad :</strong> dans Safari, touche le bouton Partager <span aria-hidden="true">⎋</span> puis « Sur l'écran d'accueil ». <strong>Mac :</strong> Safari › Fichier › « Ajouter au Dock ».</p>
         ) : pwa.canInstall ? <button className="btn" onClick={() => void promptInstall()}>Installer l'application</button> : (
           <p>Android et ordinateur : menu du navigateur › « Installer l'application » (ou « Ajouter à l'écran d'accueil »).</p>

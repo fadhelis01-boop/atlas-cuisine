@@ -1,8 +1,9 @@
+import { Icon } from "../components/icons";
 import { ImportRow } from "../components/video";
 import { useState } from "react";
 import { useImportLibrary, RECIPES } from "../lib/data";
 import { useProfile } from "../lib/store";
-import { Chip, Grid, Page, RecipeCard, Section, useVisible } from "../components/ui";
+import { Chip, MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
 
 // « Sauce Builder » (Tome 1 §11.3) : base → profil → aromates ; proportions, étapes et conservation calculées.
 type Base = "oeuf" | "aquafaba" | "yaourt" | "tomate" | "tahini" | "huile";
@@ -51,9 +52,9 @@ function Builder() {
         <ul>{[...b.ing, ...PROFILS[prof].add, ...aro.map((a) => AROMATES[a].add)].map((x) => <li key={x}>{x}</li>)}</ul>
         <p><strong>Comment :</strong> {b.how} Ajoute ensuite {[...PROFILS[prof].add, ...aro.map((a) => AROMATES[a].add)].length ? "le reste et mélange ; goûte et ajuste (le piquant augmente au repos)" : "rien d'autre : c'est prêt"}. 15 min au frais avant de servir.</p>
         <p><strong>Conservation :</strong> {keep} jour{keep > 1 ? "s" : ""} au frigo (≤ 4 °C), en bocal propre et fermé, étiqueté avec la date.</p>
-        {b.warn && <p className="warn-text">⚠️ {b.warn}</p>}
-        {aro.map((a) => AROMATES[a].warn && <p key={a} className="warn-text">⚠️ {AROMATES[a].warn}</p>)}
-        {conflicts.length > 0 && <p className="bad-text">⛔ Contient {conflicts.join(", ")}, exclu(s) de ton profil.</p>}
+        {b.warn && <p className="warn-text"><Icon name="alert" size={16} className="ic-inline" /> {b.warn}</p>}
+        {aro.map((a) => AROMATES[a].warn && <p key={a} className="warn-text"><Icon name="alert" size={16} className="ic-inline" /> {AROMATES[a].warn}</p>)}
+        {conflicts.length > 0 && <p className="bad-text"><Icon name="ban" size={16} className="ic-inline" /> Contient {conflicts.join(", ")}, exclu(s) de ton profil.</p>}
         <p className="small">Allergènes de la base : {b.allergens.join(", ") || "aucun"}. Aucun additif : la conservation vient du froid, de l'acidité et du sel. Pas d'huile aromatisée à l'ail conservée longtemps (botulisme).</p>
       </div>
     </div>
@@ -69,11 +70,11 @@ export default function Sauces() {
       <div className="card pad charte">
         <strong>La charte ATLAS des sauces</strong> : aucun E-numéro, conservateur, exhausteur ou arôme artificiel ; 8 ingrédients maximum, trouvables en supermarché ; une durée de conservation honnête ; une version sans œuf quand c'est possible ; sans porc et sans alcool garantis (vinaigre de cidre plutôt que de vin pour les profils stricts).
       </div>
-      <Grid>{list.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>
+      <MoreGrid items={list} />
       <Section title="Crée ta sauce (Sauce Builder)"><Builder /></Section>
       {tiktok.length > 0 && (
         <Section title={`Tes favoris TikTok : sauces et fait maison (${tiktok.length})`}>
-          <ul className="links-list">{tiktok.map((i) => <ImportRow key={i.url} i={i} />)}</ul>
+          <MoreList items={tiktok} step={10} render={(i) => <ImportRow key={i.url} i={i} />} />
         </Section>
       )}
     </Page>
