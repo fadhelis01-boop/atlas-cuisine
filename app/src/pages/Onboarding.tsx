@@ -3,6 +3,7 @@ import { ALLERGENS, RECIPES } from "../lib/data";
 import { toTop } from "../lib/router";
 import { setState, useProfile } from "../lib/store";
 import { Icon } from "../components/icons";
+import Household from "../components/Household";
 
 /** Premier lancement en un seul écran (audit UX 2026-10-16, chantier 1) : l'essentiel d'un geste, les allergies
  *  seulement si on en a, et tout le reste (équipement, mode strict, âge des enfants) plus tard dans le profil. */
@@ -36,7 +37,9 @@ export default function Onboarding() {
           ))}
         </div>
       )}
-      <p className="small">Halal : choisis « sans porc » et « sans alcool ». Tout se change ensuite dans <strong>Profil</strong> (enfants, équipement, mode strict). Ces informations restent sur ton téléphone.</p>
+      <h2 className="h3 ob-sub">Pour combien cuisines-tu ?</h2>
+      <Household compact />
+      <p className="small">Halal : choisis « sans porc » et « sans alcool ». Tout se change ensuite dans <strong>Profil</strong> (équipement, mode strict). Ces informations restent sur ton téléphone.</p>
       <button className="btn big ob-go" onClick={done}>Voir les recettes</button>
     </main>
   );

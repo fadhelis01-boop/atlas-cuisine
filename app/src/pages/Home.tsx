@@ -4,7 +4,7 @@ import { RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { FETES } from "../lib/content";
 import { evaluate } from "../lib/engine";
 import { go, href } from "../lib/router";
-import { useProfile, useStore } from "../lib/store";
+import { backupDue, setState, useProfile, useStore } from "../lib/store";
 import { norm } from "../lib/text";
 import type { Recipe } from "../lib/types";
 import { Grid, RecipeCard, Section, useVisible } from "../components/ui";
@@ -15,6 +15,7 @@ import { INGREDIENTS } from "../lib/data";
 import { sectionLook } from "./Dictionnaire";
 import { momentOf, propose } from "../lib/propose";
 import { PARCOURS } from "../lib/parcours";
+import { kidFriendly } from "../lib/famille";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
@@ -27,6 +28,8 @@ const ENTRIES = [
 ];
 const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "/frigo": "rubrique/frigo", "/enfants": "rubrique/enfants", "/pains": "rubrique/pains",
   "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
+
+const cravingById = (id: string) => CRAVINGS.find((c) => c.id === id)!; // jamais par position : la liste évolue
 
 const PASTRY = /choux|patissiere|sucree|feuilletage|meringue|ganache|temperer|macaron|genoise|caramel|tourage|brioche|praline|chantilly|creme anglaise/;
 const has = (r: Recipe, re: RegExp) => re.test(norm(r.title)) || r.ingredients.some((l) => re.test(norm(l.label)));
@@ -67,7 +70,7 @@ function daily<T>(list: T[], n: number, salt: number) {
 
 function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
   const f = seasonFit(r, zone);
-  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> <Icon name="sprout" size={14} className="ic-inline" />{f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> {f.mood === "chaud" ? "🔥 plat réconfortant" : "❄️ plat frais"}</span>}</p>;
+  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> <Icon name="sprout" size={14} className="ic-inline" />{f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> <Icon name={f.mood === "chaud" ? "flame" : "snowflake"} size={14} className="ic-inline" />{f.mood === "chaud" ? "plat réconfortant" : "plat frais"}</span>}</p>;
 }
 
 const TIMES: [number, string][] = [[20, "20 min"], [45, "45 min"], [999, "J'ai le temps"]];
@@ -93,6 +96,21 @@ function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
         : <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>)}
       {seed > 0 && !fridge.length && <p className="small">Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.</p>}
     </section>
+  );
+}
+
+/** Rappel de sauvegarde (audit famille) : les données ne vivent que sur l'appareil ; sur iPhone, Safari efface celles d'un site
+ *  non installé et non ouvert depuis 7 jours. Une fois par mois au plus, et seulement s'il y a quelque chose à perdre. */
+function BackupNudge() {
+  const due = useStore((s) => backupDue(s));
+  if (!due) return null;
+  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window.matchMedia?.("(display-mode: standalone)").matches);
+  return (
+    <div className="card pad backup-nudge" role="note">
+      <p><Icon name="alert" size={18} className="ic-inline" /> <strong>Tes favoris, ton carnet et ta semaine ne sont enregistrés que sur ce téléphone.</strong> Garde-en une copie : <a href={href("/profil")}>Profil › Mes données › Exporter</a>.
+        {ios && <> Sur iPhone, installe ATLAS (Partager › Sur l'écran d'accueil) : Safari efface les données des sites non ouverts depuis 7 jours.</>}</p>
+      <button className="btn small ghost" onClick={() => setState((s) => { s.settings.backupNudge = new Date().toISOString(); })}>Plus tard</button>
+    </div>
   );
 }
 
@@ -125,8 +143,11 @@ export default function Home() {
   ZONE = zone;
   const season = seasonOf(zone);
   // Menu du jour : parmi les recettes les mieux accordées à la saison du lieu (produits de saison, plat chaud ou frais selon le climat)
+  // En semaine, un menu qui tient dans une soirée (audit famille 2026-10-16) ; avec de jeunes enfants, ni piment ni plat d'adulte
+  const weekday = [1, 2, 3, 4, 5].includes(new Date().getDay());
+  const maxTotal: Record<string, number> = weekday ? { entree: 30, plat: 60, dessert: 45 } : { entree: 90, plat: 999, dessert: 999 };
   const seasonal = (role: string, salt: number) => {
-    const ranked = visible.filter((r) => r.role === role).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
+    const ranked = visible.filter((r) => r.role === role && r.active + (role === "dessert" ? 0 : r.rest) <= maxTotal[role] && kidFriendly(r, p)).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
     const top = ranked.slice(0, Math.max(12, Math.round(ranked.length * 0.3))).map(([r]) => r);
     return daily(top, 1, salt)[0] ?? null;
   };
@@ -136,7 +157,7 @@ export default function Home() {
   const market = useMemo(() => marketOfMonth(zone).filter((n) => INGREDIENTS[n]?.slug), [zone]);
   const monthName = MONTHS_FULL[new Date().getMonth()];
   const news = useMemo(() => daily(visible.filter((r) => r.source.includes("vague 2") && r.role !== "autre"), 8, 1), [visible]);
-  const pastry = useMemo(() => daily(visible.filter(CRAVINGS[2].test), 8, 2), [visible]);
+  const pastry = useMemo(() => daily(visible.filter((r) => cravingById("patisserie").test(r) || cravingById("chocolat").test(r)), 8, 2), [visible]);
   const picked = craving ? CRAVINGS.find((c) => c.id === craving) : null;
   const cravingList = useMemo(() => (picked ? daily(visible.filter(picked.test), 12, 5) : []), [picked, visible]);
   // défi de la semaine (contre la lassitude) : de saison, jamais cuisiné, un niveau au-dessus ; change chaque lundi
@@ -184,9 +205,10 @@ export default function Home() {
       )}
 
       <Beginner />
+      <BackupNudge />
 
       {(today || dessert) && (
-        <Section title={`Le menu du jour · ${SEASON_LABEL[season]}`} more={<a href={href("/profil")}>Ma zone de saisons →</a>}>
+        <Section title={`Le menu du jour · ${SEASON_LABEL[season]}${weekday ? " · soir de semaine" : ""}`} more={<a href={href("/profil")}>Ma zone de saisons →</a>}>
           <Grid>
             {entree && <RecipeCard r={entree} note={<SeasonNote r={entree} zone={zone} label="L'entrée" />} />}
             {today && <RecipeCard r={today} note={<SeasonNote r={today} zone={zone} label="Le plat" />} />}

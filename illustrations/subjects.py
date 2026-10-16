@@ -125,7 +125,7 @@ RUBRIQUES = {
  "pains": ["bakery bread loaves", "artisan bread"], "sauces": ["sauces bowls", "condiments"], "enfants": ["children cooking", "kids baking"],
  "fetes": ["festive dinner table", "christmas dinner table"], "zero_dechet": ["vegetable scraps compost", "leftovers"],
  "techniques": ["chef cooking kitchen", "cooking class"], "imports": ["smartphone recipe kitchen", "food video phone"],
- "frigo": ["open refrigerator vegetables", "fresh vegetables market"], "explorer": ["spices market", "world spices"],
+ "frigo": ["open refrigerator vegetables", "fresh vegetables market"], "pique_nique": ["picnic blanket food", "family picnic basket"], "explorer": ["spices market", "world spices"],
 }
 
 FETES = {

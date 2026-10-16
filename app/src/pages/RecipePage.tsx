@@ -3,6 +3,8 @@ import { Icon } from "../components/icons";
 import { toast } from "../lib/toast";
 import { substitutOf } from "../lib/substituts";
 import { restesOfRecipe } from "../lib/restes";
+import { defaultPortions } from "../lib/famille";
+import { equipmentNotes } from "../lib/equipement";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
 import { rescueFor } from "../lib/rescue";
@@ -10,7 +12,7 @@ import Journal from "../components/Journal";
 import { termsIn } from "../lib/glossaire";
 import { SEASON_LABEL, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { useEffect, useMemo, useState } from "react";
-import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID } from "../lib/data";
+import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID, useRecipeVideos } from "../lib/data";
 import { evaluateLines, verdict } from "../lib/engine";
 import { href, goBack } from "../lib/router";
 import { pushRecent, setState, toggleFavorite, uid, useProfile, useStore, getState } from "../lib/store";
@@ -43,6 +45,8 @@ function SeasonBadge({ r }: { r: Recipe }) {
 
 /** Ce qu'un débutant doit savoir avant d'allumer le feu : matériel, préchauffage, ingrédients à sortir à l'avance. */
 function BeforeYouStart({ r }: { r: Recipe }) {
+  const p = useProfile();
+  const eqNotes = equipmentNotes(r, p);
   const all = r.steps.join(" ");
   const oven = ovenPlan(r.steps);
   const soft = /pommade|beurre mou|température ambiante|sors .{0,40}avant/i.test(all + " " + r.ingredients.map((l) => l.label).join(" "));
@@ -53,6 +57,7 @@ function BeforeYouStart({ r }: { r: Recipe }) {
       <ul className="small">
         <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
         {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
+        {eqNotes.map((t) => <li key={t} className="eq-note">{t}</li>)}
         {oven && <li>Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
         {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
         {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
@@ -121,11 +126,11 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const cookedN = useStore((s) => s.cooked[id]);
   const journalEntry = useStore((s) => s.journal?.[id]);
   const asked = Number(q.get("portions")) || 0;
-  const [portions, setPortions] = useState(asked || r?.portions || 4);
+  const [portions, setPortions] = useState(asked || (r ? defaultPortions(r, p) : 4));
   const [useAdapted, setUseAdapted] = useState(true);
   const [reading, setReading] = useState<number | null>(null);
   const [showAnyway, setShowAnyway] = useState(q.get("voir") === "1");
-  useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || r.portions); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || defaultPortions(r, getState().profile)); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const v = useMemo(() => (r ? verdict(r, p) : null), [r, p]);
   if (!r || !v) return <Page title="Recette introuvable" back="/explorer">{null}</Page>;
 
@@ -190,7 +195,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           <span><strong>{portions}</strong> pers.</span>
           <button type="button" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
         </div>
-        <a className="btn" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}${portions !== r.portions ? `${adapted ? "&" : "?"}portions=${portions}` : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
+        <a className="btn" href={href(`/cuisine/${r.id}?portions=${portions}${adapted ? "&adapte=1" : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
       </div>
       <button type="button" className="back" onClick={() => goBack(`/region/${r.macro}`)}><Icon name="back" size={20} /> Retour</button>
       <div className="recipe-head">
@@ -293,7 +298,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {r.variants.map((x) => <div key={x.name} className="card pad"><h3>{x.name} {!x.tested && <span className="badge info">à tester</span>}</h3><p><Rich text={x.note} /></p></div>)}
         </Section>
       )}
-      <Section title="Conservation"><p>{plain(r.storage)}</p></Section>
+      <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>} {plain(r.storage)}</p></Section>
       <Section title="Enfants">
         <p>{plain(r.kids)}</p>
         {p.kidsAge !== null && p.kidsAge < 4 && <ul className="small">{SECURITE_ENFANTS.slice(0, 4).map((x) => <li key={x}>{x}</li>)}</ul>}
@@ -321,6 +326,7 @@ const NONE: string[] = [];
 /** Vidéos liées à la fiche : favoris importés et vidéos des sites, lisibles dans l'appli ; + les liens ajoutés par l'utilisateur. */
 function RecipeVideos({ r }: { r: Recipe }) {
   const mine = useStore((s) => s.recipeVideos[r.id]) ?? NONE; // jamais un nouveau tableau dans le sélecteur
+  const videos = useRecipeVideos(r);
   const [link, setLink] = useState("");
   const [err, setErr] = useState("");
   const add = () => {
@@ -331,12 +337,12 @@ function RecipeVideos({ r }: { r: Recipe }) {
   };
   return (
     <Section title="En vidéo">
-      {r.videos.length > 0 ? (
+      {videos.length > 0 ? (
         <ul className="links-list">
-          {r.videos.map((x) => (
+          {videos.map((x) => (
             <li key={x.url} className="import-row">
               <PlayButton v={x} />
-              <span><a href={x.url} target="_blank" rel="noopener noreferrer">{x.title.slice(0, 90)}</a> <span className="meta">· {x.source === "TikTok" ? `@${x.author}` : x.source}{x.pork ? " · 🐖 version avec porc" : ""}{x.alcohol ? " · 🍷" : ""}</span></span>
+              <span><a href={x.url} target="_blank" rel="noopener noreferrer">{x.title.slice(0, 90)}</a> <span className="meta">· {x.source === "TikTok" ? `@${x.author}` : x.source}{x.pork ? " · version avec porc" : ""}{x.alcohol ? " · avec alcool" : ""}</span></span>
             </li>
           ))}
         </ul>

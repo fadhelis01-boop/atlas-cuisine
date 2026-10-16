@@ -123,3 +123,34 @@ Un test de fumée qui ouvre chaque page et vérifie qu'aucune erreur ne remonte 
 | 13 | Estimation du budget de la semaine à partir des indicateurs € des fiches | P2 | ½ jour |
 
 Les points 1 à 5 corrigent ce qui est faux ou risqué pour une famille. Les points 6 à 9 changent le quotidien d'un parent. Les points 10 et 11 évitent que les prochains ajouts réintroduisent les mêmes défauts.
+
+## 6. Mise en œuvre (16 octobre 2026, même jour)
+
+Les 13 recommandations sont appliquées, toutes vérifiées par des contrôles automatiques (75 contrôles de logique, et 56 rendus de pages).
+
+| # | Recommandation | Ce qui a été fait | Mesure après |
+|---|---|---|---|
+| 1 | Rangée « Pâtisserie » | Envies désignées par leur identifiant (`cravingById`), la rangée réunit pâtisserie et chocolat | Sucettes en chocolat, cookies, pâte à tartiner, chocolat chaud |
+| 2 | Données | `navigator.storage.persist()` au démarrage ; écriture groupée et forcée à la fermeture de la page ; alerte si la mémoire est pleine ; rappel d'export mensuel sur l'accueil (avec le conseil d'installation sur iPhone) | Contrôle 75 |
+| 3 | Semaine famille | Les 7 jours à venir (plus de jours passés) ; parts reprises du foyer ; plats filtrés pour le plus jeune enfant (âge de la fiche, piment) | 20 semaines simulées, enfants de 4 et 9 ans : 0 plat épicé, 0 plat d'adulte |
+| 4 | Équilibre | Féculents variés, poisson et légumineuses 2 fois, un seul plat très riche ; le reste de la veille pèse moins que l'équilibre ; bilan affiché sous la semaine | Même féculent 3 fois au plus sur 14 repas ; poisson 3,9 et légumineuses 3,6 fois par semaine en moyenne ; 0 plat très riche |
+| 5 | Âges ↔ piment | Règle à l'export : piment dans la base (harissa, pâte de curry, gochujang, marinade tandoori…) → « dès 6 ans » ; sinon consigne « piment à part » | 19 fiches passées à 6 ans, 59 précisées ; contrôle 73 à zéro |
+| 6 | Foyer | Bienvenue et profil : adultes et âges des enfants, parts calculées (⅓ de part avant 3 ans, ½ de 3 à 10 ans) ; fiches et mode cuisine ouverts sur ces parts (sauf gâteaux et pains) ; allergie d'un seul membre signalée sans exclure | 2 adultes + 4 et 9 ans = 3 parts |
+| 7 | Recherche | Synonymes de parents (lunchbox, gamelle, goûter, légumes cachés, enfant difficile, batch cooking, mercredi, cantine) ; « Compris » avant « Rien trouvé » ; repli sur les intentions comprises | « lunchbox » 44 recettes, « enfant difficile légumes » 72, « batch cooking » 68 (0, 0 et 0 avant) |
+| 8 | Rubriques famille | Page Enfants : « Soirs de semaine : 30 min, qu'ils aiment », « Cuisine du dimanche : à doubler et congeler », raccourcis ; repère « Se congèle » sur les fiches ; rubrique Pique-nique et gamelle | 77 recettes à emporter, 5 paniers |
+| 9 | Menu du jour | En semaine : entrée ≤ 30 min, plat ≤ 1 h, dessert ≤ 45 min actives, adaptés aux enfants du foyer | Un vendredi : guacamole, salade haricots-thon, pouding chômeur |
+| 10 | Test de fumée | `tests/smoke.test.tsx` : les 28 pages rendues avec React et un DOM simulé, avec un profil de famille puis un profil vide ; lancé à chaque build et dans l'automatisation | Réintroduire le bug de la page Restes fait échouer le test |
+| 11 | Poids au démarrage | Les données étaient déjà lues en JSON ; la liste complète des vidéos (300 Ko) se charge à l'ouverture d'une fiche | 545 Ko compressés au lieu de 580, malgré 22 recettes de plus. Découper par région n'a pas été fait : le moteur a besoin de tous les ingrédients |
+| 12 | Équipement et détails | Autocuiseur, mijoteuse, micro-ondes ; l'équipement sert enfin : notes « pas de wok : … », « avec ton autocuiseur : … » sur les fiches ; « À propos » à jour ; émoticônes restantes remplacées par des icônes | Contrôle 74 |
+| 13 | Budget | Estimation de la semaine d'après les indicateurs € des fiches (2, 4 ou 7 € la part), présentée comme un ordre de grandeur | Exemple : 65 € pour 7 dîners à 3 parts |
+
+**Rubrique Pique-nique et gamelle** (`/pique-nique`). 22 nouvelles fiches (`bible/recipes_v3_piquenique.py`) s'ajoutent à 55 fiches existantes qui voyagent bien :
+- *Classiques* : pain surprise, terrine de légumes, tarte fine courgette-chèvre, salade de pâtes grecque.
+- *Originales* : taboulé de chou-fleur cru, courgettes a scapece, œufs marinés au soja.
+- *Du monde* : onigirazu, bocadillo de tortilla, muffuletta aux légumes, cornish pasty, scotch eggs en version volaille (D21), brochettes tandoori froides.
+- *Pour les enfants* : roulés de tortilla, pizza scrolls, brochettes tomate-mozzarella-melon.
+- *Douceurs et boissons anti-gaspi* : flapjacks, boules d'énergie, barres de céréales des fonds de placard, crackers de pain rassis, eau infusée aux épluchures.
+
+La page propose cinq paniers tout faits (enfants, à la française, tour du monde, grands, anti-gaspi) et des filtres. Elle couvre aussi la sécurité au soleil (glacière, 2 h au plus hors du froid, 1 h au-dessus de 32 °C, pas de mayonnaise crue), la préparation du sac, le zéro déchet sur la nappe, les restes qui deviennent un pique-nique et la gamelle (thermos, réchauffage).
+
+Le contrôle 75 a écarté de la liste quatre fiches à la mayonnaise (kimbap, banh mi, coleslaw, arepas).

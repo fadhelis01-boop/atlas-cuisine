@@ -370,6 +370,36 @@ dump("dico.json", dico)
 LEFT = {r["id"]: r.pop("leftovers") for r in recipes}
 for r in recipes: r.pop("tests", None)
 dump("leftovers.json", LEFT)
+# ---------------------------------------------------------------- âge des enfants ↔ piment (audit famille 2026-10-16)
+# Une fiche épicée marquée « dès 1 à 5 ans » doit dire comment l'adoucir. Quand le piment est dans la base (pâte, marinade,
+# condiment fermenté), il ne se retire pas : l'âge passe à 6 ans. Sinon, on précise de le servir à part.
+_ADOUCI = re.compile(r"sans (le )?piment|piment a part|a part pour les adultes|version douce|doux pour les enfants|sans epices fortes|sans garam")
+_BASE_PIQUANTE = re.compile(r"harissa|berbere|gochujang|gochugaru|pate de curry|sambal|marinade_jerk|poivre du sichuan|huile pimentee|piments ancho|scotch bonnet|piment antillais|sriracha|pate de piment|nokoss|tandoori")
+def _n(t): return _ud.normalize("NFD", t.lower()).encode("ascii", "ignore").decode()
+_ages = [0, 0]
+for r in recipes:
+    if "epice" not in r.get("profile", []) or r.get("age") is None or r["age"] > 5 or _ADOUCI.search(_n(r.get("kids") or "")):
+        continue
+    refs = _n(" ".join(l.get("ref") or "" for l in r["ingredients"] if not l.get("optional")))
+    if _BASE_PIQUANTE.search(refs):
+        r["age"] = 6; _ages[0] += 1
+        r["kids"] = "✓ dès 6 ans : le piment est dans la base (pâte, marinade ou condiment), il ne se retire pas. Pour les plus petits, choisis un plat doux."
+    else:
+        _ages[1] += 1
+        r["kids"] = (r.get("kids") or "").rstrip(" .") + ". Pour les plus petits : piment à part, ajouté seulement dans les assiettes des grands."
+print(f"âges ↔ piment : {_ages[0]} fiches passées à 6 ans, {_ages[1]} avec le piment à part")
+
+# ---------------------------------------------------------------- vidéos : la liste complète à la demande (audit famille, poids au démarrage)
+# recipes.json garde une seule vidéo (bouton « Voir la vidéo », filtre « avec vidéo ») et le nombre total.
+VIDS = {}
+for r in recipes:
+    full = r.get("videos") or []
+    if full:
+        VIDS[r["id"]] = full
+        first = next((v for v in full if v.get("embed")), full[0])
+        r["videos"] = [first]
+    r["videoCount"] = len(full)
+dump("recipe_videos.json", VIDS)
 dump("ingredients.json", ingredients); dump("recipes.json", recipes); dump("rules.json", RULES)
 dump("catalogue.json", catalogue); dump("imports.json", imports)
 print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for v in LEFT.values() if v)} fiches")

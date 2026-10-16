@@ -1,7 +1,8 @@
 import { Icon } from "../components/icons";
 import { useEffect, useMemo, useState } from "react";
 import { RECIPE_BY_ID, loadLeftovers } from "../lib/data";
-import { DAY_NAMES, autoPlan, consolidate, leftoverLink, prepAhead, weekDays, type Slot, type WeekPlan } from "../lib/planner";
+import { COST_PER_PART, autoPlan, consolidate, dayName, leftoverLink, prepAhead, weekDays, type Slot, type WeekPlan } from "../lib/planner";
+import { householdLabel, householdPortions, weekBalance } from "../lib/famille";
 import { href } from "../lib/router";
 import { zoneOf } from "../lib/season";
 import { setState, uid, useProfile, useStore } from "../lib/store";
@@ -20,7 +21,7 @@ export default function Semaine({ add }: { add: string | null }) {
   const profile = useProfile();
   const zoneSetting = useStore((s) => s.settings.zone);
   const plan = useStore((s) => s.week) ?? {};
-  const prefs = useStore((s) => s.weekPrefs) ?? DEFAULT_PREFS;
+  const prefs = useStore((s) => s.weekPrefs) ?? { ...DEFAULT_PREFS, people: householdPortions(profile) ?? DEFAULT_PREFS.people };
   const [offset, setOffset] = useState(0);
   const [msg, setMsg] = useState("");
   const [left, setLeft] = useState<Record<string, Leftover[]> | null>(null);
@@ -49,7 +50,7 @@ export default function Semaine({ add }: { add: string | null }) {
     save({ ...plan, [day]: { ...plan[day], [slot]: pick && pick !== cur ? pick : undefined } });
   };
   const remove = (day: string, slot: Slot) => save({ ...plan, [day]: { ...plan[day], [slot]: undefined } });
-  const put = (day: string, slot: Slot, id: string) => { save({ ...plan, [day]: { ...plan[day], [slot]: id } }); setMsg(`${RECIPE_BY_ID[id].title.split(" (")[0]} : ajouté le ${DAY_NAMES[days.indexOf(day)]} ${SLOT_LABEL[slot].toLowerCase()}.`); };
+  const put = (day: string, slot: Slot, id: string) => { save({ ...plan, [day]: { ...plan[day], [slot]: id } }); setMsg(`${RECIPE_BY_ID[id].title.split(" (")[0]} : ajouté le ${dayName(day)} ${SLOT_LABEL[slot].toLowerCase()}.`); };
 
   const planned = days.flatMap((d) => (["midi", "soir"] as Slot[]).map((s) => plan[d]?.[s]).filter(Boolean) as string[]);
   const shop = () => {
@@ -62,10 +63,12 @@ export default function Semaine({ add }: { add: string | null }) {
   };
   // pour la personne qui fait les courses ou qui cuisine aussi : le planning en texte, à envoyer
   const shareWeek = async () => {
-    const text = ["Ma semaine ATLAS", ...days.map((d, i) => { const m = (["midi", "soir"] as Slot[]).map((sl) => plan[d]?.[sl] && `${SLOT_LABEL[sl].toLowerCase()} : ${RECIPE_BY_ID[plan[d]![sl]!]?.title.split(" (")[0]}`).filter(Boolean); return m.length ? `${DAY_NAMES[i]} ${shortDate(d)} · ${m.join(" · ")}` : null; }).filter(Boolean)].join("\n");
+    const text = ["Ma semaine ATLAS", ...days.map((d) => { const m = (["midi", "soir"] as Slot[]).map((sl) => plan[d]?.[sl] && `${SLOT_LABEL[sl].toLowerCase()} : ${RECIPE_BY_ID[plan[d]![sl]!]?.title.split(" (")[0]}`).filter(Boolean); return m.length ? `${dayName(d)} ${shortDate(d)} · ${m.join(" · ")}` : null; }).filter(Boolean)].join("\n");
     try { if (navigator.share) await navigator.share({ title: "Ma semaine ATLAS", text }); else { await navigator.clipboard.writeText(text); toast("Planning copié : colle-le dans un message"); } } catch { /* annulé */ }
   };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
+  const balance = useMemo(() => weekBalance(planned.map((id) => RECIPE_BY_ID[id]).filter(Boolean)), [planned.join()]);
+  const budget = Math.round(planned.reduce((a, id) => a + (COST_PER_PART[RECIPE_BY_ID[id]?.cost ?? "€€"] ?? 4), 0) * prefs.people / 5) * 5;
   const slotsShown: Slot[] = (["midi", "soir"] as Slot[]).filter((s) => prefs.slots.includes(s) || days.some((d) => plan[d]?.[s]));
 
   return (
@@ -74,9 +77,9 @@ export default function Semaine({ add }: { add: string | null }) {
         <div className="banner info week-add" role="group" aria-label="Choisir le jour">
           <p>Où placer <strong>{adding.title.split(" (")[0]}</strong> ?</p>
           <div className="week-add-grid">
-            {days.map((d, i) => (
+            {days.map((d) => (
               <span key={d} className="week-add-day">
-                <span className="meta">{DAY_NAMES[i].slice(0, 3)} {shortDate(d)}</span>
+                <span className="meta">{dayName(d).slice(0, 3)} {shortDate(d)}</span>
                 {(["midi", "soir"] as Slot[]).map((s) => (
                   <button key={s} className={`btn small ${plan[d]?.[s] === adding.id ? "" : "ghost"}`} onClick={() => put(d, s, adding.id)}>{SLOT_LABEL[s]}</button>
                 ))}
@@ -101,8 +104,8 @@ export default function Semaine({ add }: { add: string | null }) {
       </div>
 
       <div className="row week-nav">
-        <button className="btn ghost small" disabled={offset === 0} onClick={() => setOffset(0)}>Cette semaine</button>
-        <button className="btn ghost small" disabled={offset === 1} onClick={() => setOffset(1)}>Semaine prochaine</button>
+        <button className="btn ghost small" disabled={offset === 0} onClick={() => setOffset(0)}>Les 7 prochains jours</button>
+        <button className="btn ghost small" disabled={offset === 1} onClick={() => setOffset(1)}>Les 7 suivants</button>
         <span className="grow" />
         <button className="btn" disabled={!left} onClick={() => fill(plan)}><Icon name="calendar" size={20} /> Compléter les cases vides</button>
         <button className="btn ghost" disabled={!left} onClick={() => { const before = structuredClone(plan); fill(clearWeek()); if (planned.length) toast("Nouvelle semaine proposée", { undo: () => save(before) }); }}>Tout reproposer</button>
@@ -112,7 +115,7 @@ export default function Semaine({ add }: { add: string | null }) {
       <ol className="week">
         {days.map((d, i) => (
           <li key={d} className={`week-day ${i >= 5 ? "weekend" : ""}`}>
-            <h2 className="h3">{DAY_NAMES[i]} <span className="meta">{shortDate(d)}</span></h2>
+            <h2 className="h3">{dayName(d)} <span className="meta">{shortDate(d)}</span></h2>
             {slotsShown.map((s) => {
               const id = plan[d]?.[s]; const r = id ? RECIPE_BY_ID[id] : undefined;
               const prevId = s === "soir" ? plan[d]?.midi ?? plan[days[i - 1]]?.soir : plan[days[i - 1]]?.soir ?? plan[days[i - 1]]?.midi;
@@ -128,8 +131,8 @@ export default function Semaine({ add }: { add: string | null }) {
                           {link && <><br /><span className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> utilise le reste de {link} de la veille</span></>}</span>
                       </a>
                       <span className="week-acts">
-                        <button className="btn ghost small" title="Proposer un autre plat" aria-label={`Autre plat pour ${DAY_NAMES[i]} ${s}`} onClick={() => reroll(d, s)}><Icon name="refresh" size={18} /></button>
-                        <button className="btn ghost small" title="Retirer" aria-label={`Retirer le plat de ${DAY_NAMES[i]} ${s}`} onClick={() => remove(d, s)}><Icon name="close" size={18} /></button>
+                        <button className="btn ghost small" title="Proposer un autre plat" aria-label={`Autre plat pour ${dayName(d)} ${s}`} onClick={() => reroll(d, s)}><Icon name="refresh" size={18} /></button>
+                        <button className="btn ghost small" title="Retirer" aria-label={`Retirer le plat de ${dayName(d)} ${s}`} onClick={() => remove(d, s)}><Icon name="close" size={18} /></button>
                       </span>
                     </>
                   ) : (
@@ -147,9 +150,15 @@ export default function Semaine({ add }: { add: string | null }) {
         <>
           <section className="section">
             <h2 className="h3"><Icon name="cart" size={22} className="ic-inline" /> Les courses de la semaine</h2>
-            <p className="small">Un seul article par produit, quantités additionnées et calculées pour {prefs.people} personne{prefs.people > 1 ? "s" : ""}. Vérifie ton placard avant de partir.</p>
+            <p className="small">Un seul article par produit, quantités additionnées et calculées pour {prefs.people} part{prefs.people > 1 ? "s" : ""}{profile.household ? ` (${householdLabel(profile)}, un enfant compte pour ⅓ à ½ part selon l'âge)` : ""}. Vérifie ton placard avant de partir.</p>
+            <p className="small"><strong>Budget indicatif :</strong> environ {budget} € pour ces {planned.length} repas, hors placard (ordre de grandeur tiré des indicateurs € des fiches, pas un prix de magasin).</p>
             <button className="btn" onClick={shop}>Mettre la semaine dans la liste de courses</button>
             <button className="btn ghost" onClick={() => void shareWeek()}><Icon name="share" size={20} /> Partager la semaine</button>
+          </section>
+          <section className="section week-balance">
+            <h2 className="h3"><Icon name="leaf" size={22} className="ic-inline" /> L'équilibre de la semaine</h2>
+            <p>{balance.fish} repas de poisson · {balance.legumes} de légumineuses · {balance.vege} végétarien{balance.vege > 1 ? "s" : ""}{balance.rich ? ` · ${balance.rich} plat${balance.rich > 1 ? "s" : ""} très riche${balance.rich > 1 ? "s" : ""}` : ""}.</p>
+            {balance.tips.length ? <ul>{balance.tips.map((t) => <li key={t}>{t}</li>)}</ul> : balance.meals >= 5 && <p className="small">Semaine équilibrée selon les repères simples du PNNS. Ajoute des légumes ou un fruit à chaque repas.</p>}
           </section>
           {(prep.tasks.length > 0 || prep.veg.length > 0) && (
             <section className="section">

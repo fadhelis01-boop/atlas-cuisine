@@ -356,3 +356,23 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .choix .jeter { background: var(--bad-bg); color: var(--bad-fg); padding: 8px 10px; border-radius: 8px; }
 .choix-card { border-left: 5px solid var(--info-fg); }
 .toc { margin-bottom: 8px; }
+
+/* Audit famille et pique-nique (16/10/2026) */
+.household { display: grid; gap: 10px; margin: 8px 0 12px; }
+.household-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.household-row > span:first-child { min-width: 72px; font-weight: 600; }
+.household-row strong { min-width: 1.5em; text-align: center; font-size: 1.15em; }
+.household-kid { display: inline-flex; align-items: center; gap: 4px; padding: 2px 4px 2px 8px; border: 1px solid var(--line, #d9cfbf); border-radius: 999px; }
+.household-kid input { width: 3.2em; min-height: 40px; text-align: center; }
+.household.compact { justify-items: start; }
+.ob-sub { margin: 18px 0 4px; }
+.backup-nudge { border-left: 5px solid var(--warn-fg); background: var(--warn-bg); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.backup-nudge p { margin: 0; flex: 1 1 260px; }
+.pill.freeze { background: var(--info-bg); color: var(--info-fg); margin-right: 6px; }
+.eq-note { color: var(--info-fg); }
+.week-balance { border-left: 5px solid var(--ok-fg); padding-left: 12px; }
+.fam-links { margin-bottom: 8px; }
+.paniers { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.panier h3 { margin: 0 0 4px; }
+.panier ul { margin: 6px 0 0; padding-left: 18px; }
+.pn-list { list-style: none; padding: 0; display: grid; gap: 8px; }

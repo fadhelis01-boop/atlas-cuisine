@@ -27,6 +27,9 @@ export default function Search({ q }: { q: string }) {
   const fieldsOf = (r: Recipe) => [r.title, r.origin, r.regionPath.join(" "), r.ingredients.map((i) => i.label).join(" "), r.cats.join(" "), r.fetes.join(" ")];
   let recipesAll = rest ? search(base, rest, fieldsOf, 600) : intents.length ? base : [];
   if (!recipesAll.length && rest) recipesAll = fuzzyRecipes(base, rest); // fautes plus lourdes (« creppe »)
+  // rien pour le texte restant : on garde ce qui a été compris (audit famille) plutôt qu'un « rien trouvé »
+  const relaxed = !recipesAll.length && !!rest && intents.length > 0 && base.length > 0;
+  if (relaxed) recipesAll = base;
   const tq = rest || q;
   const recipes = recipesAll.filter((r) => (!kind || KINDS.find((k) => k[0] === kind)![1](r)) && (!fast || r.active + r.rest <= 30) && (!easy || r.level === 1));
   const nFilters = +!!kind + +fast + +easy;
@@ -43,11 +46,13 @@ export default function Search({ q }: { q: string }) {
         <input type="search" value={v} onChange={(e) => setV(e.target.value)} autoFocus aria-label="Rechercher" placeholder="tajine, naan, sauce blanche, crêpes…" />
         <button className="btn" type="submit">Chercher</button>
       </form>
+      {intents.length > 0 && <p className="small understood"><Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}{rest && !relaxed ? ` · « ${rest} »` : ""}</p>}
+      {relaxed && <p className="small">Rien pour « {rest} » : voici toutes les recettes {intents.map((it) => it.label).join(", ")}.</p>}
       {q && !total && <Empty>Rien trouvé pour « {q} ». Essaie un ingrédient dans <a href={href("/frigo")}>Avec ce que j'ai</a>.</Empty>}
       {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}><Icon name={m.icon} size={18} className="ic-inline" /> {m.name}</a>)}</div></Section>}
       {/\b(restes?|gaspi|anti gaspi|de la veille|rassis)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> Des restes à utiliser ? <a href={href("/restes")}>La cuisine des restes</a> part de ce que tu as déjà cuit.</p>}
+      {intents.some((it) => it.id === "emporter") && <p className="card pad restes-link"><Icon name="leaf" size={20} className="ic-inline" /> <a href={href("/pique-nique")}>La rubrique Pique-nique et gamelle</a> : paniers tout faits, sécurité au soleil, sac, zéro déchet.</p>}
       {/\b(choisir|trop mur|trop mure|pas mur|viande dure|fraicheur|bien choisir)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="cart" size={20} className="ic-inline" /> <a href={href("/bien-choisir")}>Bien choisir, bien rattraper</a> : maraîcher, boucher, poissonnier, et que faire d'un produit trop mûr ou moins frais.</p>}
-      {intents.length > 0 && <p className="small understood"><Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}{rest ? ` · « ${rest} »` : ""}</p>}
       {recipesAll.length > 0 && (
         <details className="search-filters" open={nFilters > 0}>
           <summary>Filtrer les recettes{nFilters ? ` (${nFilters})` : ""}</summary>

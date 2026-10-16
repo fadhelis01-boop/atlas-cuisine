@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (842 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (864 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **842 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **912 recettes complètes** ;
+> 1. **864 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **934 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -1023,7 +1023,34 @@
 | Gigot d'agneau rôti et patates douces (Nouvelle-Zélande) | Nouvelle-Zélande | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Chicken parmigiana (« parma » australien) | Australie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 408 · vegetarien : 98 · zero_dechet : 73 · sauces : 62 · express : 48 · brunch : 30 · pains : 23 · boissons : 22 · salade : 20 · fusion : 13 · fetes : 6.
+### Pique-nique (16/10/2026) : ce qui voyage bien, se mange froid ou tiède, souvent avec les doigts, sans mayonnaise (22)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Pain surprise (le pain garni à partager) | France | GL, LA, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Terrine de légumes du soleil | Provence-Alpes-Côte d'Azur | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tarte fine courgette-chèvre | France | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Salade de pâtes à la grecque | Grèce | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Taboulé de chou-fleur cru | Liban | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Courgettes a scapece (marinées à la menthe) | Campanie | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Brochettes tomate-mozzarella-melon | Italie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Club sandwich au poulet | États-Unis | GL, LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Muffuletta aux légumes grillés | La Nouvelle-Orléans | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bocadillo de tortilla (Espagne) | Espagne | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Roulés de tortilla (pinwheels) | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pizza scrolls (roulés à la pizza, Australie) | Australie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Onigirazu (sandwich de riz en nori) | Japon | GL, OE, PO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Œufs marinés au soja (ajitama) | Japon | GL, OE, SO | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Brochettes de poulet tandoori (froides) | Inde | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Cornish pasty (chausson de Cornouailles) | Cornouailles | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Scotch eggs (version volaille) | Royaume-Uni | AR, GL, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Flapjacks (barres d'avoine au miel) | Royaume-Uni | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Boules d'énergie dattes-avoine-cacao | États-Unis | AR, GL | ✅ | ✅ | ✅ | ✅ | 3 |
+| Barres de céréales du fond du placard | France | AR, GL, SU | ✅ | ✅ | ✅ | ✅ | 3 |
+| Crackers de pain rassis aux herbes | France | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Eau infusée concombre, agrumes et menthe | France | – | ✅ | ✅ | ✅ | ✅ | 1 |
+
+**Rubriques couvertes par la vague 2** : enfants : 424 · vegetarien : 109 · zero_dechet : 77 · sauces : 62 · express : 48 · brunch : 30 · boissons : 23 · pains : 23 · salade : 22 · pique_nique : 22 · fusion : 13 · fetes : 6.
 
 ---
 
@@ -22702,6 +22729,603 @@ Le plat des pubs australiens : escalope de poulet panée, sauce tomate et mozzar
 
 ---
 
+## 2.33 Pique-nique (16/10/2026) : ce qui voyage bien, se mange froid ou tiède, souvent avec les doigts, sans mayonnaise
+
+### Pain surprise (le pain garni à partager)
+
+*Pain surprise · France · Entrée* · Fêtes : Pique-nique, Anniversaire
+
+Niveau ⭐⭐ · 10 portions · actif 45 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé
+- ⚠️ **Allergènes** : gluten, lait, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Couteau-scie, film ou torchon.
+
+Un gros pain de campagne évidé d'un bloc, la mie coupée en tranches et garnie en mini-sandwichs, puis remise dans la croûte : on ouvre le chapeau sur la nappe et chacun pioche.
+
+**Ingrédients** : 1 gros pain de campagne rond (1 kg, de la veille) · 80 g de beurre mou · 150 g de saumon fumé · 4 tranches de jambon de dinde · 150 g de fromage frais aux herbes · 1 concombre · 1 c. à s. d'aneth ou ciboulette
+
+1. **Évider.** Chapeau coupé ; couteau long glissé à 1 cm de la croûte tout autour, puis par une fente à la base : le cylindre de mie sort d'un bloc.
+2. **Trancher et garnir.** Mie en tranches horizontales de 1 cm ; tartinées de beurre ou de fromage frais, garnies (saumon-aneth, dinde-concombre), refermées deux à deux et coupées en parts.
+3. **Remonter.** Sandwichs remis en place dans la croûte, chapeau reposé ; filmé, 2 h au frais (il se tient).
+
+- Le pain d'hier se tranche mieux que le pain frais.
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même, au frais.
+
+---
+
+### Terrine de légumes du soleil
+
+*Terrine de légumes · France › Provence-Alpes-Côte d'Azur · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐ · 8 portions · actif 30 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à cake, four.
+
+Courgettes, carottes et poivrons en couches dans un appareil œufs-fromage frais aux herbes, cuite au bain-marie : elle se tranche froide comme un pâté, sans viande.
+
+**Ingrédients** : 2 courgettes · 3 carottes · 1 poivron rouge · 5 œufs · 150 g de fromage frais · 50 g de parmesan · 1 bouquet de basilic
+
+1. **Légumes.** Courgettes et carottes en lanières à l'économe, poivron en bandes ; 5 min à la vapeur, bien égouttés (sinon la terrine rend de l'eau).
+2. **Appareil.** Œufs, fromage frais, parmesan, basilic, sel, poivre.
+3. **Cuire.** Moule chemisé : couches de légumes et d'appareil ; bain-marie 170 °C, 50 min : prise au centre. Refroidie, une nuit au frais avant de démouler et trancher.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Tarte fine courgette-chèvre
+
+*Tarte fine · France · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, four.
+
+Une pâte feuilletée à plat, de fines rondelles de courgette en écailles, du chèvre et du miel : elle se coupe en carrés et se mange froide, à la main.
+
+**Ingrédients** : 1 pâte feuilletée · 2 courgettes · 150 g de bûche de chèvre · 1 c. à s. de miel · 2 c. à s. d'huile d'olive · 1 c. à c. de thym
+
+1. **Base.** Pâte sur plaque, piquée à la fourchette en laissant 1 cm de bord.
+2. **Garnir.** Courgettes en rondelles de 2 mm en écailles, chèvre émietté, huile, thym, sel.
+3. **Cuire.** 200 °C, 25-30 min : bords gonflés et dorés ; miel en filet. En carrés, refroidie sur grille (le dessous reste croustillant).
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo ; 5 min au four pour recroustiller.
+
+---
+
+### Salade de pâtes à la grecque
+
+*Salade de pâtes · Europe du Sud › Grèce · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier.
+
+Pâtes courtes, concombre, tomates, olives, feta et origan dans une vinaigrette citronnée : sans mayonnaise, elle tient au soleil et se prépare la veille.
+
+**Ingrédients** : 300 g de pâtes courtes · 1 concombre · 250 g de tomates cerises · 150 g de feta · 60 g d'olives noires · 1 oignon rouge · 1 c. à c. d'origan · 6 c. à s. d'huile d'olive · 1 citron
+
+1. **Pâtes.** Cuites 1 min de moins que le paquet, rincées à l'eau froide, huilées.
+2. **Assembler.** Légumes en dés, olives, oignon émincé fin, feta en cubes.
+3. **Assaisonner.** Huile, citron, origan, sel, poivre ; au frais. On remue avant de servir (les pâtes boivent la sauce : garde un peu de vinaigrette à part).
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Taboulé de chou-fleur cru
+
+*Taboulé de chou-fleur · Moyen-Orient › Liban · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Râpe ou mixeur.
+
+Le chou-fleur cru râpé en semoule remplace le boulgour : beaucoup de persil et de menthe, tomate, citron, huile d'olive. Croquant, frais, sans gluten, et il ne ramollit pas pendant le trajet.
+
+**Ingrédients** : 1 petit chou-fleur · 2 bouquets de persil plat · 1 bouquet de menthe · 3 tomates · 4 cébettes · 2 citrons · 8 c. à s. d'huile d'olive
+
+1. **Semoule de chou-fleur.** Bouquets râpés gros ou quelques impulsions de mixeur : grains de la taille du boulgour (pas de purée). La tige se râpe aussi.
+2. **Herbes.** Hachées au couteau (le mixeur les noircit) ; tomates en petits dés épépinés.
+3. **Assaisonner.** Citron, huile, sel ; 30 min au frais : le chou-fleur s'attendrit.
+
+- Les feuilles du chou-fleur : rôties 10 min au four avec un filet d'huile, comme des chips.
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Courgettes a scapece (marinées à la menthe)
+
+*Zucchine alla scapece · Europe du Sud › Italie › Campanie · Accompagnement* · Fêtes : Pique-nique
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, boîte en verre.
+
+Rondelles de courgettes dorées à l'huile puis marinées dans le vinaigre, l'ail et la menthe : la recette napolitaine qui se garde plusieurs jours et devient meilleure en voyageant.
+
+**Ingrédients** : 4 courgettes · 10 cl d'huile d'olive · 4 c. à s. de vinaigre de vin · 2 gousses d'ail · 1 bouquet de menthe · 1 pincée de sel
+
+1. **Dorer.** Rondelles de 5 mm, en une couche, 3 min par face : brunes par endroits ; sur papier absorbant, salées.
+2. **Mariner.** En couches dans la boîte avec ail en lamelles, menthe déchirée et vinaigre ; 2 h au moins.
+3. **Servir.** À température ambiante, avec du pain.
+
+**Conservation** : 5 jours au frigo dans leur marinade.
+
+---
+
+### Brochettes tomate-mozzarella-melon
+
+*Spiedini caprese · Europe du Sud › Italie · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Piques en bois, boîte.
+
+Tomates cerises, billes de mozzarella, melon et basilic sur des piques : l'entrée que les enfants assemblent eux-mêmes et qui se mange sans assiette.
+
+**Ingrédients** : 250 g de tomates cerises · 250 g de billes de mozzarella · ½ melon · 1 bouquet de basilic · 2 c. à s. d'huile d'olive
+
+1. **Couper.** Melon en billes (cuillère parisienne) ou en cubes ; tomates entières.
+2. **Piquer.** Tomate, basilic, mozzarella, melon : les enfants enfilent.
+3. **Transport.** Dans une boîte au frais ; huile, sel, poivre au moment de manger.
+
+- Avant 4 ans : tomates cerises et billes coupées en deux dans la longueur (risque d'étouffement).
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même.
+
+---
+
+### Club sandwich au poulet
+
+*Club sandwich · Amérique du Nord › États-Unis · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde ; **possibles selon marque** : œufs, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grille-pain, piques.
+
+Trois étages de pain de mie grillé, poulet, bacon de dinde croustillant, tomate, salade et une sauce yaourt-moutarde : coupé en triangles tenus par une pique.
+
+**Ingrédients** : 12 tranches de pain de mie · 300 g de blanc de poulet cuit · 8 tranches de bacon de dinde · 2 tomates · 1 salade · 8 c. à s. de yaourt grec · 1 c. à s. de moutarde
+
+1. **Préparer.** Bacon de dinde doré à sec 2 min ; poulet en tranches ; sauce : yaourt, moutarde, sel, poivre (plus sûre que la mayonnaise en plein air).
+2. **Monter.** Pain grillé tartiné de sauce, salade, poulet, pain, tomate, bacon, pain.
+3. **Couper.** Quatre piques, coupé en diagonale en 4 triangles ; filmé serré.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même.
+
+---
+
+### Muffuletta aux légumes grillés
+
+*Muffuletta · Amérique du Nord › États-Unis › La Nouvelle-Orléans · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle-gril, poids (casserole remplie).
+
+Le grand sandwich rond de La Nouvelle-Orléans, pressé plusieurs heures pour que la salade d'olives imbibe la mie. L'original est aux charcuteries ; ici légumes grillés, mozzarella et olivade.
+
+**Ingrédients** : 1 grand pain rond · 1 aubergine · 2 courgettes · 2 poivrons grillés · 250 g de mozzarella · 150 g d'olives vertes et noires · 1 c. à s. de câpres · 6 c. à s. d'huile d'olive · 1 c. à c. d'origan
+
+1. **Olivade.** Olives, câpres, ail, origan hachés grossièrement avec l'huile et un trait de vinaigre.
+2. **Légumes.** Aubergine et courgettes en tranches, grillées 3 min par face.
+3. **Presser.** Pain coupé en deux, un peu évidé ; olivade sur les deux faces, légumes et mozzarella en couches ; refermé, filmé serré, sous un poids 4 h au frais. Coupé en parts comme un gâteau.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 24 h au frigo (il est encore meilleur).
+
+---
+
+### Bocadillo de tortilla (Espagne)
+
+*Bocadillo de tortilla · Europe du Sud › Espagne · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Couteau.
+
+Le sandwich des pique-niques espagnols : une épaisse tranche de tortilla de pommes de terre froide dans une baguette frottée à la tomate et à l'huile d'olive.
+
+**Ingrédients** : 1 tortilla espagnole cuite (la veille) · 2 baguettes · 2 tomates mûres · 4 c. à s. d'huile d'olive · 1 gousse d'ail
+
+1. **Pain.** Baguettes coupées en deux puis ouvertes ; frottées d'ail et de tomate coupée en deux (pan con tomate), huile, sel.
+2. **Garnir.** Une tranche de tortilla froide de 2 cm.
+3. **Emballer.** Dans du papier ou un torchon à sandwich : la tomate imbibe la mie pendant le trajet.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même. · **Zéro déchet** : tortilla de la veille
+
+---
+
+### Roulés de tortilla (pinwheels)
+
+*Pinwheels · Amérique du Nord › États-Unis · Entrée* · Fêtes : Pique-nique, Anniversaire
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Film, couteau.
+
+Des tortillas tartinées de fromage frais, garnies d'épinards, de carotte râpée et de dinde, roulées serré puis coupées en spirales : les bouchées préférées des enfants.
+
+**Ingrédients** : 4 grandes tortillas de blé · 200 g de fromage frais · 60 g de jeunes pousses d'épinards · 2 carottes râpées · 6 tranches de jambon de dinde (ou rien) *(facultatif)*
+
+1. **Tartiner.** Fromage frais jusqu'aux bords (c'est la colle).
+2. **Garnir et rouler.** Épinards, carotte, dinde ; roulé serré, filmé, 30 min au frais.
+3. **Couper.** Tranches de 2 cm au couteau-scie : spirales nettes.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même.
+
+---
+
+### Pizza scrolls (roulés à la pizza, Australie)
+
+*Pizza scrolls · Océanie › Australie · Goûter / dessert* · Fêtes : Pique-nique, Anniversaire
+
+Niveau ⭐ · 12 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, four.
+
+La pâte à pizza tartinée de sauce tomate et de fromage, roulée et coupée en escargots : les « scrolls » des boîtes à goûter australiennes, bons froids.
+
+**Ingrédients** : 1 pâte à pizza · 150 g de sauce tomate · 150 g de fromage râpé · 100 g de légumes en petits dés (poivron, maïs, épinards) *(facultatif)* · 1 c. à c. d'origan
+
+1. **Tartiner.** Pâte étalée en rectangle, sauce (pas trop : elle coule), fromage, légumes, origan.
+2. **Rouler et couper.** Roulé par le grand côté, tranches de 3 cm, posées à plat sur la plaque.
+3. **Cuire.** 200 °C, 18-20 min : dorés. Refroidis sur grille avant la boîte.
+
+**Conservation** : 2 jours au frigo ; se congèlent 2 mois. · **Zéro déchet** : fonds de légumes
+
+---
+
+### Onigirazu (sandwich de riz en nori)
+
+*Onigirazu · Asie de l'Est › Japon · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, œufs, poissons, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Film, couteau mouillé.
+
+Le sandwich japonais sans pain : riz, garniture et riz, pliés dans une feuille de nori comme une enveloppe, puis coupés en deux pour montrer les couches. Thon, omelette, concombre.
+
+**Ingrédients** : 300 g de riz rond cuit · 4 feuilles de nori · 140 g de thon en conserve · 2 œufs (omelette fine) · ½ concombre · 1 c. à s. de sauce soja · 1 c. à s. de vinaigre de riz
+
+1. **Riz.** Assaisonné de vinaigre de riz et d'une pincée de sel ; tiède.
+2. **Monter.** Nori posée en losange sur un film ; un carré de riz au centre, thon au soja, omelette, concombre, un carré de riz.
+3. **Plier et couper.** Les quatre coins de la nori rabattus, film serré, 5 min de repos ; coupé en deux au couteau mouillé.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : Le jour même, au frais (le riz durcit au frigo : sors-le 20 min avant).
+
+---
+
+### Œufs marinés au soja (ajitama)
+
+*Ajitsuke tamago · Asie de l'Est › Japon · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 6 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Sauce soja claire, Mirin
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, sac congélation.
+
+Œufs mollets écalés puis marinés une nuit dans le soja et le mirin : blanc ambré, jaune fondant. L'œuf dur du pique-nique, en mieux.
+
+**Ingrédients** : 6 œufs · 6 c. à s. de sauce soja · 4 c. à s. de mirin · 1 c. à s. de sucre · 10 cl d'eau
+
+1. **Cuire.** Œufs sortis du frigo, eau bouillante, 6 min 30 ; eau glacée 5 min ; écalés sous l'eau.
+2. **Mariner.** Soja, mirin, sucre, eau ; œufs dans un sac ou un bocal, 6 h à une nuit.
+3. **Servir.** Coupés en deux au fil ou au couteau mouillé.
+
+- Pour les jeunes enfants et les femmes enceintes : 9 min de cuisson (jaune pris).
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+- **Variante Sans alcool** : Mirin → **vinaigre de riz + sucre**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 3 jours au frigo dans la marinade.
+
+---
+
+### Brochettes de poulet tandoori (froides)
+
+*Chicken tikka skewers · Asie du Sud › Inde · Plat* · Fêtes : Pique-nique, Barbecue d'été
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Piques, four (gril).
+
+Poulet mariné au yaourt et aux épices, grillé la veille puis servi froid avec une raïta : il reste moelleux grâce au yaourt.
+
+**Ingrédients** : 800 g de blancs ou hauts de cuisse · 6 c. à s. de marinade tandoori · 1 citron vert · 1 pot de raïta (pour tremper) *(facultatif)*
+
+1. **Mariner.** Cubes de poulet dans la marinade, 4 h ou une nuit.
+2. **Griller.** Sur piques, sous le gril, 12 min en tournant : bords dorés, 74 °C à cœur.
+3. **Refroidir vite.** Au frigo dans l'heure ; citron vert au départ.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Cornish pasty (chausson de Cornouailles)
+
+*Cornish pasty · Europe du Nord › Royaume-Uni › Cornouailles · Plat* · Fêtes : Pique-nique
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Rouleau, plaque, four.
+
+Le chausson des mineurs de Cornouailles : bœuf, pomme de terre, rutabaga et oignon, crus, en dés, cuits dans une pâte épaisse fermée par une torsade. Un repas complet qui tient dans la main.
+
+**Ingrédients** : 500 g de farine · 250 g de beurre froid · 400 g de bœuf (paleron ou rumsteck) en petits dés · 2 pommes de terre · 200 g de rutabaga ou navet · 1 oignon · 1 œuf (dorure)
+
+1. **Pâte.** Farine, beurre en dés sablés du bout des doigts, sel, 15 cl d'eau froide ; 30 min au frais.
+2. **Farce crue.** Légumes et bœuf en dés de 1 cm, sel, beaucoup de poivre.
+3. **Former.** 6 disques de 20 cm ; farce au centre, pâte relevée et pincée en torsade sur le dessus ; dorés, une petite entaille.
+4. **Cuire.** 200 °C 15 min puis 170 °C 35 min : la vapeur cuit la farce. Froids ou tièdes.
+
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo ; se congèlent cuits 2 mois.
+
+---
+
+### Scotch eggs (version volaille)
+
+*Scotch eggs · Europe du Nord › Royaume-Uni · Entrée* · Fêtes : Pique-nique
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole profonde, thermomètre (ou four).
+
+L'œuf mollet enrobé de chair à saucisse puis pané et frit, star des pique-niques anglais. Selon D21 : chair de saucisse de volaille aux herbes.
+
+**Ingrédients** : 7 œufs · 450 g de chair de saucisses de volaille · 1 c. à s. de sauge ou thym · 50 g de farine · 100 g de chapelure ou panko · 1 l d'huile de friture (ou four)
+
+1. **Œufs.** 6 œufs, 6 min 30 à l'eau bouillante, eau glacée, écalés.
+2. **Enrober.** Chair aux herbes en 6 galettes ; œuf fariné au centre, enveloppé sans trou ; farine, œuf battu, chapelure.
+3. **Cuire.** 165 °C, 7-8 min (viande cuite à cœur, jaune encore tendre), ou four 200 °C 25 min huilés. Refroidis sur grille, coupés en deux.
+
+- Avec de jeunes enfants : œufs 9 min (jaune pris).
+- Glacière avec pains de glace jusqu'au repas ; 2 h au plus hors du froid (1 h s'il fait plus de 32 °C), puis on ne rapporte pas les restes.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : frire en sécurité
+
+---
+
+### Flapjacks (barres d'avoine au miel)
+
+*Flapjacks · Europe du Nord › Royaume-Uni · Goûter / dessert* · Fêtes : Pique-nique
+
+Niveau ⭐ · 16 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule carré, casserole.
+
+Flocons d'avoine, beurre, sucre roux et miel cuits en plaque : des barres moelleuses et dorées qui ne craignent pas le transport.
+
+**Ingrédients** : 250 g de flocons d'avoine · 125 g de beurre · 100 g de sucre roux · 4 c. à s. de miel ou sirop d'érable · 50 g de raisins secs ou fruits secs *(facultatif)*
+
+1. **Fondre.** Beurre, sucre, miel, une pincée de sel, à feu doux.
+2. **Mélanger.** Avec l'avoine et les fruits secs ; tassé dans le moule chemisé.
+3. **Cuire.** 180 °C, 20-25 min : doré sur les bords, encore souple au centre ; découpé tiède, démoulé froid.
+
+**Conservation** : 1 semaine dans une boîte en métal.
+
+---
+
+### Boules d'énergie dattes-avoine-cacao
+
+*Energy balls · Amérique du Nord › États-Unis · Goûter / dessert* · Fêtes : Pique-nique
+
+Niveau ⭐ · 20 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Mixeur.
+
+Dattes, flocons d'avoine, cacao et une purée de noix mixés, roulés en boules : un goûter sans cuisson et sans sucre ajouté, à faire avec les enfants.
+
+**Ingrédients** : 250 g de dattes dénoyautées · 100 g de flocons d'avoine · 2 c. à s. de cacao · 3 c. à s. de beurre de cacahuète (ou purée d'amande) · 3 c. à s. de noix de coco râpée *(facultatif)*
+
+1. **Mixer.** Dattes (trempées 10 min si elles sont sèches), avoine, cacao, beurre de cacahuète : pâte qui colle quand on la presse.
+2. **Rouler.** Boules de la taille d'une noix, roulées dans la coco.
+3. **Raffermir.** 30 min au frais.
+
+- Allergie à l'arachide : purée d'amande ou de graines de tournesol.
+- Avant 4 ans : les servir aplaties en galettes plutôt qu'en boules.
+
+**Conservation** : 1 semaine au frigo.
+
+---
+
+### Barres de céréales du fond du placard
+
+*Barres de céréales · France · Goûter / dessert* · Fêtes : Pique-nique
+
+Niveau ⭐ · 12 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten, sulfites ; **possibles selon marque** : lait, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule carré.
+
+Les fonds de paquets (flocons, céréales, fruits secs, graines, chocolat) liés au miel et au beurre de cacahuète : des barres moins sucrées que celles du commerce, sans emballage individuel.
+
+**Ingrédients** : 200 g de flocons d'avoine et fonds de céréales · 100 g de fruits secs en morceaux · 50 g de graines (courge, tournesol) · 5 c. à s. de miel · 3 c. à s. de beurre de cacahuète · 40 g de chocolat noir *(facultatif)*
+
+1. **Lier.** Miel et beurre de cacahuète chauffés ensemble, versés sur les secs.
+2. **Tasser.** Fort, dans le moule chemisé (c'est ce qui les fait tenir).
+3. **Cuire.** 170 °C, 20 min ; refroidies complètement avant de couper.
+
+- Allergie à l'arachide : purée d'amande ou de sésame.
+
+**Conservation** : 1 semaine dans une boîte. · **Zéro déchet** : fonds de paquets de céréales
+
+---
+
+### Crackers de pain rassis aux herbes
+
+*Crackers maison · France · Accompagnement* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, four.
+
+Le pain dur coupé très fin, huilé, assaisonné et séché au four : des crackers pour les tartinades du pique-nique (houmous, tzatziki), sans rien jeter.
+
+**Ingrédients** : ½ baguette ou pain rassis · 4 c. à s. d'huile d'olive · 1 c. à c. de zaatar ou herbes de Provence · 1 pincée de sel
+
+1. **Trancher.** Le plus fin possible (pain dur : couteau-scie).
+2. **Assaisonner.** Huile au pinceau, herbes, sel.
+3. **Sécher.** 160 °C, 12-15 min : dorés et cassants ; refroidis dans le four entrouvert.
+
+**Conservation** : 2 semaines dans une boîte en métal. · **Zéro déchet** : pain rassis
+
+---
+
+### Eau infusée concombre, agrumes et menthe
+
+*Eau aromatisée · France · Boisson* · Fêtes : Pique-nique
+
+Niveau ⭐ · 6 portions · actif 5 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande bouteille ou carafe.
+
+La boisson du pique-nique sans sucre ni bouteille jetable : de l'eau fraîche parfumée aux épluchures d'agrumes, aux fins de concombre et aux tiges de menthe qu'on allait jeter.
+
+**Ingrédients** : 1,5 l d'eau · ½ concombre (ou ses extrémités) · 1 citron (zestes et rondelles) · 1 orange (zestes) · 1 bouquet de menthe (tiges comprises)
+
+1. **Parfumer.** Concombre en rondelles, zestes d'agrumes bio prélevés en rubans, menthe froissée.
+2. **Infuser.** Eau froide par-dessus, 2 h au frais (pas plus de 12 h : l'amertume vient).
+3. **Emporter.** Dans une gourde ou une bouteille en verre, au frais.
+
+**Conservation** : 24 h au frigo. · **Zéro déchet** : épluchures d'agrumes tiges d'herbes
+
+---
+
 ## 3. Nouvelles fiches techniques (application, rubrique Techniques)
 
 - **Pâtisserie française** : Pâte sucrée et pâte sablée (crémage) (niv. 2) · Crème pâtissière (niv. 1) · Pâte à choux (niv. 2) · Pâte feuilletée rapide (et tours) (niv. 3) · Les trois meringues (française, suisse, italienne) (niv. 2) · Crème anglaise (cuisson à la nappe) (niv. 2) · Chantilly, mascarpone montée et ganache montée (niv. 1) · Les biscuits de base (génoise, joconde, roulé) (niv. 2) · Caramel et cuissons du sucre (niv. 2) · Macaronnage (niv. 3)
@@ -22728,7 +23352,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2062 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2095 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 

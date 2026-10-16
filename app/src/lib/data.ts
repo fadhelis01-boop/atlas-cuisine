@@ -64,7 +64,7 @@ export const ALLERGENS: Record<string, string> = {
 export const CATEGORY_LABEL: Record<string, string> = {
   pains: "Pains, pâtes & bases", sauces: "Sauces maison", fetes: "Fêtes", enfants: "Enfants", zero_dechet: "Zéro déchet",
   boissons: "Boissons", techniques: "Techniques", fusion: "Food fusion", express: "Express (20 min)", brunch: "Petit-déjeuner & brunch",
-  salade: "Salades complètes", vegetarien: "Végétarien",
+  salade: "Salades complètes", vegetarien: "Végétarien", pique_nique: "Pique-nique",
 };
 
 /** Recettes d'une entrée de l'atlas (la « Food fusion » est une rubrique transversale, pas une macro-région). */
@@ -79,6 +79,17 @@ export function loadLeftovers(): Promise<Record<string, Leftover[]>> {
   return leftP;
 }
 const NO_LEFT: Leftover[] = [];
+// Liste complète des vidéos d'une fiche : chargée à l'ouverture d'une fiche, pas au démarrage (audit famille)
+let VIDS: Record<string, Recipe["videos"]> | null = null;
+let vidP: Promise<Record<string, Recipe["videos"]>> | null = null;
+const vidListeners = new Set<() => void>();
+export function loadRecipeVideos() {
+  vidP ??= import("../data/recipe_videos.json").then((m) => { VIDS = m.default as unknown as Record<string, Recipe["videos"]>; vidListeners.forEach((l) => l()); return VIDS; });
+  return vidP;
+}
+export function useRecipeVideos(r: Recipe): Recipe["videos"] {
+  return useSyncExternalStore((cb) => { vidListeners.add(cb); void loadRecipeVideos(); return () => { vidListeners.delete(cb); }; }, () => (VIDS?.[r.id] ?? r.videos));
+}
 export function useLeftovers(id: string): Leftover[] | null {
   return useSyncExternalStore((cb) => { leftListeners.add(cb); void loadLeftovers(); return () => { leftListeners.delete(cb); }; }, () => (LEFT ? LEFT[id] ?? NO_LEFT : null));
 }

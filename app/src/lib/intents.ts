@@ -4,6 +4,8 @@
 import { evaluate } from "./engine";
 import { ovenPlan, norm } from "./text";
 import type { Recipe } from "./types";
+import { ADOUCI } from "./famille";
+import { INGREDIENTS } from "./data";
 
 export interface Intent { id: string; label: string; test: (r: Recipe) => boolean }
 const veg = (r: Recipe) => evaluate(r).flesh.length === 0;
@@ -22,7 +24,15 @@ const RULES: [RegExp, Intent][] = [
   [/\b(plat|plats|diner|dejeuner|ce soir|soir|repas)\b/, { id: "plat", label: "plat", test: (r) => r.role === "plat" }],
   [/\b(boisson|boissons|cocktail|mocktail|jus|a boire)\b/, { id: "boisson", label: "boisson", test: (r) => r.role === "boisson" }],
   [/\b(petit dej|petit dejeuner|brunch|matin|breakfast)\b/, { id: "brunch", label: "petit-déjeuner, brunch", test: (r) => r.cats.includes("brunch") || BREAKFAST.test(norm(r.title)) || (r.role === "dessert" && r.active <= 20 && /pain|crepe|gaufre|yaourt|fruit/.test(norm(r.title))) }],
-  [/\b(enfant|enfants|bebe|kids|famille)\b/, { id: "enfants", label: "pour les enfants", test: (r) => r.age !== null && r.age <= 3 }],
+  [/\b(enfant|enfants|bebe|kids|famille|mercredi|cantine|ecole)\b/, { id: "enfants", label: "pour les enfants", test: (r) => r.age !== null && r.age <= 3 && (!r.profile.includes("epice") || ADOUCI.test(norm(r.kids ?? ""))) }],
+  // besoins de parents (audit famille) : gamelle, légumes cachés, goûter, cuisine d'avance
+  [/\b(lunchbox|lunch box|gamelle|boite a lunch|bento|panier repas|a emporter|pique nique|piquenique|picnic)\b/, { id: "emporter", label: "à emporter (pique-nique, gamelle)",
+    test: (r) => r.cats.includes("pique_nique") || r.fetes.includes("Pique-nique") || (r.role !== "boisson" && /cake sale|wrap|sandwich|taboule|onigiri|kimbap|empanada|quiche|tortilla espanola|focaccia|pan bagnat|muffin|samoussa|briouat|salade de (pates|riz|lentilles)/.test(norm(r.title))) }],
+  [/\b(legumes caches|cacher les legumes|enfant difficile|enfants difficiles|difficile|picky|aime pas les legumes)\b/, { id: "caches", label: "légumes bien cachés",
+    test: (r) => r.role !== "dessert" && /cache|veloute|soupe|gratin|galette|boulette|cake|muffin|pizza|lasagne|hachis|parmentier|frittata|croquette|quiche|crumble|pates sauce|bolognaise|pancake/.test(norm(r.title))
+      && r.ingredients.some((l) => !!l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "")) }],
+  [/\b(gouter|quatre heures|4 heures|recre|apres l ecole)\b/, { id: "gouter", label: "goûter", test: (r) => r.kind.startsWith("Goûter") || (r.role === "dessert" && r.level === 1 && r.active <= 25) }],
+  [/\b(congeler|congelable|congelables|batch|batch cooking|meal prep|cuisine du dimanche)\b/, { id: "congel", label: "se congèle (cuisine d'avance)", test: (r) => r.role !== "boisson" && /cong[eé]l/i.test(r.storage) }],
   [/\b(leger|legere|light|healthy|sain|equilibre)\b/, { id: "leger", label: "léger", test: (r) => r.profile.includes("leger") }],
   [/\b(epice|epicee|piquant|piquante|releve)\b/, { id: "epice", label: "épicé", test: (r) => r.profile.includes("epice") }],
   [/\b(poisson|fruits de mer)\b/, { id: "mer", label: "poisson", test: (r) => r.profile.includes("poisson") }],

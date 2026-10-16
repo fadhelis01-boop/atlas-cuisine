@@ -68,7 +68,8 @@ export interface Recipe {
   source: string;
   verified: "A" | "B" | "C";
   leftovers?: Leftover[]; // ingrédients entamés et quoi en faire (Tome 12 §6) : chargés à la demande (leftovers.json)
-  videos: VideoLink[]; // vidéos existantes (favoris TikTok, Cooking with Morgane) liées à la fiche
+  videos: VideoLink[]; // la première vidéo liée (la liste complète se charge à la demande : useRecipeVideos)
+  videoCount?: number;
   fusionNote?: string; // « Food fusion » : de quelles traditions la recette est le mélange
 }
 
@@ -124,6 +125,8 @@ export interface Profile {
   allergens: string[];
   adult: boolean; // a confirmé avoir 18 ans : accords avec alcool visibles (si alcool permis)
   kidsAge: number | null; // âge du plus jeune enfant du foyer
+  household?: { adults: number; kids: number[] }; // foyer détaillé (audit famille) : parts, portions enfants ; kidsAge = le plus jeune
+  allergensWarn?: string[]; // allergies d'un seul membre : signalées sur la fiche sans exclure la recette
   equipment: string[];
   onboarded: boolean;
 }

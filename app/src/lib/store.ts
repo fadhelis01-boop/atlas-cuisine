@@ -36,7 +36,7 @@ export interface State {
   timers: Timer[];
   cooked: Record<string, number>; // recette → nombre de fois cuisinée
   recipeVideos: Record<string, string[]>; // recette → liens vidéo ajoutés par l'utilisateur
-  settings: { theme: "auto" | "light" | "dark"; textScale: number; readableFont: boolean; rate: number; voiceURI: string | null; units: "metric"; zone: "auto" | "nord" | "sud" | "tropical" };
+  settings: { theme: "auto" | "light" | "dark"; textScale: number; readableFont: boolean; rate: number; voiceURI: string | null; units: "metric"; zone: "auto" | "nord" | "sud" | "tropical"; lastBackup?: string; backupNudge?: string };
   recent: string[];
   learned?: string[]; // étapes du parcours « J'apprends à cuisiner » validées
   journal?: Record<string, { rating: number; note: string; date: string }>; // mon carnet : note et remarques après avoir cuisiné
@@ -72,8 +72,37 @@ export function setState(fn: (s: State) => State | void) {
   const draft = structuredClone(state);
   const next = fn(draft) ?? draft;
   state = next;
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* stockage plein ou bloqué : l'app continue en mémoire */ }
+  scheduleSave();
   listeners.forEach((l) => l());
+}
+
+// Écriture groupée (audit famille) : une rafale de changements = une seule écriture, et toujours avant que la page se ferme.
+// Si la mémoire de l'appareil est pleine ou bloquée, on prévient une fois au lieu de perdre les changements en silence.
+let saveTimer: ReturnType<typeof setTimeout> | null = null;
+let warned = false;
+function flush() {
+  if (saveTimer) { clearTimeout(saveTimer); saveTimer = null; }
+  try { localStorage.setItem(KEY, JSON.stringify(state)); warned = false; }
+  catch {
+    if (!warned) { warned = true; toast("Mémoire de l'appareil pleine ou bloquée : tes derniers changements ne sont pas enregistrés. Exporte tes données (Profil) et supprime des vidéos importées.", { ms: 12000 }); }
+  }
+}
+function scheduleSave() { if (!saveTimer) saveTimer = setTimeout(flush, 250); }
+if (typeof window !== "undefined") {
+  window.addEventListener("pagehide", flush);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") flush(); });
+}
+
+/** Demande au navigateur de ne pas effacer les données d'ATLAS quand l'appareil manque de place (Safari, Chrome). */
+export async function askPersistence(): Promise<boolean> {
+  try { return (await navigator.storage?.persisted?.()) || (await navigator.storage?.persist?.()) || false; } catch { return false; }
+}
+/** Faut-il rappeler de sauvegarder ? Données personnelles présentes et dernier export de plus de 30 jours (ou jamais). */
+export function backupDue(s: State = state, now = Date.now()): boolean {
+  const personal = s.favorites.length + Object.keys(s.journal ?? {}).length + s.imports.length + Object.keys(s.week ?? {}).length + s.menus.length;
+  if (personal < 3) return false;
+  const last = Math.max(s.settings.lastBackup ? Date.parse(s.settings.lastBackup) : 0, s.settings.backupNudge ? Date.parse(s.settings.backupNudge) : 0);
+  return now - last > 30 * 86400000;
 }
 export function useStore<T>(sel: (s: State) => T): T {
   return useSyncExternalStore((cb) => { listeners.add(cb); return () => listeners.delete(cb); }, () => sel(state));
@@ -93,7 +122,7 @@ function toggleFavoriteSilent(id: string) {
 export function pushRecent(id: string) {
   setState((s) => { s.recent = [id, ...s.recent.filter((x) => x !== id)].slice(0, 12); });
 }
-export function exportData(): string { return JSON.stringify(state, null, 2); }
+export function exportData(): string { setState((s) => { s.settings.lastBackup = new Date().toISOString(); }); return JSON.stringify(state, null, 2); }
 export function importData(json: string) {
   const s = JSON.parse(json) as State;
   if (!s || typeof s !== "object" || !("profile" in s)) throw new Error("Fichier non reconnu");

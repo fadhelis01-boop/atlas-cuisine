@@ -1,3 +1,5 @@
+import Household from "../components/Household";
+import { EQUIPEMENTS } from "../lib/equipement";
 import { Icon } from "../components/icons";
 import { ZONE_LABEL, detectZone } from "../lib/season";
 import { useEffect, useRef, useState } from "react";
@@ -29,10 +31,7 @@ function ErrorLog() {
   );
 }
 
-const EQUIP = [
-  ["four", "Four"], ["plaques", "Plaques (gaz, induction, vitro)"], ["poele", "Poêle"], ["casserole", "Casseroles"], ["cocotte", "Cocotte en fonte"],
-  ["mixeur", "Mixeur plongeur"], ["robot", "Robot pétrisseur"], ["airfryer", "Airfryer"], ["wok", "Wok"], ["thermometre", "Thermomètre de cuisson"],
-] as const;
+const EQUIP = EQUIPEMENTS;
 
 export function ProfileForm() {
   const p = useStore((s) => s.profile);
@@ -65,9 +64,15 @@ export function ProfileForm() {
       </fieldset>
       <fieldset>
         <legend>Foyer</legend>
-        <label className="field">Âge du plus jeune enfant (laisser vide si pas d'enfant)
-          <input type="number" min={0} max={17} inputMode="numeric" value={p.kidsAge ?? ""} onChange={(e) => set((x) => { x.kidsAge = e.target.value === "" ? null : Math.max(0, Math.min(17, +e.target.value)); })} />
-        </label>
+        <Household />
+        <p className="small">Une allergie qui ne concerne qu'une personne ? Choisis-la ici plutôt que dans « Allergies à exclure » : les recettes restent proposées, avec une alerte pour lui préparer une part à part.</p>
+        <div className="chips" role="group" aria-label="Allergies d'une seule personne">
+          {Object.entries(ALLERGENS).map(([k, l]) => (
+            <label key={k} className={`chip ${(p.allergensWarn ?? []).includes(k) ? "on" : ""}`}>
+              <input type="checkbox" className="sr" checked={(p.allergensWarn ?? []).includes(k)} onChange={() => set((x) => { const w = x.allergensWarn ?? []; x.allergensWarn = w.includes(k) ? w.filter((a) => a !== k) : [...w, k]; })} /> {l}
+            </label>
+          ))}
+        </div>
         <label className="switch"><input type="checkbox" checked={p.adult} onChange={(e) => set((x) => { x.adult = e.target.checked; })} /> J'ai 18 ans ou plus (affiche aussi les accords avec alcool, si l'alcool est autorisé)</label>
       </fieldset>
       <fieldset>
@@ -151,7 +156,7 @@ export default function Profil() {
             <label className="field">Vitesse : {settings.rate.toFixed(2).replace(".", ",")}×
               <input type="range" min={0.75} max={1.5} step={0.05} value={settings.rate} onChange={(e) => setS((s) => { s.rate = +e.target.value; })} />
             </label>
-            <button className="btn ghost" onClick={() => speak(["Préchauffe le four à 180 °C (th. 6). Ajoute 1 c. à s. d'huile et ½ c. à c. de sel, puis cuis 1 h 30."])}>🔊 Tester la voix</button>
+            <button className="btn ghost" onClick={() => speak(["Préchauffe le four à 180 °C (th. 6). Ajoute 1 c. à s. d'huile et ½ c. à c. de sel, puis cuis 1 h 30."])}><Icon name="speaker" size={18} className="ic-inline" /> Tester la voix</button>
             <p className="small">Sur iPhone et iPad, les voix « améliorées » se téléchargent dans Réglages › Accessibilité › Contenu énoncé › Voix › Français. Commandes vocales en mode cuisine : {voiceCommandsAvailable() ? "disponibles sur ce navigateur" : "non disponibles sur ce navigateur (utilise les gros boutons)"}.</p>
           </div>
         )}
@@ -209,7 +214,7 @@ export default function Profil() {
         <ErrorLog />
       </Section>
       <Section title="À propos">
-        <p className="small">ATLAS · {RECIPES.length} recettes (Tomes 11 à 13 de la bible) · moteur diététique et planificateur vérifiés par 61 contrôles automatiques à chaque publication. Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester » : note tes essais dans « Mes recettes › Mon carnet d'essais ». Les photos viennent de Wikimedia Commons et d'Openverse (licences libres, voir les crédits) ; les vidéos sont celles des créatrices et créateurs, lues avec leurs lecteurs officiels.</p>
+        <p className="small">ATLAS · {RECIPES.length} recettes (Tomes 11 à 13 de la bible) · moteur diététique et planificateur vérifiés par plus de 70 contrôles automatiques à chaque publication. Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester » : note tes essais dans « Mes recettes › Mon carnet d'essais ». Les photos viennent de Wikimedia Commons et d'Openverse (licences libres, voir les crédits) ; les vidéos sont celles des créatrices et créateurs, lues avec leurs lecteurs officiels.</p>
         <p className="small">Limites des applications web sur iPhone : un minuteur ne peut pas sonner quand l'application est fermée (une notification s'affiche si tu l'as autorisée) ; la commande vocale dépend de Safari. Ces points seront levés par la version native (Tome 1 §17).</p>
       </Section>
     </Page>

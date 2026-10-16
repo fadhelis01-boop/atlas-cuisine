@@ -137,6 +137,8 @@ function check(ev: Evaluation, p: Profile) {
   }
   for (const a of p.allergens) if (ev.allergens.has(a)) reasons.push(`allergène : ${a}`);
   for (const a of p.allergens) if (!ev.allergens.has(a) && ev.maybeAllergens.has(a)) warnings.push(`allergène possible selon la marque : ${a}`);
+  // allergie d'un seul membre du foyer (audit famille) : la recette reste proposée, avec une alerte pour lui préparer une part à part
+  for (const a of p.allergensWarn ?? []) if (!p.allergens.includes(a) && (ev.allergens.has(a) || ev.maybeAllergens.has(a))) warnings.push(`contient ${a} : prévois une part sans pour la personne allergique`);
   if (p.vegetarian && ev.flesh.length) reasons.push("contient de la viande ou du poisson");
   if (p.vegetarian && ev.rennet.length) warnings.push("fromage à présure animale");
   if (ev.unknown.length) warnings.push("ingrédient non référencé");

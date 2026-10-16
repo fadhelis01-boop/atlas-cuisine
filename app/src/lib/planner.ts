@@ -5,18 +5,23 @@ import { flatten, verdict } from "./engine";
 import { seasonFit, type Zone } from "./season";
 import { norm, scaleQty } from "./text";
 import type { Leftover, Profile, Recipe } from "./types";
+import { isFish, isRich, kidFriendly, starchOf } from "./famille";
 
 export type Slot = "midi" | "soir";
 export interface DayPlan { midi?: string; soir?: string }
 export type WeekPlan = Record<string, DayPlan>; // clé : date ISO « 2026-10-19 »
 
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-/** Les 7 jours (lundi → dimanche) de la semaine décalée de `offset` semaines par rapport à aujourd'hui. */
+/** Les 7 jours à venir à partir d'aujourd'hui (offset 0), puis les 7 suivants (offset 1) : jamais de jours déjà passés (audit famille). */
 export function weekDays(offset = 0, today = new Date()): string[] {
-  const d = new Date(today); const dow = (d.getDay() + 6) % 7; d.setDate(d.getDate() - dow + offset * 7);
+  const d = new Date(today); d.setDate(d.getDate() + offset * 7);
   return Array.from({ length: 7 }, (_, i) => { const x = new Date(d); x.setDate(d.getDate() + i); return iso(x); });
 }
 export const DAY_NAMES = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+/** Nom du jour d'une date ISO (la semaine glissante ne commence plus forcément un lundi). */
+export const dayName = (iso: string) => DAY_NAMES[(new Date(`${iso}T12:00:00`).getDay() + 6) % 7];
+/** Coût indicatif par part selon l'indicateur de la fiche (€, €€, €€€) : un ordre de grandeur pour un budget, pas un prix. */
+export const COST_PER_PART: Record<string, number> = { "€": 2, "€€": 4, "€€€": 7 };
 
 /** Protéine principale, pour varier d'un repas à l'autre. */
 export function proteinOf(r: Recipe): string {
@@ -40,27 +45,45 @@ export interface AutoOptions { slots: Slot[]; weekdayMax: number; zone: Zone; pr
  *  et quand un plat laisse un reste (ex. demi-chou, blancs d'œufs), le repas suivant qui l'utilise est favorisé. */
 export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPlan {
   const out: WeekPlan = structuredClone(plan);
-  const ok = RECIPES.filter((r) => r.role === "plat" && verdict(r, o.profile).availability !== "hidden");
+  // plats du foyer : profil (porc, alcool, allergies) ET enfants (âge, piment) — audit famille
+  const ok = RECIPES.filter((r) => r.role === "plat" && verdict(r, o.profile).availability !== "hidden" && kidFriendly(r, o.profile));
   const fit = new Map(ok.map((r) => [r.id, seasonFit(r, o.zone).score]));
   const pool = [...ok].sort((a, b) => (fit.get(b.id)! - fit.get(a.id)!)).slice(0, Math.max(60, Math.round(ok.length * 0.45)));
   const used = new Set(Object.values(out).flatMap((d) => [d.midi, d.soir]).filter(Boolean) as string[]);
   let rnd = (o.seed ?? Date.now()) % 2147483647 || 7;
   const random = () => (rnd = (rnd * 16807) % 2147483647) / 2147483647;
   let prev: Recipe | null = null;
-  for (const [di, day] of days.entries()) {
-    const weekend = di >= 5;
+  // équilibre (repères PNNS) : féculents variés, poisson et légumineuses 2 fois, un seul plat très riche
+  const placed = Object.values(out).flatMap((d) => [d.midi, d.soir]).filter(Boolean).map((id) => RECIPE_BY_ID[id!]).filter(Boolean) as Recipe[];
+  const count = { fish: placed.filter(isFish).length, legumes: placed.filter((r) => starchOf(r) === "légumineuses").length, rich: placed.filter(isRich).length, starch: new Map<string, number>() };
+  for (const r of placed) { const st = starchOf(r); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1); }
+  const totalSlots = days.length * o.slots.length;
+  let filled = 0;
+  for (const [, day] of days.entries()) {
+    const dow = new Date(`${day}T12:00:00`).getDay();
+    const weekend = dow === 0 || dow === 6;
     for (const slot of o.slots) {
       const cur = out[day]?.[slot];
       if (cur) { prev = RECIPE_BY_ID[cur] ?? prev; continue; }
       const leftRefs = new Set(prev && o.leftovers ? useful(o.leftovers[prev.id] ?? []).map((l) => l.ref) : []);
       const cands = pool.filter((r) => !used.has(r.id) && (weekend || r.active + r.rest <= o.weekdayMax || (slot === "soir" && r.active <= 25 && r.rest <= 60)));
       if (!cands.length) continue;
-      const score = (r: Recipe) => fit.get(r.id)! + random() * 3
-        + (prev && proteinOf(prev) === proteinOf(r) ? -4 : 0) + (prev && prev.macro === r.macro ? -1.5 : 0)
-        + (r.ingredients.some((l) => l.ref && leftRefs.has(l.ref)) ? 4 : 0);
+      const progress = (filled + 1) / totalSlots; // plus la semaine avance, plus les manques pèsent
+      const score = (r: Recipe) => {
+        const st = starchOf(r); const n = st ? count.starch.get(st) ?? 0 : 0;
+        return fit.get(r.id)! + random() * 3
+          + (prev && proteinOf(prev) === proteinOf(r) ? -4 : 0) + (prev && prev.macro === r.macro ? -1.5 : 0)
+          + (r.ingredients.some((l) => l.ref && leftRefs.has(l.ref)) ? 2.5 : 0) // le reste d'hier aide, sans écraser l'équilibre
+          + (st && prev && starchOf(prev) === st ? -3 : 0) + (st && st !== "légumineuses" && n >= 2 ? -3 * (n - 1) : 0)
+          + (isRich(r) ? (count.rich >= 1 ? -8 : -1) : 0)
+          + (isFish(r) && count.fish < 2 ? 2 + 3 * progress : 0)
+          + (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0);
+      };
       const best = cands.reduce((a, b) => (score(b) > score(a) ? b : a));
       out[day] = { ...out[day], [slot]: best.id };
-      used.add(best.id); prev = best;
+      used.add(best.id); prev = best; filled++;
+      const st = starchOf(best); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1);
+      if (isFish(best)) count.fish++; if (st === "légumineuses") count.legumes++; if (isRich(best)) count.rich++;
     }
   }
   return out;

@@ -1,9 +1,10 @@
+import { defaultPortions } from "../lib/famille";
 import { Icon } from "../components/icons";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { RECIPE_BY_ID } from "../lib/data";
 import { verdict } from "../lib/engine";
 import { go, href, useRoute } from "../lib/router";
-import { setState, useProfile } from "../lib/store";
+import { getState, setState, useProfile } from "../lib/store";
 import { durationsIn, gestureLabel, ovenPlan, scaleQty, scaleStep, splitStep } from "../lib/text";
 import { listen, speak, stopSpeaking, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { startTimer, useWakeLock } from "../lib/timers";
@@ -31,7 +32,7 @@ export default function Cook({ id }: { id: string }) {
 
   const v = r ? verdict(r, p) : null;
   const lines = r && v?.adapted && route.query.get("adapte") === "1" ? v.adapted.lines : r?.ingredients ?? [];
-  const portions = Number(route.query.get("portions")) || r?.portions || 1;
+  const portions = Number(route.query.get("portions")) || (r ? defaultPortions(r, getState().profile) : 1);
   const factor = r ? portions / r.portions : 1;
   const steps = useMemo(() => (r?.steps ?? []).flatMap(splitStep).map((st) => scaleStep(st, factor)), [r, factor]); // un geste par écran
   const oven = useMemo(() => ovenPlan(steps), [steps]); // préchauffage : prévenir avant d'enfourner
