@@ -73,7 +73,7 @@ Le contrôle 63 (variété) a aussi fait son travail en arrêtant la baisse de l
 
 Audit précédent : sur les 137 fiches ajoutées le 16 octobre, 104 ont maintenant une vraie photo libre de droits (Wikimedia Commons, crédit et licence dans la page Crédits). Pour les 33 autres, aucun candidat ne convenait (mauvais plat, porc visible sur une fiche végétarienne ou sans porc, image hors sujet). Elles gardent leur icône dessinée plutôt qu'une photo trompeuse.
 
-Les 176 fiches du chef passent par la même chaîne : collecte (`illustrations/collect_v4.py`), planches de choix, sélection à la main, conversion AVIF et WebP.
+Les 176 fiches du chef sont passées par la même chaîne (collecte `illustrations/collect_v4.py`, planches de choix relues une à une, `choix_v4.txt`, conversion AVIF et WebP) : 157 ont leur photo. Les 19 autres (dont pastilla, tajine aux pruneaux, taktouka, red red, curry japonais, pupusas, moros y cristianos, griot) n'avaient que des images hors sujet, des boîtes de conserve ou des homonymes (un cerf pour le « sambar », des défilés pour « moros y cristianos ») et gardent leur icône. Au total, l'application compte 1 510 images.
 
 ## 7. Ce qui reste et dépend de toi
 
