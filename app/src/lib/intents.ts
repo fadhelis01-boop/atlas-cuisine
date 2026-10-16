@@ -27,6 +27,9 @@ const RULES: [RegExp, Intent][] = [
   [/\b(epice|epicee|piquant|piquante|releve)\b/, { id: "epice", label: "épicé", test: (r) => r.profile.includes("epice") }],
   [/\b(poisson|fruits de mer)\b/, { id: "mer", label: "poisson", test: (r) => r.profile.includes("poisson") }],
   [/\b(fete|fetes|reception|invites|anniversaire)\b/, { id: "fete", label: "pour recevoir", test: (r) => r.fetes.length > 0 }],
+  [/\b(mijote|mijotes|mijotee|mijotees|mijotage|cuisson longue|plat du dimanche|dimanche|ragout|braise|a l avance|la veille)\b/, { id: "mijote", label: "mijoté (cuisson longue)",
+    test: (r) => r.role === "plat" && r.rest >= 90 && !/pousse|lever|levee|petri/.test(norm(r.steps.join(" ")))
+      && (/mijot|fremi|brais|confi|four lent|feu (tres )?doux|four doux|autocuiseur|toute la nuit/.test(norm(r.steps.join(" "))) || /cocotte|faitout|tripiere|mijoteuse|tajine/.test(norm(r.equipment))) }],
   [/\b(soupe|soupes|veloute|potage)\b/, { id: "soupe", label: "soupe", test: (r) => /soupe|veloute|potage|bouillon|harira|chorba|pho|ramen|laksa|bortsch|gazpacho|minestrone/.test(norm(r.title)) }],
   [/\b(salade|salades)\b/, { id: "salade", label: "salade", test: (r) => r.cats.includes("salade") || /salade|taboule|bowl|poke|fattouche|panzanella/.test(norm(r.title)) }],
 ];

@@ -2,7 +2,7 @@
 
 **Application en ligne : https://fadhelis01-boop.github.io/atlas-cuisine/** · **Installer sur iPhone, Android, PC, Mac : [INSTALLER.md](INSTALLER.md)**
 
-**889 recettes** du monde classées par région (+ food fusion), dont pâtisserie française, chocolats d'occasion, condiments et marinades maison (bouillon cube, nokoss…), sauces à frites, recherche par nom ou avec les ingrédients qu'on a, profils sans porc / sans alcool / allergies / végétarien avec versions adaptées, recettes pour enfants, lecture audio et mode cuisine (minuteurs, commandes vocales), **71 fiches techniques (40 avec les gestes en photos)** (gestes du chef, du pâtissier, du boulanger et du chocolatier, cuissons des viandes, poissons et œufs avec tableaux de températures), pains et pâtes, sauces maison sans additifs, fêtes et composeur de menu avec boissons, **zéro déchet ingrédient par ingrédient**, import de recettes TikTok et autres avec tri automatique, **plus de 3 000 recettes en vidéo classées** (favoris TikTok, 13 chaînes YouTube dont Le Riz Jaune, CookWithBash, Cook with Nabeela…) lisibles dans l'application, **dictionnaire illustré de 655 ingrédients**, **menu du jour de saison selon le lieu**, **planificateur de la semaine** (menus de saison, restes réutilisés le lendemain, courses regroupées, préparation à l'avance), « Propose-moi » en un geste, finition et dressage, sel dosé et repères visuels pour chaque fiche, carnet d'essais exportable, photos sous licence libre. Fonctionne hors connexion.
+**912 recettes** du monde classées par région (+ food fusion), dont pâtisserie française, chocolats d'occasion, condiments et marinades maison (bouillon cube, nokoss…), sauces à frites, recherche par nom ou avec les ingrédients qu'on a, profils sans porc / sans alcool / allergies / végétarien avec versions adaptées, recettes pour enfants, lecture audio et mode cuisine (minuteurs, commandes vocales), **71 fiches techniques (40 avec les gestes en photos)** (gestes du chef, du pâtissier, du boulanger et du chocolatier, cuissons des viandes, poissons et œufs avec tableaux de températures), pains et pâtes, sauces maison sans additifs, fêtes et composeur de menu avec boissons, **zéro déchet ingrédient par ingrédient**, import de recettes TikTok et autres avec tri automatique, **plus de 3 000 recettes en vidéo classées** (favoris TikTok, 13 chaînes YouTube dont Le Riz Jaune, CookWithBash, Cook with Nabeela…) lisibles dans l'application, **dictionnaire illustré de 655 ingrédients**, **menu du jour de saison selon le lieu**, **planificateur de la semaine** (menus de saison, restes réutilisés le lendemain, courses regroupées, préparation à l'avance), « Propose-moi » en un geste, finition et dressage, sel dosé et repères visuels pour chaque fiche, carnet d'essais exportable, photos sous licence libre. Fonctionne hors connexion.
 
 | Dossier | Contenu |
 |---|---|
@@ -16,7 +16,7 @@
 ```bash
 cd app && npm install
 npm run dev        # http://localhost:5196
-npm run build      # 67 contrôles (moteur, planificateur, dressage…) + typage + version de production (dist/)
+npm run build      # 68 contrôles (moteur, planificateur, dressage…) + typage + version de production (dist/)
 npm run deploy     # publication sur GitHub Pages (branche gh-pages)
 ```
 

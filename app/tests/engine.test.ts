@@ -252,11 +252,21 @@ const CLASSIQUES = ["bucatini_amatriciana", "risotto_milanese", "spaghetti_vongo
 const manquants = CLASSIQUES.filter((id) => !RECIPE_BY_ID[id]);
 check("65 audit du chef : 30 grands classiques présents, ≤ 10 ingrédients et ≥ 3 étapes (Tome 13 §0)" + (manquants.length ? " — manquent " + manquants.join(",") : ""),
   manquants.length === 0 && CLASSIQUES.every((id) => RECIPE_BY_ID[id].ingredients.length <= 10 && RECIPE_BY_ID[id].steps.length >= 3));
-const d21 = ["sarmale_boeuf", "dan_dan_noodles", "griot_poulet", "bigos_volaille", "full_english_volaille", "tourtiere_quebec", "zha_jiang_mian", "stamppot_boerenkool"];
+const d21 = ["sarmale_boeuf", "dan_dan_noodles", "griot_poulet", "bigos_volaille", "full_english_volaille", "tourtiere_quebec", "zha_jiang_mian", "stamppot_boerenkool",
+  "fabada_version", "choucroute_garnie_version", "cocido_madrileno_version", "tripes_caen_version", "pollo_pibil"];
 check("66 D21 : les versions des plats où le porc est structurant n'en contiennent pas (porc seulement en option signalée)",
   d21.every((id) => evaluateLines(RECIPE_BY_ID[id].ingredients.filter((l) => !l.optional)).pork === "ok"));
 const rares = ["Gochujang", "Galanga", "Pâte de tamarin", "Mirin", "Berbéré", "Mélasse de grenade", "Aji amarillo", "Poivre du Sichuan", "Huile pimentée chinoise",
   "Shichimi togarashi", "Mélange cajun", "Feuille de bananier", "Paneer", "Sumac", "Tomatille / nopal", "Piment scotch bonnet"];
 check("67 ingrédients rares : chacun a un substitut de supermarché affiché sur la fiche", rares.every((r) => !!substitutOf(r) && INGREDIENT_NAMES.includes(r)));
+
+// 68 mijotés longs (audit du chef, suite) : trouvables par « mijoté », tripes en version sans alcool, autocuiseur indiqué
+const mij = parseIntents("un plat mijoté");
+const mijotes = RECIPES.filter((r) => mij.intents.every((i) => i.test(r)));
+console.log("   mijotés :", mijotes.length, "· végétariens", mijotes.filter((r) => evaluate(r).flesh.length === 0).length,
+  "· manquent", ["tripes_caen_version", "fabada_version", "kuru_fasulye"].filter((id) => !mijotes.some((r) => r.id === id)).join(",") || "aucun");
+check("68 mijotés : « mijoté » trouve au moins 40 plats dont les tripes, la fabada et des mijotés végétariens ; tripes sans alcool ; autocuiseur indiqué",
+  mij.intents.some((i) => i.id === "mijote") && mijotes.length >= 40 && ["tripes_caen_version", "fabada_version", "kuru_fasulye"].every((id) => mijotes.some((r) => r.id === id))
+  && evaluate(RECIPE_BY_ID["tripes_caen_version"]).alcohol === "ok" && RECIPE_BY_ID["fabada_version"].tips.some((t) => /Autocuiseur/.test(t)));
 
 console.log(`\n${passed} contrôles OK`);

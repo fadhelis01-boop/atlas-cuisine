@@ -68,6 +68,8 @@
 | Queue de bœuf | — | — | 🟡 | |
 | Os à moelle | — | — | 🟡 | Moelle → tartines, beurre |
 | Langue de bœuf | — | — | 🟡 | |
+| Tripes / gras-double de bœuf | — | — | 🟡 | Achetées blanchies chez le boucher ; mijotage long (ajout audit du chef 2026-10-16) |
+| Pied de veau / de bœuf | — | — | 🟡 | Gélatine naturelle des mijotés ; demander au boucher de le fendre |
 | Escalope de veau | — | — | 🟢 | |
 | Jarret de veau | — | — | 🟢 | Osso buco, os → fond de veau |
 | Épaule / tendron de veau | — | — | 🟢 | Blanquette |

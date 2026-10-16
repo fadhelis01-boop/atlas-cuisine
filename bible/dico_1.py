@@ -20,6 +20,8 @@ D1 = {
 "Queue de bœuf": ("oxtail", "Queue tronçonnée, osseuse, très gélatineuse.", "Ragoûts et soupes longuement mijotés (pepper pot, oxtail stew).", ""),
 "Os à moelle": ("marrow bones", "Tronçons d'os longs contenant la moelle.", "Pot-au-feu, rôtis au four sur du pain grillé et fleur de sel.", ""),
 "Langue de bœuf": ("beef tongue", "Abat ferme, au goût fin.", "Pochée longuement puis pelée ; sauce piquante ou gribiche.", ""),
+"Tripes / gras-double de bœuf": ("beef tripe", "Estomacs du bœuf (panse, bonnet, feuillet), vendus blanchis chez le boucher.", "Mijotage de 6 à 10 h : tripes à la mode de Caen, menudo, callos ; jamais de cuisson rapide.", ""),
+"Pied de veau / de bœuf": ("calf's foot", "Pied fendu, très riche en collagène.", "Donne sa gelée et son onctuosité aux mijotés longs (tripes, pot-au-feu, fonds).", ""),
 "Escalope de veau": ("veal escalope", "Tranche fine et tendre de veau.", "Cuisson très rapide : saltimbocca, escalope panée, à la crème.", ""),
 "Jarret de veau": ("veal shank osso buco", "Tranche de jarret avec l'os et sa moelle.", "Osso buco, braisés.", ""),
 "Épaule / tendron de veau": ("veal stew meat", "Morceaux de veau à mijoter.", "Blanquette, sauté de veau, veau aux olives.", ""),

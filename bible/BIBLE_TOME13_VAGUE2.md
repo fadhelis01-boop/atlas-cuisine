@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (819 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (842 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **819 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **889 recettes complètes** ;
+> 1. **842 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **912 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -907,6 +907,34 @@
 | Albóndigas en sauce tomate | Espagne | GL, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Poulet à l'ail à l'espagnole | Andalousie | SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
 
+### Audit du chef, suite (16/10/2026) : les grands mijotés longs. D'abord les trois plats que le Tome 4 avait mis de côté (23)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Fabada asturiana (version bœuf et volaille) | Asturies | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tripes à la mode de Caen (version sans alcool) | Caen | – | ✅ | ✅ | ✅ | ✅ | – |
+| Choucroute garnie (version bœuf et volaille) | Alsace | SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Carbonnade flamande | Belgique | GL, LA, MO | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Cocido madrileño (version sans porc) | Madrid | GL | ✅ | ✅ | ✅ | ✅ | 1 |
+| Dafina (skhina, mijoté du shabbat marocain) | Maroc | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Haleem (blé, lentilles et bœuf fondus) | Hyderabad | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Nihari (jarret de bœuf mijoté toute la nuit) | Lahore | GL, LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Birria de bœuf et son consommé (Jalisco) | Jalisco | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Pollo pibil (la cochinita pibil, version poulet) | Yucatán | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Langue de bœuf sauce piquante | Bourgogne-Franche-Comté | GL, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Queue de bœuf mijotée à la jamaïcaine (oxtail) | Jamaïque | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Galbi-jjim (côtes de bœuf braisées coréennes) | Corée | GL, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Niu rou mian (soupe de nouilles au bœuf braisé de Taïwan) | Taïwan | GL, OE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Sancocho de poulet (Colombie) | Colombie | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Kuru fasulye (haricots blancs mijotés à la turque) | Turquie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Gigantes plaki (haricots géants au four, Grèce) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Bourguignon de champignons | Bourgogne-Franche-Comté | GL, LA, SO, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Pois chiches aux épinards (Séville) | Andalousie | SU | ✅ | 🟡 traces | ✅ | ⛔ | 1 |
+| Fasolakia (haricots verts mijotés à l'huile d'olive) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Briam (légumes confits au four, Grèce) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Baked beans maison (haricots au four, Boston) | Boston | MO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Mafé végétarien (patate douce et pois chiches) | Sénégal | AR, CE | ✅ | ✅ | ✅ | ✅ | 3 |
+
 ### Audit du chef (16/10/2026) : Europe du Nord, centrale et de l'Est, Amérique du Nord, Amérique latine & Caraïbes : (33)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -995,7 +1023,7 @@
 | Gigot d'agneau rôti et patates douces (Nouvelle-Zélande) | Nouvelle-Zélande | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Chicken parmigiana (« parma » australien) | Australie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 397 · vegetarien : 90 · zero_dechet : 73 · sauces : 62 · express : 48 · brunch : 29 · pains : 23 · boissons : 22 · salade : 20 · fusion : 13 · fetes : 6.
+**Rubriques couvertes par la vague 2** : enfants : 408 · vegetarien : 98 · zero_dechet : 73 · sauces : 62 · express : 48 · brunch : 30 · pains : 23 · boissons : 22 · salade : 20 · fusion : 13 · fetes : 6.
 
 ---
 
@@ -20033,7 +20061,664 @@ Morceaux de poulet dorés avec une tête d'ail entière en chemise, laurier, un 
 
 ---
 
-## 2.30 Audit du chef (16/10/2026) : Europe du Nord, centrale et de l'Est, Amérique du Nord, Amérique latine & Caraïbes :
+## 2.30 Audit du chef, suite (16/10/2026) : les grands mijotés longs. D'abord les trois plats que le Tome 4 avait mis de côté
+
+### Fabada asturiana (version bœuf et volaille)
+
+*Fabada asturiana · Europe du Sud › Espagne › Asturies · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 25 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande cocotte en fonte.
+
+Le grand plat des Asturies : de gros haricots blancs fondants mijotés avec chorizo, boudin et lard. Ici en version sans porc (D21) : chorizo de bœuf, jarret et bœuf fumé, paprika fumé et safran. Le goût fumé et la sauce épaisse restent ; ce n'est pas l'original et la fiche le dit.
+
+**Ingrédients** : 500 g de gros haricots blancs secs (fabes, ou lingots) · 250 g de chorizo de bœuf ou de volaille · 400 g de jarret de bœuf · 100 g de bœuf fumé (pastrami) en morceau · 1 oignon · 4 gousses d'ail · 1 c. à c. de paprika fumé · 1 pincée de safran *(facultatif)* · 2 feuilles de laurier
+
+1. **La veille.** Haricots dans trois fois leur volume d'eau froide, 12 h.
+2. **Départ à froid.** Haricots égouttés, viandes entières, oignon et ail entiers, laurier, eau à 2 cm au-dessus ; porter doucement à frémissement en écumant.
+3. **Mijoter sans remuer.** 2 h 30 à 3 h à feu très doux, à peine un frémissement ; on « effraie » les haricots 3 fois avec un verre d'eau froide et on secoue la cocotte au lieu de remuer (ils restent entiers). Paprika et safran à mi-cuisson.
+4. **Finir.** Haricots fondants, sauce épaissie et orangée ; viandes coupées et remises ; sel à la fin seulement. Repos 20 min hors du feu.
+
+- **Autocuiseur** : 35 min après la mise en rotation de la soupape, puis 15 min à découvert pour épaissir.
+- Les haricots durcissent si on sale trop tôt : sel en fin de cuisson.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Tripes à la mode de Caen (version sans alcool)
+
+*Tripes à la mode de Caen · France › Normandie › Caen · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 8 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : Pour les adultes et les grands enfants.
+
+**Équipement** : Grande cocotte en fonte avec couvercle (ou tripière), four.
+
+Le plat de la confrérie de Caen : gras-double de bœuf et pied de bœuf cuits huit heures au four avec carottes, oignons et poireau, jusqu'à devenir fondants dans une gelée parfumée. L'original se mouille au cidre et se relève au calvados ; cette version sans alcool remplace le cidre par du jus de pomme brut et un trait de vinaigre de cidre.
+
+**Ingrédients** : 1,5 kg de tripes de bœuf blanchies (gras-double, panse, feuillet) · 1 pied de veau ou de bœuf fendu · 4 carottes · 3 oignons piqués de clous de girofle · 1 poireau · 50 cl de jus de pomme brut (non sucré) · 2 c. à s. de vinaigre de cidre · 1 bouquet garni (thym, laurier, persil) · 1 l de bouillon de bœuf maison (ou d'eau)
+
+1. **Préparer.** Tripes rincées et coupées en carrés de 5 cm ; pied blanchi 10 min, rincé.
+2. **Monter.** Dans la cocotte : pied au fond, carottes en tronçons, oignons, poireau, tripes, bouquet garni, sel, poivre ; jus de pomme, vinaigre, bouillon à hauteur.
+3. **Luter et cuire.** Couvercle fermé (un boudin de farine et d'eau autour l'étanchéifie) ; four 140 °C, 8 h sans ouvrir.
+4. **Servir.** C'est cuit quand un morceau de tripe se coupe à la cuillère. Os du pied retirés, gras dégraissé en surface ; brûlant, dans des assiettes chaudes, avec des pommes de terre vapeur.
+
+- **Autocuiseur** : 1 h 30 après la rotation de la soupape ; le goût est un peu moins fondu qu'au four.
+- Chez le boucher, demande des tripes « blanchies » : le nettoyage, long, est déjà fait.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 3 jours au frigo ; la gelée qui prend au froid est normale (elle refond en chauffant). Se congèle 3 mois.
+
+---
+
+### Choucroute garnie (version bœuf et volaille)
+
+*Choucroute garnie · France › Grand Est › Alsace · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande cocotte.
+
+Le plat d'hiver de l'Alsace : choucroute crue braisée au riesling et au genièvre, garnie de saucisses, de viandes fumées et de pommes de terre. Ici sans porc (D21) : saucisses de Strasbourg de volaille, bœuf fumé, poitrine de dinde fumée.
+
+**Ingrédients** : 1,5 kg de choucroute crue · 6 saucisses de Strasbourg de volaille ou de bœuf · 300 g de poitrine de dinde fumée · 400 g de bœuf fumé en morceau · 25 cl de riesling · 1 oignon · 10 baies de genièvre · 6 pommes de terre · 40 g de graisse de canard ou beurre
+
+1. **Choucroute.** Rincée à l'eau froide si elle est très acide, pressée.
+2. **Braiser.** Oignon fondu dans la graisse, choucroute, genièvre, laurier ; riesling et 25 cl d'eau ; bœuf fumé et dinde fumée enfouis ; couvert, 1 h 30 à feu doux.
+3. **Garnir.** Pommes de terre épluchées posées dessus, 30 min ; saucisses 10 min à la fin (elles éclatent si elles bouillent).
+4. **Servir.** Choucroute en dôme, viandes tranchées autour, moutarde et raifort.
+
+- **Autocuiseur** : 25 min pour la choucroute et les viandes, puis pommes de terre 8 min.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + un trait de citron**. **À tester**. *Calcul* : porc **uncertain**, alcool **ok**.
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Carbonnade flamande
+
+*Stoofvlees / carbonade flamande · Europe du Nord › Belgique · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Bière (blonde, brune, blanche), Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde ; **possibles selon marque** : fruits à coque, œufs, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte en fonte.
+
+Bœuf mijoté longuement dans la bière brune avec des oignons fondus, une tranche de pain d'épices tartinée de moutarde qui lie la sauce et un peu de cassonade : sucré, amer et profond. Avec des frites, en Belgique.
+
+**Ingrédients** : 1,5 kg de paleron ou joue de bœuf en gros cubes · 50 cl de bière brune · 4 oignons · 2 tranches de pain d'épices (ou 6 spéculoos) · 2 c. à s. de moutarde · 1 c. à s. de cassonade · 1 c. à s. de vinaigre de cidre · 1 bouquet thym-laurier · 30 g de beurre
+
+1. **Saisir.** Bœuf séché, coloré en 3 fois dans le beurre très chaud : croûte brune ; réservé.
+2. **Oignons.** Émincés, 15 min dans la même cocotte : blonds ; cassonade, vinaigre, 2 min.
+3. **Mijoter.** Viande, bière, bouquet ; pain d'épices tartiné de moutarde posé dessus (il fond et lie) ; couvert, 3 h à feu très doux ou four 150 °C.
+4. **Finir.** Sauce nappante et brillante ; trop amère : un peu de cassonade. Frites ou purée.
+
+- **Autocuiseur** : 50 min, puis 10 min à découvert.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+- **Variante Sans alcool** : Bière brune → **bière brune 0,0 %** (ou bouillon + 1 c. à s. de café fort). **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Cocido madrileño (version sans porc)
+
+*Cocido madrileño · Europe du Sud › Espagne › Madrid · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Très grand faitout.
+
+Le pot-au-feu de Madrid, servi en trois temps (« vuelcos ») : d'abord le bouillon avec des vermicelles, puis pois chiches et légumes, enfin les viandes. Version sans porc (D21) : bœuf, poule, chorizo de bœuf.
+
+**Ingrédients** : 400 g de pois chiches secs · 600 g de jarret ou macreuse de bœuf · 4 cuisses de poulet · 200 g de chorizo de bœuf · ½ chou vert · 4 carottes · 6 pommes de terre · 100 g de vermicelles · 4 gousses d'ail
+
+1. **La veille.** Pois chiches trempés 12 h dans l'eau tiède salée.
+2. **Bouillon.** Bœuf dans 4 l d'eau froide, écumé ; pois chiches dans un filet, poulet, 2 h 30 à frémissement.
+3. **Légumes.** Carottes et pommes de terre 30 min ; chou cuit à part avec le chorizo (il rougirait le bouillon), sauté à l'ail.
+4. **Trois services.** Bouillon filtré + vermicelles 4 min ; puis pois chiches et légumes ; enfin viandes tranchées. Restes : ropa vieja ou croquetas.
+
+- **Autocuiseur** : pois chiches et bœuf 45 min, poulet et légumes 10 min de plus.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur. · **Zéro déchet** : restes de viande → croquettes
+
+---
+
+### Dafina (skhina, mijoté du shabbat marocain)
+
+*Dafina / skhina · Maghreb › Maroc · Plat* · Fêtes : Repas de famille, Shabbat
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 12 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande cocotte en fonte qui va au four, sachet de cuisson ou mousseline.
+
+Le plat que les familles juives du Maroc mettent au four le vendredi soir pour le déjeuner du samedi : bœuf, pois chiches, pommes de terre, patates douces, blé et œufs entiers qui deviennent bruns et fondants après une nuit à four très doux.
+
+**Ingrédients** : 1 kg de paleron ou jarret de bœuf · 250 g de pois chiches trempés · 200 g de blé dur ou boulgour gros · 6 pommes de terre · 2 patates douces · 6 œufs entiers dans leur coquille, lavés · 6 dattes · 1 c. à c. de curcuma · 1 c. à c. de paprika · ½ c. à c. de cannelle
+
+1. **Fond.** Viande dorée, pois chiches, dattes et épices au fond de la cocotte.
+2. **Le blé.** Mélangé à 2 c. à s. d'huile, sel, paprika, posé dans un sachet de cuisson noué lâche (il gonfle) au centre.
+3. **Couches.** Pommes de terre et patates douces entières autour, œufs entiers lavés posés dans les creux ; eau à hauteur, sel.
+4. **Nuit au four.** Porter à frémissement, couvercle fermé, four 100 °C toute la nuit (10 à 12 h). Servir en plats séparés : viande, blé, légumes, œufs écalés bruns.
+
+- Les œufs cuits 12 h sont crémeux et brun clair : c'est voulu (« huevos haminados »).
+- Sans four allumé la nuit : mijoteuse électrique, position basse, 10 h.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Haleem (blé, lentilles et bœuf fondus)
+
+*Haleem · Asie du Sud › Pakistan › Hyderabad · Plat* · Fêtes : Ramadan, Aïd
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande cocotte, mixeur plongeant ou presse-purée.
+
+Blé, lentilles et viande mijotés des heures puis battus jusqu'à devenir une crème épaisse et filante, garnie d'oignons frits, gingembre, citron et coriandre : le plat de rupture du jeûne pendant le Ramadan, de Hyderabad à Karachi.
+
+**Ingrédients** : 700 g de bœuf (paleron) ou d'agneau · 200 g de blé concassé ou boulgour · 150 g de lentilles corail et pois cassés mélangés · 3 oignons émincés et frits · 1 c. à s. de gingembre-ail · 2 c. à c. de garam masala · ½ c. à c. de curcuma · 4 c. à s. de ghee · 2 citrons verts · 1 bouquet de coriandre et menthe
+
+1. **La veille.** Blé trempé dans l'eau.
+2. **Viande.** Gingembre-ail, épices dans le ghee ; viande, eau à hauteur, 2 h à couvert : elle s'effiloche.
+3. **Céréales.** Blé et lentilles cuits à part dans 1,5 l d'eau, 1 h 30 : défaits.
+4. **Battre.** Tout réuni, 30 min à feu doux en battant à la cuillère (ou quelques impulsions de mixeur) : texture de porridge filant. Oignons frits, gingembre en julienne, citron, herbes, garam masala.
+
+- **Autocuiseur** : viande 40 min, céréales 30 min.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Nihari (jarret de bœuf mijoté toute la nuit)
+
+*Nihari · Asie du Sud › Pakistan › Lahore · Plat* · Fêtes : Aïd
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 6 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte en fonte.
+
+« Nihar » veut dire le matin : le jarret de bœuf mijote toute la nuit dans une sauce épicée au fenouil et au gingembre, liée à la farine complète, et se mange au petit matin avec du naan, gingembre, piment vert et citron. Le plat du vendredi de Lahore et Karachi.
+
+**Ingrédients** : 1,5 kg de jarret de bœuf avec os · 3 c. à s. de farine complète · 2 oignons · 1 c. à s. de gingembre-ail · 2 c. à c. de garam masala · 1 c. à c. de graines de fenouil · 1 c. à c. de piment · 5 c. à s. de ghee · 2 citrons verts · 1 morceau de gingembre (julienne)
+
+1. **Saisir.** Oignons dorés dans le ghee (moitié réservée pour la fin) ; viande, gingembre-ail, épices et fenouil moulus, 5 min.
+2. **Nuit.** Eau à 3 cm au-dessus, couvercle, feu le plus doux (ou four 120 °C), 6 à 8 h : la viande se détache de l'os.
+3. **Lier.** Farine délayée dans 20 cl d'eau froide, versée en remuant, 20 min : sauce veloutée et brillante, une couche de ghee rouge en surface.
+4. **Servir.** Oignons frits, gingembre en julienne, piment vert, citron, coriandre ; naan.
+
+- **Autocuiseur** : 1 h 15, puis liaison à découvert.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Birria de bœuf et son consommé (Jalisco)
+
+*Birria de res · Amérique latine › Mexique › Jalisco · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Grande cocotte, mixeur.
+
+Bœuf mariné dans une sauce de piments séchés, vinaigre et épices, mijoté jusqu'à s'effilocher. On le mange en tacos trempés dans le bouillon rouge (« quesabirria ») ou en bol de consommé avec oignon, coriandre et citron vert.
+
+**Ingrédients** : 1,5 kg de paleron et jarret de bœuf · 5 piments séchés (guajillo, ancho) · 3 tomates · 4 c. à s. de vinaigre de cidre · 1 c. à c. de cumin · 1 c. à c. d'origan · 1 bâton de cannelle · 1 oignon · 16 tortillas de maïs · 2 citrons verts
+
+1. **Sauce.** Piments épépinés grillés 30 s, trempés 20 min ; mixés avec tomates, ail, vinaigre, épices : rouge sombre.
+2. **Mariner.** Viande en gros morceaux enrobée de sauce, 4 h ou une nuit.
+3. **Mijoter.** Viande, sauce, oignon, laurier, eau à hauteur ; couvert 3 h 30 à feu doux : effilochable. Gras rouge de surface réservé.
+4. **Tacos.** Tortillas trempées dans le gras rouge, dorées à la poêle avec la viande (et du fromage) ; bol de consommé à côté pour tremper ; oignon, coriandre, citron vert.
+
+- **Autocuiseur** : 1 h 10.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Pollo pibil (la cochinita pibil, version poulet)
+
+*Pollo pibil · Amérique latine › Mexique › Yucatán · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 2 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four avec couvercle, aluminium.
+
+Au Yucatán, la cochinita pibil (porc) et le pollo pibil sont deux classiques : la viande est marinée au rocou et au jus d'orange amère, enveloppée de feuilles de bananier et cuite lentement. Servie effilochée avec des oignons rouges marinés et des tortillas.
+
+**Ingrédients** : 8 hauts de cuisse de poulet · 2 c. à s. de pâte de rocou (achiote) · 2 oranges · 2 citrons verts · 4 gousses d'ail · 1 c. à c. de cumin · 1 c. à c. d'origan · 4 feuilles de bananier (ou papier sulfurisé) · 2 oignons rouges · 12 tortillas de maïs
+
+1. **Marinade.** Rocou délayé dans le jus des oranges et d'un citron vert, ail, cumin, origan, sel ; poulet enrobé, 4 h à une nuit.
+2. **Envelopper.** Feuilles de bananier passées à la flamme (souples) dans le plat, poulet et marinade, feuilles repliées, couvercle.
+3. **Cuire lentement.** Four 160 °C, 2 h 30 : la chair se détache ; effilochée dans son jus.
+4. **Oignons marinés.** Oignons rouges émincés, jus de citron vert, sel, 30 min : roses. Tacos, oignons, piment.
+
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Langue de bœuf sauce piquante
+
+*Langue de bœuf sauce piquante · France › Bourgogne-Franche-Comté · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc, Cornichon
+- ⚠️ **Allergènes** : gluten, sulfites ; **possibles selon marque** : moutarde
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Faitout, casserole.
+
+Le plat de bistrot et de grand-mère : langue pochée longuement comme un pot-au-feu, pelée, tranchée et nappée d'une sauce brune au vinaigre, cornichons et câpres. Tendre, fondante et franchement relevée.
+
+**Ingrédients** : 1 langue de bœuf (1,2 kg) · 2 carottes · 1 oignon piqué de clous de girofle · 1 bouquet garni · 3 échalotes · 5 cl de vinaigre de vin · 2 c. à s. de concentré de tomate · 30 g de farine · 8 cornichons · 1 c. à s. de câpres
+
+1. **Dégorger et pocher.** Langue 2 h dans l'eau froide ; blanchie 10 min, rincée ; puis eau froide, carottes, oignon, bouquet, gros sel ; frémissement 3 h.
+2. **Peler.** Tiède, la peau blanche s'enlève en un seul geste (une incision dessous) ; parures retirées ; tranches de 1 cm gardées dans un peu de bouillon.
+3. **Sauce.** Échalotes et vinaigre réduits à sec ; roux blond (30 g de beurre + farine), concentré, 50 cl de bouillon de cuisson, 15 min ; cornichons en rondelles, câpres, persil.
+4. **Servir.** Tranches nappées, pommes de terre vapeur.
+
+- **Autocuiseur** : 1 h 10 pour pocher la langue.
+- Les restes froids, en fines tranches avec une sauce gribiche, sont un classique.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur. · **Zéro déchet** : bouillon de cuisson → soupe
+
+---
+
+### Queue de bœuf mijotée à la jamaïcaine (oxtail)
+
+*Jamaican oxtail stew · Amérique latine › Jamaïque · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte en fonte.
+
+La queue de bœuf brunie, mijotée des heures avec thym, cébette, piment antillais et piment de la Jamaïque, puis des haricots blancs moelleux à la fin : une sauce collante et brillante, le plat du dimanche de Kingston, avec riz et pois.
+
+**Ingrédients** : 1,8 kg de queue de bœuf en tronçons · 400 g de gros haricots blancs cuits (butter beans) · 1 oignon · 4 cébettes · 6 brins de thym · 1 piment antillais entier (non percé) · 1 c. à c. de piment de la Jamaïque (ou quatre-épices) · 1 c. à s. de cassonade · 2 c. à s. de sauce soja · 1 c. à s. de concentré de tomate
+
+1. **Mariner.** Tronçons frottés de soja, ail, thym, épices, une nuit.
+2. **Brunir.** Cassonade dans un peu d'huile jusqu'à brun foncé ; viande saisie dedans en 2 fois : laquée.
+3. **Mijoter.** Oignon, cébette, thym, concentré, piment entier, eau à hauteur ; couvert 3 h : la viande se détache de l'os. Piment retiré (s'il éclate, le plat devient brûlant).
+4. **Finir.** Haricots 15 min ; sauce réduite, collante. Riz et pois, bananes plantains.
+
+- **Autocuiseur** : 1 h, puis réduction à découvert.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Galbi-jjim (côtes de bœuf braisées coréennes)
+
+*Galbi-jjim · Asie de l'Est › Corée · Plat* · Fêtes : Nouvel An chinois, Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 30 · coût €€€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le plat des fêtes coréennes (Chuseok, Nouvel An) : plat de côtes de bœuf braisé dans une sauce soja sucrée à la poire, avec radis, carottes, châtaignes et champignons qui s'imprègnent. Laqué et tendre.
+
+**Ingrédients** : 1,5 kg de plat de côtes de bœuf (ou paleron) · 8 c. à s. de sauce soja · 1 poire mûre râpée · 300 g de radis daikon · 2 carottes · 12 châtaignes cuites *(facultatif)* · 8 shiitake · 6 gousses d'ail · 2 c. à s. de sucre · 1 c. à s. d'huile de sésame
+
+1. **Dégorger et blanchir.** Côtes 1 h dans l'eau froide, puis 10 min dans l'eau bouillante ; rincées (sauce claire, sans écume).
+2. **Sauce.** Soja, poire râpée, ail, sucre, sésame, gingembre, 50 cl d'eau.
+3. **Braiser.** Côtes et sauce, couvert, 1 h 30 à feu doux ; légumes en gros morceaux aux angles arrondis (ils ne se défont pas), châtaignes, champignons, 40 min.
+4. **Laquer.** À découvert, 10 min en arrosant : brillant. Sésame, cébette ; riz.
+
+- **Autocuiseur** : 35 min pour la viande, légumes 5 min de plus.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Niu rou mian (soupe de nouilles au bœuf braisé de Taïwan)
+
+*Hóngshāo niúròu miàn · Asie de l'Est › Taïwan · Entrée*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Pâte de haricots jaunes/noirs
+- ⚠️ **Allergènes** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Faitout.
+
+Jarret de bœuf « braisé rouge » à la sauce soja, pâte de fèves pimentée, anis étoilé et tomate, servi dans son bouillon sur des nouilles épaisses avec pak-choï et pickles de moutarde : la soupe nationale de Taïwan.
+
+**Ingrédients** : 1 kg de jarret de bœuf · 500 g de nouilles de blé épaisses · 6 c. à s. de sauce soja · 2 c. à s. de pâte de fèves pimentée (doubanjiang) · 3 anis étoilés · 2 tomates · 1 morceau de gingembre · 4 cébettes · 4 pak-choï · 1 c. à s. de sucre
+
+1. **Blanchir.** Jarret en gros cubes, 5 min dans l'eau bouillante, rincé.
+2. **Braiser rouge.** Gingembre, cébette, doubanjiang 1 min dans l'huile ; viande, soja, sucre, anis, tomates, 2 l d'eau ; 2 h à petit frémissement.
+3. **Servir.** Nouilles et pak-choï cuits à part dans les bols, viande et bouillon brûlant ; cébette, piment, pickles.
+
+- **Autocuiseur** : 45 min.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Sancocho de poulet (Colombie)
+
+*Sancocho de gallina · Amérique latine › Colombie · Entrée* · Fêtes : Repas de famille
+
+Niveau ⭐ · 8 portions · actif 30 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Très grand faitout.
+
+La grande soupe-plat du dimanche en Colombie et dans les Caraïbes : poulet, plantain vert, manioc, pommes de terre et épis de maïs cuits ensemble jusqu'à ce que le manioc lie le bouillon ; coriandre, riz et avocat à côté.
+
+**Ingrédients** : 1 poulet en morceaux (ou 6 cuisses) · 2 plantains verts · 500 g de manioc (frais ou surgelé) · 4 pommes de terre · 3 épis de maïs en tronçons · 1 oignon · 3 gousses d'ail · 1 c. à c. de cumin · 1 bouquet de coriandre · 2 citrons verts
+
+1. **Bouillon.** Poulet, oignon, ail, cumin, tiges de coriandre, 3 l d'eau salée, 40 min en écumant.
+2. **Légumes durs.** Plantain en tronçons (coupé à la main : il lie mieux), manioc, maïs, 25 min.
+3. **Finir.** Pommes de terre 20 min : le manioc s'effrite et épaissit. Coriandre hachée. Riz blanc, avocat, citron vert à table.
+
+- Manioc frais : retirer la fibre centrale. Le surgelé, déjà pelé, est plus simple.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Kuru fasulye (haricots blancs mijotés à la turque)
+
+*Kuru fasulye · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Haricots blancs mijotés doucement dans une sauce tomate au poivron et au piment doux, servis avec du riz pilaf et des pickles : le plat national de tous les jours en Turquie, ici dans sa version végétarienne courante.
+
+**Ingrédients** : 500 g de haricots blancs secs · 2 oignons · 1 poivron · 3 c. à s. de concentré de tomate · 1 c. à s. de pâte de piment doux (ou paprika) · 1 c. à c. de flocons de piment *(facultatif)* · 6 c. à s. d'huile d'olive · 30 g de beurre
+
+1. **La veille.** Haricots trempés 12 h ; précuits 30 min dans l'eau, égouttés.
+2. **Base.** Oignons et poivron 10 min dans l'huile et le beurre ; concentré et piment 2 min : rouge sombre.
+3. **Mijoter.** Haricots, eau chaude à 2 cm au-dessus, 1 h 30 à couvert à feu doux : fondants, sauce épaisse. Sel à la fin. Riz pilaf, pickles, oignon cru.
+
+- **Autocuiseur** : 25 min (haricots trempés).
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Gigantes plaki (haricots géants au four, Grèce)
+
+*Gigantes plaki · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 2 h 30 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four.
+
+Très gros haricots blancs cuits au four dans une sauce tomate à l'huile d'olive, aneth et persil, jusqu'à ce que le dessus caramélise : un des grands plats végétariens grecs, servi tiède avec de la feta et du pain.
+
+**Ingrédients** : 500 g de gros haricots blancs secs (gigantes, ou lingots) · 800 g de tomates concassées · 2 oignons · 2 carottes · 3 gousses d'ail · 1 bouquet d'aneth · 1 bouquet de persil · 10 cl d'huile d'olive · 150 g de feta *(facultatif)*
+
+1. **Haricots.** Trempés une nuit, cuits 45 min à l'eau : tendres mais entiers.
+2. **Sauce.** Oignons, carottes râpées, ail dans la moitié de l'huile, 10 min ; tomates, 15 min ; herbes, sel, sucre si acide.
+3. **Four.** Haricots et sauce dans le plat, 15 cl de leur eau, reste d'huile ; 180 °C, 1 h 15 : dessus caramélisé, sauce confite. Tiède, feta.
+
+- **Autocuiseur** pour les haricots : 20 min.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Bourguignon de champignons
+
+*Bourguignon de champignons · France › Bourgogne-Franche-Comté · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 1 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin rouge, Sauce soja claire
+- ⚠️ **Allergènes** : gluten, lait, soja, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+La sauce du bœuf bourguignon (vin rouge, carottes, petits oignons, thym) sur des champignons saisis en gros morceaux : la version végétale du grand plat bourguignon, prête en une heure et demie. Purée ou pâtes fraîches.
+
+**Ingrédients** : 800 g de champignons variés en gros morceaux · 50 cl de vin rouge de Bourgogne · 3 carottes · 12 petits oignons (ou 2 oignons) · 2 gousses d'ail · 2 c. à s. de concentré de tomate · 2 c. à s. de farine · 1 c. à s. de sauce soja · 1 bouquet thym-laurier · 30 g de beurre
+
+1. **Saisir.** Champignons en 2 fois dans une cocotte très chaude, sans remuer 3 min : bien dorés ; réservés.
+2. **Base.** Carottes et oignons au beurre 8 min ; ail, concentré, farine 1 min ; vin, soja, 25 cl d'eau, bouquet.
+3. **Mijoter.** 40 min à couvert ; champignons remis 15 min : sauce nappante et brillante, d'un brun violacé.
+
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+- **Variante Sans alcool** : Vin rouge → **bouillon + un peu de jus de raisin** et 1 c. à s. de vinaigre de vin. **À tester**. *Calcul* : porc **uncertain**, alcool **trace**.
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Pois chiches aux épinards (Séville)
+
+*Espinacas con garbanzos · Europe du Sud › Espagne › Andalousie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de xérès
+- ⚠️ **Allergènes** : sulfites ; **possibles selon marque** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, mortier ou mixeur.
+
+Un plat de tapas sévillan d'origine mauresque : pois chiches et épinards liés par une pâte de pain frit, ail, cumin, paprika fumé et vinaigre de xérès. Simple, profond, végétalien.
+
+**Ingrédients** : 500 g de pois chiches cuits · 400 g d'épinards · 2 tranches de pain rassis · 4 gousses d'ail · 1 c. à c. de cumin · 1 c. à c. de paprika fumé · 2 c. à s. de vinaigre de xérès · 6 c. à s. d'huile d'olive
+
+1. **Picada.** Pain et ail dorés dans l'huile ; pilés avec cumin, paprika, vinaigre et un peu d'eau : pâte épaisse.
+2. **Épinards.** Fondus 3 min dans la même poêle.
+3. **Mijoter.** Pois chiches, picada, 20 cl d'eau ou de bouillon, 15 min : sauce liée. Pain grillé.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée. · **Zéro déchet** : pain d'hier
+
+---
+
+### Fasolakia (haricots verts mijotés à l'huile d'olive)
+
+*Fasolakia lathera · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Un « ladera », plat mijoté à l'huile d'olive : haricots verts, pommes de terre et tomate cuits lentement jusqu'à être fondants, servis tièdes avec de la feta et du pain. L'été grec, sans viande.
+
+**Ingrédients** : 800 g de haricots verts plats ou fins · 3 pommes de terre · 400 g de tomates concassées · 2 oignons · 2 gousses d'ail · 1 bouquet de persil ou aneth · 10 cl d'huile d'olive · 100 g de feta *(facultatif)*
+
+1. **Base.** Oignons et ail fondus 10 min dans la moitié de l'huile.
+2. **Mijoter.** Haricots, pommes de terre en quartiers, tomates, 15 cl d'eau, sel ; couvert, 45 min à feu doux : très tendres, sauce réduite.
+3. **Finir.** Reste d'huile crue, herbes. Tiède, feta, pain.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Briam (légumes confits au four, Grèce)
+
+*Briam · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 30 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grand plat à four.
+
+Courgettes, aubergines, pommes de terre, poivrons et tomates rôtis lentement à l'huile d'olive et à l'origan jusqu'à confire : le cousin grec de la ratatouille, encore meilleur le lendemain.
+
+**Ingrédients** : 3 courgettes · 2 aubergines · 4 pommes de terre · 2 poivrons · 4 tomates · 2 oignons rouges · 1 c. à s. d'origan · 12 cl d'huile d'olive · 150 g de feta *(facultatif)*
+
+1. **Couper.** Légumes en morceaux de taille égale ; tomates râpées.
+2. **Assaisonner.** Tout mélangé avec l'huile, l'origan, l'ail, sel, poivre ; 10 cl d'eau.
+3. **Confire.** 190 °C, 1 h 30, remué 2 fois, couvert la première heure : légumes fondants, bords caramélisés. Feta, pain.
+
+**Conservation** : 3 jours au frigo, dans une boîte fermée.
+
+---
+
+### Baked beans maison (haricots au four, Boston)
+
+*Boston baked beans · Amérique du Nord › États-Unis › Boston · Plat*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 4 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte en fonte qui va au four.
+
+Les vrais haricots à la tomate, cuits des heures au four avec mélasse, moutarde et oignon : rien à voir avec la boîte. L'original contient du lard ; ici en version végétarienne fumée au paprika. Sur du pain grillé ou avec des œufs.
+
+**Ingrédients** : 500 g de petits haricots blancs secs (lingots ou cocos) · 4 c. à s. de mélasse (ou miel) · 3 c. à s. de concentré de tomate · 1 c. à s. de moutarde · 1 oignon · 1 c. à c. de paprika fumé · 2 c. à s. de cassonade · 2 c. à s. de vinaigre de cidre
+
+1. **Haricots.** Trempés une nuit, précuits 40 min : la peau se fend quand on souffle dessus.
+2. **Monter.** Oignon coupé en deux au fond, haricots, tous les autres ingrédients délayés dans 50 cl de leur eau.
+3. **Four lent.** Couvert, 150 °C, 3 h ; découvert la dernière heure ; rajoute de l'eau si ça sèche : sauce épaisse et brillante.
+
+- **Autocuiseur** pour précuire : 15 min.
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+### Mafé végétarien (patate douce et pois chiches)
+
+*Mafé · Afrique subsaharienne › Sénégal · Plat*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, céleri
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+La sauce d'arachide du mafé, onctueuse et relevée, avec patate douce, chou, carottes et pois chiches à la place de la viande : un plat complet et bon marché, avec du riz blanc.
+
+**Ingrédients** : 150 g de pâte d'arachide (sans sucre) · 2 patates douces · 300 g de pois chiches cuits · ¼ chou vert · 2 carottes · 2 c. à s. de concentré de tomate · 1 oignon · 1 piment *(facultatif)* · 1 cube de bouillon de légumes
+
+1. **Base.** Oignon 8 min, concentré 2 min ; pâte d'arachide délayée dans 1 l d'eau chaude avec le cube, versée en remuant.
+2. **Mijoter.** Carottes, chou, piment entier, 20 min ; patates douces en gros cubes et pois chiches, 25 min en remuant de temps en temps (ça accroche).
+3. **Finir.** Une huile rouge remonte en surface : c'est prêt. Riz blanc.
+
+- Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
+
+**Conservation** : 4 jours au frigo, meilleur réchauffé le lendemain ; 3 mois au congélateur.
+
+---
+
+## 2.31 Audit du chef (16/10/2026) : Europe du Nord, centrale et de l'Est, Amérique du Nord, Amérique latine & Caraïbes :
 
 ### Cottage pie (hachis de bœuf anglais)
 
@@ -20878,7 +21563,7 @@ Poulet longuement mariné dans la pâte jerk (piment, piment de la Jamaïque, th
 
 ---
 
-## 2.31 Audit du chef (16/10/2026) : Maghreb, Moyen-Orient, Afrique, Océanie, plus un bloc de plats végétariens du monde
+## 2.32 Audit du chef (16/10/2026) : Maghreb, Moyen-Orient, Afrique, Océanie, plus un bloc de plats végétariens du monde
 
 ### Couscous royal (poulet, agneau, merguez)
 
@@ -22043,7 +22728,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **1982 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2062 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 
@@ -22067,7 +22752,7 @@ Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **1982 ingrédients e
 
 ## 8. Dictionnaire illustré des ingrédients
 
-**655 fiches** couvrent les 701 lignes du Tome 3 (46 doublons de la section « Produits du monde » renvoient à leur fiche). Chaque fiche : ce que c'est, comment l'utiliser, la saison en France métropolitaine, la disponibilité (Tome 3), les allergènes et dérivés porc/alcool calculés, l'astuce du référentiel (substitut, zéro déchet), les recettes ATLAS qui l'utilisent, et une photo sous licence libre quand une image juste a été trouvée (sinon pictogramme de la famille). Source unique : `bible/dico_1.py` à `dico_4.py`, exportée dans `app/src/data/dico.json` (chargée à la demande, disponible hors connexion). Chaque ingrédient d'une recette renvoie à sa fiche.
+**657 fiches** couvrent les 703 lignes du Tome 3 (46 doublons de la section « Produits du monde » renvoient à leur fiche). Chaque fiche : ce que c'est, comment l'utiliser, la saison en France métropolitaine, la disponibilité (Tome 3), les allergènes et dérivés porc/alcool calculés, l'astuce du référentiel (substitut, zéro déchet), les recettes ATLAS qui l'utilisent, et une photo sous licence libre quand une image juste a été trouvée (sinon pictogramme de la famille). Source unique : `bible/dico_1.py` à `dico_4.py`, exportée dans `app/src/data/dico.json` (chargée à la demande, disponible hors connexion). Chaque ingrédient d'une recette renvoie à sa fiche.
 
 Exemples de fiches pour des produits peu connus : **passata** (purée de tomates crues tamisée), **soumbala / netetou** (graines de néré fermentées d'Afrique de l'Ouest, le « bouillon cube » traditionnel), galanga, tahini, gochujang, ful medames, achiote, asafoetida, amchur, berbéré, niter kibbeh, katsuobushi, mahleb, farofa, colombo…
 

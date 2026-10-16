@@ -6,21 +6,21 @@ Toutes les fiches ajoutées sont **non testées en cuisine**, comme les précéd
 
 ## 1. Mesures avant et après
 
-| | Avant (713 fiches) | Après (889 fiches) |
+| | Avant (713 fiches) | Après (912 fiches) |
 |---|---|---|
-| Plats du catalogue du Tome 4 couverts | 237 / 380 (62 %) | 378 / 380 (99 %) |
-| Part de la France | 42 % | 36 % |
+| Plats du catalogue du Tome 4 couverts | 237 / 380 (62 %) | 380 / 380 (100 %) |
+| Part de la France | 42 % | 35 % |
 | Fiches italiennes | 42 | 61 |
 | Espagne, Portugal, Grèce | 30 | 41 |
 | Moyen-Orient | 32 | 50 |
 | Asie de l'Est | 39 | 58 |
-| Plats végétariens (part des plats) | 35 % (31 % à mi-parcours) | 33 % |
+| Plats végétariens (part des plats) | 35 % (31 % à mi-parcours) | 34 % |
 | Fiches de niveau 3 | 13 | 28 |
 | Fiches à plus de 10 ingrédients | 24 | 24 (aucune parmi les nouvelles) |
 | Ingrédients rares avec un substitut de supermarché | 0 | 99 |
-| Contrôles automatiques | 64 | 67 |
+| Contrôles automatiques | 64 | 68 |
 
-Le décompte du catalogue est fait plat par plat. Deux entrées restent volontairement sans fiche : la fabada, que le Tome 4 classe « porc structurant, non adaptable », et les tripes à la mode de Caen (abat absent du Tome 3, huit heures de cuisson, cidre et calvados indissociables). Les ajouter demanderait une décision de ta part, pas une simple rédaction.
+Le décompte du catalogue est fait plat par plat. Les trois entrées que le Tome 4 avait écartées pour le porc ou l'alcool (fabada, choucroute garnie, tripes à la mode de Caen) ont ensuite été rédigées en « version », à ta demande : voir §8. Le catalogue est couvert en entier.
 
 ## 2. Constats du chef
 
@@ -77,6 +77,25 @@ Les 176 fiches du chef sont passées par la même chaîne (collecte `illustratio
 
 ## 7. Ce qui reste et dépend de toi
 
-1. Fabada et tripes : les laisser hors de l'application, ou valider une « version » (haricots et bœuf fumé pour l'une, gras-double de bœuf sans calvados pour l'autre).
+1. Les trois « versions » (fabada, choucroute, tripes) changent le goût de l'original : à goûter en priorité, avec un avis franc sur le nom affiché.
 2. Tester en cuisine en priorité les 15 fiches de niveau 3 et les 16 variantes « À tester ».
 3. Le catalogue du Tome 4 est maintenant presque épuisé. La suite logique serait un Tome 4 bis : desserts du monde (il en manque plus que de plats), cuisine de saison par mois, et fiches « reste du rôti du dimanche ».
+
+## 8. Suite : les grands mijotés longs (23 fiches)
+
+À ta demande, les plats longs entrent dès qu'un gourmand les jugerait dignes de la table, dans les règles déjà fixées. Fichier `bible/recipes_v3_mijotes.py`.
+
+**Les trois plats écartés par le Tome 4, en « version » (D21).** La fabada passe au chorizo de bœuf, au jarret et au bœuf fumé, avec paprika fumé et safran. La choucroute garnie prend des saucisses de Strasbourg de volaille, du bœuf fumé et de la poitrine de dinde fumée ; le riesling reste, avec sa variante sans alcool « À tester ». Les tripes à la mode de Caen sont rédigées directement sans alcool : jus de pomme brut et vinaigre de cidre à la place du cidre et du calvados. Deux ingrédients sont ajoutés au Tome 3 et au dictionnaire (tripes ou gras-double de bœuf, pied de veau ou de bœuf). Chaque fiche dit franchement que ce n'est pas l'original.
+
+**Mijotés du monde qui manquaient.** Carbonnade flamande (variante bière 0,0 %), cocido madrileño (version sans porc), dafina du shabbat marocain, haleem et nihari du Pakistan, birria de Jalisco, pollo pibil (la cochinita du Yucatán existe aussi au poulet), langue de bœuf sauce piquante, queue de bœuf à la jamaïcaine, galbi-jjim coréen, soupe de nouilles au bœuf de Taïwan, sancocho colombien.
+
+**Mijotés végétariens.** Kuru fasulye, gigantes plaki, bourguignon de champignons, pois chiches aux épinards de Séville, fasolakia, briam, baked beans maison, mafé végétarien. Sans eux, les quinze mijotés carnés auraient refait passer la part végétarienne sous 33 % ; elle est à 34 %.
+
+**Angles morts traités.**
+- *Trouver un mijoté.* La recherche comprend désormais « mijoté », « plat du dimanche », « ragoût », « à l'avance » : 61 plats remontent, dont des végétariens (contrôle 68).
+- *Le temps.* Chaque nouvelle fiche donne la cuisson à l'autocuiseur, l'appareil le plus courant des cuisines françaises, et parfois la mijoteuse pour les cuissons de nuit.
+- *La sécurité.* Chaque fiche rappelle de refroidir un grand mijoté en boîtes peu profondes et au frigo dans les deux heures.
+- *Les abats.* Tripes et langue indiquent quoi demander au boucher (tripes « blanchies », langue entière) et comment savoir que c'est cuit.
+- *Halal et sans alcool.* Les versions passent le contrôle 66 (aucun porc hors option) ; les tripes sont sans alcool dès la recette de base.
+
+Les tripes et la langue ne portent pas de mention « enfants » : goût et texture divisent, c'est un choix d'adulte.
