@@ -99,3 +99,5 @@ Les 176 fiches du chef sont passées par la même chaîne (collecte `illustratio
 - *Halal et sans alcool.* Les versions passent le contrôle 66 (aucun porc hors option) ; les tripes sont sans alcool dès la recette de base.
 
 Les tripes et la langue ne portent pas de mention « enfants » : goût et texture divisent, c'est un choix d'adulte.
+
+**Photos.** 21 des 23 mijotés ont leur photo (`choix_v5.txt`). La choucroute garnie n'avait que des photos montrant du porc, et le bourguignon de champignons que des manuscrits homonymes : ils gardent leur icône. L'application compte 1 531 images.
