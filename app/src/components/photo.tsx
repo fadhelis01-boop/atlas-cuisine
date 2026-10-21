@@ -1,11 +1,12 @@
 import { useState, useSyncExternalStore } from "react";
 import imagesJson from "../data/images.json";
 
-// Photos d'illustration (illustrations/process.py) : WebP en 400/800/1200 px, recadrées 4:3, étalonnées,
+// Photos d'illustration (illustrations/process.py) : recadrées 4:3, étalonnées. Publiées (audit dév/UX 2026-10-21 §2.6) :
+// AVIF en 400 et 800 px pour tous les navigateurs récents, WebP 400 en secours ; le 1200 px reste dans le dépôt, pas en ligne.
 // avec la couleur dominante comme fond pendant le chargement et le crédit de l'auteur·e (licences libres).
 // Le manifeste chargé au démarrage ne garde que l'essentiel ; les crédits (auteur·e, licence, source) sont chargés
 // à la première photo affichée avec son crédit (audit dév 🟠 8 : démarrage plus léger avec 1 000+ photos).
-export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia"; avif?: 1 }
+export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia"; avif?: 1; v?: string } // v : version d'une photo remplacée
 export interface PhotoCredit { author: string; license: string; licenseUrl: string; page: string; source: string; title: string }
 const CORE = imagesJson as unknown as Record<string, PhotoMeta>;
 // ingrédients, gestes et étapes : chargés à la demande (audit UX 2026-10-16 §2.10)
@@ -33,6 +34,9 @@ export function loadCredits(): Promise<Record<string, PhotoCredit>> {
 export function useCredits(): Record<string, PhotoCredit> | null {
   return useSyncExternalStore((cb) => { credListeners.add(cb); void loadCredits(); return () => { credListeners.delete(cb); }; }, () => CREDITS);
 }
+/** Tailles publiées en ligne (scripts/prune-photos.mjs retire les autres de dist/) */
+export const PUBLISHED_AVIF = [400, 800];
+export const PUBLISHED_WEBP = 400;
 export const photoOf = (key: string): PhotoMeta | undefined => { if (LAZY.test(key) && !MORE) void loadMoreImages(); return IMAGES[key]; };
 
 // AVIF lisible par ce navigateur ? (pour télécharger le bon format hors connexion)
@@ -52,18 +56,20 @@ export function Photo({ k, alt, sizes = "(min-width: 900px) 33vw, 100vw", classN
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   if (!m || failed) return null;
-  const srcSet = (ext: string) => m.sizes.map((w) => `./${m.path}-${w}.${ext} ${w}w`).join(", ");
+  const avifSizes = m.sizes.filter((w) => PUBLISHED_AVIF.includes(w));
+  const q = m.v ? `?v=${m.v}` : ""; // photo remplacée : nouvelle adresse, le cache du téléphone ne sert plus l'ancienne
+  const srcSet = (ext: string, ws: number[]) => ws.map((w) => `./${m.path}-${w}.${ext}${q} ${w}w`).join(", ");
   const img = (
     <img
       className={`photo ${loaded ? "loaded" : ""} ${className}`}
-      src={`./${m.path}-${m.sizes[Math.min(1, m.sizes.length - 1)]}.webp`}
-      srcSet={srcSet("webp")} sizes={sizes} alt={alt} width={4} height={3}
+      src={`./${m.path}-${PUBLISHED_WEBP}.webp${q}`}
+      sizes={sizes} alt={alt} width={4} height={3}
       loading={eager ? "eager" : "lazy"} decoding="async" style={{ backgroundColor: m.color }}
       onLoad={() => setLoaded(true)} onError={() => setFailed(true)}
     />
   );
   // AVIF (≈ 30 % plus léger) pour les navigateurs qui le lisent, WebP sinon ; <picture> laisse le navigateur choisir
-  return m.avif ? <picture className="photo-pic"><source type="image/avif" srcSet={srcSet("avif")} sizes={sizes} />{img}</picture> : img;
+  return m.avif && avifSizes.length ? <picture className="photo-pic"><source type="image/avif" srcSet={srcSet("avif", avifSizes)} sizes={sizes} />{img}</picture> : img;
 }
 
 /** Crédit obligatoire (CC BY / BY-SA) : auteur·e, licence, lien vers l'original. */

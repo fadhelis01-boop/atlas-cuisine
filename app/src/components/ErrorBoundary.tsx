@@ -10,7 +10,7 @@ export default class ErrorBoundary extends Component<{ children: ReactNode; rese
   render() {
     if (!this.state.error) return this.props.children;
     return (
-      <main className="page" id="contenu">
+      <main className="page" id="contenu" tabIndex={-1}>
         <h1>Oups, cette page a un souci</h1>
         <p>Le reste d'ATLAS fonctionne. Tu peux revenir en arrière, aller à l'accueil ou recharger.</p>
         <div className="row">

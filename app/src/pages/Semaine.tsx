@@ -14,6 +14,8 @@ import { minutes } from "../lib/text";
 import type { Leftover } from "../lib/types";
 import { Chip, Cover, Page } from "../components/ui";
 import { toast } from "../lib/toast";
+import { encodeShare, shareUrl, weekToIcs } from "../lib/partage";
+import { downloadText, sendLink } from "../lib/sendLink";
 
 const SLOT_LABEL: Record<Slot, string> = { midi: "Midi", soir: "Soir" };
 /** Libellé d'un accompagnement : fiche reliée ou produit à acheter. */
@@ -85,6 +87,16 @@ export default function Semaine({ add }: { add: string | null }) {
   const shareWeek = async () => {
     const text = ["Ma semaine ATLAS", ...days.map((d) => { const m = (["midi", "soir"] as Slot[]).map((sl) => plan[d]?.[sl] && `${SLOT_LABEL[sl].toLowerCase()} : ${RECIPE_BY_ID[plan[d]![sl]!]?.title.split(" (")[0]}`).filter(Boolean); return m.length ? `${dayName(d)} ${shortDate(d)} · ${m.join(" · ")}` : null; }).filter(Boolean)].join("\n");
     try { if (navigator.share) await navigator.share({ title: "Ma semaine ATLAS", text }); else { await navigator.clipboard.writeText(text); toast("Planning copié : colle-le dans un message"); } } catch { /* annulé */ }
+  };
+  // la semaine dans un lien (l'autre téléphone l'ajoute à la sienne) ou dans l'agenda (audit dév/UX 2026-10-21 §2.7)
+  const sendWeek = async () => {
+    const week = Object.fromEntries(days.filter((d) => plan[d]).map((d) => [d, plan[d]!]));
+    await sendLink("Ma semaine ATLAS", "Ma semaine ATLAS : ouvre le lien pour l'ajouter à ta semaine.", shareUrl(await encodeShare({ v: 1, kind: "semaine", week })));
+  };
+  const exportIcs = () => {
+    const week = Object.fromEntries(days.filter((d) => plan[d]).map((d) => [d, plan[d]!]));
+    downloadText(`atlas-semaine-${days[0]}.ics`, weekToIcs(week, (id) => RECIPE_BY_ID[id]?.title.split(" (")[0], (id) => `${location.origin}${location.pathname}#/recette/${id}`), "text/calendar");
+    toast("Agenda téléchargé : ouvre le fichier pour ajouter les repas à ton calendrier");
   };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
   // boisson maison de la semaine (audit gourmet) : sans alcool, de saison, change chaque semaine
@@ -191,7 +203,11 @@ export default function Semaine({ add }: { add: string | null }) {
             <p className="small">Un seul article par produit, quantités additionnées et calculées pour {prefs.people} part{prefs.people > 1 ? "s" : ""}{profile.household ? ` (${householdLabel(profile)}, un enfant compte pour ⅓ à ½ part selon l'âge)` : ""}. Vérifie ton placard avant de partir.</p>
             <p className="small"><strong>Budget indicatif :</strong> environ {budget} € pour ces {planned.length} repas, hors placard (ordre de grandeur tiré des indicateurs € des fiches, pas un prix de magasin).</p>
             <button className="btn" onClick={shop}>Mettre la semaine dans la liste de courses</button>
-            <button className="btn ghost" onClick={() => void shareWeek()}><Icon name="share" size={20} /> Partager la semaine</button>
+            <div className="row">
+              <button className="btn ghost" onClick={() => void sendWeek()}><Icon name="share" size={20} /> Envoyer la semaine</button>
+              <button className="btn ghost" onClick={exportIcs}><Icon name="calendar" size={20} /> Dans mon agenda</button>
+              <button className="btn ghost" onClick={() => void shareWeek()}>Copier en texte</button>
+            </div>
           </section>
           <section className="section week-balance">
             <h2 className="h3"><Icon name="leaf" size={22} className="ic-inline" /> L'équilibre de la semaine</h2>

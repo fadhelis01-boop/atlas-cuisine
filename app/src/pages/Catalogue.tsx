@@ -38,7 +38,7 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
   const list = useMemo(() => {
     let l = visible.filter((r) => (!type || TYPES.find((t) => t[0] === type)![2](r)) && (!time || r.active + r.rest <= time) && (!level || r.level <= level)
       && (!cheap || r.cost === "€") && (!occ || r.fetes.includes(occ)) && (!macro || r.macro === macro) && (!veg || evaluate(r).flesh.length === 0)
-      && (!video || r.videos.length > 0) && (!kids || (r.age !== null && r.age <= 3)));
+      && (!video || (r.videoCount ?? r.videos.length) > 0) && (!kids || (r.age !== null && r.age <= 3)));
     if (q.trim()) l = search(l, q, (r) => [r.title, r.origin, r.regionPath.join(" "), r.ingredients.map((i) => i.label).join(" ")], 600);
     else if (sort === "saison") l = l.map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]).map(([r]) => r);
     else if (sort === "rapide") l = [...l].sort((a, b) => a.active + a.rest - (b.active + b.rest));

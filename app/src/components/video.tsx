@@ -1,6 +1,7 @@
 import { Icon } from "./icons";
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import type { ImportEntry } from "../lib/types";
+import { safeHref, safeUrl } from "../lib/safe";
 
 // Lecture des vidéos dans l'application.
 // - TikTok : intégration officielle (www.tiktok.com/embed/v2/<id>) ;
@@ -32,7 +33,7 @@ function playerSrc(embed: string): string {
 let current: PlayableVideo | null = null;
 const ls = new Set<() => void>();
 export function playVideo(v: PlayableVideo) {
-  if (!v.embed) { window.open(v.url, "_blank", "noopener"); return; }
+  if (!v.embed) { const u = safeUrl(v.url); if (u) window.open(u, "_blank", "noopener"); return; }
   current = v; ls.forEach((l) => l());
 }
 export function closeVideo() { current = null; ls.forEach((l) => l()); }
@@ -61,7 +62,7 @@ export function VideoHost() {
         <iframe src={playerSrc(v.embed)} title={v.title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
         <p className="small video-foot">
           {v.source}{v.author && v.source === "TikTok" ? ` · @${v.author}` : v.author && v.author !== v.source ? ` · ${v.author}` : ""} · vidéo de son auteur·e, lue depuis {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}.{" "}
-          <a href={v.url} target="_blank" rel="noopener noreferrer">Ouvrir dans {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}</a>
+          <a href={safeHref(v.url)} target="_blank" rel="noopener noreferrer">Ouvrir dans {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}</a>
         </p>
       </div>
     </div>
@@ -84,7 +85,7 @@ export function ImportRow({ i, extra }: { i: ImportEntry; extra?: string }) {
     <li className="import-row">
       <PlayButton v={v} />
       <span>
-        <a href={i.url} target="_blank" rel="noopener noreferrer">{i.title}</a>{" "}
+        <a href={safeHref(i.url)} target="_blank" rel="noopener noreferrer">{i.title}</a>{" "}
         <span className="meta">· {i.source === "TikTok" ? `@${i.author}` : i.source === "YouTube" ? `▶ ${i.author}` : i.source}{i.lang ? ` · ${{ en: "🇬🇧 en anglais", de: "🇩🇪 en allemand", nl: "🇳🇱 en néerlandais" }[i.lang]}` : ""}{i.embed?.startsWith("ys:") ? " · short" : ""}{i.sub ? ` · ${i.sub}` : ""}{i.pork ? " · 🐖" : ""}{i.alcohol ? " · 🍷" : ""}{i.fete ? " · 🎉" : ""}{i.photo ? " · photos" : ""}{extra ? ` · ${extra}` : ""}</span>
       </span>
     </li>

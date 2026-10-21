@@ -457,7 +457,17 @@ for r in recipes:
         r["videos"] = [first]
     r["videoCount"] = len(full)
 dump("recipe_videos.json", VIDS)
-dump("ingredients.json", ingredients); dump("recipes.json", recipes); dump("rules.json", RULES)
+# Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index garde ce qu'il faut aux cartes, à la recherche, au moteur et au
+# planificateur ; le détail d'une fiche (étapes, introduction, vidéos, conseils, matériel, conservation) part dans un second
+# fichier, lu juste après le premier affichage (et tout de suite par les écrans qui en ont besoin).
+DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage")
+detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
+index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
+from renommages import RENAMES
+_ids_all = {r["id"] for r in recipes}
+assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"
+dump("ingredients.json", ingredients); dump("recipes.json", index); dump("recipes_detail.json", detail); dump("rules.json", RULES); dump("renames.json", RENAMES)
+print(f"recettes : index {len(json.dumps(index, ensure_ascii=False)) // 1024} Ko, détail {len(json.dumps(detail, ensure_ascii=False)) // 1024} Ko")
 dump("catalogue.json", catalogue); dump("imports.json", imports)
 print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for v in LEFT.values() if v)} fiches")
 print(f"vidéos liées : {sum(len(v) for v in VIDEOS.values())} sur {len(VIDEOS)} fiches ; imports lisibles dans l'app : {sum(1 for i in imports if i.get('embed'))}")

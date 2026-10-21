@@ -51,11 +51,48 @@ for (const r of ROUTES) {
   await act(async () => { location.hash = `#/${r}`; w.dispatchEvent(new w.HashChangeEvent("hashchange")); });
   await settle();
   const text = document.body.textContent ?? "";
-  const bad = text.includes("Oups, cette page a un souci") || text.includes("Page introuvable") || errors.some((e) => /Warning|Error|Maximum update/.test(e) && !/act\(/.test(e));
-  if (bad) { failed++; origError(`FAIL [${pass}] page /${r} :`, text.includes("Oups") ? "écran d'erreur" : text.includes("introuvable") ? "page introuvable" : errors[0]); }
+  const bad = text.includes("Oups, cette page a un souci") || text.includes("Page introuvable") || text.includes("Chargement…") || errors.some((e) => /Warning|Error|Maximum update/.test(e) && !/act\(/.test(e));
+  if (bad) { failed++; origError(`FAIL [${pass}] page /${r} :`, text.includes("Oups") ? "écran d'erreur" : text.includes("introuvable") ? "page introuvable" : text.includes("Chargement…") ? "toujours en chargement" : errors[0]); }
   else if (pass === "famille") console.log(`PASS page /${r} (${text.length} caractères)`);
 }
 }
+// —— parcours avec de vrais clics (audit dév/UX 2026-10-21 §4) : ce que les rendus seuls ne prouvent pas
+const go = async (h: string) => { await act(async () => { location.hash = `#/${h}`; w.dispatchEvent(new w.HashChangeEvent("hashchange")); }); await settle(); await act(async () => { await new Promise((r) => setTimeout(r, 120)); }); };
+const click = async (el: Element | null | undefined) => { if (!el) throw new Error("élément introuvable"); await act(async () => { (el as HTMLElement).click(); }); await settle(); };
+const byText = (sel: string, t: string) => [...document.querySelectorAll(sel)].find((e) => e.textContent?.includes(t));
+let parcours = 0;
+const step = (name: string, ok: boolean, detail = "") => { if (ok) { parcours++; console.log(`PASS parcours : ${name}`); } else { failed++; origError(`FAIL parcours : ${name} ${detail}`); } };
+try {
+  // 1. portions : les deux boutons « Cuisiner » emportent le nombre choisi
+  await go("recette/blanquette_veau");
+  await click(document.querySelector('.cook-sticky button[aria-label="Plus de portions"]'));
+  const n = document.querySelector(".cook-sticky .portions strong")?.textContent;
+  const hrefs = [...document.querySelectorAll(".cook-sticky a.btn, a.cook-cta")].map((a) => a.getAttribute("href"));
+  step("les portions choisies passent au mode cuisine, par les deux boutons", hrefs.length === 2 && hrefs.every((x) => x?.includes(`portions=${n}`)), JSON.stringify(hrefs));
+  // 2. changement d'écran : titre de l'onglet et focus sur le contenu
+  await go("semaine");
+  step("le titre de l'onglet suit l'écran et le focus va au contenu", document.title === "Ma semaine · ATLAS" && document.activeElement?.id === "contenu", `${document.title} / ${document.activeElement?.id}`);
+  // 3. lien d'évitement : il donne le focus au contenu sans changer d'écran
+  const hashBefore = location.hash;
+  (document.activeElement as HTMLElement | null)?.blur();
+  await click(document.querySelector("a.skip"));
+  step("« Aller au contenu » ne casse plus la navigation", location.hash === hashBefore && document.activeElement?.id === "contenu", location.hash);
+  // 4. semaine → courses
+  await click(byText("button", "Compléter les cases vides"));
+  await click(byText("button", "Mettre la semaine dans la liste de courses"));
+  step("une semaine proposée part dans la liste de courses", store.getState().shopping.length > 5, String(store.getState().shopping.length));
+  // 5. liste reçue par lien : rien n'est ajouté sans le demander, puis ajout sans doublon
+  const { encodeShare } = await import("../src/lib/partage");
+  const before = store.getState().shopping.length;
+  await go(`partage?d=${await encodeShare({ v: 1, kind: "courses", shopping: [{ label: "Farine de châtaigne (test)", section: "Épicerie", ref: null, from: "Un proche" }] })}`);
+  const untouched = store.getState().shopping.length === before && document.body.textContent?.includes("Farine de châtaigne (test)");
+  await click(byText("button", "Ajouter à ma liste"));
+  step("une liste reçue s'affiche, puis s'ajoute à la mienne sur demande", !!untouched && store.getState().shopping.some((x) => x.label === "Farine de châtaigne (test)") && location.hash.startsWith("#/courses"));
+  // 6. onglet juste : la cuisine des restes est rangée sous « Ma semaine »
+  await go("restes");
+  step("chaque écran allume son onglet (Restes → Ma semaine)", document.querySelector(".nav .tab.on .tab-lb")?.textContent === "Ma semaine", document.querySelector(".nav .tab.on .tab-lb")?.textContent ?? "aucun");
+} catch (e) { failed++; origError("FAIL parcours :", (e as Error).message); }
+console.log(`${parcours} parcours sur 6`);
 await act(async () => { root.unmount(); });
 console.log(`\n${2 * ROUTES.length - failed} rendus sur ${2 * ROUTES.length} sans erreur (${ROUTES.length} pages, profil famille puis nouvel utilisateur)`);
 process.exit(failed ? 1 : 0);

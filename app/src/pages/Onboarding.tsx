@@ -19,7 +19,7 @@ export default function Onboarding() {
     </button>
   );
   return (
-    <main className="page onboarding" id="contenu">
+    <main className="page onboarding" id="contenu" tabIndex={-1}>
       <img src="./icons/icon.svg" alt="" width="64" height="64" />
       <h1>Bienvenue dans ATLAS</h1>
       <p className="lead">{RECIPES.length} recettes du monde, faites maison. Une seule question pour commencer : <strong>qu'est-ce qu'on évite chez toi ?</strong></p>

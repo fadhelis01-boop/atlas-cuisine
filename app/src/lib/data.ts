@@ -1,12 +1,19 @@
 import { useSyncExternalStore } from "react";
 import ingredientsJson from "../data/ingredients.json";
-import recipesJson from "../data/recipes.json";
+import recipesRaw from "../data/recipes.json?raw";
+import renamesJson from "../data/renames.json";
 import rulesJson from "../data/rules.json";
 import catalogueJson from "../data/catalogue.json";
+import { setRenames } from "./store";
+import { markDetails } from "./mesures";
 import type { CatalogueEntry, ImportEntry, IngredientRef, Leftover, MacroId, Recipe, Rule } from "./types";
 
 export const INGREDIENTS = ingredientsJson as unknown as Record<string, IngredientRef>;
-export const RECIPES = recipesJson as unknown as Recipe[];
+// Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index (cartes, recherche, moteur, planificateur) est lu en JSON.parse,
+// deux fois plus rapide qu'un littéral JavaScript ; le détail d'une fiche arrive juste après le premier affichage.
+const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "" };
+export const RECIPES = (JSON.parse(recipesRaw) as Recipe[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r }));
+setRenames(renamesJson as Record<string, string>);
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];
 // Bibliothèque de vidéos classées (3 000 et plus) : chargée à la demande pour garder l'ouverture de l'application rapide.
@@ -23,6 +30,25 @@ export function useImportLibrary(): ImportEntry[] {
 }
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
+
+type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage">>;
+let DETAILS = false;
+let detP: Promise<void> | null = null;
+const detLs = new Set<() => void>();
+/** Complète les fiches avec leur détail (étapes, introduction, vidéos, conseils, matériel, conservation). */
+export function mergeDetails(d: Record<string, Detail>) {
+  for (const [id, x] of Object.entries(d)) if (RECIPE_BY_ID[id]) Object.assign(RECIPE_BY_ID[id], x);
+  DETAILS = true; markDetails(); detLs.forEach((l) => l());
+}
+export function loadDetails(): Promise<void> {
+  detP ??= import("../data/recipes_detail.json?raw").then((m) => mergeDetails(JSON.parse(m.default) as Record<string, Detail>));
+  return detP;
+}
+export const detailsReady = () => DETAILS;
+/** Pour un écran qui lit les étapes ou les conseils : vrai quand le détail est là (il se redessine à son arrivée). */
+export function useDetails(): boolean {
+  return useSyncExternalStore((cb) => { detLs.add(cb); void loadDetails(); return () => { detLs.delete(cb); }; }, () => DETAILS);
+}
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);
 
 export const MACROS: { id: MacroId; name: string; emoji: string; icon: string; blurb: string }[] = [

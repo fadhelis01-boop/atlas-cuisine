@@ -5,13 +5,15 @@ import { ZONE_LABEL, detectZone } from "../lib/season";
 import { useEffect, useRef, useState } from "react";
 import { ALLERGENS, RECIPES } from "../lib/data";
 import { Page, Section } from "../components/ui";
-import { IMAGES, loadMoreImages, supportsAvif } from "../components/photo";
+import { IMAGES, PUBLISHED_AVIF, PUBLISHED_WEBP, loadMoreImages, supportsAvif } from "../components/photo";
 import { href } from "../lib/router";
-import { exportData, importData, resetAll, setState, useStore } from "../lib/store";
+import { type State, exportData, readBackup, resetAll, restoreBackup, setState, useStore } from "../lib/store";
+import type { RestoreReport } from "../lib/safe";
 import { frenchVoices, speak, ttsAvailable, voiceCommandsAvailable } from "../lib/speech";
 import { checkForAppUpdate, isIos, isStandalone, promptInstall, usePwa } from "../lib/pwa";
 import type { Profile } from "../lib/types";
 import { clearErrors, readErrors } from "../lib/errlog";
+import { medianStartup, readPerf } from "../lib/mesures";
 
 /** Journal d'erreurs local : à copier pour signaler un problème (rien n'est envoyé automatiquement). */
 function ErrorLog() {
@@ -22,7 +24,7 @@ function ErrorLog() {
   return (
     <>
       <p className="small">{list.length} erreur(s) récente(s), gardées seulement sur cet appareil. Copie-les pour signaler un problème.</p>
-      <pre className="errlog">{text}</pre>
+      <pre className="errlog" tabIndex={0} aria-label="Journal des erreurs">{text}</pre>
       <div className="row">
         <button className="btn small ghost" onClick={() => { void navigator.clipboard?.writeText(text).then(() => setCopied(true)); }}>{copied ? "Copié" : "Copier"}</button>
         <button className="btn small ghost" onClick={() => { clearErrors(); setList([]); }}>Effacer le journal</button>
@@ -103,7 +105,8 @@ function OfflinePhotos() {
     let done = 0;
     const avif = await supportsAvif();
     for (const [, m] of list) {
-      for (const w of m.sizes.filter((x) => x <= 800)) { try { await fetch(`./${m.path}-${w}.${m.avif && avif ? "avif" : "webp"}`); } catch { /* hors ligne */ } }
+      const files = m.avif && avif ? m.sizes.filter((x) => PUBLISHED_AVIF.includes(x)).map((w) => `${w}.avif`) : [`${PUBLISHED_WEBP}.webp`];
+      for (const f of files) { try { await fetch(`./${m.path}-${f}`); } catch { /* hors ligne */ } }
       done++; if (done % 10 === 0 || done === list.length) setStateLocal(`${done} / ${list.length} photos enregistrées`);
     }
   };
@@ -125,6 +128,7 @@ export default function Profil() {
   const pwa = usePwa();
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [msg, setMsg] = useState("");
+  const [pending, setPending] = useState<{ incoming: Partial<State>; report: RestoreReport } | null>(null);
   const file = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const load = () => setVoices(frenchVoices());
@@ -202,21 +206,65 @@ export default function Profil() {
         <div className="row">
           <button className="btn ghost" onClick={download}>Exporter mes données</button>
           <button className="btn ghost" onClick={() => file.current?.click()}>Importer une sauvegarde</button>
-          <input ref={file} type="file" accept="application/json" hidden onChange={async (e) => {
-            const f = e.target.files?.[0]; if (!f) return;
-            try { importData(await f.text()); setMsg("Sauvegarde restaurée."); } catch (err) { setMsg(`Impossible de lire ce fichier : ${(err as Error).message}`); }
+          <input ref={file} type="file" accept="application/json,.json" hidden onChange={async (e) => {
+            const f = e.target.files?.[0]; e.target.value = ""; if (!f) return;
+            if (f.size > 20e6) { setMsg("Ce fichier est trop gros pour une sauvegarde ATLAS."); return; }
+            const r = readBackup(await f.text());
+            if (!r.report.ok) { setMsg(r.report.error ?? "Fichier non reconnu."); setPending(null); return; }
+            setPending(r); setMsg("");
           }} />
           <button className="btn danger" onClick={() => { if (confirm("Effacer toutes tes données ATLAS sur cet appareil ?")) resetAll(); }}>Tout effacer</button>
         </div>
+        {pending && <RestorePreview p={pending} onDone={(m) => { setPending(null); setMsg(m); }} />}
         {msg && <p role="status">{msg}</p>}
+      </Section>
+      <Section title="Sur cet appareil">
+        <DeviceInfo />
       </Section>
       <Section title="Journal des erreurs">
         <ErrorLog />
       </Section>
       <Section title="À propos">
-        <p className="small">ATLAS · {RECIPES.length} recettes (Tomes 11 à 13 de la bible) · moteur diététique et planificateur vérifiés par plus de 70 contrôles automatiques à chaque publication. Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester » : note tes essais dans « Mes recettes › Mon carnet d'essais ». Les photos viennent de Wikimedia Commons et d'Openverse (licences libres, voir les crédits) ; les vidéos sont celles des créatrices et créateurs, lues avec leurs lecteurs officiels.</p>
+        <p className="small">ATLAS · {RECIPES.length} recettes (Tomes 11 à 13 de la bible) · moteur diététique et planificateur vérifiés par plus de 90 contrôles automatiques à chaque publication. Les recettes n'ont pas encore passé les tests en cuisine du Tome 7 ; les substitutions sont « à tester » : note tes essais dans « Mes recettes › Mon carnet d'essais ». Les photos viennent de Wikimedia Commons et d'Openverse (licences libres, voir les crédits) ; les vidéos sont celles des créatrices et créateurs, lues avec leurs lecteurs officiels.</p>
         <p className="small">Limites des applications web sur iPhone : un minuteur ne peut pas sonner quand l'application est fermée (une notification s'affiche si tu l'as autorisée) ; la commande vocale dépend de Safari. Ces points seront levés par la version native (Tome 1 §17).</p>
       </Section>
     </Page>
+  );
+}
+
+/** Restauration en deux temps (audit dév/UX 2026-10-21) : ce que contient le fichier, puis fusion ou remplacement. */
+function RestorePreview({ p, onDone }: { p: { incoming: Partial<State>; report: RestoreReport }; onDone: (msg: string) => void }) {
+  const c = p.report.counts;
+  const LABELS: [string, string, string][] = [["favoris", "favori", "favoris"], ["carnet", "note du carnet", "notes du carnet"], ["imports", "import", "imports"],
+    ["semaine", "jour planifié", "jours planifiés"], ["courses", "article de courses", "articles de courses"], ["menus", "menu", "menus"]];
+  const parts = LABELS.filter(([k]) => c[k]).map(([k, one, many]) => `${c[k]} ${c[k] > 1 ? many : one}`);
+  return (
+    <div className="card pad restore" role="region" aria-label="Sauvegarde à restaurer">
+      <p><strong>Ce fichier contient :</strong> {parts.length ? parts.join(", ") : "tes réglages seulement"}.</p>
+      {p.report.dropped > 0 && <p className="small">{p.report.dropped} élément{p.report.dropped > 1 ? "s" : ""} illisible{p.report.dropped > 1 ? "s" : ""} ou douteux (lien non sécurisé, format inconnu) {p.report.dropped > 1 ? "ont été écartés" : "a été écarté"}.</p>}
+      <div className="row">
+        <button className="btn" onClick={() => { restoreBackup(p.incoming, "merge"); onDone("Sauvegarde ajoutée à ce que tu avais déjà."); }}>Ajouter à mes données</button>
+        <button className="btn ghost danger" onClick={() => { if (confirm("Remplacer toutes tes données actuelles par cette sauvegarde ?")) { restoreBackup(p.incoming, "replace"); onDone("Sauvegarde restaurée : tes anciennes données sont remplacées."); } }}>Tout remplacer</button>
+        <button className="btn ghost" onClick={() => onDone("Restauration annulée.")}>Annuler</button>
+      </div>
+    </div>
+  );
+}
+
+const SCREEN_LABEL: Record<string, string> = { accueil: "Accueil", explorer: "Explorer", recette: "Fiches recettes", cuisine: "Mode cuisine", semaine: "Ma semaine", courses: "Courses",
+  frigo: "Frigo", recherche: "Recherche", biblio: "Mes recettes", fetes: "Fêtes", restes: "Restes", enfants: "Enfants", techniques: "Techniques", profil: "Profil" };
+/** Ce que l'appareil mesure lui-même, sans rien envoyer (audit dév/UX 2026-10-21 §5.7-5.8). */
+function DeviceInfo() {
+  const usage = useStore((s) => s.usage) ?? {};
+  const share = useStore((s) => !!s.shareUsage);
+  const perf = readPerf();
+  const med = medianStartup(perf);
+  const top = Object.entries(usage).sort((a, b) => b[1] - a[1]).slice(0, 6);
+  return (
+    <>
+      <p className="small">{med !== null ? <>Ouverture d'ATLAS sur ce téléphone : <strong>{(med / 1000).toFixed(1).replace(".", ",")} s</strong> en moyenne sur les {perf.length} dernières{perf[0]?.details ? <>, fiches complètes prêtes en {(perf[0].details / 1000).toFixed(1).replace(".", ",")} s</> : null}.</> : "Le temps d'ouverture s'affichera après la prochaine ouverture."}</p>
+      {top.length > 0 && <p className="small">Ce qui te sert le plus : {top.map(([k, n]) => `${SCREEN_LABEL[k] ?? k} (${n})`).join(", ")}.</p>}
+      <label className="switch"><input type="checkbox" checked={share} onChange={(e) => setState((s) => { s.shareUsage = e.target.checked; })} /> Joindre ces chiffres à l'export de mon carnet d'essais (pour améliorer ATLAS ; rien n'est envoyé automatiquement)</label>
+    </>
   );
 }

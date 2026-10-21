@@ -28,7 +28,7 @@ export default function Cook({ id }: { id: string }) {
   const [heard, setHeard] = useState("");
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const stopListen = useRef<() => void>(() => undefined);
-  useWakeLock(true);
+  const wake = useWakeLock(true);
 
   const v = r ? verdict(r, p) : null;
   const lines = r && v?.adapted && route.query.get("adapte") === "1" ? v.adapted.lines : r?.ingredients ?? [];
@@ -77,7 +77,7 @@ export default function Cook({ id }: { id: string }) {
     }, (on, err) => { setMic(on); setMicMsg(err ?? ""); });
   };
 
-  if (!r) return <main className="page"><h1>Recette introuvable</h1><a href={href("/")}>Accueil</a></main>;
+  if (!r) return <main className="page" id="contenu" tabIndex={-1}><h1>Recette introuvable</h1><a href={href("/")}>Accueil</a></main>;
   const step = i >= 0 ? steps[i] : null;
 
   return (
@@ -89,7 +89,10 @@ export default function Cook({ id }: { id: string }) {
         <div className="cook-progress" aria-hidden="true"><span style={{ width: `${((i + 1) / steps.length) * 100}%` }} /></div>
       </header>
 
-      <main className="cook-body" id="contenu" aria-live="polite">
+      <main className="cook-body" id="contenu" tabIndex={-1} aria-live="polite">
+        {(wake === "unsupported" || wake === "refused") && (
+          <p className="wake-note" role="note"><Icon name="alert" size={16} className="ic-inline" /> Ce téléphone ne permet pas à ATLAS de garder l'écran allumé : allonge la mise en veille dans ses réglages le temps de cuisiner, ou touche l'écran de temps en temps.</p>
+        )}
         {i < 0 ? (
           <>
             <h1 className="cook-step-n">Mise en place <span className="meta">· pour {portions} personne{portions > 1 ? "s" : ""}</span></h1>

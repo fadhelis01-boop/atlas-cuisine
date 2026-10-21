@@ -82,14 +82,24 @@ export function fmtLeft(ms: number) {
 }
 
 /** Garde l'écran allumé en mode cuisine (Wake Lock API ; Safari iOS 16.4+). */
-export function useWakeLock(on: boolean) {
+/** Écran maintenu allumé pendant qu'on cuisine. Renvoie l'état, pour prévenir quand le navigateur ne le permet pas
+ *  (iPhone avant iOS 16.4, certains navigateurs) : l'écran s'éteindrait alors sans prévenir (audit dév/UX 2026-10-21). */
+export type WakeState = "on" | "unsupported" | "refused" | "off";
+export function useWakeLock(on: boolean): WakeState {
+  const [state, setWake] = useState<WakeState>(on && !("wakeLock" in navigator) ? "unsupported" : "off");
   useEffect(() => {
-    if (!on || !("wakeLock" in navigator)) return;
+    if (!on) return;
+    if (!("wakeLock" in navigator)) { setWake("unsupported"); return; }
     let lock: { release: () => Promise<void> } | null = null;
-    const req = async () => { try { lock = await (navigator as unknown as { wakeLock: { request: (t: string) => Promise<{ release: () => Promise<void> }> } }).wakeLock.request("screen"); } catch { /* refusé */ } };
+    let alive = true;
+    const req = async () => {
+      try { lock = await (navigator as unknown as { wakeLock: { request: (t: string) => Promise<{ release: () => Promise<void> }> } }).wakeLock.request("screen"); if (alive) setWake("on"); }
+      catch { if (alive) setWake("refused"); }
+    };
     void req();
     const vis = () => document.visibilityState === "visible" && void req();
     document.addEventListener("visibilitychange", vis);
-    return () => { document.removeEventListener("visibilitychange", vis); void lock?.release(); };
+    return () => { alive = false; document.removeEventListener("visibilitychange", vis); void lock?.release(); };
   }, [on]);
+  return state;
 }

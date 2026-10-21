@@ -26,8 +26,8 @@ export default function Leftovers({ r }: { r: Recipe }) {
     setAdded((a) => [...a, `${ref}|${part}`]);
   };
   return (
-    <div className="zw card pad">
-      <h3><Icon name="recycle" size={20} className="ic-inline" /> Zéro déchet : ce qu'il te restera, et quoi en faire</h3>
+    <details className="zw card pad">
+      <summary><h3><Icon name="recycle" size={20} className="ic-inline" /> Zéro déchet : ce qu'il te restera, et quoi en faire</h3></summary>
       {r.zeroWaste.length > 0 && <ul className="zw-chef">{r.zeroWaste.map((z, i) => <li key={i}>{z.replace(/\*\*/g, "")}</li>)}</ul>}
       {leftovers === null && <p className="small">Chargement des idées zéro déchet…</p>}
       {leftovers?.length === 0 && <p className="small">Cette recette utilise ses ingrédients en entier ou des produits du placard qui se gardent : rien à jeter.</p>}
@@ -59,6 +59,6 @@ export default function Leftovers({ r }: { r: Recipe }) {
           ))}
         </details>
       ))}
-    </div>
+    </details>
   );
 }

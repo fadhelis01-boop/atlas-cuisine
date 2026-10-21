@@ -36,9 +36,11 @@ export default function Frigo() {
   const [tab, setTab] = useState<"cuisiner" | "frigo">("cuisiner");
   return (
     <Page photo="rubrique/frigo" title="Avec ce que j'ai" sub="Choisis tes ingrédients : ATLAS propose les recettes qui les utilisent, en priorité ceux qui arrivent à leur date limite.">
-      <div className="seg" role="tablist">
-        <button role="tab" aria-selected={tab === "cuisiner"} className={tab === "cuisiner" ? "on" : ""} onClick={() => setTab("cuisiner")}>Que cuisiner ?</button>
-        <button role="tab" aria-selected={tab === "frigo"} className={tab === "frigo" ? "on" : ""} onClick={() => setTab("frigo")}>Mon frigo</button>
+      <div className="row frigo-head">
+        <div className="seg" role="tablist" aria-label="Frigo">
+          <button role="tab" aria-selected={tab === "cuisiner"} className={tab === "cuisiner" ? "on" : ""} onClick={() => setTab("cuisiner")}>Que cuisiner ?</button>
+          <button role="tab" aria-selected={tab === "frigo"} className={tab === "frigo" ? "on" : ""} onClick={() => setTab("frigo")}>Mon frigo</button>
+        </div>
         <a className="btn small ghost" href={href("/courses")}><Icon name="cart" size={18} /> Liste de courses</a>
       </div>
       {tab === "cuisiner" ? <Cuisiner /> : <MonFrigo />}

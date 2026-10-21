@@ -120,7 +120,7 @@ export function IngredientPage({ slug }: { slug: string }) {
   const recipes = e.recipes.map((id) => RECIPE_BY_ID[id]).filter((r) => r && visible.has(r.id));
   const pork = ref?.derivs.pork, alcohol = ref?.derivs.alcohol;
   return (
-    <main className="page" id="contenu">
+    <main className="page" id="contenu" tabIndex={-1}>
       <a className="back" href={href("/dictionnaire")}>← Dictionnaire</a>
       <div className="recipe-head">
         <figure className="hero-fig"><Thumb slug={slug} section={e.section} big /><figcaption><Credit k={`ingredient/${slug}`} note={false} /></figcaption></figure>

@@ -27,6 +27,8 @@ import type { Recipe } from "../lib/types";
 import { ACCORDS, EVIN, SECURITE_ENFANTS } from "../lib/content";
 import { Cover, DietBadges, Page, Section } from "../components/ui";
 import type { RecipeLine } from "../lib/types";
+import { safeHref, safeUrl } from "../lib/safe";
+import { cookHref } from "../lib/nav";
 
 export function Rich({ text }: { text: string }) {
   // **gras** → <strong>
@@ -106,6 +108,8 @@ function RescueBlock({ r }: { r: Recipe }) {
   if (!list.length) return null;
   return (
     <Section title={<><Icon name="lifebuoy" size={24} className="ic-inline" /> Si ça ne se passe pas comme prévu</>} id="r-aide">
+      <details className="rescue-all">
+      <summary>{list.length} problème{list.length > 1 ? "s" : ""} fréquent{list.length > 1 ? "s" : ""} et leur solution</summary>
       <div className="rescue">
         {list.map((x) => (
           <details key={x.problem} className="card pad">
@@ -115,6 +119,7 @@ function RescueBlock({ r }: { r: Recipe }) {
           </details>
         ))}
       </div>
+      </details>
     </Section>
   );
 }
@@ -201,18 +206,18 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   }
 
   return (
-    <main className="page recipe" id="contenu">
+    <main className="page recipe" id="contenu" tabIndex={-1}>
       <div className="cook-sticky" role="group" aria-label="Cuisiner cette recette">
         <div className="portions mini" role="group" aria-label="Nombre de portions">
           <button type="button" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
           <span><strong>{portions}</strong> pers.</span>
           <button type="button" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
         </div>
-        <a className="btn" href={href(`/cuisine/${r.id}?portions=${portions}${adapted ? "&adapte=1" : ""}`)}><Icon name="play" size={20} /> Cuisiner</a>
+        <a className="btn" href={href(cookHref(r.id, portions, !!adapted))}><Icon name="play" size={20} /> Cuisiner</a>
       </div>
       <button type="button" className="back" onClick={() => goBack(`/region/${r.macro}`)}><Icon name="back" size={20} /> Retour</button>
       <div className="recipe-head">
-        <figure className="hero-fig"><Cover r={r} big /><figcaption><Credit k={`recette/${r.id}`} /></figcaption></figure>
+        <figure className="hero-fig"><Cover r={r} big /><figcaption><details className="credit-mini"><summary aria-label="Crédit et licence de la photo">i</summary><Credit k={`recette/${r.id}`} /></details></figcaption></figure>
         <div>
           <h1>{r.title}</h1>
           {r.origin && r.origin !== r.title && <p className="origin" lang="und">{r.origin}</p>}
@@ -222,7 +227,9 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}</p>
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
           <SeasonBadge r={r} />
-          <a className="btn big cook-cta" href={href(`/cuisine/${r.id}${adapted ? "?adapte=1" : ""}`)}><Icon name="play" size={22} /> Cuisiner pas à pas</a>
+          {/* recette non testée : dit d'emblée, en un badge relié au carnet (audit dév/UX 2026-10-21 §2.2) */}
+          <p className="untested-line"><a className="badge info" href={href("/biblio")} title="Ton avis dans le carnet sert à corriger la fiche"><Icon name="alert" size={14} className="ic-inline" /> Pas encore testée en cuisine</a></p>
+          <a className="btn big cook-cta" href={href(cookHref(r.id, portions, !!adapted))}><Icon name="play" size={22} /> Cuisiner pas à pas</a>
           {/* actions secondaires : icônes légendées de même taille (audit UX 2026-10-16 §2.4) */}
           <div className="quick-actions" role="group" aria-label="Actions">
             <button type="button" onClick={() => toggleFavorite(r.id)} aria-pressed={fav}><Icon name="heart" size={24} className={fav ? "ic-on" : ""} /><span>{fav ? "Favori" : "Garder"}</span></button>
@@ -231,7 +238,6 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {ttsAvailable() && <button type="button" onClick={() => read("tout")} aria-pressed={reading !== null}><Icon name={reading !== null ? "close" : "speaker"} size={24} /><span>{reading !== null ? "Arrêter" : "Écouter"}</span></button>}
             <button type="button" onClick={() => void share()}><Icon name="share" size={24} /><span>Partager</span></button>
           </div>
-          <p className="small untested"><Icon name="alert" size={15} className="ic-inline" /> Recette pas encore testée dans la cuisine d'ATLAS : après l'avoir faite, note-la dans <a href={href("/biblio")}>ton carnet</a>, ton avis sert à la corriger.</p>
         </div>
       </div>
 
@@ -250,7 +256,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       {v.warnings.length > 0 && <div className="banner warn"><strong>À vérifier :</strong> {v.warnings.join(" · ")}. Lis les étiquettes.</div>}
       {kidsAlert && <div className="banner warn"><Icon name="kid" size={16} className="ic-inline" /> Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}</div>}
 
-      <p className="intro"><Rich text={r.intro} /></p>
+      <Intro text={r.intro} />
 
       <RecipeToc />
       <div className="two-col">
@@ -287,7 +293,12 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {r.steps.map((s, i) => (
               <li key={i}>
                 <Rich text={scaleStep(s, factor)} />
-                {gestes[i].map((t) => <p key={t.term} className="geste"><Icon name="dictionary" size={15} className="ic-inline" /> <strong>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</strong> : {t.def}</p>)}
+                {gestes[i].map((t) => (
+                  <details key={t.term} className="geste">
+                    <summary><Icon name="dictionary" size={15} className="ic-inline" /> Le geste : <strong>{t.term}</strong></summary>
+                    <p>{t.def}{t.tech && <> <a href={href(`/technique/${t.tech}`)}>Voir la technique pas à pas →</a></>}</p>
+                  </details>
+                ))}
                 {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}><Icon name="eye" size={16} className="ic-inline" /> {c} </span>)}</p>}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
@@ -297,6 +308,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
               </li>
             ))}
           </ol>
+          {r.tips.length > 0 && <div className="tips card pad"><h3><Icon name="chef" size={20} className="ic-inline" /> Astuces du chef</h3><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></div>}
           <Lexique text={r.steps.join(" ")} />
           <FinishBlock r={r} />
         </Section>
@@ -305,7 +317,6 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       <StepPhotos subject={`recette/${r.id}`} title="Pas à pas en photos" />
       <RescueBlock r={r} />
       {((cookedN ?? 0) > 0 || journalEntry) && <Section title="Mon carnet"><Journal id={r.id} /></Section>}
-      {r.tips.length > 0 && <Section title="Astuces du chef"><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></Section>}
       <Section title={<><Icon name="plate" size={24} className="ic-inline" /> Pour recevoir</>}>
         <p>Entrée, dessert et boissons qui vont avec, quantités calculées pour tes invités et ce qui se prépare la veille.</p>
         <a className="btn ghost" href={href(`/menu/${r.id}`)}>Compléter le menu autour de ce plat</a>
@@ -315,6 +326,8 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {r.variants.map((x) => <div key={x.name} className="card pad"><h3>{x.name} {!x.tested && <span className="badge info">à tester</span>}</h3><p><Rich text={x.note} /></p></div>)}
         </Section>
       )}
+      <details className="more-info card pad">
+      <summary><h2 className="h3">Bon à savoir : conservation, enfants, boissons</h2></summary>
       <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>} {plain(r.storage)}</p></Section>
       <Section title="Enfants">
         <p>{plain(r.kids)}</p>
@@ -327,18 +340,32 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         </div>
         {prof && <p className="small">{ACCORDS[prof].why}</p>}
       </Section>
+      </details>
       {r.techniques.length > 0 && (
         <Section title="Techniques utilisées">
           <div className="links">{r.techniques.map((t) => { const tf = techniqueFor(t); return tf ? <a key={t} className="pill" href={href(`/technique/${tf.id}`)}>🔪 {t}</a> : <span key={t} className="pill">{t}</span>; })}</div>
         </Section>
       )}
       <RecipeVideos r={r} />
+      <p className="no-print"><button type="button" className="btn ghost small" onClick={() => window.print()}>Imprimer la fiche</button></p>
       <p className="small source">Source : bible ATLAS, {r.source}. Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).</p>
     </main>
   );
 }
 
 const NONE: string[] = [];
+
+/** Introduction limitée à 3 lignes sur téléphone (les ingrédients arrivent plus tôt), « Lire la suite » pour le reste. */
+function Intro({ text }: { text: string }) {
+  const [open, setOpen] = useState(false);
+  const long = text.length > 140;
+  return (
+    <div className="intro-wrap">
+      <p className={`intro ${long && !open ? "clamp" : ""}`}><Rich text={text} /></p>
+      {long && <button type="button" className="link-btn" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "Réduire" : "Lire la suite"}</button>}
+    </div>
+  );
+}
 
 /** Vidéos liées à la fiche : favoris importés et vidéos des sites, lisibles dans l'appli ; + les liens ajoutés par l'utilisateur. */
 function RecipeVideos({ r }: { r: Recipe }) {
@@ -347,19 +374,20 @@ function RecipeVideos({ r }: { r: Recipe }) {
   const [link, setLink] = useState("");
   const [err, setErr] = useState("");
   const add = () => {
-    const u = link.trim();
-    if (!/^https?:\/\//.test(u)) { setErr("Colle un lien qui commence par https://"); return; }
+    const u = safeUrl(link);
+    if (!u) { setErr("Colle un lien qui commence par https://"); return; }
     setState((s) => { s.recipeVideos[r.id] = [...new Set([...(s.recipeVideos[r.id] ?? []), u])]; });
     setLink(""); setErr("");
   };
   return (
-    <Section title="En vidéo">
+    <details className="more-info card pad">
+    <summary><h2 className="h3">En vidéo{videos.length + mine.length ? ` (${videos.length + mine.length})` : ""}</h2></summary>
       {videos.length > 0 ? (
         <ul className="links-list">
           {videos.map((x) => (
             <li key={x.url} className="import-row">
               <PlayButton v={x} />
-              <span><a href={x.url} target="_blank" rel="noopener noreferrer">{x.title.slice(0, 90)}</a> <span className="meta">· {x.source === "TikTok" ? `@${x.author}` : x.source}{x.pork ? " · version avec porc" : ""}{x.alcohol ? " · avec alcool" : ""}</span></span>
+              <span><a href={safeHref(x.url)} target="_blank" rel="noopener noreferrer">{x.title.slice(0, 90)}</a> <span className="meta">· {x.source === "TikTok" ? `@${x.author}` : x.source}{x.pork ? " · version avec porc" : ""}{x.alcohol ? " · avec alcool" : ""}</span></span>
             </li>
           ))}
         </ul>
@@ -369,7 +397,7 @@ function RecipeVideos({ r }: { r: Recipe }) {
           {mine.map((u) => (
             <li key={u} className="import-row">
               <PlayButton v={{ title: "Ma vidéo", url: u, embed: embedOf(u), source: "Mon lien" }} />
-              <span><a href={u} target="_blank" rel="noopener noreferrer">{u.replace(/^https?:\/\/(www\.)?/, "").slice(0, 60)}</a> <button className="btn small ghost danger" onClick={() => setState((s) => { s.recipeVideos[r.id] = (s.recipeVideos[r.id] ?? []).filter((x) => x !== u); })}>Retirer</button></span>
+              <span><a href={safeHref(u)} target="_blank" rel="noopener noreferrer">{u.replace(/^https?:\/\/(www\.)?/, "").slice(0, 60)}</a> <button className="btn small ghost danger" onClick={() => setState((s) => { s.recipeVideos[r.id] = (s.recipeVideos[r.id] ?? []).filter((x) => x !== u); })}>Retirer</button></span>
             </li>
           ))}
         </ul>
@@ -380,6 +408,6 @@ function RecipeVideos({ r }: { r: Recipe }) {
       </div>
       {err && <p className="warn-text">{err}</p>}
       <p className="small">Les vidéos sont celles de leurs auteur·e·s, lues depuis TikTok ou YouTube. Les vidéos ATLAS ne sont pas encore tournées. <a href={youtubeSearch(`${r.title.split(" (")[0]} recette`)} target="_blank" rel="noopener noreferrer">Chercher d'autres tutos sur YouTube</a>.</p>
-    </Section>
+    </details>
   );
 }

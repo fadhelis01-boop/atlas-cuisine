@@ -288,13 +288,13 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 
 /* ---------------------------------------------------------------- Fiche recette allégée (audit UX 2026-10-16) */
 .cook-cta { width: 100%; justify-content: center; margin: 10px 0 6px; }
-.quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 6px; margin: 6px 0; }
+.quick-actions { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 6px; margin: 6px 0; } /* les 5 actions sur une ligne, même à 320 px */
 .quick-actions > * { display: grid; justify-items: center; gap: 2px; min-height: 60px; padding: 8px 2px; border-radius: 14px; border: 1px solid var(--alt); background: var(--surface); color: var(--action); font: inherit; font-size: .82rem; font-weight: 600; text-decoration: none; cursor: pointer; }
 .quick-actions > * span { color: var(--text); }
 .quick-actions > [aria-pressed="true"] { border-color: var(--action); background: color-mix(in srgb, var(--action) 8%, var(--surface)); }
 .untested { color: var(--text-2); }
 .recipe-head .hero-fig .cover-big { max-height: 42vh; }
-@media (max-width: 899px) { .recipe-head .hero-fig .cover-big { aspect-ratio: 16 / 10; } }
+@media (max-width: 899px) { .recipe-head .hero-fig .cover-big { aspect-ratio: 16 / 9; } }
 .cook-sticky { display: none; }
 @media (max-width: 899px) {
   .cook-sticky { display: flex; position: fixed; z-index: 30; left: 0; right: 0; bottom: calc(64px + env(safe-area-inset-bottom)); gap: 10px; align-items: center; justify-content: space-between; padding: 8px 12px; background: color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter: blur(8px); border-top: 1px solid var(--alt); box-shadow: 0 -4px 14px rgb(0 0 0 / 8%); }
@@ -381,5 +381,82 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .ok-text { color: var(--ok-fg); }
 
 /* geste expliqué sous l'étape (audit gourmet §3) */
-.steps .geste { font-size: 0.88rem; color: var(--text-2); margin: 0.25rem 0 0; line-height: 1.4; }
+.steps .geste { font-size: 0.9rem; color: var(--text-2); margin: 0.2rem 0 0; line-height: 1.4; }
+.steps .geste > summary { cursor: pointer; min-height: 32px; display: flex; align-items: center; gap: 4px; list-style: none; }
+.steps .geste > summary::-webkit-details-marker { display: none; }
+.steps .geste > summary::after { content: "›"; margin-left: 4px; transition: transform 150ms; }
+.steps .geste[open] > summary::after { transform: rotate(90deg); }
+.steps .geste > p { margin: 2px 0 6px 20px; }
 .steps .geste a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+/* mode cuisine : écran qui risque de s'éteindre (audit dév/UX 2026-10-21) */
+.wake-note { font-size: 0.9rem; color: var(--text-2); background: var(--alt); border-radius: 10px; padding: 8px 10px; margin: 0 0 12px; }
+
+/* fiche recette resserrée (audit dév/UX 2026-10-21 §2.2) */
+.hero-fig { position: relative; }
+.credit-mini { position: absolute; right: 8px; bottom: 8px; max-width: calc(100% - 16px); }
+.credit-mini > summary { list-style: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; margin-left: auto; cursor: pointer;
+  background: rgb(0 0 0 / 55%); color: #fff; font: 700 1rem/1 Georgia, serif; font-style: italic; }
+.credit-mini > summary::-webkit-details-marker { display: none; }
+.credit-mini[open] .credit { background: var(--surface); color: var(--text); padding: 8px 10px; border-radius: 10px; margin: 6px 0 0; box-shadow: 0 4px 14px rgb(0 0 0 / 18%); }
+.zw > summary, .rescue-all > summary { cursor: pointer; list-style-position: inside; }
+.zw > summary h3 { display: inline; font-size: 1rem; }
+.rescue-all > summary { font-weight: 600; padding: 12px 0; min-height: 44px; }
+.tips { margin-top: 12px; }
+.tips h3 { margin-top: 0; }
+/* mise à jour disponible : un message flottant qui ne pousse plus le contenu (audit dév/UX 2026-10-21 §2.2) */
+.update { position: fixed; z-index: 45; left: 12px; right: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); border-radius: 14px; box-shadow: 0 6px 20px rgb(0 0 0 / 18%); padding: 8px 12px; justify-content: space-between; }
+body:has(.cook-sticky) .update { bottom: calc(144px + env(safe-area-inset-bottom)); }
+@media (min-width: 900px) { .update { left: auto; right: 24px; bottom: 24px; max-width: 420px; } }
+
+/* profil : bouton rond en haut à droite sur téléphone, dernier élément de la colonne sur grand écran (audit dév/UX 2026-10-21 §2.3) */
+@media (max-width: 899px) {
+  .nav .tab-profile { position: fixed; top: calc(8px + env(safe-area-inset-top)); right: 10px; z-index: 25; width: 44px; height: 44px; min-height: 0; padding: 0; flex: none;
+    border-radius: 50%; background: var(--surface); box-shadow: 0 2px 10px rgb(0 0 0 / 14%); display: grid; place-items: center; }
+  .nav .tab-profile .tab-lb { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .nav .tab-profile .tab-ic svg { width: 24px; height: 24px; }
+}
+@media (min-width: 900px) { .nav .tab-profile { margin-top: auto; } }
+
+/* la couleur dominante de chaque photo, déjà posée en fond, se voit enfin pendant le chargement (audit dév/UX 2026-10-21 §3.8) */
+.cover .photo, .photo-band .photo, .thumb43 .photo, .entry.has-photo .photo, .dico-thumb .photo, .step-photos .thumb43 .photo { opacity: 1; }
+
+/* textes et cibles (audit dév/UX 2026-10-21 §3.3) : 14 px au moins hors mentions légales, lignes de liste de 44 px */
+.zw-kind, .market-name, .tag-day, .entry-sub, .entry .entry-sub, .badge { font-size: 0.875rem; }
+.links-list > li { min-height: 44px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 4px 0; }
+.links-list > li > a { padding: 10px 0; }
+.ingredients > li { padding: 6px 0; }
+.credit a { display: inline-block; padding: 6px 2px; } /* lien de licence : zone de toucher plus haute sans grossir le texte légal */
+.frigo-head { align-items: center; justify-content: space-between; }
+
+/* impression (audit dév/UX 2026-10-21 §3.5) : la fiche ou la liste, rien d'interactif, encre économisée */
+@media print {
+  :root { --bg: #fff; --surface: #fff; --text: #000; --text-2: #333; }
+  body { background: #fff !important; color: #000; font-size: 11pt; }
+  .nav, .skip, .update, .toasts, .timers, .cook-sticky, .quick-actions, .cook-cta, .recipe-toc, .timers-inline, .back, .credit-mini,
+  .no-print, .row > .btn, .btn, .play, .zw, .rescue-all, #r-aide, .lexique, .restes-link, .untested, .video-host, .install-nudge, .backup-nudge,
+  .recipe .section:has(> .links-list), .hero-art, input[type="url"] { display: none !important; }
+  .content { margin: 0 !important; padding: 0 !important; }
+  .page { padding: 0 !important; max-width: none; }
+  .recipe .hero-fig { max-width: 45%; float: right; margin: 0 0 8px 12px; }
+  .two-col { display: block !important; }
+  .steps li, .ingredients li, .card { break-inside: avoid; }
+  .card { box-shadow: none !important; border: 1px solid #ccc; }
+  .geste, .cue { color: #333; }
+  a { color: inherit; text-decoration: none; }
+  .shop { columns: 2; column-gap: 24px; }
+  .shop li { break-inside: avoid; }
+  .shop input[type="checkbox"] { -webkit-appearance: none; appearance: none; width: 12px; height: 12px; border: 1px solid #000; }
+  .shop li.done { display: none; }
+}
+
+.more-info { margin: 16px 0; }
+.more-info > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }
+.more-info > summary h2 { margin: 0; }
+.more-info .section { margin-top: 12px; }
+
+.untested-line { margin: 6px 0; }
+.untested-line .badge { text-decoration: none; display: inline-flex; align-items: center; gap: 4px; min-height: 32px; }
+@media (max-width: 899px) { .intro.clamp { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 0; } }
+@media (min-width: 900px) { .intro-wrap .link-btn { display: none; } }
+.link-btn { background: none; border: 0; padding: 10px 0; min-height: 44px; color: var(--action); font: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

@@ -50,7 +50,7 @@ def write_manifests(man, full_path, man_path):
     """Trois fichiers : le complet (ici), l'essentiel pour l'appli (chargé au démarrage : chemin, tailles, couleur)
     et les crédits (chargés seulement quand on les affiche), pour ne pas alourdir le démarrage de l'application."""
     json.dump(man, open(full_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {})} for k, v in man.items()}
+    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {}), **({"v": v["v"]} if v.get("v") else {})} for k, v in man.items()}
     # au démarrage : les plats, rubriques, régions ; à la demande : ingrédients, gestes et étapes (audit UX 2026-10-16 §2.10)
     LAZY = ("ingredient/", "geste/", "etape/")
     core = {k: v for k, v in lite.items() if not k.startswith(LAZY)}
@@ -98,7 +98,9 @@ def run(only=""):
         avif = all(os.path.exists(os.path.join(OUT, kind, f"{ident}-{w}.avif")) for w in sizes)
         avg = im.resize((1, 1), Image.BOX).getpixel((0, 0))
         man[key] = {"path": f"img/{kind}/{ident}", "sizes": sizes, "color": "#%02x%02x%02x" % avg, "author": c["author"] or "Auteur·e inconnu·e",
-                    "license": c["license"], "licenseUrl": c["license_url"], "page": c["page"], "source": c["src"], "title": c["title"], "kind": "photo", "avif": avif}
+                    "license": c["license"], "licenseUrl": c["license_url"], "page": c["page"], "source": c["src"], "title": c["title"], "kind": "photo", "avif": avif,
+                    # photo remplacée (« refresh ») : nouvelle version dans l'adresse, sinon les téléphones garderaient l'ancienne en cache
+                    **({"v": format(int(__import__("time").time()), "x")} if s.get("refresh") else ({"v": man[key]["v"]} if man.get(key, {}).get("v") else {}))}
         print("ok", key, sizes, flush=True)
     write_manifests(dict(sorted(man.items())), full_path, man_path)
     total = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(OUT) for f in fs)

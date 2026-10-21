@@ -17,11 +17,15 @@ window.addEventListener("scroll", () => {
   clearTimeout(saveT);
   saveT = window.setTimeout(() => { try { history.replaceState({ ...(history.state ?? {}), y: window.scrollY }, ""); } catch { /* quota */ } }, 120);
 }, { passive: true });
+let backNav = false;
+/** Le dernier changement d'écran était-il un retour arrière (position restaurée) ? */
+export const wasBackNav = () => backNav;
 let moves = 0; // changements d'écran depuis l'ouverture : « Retour » ne doit pas faire quitter l'application
 window.addEventListener("hashchange", () => {
   moves++;
   current = parse(); ls.forEach((l) => l());
   const y = (history.state as { y?: number } | null)?.y;
+  backNav = typeof y === "number"; // retour arrière : on garde la position et le focus (audit dév/UX 2026-10-21)
   if (typeof y !== "number") { window.scrollTo(0, 0); return; }
   // le contenu (pages chargées à la demande, listes) arrive en plusieurs temps : on réessaie brièvement
   let tries = 0;

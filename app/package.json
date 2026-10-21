@@ -7,13 +7,13 @@
   "scripts": {
     "data": "cd ../bible && python export_app_data.py",
     "dev": "vite",
-    "test": "rolldown tests/engine.test.ts --platform node --format esm -d .tmp/test --entry-file-names [name].mjs --log-level warn && node .tmp/test/engine.test.mjs",
+    "test": "rolldown -c rolldown.tests.mjs && node .tmp/test/engine.test.mjs",
     "typecheck": "tsc --noEmit",
-    "build": "npm run test && npm run smoke && tsc --noEmit && vite build",
+    "build": "npm run test && npm run smoke && tsc --noEmit && node scripts/lignes.mjs && vite build && node scripts/prune-photos.mjs && node scripts/budget.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && node scripts/deploy.mjs",
     "icons": "node scripts/make-icons.mjs",
-    "smoke": "rolldown tests/smoke.test.tsx --platform node --format esm -d .tmp/smoke --entry-file-names [name].mjs --external jsdom --log-level warn && node .tmp/smoke/smoke.test.mjs"
+    "smoke": "rolldown -c rolldown.smoke.mjs && node .tmp/smoke/smoke.test.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -24,7 +24,7 @@
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.1.1",
     "jsdom": "^24.1.3",
-    "rolldown": "*",
+    "rolldown": "1.2.14",
     "typescript": "^7.0.2",
     "vite": "^8.3.2"
   }

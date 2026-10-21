@@ -89,7 +89,7 @@ export function Empty({ children }: { children: ReactNode }) { return <div class
 export function Page({ title, sub, children, back, photo }: { title: string; sub?: ReactNode; children: ReactNode; back?: string; photo?: string }) {
   const withPhoto = photo && photoOf(photo);
   return (
-    <main className="page" id="contenu">
+    <main className="page" id="contenu" tabIndex={-1}>
       {back && <a className="back" href={href(back)} onClick={(e) => { e.preventDefault(); goBack(back); }}><Icon name="back" size={20} /> Retour</a>}
       {withPhoto ? (
         <figure className="hero-fig">

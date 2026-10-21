@@ -2,6 +2,8 @@ import { href } from "../lib/router";
 import { setState, useStore } from "../lib/store";
 import { toast } from "../lib/toast";
 import { Empty, Page } from "../components/ui";
+import { encodeShare, shareUrl } from "../lib/partage";
+import { sendLink } from "../lib/sendLink";
 
 /** Liste de courses groupée par rayon (famille du référentiel), partageable (Tome 1 §6.4). */
 export default function Courses() {
@@ -14,12 +16,19 @@ export default function Courses() {
       else { await navigator.clipboard.writeText(text); alert("Liste copiée : colle-la dans Notes, Rappels ou un message."); }
     } catch { /* partage annulé */ }
   };
+  // lien qui contient la liste : l'autre téléphone l'ouvre dans ATLAS et peut la cocher (audit dév/UX 2026-10-21 §2.7)
+  const sendList = async () => {
+    const code = await encodeShare({ v: 1, kind: "courses", shopping: items.filter((i) => !i.done).map(({ label, section, ref, from }) => ({ label, section, ref, from })) });
+    await sendLink("Liste de courses ATLAS", "Ma liste de courses ATLAS : ouvre le lien pour l'ajouter à la tienne et la cocher.", shareUrl(code));
+  };
   return (
-    <Page title="Liste de courses" sub="Ajoutée depuis les recettes et les menus. Coche en faisant les courses." back="/frigo">
+    <Page title="Liste de courses" sub="Ajoutée depuis les recettes et les menus. Coche en faisant les courses." back="/semaine">
       {!items.length ? <Empty>Ta liste est vide. Sur une recette, touche « Courses », ou prépare <a href={href("/semaine")}>ta semaine</a>.</Empty> : (
         <>
           <div className="row">
-            <button className="btn" onClick={() => void share()}>Partager ou copier</button>
+            <button className="btn" onClick={() => void sendList()}>Envoyer la liste à cocher</button>
+            <button className="btn ghost" onClick={() => void share()}>Copier en texte</button>
+            <button className="btn ghost" onClick={() => window.print()}>Imprimer</button>
             <button className="btn ghost" onClick={() => setState((s) => { s.shopping = s.shopping.filter((i) => !i.done); })}>Retirer les articles cochés</button>
             <button className="btn ghost danger" onClick={() => { const before = items; setState((s) => { s.shopping = []; }); toast("Liste vidée", { undo: () => setState((s) => { s.shopping = before; }) }); }}>Tout vider</button>
           </div>

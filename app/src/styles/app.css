@@ -281,3 +281,4 @@ details > summary { cursor: pointer; min-height: 32px; }
 .tech-table th, .tech-table td { text-align: left; vertical-align: top; padding: .55rem .6rem; border-bottom: 1px solid var(--line, rgba(0,0,0,.12)); }
 .tech-table th { font-weight: 600; width: 42%; }
 .tech-table tr:nth-child(odd) { background: color-mix(in srgb, currentColor 4%, transparent); }
+main:focus { outline: none; } /* cible du focus après un changement d'écran : pas de cadre */

@@ -7,6 +7,7 @@ import { canFetchMeta, fetchMeta } from "../lib/oembed";
 import { getState, setState, uid, useStore, type MyImport } from "../lib/store";
 import { search } from "../lib/text";
 import { Chip, Empty, Page, Section } from "../components/ui";
+import { safeHref, safeUrl } from "../lib/safe";
 
 type Tab = "importer" | "mes" | "biblio";
 
@@ -89,6 +90,9 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
     if (saveAfter) doSave(c, u, text, c.title, c.cat);
   };
   const doSave = (r: Classified, u: string, cap: string, t: string, ct: string, au = author) => {
+    const safe = safeUrl(u);
+    if (!safe) { setMsg("Colle un lien qui commence par https:// (TikTok, Instagram, YouTube, un site de recettes…)."); return; }
+    u = safe;
     if (getState().imports.some((i) => i.url === u)) { setMsg("Ce lien est déjà dans tes imports."); return; }
     const item: MyImport = { id: uid(), url: u, title: t || titleFromUrl(u), caption: cap, source: sourceOf(u), cat: ct, macro: r.macro, pork: r.pork, alcohol: r.alcohol, ingredients: r.ingredients, steps: r.steps, added: new Date().toISOString(), notes: "", author: au };
     setState((s) => { s.imports.unshift(item); });
@@ -98,7 +102,7 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
   useEffect(() => { if (initUrl) void auto(initUrl, caption, true); }, []); // partage depuis TikTok, YouTube… : tri et enregistrement immédiats
   const saveLinks = (links: string[]) => {
     const existing = new Set(useStoreSnapshot().map((i) => i.url));
-    const fresh = links.filter((l) => !existing.has(l));
+    const fresh = links.map(safeUrl).filter((l): l is string => !!l && !existing.has(l));
     const lib = new Map(IMPORT_LIBRARY.map((i) => [i.url.split("?")[0], i]));
     setState((s) => {
       for (const l of fresh) {
@@ -205,7 +209,7 @@ function MesImports() {
       <ul className="imports">
         {list.map((i) => (
           <li key={i.id} className="card pad">
-            <span className="row"><PlayButton v={{ title: i.title, url: i.url, embed: embedOf(i.url), source: i.source }} /><a href={i.url} target="_blank" rel="noopener noreferrer"><strong>{i.title}</strong></a></span>
+            <span className="row"><PlayButton v={{ title: i.title, url: i.url, embed: embedOf(i.url), source: i.source }} /><a href={safeHref(i.url)} target="_blank" rel="noopener noreferrer"><strong>{i.title}</strong></a></span>
             <p className="meta">{i.source}{i.author ? ` · ${i.author}` : ""} · ajouté le {new Date(i.added).toLocaleDateString("fr-FR")} · 🐖 {i.pork} · 🍷 {i.alcohol}</p>
             <div className="row">
               <select aria-label="Catégorie" value={i.cat} onChange={(e) => setState((s) => { const x = s.imports.find((y) => y.id === i.id); if (x) x.cat = e.target.value; })}>

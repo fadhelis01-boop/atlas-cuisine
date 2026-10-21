@@ -1,7 +1,11 @@
 import { ICON_NAMES, Icon } from "./components/icons";
 import { Suspense, lazy, useEffect } from "react";
 import { href, useRoute } from "./lib/router";
+import { useScreenChange } from "./lib/a11y";
+import { PROFILE_MATCH, TABS, tabOf } from "./lib/nav";
+import { recordStartup, useUsageCounter } from "./lib/mesures";
 import { useStore } from "./lib/store";
+import { useDetails } from "./lib/data";
 import { useTimerLoop } from "./lib/timers";
 import { applyUpdate, usePwa } from "./lib/pwa";
 import TimerDock from "./components/TimerDock";
@@ -38,16 +42,14 @@ const Credits = lazy(() => import("./pages/Credits"));
 const Catalogue = lazy(() => import("./pages/Catalogue"));
 const Apprendre = lazy(() => import("./pages/Apprendre"));
 const Semaine = lazy(() => import("./pages/Semaine"));
+const Partage = lazy(() => import("./pages/Partage"));
 
-const Loading = () => <main className="page" aria-busy="true"><p className="meta">Chargement…</p></main>;
+// écrans qui n'ont besoin que de l'index des recettes : ils s'affichent sans attendre le détail (étapes, conseils…)
+const INDEX_ONLY = new Set(["", "explorer", "region", "profil", "biblio", "imports", "credits", "apprendre", "dictionnaire", "ingredient", "icones", "frigo", "courses", "partage"]);
 
-const TABS = [
-  { to: "/", label: "Accueil", icon: "home", match: [""] },
-  { to: "/explorer", label: "Explorer", icon: "compass", match: ["explorer", "region", "recherche", "techniques", "technique", "pains", "sauces", "fetes", "enfants", "menu", "zero-dechet", "dictionnaire", "ingredient", "recettes", "apprendre"] },
-  { to: "/frigo", label: "Frigo", icon: "fridge", match: ["frigo", "courses", "semaine"] },
-  { to: "/biblio", label: "Mes recettes", icon: "book", match: ["biblio", "imports"] },
-  { to: "/profil", label: "Profil", icon: "chef", match: ["profil", "credits"] },
-];
+const Loading = () => <main className="page" id="contenu" tabIndex={-1} aria-busy="true"><p className="meta">Chargement…</p></main>;
+
+
 
 export default function App() {
   const route = useRoute();
@@ -55,6 +57,9 @@ export default function App() {
   const settings = useStore((s) => s.settings);
   const pwa = usePwa();
   useTimerLoop();
+  useScreenChange(`${route.path.join("/")}?${route.query.toString()}`);
+  useUsageCounter(route.path[0]);
+  useEffect(() => { recordStartup(); }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -76,7 +81,9 @@ export default function App() {
   }, []);
 
   const [p0, p1] = route.path;
-  if (p0 === "cuisine" && p1) return <Suspense fallback={<Loading />}><Cook id={p1} /></Suspense>;
+  const details = useDetails();
+  const needsDetails = !INDEX_ONLY.has(p0 ?? "");
+  if (p0 === "cuisine" && p1) return details ? <Suspense fallback={<Loading />}><Cook id={p1} /></Suspense> : <Loading />;
   if (!onboarded && p0 !== "profil") return <Suspense fallback={<Loading />}><Onboarding /></Suspense>;
 
   let page;
@@ -104,18 +111,20 @@ export default function App() {
     case "profil": page = <Profil />; break;
     case "credits": page = <Credits />; break;
     case "apprendre": page = <Apprendre />; break;
-    case "icones": if (!import.meta.env.DEV) { page = null; break; } page = <main className="page"><h1>Icônes ATLAS</h1><div className="icon-sheet">{ICON_NAMES.map((n) => <figure key={n}><Icon name={n} size={40} /><figcaption>{n}</figcaption></figure>)}</div></main>; break;
+    case "icones": if (!import.meta.env.DEV) { page = null; break; } page = <main className="page" id="contenu" tabIndex={-1}><h1>Icônes ATLAS</h1><div className="icon-sheet">{ICON_NAMES.map((n) => <figure key={n}><Icon name={n} size={40} /><figcaption>{n}</figcaption></figure>)}</div></main>; break;
     case "semaine": page = <Semaine key={route.query.get("ajout") ?? ""} add={route.query.get("ajout")} />; break;
+    case "partage": page = <Partage key={route.query.get("d") ?? ""} d={route.query.get("d") ?? ""} />; break;
     case "recettes": page = <Catalogue q0={route.query.get("q") ?? ""} />; break;
     case "dictionnaire": page = <DictionaryPage q0={route.query.get("q") ?? ""} />; break;
     case "ingredient": page = <IngredientPage key={p1} slug={p1} />; break;
-    default: page = <main className="page"><h1>Page introuvable</h1><a href={href("/")}>Retour à l'accueil</a></main>;
+    default: page = <main className="page" id="contenu" tabIndex={-1}><h1>Page introuvable</h1><a href={href("/")}>Retour à l'accueil</a></main>;
   }
-  const active = TABS.find((t) => t.match.includes(p0 ?? "")) ?? (p0 === "recette" ? null : TABS[0]);
+  const active = tabOf(p0); // fiche recette, mode cuisine : aucun onglet
+  const onProfile = PROFILE_MATCH.includes(p0 ?? "");
 
   return (
     <div className="shell">
-      <a className="skip" href="#contenu">Aller au contenu</a>
+      <a className="skip" href="#contenu" onClick={(e) => { e.preventDefault(); document.getElementById("contenu")?.focus(); }}>Aller au contenu</a>
       <nav className="nav" aria-label="Navigation principale">
         <a className="brand" href={href("/")}><img src="./icons/icon.svg" alt="" width="32" height="32" /> <span>ATLAS</span></a>
         {TABS.map((t) => (
@@ -123,12 +132,15 @@ export default function App() {
             <span className="tab-ic" aria-hidden="true"><Icon name={t.icon} size={26} /></span><span className="tab-lb">{t.label}</span>
           </a>
         ))}
+        <a href={href("/profil")} className={`tab tab-profile ${onProfile ? "on" : ""}`} aria-current={onProfile ? "page" : undefined} aria-label="Profil et réglages">
+          <span className="tab-ic" aria-hidden="true"><Icon name="chef" size={26} /></span><span className="tab-lb">Profil</span>
+        </a>
       </nav>
       <div className="content">
         {pwa.updateReady && (
           <div className="update" role="status">Une nouvelle version d'ATLAS est prête. <button className="btn small" onClick={applyUpdate}>Mettre à jour</button></div>
         )}
-        <ErrorBoundary resetKey={route.path.join("/")}><Suspense fallback={<Loading />}>{page}</Suspense></ErrorBoundary>
+        <ErrorBoundary resetKey={route.path.join("/")}><Suspense fallback={<Loading />}>{needsDetails && !details ? <Loading /> : page}</Suspense></ErrorBoundary>
       </div>
       <TimerDock />
       <Toasts />

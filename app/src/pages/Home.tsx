@@ -5,6 +5,8 @@ import { FETES } from "../lib/content";
 import { evaluate } from "../lib/engine";
 import { go, href } from "../lib/router";
 import { backupDue, setState, useProfile, useStore } from "../lib/store";
+import { installDue } from "../lib/install";
+import { isIos, isStandalone } from "../lib/pwa";
 import { norm } from "../lib/text";
 import type { Recipe } from "../lib/types";
 import { Grid, RecipeCard, Section, useVisible } from "../components/ui";
@@ -114,6 +116,22 @@ function BackupNudge() {
   );
 }
 
+function InstallNudge() {
+  const due = useStore((s) => installDue(s, isIos(), isStandalone()));
+  if (!due) return null;
+  return (
+    <div className="card pad install-nudge" role="note">
+      <p><strong>Installe ATLAS sur ton iPhone pour ne pas perdre tes favoris, ton carnet et ta semaine.</strong> Dans Safari, un site non ouvert pendant 7 jours voit ses données effacées ; une fois installé, ATLAS les garde.</p>
+      <ol className="small">
+        <li>Touche le bouton <strong>Partager</strong> de Safari (le carré avec une flèche vers le haut).</li>
+        <li>Choisis <strong>Sur l'écran d'accueil</strong>, puis <strong>Ajouter</strong>.</li>
+        <li>Ouvre ATLAS depuis sa nouvelle icône : tes données y sont déjà.</li>
+      </ol>
+      <button className="btn small ghost" onClick={() => setState((s) => { s.installNudge = new Date().toISOString(); })}>Plus tard</button>
+    </div>
+  );
+}
+
 /** Accueil personnalisé (audit UX 7) : tant qu'on a très peu cuisiné, le parcours débutant passe en premier. */
 function Beginner() {
   const cooked = useStore((s) => Object.values(s.cooked).reduce((a, n) => a + n, 0));
@@ -173,7 +191,7 @@ export default function Home() {
   const kidsPick = p.kidsAge !== null ? visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat").slice(0, 4) : [];
 
   return (
-    <main className="page home" id="contenu">
+    <main className="page home" id="contenu" tabIndex={-1}>
       <form className="hero hero-skin" role="search" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(q)}`); }}>
         <div className="hero-copy">
           <p className="hero-hi">{g.hi}</p>
@@ -205,6 +223,7 @@ export default function Home() {
       )}
 
       <Beginner />
+      <InstallNudge />
       <BackupNudge />
 
       {(today || dessert) && (

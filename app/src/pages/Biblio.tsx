@@ -2,8 +2,9 @@ import { Icon } from "../components/icons";
 import { aTester, PROTOCOLE } from "../lib/aTester";
 import { RECIPE_BY_ID } from "../lib/data";
 import { href } from "../lib/router";
-import { setState, useStore } from "../lib/store";
+import { getState, setState, useStore } from "../lib/store";
 import { Empty, Grid, Page, RecipeCard, Section } from "../components/ui";
+import { safeHref } from "../lib/safe";
 
 export default function Biblio() {
   const favs = useStore((s) => s.favorites).map((id) => RECIPE_BY_ID[id]).filter(Boolean);
@@ -17,6 +18,10 @@ export default function Biblio() {
     const lines = ["# Essais en cuisine — carnet ATLAS", `Exporté le ${new Date().toLocaleDateString("fr-FR")} · ${tried.length} recette(s)`, "",
       "| Recette | Identifiant | Note /5 | Fois | Date | Ce qu'il faut changer |", "|---|---|---|---|---|---|",
       ...tried.map(([id, e]) => `| ${RECIPE_BY_ID[id].title} | ${id} | ${e.rating || "-"} | ${cooked[id] ?? 0} | ${new Date(e.date).toLocaleDateString("fr-FR")} | ${e.note.replace(/[|\n]/g, " ") || "-"} |`)];
+    // écrans ouverts : seulement si la personne l'a choisi dans le Profil (audit dév/UX 2026-10-21 §5.7)
+    const st = getState();
+    if (st.shareUsage && st.usage && Object.keys(st.usage).length) lines.push("", "## Les rubriques que j'utilise", "", "| Rubrique | Ouvertures |", "|---|---|",
+      ...Object.entries(st.usage).sort((a, b) => b[1] - a[1]).map(([k, n]) => `| ${k} | ${n} |`));
     const url = URL.createObjectURL(new Blob([lines.join("\n") + "\n"], { type: "text/markdown" }));
     const a = document.createElement("a"); a.href = url; a.download = `atlas-essais-${new Date().toISOString().slice(0, 10)}.md`; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -52,7 +57,7 @@ export default function Biblio() {
         )) : <Empty>Compose un menu depuis une recette (« Pour recevoir » en bas de fiche) ou la rubrique <a href={href("/fetes")}>Fêtes</a>.</Empty>}
       </Section>
       <Section title={`Mes imports (${imports.length})`} more={<a href={href("/imports")}>Gérer →</a>}>
-        {imports.length ? <ul className="links-list">{imports.slice(0, 10).map((i) => <li key={i.id}><a href={i.url} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul> : <Empty>Importe tes recettes TikTok, Instagram ou YouTube depuis <a href={href("/imports")}>Mes imports</a>.</Empty>}
+        {imports.length ? <ul className="links-list">{imports.slice(0, 10).map((i) => <li key={i.id}><a href={safeHref(i.url)} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul> : <Empty>Importe tes recettes TikTok, Instagram ou YouTube depuis <a href={href("/imports")}>Mes imports</a>.</Empty>}
       </Section>
       {cookedList.length > 0 && (
         <Section title="Déjà cuisinées">

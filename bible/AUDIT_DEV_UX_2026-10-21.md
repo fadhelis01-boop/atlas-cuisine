@@ -74,6 +74,7 @@ Quatre défauts seulement, ce qui est un très bon score :
 ## 1. P0 : ce qui gêne ou expose aujourd'hui
 
 ### 1.1 L'écran s'éteint pendant la cuisson
+> **Erratum (mise en œuvre, §8) :** constat faux. Le mode cuisine demandait déjà l'écran allumé (`useWakeLock`) ; ma recherche avait été tronquée. Le vrai manque était le cas où le téléphone ne le permet pas : il est traité au §8.
 Aucune utilisation de l'API **Screen Wake Lock** dans le code. La personne a les mains dans la farine ; au bout de 30 s à 2 min, selon le téléphone, l'écran s'éteint au milieu d'une étape. C'est le défaut le plus ressenti d'une appli de cuisine, et le plus simple à corriger.
 
 *À faire :* `navigator.wakeLock.request("screen")` à l'ouverture du mode cuisine, à redemander au retour au premier plan (`visibilitychange`), à relâcher en sortant. Repli silencieux si le navigateur ne le prend pas en charge. La fonction est disponible sur Safari iOS 16.4 et plus, ainsi que sur Chrome Android.
@@ -275,3 +276,98 @@ La liste de courses et la semaine vivent sur **un seul téléphone**. Dans un fo
 | 12 | Finitions P2 (cache photos versionné, journal filtré, cibles et textes, axe, impression, `og:`, table de renommage, fond de couleur des photos) | P2 | 1 jour |
 | 13 | Outillage : formateur, tests découpés, 5 parcours Playwright, dépendance épinglée | P2 | 1 jour |
 | 14 | Mesure sur un vrai téléphone d'entrée de gamme | P2 | 1 h |
+
+---
+
+## 8. Mise en œuvre (21 octobre 2026)
+
+Les 14 chantiers du §7 et les angles morts du §5 sont traités. Chacun est vérifié par un contrôle automatique : tests 88 à 95, six parcours avec de vrais clics dans le test de rendu, budget de poids et cliquet de lisibilité au build.
+
+### Erratum : trois constats de l'audit étaient faux
+
+1. **Écran qui s'éteint (§1.1).** Le mode cuisine utilisait déjà Screen Wake Lock ; ma recherche avait été coupée trop tôt. Le vrai manque était le cas où le téléphone ne le permet pas (iPhone avant iOS 16.4, certains navigateurs). Le mode cuisine le signale maintenant, avec un conseil.
+2. **Couleur d'attente des photos (§3.8).** Elle était déjà posée en fond, mais invisible parce que l'image restait transparente pendant le chargement. C'est corrigé.
+3. **Originaux et candidates dans le dépôt (§2.6).** Ils étaient déjà exclus par `.gitignore`. Le poids de `.git` vient de l'historique des photos publiées. Le réécrire serait destructif et n'a pas été fait sans accord.
+
+### Mesures avant / après
+
+| Mesure | Avant | Après |
+|---|---|---|
+| JavaScript au démarrage (compressé) | 557 Ko | **372 Ko** (−33 %), plafond de 400 Ko contrôlé à chaque build |
+| Fiche recette (blanquette, téléphone) | 9,7 écrans, ingrédients à 1,5 écran | **7,1 écrans**, ingrédients à 1,2 écran ; recettes courtes : 4,5 à 5 écrans |
+| Défauts axe-core (11 écrans) | 4 | **0** |
+| Photos publiées en ligne | 469 Mo (WebP + AVIF, 3 tailles) | **135 Mo** (AVIF 400/800 + WebP 400) ; 350 Mo de moins |
+| Publication | Branche neuve poussée en force à chaque fois | Incrémentale : seuls les fichiers modifiés partent |
+| Contrôles automatiques | 87 + rendu de 28 pages | **95** + 6 parcours avec clics + rendu de 28 pages × 2 profils |
+
+**Cible non atteinte :** la fiche n'affiche pas encore les ingrédients dans le premier écran (1,2 écran). L'en-tête ne garde que l'utile : titre, temps, badges régime et allergènes, saison, mention « non testée », actions. Le reste est replié.
+
+### Ce qui a été fait
+
+**P0**
+- **Mode cuisine.** Si le téléphone ne peut pas garder l'écran allumé, une note le dit et donne un conseil (`useWakeLock` renvoie son état).
+- **Portions.** Un seul constructeur de lien (`cookHref`, `lib/nav.ts`) pour les deux boutons « Cuisiner ». Le bouton visible à partir de 900 px perdait les portions ; c'est vérifié par un parcours du test de rendu.
+- **Sécurité.**
+  - `lib/safe.ts` : `safeUrl` et `safeHref` (http et https seulement) à chaque lien saisi par l'utilisateur, et filtrage à l'enregistrement d'un import.
+  - **Restauration en deux temps.** `sanitizeState` vérifie les types, borne les listes, refuse les liens douteux, les dates impossibles et les identifiants suspects, puis compte ce qu'il écarte. Un aperçu montre le contenu du fichier, puis on choisit : **ajouter à mes données** (fusion, le plus récent gagne) ou **tout remplacer**.
+  - **Content-Security-Policy** posée à la compilation : scripts de l'origine seulement, pas d'`eval`, `object-src 'none'`, cadres limités à YouTube nocookie et TikTok, connexions aux trois services oEmbed. Vérifié : le lecteur YouTube fonctionne, et un script externe est bien bloqué.
+- **Navigation accessible** (`lib/a11y.ts`).
+  - Le titre de l'onglet devient « titre de la page · ATLAS ».
+  - Le focus va sur le contenu après un changement d'écran (sauf au retour arrière), et l'écran est annoncé par une région `aria-live`.
+  - Trouvé en route : le lien « Aller au contenu » ouvrait une page introuvable avec le routeur par ancre. C'est corrigé, et toutes les pages ont une cible focusable.
+
+**P1**
+- **Démarrage léger.** L'export écrit un **index** (cartes, recherche, moteur, planificateur) et un **détail** à part (étapes, introductions, vidéos, conseils, matériel, conservation). L'index est lu en `JSON.parse` ; le détail arrive juste après le premier affichage, et les écrans qui en ont besoin l'attendent. Le budget de poids (`scripts/budget.mjs`) fait échouer le build au-delà de 400 Ko.
+- **Fiche recette resserrée.**
+  - Les astuces du chef suivent les étapes.
+  - Repliés : les gestes du métier (« Le geste : Roux »), le zéro déchet, les problèmes fréquents, « Bon à savoir » (conservation, enfants, boissons) et les vidéos.
+  - Le crédit photo passe dans un bouton « i » sur la photo, l'introduction est limitée à 3 lignes avec « Lire la suite », et « Pas encore testée » devient un badge relié au carnet.
+  - Les 5 actions tiennent sur une ligne, et la mise à jour disponible devient un message flottant.
+- **Onglets.**
+  - La barre devient Accueil · Explorer · **Ma semaine** (planning, courses, restes) · Frigo (frigo, Bien choisir) · Mes recettes.
+  - Le Profil passe en bouton rond en haut à droite sur téléphone, et en bas de la colonne sur grand écran.
+  - Chaque écran allume le bon onglet ; le test 93 vérifie toutes les routes.
+- **État local.**
+  - Version de schéma et migration testée.
+  - Table des recettes renommées (`bible/renommages.py` → `renames.json`) suivie dans les favoris, le carnet, la semaine et l'historique.
+  - Synchronisation entre onglets (événement `storage`).
+  - Copie à la demande : seules les branches touchées sont recopiées ; le test 90 vérifie que les imports ne sont pas recopiés quand on coche un favori.
+- **iPhone.** Une invitation à installer ATLAS, avec le pas-à-pas, apparaît dès 3 éléments personnels (au lieu d'attendre 30 jours sans sauvegarde), au plus une fois par mois.
+- **Foyer à deux** (`lib/partage.ts`, écran `/partage`).
+  - La liste de courses et la semaine voyagent **dans un lien** compressé : l'autre téléphone voit le contenu, puis l'ajoute sans écraser ce qu'il a.
+  - La semaine s'exporte dans l'**agenda** (`.ics`).
+  - Le lien reçu est vérifié comme une donnée extérieure.
+- **Publication.**
+  - `deploy.mjs` garde une copie de `gh-pages` avec son historique : seuls les fichiers modifiés partent.
+  - `prune-photos.mjs` ne publie que l'AVIF 400/800 et le WebP 400.
+
+**P2**
+- **Photos.** Une photo retraitée reçoit un numéro de version dans son adresse, pour ne plus être servie depuis l'ancien cache. La couleur dominante est enfin visible pendant le chargement.
+- **Journal d'erreurs** sans le bruit des mises à jour hors ligne.
+- **Cibles et textes.** Lignes de liste de 44 px, textes à 14 px au moins hors mentions légales, liens de licence plus faciles à toucher, rôle ARIA du Frigo corrigé, journal d'erreurs atteignable au clavier.
+- **Impression** de la fiche et de la liste de courses (liste en deux colonnes, articles cochés masqués), avec un bouton « Imprimer ».
+- **Aperçu des liens partagés.** Balises `og:` et image 1200 × 630, composée à partir d'une photo CC0.
+- **Recettes disparues.** Elles sont retirées des favoris et de la semaine avec un message ; les notes du carnet sont gardées.
+
+**Outillage**
+- **Tests découpés** en cinq suites isolées (`tests/e1` à `e5`) et un socle commun (`tests/helpers.ts`) : deux contrôles ne peuvent plus se télescoper.
+- **Six parcours avec clics** dans le test de rendu :
+  - portions transmises au mode cuisine ;
+  - titre et focus après un changement d'écran ;
+  - lien d'évitement ;
+  - semaine envoyée dans la liste de courses ;
+  - liste reçue par lien puis ajoutée ;
+  - onglet juste.
+- **Cliquet de lisibilité** (`scripts/lignes.mjs`) : le nombre de lignes de plus de 200 caractères ne peut que baisser (621 aujourd'hui, surtout des textes de techniques et de restes).
+- **`rolldown` épinglé**, avec une configuration de tests qui reproduit l'import `?raw` de Vite.
+
+**Angles morts**
+- **Rubriques utilisées.** Un compteur local, visible dans le Profil, joint à l'export du carnet seulement si la case est cochée ; rien n'est envoyé.
+- **Mesure sur l'appareil.** ATLAS chronomètre sa propre ouverture sur le téléphone de la personne, et le Profil affiche la moyenne. C'est la seule mesure honnête sur un téléphone à 150 €.
+- **Tablette et ordinateur vérifiés** : aucun débordement, colonne de navigation avec le Profil en bas, bouton « Cuisiner » avec les portions.
+
+### Reste ouvert
+- **Historique Git.** Le dossier `.git` pèse 455 Mo à cause des photos des versions passées. Le réduire suppose de réécrire l'historique (destructif) : à décider par le propriétaire.
+- **Mesure sur un vrai téléphone d'entrée de gamme.** L'outil est en place (Profil › Sur cet appareil), il faut ouvrir ATLAS sur un tel appareil.
+- **Ingrédients au premier écran** sur téléphone (voir plus haut).
+
