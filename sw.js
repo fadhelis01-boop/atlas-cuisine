@@ -1,6 +1,6 @@
 /* ATLAS — service worker : fonctionnement hors connexion (recettes, audio système, minuteurs)
    et détection des nouvelles versions. VERSION est remplacée à chaque compilation. */
-const VERSION = "2026-10-21T12:56:42.144Z";
+const VERSION = "2026-10-21T16:50:42.496Z";
 const APP_CACHE = "atlas-app-" + VERSION;
 const IMG_CACHE = "atlas-img-v1"; // photos : gardées d'une version à l'autre (elles ne changent pas de nom)
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon.svg", "./icons/icon-192.png", "./icons/apple-touch-icon.png"];
@@ -13,7 +13,7 @@ self.addEventListener("install", (event) => {
       try {
         const html = await (await fetch("./index.html", { cache: "reload" })).text();
         const assets = [...html.matchAll(/(?:src|href)="(\.\/assets\/[^"]+)"/g)].map((m) => m[1]);
-        const all = ["./assets/Apprendre-ClEEcT4O.js","./assets/Biblio-DeJdEc4f.js","./assets/Catalogue--Hx-bQ7L.js","./assets/Cook-CnSQwyMi.js","./assets/Courses-CCHEZDqU.js","./assets/Credits-CzWMkhsw.js","./assets/credits-VlhORFne.js","./assets/dico-DTc8bDkO.js","./assets/Enfants-CDvgHoIf.js","./assets/engine-DXJQys7z.js","./assets/Fetes-Ca8TCxFR.js","./assets/Frigo-DE-rizKF.js","./assets/Household-B5djjA9f.js","./assets/images_more-BUnlqnMg.js","./assets/Imports-D067UnnX.js","./assets/imports-DEfxD48W.js","./assets/index-24N5k5z6.js","./assets/index-nvSvgaGq.css","./assets/leftovers-DIPVLV0z.js","./assets/Marche-CRUVwTWi.js","./assets/Menu-DUQsJBFY.js","./assets/Onboarding-CekFwNM1.js","./assets/Pains-DEcdCka9.js","./assets/PiqueNique-jNG61SjB.js","./assets/planner-BYyLfzCn.js","./assets/Profil-C_Ccap7i.js","./assets/recipe_videos-DvR5mllc.js","./assets/Restes-BY2jc4UG.js","./assets/Sauces-BBW4SgSi.js","./assets/Semaine-DIkNW6AE.js","./assets/Techniques-yMB23d2s.js","./assets/ZeroDechet-_UB3JeZk.js"].filter((a) => a && !a.startsWith("__")); // liste complète écrite à la compilation
+        const all = ["./assets/Apprendre-CzB2vlKn.js","./assets/Biblio-DBGq1yRl.js","./assets/Catalogue-CeD3Yndd.js","./assets/Cook-DezwDfPJ.js","./assets/Courses-tg7qarRN.js","./assets/Credits-DG78K08N.js","./assets/credits-VlhORFne.js","./assets/dico-DTc8bDkO.js","./assets/Enfants-B16_b8Lk.js","./assets/engine-DaBDUaS9.js","./assets/Fetes-DVk6E0nl.js","./assets/Frigo-BfTPxmxg.js","./assets/Household-Bg5R3p5-.js","./assets/images_more-BUnlqnMg.js","./assets/imports-DEfxD48W.js","./assets/Imports-nFpoPg9b.js","./assets/index-CfA-3VnZ.css","./assets/index-DNe899Sz.js","./assets/leftovers-DIPVLV0z.js","./assets/Marche-BPZFN2Oe.js","./assets/Menu-DFJol70n.js","./assets/Onboarding-DDhntgW0.js","./assets/Pains-CFhLxp3y.js","./assets/partage-BJgdbax4.js","./assets/Partage-VYS9aBYn.js","./assets/PiqueNique-D5pX267j.js","./assets/planner-CxeCMaqU.js","./assets/Profil-DO5TiuC9.js","./assets/recipes_detail-DJkfJvKZ.js","./assets/recipe_videos-DvR5mllc.js","./assets/Restes-GfU1r-Jo.js","./assets/Sauces-D4EpAerN.js","./assets/Semaine-CN6-ufii.js","./assets/sendLink-BMbsfecK.js","./assets/Techniques-DQN5V_SV.js","./assets/ZeroDechet-Ds4q4xwq.js"].filter((a) => a && !a.startsWith("__")); // liste complète écrite à la compilation
         await cache.addAll([...new Set([...assets, ...all])]);
       } catch (e) {
         /* hors ligne pendant l'installation */
