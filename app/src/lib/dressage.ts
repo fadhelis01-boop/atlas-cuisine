@@ -43,13 +43,20 @@ export function finishFor(r: Recipe): Finish {
   return { taste, plate, green };
 }
 
+/** En dessous, un plat est « léger en protéines » (repère : environ 20 à 30 g par repas principal pour un adulte). */
+export const LIGHT_PROT = 15;
+
 /** Repère d'équilibre (audit 🟢 9), sans culpabiliser : ce qu'il manque pour un repas complet. */
 export function balanceOf(r: Recipe): string | null {
   if (r.role !== "plat") return null;
   const secs = flatten(r.ingredients).filter((l) => l.ref && l.weight >= 1).map((l) => INGREDIENTS[l.ref!]?.section ?? "");
   const veg = secs.some((x) => /^Légumes/.test(x));
   const starch = secs.some((x) => /^(Légumineuses|Farines)/.test(x)) || flatten(r.ingredients).some((l) => /pomme de terre|patate|manioc|igname|plantain|riz|pâtes|semoule|pain/i.test(l.ref ?? ""));
-  const prot = secs.some((x) => /^(Viandes|Poissons|Porc|Œufs)/.test(x)) || secs.some((x) => /^Légumineuses/.test(x));
-  const add = [!veg && "des légumes ou une salade", !starch && "un féculent (pain, riz, semoule ou pommes de terre)", !prot && "une source de protéines (œuf, légumineuses, fromage, poisson)"].filter(Boolean);
-  return add.length ? `Pour un repas complet, ajoute ${add.join(" et ")} ; un fruit ou un laitage en dessert.` : "Assiette complète : légumes, féculent et protéines ; un fruit ou un laitage en dessert suffit.";
+  const meat = secs.some((x) => /^(Viandes|Poissons|Porc)/.test(x));
+  const prot = r.prot != null ? r.prot >= LIGHT_PROT : meat || secs.some((x) => /^(Œufs|Légumineuses)/.test(x));
+  // audit gourmet §4.2 : on chiffre les protéines (estimation) et on dit quoi ajouter quand le plat est léger, sans trahir la recette
+  const more = meat ? "un œuf, ou un peu plus de viande ou de poisson" : "un œuf, un laitage (yaourt, fromage) ou des légumineuses";
+  const add = [!veg && "des légumes ou une salade", !starch && "un féculent (pain, riz, semoule ou pommes de terre)", !prot && more].filter(Boolean);
+  const grams = r.prot != null ? ` Protéines : environ ${r.prot} g par part${r.side ? ", accompagnement compris" : ""} (estimation)${r.prot < LIGHT_PROT ? ", c'est léger pour un plat" : ""}.` : "";
+  return (add.length ? `Pour un repas complet, ajoute ${add.join(" et ")} ; un fruit ou un laitage en dessert.` : "Assiette complète : légumes, féculent et protéines ; un fruit ou un laitage en dessert suffit.") + grams;
 }

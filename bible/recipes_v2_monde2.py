@@ -104,7 +104,7 @@ K("imam_bayildi", "Imam bayildi (aubergines farcies fondantes)", "İmam bayıld�
 
 K("tahchin", "Gâteau de riz safrané au poulet (tahchin)", "Tahchin", "Moyen-Orient & Caucase › Iran", "P", 2, 6, 30, 90, "€€", "Moule à gâteau ou cocotte.",
   "Riz mêlé de yaourt, safran et jaunes d'œufs, cuit au four en gâteau avec un cœur de poulet : la croûte dorée est spectaculaire.",
-  [f"400 g|de riz basmati précuit|{RIZ}|3", f"250 g|de yaourt grec|{GREC}|2", "2|jaunes d'œufs|Jaune d'œuf|1", "1 pincée|de safran infusé|Safran (pistils)|2", f"400 g|de poulet cuit effiloché|{BLANC_P}|2", f"60 g|de beurre|{BEURRE}|2", "30 g|de canneberges (ou épine-vinette)|Canneberges séchées|1"],
+  [f"400 g|de riz basmati précuit|{RIZ}|3", f"250 g|de yaourt grec|{GREC}|2", "2|jaunes d'œufs|Jaune d'œuf|1", "1 pincée|de safran infusé|Safran (pistils)|2", f"500 g|de poulet cuit effiloché|{BLANC_P}|2", f"60 g|de beurre|{BEURRE}|2", "30 g|de canneberges (ou épine-vinette)|Canneberges séchées|1"],
   ["**Mélanger.** Riz, yaourt, jaunes, safran, sel.", "**Monter.** Moule beurré, moitié du riz, poulet, reste du riz, tassé.", "**Cuire.** Couvert, 1 h 15 à 190 °C ; démoule, canneberges poêlées au beurre."], age=1, fetes=["Repas de famille"], profil=["gras"])
 
 K("pakoras", "Pakoras d'oignons et légumes", "Pakora", "Asie du Sud › Inde", "E", 1, 4, 20, 10, "€", "Casserole profonde.",
@@ -114,7 +114,7 @@ K("pakoras", "Pakoras d'oignons et légumes", "Pakora", "Asie du Sud › Inde", 
 
 K("yaki_udon", "Udon sautés au poulet et légumes (yaki udon)", "Yaki udon", "Asie de l'Est › Japon", "P", 1, 4, 15, 10, "€", "Wok.",
   "Nouilles épaisses sautées avec poulet, chou, carotte et sauce soja-mirin : moelleuses, rapides.",
-  ["4 portions|de nouilles udon|Nouilles udon|3", f"300 g|de poulet émincé|{BLANC_P}|2", "¼|chou|Chou blanc / rouge|2", f"1|carotte|{CAROTTE}|1", "100 g|de shiitakés|Shiitake|1", f"3 c. à s.|de sauce soja|{SOJA}|2", "1 c. à s.|de mirin|Mirin|1", f"2 c. à s.|d'huile|{HN}|1"],
+  ["4 portions|de nouilles udon|Nouilles udon|3", f"400 g|de poulet émincé|{BLANC_P}|2", "¼|chou|Chou blanc / rouge|2", f"1|carotte|{CAROTTE}|1", "100 g|de shiitakés|Shiitake|1", f"3 c. à s.|de sauce soja|{SOJA}|2", "1 c. à s.|de mirin|Mirin|1", f"2 c. à s.|d'huile|{HN}|1"],
   ["**Sauter.** Poulet, légumes 4 min.", "**Nouilles.** Udon détendues à l'eau chaude, sauces, 2 min."],
   var=[("Sans alcool", ["alcohol"], {"Mirin": [("Jus de pomme / raisin / orange (pur jus)", 0.8), ("Vinaigre de riz", 0.1)]}, "Mirin → **jus de pomme + un trait de vinaigre de riz**. **À tester**.")],
   age=1, cats=["enfants"], profil=["leger"], tech=["Sauter au wok"])

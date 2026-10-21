@@ -25,7 +25,7 @@ K("yakitori", "Yakitori (brochettes de poulet laquées)", "Yakitori", JP, "P", 1
 
 K("tempura_legumes_crevettes", "Tempura de légumes et crevettes", "Tempura", JP, "P", 3, 4, 30, 15, "€€", "Casserole profonde, thermomètre, baguettes.",
   "Une pâte à peine mélangée et glacée, des légumes et des crevettes plongés dans l'huile : une dentelle croustillante et légère. Le secret : tout très froid et des grumeaux.",
-  ["12|crevettes crues décortiquées (queue gardée)|Crevettes (cuites/crues)|3", "1|patate douce|Patate douce|2", "1|courgette|Courgette|1", "8|champignons shiitake ou de Paris|Shiitake|1", f"120 g|de farine (ou moitié fécule)|{F55}|3", f"1|jaune d'œuf|Jaune d'œuf|1", "20 cl|d'eau gazeuse glacée|-|2", "1,5 l|d'huile de friture|Huile d'arachide|2", f"4 c. à s.|de sauce soja (pour tremper)|{SOJA}|1"],
+  ["20|crevettes crues décortiquées (queue gardée)|Crevettes (cuites/crues)|3", "1|patate douce|Patate douce|2", "1|courgette|Courgette|1", "8|champignons shiitake ou de Paris|Shiitake|1", f"120 g|de farine (ou moitié fécule)|{F55}|3", f"1|jaune d'œuf|Jaune d'œuf|1", "20 cl|d'eau gazeuse glacée|-|2", "1,5 l|d'huile de friture|Huile d'arachide|2", f"4 c. à s.|de sauce soja (pour tremper)|{SOJA}|1"],
   ["**Préparer.** Légumes en tranches de 5 mm ; crevettes incisées sous le ventre (elles restent droites), séchées.", "**Pâte minute.** Jaune + eau glacée, farine versée d'un coup, 10 coups de baguettes : il reste des grumeaux (c'est voulu).",
    "**Frire.** 175 °C ; tremper puis frire par petites quantités, 2 min (crevettes) à 3 min (légumes) : pâle et craquant ; égoutter sur grille. Soja coupé de dashi et un peu de radis râpé."],
   age=3, tech=["frire en sécurité"], profil=["poisson"])
@@ -55,7 +55,7 @@ K("maki_maison", "Makis maison (concombre, thon, saumon cuit)", "Hosomaki", JP, 
 # ——— Corée ———
 K("japchae", "Japchae (vermicelles de patate douce sautés)", "Japchae", KR, "P", 2, 4, 35, 10, "€€", "Grande poêle ou wok.",
   "Vermicelles transparents et élastiques sautés avec bœuf, épinards, carotte, champignons et huile de sésame : le plat des fêtes coréennes.",
-  ["200 g|de vermicelles de patate douce (ou de haricot mungo)|Vermicelles de haricots mungo|3", f"200 g|de bœuf en lanières|Rumsteck|2", "150 g|d'épinards|Épinard|2", f"1|carotte|{CAROTTE}|1", "6|shiitake|Shiitake|1", f"4 c. à s.|de sauce soja|{SOJA}|2", "2 c. à s.|d'huile de sésame|Huile de sésame (grillée)|2", f"1 c. à s.|de sucre|{SUCRE}|1", "1 c. à s.|de sésame|Sésame (blanc/noir)|1"],
+  ["200 g|de vermicelles de patate douce (ou de haricot mungo)|Vermicelles de haricots mungo|3", f"300 g|de bœuf en lanières|Rumsteck|2", "150 g|d'épinards|Épinard|2", f"1|carotte|{CAROTTE}|1", "6|shiitake|Shiitake|1", f"4 c. à s.|de sauce soja|{SOJA}|2", "2 c. à s.|d'huile de sésame|Huile de sésame (grillée)|2", f"1 c. à s.|de sucre|{SUCRE}|1", "1 c. à s.|de sésame|Sésame (blanc/noir)|1"],
   ["**Vermicelles.** Cuits 6 min, rincés, coupés aux ciseaux, assaisonnés de 1 c. à s. de soja et d'huile de sésame.", "**Sauter séparément.** Carotte en julienne, champignons, bœuf mariné (soja, sucre, ail), chacun 2-3 min ; épinards blanchis et pressés.",
    "**Assembler.** Tout dans la poêle avec le reste de soja, sucre, sésame, 2 min : brillant. Chaud ou tiède."], age=1, cats=["enfants"], fetes=["Repas de famille"])
 
@@ -152,7 +152,7 @@ K("malai_kofta", "Malai kofta (boulettes paneer-pomme de terre, sauce crème)", 
 
 K("kottu_roti", "Kottu roti (pain haché sauté, Sri Lanka)", "Kottu roti", "Asie du Sud › Sri Lanka", "P", 1, 4, 20, 10, "€", "Grande poêle ou plancha, 2 spatules.",
   "Pains plats coupés en lanières, sautés avec œuf, légumes, curry et poulet, hachés à la spatule dans un bruit de percussion : le street-food de Colombo, parfait pour les restes.",
-  ["4|parathas ou pains plats|SUB:paratha|3", f"300 g|de poulet cuit ou restes de curry|{BLANC_P}|2", f"3|œufs|{OEUF}|2", f"1|carotte|{CAROTTE}|1", "¼|chou|Chou blanc / rouge|1", f"1|oignon|{OIG}|1", "2 c. à c.|de curry|Curry (mélange)|1", f"1|piment vert|{PIMENT}|1?"],
+  ["4|parathas ou pains plats|SUB:paratha|3", f"400 g|de poulet cuit ou restes de curry|{BLANC_P}|2", f"3|œufs|{OEUF}|2", f"1|carotte|{CAROTTE}|1", "¼|chou|Chou blanc / rouge|1", f"1|oignon|{OIG}|1", "2 c. à c.|de curry|Curry (mélange)|1", f"1|piment vert|{PIMENT}|1?"],
   ["**Couper.** Pains en lanières de 1 cm ; légumes en julienne.", "**Sauter.** Oignon, piment, légumes 4 min ; curry ; œufs brouillés dans un coin.",
    "**Hacher.** Pain et poulet, un peu de sauce de curry ou d'eau ; hache et mélange à la spatule 3 min : moelleux et doré."],
   age=3, zw=["pain d'hier", "restes de curry"], profil=["epice"])
@@ -179,7 +179,7 @@ K("tom_yum_crevettes", "Tom yum aux crevettes", "Tom yum goong", TH, "So", 1, 4,
 
 K("riz_saute_ananas", "Riz sauté à l'ananas (khao pad sapparot)", "Khao pad sapparot", TH, "P", 1, 4, 20, 10, "€€", "Wok.",
   "Riz de la veille sauté avec ananas, crevettes ou poulet, cajou, raisins et curry doux, servi dans l'ananas évidé pour les grandes occasions.",
-  [f"600 g|de riz cuit froid|{RIZ}|3", "250 g|d'ananas|Ananas|3", "200 g|de crevettes ou poulet|Crevettes (cuites/crues)|2", f"2|œufs|{OEUF}|1", "40 g|de noix de cajou|Noix de cajou|1", "30 g|de raisins secs|Raisins secs|1?", "1 c. à c.|de curry|Curry (mélange)|1", "2 c. à s.|de sauce de poisson (ou soja)|Sauce de poisson (nuoc-mâm, nam pla)|1", "2|cébettes|Oignon nouveau / cébette|1"],
+  [f"600 g|de riz cuit froid|{RIZ}|3", "250 g|d'ananas|Ananas|3", "300 g|de crevettes ou poulet|Crevettes (cuites/crues)|2", f"2|œufs|{OEUF}|1", "40 g|de noix de cajou|Noix de cajou|1", "30 g|de raisins secs|Raisins secs|1?", "1 c. à c.|de curry|Curry (mélange)|1", "2 c. à s.|de sauce de poisson (ou soja)|Sauce de poisson (nuoc-mâm, nam pla)|1", "2|cébettes|Oignon nouveau / cébette|1"],
   ["**Sauter.** Crevettes ou poulet 2 min ; œufs brouillés ; réservé.", "**Riz.** Wok fumant, riz froid égrené 3 min ; curry, sauce de poisson.", "**Finir.** Ananas en dés, cajou, raisins, crevettes, œuf, 1 min ; cébette."],
   age=3, cats=["enfants"], zw=["riz d'hier"], fetes=["Repas de famille"])
 

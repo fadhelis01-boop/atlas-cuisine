@@ -17,6 +17,23 @@ for _d in RECIPES:
         if not any((x[2] or "") == _r and x[1] == _l for x in _d["ing"]):
             _d["ing"] = list(_d["ing"]) + [(_q, _l, _r, int(_w.rstrip("?") or 1), _w.endswith("?"))]
 assert set(_ADD_ING) <= {d["id"] for d in RECIPES}, set(_ADD_ING) - {d["id"] for d in RECIPES}
+# audit gourmet §4.2 : l'acidité que chaque cuisine donne au plat (dans la recette ou à table), ou la raison de s'en passer
+from complements_gout import ACIDE as _ACIDE, EXTRA as _EXTRA_G, SALADE as _SALADE, SANS_ACIDE as _SANS_ACIDE
+_BYB = {d["id"]: d for d in RECIPES}
+assert not (set(_ACIDE) | set(_SANS_ACIDE) | set(_EXTRA_G)) - set(_BYB), (set(_ACIDE) | set(_SANS_ACIDE)) - set(_BYB)
+assert not set(_ACIDE) & set(_SANS_ACIDE)
+def _addline(d, s):
+    _q, _l, _r, _w = (s.split("|") + ["", "", "", "1"])[:4]
+    if not any((x[2] or "") == _r and x[1] == _l for x in d["ing"]):
+        d["ing"] = list(d["ing"]) + [(_q, _l, _r, int(_w.rstrip("?") or 1), _w.endswith("?"))]
+for _id, (_line, _phrase) in _ACIDE.items():
+    _d = _BYB[_id]; _addline(_d, _line)
+    _d["acide_ref"] = _line.split("|")[2]
+    for _s in _EXTRA_G.get(_id, []): _addline(_d, _s)
+    if _phrase and _phrase not in _d["steps"][-1]: _d["steps"] = list(_d["steps"][:-1]) + [_d["steps"][-1].rstrip() + " " + _phrase]
+for _id in _SALADE:
+    if not _BYB[_id].get("side"): _BYB[_id]["side"] = "achat:Salade (laitue, batavia)"
+for _id, _why in _SANS_ACIDE.items(): _BYB[_id]["sans_acide"] = _why
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "app", "src", "data")
@@ -156,7 +173,7 @@ for d in RECIPES:
                       "replace": {k: [[i, r] for i, r in it] for k, it in v["replace"].items()}} for v in d["variantes"]],
         "storage": d["conservation"], "zeroWaste": d["zero_dechet"], "drinksNoAlcohol": d["accords_sa"], "drinksAlcohol": d["accords_a"],
         "techniques": d["techniques"], "kids": d["enfants"], "age": d.get("age"), "cats": d.get("cats", []),
-        "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""), "side": d.get("side"),
+        "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""), "side": d.get("side"), "sansAcide": d.get("sans_acide"), "acideAjoute": d.get("acide_ref"),
         "source": "Tome 11 (vague 0)" if d["id"] in EXTRA else ("Tome 13 (vague 2)" if d.get("vague") == 2 else "Tome 12 (vague 1)"), "verified": "C",
     })
 
@@ -420,6 +437,14 @@ for r in recipes:
     assert not s_ or s_.startswith("achat:") or s_ in _ids, f"accompagnement inconnu : {r['id']} → {s_}"
     if s_ and s_.startswith("achat:"): assert s_[6:] in REF, f"produit d'accompagnement hors Tome 3 : {s_}"
 print(f"accompagnements : {_side_n[0]} indiqués, {_side_n[1]} déduits des étapes")
+# protéines par part (estimation, accompagnement compris) : repère d'équilibre de la fiche
+from proteines import per_portion as _prot
+_BYA = {r["id"]: r for r in recipes}
+for r in recipes:
+    # à la pièce (empanadas, tamales, mini-pizzas : plus de 8 « parts »), une valeur par part tromperait
+    if r["role"] == "plat": r["prot"] = round(_prot(r, _BYA, lambda ref: ingredients.get(ref, {}).get("section", ""))) if r["portions"] <= 8 else None
+_pl = [r["prot"] for r in recipes if r["role"] == "plat" and r["prot"] is not None]
+print(f"protéines par part : médiane {sorted(_pl)[len(_pl) // 2]} g · moins de 15 g : {sum(p < 15 for p in _pl)} plats sur {len(_pl)}")
 
 # ---------------------------------------------------------------- vidéos : la liste complète à la demande (audit famille, poids au démarrage)
 # recipes.json garde une seule vidéo (bouton « Voir la vidéo », filtre « avec vidéo ») et le nombre total.

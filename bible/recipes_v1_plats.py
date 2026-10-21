@@ -155,7 +155,7 @@ R(id="riz_cantonais", title="Riz cantonais", origin="扬州炒饭 · Yángzhōu 
   equip="Wok ou grande poêle.", intro="Le plat des restes par excellence : du riz cuit la veille, des œufs, des petits pois, du jambon. Le riz froid est indispensable pour qu'il ne colle pas.",
   ing=[("600 g", "de riz long cuit la veille (200 g cru)", "Riz long / basmati / thaï", 3, False),
        ("3", "œufs", "Œuf entier (frais)", 2, False),
-       ("150 g", "de jambon blanc en dés", "Jambon blanc", 2, False),
+       ("200 g", "de jambon blanc en dés", "Jambon blanc", 2, False),
        ("150 g", "de petits pois (surgelés)", "Petits pois / pois gourmands", 2, False),
        ("3", "oignons nouveaux", "Oignon nouveau / cébette", 1, False),
        ("2 c. à s.", "de sauce soja claire", "Sauce soja claire", 1, False),

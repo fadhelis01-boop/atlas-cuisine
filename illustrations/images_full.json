@@ -13939,6 +13939,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/coings_rotis_miel": {
+  "path": "img/recette/coings_rotis_miel",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#82391a",
+  "author": "Garrett Ziegler",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tepside_ayva_tatl%C4%B1s%C4%B1.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tepside ayva tatlısı.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/coleslaw": {
   "path": "img/recette/coleslaw",
   "sizes": [
@@ -17438,6 +17455,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/lieu_croute_herbes": {
+  "path": "img/recette/lieu_croute_herbes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8c7852",
+  "author": "Vikramdewangan22889",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Herbed_Crusted_Grilled_Fish_with_Barbara_Sauce_Char_Grilled_Vegetable_Mash_Potato.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Herbed Crusted Grilled Fish with Barbara Sauce Char Grilled Vegetable Mash Potato.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/limonade_maison": {
   "path": "img/recette/limonade_maison",
   "sizes": [
@@ -17863,6 +17897,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/maquereaux_four_moutarde": {
+  "path": "img/recette/maquereaux_four_moutarde",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8c8479",
+  "author": "@rgs",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Maquereaux_au_vin_blanc.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Maquereaux au vin blanc.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/marinade_adobo": {
   "path": "img/recette/marinade_adobo",
   "sizes": [
@@ -18220,6 +18271,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/merlu_beurre_blanc_poireaux": {
+  "path": "img/recette/merlu_beurre_blanc_poireaux",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a0977b",
+  "author": "Arnold Gatilao",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beurre_noisette_sauced_halibut_with_vegetables.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beurre noisette sauced halibut with vegetables.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/mhadjeb": {
   "path": "img/recette/mhadjeb",
   "sizes": [
@@ -18404,6 +18472,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Mole_Poblano.jpg",
   "source": "Wikimedia Commons",
   "title": "Mole Poblano.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/mont_blanc_verrines": {
+  "path": "img/recette/mont_blanc_verrines",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7a5f2d",
+  "author": "Meg Zimbeck",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mont_blanc_dessert_from_Patisserie_des_Reves.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mont blanc dessert from Patisserie des Reves.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19291,6 +19376,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/paella_valenciana_traditionnelle": {
+  "path": "img/recette/paella_valenciana_traditionnelle",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#93622c",
+  "author": "Juan Emilio Prades Bel",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Paella_valenciana_con_pato.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Paella valenciana con pato.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pain_au_lait": {
   "path": "img/recette/pain_au_lait",
   "sizes": [
@@ -19714,6 +19816,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/papillotes_poisson_legumes": {
+  "path": "img/recette/papillotes_poisson_legumes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b58a5d",
+  "author": "Blue Lotus. from Tokio",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Orata_al_Cartoccio.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Orata al Cartoccio.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/paratha": {
   "path": "img/recette/paratha",
   "sizes": [
@@ -19964,6 +20083,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lemon_Spaghetti_(14179778117).jpg",
   "source": "Wikimedia Commons",
   "title": "Lemon Spaghetti (14179778117).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_nature": {
+  "path": "img/recette/pates_nature",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa9365",
+  "author": "Huguespotter",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:P%C3%A2tes_%C3%A0_la_cassonade.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pâtes à la cassonade.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20340,6 +20476,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/plateau_fromages": {
+  "path": "img/recette/plateau_fromages",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#705a44",
+  "author": "Peachyeung316",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:A_Cheese_platter_from_The_Astor_in_The_Eaton_HK.jpg",
+  "source": "Wikimedia Commons",
+  "title": "A Cheese platter from The Astor in The Eaton HK.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/plov": {
   "path": "img/recette/plov",
   "sizes": [
@@ -20405,6 +20558,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Poire_belle_H%C3%A9l%C3%A8ne.jpg",
   "source": "Wikimedia Commons",
   "title": "Poire belle Hélène.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poires_pochees_vin_epices": {
+  "path": "img/recette/poires_pochees_vin_epices",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c5675e",
+  "author": "Juan Emilio Prades Bel",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pera_al_vino.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pera al vino.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20628,6 +20798,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pommes_vapeur": {
+  "path": "img/recette/pommes_vapeur",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#68482a",
+  "author": "Daderot",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Potatoes,_boiled,_with_olive_oil,_garlic,_salt_-_Massachusetts.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Potatoes, boiled, with olive oil, garlic, salt - Massachusetts.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/porridge_flocons_avoine": {
   "path": "img/recette/porridge_flocons_avoine",
   "sizes": [
@@ -20659,6 +20846,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pot-au-feu_2.jpg",
   "source": "Wikimedia Commons",
   "title": "Pot-au-feu 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/potimarron_farci_quinoa": {
+  "path": "img/recette/potimarron_farci_quinoa",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9f7740",
+  "author": "Eugene Kim from San Francisco, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cucurbita_maxima_Stuffed_Red_Kuri_Squash.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Cucurbita maxima Stuffed Red Kuri Squash.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21578,6 +21782,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/riz_nature": {
+  "path": "img/recette/riz_nature",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c98734",
+  "author": "cookbookman17",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/58545726@N02/6121427720",
+  "source": "Openverse (flickr)",
+  "title": "Basmati Rice",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/riz_pilaf": {
   "path": "img/recette/riz_pilaf",
   "sizes": [
@@ -22221,6 +22442,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sardines_poelees_persillade": {
+  "path": "img/recette/sardines_poelees_persillade",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a18a51",
+  "author": "Arnaud 25",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sardinade.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sardinade.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sarmale_boeuf": {
   "path": "img/recette/sarmale_boeuf",
   "sizes": [
@@ -22676,6 +22914,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:R%C3%B4ti_d%C2%B4agneau_du_Bourbonnais_aux_%C3%A9pices_douces,_semoule_aux_fruits_d%C2%B4hiver.jpg",
   "source": "Wikimedia Commons",
   "title": "Rôti d´agneau du Bourbonnais aux épices douces, semoule aux fruits d´hiver.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/semoule_nature": {
+  "path": "img/recette/semoule_nature",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d29c30",
+  "author": "HaJunkiyada",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Couscous_(Prepared).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Liat Portal for Foodie Disorder - Couscous (Prepared).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23767,6 +24022,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tarte_bourdaloue": {
+  "path": "img/recette/tarte_bourdaloue",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a77941",
+  "author": "traaf",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tarte_Bourdaloue.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tarte Bourdaloue.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tarte_chocolat": {
   "path": "img/recette/tarte_chocolat",
   "sizes": [
@@ -24578,6 +24850,23 @@
   "page": "https://www.flickr.com/photos/98545783@N00/2218090957",
   "source": "Openverse (flickr)",
   "title": "Pumpkin soup",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/veloute_topinambour": {
+  "path": "img/recette/veloute_topinambour",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#88804f",
+  "author": "cyclonebill",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Jordskokkesuppe_med_ristede_kapers.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Flickr - cyclonebill - Jordskokkesuppe med ristede kapers.jpg",
   "kind": "photo",
   "avif": true
  },

@@ -191,8 +191,35 @@ Les dix recommandations et les angles morts du §5 sont appliqués. Chaque point
 - **Goût des enfants :** le carnet demande « Les enfants ont aimé ? ». Un « non » écarte le plat de la semaine (test 82), un « oui » le favorise et s'affiche sur la carte de la recette.
 - **Saison des desserts :** les desserts de fête sont choisis selon la saison et le lieu, et 4 desserts d'hiver sont ajoutés.
 
-**Ce qui reste ouvert :**
-- **Parts de protéines légères (§4.2).** Les 40 plats signalés n'ont pas tous été repris ; seuls les étalons l'ont été.
-- **Assaisonnement sans acidité (§4.2).** Les 149 plats signalés ne sont pas corrigés : chaque cas demande un jugement de goût qui doit passer par l'essai.
-- **Vocabulaire du métier dans les fiches de la vague 2 (§3).** Pas encore réécrit en dehors des étalons.
-- **Photos des 20 nouvelles fiches.** Elles affichent l'illustration de leur catégorie (pas d'image générée, D19).
+**Ce qui restait ouvert** a été réglé le même jour : voir le §8.
+
+## 8. Points ouverts réglés (21 octobre 2026, deuxième passe)
+
+Les quatre points laissés ouverts au §7 sont traités. Chacun est vérifié par un contrôle automatique (tests 84 à 87). Les recettes restent **non testées en cuisine**.
+
+### 8.1 Protéines par part
+- **Mesure plus juste.** L'audit comptait les grammes de viande ou de poisson. Ce critère condamnait à tort la carbonara ou la raclette, dont les protéines viennent des œufs et du fromage. ATLAS estime maintenant les **protéines par part, toutes sources comprises** : viande, poisson, œufs, fromage, tofu, légumineuses, céréales, et l'accompagnement relié. Le module est `bible/proteines.py`, avec des densités CIQUAL arrondies et une déduction pour les os.
+- **Résultat :** médiane de **27 g par part**. Les recettes comptées à la pièce (empanadas, tamales, mini-pizzas) ne sont pas chiffrées, car une valeur « par part » y tromperait.
+- **17 portions chiches relevées**, pour les plats dont la viande ou le poisson est le cœur. Exemples : tagliatelles au saumon fumé 150 → 250 g, lasagnes 600 → 800 g de bœuf, tempura 12 → 20 crevettes, japchae, nouilles sautées au bœuf, salade piémontaise, pastitsio, cornish pasty, tahchin, riz cantonais. Le chou braisé passe de 4 à 8 saucisses.
+- **95 plats légers par tradition**, sous 15 g par part : risotto, aglio olio, dal, gemista, etc. On ne trahit pas ces recettes. Leur repère d'équilibre affiche la valeur (« environ 11 g par part, c'est léger pour un plat ») et ce qu'il faut ajouter : un œuf, un laitage ou des légumineuses ; pour un plat de viande, un peu plus de viande ou de poisson.
+
+### 8.2 Acidité
+- **Mesure plus juste.** L'audit ne reconnaissait que le citron, le vinaigre, la tomate et le yaourt. Le vin, la moutarde, le cidre, les fermentés, les fruits acides, les cornichons et les sauces des sous-recettes apportent aussi de l'acidité. Avec ce critère, **71 plats** n'en avaient aucune, au lieu de 149.
+- **52 plats reçoivent l'acidité de leur cuisine** (`bible/complements_gout.py`) :
+  - dans la recette : citron vert d'un curry, vinaigre dans les lentilles (geste des bouchons lyonnais), ajvar des ćevapi, sauce tahini-citron des falafels ;
+  - à table : salade verte vinaigrée avec les gratins et plats fromagers, avec la salade comme accompagnement relié ; concombre en pickles avec un teriyaki ; concombre vinaigré coréen ; gingembre mariné sur le yaki udon ; sauce aux canneberges de la dinde ; salade achichuk du plov.
+
+  Les acides choisis ne changent **aucun badge** : citron, citron vert, vinaigre de cidre, gingembre mariné, tomate, orange, sans trace d'alcool, sans sulfites, sans poisson. Le vinaigre de vin et le kimchi l'auraient fait.
+- **17 plats s'en passent par tradition**, chacun avec sa raison écrite : cacio e pepe, carbonara, aglio olio, tajine aux pruneaux, poisson vapeur cantonais, dafina, irish stew, etc.
+
+### 8.3 Vocabulaire du métier
+- **Lexique : 89 termes** au lieu de 48. Les mots cités par l'audit y sont : roux, singer, mantecare, à hauteur, liaison, sucs, bouquet garni, filmer au contact, paner à l'anglaise, beurre manié, et une trentaine d'autres.
+- **Le geste est expliqué sous l'étape**, à la première apparition du mot, avec un lien vers la fiche technique quand elle existe. Avant, il fallait ouvrir le lexique en bas de la fiche. **695 fiches** ont au moins un geste expliqué.
+
+### 8.4 Photos des 20 nouvelles fiches
+- **17 photos** sous licence libre (Wikimedia Commons, Openverse), choisies sur planche et traitées comme les autres. Choix et crédits : `illustrations/choix_v7.txt` et `app/src/data/credits.json`.
+- **3 fiches sans photo juste** : gratin de céleri, poêlée de panais, chou braisé. Aucune candidate libre ne montrait le bon plat. Elles gardent l'illustration de leur catégorie, plutôt qu'une photo trompeuse ou générée (D19).
+
+### 8.5 Liste « À tester en priorité »
+Elle a été régénérée : les changements de recettes ont déplacé les plats que la semaine propose le plus. Le test 83 signale la prochaine régénération nécessaire.
+

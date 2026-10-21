@@ -1875,5 +1875,37 @@
  "recette/brochettes_poulet_tandoori_froid": 3,
  "recette/cornish_pasty": 0,
  "recette/flapjacks": 0,
- "recette/barres_cereales_maison": 3
+ "recette/barres_cereales_maison": 3,
+ "recette/pates_nature": 0,
+ "recette/maquereaux_four_moutarde": 0,
+ "recette/sardines_poelees_persillade": 3,
+ "recette/lieu_croute_herbes": 1,
+ "recette/papillotes_poisson_legumes": 0,
+ "recette/potimarron_farci_quinoa": 0,
+ "recette/veloute_topinambour": 2,
+ "recette/poires_pochees_vin_epices": 5,
+ "recette/tarte_bourdaloue": 1,
+ "recette/mont_blanc_verrines": 6,
+ "recette/paella_valenciana_traditionnelle": 4,
+ "recette/plateau_fromages": 6,
+ "recette/riz_nature": {
+  "i": 6,
+  "from": "v7b/recette/riz_nature"
+ },
+ "recette/semoule_nature": {
+  "i": 0,
+  "from": "v7b/recette/semoule_nature"
+ },
+ "recette/pommes_vapeur": {
+  "i": 4,
+  "from": "v7b/recette/pommes_vapeur"
+ },
+ "recette/merlu_beurre_blanc_poireaux": {
+  "i": 4,
+  "from": "v7b/recette/merlu_beurre_blanc_poireaux"
+ },
+ "recette/coings_rotis_miel": {
+  "i": 2,
+  "from": "v7b/recette/coings_rotis_miel"
+ }
 }

@@ -108,7 +108,7 @@ K("brochettes_poulet_tandoori_froid", "Brochettes de poulet tandoori (froides)",
 
 K("cornish_pasty", "Cornish pasty (chausson de Cornouailles)", "Cornish pasty", "Europe du Nord › Royaume-Uni › Cornouailles", "P", 2, 6, 40, 50, "€€", "Rouleau, plaque, four.",
   "Le chausson des mineurs de Cornouailles : bœuf, pomme de terre, rutabaga et oignon, crus, en dés, cuits dans une pâte épaisse fermée par une torsade. Un repas complet qui tient dans la main.",
-  [f"500 g|de farine|{F55}|3", f"250 g|de beurre froid|{BEURRE}|2", "400 g|de bœuf (paleron ou rumsteck) en petits dés|Paleron|3", f"2|pommes de terre|{PDT}|2", "200 g|de rutabaga ou navet|Panais / rutabaga|1", f"1|oignon|{OIG}|1", f"1|œuf (dorure)|{OEUF}|1"],
+  [f"500 g|de farine|{F55}|3", f"250 g|de beurre froid|{BEURRE}|2", "500 g|de bœuf (paleron ou rumsteck) en petits dés|Paleron|3", f"2|pommes de terre|{PDT}|2", "200 g|de rutabaga ou navet|Panais / rutabaga|1", f"1|oignon|{OIG}|1", f"1|œuf (dorure)|{OEUF}|1"],
   ["**Pâte.** Farine, beurre en dés sablés du bout des doigts, sel, 15 cl d'eau froide ; 30 min au frais.", "**Farce crue.** Légumes et bœuf en dés de 1 cm, sel, beaucoup de poivre.",
    "**Former.** 6 disques de 20 cm ; farce au centre, pâte relevée et pincée en torsade sur le dessus ; dorés, une petite entaille.", "**Cuire.** 200 °C 15 min puis 170 °C 35 min : la vapeur cuit la farce. Froids ou tièdes."],
   tips=[FROID], keep="2 jours au frigo ; se congèlent cuits 2 mois.", age=3, cats=PN + ["enfants"], fetes=FETE)

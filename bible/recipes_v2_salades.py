@@ -58,7 +58,7 @@ K("salade_betterave_chevre_noix", "Salade de betterave, chèvre, noix et lentill
 
 K("salade_piemontaise", "Salade piémontaise", "Salade piémontaise", QF, "P", 1, 4, 20, 20, "€", "Casserole, saladier.",
   "Pommes de terre tièdes, œufs durs, tomates, cornichons, jambon de dinde et sauce mayonnaise : le classique des cantines, version maison.",
-  [f"800 g|de pommes de terre|{PDT}|3", f"3|œufs durs|{OEUF}|2", f"2|tomates|{TOM}|1", "6|cornichons|Cornichon|1", "120 g|de jambon de dinde (ou blanc)|Jambon de dinde / de poulet|2", "4 c. à s.|de mayonnaise|SUB:mayonnaise|2", f"1 c. à s.|de persil|{PERSIL}|0"],
+  [f"800 g|de pommes de terre|{PDT}|3", f"4|œufs durs|{OEUF}|2", f"2|tomates|{TOM}|1", "6|cornichons|Cornichon|1", "200 g|de jambon de dinde (ou blanc)|Jambon de dinde / de poulet|2", "4 c. à s.|de mayonnaise|SUB:mayonnaise|2", f"1 c. à s.|de persil|{PERSIL}|0"],
   ["**Cuire.** Pommes de terre en dés, 15 min à l'eau salée : tendres (la lame entre sans forcer).", "**Mélanger.** Encore tièdes, avec la mayonnaise allongée d'1 c. à s. de vinaigre.", "**Ajouter.** Œufs, tomates, cornichons, jambon en dés, persil."],
   age=1, cats=SA + ["enfants"])
 
@@ -117,7 +117,7 @@ K("salade_mexicaine_haricots_mais", "Salade mexicaine haricots, maïs et avocat"
 
 K("salade_lentilles_saumon_fume", "Salade de lentilles au saumon fumé et à l'aneth", "Salade lentilles-saumon", QF, "P", 1, 4, 15, 20, "€€", "Casserole, saladier.",
   "Lentilles vertes tièdes, saumon fumé, échalote, aneth et crème citronnée : un plat de bistrot léger.",
-  ["200 g|de lentilles vertes|Lentilles vertes / brunes|3", "150 g|de saumon fumé|Saumon fumé|3", f"1|échalote|{ECH}|1", "1 c. à s.|d'aneth|Aneth|1", f"3 c. à s.|de crème|{CF}|1", f"1|citron|{CIT}|1", f"1 c. à c.|de moutarde|{DIJON}|1", f"3 c. à s.|d'huile|{HN}|1"],
+  ["200 g|de lentilles vertes|Lentilles vertes / brunes|3", "250 g|de saumon fumé|Saumon fumé|3", f"1|échalote|{ECH}|1", "1 c. à s.|d'aneth|Aneth|1", f"3 c. à s.|de crème|{CF}|1", f"1|citron|{CIT}|1", f"1 c. à c.|de moutarde|{DIJON}|1", f"3 c. à s.|d'huile|{HN}|1"],
   ["**Lentilles.** 20 min à frémissement, égouttées, salées tièdes.", "**Vinaigrette.** Moutarde, citron, huile, échalote hachée.", "**Assembler.** Lentilles assaisonnées, saumon en lanières, crème citronnée, aneth."],
   age=3, cats=SA, profil=["poisson"])
 

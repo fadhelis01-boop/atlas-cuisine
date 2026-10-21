@@ -97,7 +97,7 @@ K("char_siu_poulet", "Poulet laqué char siu", "Char siu", f"{AE} › Chine › 
 
 K("nouilles_sautees_boeuf", "Nouilles sautées au bœuf et brocoli", "Chow mein", f"{AE} › Chine › Canton", "P", 1, 4, 20, 10, "€€", "Wok.",
   "Nouilles aux œufs sautées, bœuf tendre, brocoli croquant, sauce d'huître : un plat complet en 15 minutes.",
-  ["300 g|de nouilles chinoises aux œufs|Nouilles chinoises aux œufs|3", "300 g|de bœuf (rumsteck) émincé|Rumsteck|3", "1|brocoli|Brocoli|2", "2 c. à s.|de sauce d'huître|Sauce d'huître|2", f"2 c. à s.|de sauce soja|{SOJA}|2", f"1 c. à c.|de maïzena|Fécule de maïs (maïzena)|1", f"2 gousses|d'ail + gingembre|{AIL}|1", f"3 c. à s.|d'huile|{HN}|1"],
+  ["300 g|de nouilles chinoises aux œufs|Nouilles chinoises aux œufs|3", "400 g|de bœuf (rumsteck) émincé|Rumsteck|3", "1|brocoli|Brocoli|2", "2 c. à s.|de sauce d'huître|Sauce d'huître|2", f"2 c. à s.|de sauce soja|{SOJA}|2", f"1 c. à c.|de maïzena|Fécule de maïs (maïzena)|1", f"2 gousses|d'ail + gingembre|{AIL}|1", f"3 c. à s.|d'huile|{HN}|1"],
   ["**Bœuf.** Mariné soja + maïzena, saisi 1 min, réservé.", "**Sauter.** Brocoli 3 min, ail-gingembre, nouilles cuites, sauces.", "**Finir.** Bœuf, 30 s."],
   age=1, cats=["enfants"], profil=["gras"], tech=["Sauter au wok"])
 

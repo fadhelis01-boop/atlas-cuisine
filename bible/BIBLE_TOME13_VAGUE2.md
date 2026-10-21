@@ -1748,12 +1748,12 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 1 h 00 · coût €
 
 Le plat national camerounais : feuilles amères (ici épinards et un peu de roquette), purée d'arachides fraîches, crevettes et bœuf.
 
-**Ingrédients** : 1 kg d'épinards (ou ndolé surgelé) · 100 g de roquette (amertume) · 300 g de cacahuètes crues décortiquées · 300 g de crevettes · 500 g de bœuf en cubes · 2 oignons · 4 gousses d'ail · 1 morceau de gingembre · 10 cl d'huile
+**Ingrédients** : 1 kg d'épinards (ou ndolé surgelé) · 100 g de roquette (amertume) · 300 g de cacahuètes crues décortiquées · 300 g de crevettes · 500 g de bœuf en cubes · 2 oignons · 4 gousses d'ail · 1 morceau de gingembre · 10 cl d'huile · 1 citron, en quartiers (à table) *(facultatif)*
 
 1. **Bœuf.** Cuit 45 min dans l'eau avec ail, gingembre, oignon.
 2. **Arachides.** Bouillies 15 min, mixées en purée avec du bouillon ; cuites 20 min en remuant.
 3. **Feuilles.** Blanchies, pressées, ajoutées avec le bœuf, 15 min.
-4. **Finir.** Crevettes et oignons frits dans l'huile, versés dessus. Avec plantain.
+4. **Finir.** Crevettes et oignons frits dans l'huile, versés dessus. Avec plantain. Un quartier de citron à table, pour qui aime : il allège la richesse de l'arachide.
 
 - ⚠️ Arachide : allergène majeur.
 
@@ -2531,12 +2531,12 @@ Niveau ⭐⭐ · 16 portions · actif 50 min · repos/cuisson 25 min · coût �
 
 Chaussons dorés farcis de bœuf aux oignons, paprika, cumin, olives et œuf dur : le repas à la main argentin.
 
-**Ingrédients** : 500 g de farine · 120 g de beurre · 500 g de bœuf haché au couteau · 3 oignons · 1 c. à c. de paprika + 1 de cumin · 2 œufs durs · 12 olives vertes · 1 œuf (dorure)
+**Ingrédients** : 500 g de farine · 120 g de beurre · 500 g de bœuf haché au couteau · 3 oignons · 1 c. à c. de paprika + 1 de cumin · 2 œufs durs · 12 olives vertes · 1 œuf (dorure) · 2 c. à s. de vinaigre de cidre (salsa criolla) *(facultatif)*
 
 1. **Pâte.** Farine, beurre fondu, sel, 20 cl d'eau tiède : souple, 30 min.
 2. **Farce.** Oignons fondus, viande, épices, 10 min ; froide, œufs et olives hachés.
 3. **Façonner.** Disques de 12 cm, farce, ferme en torsade (repulgue).
-4. **Cuire.** Dorure, 20-25 min à 200 °C.
+4. **Cuire.** Dorure, 20-25 min à 200 °C. À table, une salsa criolla : oignon et tomate en petits dés, vinaigre, huile, sel ; elle tranche sur la farce.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -2842,11 +2842,11 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 12 min · coût €€
 
 Pavés de saumon saisis côté peau puis laqués d'une sauce teriyaki maison : 15 minutes, brillant et fondant.
 
-**Ingrédients** : 4 pavés de saumon avec peau · 1 recette de sauce teriyaki · 1 brocoli · 300 g de riz rond · 1 c. à s. de sésame
+**Ingrédients** : 4 pavés de saumon avec peau · 1 recette de sauce teriyaki · 1 brocoli · 300 g de riz rond · 1 c. à s. de sésame · 2 c. à s. de vinaigre de cidre (concombre en pickles rapides) *(facultatif)*
 
 1. **Saumon.** Côté peau 5 min à feu moyen-vif, retourne 1 min.
 2. **Laquer.** Verse la sauce, arrose 1 min jusqu'à brillant.
-3. **Servir.** Riz, brocoli vapeur, sésame.
+3. **Servir.** Riz, brocoli vapeur, sésame. À côté, un concombre en fines tranches, 10 min dans le vinaigre avec une pincée de sucre et de sel : il coupe le laqué.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -3102,10 +3102,10 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 40 min · coût €€
 
 La laque cantonaise (hoisin, miel, cinq-épices) sur des hauts de cuisse de poulet : brillant, sucré, légèrement grillé.
 
-**Ingrédients** : 1 kg de hauts de cuisse désossés · 4 c. à s. de sauce hoisin · 3 c. à s. de miel · 2 c. à s. de sauce soja · 1 c. à c. de cinq-épices · 3 gousses d'ail
+**Ingrédients** : 1 kg de hauts de cuisse désossés · 4 c. à s. de sauce hoisin · 3 c. à s. de miel · 2 c. à s. de sauce soja · 1 c. à c. de cinq-épices · 3 gousses d'ail · 2 c. à s. de vinaigre de cidre (concombre en pickles rapides) *(facultatif)*
 
 1. **Mariner.** Tout (garde 3 c. à s. de marinade), 4 h.
-2. **Rôtir.** Sur grille, 30 min à 200 °C, puis badigeon miel-marinade, 10 min sous le gril : bords caramélisés.
+2. **Rôtir.** Sur grille, 30 min à 200 °C, puis badigeon miel-marinade, 10 min sous le gril : bords caramélisés. À côté, un concombre en fines tranches, 10 min dans le vinaigre avec une pincée de sucre et de sel : il coupe le laqué.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -3126,11 +3126,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
 
 Nouilles aux œufs sautées, bœuf tendre, brocoli croquant, sauce d'huître : un plat complet en 15 minutes.
 
-**Ingrédients** : 300 g de nouilles chinoises aux œufs · 300 g de bœuf (rumsteck) émincé · 1 brocoli · 2 c. à s. de sauce d'huître · 2 c. à s. de sauce soja · 1 c. à c. de maïzena · 2 gousses d'ail + gingembre · 3 c. à s. d'huile
+**Ingrédients** : 300 g de nouilles chinoises aux œufs · 400 g de bœuf (rumsteck) émincé · 1 brocoli · 2 c. à s. de sauce d'huître · 2 c. à s. de sauce soja · 1 c. à c. de maïzena · 2 gousses d'ail + gingembre · 3 c. à s. d'huile · 1 c. à c. de vinaigre de cidre *(facultatif)*
 
 1. **Bœuf.** Mariné soja + maïzena, saisi 1 min, réservé.
 2. **Sauter.** Brocoli 3 min, ail-gingembre, nouilles cuites, sauces.
-3. **Finir.** Bœuf, 30 s.
+3. **Finir.** Bœuf, 30 s. Un trait de vinaigre au dernier moment réveille la sauce (le vinaigre noir chinois, si tu en as).
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -4381,11 +4381,11 @@ Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 18 min · coût €
 
 Du vrai blanc de poulet en morceaux, pané aux cornflakes ou au panko et cuit au four : croustillant sans friture.
 
-**Ingrédients** : 500 g de blancs de poulet · 80 g de panko ou cornflakes écrasés · 40 g de parmesan râpé · 1 œuf · 40 g de farine · 1 c. à c. de paprika doux · 2 c. à s. d'huile
+**Ingrédients** : 500 g de blancs de poulet · 80 g de panko ou cornflakes écrasés · 40 g de parmesan râpé · 1 œuf · 40 g de farine · 1 c. à c. de paprika doux · 2 c. à s. d'huile · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Couper.** Morceaux de 3 cm, sel.
 2. **Paner.** Farine, œuf, panko + parmesan + paprika (les enfants adorent le faire).
-3. **Cuire.** Sur plaque huilée, huile en filet, 18 min à 210 °C en retournant à mi-cuisson.
+3. **Cuire.** Sur plaque huilée, huile en filet, 18 min à 210 °C en retournant à mi-cuisson. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -4582,10 +4582,10 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
 
 Crêpes garnies de jambon de dinde et de fromage, roulées et gratinées à la béchamel : un dîner que les enfants réclament.
 
-**Ingrédients** : 8 crêpes · 8 tranches de jambon de dinde · 150 g de fromage râpé · 1 recette de béchamel
+**Ingrédients** : 8 crêpes · 8 tranches de jambon de dinde · 150 g de fromage râpé · 1 recette de béchamel · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Rouler.** Crêpe, jambon, fromage, roulée.
-2. **Gratiner.** Plat, béchamel, fromage, 15 min à 200 °C.
+2. **Gratiner.** Plat, béchamel, fromage, 15 min à 200 °C. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -4977,11 +4977,11 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 1 h 00 · coût €
 
 Le petit-déjeuner de toute l'Asie : riz cuit longtemps dans beaucoup d'eau jusqu'à devenir une crème, garni de gingembre, cébette et œuf.
 
-**Ingrédients** : 120 g de riz · 1 morceau (3 cm) de gingembre · 3 cébettes · 2 c. à s. de sauce soja · 4 œufs mollets (facultatif) *(facultatif)* · 1 c. à c. d'huile de sésame · 1,5 l de bouillon (ou d'eau)
+**Ingrédients** : 120 g de riz · 1 morceau (3 cm) de gingembre · 3 cébettes · 2 c. à s. de sauce soja · 4 œufs mollets (facultatif) *(facultatif)* · 1 c. à c. d'huile de sésame · 1,5 l de bouillon (ou d'eau) · 1 c. à c. de vinaigre de cidre, à table *(facultatif)*
 
 1. **Cuire.** Riz rincé, bouillon et gingembre en lamelles ; frémissement 1 h en remuant de temps en temps : les grains éclatent et font une crème.
 2. **Assaisonner.** Sel ; plus fluide ou plus épais selon ton goût (eau).
-3. **Garnir.** Cébette, soja, huile de sésame, œuf mollet coupé en deux.
+3. **Garnir.** Cébette, soja, huile de sésame, œuf mollet coupé en deux. Quelques gouttes de vinaigre à table, à la chinoise (le vinaigre noir, si tu en as).
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -5054,11 +5054,11 @@ Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 20 min · coût €
 
 Œufs battus avec épinards, poivron et fromage, cuits en petits moules : à préparer d'avance, se réchauffent en 30 s.
 
-**Ingrédients** : 8 œufs · 100 g d'épinards · 1 poivron · 80 g de fromage râpé · 5 cl de lait
+**Ingrédients** : 8 œufs · 100 g d'épinards · 1 poivron · 80 g de fromage râpé · 5 cl de lait · 200 g de tomates cerises, pour servir *(facultatif)*
 
 1. **Préchauffer.** Four 180 °C ; moule huilé.
 2. **Répartir.** Légumes hachés et fromage dans les moules ; œufs battus avec lait, sel, poivre, aux trois quarts.
-3. **Cuire.** 18-20 min : gonflés, pris au centre (la lame ressort propre).
+3. **Cuire.** 18-20 min : gonflés, pris au centre (la lame ressort propre). Avec quelques tomates cerises : leur acidité allège l'œuf et le fromage.
 
 **Conservation** : 4 jours au frigo ; 30 s au micro-ondes.
 
@@ -5313,12 +5313,12 @@ Niveau ⭐⭐ · 4 portions · actif 15 min · repos/cuisson 1 h 15 · coût €
 
 Des blancs de poulet juteux comme jamais : saisis côté peau, cuits doucement au four jusqu'à 74 °C pile, jus déglacé.
 
-**Ingrédients** : 4 suprêmes de poulet avec peau · 30 g de beurre · 20 cl de bouillon de volaille · 2 branches de thym · 1 échalote · 30 g de sucre (saumure, facultatif) *(facultatif)*
+**Ingrédients** : 4 suprêmes de poulet avec peau · 30 g de beurre · 20 cl de bouillon de volaille · 2 branches de thym · 1 échalote · 30 g de sucre (saumure, facultatif) *(facultatif)* · ½ citron (dans le jus) *(facultatif)*
 
 1. **Saumure.** 1 h dans 1 L d'eau + 60 g de sel + 30 g de sucre (facultatif mais spectaculaire).
 2. **Saisir.** Côté peau, 5 min jusqu'à doré croustillant.
 3. **Four.** Côté peau dessus, 100 °C jusqu'à 74 °C à cœur (45-60 min).
-4. **Jus.** Échalote dans la poêle, bouillon, gratte, réduis ; beurre froid.
+4. **Jus.** Échalote dans la poêle, bouillon, gratte, réduis ; beurre froid. Quelques gouttes de citron dans le jus, au dernier moment, le rendent plus net.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -5640,11 +5640,11 @@ Niveau ⭐ · 1 portions · actif 5 min · repos/cuisson 2 min · coût €
 
 Trois œufs, du beurre, des herbes : roulée, lisse dehors, crémeuse dedans. La mesure de la maîtrise du feu.
 
-**Ingrédients** : 3 œufs · 10 g de beurre · 1 c. à s. de ciboulette, persil, cerfeuil, estragon · 1 pincée de sel
+**Ingrédients** : 3 œufs · 10 g de beurre · 1 c. à s. de ciboulette, persil, cerfeuil, estragon · 1 pincée de sel · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Battre.** Juste à la fourchette, sel, herbes.
 2. **Cuire.** Beurre moussant, œufs, remue vivement en secouant 30 s ; laisse prendre 20 s.
-3. **Rouler.** En inclinant, en trois ; retourne sur l'assiette, couture dessous.
+3. **Rouler.** En inclinant, en trois ; retourne sur l'assiette, couture dessous. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -7367,11 +7367,11 @@ Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 20 min · coût €
 
 Pâtes fraîches irrégulières en couches avec fromage fondu et oignons croustillants : la tartiflette souabe.
 
-**Ingrédients** : 1 recette de spätzle (recette liée) · 200 g d'emmental ou de bergkäse râpé · 3 oignons · 40 g de beurre · 1 c. à s. de ciboulette
+**Ingrédients** : 1 recette de spätzle (recette liée) · 200 g d'emmental ou de bergkäse râpé · 3 oignons · 40 g de beurre · 1 c. à s. de ciboulette · 1 c. à s. de vinaigre de cidre (salade verte) *(facultatif)*
 
 1. **Oignons.** En rondelles fines, dorés au beurre 15 min jusqu'à croustillants.
 2. **Couches.** Spätzle chauds et fromage en alternance dans un plat chaud.
-3. **Finir.** 5 min au four à 220 °C (th. 7-8) : le fromage bulle. Oignons dessus, ciboulette.
+3. **Finir.** 5 min au four à 220 °C (th. 7-8) : le fromage bulle. Oignons dessus, ciboulette. Avec une salade verte bien vinaigrée, comme en Souabe : elle tranche le fromage.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8227,11 +8227,11 @@ Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
 
 Le brocoli cuit avec les pâtes dans la même eau, puis sauté à l'ail et au piment : un plat des Pouilles, végétarien et vert.
 
-**Ingrédients** : 400 g de pâtes (orecchiette, penne) · 1 gros brocoli · 3 gousses d'ail · 1 pincée de piment · 4 c. à s. d'huile d'olive · 40 g de parmesan *(facultatif)*
+**Ingrédients** : 400 g de pâtes (orecchiette, penne) · 1 gros brocoli · 3 gousses d'ail · 1 pincée de piment · 4 c. à s. d'huile d'olive · 40 g de parmesan *(facultatif)* · ½ citron (zeste et jus) *(facultatif)*
 
 1. **Cuire ensemble.** Brocoli en petits bouquets dans l'eau salée des pâtes, 5 min avant la fin de leur cuisson.
 2. **Sauter.** Ail émincé et piment dans l'huile, 1 min ; ajoute pâtes et brocoli égouttés, une louche d'eau de cuisson ; écrase un peu le brocoli : il fait la sauce.
-3. **Servir.** Parmesan ou chapelure dorée.
+3. **Servir.** Parmesan ou chapelure dorée. Un peu de zeste et de jus de citron à la fin avive le brocoli.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8597,11 +8597,11 @@ Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 8 min · coût €
 
 Nouilles épaisses et moelleuses, champignons, chou, carotte, sauce soja-miel : végétarien, réconfortant, très rapide.
 
-**Ingrédients** : 400 g de nouilles udon (précuites) · 150 g de champignons · ¼ chou chinois · 1 carotte · 3 c. à s. de sauce soja · 1 c. à c. de miel · 1 c. à s. d'huile neutre · 1 c. à c. de sésame
+**Ingrédients** : 400 g de nouilles udon (précuites) · 150 g de champignons · ¼ chou chinois · 1 carotte · 3 c. à s. de sauce soja · 1 c. à c. de miel · 1 c. à s. d'huile neutre · 1 c. à c. de sésame · 1 c. à c. de vinaigre de cidre *(facultatif)*
 
 1. **Légumes.** En lanières, sautés 3 min à feu vif.
 2. **Nouilles.** Passées 1 min sous l'eau chaude, ajoutées avec soja et miel ; 2 min en remuant : la sauce les enrobe et brille.
-3. **Servir.** Sésame.
+3. **Servir.** Sésame. Un trait de vinaigre avec la sauce, hors du feu : plus net.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8774,11 +8774,11 @@ Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 6 min · coût €
 
 Le plat de rue le plus populaire de Thaïlande : poulet haché sauté à l'ail, au piment et au basilic, servi sur riz avec un œuf frit.
 
-**Ingrédients** : 300 g de poulet haché (ou blanc haché au couteau) · 3 gousses d'ail · 1-2 piments · 1 poignée de basilic thaï (ou basilic) · 1 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 2 œufs · 300 g de riz cuit · 1 pincée de sucre
+**Ingrédients** : 300 g de poulet haché (ou blanc haché au couteau) · 3 gousses d'ail · 1-2 piments · 1 poignée de basilic thaï (ou basilic) · 1 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 2 œufs · 300 g de riz cuit · 1 pincée de sucre · ½ citron vert *(facultatif)*
 
 1. **Sauter.** Ail et piment pilés 20 s dans l'huile chaude ; poulet, 4 min en l'émiettant : il n'est plus rose.
 2. **Assaisonner.** Sauce d'huître, soja, une pincée de sucre, basilic : il tombe en 10 s.
-3. **Œuf.** Frit dans beaucoup d'huile chaude : bords croustillants, jaune coulant. Sur le riz, avec le poulet.
+3. **Œuf.** Frit dans beaucoup d'huile chaude : bords croustillants, jaune coulant. Sur le riz, avec le poulet. À table, à la thaïe : piment frais émincé dans un peu de jus de citron vert et de sauce soja.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8876,11 +8876,11 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
 
 Semoule gonflée en 5 minutes, légumes sautés au ras el-hanout, pois chiches et raisins : le goût du couscous un soir de semaine.
 
-**Ingrédients** : 250 g de semoule moyenne · 2 courgettes · 2 carottes · 1 boîte de pois chiches · 2 c. à c. de ras el-hanout · 40 g de raisins secs *(facultatif)* · 20 g de beurre · 25 cl de bouillon de légumes
+**Ingrédients** : 250 g de semoule moyenne · 2 courgettes · 2 carottes · 1 boîte de pois chiches · 2 c. à c. de ras el-hanout · 40 g de raisins secs *(facultatif)* · 20 g de beurre · 25 cl de bouillon de légumes · ½ citron *(facultatif)*
 
 1. **Semoule.** Arrosée de 25 cl de bouillon bouillant, couverte 5 min ; égrenée à la fourchette avec le beurre.
 2. **Légumes.** En dés, sautés 8 min avec les épices ; pois chiches et raisins 2 min.
-3. **Servir.** La semoule, les légumes par-dessus ; harissa à part.
+3. **Servir.** La semoule, les légumes par-dessus ; harissa à part. Un filet de citron sur la semoule, pour qui aime.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8928,11 +8928,11 @@ Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 8 min · coût €
 
 Champignons dorés au beurre, ail et persil sur pain grillé, couronnés d'un œuf au plat : rustique et rassasiant.
 
-**Ingrédients** : 250 g de champignons · 2 tranches de pain de campagne · 2 œufs · 20 g de beurre · 1 gousse d'ail · 1 c. à s. de persil
+**Ingrédients** : 250 g de champignons · 2 tranches de pain de campagne · 2 œufs · 20 g de beurre · 1 gousse d'ail · 1 c. à s. de persil · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Champignons.** Poêle chaude, beurre, champignons en lamelles sans les remuer 3 min : ils dorent ; ail, persil, sel.
 2. **Œufs.** Au plat à côté, 3 min : blanc pris, jaune coulant.
-3. **Dresser.** Pain grillé, champignons, œuf, poivre.
+3. **Dresser.** Pain grillé, champignons, œuf, poivre. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8953,11 +8953,11 @@ Niveau ⭐ · 4 portions · actif 8 min · repos/cuisson 12 min · coût €
 
 Omelette épaisse aux courgettes et au parmesan, finie sous le gril : se mange chaude, tiède ou froide en pique-nique.
 
-**Ingrédients** : 6 œufs · 2 courgettes · 40 g de parmesan · 1 oignon · 2 c. à s. d'huile d'olive · 6 feuilles de basilic *(facultatif)*
+**Ingrédients** : 6 œufs · 2 courgettes · 40 g de parmesan · 1 oignon · 2 c. à s. d'huile d'olive · 6 feuilles de basilic *(facultatif)* · ½ citron (salade de roquette) *(facultatif)*
 
 1. **Légumes.** Oignon et courgettes en fines rondelles, 6 min : tendres et un peu dorés.
 2. **Œufs.** Battus avec parmesan, sel ; versés, feu doux 6 min sans remuer : les bords prennent.
-3. **Finir.** 2-3 min sous le gril du four (ou couvert) : le dessus est pris et gonflé.
+3. **Finir.** 2-3 min sous le gril du four (ou couvert) : le dessus est pris et gonflé. Avec une salade de roquette au citron et à l'huile d'olive : fraîche et vive.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -9055,7 +9055,7 @@ Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 0 min · coût €
 
 Sardines à l'huile écrasées avec citron, persil et oignon rouge sur pain grillé frotté à l'ail : un dîner portugais en 10 minutes.
 
-**Ingrédients** : 1 boîte de sardines à l'huile · 4 tranches de pain de campagne · ½ citron · 1 c. à s. de persil · ¼ oignon rouge · 1 gousse d'ail
+**Ingrédients** : 2 boîtes de sardines à l'huile · 4 tranches de pain de campagne · ½ citron · 1 c. à s. de persil · ¼ oignon rouge · 1 gousse d'ail
 
 1. **Griller.** Pain grillé, frotté à l'ail.
 2. **Écraser.** Sardines (arêtes comprises : elles sont tendres et riches en calcium), citron, persil, oignon.
@@ -9184,7 +9184,7 @@ Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 10 min · coût €€
 
 Crème citronnée, saumon fumé en lanières, aneth : les pâtes du dimanche soir, en 15 minutes.
 
-**Ingrédients** : 400 g de tagliatelles · 150 g de saumon fumé · 20 cl de crème · 1 citron · 1 c. à s. d'aneth *(facultatif)*
+**Ingrédients** : 400 g de tagliatelles · 250 g de saumon fumé · 20 cl de crème · 1 citron · 1 c. à s. d'aneth *(facultatif)*
 
 1. **Cuire.** Tagliatelles.
 2. **Sauce.** Crème, zeste de citron, poivre, chauffée 2 min (pas de sel : le saumon est salé).
@@ -9209,7 +9209,7 @@ Niveau ⭐ · 2 portions · actif 8 min · repos/cuisson 6 min · coût €
 
 Pain de mie, pesto, poulet cuit, mozzarella et tomate, doré à la poêle : un croque sans jambon, très gourmand.
 
-**Ingrédients** : 4 tranches de pain de mie · 100 g de poulet cuit (reste de rôti) · 2 c. à s. de pesto · ½ boule de mozzarella · 1 tomate · 10 g de beurre
+**Ingrédients** : 4 tranches de pain de mie · 150 g de poulet cuit (reste de rôti) · 2 c. à s. de pesto · ½ boule de mozzarella · 1 tomate · 10 g de beurre
 
 1. **Monter.** Pesto, poulet, tomate, mozzarella entre deux tranches.
 2. **Dorer.** Beurré dehors, poêle moyenne couverte 3 min par face : doré, le fromage fond.
@@ -9703,11 +9703,11 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
 
 Pain de mie, jambon, béchamel et fromage gratiné : le croque de café, doré et fondant.
 
-**Ingrédients** : 8 tranches de pain de mie · 4 tranches de jambon blanc · 1 béchamel (½ recette liée) · 150 g d'emmental râpé · 20 g de beurre
+**Ingrédients** : 8 tranches de pain de mie · 4 tranches de jambon blanc · 1 béchamel (½ recette liée) · 150 g d'emmental râpé · 20 g de beurre · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Monter.** Beurre le pain, pose jambon et un peu de fromage, ferme.
 2. **Napper.** Étale la béchamel dessus et le reste du fromage.
-3. **Gratiner.** 10 min sous le gril à 220 °C, jusqu'à ce que ce soit doré et bouillonnant.
+3. **Gratiner.** 10 min sous le gril à 220 °C, jusqu'à ce que ce soit doré et bouillonnant. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -10091,11 +10091,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
 
 Pommes de terre poêlées et cantal fondu, avec ou sans lardons : le plat du buron.
 
-**Ingrédients** : 1 kg de pommes de terre · 300 g de tome fraîche ou de cantal jeune · 100 g de lardons (facultatif) *(facultatif)* · 2 gousses d'ail · 2 c. à s. de graisse de canard ou d'huile · 1 c. à s. de persil
+**Ingrédients** : 1 kg de pommes de terre · 300 g de tome fraîche ou de cantal jeune · 100 g de lardons (facultatif) *(facultatif)* · 2 gousses d'ail · 2 c. à s. de graisse de canard ou d'huile · 1 c. à s. de persil · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Poêler.** Fais dorer les pommes de terre en lamelles dans la graisse 20 min, avec l'ail (et les lardons).
 2. **Fondre.** Ajoute le fromage en lamelles, remue jusqu'à ce qu'il file.
-3. **Galette.** Laisse dorer 3 min sans toucher, retourne sur un plat. Persil.
+3. **Galette.** Laisse dorer 3 min sans toucher, retourne sur un plat. Persil. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -10522,12 +10522,12 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 30 min · coût €
 
 Morue pochée, émiettée et montée avec pommes de terre, ail et huile d'olive, gratinée au four.
 
-**Ingrédients** : 600 g de morue salée dessalée 24 h · 600 g de pommes de terre · 3 gousses d'ail · 15 cl d'huile d'olive · 15 cl de lait chaud · 1 c. à s. de chapelure
+**Ingrédients** : 600 g de morue salée dessalée 24 h · 600 g de pommes de terre · 3 gousses d'ail · 15 cl d'huile d'olive · 15 cl de lait chaud · 1 c. à s. de chapelure · ½ citron *(facultatif)*
 
 1. **Dessaler.** 24 h dans l'eau froide changée 4 fois.
 2. **Pocher.** 8 min à frémissement ; émiette sans peau ni arêtes. Cuis les pommes de terre.
 3. **Monter.** Écrase pommes de terre, morue et ail ; ajoute huile et lait en alternance : purée souple.
-4. **Gratiner.** Chapelure, 15 min à 210 °C.
+4. **Gratiner.** Chapelure, 15 min à 210 °C. Quelques gouttes de citron dans la brandade avant de gratiner, au goût.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -11884,7 +11884,7 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 30 · coût €
 
 Riz mêlé de yaourt, safran et jaunes d'œufs, cuit au four en gâteau avec un cœur de poulet : la croûte dorée est spectaculaire.
 
-**Ingrédients** : 400 g de riz basmati précuit · 250 g de yaourt grec · 2 jaunes d'œufs · 1 pincée de safran infusé · 400 g de poulet cuit effiloché · 60 g de beurre · 30 g de canneberges (ou épine-vinette)
+**Ingrédients** : 400 g de riz basmati précuit · 250 g de yaourt grec · 2 jaunes d'œufs · 1 pincée de safran infusé · 500 g de poulet cuit effiloché · 60 g de beurre · 30 g de canneberges (ou épine-vinette)
 
 1. **Mélanger.** Riz, yaourt, jaunes, safran, sel.
 2. **Monter.** Moule beurré, moitié du riz, poulet, reste du riz, tassé.
@@ -11935,10 +11935,10 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
 
 Nouilles épaisses sautées avec poulet, chou, carotte et sauce soja-mirin : moelleuses, rapides.
 
-**Ingrédients** : 4 portions de nouilles udon · 300 g de poulet émincé · ¼ chou · 1 carotte · 100 g de shiitakés · 3 c. à s. de sauce soja · 1 c. à s. de mirin · 2 c. à s. d'huile
+**Ingrédients** : 4 portions de nouilles udon · 400 g de poulet émincé · ¼ chou · 1 carotte · 100 g de shiitakés · 3 c. à s. de sauce soja · 1 c. à s. de mirin · 2 c. à s. d'huile · 1 c. à s. de gingembre mariné (gari) *(facultatif)*
 
 1. **Sauter.** Poulet, légumes 4 min.
-2. **Nouilles.** Udon détendues à l'eau chaude, sauces, 2 min.
+2. **Nouilles.** Udon détendues à l'eau chaude, sauces, 2 min. Un peu de gingembre mariné dessus, comme au Japon : il coupe le gras.
 
 - **Variante Sans alcool** : Mirin → **jus de pomme + un trait de vinaigre de riz**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
 
@@ -12290,11 +12290,11 @@ Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 15 min · coût €
 
 Escalope aplatie, roulée autour de jambon et de fromage, panée et dorée : le cordon bleu fait maison, sans porc ici, filant au cœur.
 
-**Ingrédients** : 4 escalopes de dinde fines · 4 tranches de jambon de dinde · 4 tranches d'emmental · 2 œufs · 50 g de farine · 100 g de chapelure · 30 g de beurre · 3 c. à s. d'huile
+**Ingrédients** : 4 escalopes de dinde fines · 4 tranches de jambon de dinde · 4 tranches d'emmental · 2 œufs · 50 g de farine · 100 g de chapelure · 30 g de beurre · 3 c. à s. d'huile · 1 citron, en quartiers *(facultatif)*
 
 1. **Aplatir.** Escalopes entre deux films, au fond d'une casserole : 5 mm d'épaisseur.
 2. **Garnir et fermer.** Jambon et fromage sur une moitié, plie, presse les bords ; farine, œuf, chapelure (deux couches sur les bords pour que le fromage ne s'échappe pas).
-3. **Cuire.** Huile et beurre moyens, 6-7 min par face : bien doré ; 2 min de repos.
+3. **Cuire.** Huile et beurre moyens, 6-7 min par face : bien doré ; 2 min de repos. Un quartier de citron à presser, comme pour une escalope viennoise.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -12927,11 +12927,11 @@ Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 35 min · coût €€
 
 Le riz au poulet de toute l'Amérique latine : poulet doré, riz cuit dans un bouillon vert à la coriandre (Pérou), petits pois, poivron et maïs.
 
-**Ingrédients** : 6 cuisses de poulet · 400 g de riz · 1 bouquet de coriandre · 1 poivron · 150 g de petits pois · 100 g de maïs · 1 oignon · 3 gousses d'ail · 80 cl de bouillon de volaille
+**Ingrédients** : 6 cuisses de poulet · 400 g de riz · 1 bouquet de coriandre · 1 poivron · 150 g de petits pois · 100 g de maïs · 1 oignon · 3 gousses d'ail · 80 cl de bouillon de volaille · 1 citron vert, en quartiers *(facultatif)*
 
 1. **Dorer.** Poulet 8 min, réservé ; oignon, ail, poivron 5 min.
 2. **Bouillon vert.** Coriandre mixée avec 20 cl de bouillon ; versée avec le reste du bouillon et le riz.
-3. **Cuire.** Poulet par-dessus, couvert 20 min à feu doux ; petits pois et maïs 5 min ; repos 5 min.
+3. **Cuire.** Poulet par-dessus, couvert 20 min à feu doux ; petits pois et maïs 5 min ; repos 5 min. Un quartier de citron vert pressé sur chaque assiette réveille le riz.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -13004,11 +13004,11 @@ Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €
 
 Pois chiches crus trempés (jamais cuits), herbes et épices, frits : croustillants dehors, verts et moelleux dedans.
 
-**Ingrédients** : 250 g de pois chiches secs trempés 24 h · 1 bouquet de persil + 1 de coriandre · 1 oignon · 4 gousses d'ail · 2 c. à c. de cumin + 1 de coriandre moulue · ½ c. à c. de bicarbonate · 1 c. à s. de sésame · 75 cl d'huile de friture
+**Ingrédients** : 250 g de pois chiches secs trempés 24 h · 1 bouquet de persil + 1 de coriandre · 1 oignon · 4 gousses d'ail · 2 c. à c. de cumin + 1 de coriandre moulue · ½ c. à c. de bicarbonate · 1 c. à s. de sésame · 75 cl d'huile de friture · 1 citron (sauce tahini) · 3 c. à s. de tahini (sauce)
 
 1. **Mixer.** Pois chiches égouttés crus, herbes, oignon, ail, épices, sel : semoule humide, pas une purée. 1 h au frais.
 2. **Former.** Bicarbonate, boulettes de 4 cm tassées, sésame.
-3. **Frire.** 4 min à 175 °C. Avec pita, tahini, salade.
+3. **Frire.** 4 min à 175 °C. Avec pita, tahini, salade. La sauce : 3 c. à s. de tahini, le jus du citron, de l'eau froide cuillère par cuillère, sel ; fouettée, elle devient crémeuse et pâle.
 
 - Pois chiches cuits ou en bocal : les falafels se défont.
 
@@ -14705,11 +14705,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 35 min · coût €
 
 Endives fondantes roulées dans du jambon, nappées de béchamel au fromage : le gratin du Nord. Version jambon de dinde.
 
-**Ingrédients** : 8 endives · 8 tranches de jambon de dinde · 1 recette de béchamel · 100 g de fromage râpé · 1 c. à c. de sucre
+**Ingrédients** : 8 endives · 8 tranches de jambon de dinde · 1 recette de béchamel · 100 g de fromage râpé · 1 c. à c. de sucre · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Endives.** Braisées 20 min à couvert avec beurre et une pincée de sucre (moins amères) ; pressées.
 2. **Rouler.** Dans le jambon.
-3. **Gratiner.** Béchamel, fromage, 25 min à 200 °C.
+3. **Gratiner.** Béchamel, fromage, 25 min à 200 °C. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -14730,10 +14730,10 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 40 min · coût €
 
 Lentilles vertes mijotées avec carottes et saucisses fumées de volaille : le goût du petit salé sans porc.
 
-**Ingrédients** : 300 g de lentilles vertes · 6 saucisses de volaille fumées · 2 carottes · 1 oignon piqué de girofle · 1 bouquet garni · 1 c. à c. de paprika fumé
+**Ingrédients** : 300 g de lentilles vertes · 6 saucisses de volaille fumées · 2 carottes · 1 oignon piqué de girofle · 1 bouquet garni · 1 c. à c. de paprika fumé · 1 c. à s. de vinaigre de cidre (ou de vin)
 
 1. **Mijoter.** Lentilles, légumes, bouquet garni, paprika fumé, eau à hauteur ×2, 25 min.
-2. **Saucisses.** Piquées, 15 min dedans.
+2. **Saucisses.** Piquées, 15 min dedans. Hors du feu, un trait de vinaigre dans les lentilles : c'est le geste des bouchons lyonnais.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -14754,11 +14754,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
 
 Purée de la veille, restes de viande ou de légumes et fromage, panés et dorés : les restes deviennent un plat à part entière.
 
-**Ingrédients** : 400 g de purée (reste) · 200 g de restes de viande, poisson ou légumes · 60 g de fromage râpé · 2 œufs · 80 g de chapelure (pain rassis mixé) · 3 c. à s. d'huile
+**Ingrédients** : 400 g de purée (reste) · 200 g de restes de viande, poisson ou légumes · 60 g de fromage râpé · 2 œufs · 80 g de chapelure (pain rassis mixé) · 3 c. à s. d'huile · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Mélanger.** Purée, restes hachés, fromage, 1 œuf.
 2. **Paner.** Boulettes, œuf, chapelure.
-3. **Dorer.** 3 min par face.
+3. **Dorer.** 3 min par face. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -14831,10 +14831,10 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
 
 Pain rassis trempé dans les œufs battus au lait et fromage, doré : avec une salade, un dîner en 15 minutes.
 
-**Ingrédients** : 8 tranches de pain rassis · 3 œufs · 20 cl de lait · 80 g de fromage râpé · 1 c. à s. d'herbes · 20 g de beurre
+**Ingrédients** : 8 tranches de pain rassis · 3 œufs · 20 cl de lait · 80 g de fromage râpé · 1 c. à s. d'herbes · 20 g de beurre · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Tremper.** Œufs, lait, fromage, herbes, sel, poivre.
-2. **Dorer.** 3 min par face au beurre.
+2. **Dorer.** 3 min par face au beurre. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -15281,7 +15281,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
 
 Pommes de terre tièdes, œufs durs, tomates, cornichons, jambon de dinde et sauce mayonnaise : le classique des cantines, version maison.
 
-**Ingrédients** : 800 g de pommes de terre · 3 œufs durs · 2 tomates · 6 cornichons · 120 g de jambon de dinde (ou blanc) · 4 c. à s. de mayonnaise · 1 c. à s. de persil
+**Ingrédients** : 800 g de pommes de terre · 4 œufs durs · 2 tomates · 6 cornichons · 200 g de jambon de dinde (ou blanc) · 4 c. à s. de mayonnaise · 1 c. à s. de persil
 
 1. **Cuire.** Pommes de terre en dés, 15 min à l'eau salée : tendres (la lame entre sans forcer).
 2. **Mélanger.** Encore tièdes, avec la mayonnaise allongée d'1 c. à s. de vinaigre.
@@ -15528,7 +15528,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €€
 
 Lentilles vertes tièdes, saumon fumé, échalote, aneth et crème citronnée : un plat de bistrot léger.
 
-**Ingrédients** : 200 g de lentilles vertes · 150 g de saumon fumé · 1 échalote · 1 c. à s. d'aneth · 3 c. à s. de crème · 1 citron · 1 c. à c. de moutarde · 3 c. à s. d'huile
+**Ingrédients** : 200 g de lentilles vertes · 250 g de saumon fumé · 1 échalote · 1 c. à s. d'aneth · 3 c. à s. de crème · 1 citron · 1 c. à c. de moutarde · 3 c. à s. d'huile
 
 1. **Lentilles.** 20 min à frémissement, égouttées, salées tièdes.
 2. **Vinaigrette.** Moutarde, citron, huile, échalote hachée.
@@ -16224,11 +16224,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
 
 Pommes de terre, chou-fleur, carottes, petits pois et pois chiches dans une sauce coco aux épices douces : le curry de légumes complet.
 
-**Ingrédients** : 2 pommes de terre · ½ chou-fleur · 2 carottes · 100 g de petits pois · 1 boîte de pois chiches · 40 cl de lait de coco · 1 oignon · 2 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à s. de curry · ½ bouquet de coriandre *(facultatif)*
+**Ingrédients** : 2 pommes de terre · ½ chou-fleur · 2 carottes · 100 g de petits pois · 1 boîte de pois chiches · 40 cl de lait de coco · 1 oignon · 2 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à s. de curry · ½ bouquet de coriandre *(facultatif)* · ½ citron vert
 
 1. **Base.** Oignon 5 min ; ail, gingembre, curry 1 min : ça embaume.
 2. **Mijoter.** Légumes en morceaux, lait de coco, 20 cl d'eau, sel ; 20 min couvert : la lame entre dans la pomme de terre.
-3. **Finir.** Pois chiches et petits pois 5 min ; coriandre ; avec du riz basmati ou du naan.
+3. **Finir.** Pois chiches et petits pois 5 min ; coriandre ; avec du riz basmati ou du naan. Un filet de citron vert au moment de servir réveille le lait de coco.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16276,11 +16276,11 @@ Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 0 min · coût €
 
 Courge fondue dans un risotto crémeux, sauge croustillante et parmesan : l'automne italien.
 
-**Ingrédients** : 300 g de riz à risotto · 500 g de courge (butternut, potimarron) · 1 oignon · 1 l de bouillon de légumes chaud · 60 g de parmesan · 30 g de beurre · 8 feuilles de sauge
+**Ingrédients** : 300 g de riz à risotto · 500 g de courge (butternut, potimarron) · 1 oignon · 1 l de bouillon de légumes chaud · 60 g de parmesan · 30 g de beurre · 8 feuilles de sauge · ½ citron *(facultatif)*
 
 1. **Nacrer.** Oignon 3 min au beurre ; riz 2 min : il devient translucide sur les bords.
 2. **Cuire.** Courge en petits dés ; bouillon louche par louche en remuant, 18 min : le riz est crémeux mais encore un peu ferme.
-3. **Lier.** Hors du feu, beurre et parmesan, 2 min couvert ; sauge frite 30 s dans le beurre.
+3. **Lier.** Hors du feu, beurre et parmesan, 2 min couvert ; sauge frite 30 s dans le beurre. Quelques gouttes de citron avec le parmesan équilibrent la douceur de la courge.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16353,11 +16353,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €€
 
 Pâte de curry vert, lait de coco, tofu, aubergine, haricots verts et basilic thaï : vif, parfumé, sans viande.
 
-**Ingrédients** : 400 g de tofu ferme · 40 cl de lait de coco · 2 c. à s. de pâte de curry vert · 1 aubergine · 150 g de haricots verts · 1 poignée de basilic thaï · 1 c. à s. de sauce soja · 1 c. à c. de sucre
+**Ingrédients** : 400 g de tofu ferme · 40 cl de lait de coco · 2 c. à s. de pâte de curry vert · 1 aubergine · 150 g de haricots verts · 1 poignée de basilic thaï · 1 c. à s. de sauce soja · 1 c. à c. de sucre · ½ citron vert
 
 1. **Pâte.** Curry vert frit 1 min dans 4 c. à s. de crème de coco : l'huile se sépare et ça sent fort.
 2. **Mijoter.** Lait de coco, aubergine en dés, haricots, 10 min.
-3. **Finir.** Tofu en cubes 3 min, soja, sucre, basilic ; riz jasmin.
+3. **Finir.** Tofu en cubes 3 min, soja, sucre, basilic ; riz jasmin. Un filet de citron vert à la fin : la sauce gagne en relief.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16557,11 +16557,11 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
 
 Polenta souple au parmesan, champignons poêlés à l'ail et au thym : réconfortant et prêt en 30 minutes.
 
-**Ingrédients** : 200 g de polenta (cuisson rapide) · 500 g de champignons variés · 60 g de parmesan · 30 g de beurre · 2 gousses d'ail · 1 c. à c. de thym · 1 l d'eau ou de bouillon
+**Ingrédients** : 200 g de polenta (cuisson rapide) · 500 g de champignons variés · 60 g de parmesan · 30 g de beurre · 2 gousses d'ail · 1 c. à c. de thym · 1 l d'eau ou de bouillon · ½ citron *(facultatif)*
 
 1. **Polenta.** En pluie dans le bouillon frémissant en fouettant, 5-8 min : épaisse ; beurre, parmesan.
 2. **Champignons.** Poêle très chaude, sans les remuer d'abord : ils dorent ; ail, thym, sel.
-3. **Servir.** Polenta dans l'assiette creuse, champignons dessus.
+3. **Servir.** Polenta dans l'assiette creuse, champignons dessus. Un filet de citron sur les champignons en fin de cuisson leur donne du relief.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16582,11 +16582,11 @@ Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 12 min · coût €
 
 Galettes de haricots rouges, flocons d'avoine et paprika fumé, dorées à la poêle, dans un pain brioché avec cheddar et oignons.
 
-**Ingrédients** : 400 g de haricots rouges · 50 g de flocons d'avoine · 1 œuf · 1 c. à c. de paprika fumé · 1 c. à c. de cumin · 4 pains burger · 4 tranches de cheddar · 1 oignon rouge · 4 feuilles de salade
+**Ingrédients** : 400 g de haricots rouges · 50 g de flocons d'avoine · 1 œuf · 1 c. à c. de paprika fumé · 1 c. à c. de cumin · 4 pains burger · 4 tranches de cheddar · 1 oignon rouge · 4 feuilles de salade · 2 c. à s. de vinaigre de cidre (oignon rouge mariné) *(facultatif)* · 1 pincée de sucre (oignon mariné) *(facultatif)*
 
 1. **Galettes.** Haricots égouttés et séchés, écrasés ; avoine, œuf, épices, sel ; 4 galettes, 15 min au frais.
 2. **Cuire.** Poêle huilée, 4-5 min par face : croûte dorée ; cheddar sur le dessus, couvert 1 min.
-3. **Monter.** Pain grillé, sauce, salade, galette, oignon.
+3. **Monter.** Pain grillé, sauce, salade, galette, oignon. L'oignon rouge émincé, 10 min dans le vinaigre avec une pincée de sel et de sucre : rose, croquant et acidulé, il équilibre la galette.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16711,11 +16711,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
 
 Chou-fleur rôti, lentilles corail au curry doux et fromage gratiné : un gratin complet, sans béchamel.
 
-**Ingrédients** : 1 chou-fleur · 150 g de lentilles corail · 20 cl de lait de coco · 1 c. à s. de curry doux · 80 g de fromage râpé · 1 oignon
+**Ingrédients** : 1 chou-fleur · 150 g de lentilles corail · 20 cl de lait de coco · 1 c. à s. de curry doux · 80 g de fromage râpé · 1 oignon · ½ citron *(facultatif)*
 
 1. **Lentilles.** Oignon 5 min, curry, lentilles, lait de coco, 30 cl d'eau, 15 min : crémeuses.
 2. **Chou-fleur.** En bouquets, 6 min à l'eau salée.
-3. **Gratiner.** Le tout dans le plat, fromage, 200 °C, 20 min : doré.
+3. **Gratiner.** Le tout dans le plat, fromage, 200 °C, 20 min : doré. Un filet de citron sur chaque assiette réveille le curry et le lait de coco.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16736,11 +16736,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
 
 Galette de sarrasin, champignons poêlés, œuf et emmental : la complète bretonne en version végétarienne.
 
-**Ingrédients** : 8 galettes de sarrasin (ou pâte maison) · 300 g de champignons · 4 œufs · 120 g d'emmental râpé · 30 g de beurre salé · 1 c. à s. de persil
+**Ingrédients** : 8 galettes de sarrasin (ou pâte maison) · 300 g de champignons · 4 œufs · 120 g d'emmental râpé · 30 g de beurre salé · 1 c. à s. de persil · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Champignons.** Poêlés au beurre, persil, sel.
 2. **Garnir.** Galette dans la poêle beurrée ; fromage, œuf au centre (blanc étalé à la spatule), champignons ; 3 min : le blanc prend.
-3. **Plier.** Les bords en carré, le jaune visible au centre.
+3. **Plier.** Les bords en carré, le jaune visible au centre. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16792,11 +16792,11 @@ Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €€
 
 Morceaux de cuisse de poulet et de cébette en brochettes, grillés et laqués de sauce tare au soja et au mirin : le classique des comptoirs japonais.
 
-**Ingrédients** : 600 g de cuisses de poulet désossées · 1 botte de cébettes · 6 c. à s. de sauce soja · 4 c. à s. de mirin · 2 c. à s. de sucre · 1 pincée de shichimi togarashi *(facultatif)*
+**Ingrédients** : 600 g de cuisses de poulet désossées · 1 botte de cébettes · 6 c. à s. de sauce soja · 4 c. à s. de mirin · 2 c. à s. de sucre · 1 pincée de shichimi togarashi *(facultatif)* · 1 citron, en quartiers *(facultatif)*
 
 1. **Tare.** Soja, mirin, sucre, 5 min à frémissement : sirupeux.
 2. **Brochettes.** Poulet en cubes de 3 cm alternés avec des tronçons de cébette.
-3. **Griller.** 10-12 min en tournant ; badigeonnés de tare les 3 dernières minutes, 2-3 fois : laqués, légèrement grillés.
+3. **Griller.** 10-12 min en tournant ; badigeonnés de tare les 3 dernières minutes, 2-3 fois : laqués, légèrement grillés. Un quartier de citron à côté, comme dans les izakaya.
 
 - **Variante Sans alcool** : Mirin → **vinaigre de riz + sucre** ; saké → **bouillon**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
 
@@ -16819,11 +16819,11 @@ Niveau ⭐⭐⭐ · 4 portions · actif 30 min · repos/cuisson 15 min · coût 
 
 Une pâte à peine mélangée et glacée, des légumes et des crevettes plongés dans l'huile : une dentelle croustillante et légère. Le secret : tout très froid et des grumeaux.
 
-**Ingrédients** : 12 crevettes crues décortiquées (queue gardée) · 1 patate douce · 1 courgette · 8 champignons shiitake ou de Paris · 120 g de farine (ou moitié fécule) · 1 jaune d'œuf · 20 cl d'eau gazeuse glacée · 1,5 l d'huile de friture · 4 c. à s. de sauce soja (pour tremper)
+**Ingrédients** : 20 crevettes crues décortiquées (queue gardée) · 1 patate douce · 1 courgette · 8 champignons shiitake ou de Paris · 120 g de farine (ou moitié fécule) · 1 jaune d'œuf · 20 cl d'eau gazeuse glacée · 1,5 l d'huile de friture · 4 c. à s. de sauce soja (pour tremper) · 1 citron, en quartiers *(facultatif)*
 
 1. **Préparer.** Légumes en tranches de 5 mm ; crevettes incisées sous le ventre (elles restent droites), séchées.
 2. **Pâte minute.** Jaune + eau glacée, farine versée d'un coup, 10 coups de baguettes : il reste des grumeaux (c'est voulu).
-3. **Frire.** 175 °C ; tremper puis frire par petites quantités, 2 min (crevettes) à 3 min (légumes) : pâle et craquant ; égoutter sur grille. Soja coupé de dashi et un peu de radis râpé.
+3. **Frire.** 175 °C ; tremper puis frire par petites quantités, 2 min (crevettes) à 3 min (légumes) : pâle et craquant ; égoutter sur grille. Soja coupé de dashi et un peu de radis râpé. Un quartier de citron et une pincée de sel fin, comme au Japon, pour qui préfère à la sauce.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -16927,11 +16927,11 @@ Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 10 min · coût €
 
 Vermicelles transparents et élastiques sautés avec bœuf, épinards, carotte, champignons et huile de sésame : le plat des fêtes coréennes.
 
-**Ingrédients** : 200 g de vermicelles de patate douce (ou de haricot mungo) · 200 g de bœuf en lanières · 150 g d'épinards · 1 carotte · 6 shiitake · 4 c. à s. de sauce soja · 2 c. à s. d'huile de sésame · 1 c. à s. de sucre · 1 c. à s. de sésame · 2 gousses d'ail
+**Ingrédients** : 200 g de vermicelles de patate douce (ou de haricot mungo) · 300 g de bœuf en lanières · 150 g d'épinards · 1 carotte · 6 shiitake · 4 c. à s. de sauce soja · 2 c. à s. d'huile de sésame · 1 c. à s. de sucre · 1 c. à s. de sésame · 2 gousses d'ail · 2 c. à s. de vinaigre de cidre (concombre vinaigré, oi muchim) *(facultatif)*
 
 1. **Vermicelles.** Cuits 6 min, rincés, coupés aux ciseaux, assaisonnés de 1 c. à s. de soja et d'huile de sésame.
 2. **Sauter séparément.** Carotte en julienne, champignons, bœuf mariné (soja, sucre, ail), chacun 2-3 min ; épinards blanchis et pressés.
-3. **Assembler.** Tout dans la poêle avec le reste de soja, sucre, sésame, 2 min : brillant. Chaud ou tiède.
+3. **Assembler.** Tout dans la poêle avec le reste de soja, sucre, sésame, 2 min : brillant. Chaud ou tiède. À côté, comme en Corée, un concombre en fines rondelles avec le vinaigre, une pincée de sucre et de sésame : son acidité répond à la sauce sucrée-salée. Le kimchi y va aussi (il contient souvent du poisson).
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -17306,7 +17306,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
 
 Pains plats coupés en lanières, sautés avec œuf, légumes, curry et poulet, hachés à la spatule dans un bruit de percussion : le street-food de Colombo, parfait pour les restes.
 
-**Ingrédients** : 4 parathas ou pains plats · 300 g de poulet cuit ou restes de curry · 3 œufs · 1 carotte · ¼ chou · 1 oignon · 2 c. à c. de curry · 1 piment vert *(facultatif)*
+**Ingrédients** : 4 parathas ou pains plats · 400 g de poulet cuit ou restes de curry · 3 œufs · 1 carotte · ¼ chou · 1 oignon · 2 c. à c. de curry · 1 piment vert *(facultatif)*
 
 1. **Couper.** Pains en lanières de 1 cm ; légumes en julienne.
 2. **Sauter.** Oignon, piment, légumes 4 min ; curry ; œufs brouillés dans un coin.
@@ -17406,7 +17406,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
 
 Riz de la veille sauté avec ananas, crevettes ou poulet, cajou, raisins et curry doux, servi dans l'ananas évidé pour les grandes occasions.
 
-**Ingrédients** : 600 g de riz cuit froid · 250 g d'ananas · 200 g de crevettes ou poulet · 2 œufs · 40 g de noix de cajou · 30 g de raisins secs *(facultatif)* · 1 c. à c. de curry · 2 c. à s. de sauce de poisson (ou soja) · 2 cébettes
+**Ingrédients** : 600 g de riz cuit froid · 250 g d'ananas · 300 g de crevettes ou poulet · 2 œufs · 40 g de noix de cajou · 30 g de raisins secs *(facultatif)* · 1 c. à c. de curry · 2 c. à s. de sauce de poisson (ou soja) · 2 cébettes
 
 1. **Sauter.** Crevettes ou poulet 2 min ; œufs brouillés ; réservé.
 2. **Riz.** Wok fumant, riz froid égrené 3 min ; curry, sauce de poisson.
@@ -17964,7 +17964,7 @@ Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 4 h 00 · coût €€
 
 L'esprit du méchoui sans broche : épaule frottée de beurre, cumin et ail, cuite 4 heures à four doux jusqu'à s'effilocher, puis dorée. On la mange à la main avec du cumin et du sel.
 
-**Ingrédients** : 1 épaule d'agneau de 2 kg avec os · 80 g de beurre mou (ou smen) · 2 c. à s. de cumin · 6 gousses d'ail · 1 c. à c. de paprika · 1 c. à c. de gros sel
+**Ingrédients** : 1 épaule d'agneau de 2 kg avec os · 80 g de beurre mou (ou smen) · 2 c. à s. de cumin · 6 gousses d'ail · 1 c. à c. de paprika · 1 c. à c. de gros sel · 1 citron (salade méchouia) *(facultatif)*
 
 1. **Frotter.** Beurre écrasé avec ail, cumin, paprika, sel ; épaule entaillée, frottée partout, 2 h (ou une nuit).
 2. **Cuire lentement.** Couvert, 20 cl d'eau, 150 °C, 3 h 30 en arrosant toutes les heures.
@@ -18143,12 +18143,12 @@ Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 30 min · coût €
 
 Une béchamel épaisse au comté, des blancs montés, et le four fait le reste : le soufflé monte haut et doré. On le sert tout de suite, il n'attend pas.
 
-**Ingrédients** : 40 g de beurre · 40 g de farine · 25 cl de lait · 4 œufs · 100 g de comté râpé · 1 pincée de muscade
+**Ingrédients** : 40 g de beurre · 40 g de farine · 25 cl de lait · 4 œufs · 100 g de comté râpé · 1 pincée de muscade · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Préparer.** Four 200 °C ; moule beurré au pinceau du bas vers le haut (le soufflé grimpe le long des traits), puis fariné.
 2. **Béchamel.** Beurre + farine 1 min, lait d'un coup en fouettant, 2 min : très épaisse ; hors du feu, jaunes, fromage, sel, muscade.
 3. **Blancs.** Montés fermes avec une pincée de sel ; un quart mélangé vivement à la béchamel, le reste incorporé délicatement à la spatule, en soulevant.
-4. **Cuire.** Rempli aux trois quarts, pouce passé sur le bord (il monte droit) ; 25-30 min sans ouvrir : très gonflé et doré. À table immédiatement.
+4. **Cuire.** Rempli aux trois quarts, pouce passé sur le bord (il monte droit) ; 25-30 min sans ouvrir : très gonflé et doré. À table immédiatement. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 - N'ouvre pas le four avant 20 min : un courant d'air et il retombe.
 
@@ -18364,11 +18364,11 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
 
 Macaronis dans une béchamel légère au fromage, gratinés : le plat qui réconcilie tous les enfants avec la table.
 
-**Ingrédients** : 300 g de macaronis · 40 cl de lait · 30 g de beurre · 30 g de farine · 120 g de fromage râpé · 1 pincée de muscade
+**Ingrédients** : 300 g de macaronis · 40 cl de lait · 30 g de beurre · 30 g de farine · 120 g de fromage râpé · 1 pincée de muscade · 1 c. à s. de vinaigre de cidre (vinaigrette de la salade) *(facultatif)*
 
 1. **Cuire.** Macaronis 2 min de moins que le paquet.
 2. **Béchamel.** Roux, lait, 5 min ; muscade, sel, deux tiers du fromage.
-3. **Gratiner.** Pâtes + sauce dans le plat, fromage ; 200 °C, 20 min : croûte dorée qui croustille.
+3. **Gratiner.** Pâtes + sauce dans le plat, fromage ; 200 °C, 20 min : croûte dorée qui croustille. À table, une salade verte à la vinaigrette : son acidité équilibre le fromage et la béchamel.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -19172,7 +19172,7 @@ Niveau ⭐⭐ · 8 portions · actif 45 min · repos/cuisson 45 min · coût €
 
 Pâtes, sauce à la viande parfumée à la cannelle et épaisse béchamel gratinée : la « lasagne » grecque des repas de famille.
 
-**Ingrédients** : 400 g de pâtes longues creuses (ou penne) · 500 g de bœuf haché · 400 g de tomates pelées · 1 oignon · 1 c. à c. de cannelle · 70 cl de béchamel · 80 g de fromage râpé · 2 œufs
+**Ingrédients** : 400 g de pâtes longues creuses (ou penne) · 700 g de bœuf haché · 400 g de tomates pelées · 1 oignon · 1 c. à c. de cannelle · 70 cl de béchamel · 80 g de fromage râpé · 2 œufs
 
 1. **Sauce.** Oignon, viande 8 min, tomates, cannelle, sel ; 20 min : épaisse.
 2. **Pâtes.** Cuites aux deux tiers, mélangées à la moitié du fromage et un œuf.
@@ -19427,12 +19427,12 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €
 
 Le pot-au-feu de Madrid, servi en trois temps (« vuelcos ») : d'abord le bouillon avec des vermicelles, puis pois chiches et légumes, enfin les viandes. Version sans porc (D21) : bœuf, poule, chorizo de bœuf.
 
-**Ingrédients** : 400 g de pois chiches secs · 600 g de jarret ou macreuse de bœuf · 4 cuisses de poulet · 200 g de chorizo de bœuf · ½ chou vert · 4 carottes · 6 pommes de terre · 100 g de vermicelles · 4 gousses d'ail
+**Ingrédients** : 400 g de pois chiches secs · 600 g de jarret ou macreuse de bœuf · 4 cuisses de poulet · 200 g de chorizo de bœuf · ½ chou vert · 4 carottes · 6 pommes de terre · 100 g de vermicelles · 4 gousses d'ail · 200 g de sauce tomate (pour les légumes) *(facultatif)*
 
 1. **La veille.** Pois chiches trempés 12 h dans l'eau tiède salée.
 2. **Bouillon.** Bœuf dans 4 l d'eau froide, écumé ; pois chiches dans un filet, poulet, 2 h 30 à frémissement.
 3. **Légumes.** Carottes et pommes de terre 30 min ; chou cuit à part avec le chorizo (il rougirait le bouillon), sauté à l'ail.
-4. **Trois services.** Bouillon filtré + vermicelles 4 min ; puis pois chiches et légumes ; enfin viandes tranchées. Restes : ropa vieja ou croquetas.
+4. **Trois services.** Bouillon filtré + vermicelles 4 min ; puis pois chiches et légumes ; enfin viandes tranchées. Restes : ropa vieja ou croquetas. À Madrid, les légumes se servent avec un peu de sauce tomate chaude.
 
 - **Autocuiseur** : pois chiches et bœuf 45 min, poulet et légumes 10 min de plus.
 - Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
@@ -19660,12 +19660,12 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 30 · coût €
 
 Le plat des fêtes coréennes (Chuseok, Nouvel An) : plat de côtes de bœuf braisé dans une sauce soja sucrée à la poire, avec radis, carottes, châtaignes et champignons qui s'imprègnent. Laqué et tendre.
 
-**Ingrédients** : 1,5 kg de plat de côtes de bœuf (ou paleron) · 8 c. à s. de sauce soja · 1 poire mûre râpée · 300 g de radis daikon · 2 carottes · 12 châtaignes cuites *(facultatif)* · 8 shiitake · 6 gousses d'ail · 2 c. à s. de sucre · 1 c. à s. d'huile de sésame · 1 morceau de gingembre (3 cm) · 3 cébettes *(facultatif)*
+**Ingrédients** : 1,5 kg de plat de côtes de bœuf (ou paleron) · 8 c. à s. de sauce soja · 1 poire mûre râpée · 300 g de radis daikon · 2 carottes · 12 châtaignes cuites *(facultatif)* · 8 shiitake · 6 gousses d'ail · 2 c. à s. de sucre · 1 c. à s. d'huile de sésame · 1 morceau de gingembre (3 cm) · 3 cébettes *(facultatif)* · 2 c. à s. de vinaigre de cidre (concombre vinaigré, oi muchim) *(facultatif)*
 
 1. **Dégorger et blanchir.** Côtes 1 h dans l'eau froide, puis 10 min dans l'eau bouillante ; rincées (sauce claire, sans écume).
 2. **Sauce.** Soja, poire râpée, ail, sucre, sésame, gingembre, 50 cl d'eau.
 3. **Braiser.** Côtes et sauce, couvert, 1 h 30 à feu doux ; légumes en gros morceaux aux angles arrondis (ils ne se défont pas), châtaignes, champignons, 40 min.
-4. **Laquer.** À découvert, 10 min en arrosant : brillant. Sésame, cébette ; riz.
+4. **Laquer.** À découvert, 10 min en arrosant : brillant. Sésame, cébette ; riz. À côté, comme en Corée, un concombre en fines rondelles avec le vinaigre, une pincée de sucre et de sésame : son acidité répond à la sauce sucrée-salée. Le kimchi y va aussi (il contient souvent du poisson).
 
 - **Autocuiseur** : 35 min pour la viande, légumes 5 min de plus.
 - Un grand mijoté se refroidit vite : réparti dans des boîtes peu profondes, au frigo dans les 2 heures (jamais toute une nuit sur le feu éteint).
@@ -20166,11 +20166,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
 
 Petits boudins de bœuf et d'agneau hachés à l'ail et au bicarbonate (pour la tendreté), grillés, dans un pain plat avec oignon cru et ajvar.
 
-**Ingrédients** : 400 g de bœuf haché · 200 g d'agneau haché · 2 gousses d'ail · ½ c. à c. de bicarbonate · 1 c. à c. de paprika · 4 pains plats · 1 oignon rouge · 2 poivrons grillés (ajvar express) *(facultatif)*
+**Ingrédients** : 400 g de bœuf haché · 200 g d'agneau haché · 2 gousses d'ail · ½ c. à c. de bicarbonate · 1 c. à c. de paprika · 4 pains plats · 1 oignon rouge · 2 poivrons grillés (ajvar express) *(facultatif)* · 1 c. à s. de vinaigre de cidre (ajvar)
 
 1. **Mélanger.** Viandes, ail, bicarbonate, paprika, sel, 5 cl d'eau ; pétris 3 min : collant ; 1 h au frais.
 2. **Former.** Boudins de 8 cm, gros comme un doigt.
-3. **Griller.** 8 min en tournant : dorés. Dans le pain, oignon émincé, poivrons mixés.
+3. **Griller.** 8 min en tournant : dorés. Dans le pain, oignon émincé, poivrons mixés. Les poivrons mixés avec le vinaigre et un filet d'huile : c'est l'ajvar, acidulé et doux.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -20397,11 +20397,11 @@ Niveau ⭐⭐⭐ · 6 portions · actif 40 min · repos/cuisson 1 h 00 · coût 
 
 Le plat créole de La Nouvelle-Orléans : un roux cuit jusqu'à la couleur du chocolat, la « sainte trinité » oignon-céleri-poivron, poulet, saucisse fumée, crevettes et gombo. Saucisse de volaille par défaut.
 
-**Ingrédients** : 60 g de farine · 6 c. à s. d'huile · 6 cuisses de poulet désossées · 300 g de crevettes · 250 g de saucisse fumée de volaille · 1 oignon · 2 branches de céleri · 1 poivron vert · 2 c. à c. de mélange cajun · 1,2 l de bouillon
+**Ingrédients** : 60 g de farine · 6 c. à s. d'huile · 6 cuisses de poulet désossées · 300 g de crevettes · 250 g de saucisse fumée de volaille · 1 oignon · 2 branches de céleri · 1 poivron vert · 2 c. à c. de mélange cajun · 1,2 l de bouillon · 1 citron, en quartiers *(facultatif)*
 
 1. **Roux brun.** Farine + huile, feu moyen-doux, 20-25 min en remuant sans arrêt : couleur chocolat au lait, odeur de noisette (s'il noircit ou sent le brûlé : recommence).
 2. **Trinité.** Oignon, céleri, poivron dans le roux, 8 min ; épices, bouillon chaud en fouettant.
-3. **Mijoter.** Poulet en morceaux, saucisse (et 150 g de gombos si tu en trouves), 45 min ; crevettes 3 min. Riz blanc.
+3. **Mijoter.** Poulet en morceaux, saucisse (et 150 g de gombos si tu en trouves), 45 min ; crevettes 3 min. Riz blanc. À table, des quartiers de citron et une sauce piquante, comme en Louisiane : quelques gouttes suffisent.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -20517,18 +20517,18 @@ Niveau ⭐⭐⭐ · 10 portions · actif 1 h 00 · repos/cuisson 3 h 30 · coût
 
 - 🟡 Porc possible : Bouillon cube volaille
 - ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : céleri, gluten, lait ; **possibles selon marque** : œufs, soja
+- ⚠️ **Allergènes** : céleri, gluten, lait ; **possibles selon marque** : œufs, soja, sulfites
 - 👶 **Enfants** : ✓ dès 1 an.
 
 **Équipement** : Grand plat à rôtir, thermomètre, ficelle.
 
 Dinde rôtie lentement et arrosée, farce au pain, céleri et sauge, sauce au jus : le grand rôti de Thanksgiving et de Noël, sans stress grâce au thermomètre.
 
-**Ingrédients** : 1 dinde de 4 à 5 kg · 300 g de pain rassis · 2 oignons · 3 branches de céleri · 10 feuilles de sauge · 120 g de beurre · 50 cl de bouillon · 2 c. à s. de farine
+**Ingrédients** : 1 dinde de 4 à 5 kg · 300 g de pain rassis · 2 oignons · 3 branches de céleri · 10 feuilles de sauge · 120 g de beurre · 50 cl de bouillon · 2 c. à s. de farine · 100 g de canneberges séchées (sauce, avec le jus d'une orange) *(facultatif)* · 1 orange (jus, sauce aux canneberges) *(facultatif)* · 2 c. à s. de sucre (sauce aux canneberges) *(facultatif)*
 
 1. **Farce.** Oignons et céleri fondus au beurre, pain en dés, sauge, bouillon pour humidifier, sel ; farce tiède dans la cavité (sans tasser), le reste en plat à part.
 2. **Rôtir.** Peau beurrée et salée ; 165 °C, environ 40 min par kg, arrosée toutes les 30 min, couverte d'aluminium si elle dore trop : 74 °C dans la cuisse et au centre de la farce.
-3. **Reposer et saucer.** 30 min sous aluminium ; jus dégraissé, farine, bouillon, 5 min de fouet : sauce lisse.
+3. **Reposer et saucer.** 30 min sous aluminium ; jus dégraissé, farine, bouillon, 5 min de fouet : sauce lisse. La sauce aux canneberges de Thanksgiving : 100 g de canneberges, le jus d'une orange, 2 c. à s. de sucre, 10 min à frémissement : elle fait briller la dinde.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -21386,11 +21386,11 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 15 · coût €
 
 Agneau saisi, montagne de carottes en bâtonnets, cumin, tête d'ail entière, puis le riz cuit par-dessus sans remuer : le plat des fêtes d'Asie centrale.
 
-**Ingrédients** : 800 g d'épaule d'agneau en cubes · 500 g de riz long · 6 carottes (bâtonnets) · 2 oignons · 1 tête d'ail entière · 2 c. à c. de cumin en graines · 1 c. à c. de coriandre en graines · 50 g de raisins secs ou pois chiches *(facultatif)* · 10 cl d'huile
+**Ingrédients** : 800 g d'épaule d'agneau en cubes · 500 g de riz long · 6 carottes (bâtonnets) · 2 oignons · 1 tête d'ail entière · 2 c. à c. de cumin en graines · 1 c. à c. de coriandre en graines · 50 g de raisins secs ou pois chiches *(facultatif)* · 10 cl d'huile · 3 tomates (salade achichuk) *(facultatif)*
 
 1. **Zirvak.** Agneau saisi très chaud, oignons, carottes (sans remuer 3 min, puis 10 min), épices, 60 cl d'eau, tête d'ail ; 40 min.
 2. **Riz.** Rincé jusqu'à eau claire, étalé dessus sans mélanger ; eau à 1 cm ; feu vif jusqu'à absorption.
-3. **Étuver.** Quelques trous au manche de cuillère, couvert, 20 min à feu doux ; mélangé seulement au service.
+3. **Étuver.** Quelques trous au manche de cuillère, couvert, 20 min à feu doux ; mélangé seulement au service. À côté, la salade achichuk : tomates et oignon en fines lamelles, sel, poivre ; sa fraîcheur équilibre le riz gras.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -21815,11 +21815,11 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 15 min · coût €
 
 Tranches de tofu dorées puis braisées dans une sauce soja, gochugaru, ail et cébette jusqu'à ce qu'elles soient laquées : un banchan devenu plat, avec du riz.
 
-**Ingrédients** : 400 g de tofu ferme · 4 c. à s. de sauce soja · 1 c. à s. de gochugaru (ou paprika + piment) · 1 c. à c. de sucre · 2 gousses d'ail · 2 cébettes · 1 c. à s. d'huile de sésame · 1 c. à c. de sésame
+**Ingrédients** : 400 g de tofu ferme · 4 c. à s. de sauce soja · 1 c. à s. de gochugaru (ou paprika + piment) · 1 c. à c. de sucre · 2 gousses d'ail · 2 cébettes · 1 c. à s. d'huile de sésame · 1 c. à c. de sésame · 2 c. à s. de vinaigre de cidre (concombre vinaigré, oi muchim) *(facultatif)*
 
 1. **Dorer.** Tofu épongé, tranches de 1 cm, poêlé 3 min par face : doré.
 2. **Sauce.** Soja, gochugaru, sucre, ail, cébette, sésame, 10 cl d'eau.
-3. **Braiser.** Versée sur le tofu, 6 min en arrosant : réduite, laquée. Riz.
+3. **Braiser.** Versée sur le tofu, 6 min en arrosant : réduite, laquée. Riz. À côté, comme en Corée, un concombre en fines rondelles avec le vinaigre, une pincée de sucre et de sésame : son acidité répond à la sauce sucrée-salée. Le kimchi y va aussi (il contient souvent du poisson).
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -22353,7 +22353,7 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 50 min · coût €
 
 Le chausson des mineurs de Cornouailles : bœuf, pomme de terre, rutabaga et oignon, crus, en dés, cuits dans une pâte épaisse fermée par une torsade. Un repas complet qui tient dans la main.
 
-**Ingrédients** : 500 g de farine · 250 g de beurre froid · 400 g de bœuf (paleron ou rumsteck) en petits dés · 2 pommes de terre · 200 g de rutabaga ou navet · 1 oignon · 1 œuf (dorure)
+**Ingrédients** : 500 g de farine · 250 g de beurre froid · 500 g de bœuf (paleron ou rumsteck) en petits dés · 2 pommes de terre · 200 g de rutabaga ou navet · 1 oignon · 1 œuf (dorure)
 
 1. **Pâte.** Farine, beurre en dés sablés du bout des doigts, sel, 15 cl d'eau froide ; 30 min au frais.
 2. **Farce crue.** Légumes et bœuf en dés de 1 cm, sel, beaucoup de poivre.
@@ -23179,7 +23179,7 @@ Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 2 h 40 · coût €
 
 Un ragù cuit deux heures, qui n'a rien d'une sauce tomate à la viande ; une béchamel fluide à la muscade ; des feuilles de pâte et du parmesan : on prend le temps du dimanche, le montage est simple.
 
-**Ingrédients** : 600 g de bœuf haché (15 % de gras) · 250 g de feuilles de lasagnes · 800 g de tomates pelées · 1 carotte + 1 branche de céleri + 1 oignon · 25 cl + 70 cl de lait (ragù + béchamel) · 60 g de beurre + 60 g de farine · 100 g de parmesan · 1 pincée de muscade · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+**Ingrédients** : 800 g de bœuf haché (15 % de gras) · 250 g de feuilles de lasagnes · 800 g de tomates pelées · 1 carotte + 1 branche de céleri + 1 oignon · 25 cl + 70 cl de lait (ragù + béchamel) · 60 g de beurre + 60 g de farine · 100 g de parmesan · 1 pincée de muscade · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
 
 1. **Soffritto.** Carotte, céleri, oignon hachés très fin, huile, 10 min à feu doux : fondants, sans couleur.
 2. **Viande.** Feu moyen-vif, viande émiettée, 8 min jusqu'à ce qu'elle grésille et dore légèrement ; sel.
@@ -23928,11 +23928,11 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €
 
 Un chou vert blanchi puis braisé doucement avec carottes et saucisses, jusqu'à devenir fondant et doux : le plat d'hiver économique des fermes, ici avec des saucisses de volaille.
 
-**Ingrédients** : 1 chou vert frisé · 4 saucisses de volaille (ou de bœuf) · 3 carottes · 1 oignon · 30 cl de bouillon · 20 g de beurre · 1 bouquet garni · 1 pincée de sel
+**Ingrédients** : 1 chou vert frisé · 8 saucisses de volaille (ou de bœuf) · 3 carottes · 1 oignon · 30 cl de bouillon · 20 g de beurre · 1 bouquet garni · 1 pincée de sel · 1 c. à s. de vinaigre de cidre
 
 1. **Blanchir.** Chou en 8 quartiers, 5 min dans l'eau bouillante salée (il perd son amertume), égoutté.
 2. **Saucisses.** Dorées 5 min au beurre ; oignon et carottes en rondelles 5 min.
-3. **Braiser.** Chou, bouquet, bouillon ; couvert, 40 min à feu doux : le chou est fondant et a bu le bouillon. Goûte, poivre.
+3. **Braiser.** Chou, bouquet, bouillon ; couvert, 40 min à feu doux : le chou est fondant et a bu le bouillon. Goûte, poivre. Un trait de vinaigre de cidre à la fin : le chou garde sa douceur et gagne du relief.
 
 **Conservation** : 3 jours au frigo.
 
@@ -24135,7 +24135,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2178 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2199 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 

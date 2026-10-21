@@ -245,7 +245,7 @@ K("osso_buco", "Osso buco à la milanaise (gremolata)", "Ossobuco alla milanese"
 
 K("lasagnes_bolognaise", "Lasagnes à la bolognaise", "Lasagne alla bolognese", "Europe du Sud › Italie › Émilie-Romagne", "P", 2, 8, 50, 160, "€€", "Cocotte, casserole, plat à gratin.",
   "Un ragù cuit deux heures, qui n'a rien d'une sauce tomate à la viande ; une béchamel fluide à la muscade ; des feuilles de pâte et du parmesan : on prend le temps du dimanche, le montage est simple.",
-  [f"600 g|de bœuf haché (15 % de gras)|{HACHE}|3", "250 g|de feuilles de lasagnes|Lasagnes|3", f"800 g|de tomates pelées|{PELEES}|2", f"1|carotte + 1 branche de céleri + 1 oignon|{CAROTTE}|1",
+  [f"800 g|de bœuf haché (15 % de gras)|{HACHE}|3", "250 g|de feuilles de lasagnes|Lasagnes|3", f"800 g|de tomates pelées|{PELEES}|2", f"1|carotte + 1 branche de céleri + 1 oignon|{CAROTTE}|1",
    f"25 cl + 70 cl|de lait (ragù + béchamel)|{LAIT}|2", f"60 g|de beurre + 60 g de farine|{BEURRE}|2", f"100 g|de parmesan|{PARM}|2", f"1 pincée|de muscade|Noix de muscade|0", f"2 c. à s.|d'huile d'olive|{HO}|1", f"1 c. à c.|de sel|{SEL}|1"],
   ["**Soffritto.** Carotte, céleri, oignon hachés très fin, huile, 10 min à feu doux : fondants, sans couleur.",
    "**Viande.** Feu moyen-vif, viande émiettée, 8 min jusqu'à ce qu'elle grésille et dore légèrement ; sel.",

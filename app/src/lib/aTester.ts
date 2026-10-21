@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "curry_pois_chiches_express", "bar_croute_sel", "curry_legumes_coco", "gado_gado", "larb_poulet", "dibi", "spaghetti_aglio_olio",
-  "moules_normande", "shakshuka_haricots_blancs", "chili_con_carne", "moules_marinieres", "moqueca", "lobio", "blaff_poisson", "spaghetti_vongole",
-  "fajitas_poulet", "risotto_courge_sauge", "mapo_tofu", "raclette_maison", "falafels", "salade_haricots_blancs_thon", "rajma", "bacalhau_bras",
-  "burger_vegetarien_haricots", "hot_pot_familial", "shakshuka", "salade_quinoa_feta_grenade", "nasi_goreng", "parippu",
+  "moules_frites", "curry_pois_chiches_express", "bar_croute_sel", "curry_legumes_coco", "crevettes_coco_citron_vert", "gratin_chou_fleur_lentilles", "hot_pot_familial", "falafels",
+  "moqueca", "bowl_tofu_croustillant", "larb_poulet", "tacos_al_pastor", "moules_marinieres", "bunny_chow_haricots", "bacalhau_bras", "shakshuka_haricots_blancs",
+  "breakfast_burrito", "lobio", "sapasui", "spaghetti_aglio_olio", "chilaquiles_verts", "tacos_poisson_express", "maharagwe", "salade_haricots_blancs_thon",
+  "dibi", "choucroute_mer", "stamppot_boerenkool", "spaghetti_vongole", "shakshuka", "nasi_goreng",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

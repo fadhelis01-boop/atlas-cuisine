@@ -147,7 +147,7 @@ K("fasolada", "Fasolada (soupe de haricots grecque)", "Fasolada", GR, "So", 1, 6
 
 K("pastitsio", "Pastitsio (gratin de pâtes grec)", "Pastítsio", GR, "P", 2, 8, 45, 45, "€€", "Grand plat à four.",
   "Pâtes, sauce à la viande parfumée à la cannelle et épaisse béchamel gratinée : la « lasagne » grecque des repas de famille.",
-  [f"400 g|de pâtes longues creuses (ou penne)|{PATES}|3", "500 g|de bœuf haché|Bœuf haché|3", f"400 g|de tomates pelées|{PELEES}|2", f"1|oignon|{OIG}|1", f"1 c. à c.|de cannelle|{CANN}|1", "70 cl|de béchamel|SUB:bechamel|3", f"80 g|de fromage râpé|{GRUY}|1", f"2|œufs|{OEUF}|1"],
+  [f"400 g|de pâtes longues creuses (ou penne)|{PATES}|3", "700 g|de bœuf haché|Bœuf haché|3", f"400 g|de tomates pelées|{PELEES}|2", f"1|oignon|{OIG}|1", f"1 c. à c.|de cannelle|{CANN}|1", "70 cl|de béchamel|SUB:bechamel|3", f"80 g|de fromage râpé|{GRUY}|1", f"2|œufs|{OEUF}|1"],
   ["**Sauce.** Oignon, viande 8 min, tomates, cannelle, sel ; 20 min : épaisse.", "**Pâtes.** Cuites aux deux tiers, mélangées à la moitié du fromage et un œuf.",
    "**Monter et cuire.** Pâtes, viande, pâtes ; béchamel mélangée au second œuf ; fromage ; 180 °C, 45 min ; 20 min de repos pour couper net."],
   age=1, cats=["enfants"], fetes=["Repas de famille"], tech=["faire un roux"])

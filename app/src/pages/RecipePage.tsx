@@ -140,6 +140,8 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const salt = saltDose(r, portions);
   // repères visuels : chacun n'apparaît qu'à sa première étape, pour ne pas répéter
   const cues = (() => { const seen = new Set<string>(); return r.steps.map((st) => cuesIn(st).filter((c) => !seen.has(c) && (seen.add(c), true))); })();
+  // audit gourmet §3 : le mot du métier est expliqué là où on en a besoin, à sa première apparition
+  const gestes = (() => { const seen = new Set<string>(); return r.steps.map((st) => termsIn(st).filter((t) => !seen.has(t.term) && (seen.add(t.term), true))); })();
   const ev = evaluateLines(lines);
   const kidsAlert = p.kidsAge !== null && r.age !== null && p.kidsAge < r.age;
   const showAlcoholDrinks = p.adult && p.alcohol === "allowed";
@@ -285,6 +287,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             {r.steps.map((s, i) => (
               <li key={i}>
                 <Rich text={scaleStep(s, factor)} />
+                {gestes[i].map((t) => <p key={t.term} className="geste"><Icon name="dictionary" size={15} className="ic-inline" /> <strong>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</strong> : {t.def}</p>)}
                 {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}><Icon name="eye" size={16} className="ic-inline" /> {c} </span>)}</p>}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">

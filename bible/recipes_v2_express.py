@@ -236,7 +236,7 @@ K("poulet_citronnelle_express", "Poulet sauté à la citronnelle", "Gà xào s�
 
 K("tartines_sardines_citron", "Tartines de sardines, citron et persil", "Tostas de sardinha", PT, "P", 1, 2, 10, 0, "€", "Grille-pain.",
   "Sardines à l'huile écrasées avec citron, persil et oignon rouge sur pain grillé frotté à l'ail : un dîner portugais en 10 minutes.",
-  [f"1 boîte|de sardines à l'huile|Sardine (fraîche / conserve)|3", "4 tranches|de pain de campagne|Pain de campagne / complet|2", f"½|citron|{CIT}|1", f"1 c. à s.|de persil|{PERSIL}|1", "¼|oignon rouge|Oignon rouge|1", f"1 gousse|d'ail|{AIL}|1"],
+  [f"2 boîtes|de sardines à l'huile|Sardine (fraîche / conserve)|3", "4 tranches|de pain de campagne|Pain de campagne / complet|2", f"½|citron|{CIT}|1", f"1 c. à s.|de persil|{PERSIL}|1", "¼|oignon rouge|Oignon rouge|1", f"1 gousse|d'ail|{AIL}|1"],
   ["**Griller.** Pain grillé, frotté à l'ail.", "**Écraser.** Sardines (arêtes comprises : elles sont tendres et riches en calcium), citron, persil, oignon.", "**Tartiner.** Poivre ; une salade verte à côté."],
   age=3, cats=EX + ["zero_dechet"], profil=["poisson"])
 
@@ -267,13 +267,13 @@ K("nouilles_beurre_cacahuete", "Nouilles froides au beurre de cacahuète", "Pean
 
 K("tagliatelles_saumon_citron", "Tagliatelles au saumon fumé et citron", "Pâtes au saumon", QF, "P", 1, 4, 5, 10, "€€", "Casserole.",
   "Crème citronnée, saumon fumé en lanières, aneth : les pâtes du dimanche soir, en 15 minutes.",
-  ["400 g|de tagliatelles|Pâtes fraîches aux œufs|3", "150 g|de saumon fumé|Saumon fumé|3", f"20 cl|de crème|{CF}|2", f"1|citron|{CIT}|1", "1 c. à s.|d'aneth|Aneth|1?"],
+  ["400 g|de tagliatelles|Pâtes fraîches aux œufs|3", "250 g|de saumon fumé|Saumon fumé|3", f"20 cl|de crème|{CF}|2", f"1|citron|{CIT}|1", "1 c. à s.|d'aneth|Aneth|1?"],
   ["**Cuire.** Tagliatelles.", "**Sauce.** Crème, zeste de citron, poivre, chauffée 2 min (pas de sel : le saumon est salé).", "**Mélanger.** Pâtes, sauce, saumon en lanières hors du feu, aneth."],
   age=3, cats=EX, profil=["poisson"])
 
 K("croque_poulet_pesto", "Croque au poulet, pesto et mozzarella", "Croque pesto", QF, "P", 1, 2, 8, 6, "€", "Poêle ou appareil à croque.",
   "Pain de mie, pesto, poulet cuit, mozzarella et tomate, doré à la poêle : un croque sans jambon, très gourmand.",
-  ["4 tranches|de pain de mie|Pain de mie|3", "100 g|de poulet cuit (reste de rôti)|Poulet entier|2", "2 c. à s.|de pesto|Pesto (bocal)|2", "½ boule|de mozzarella|Mozzarella / burrata|2", f"1|tomate|{TOM}|1", f"10 g|de beurre|{BEURRE}|1"],
+  ["4 tranches|de pain de mie|Pain de mie|3", "150 g|de poulet cuit (reste de rôti)|Poulet entier|2", "2 c. à s.|de pesto|Pesto (bocal)|2", "½ boule|de mozzarella|Mozzarella / burrata|2", f"1|tomate|{TOM}|1", f"10 g|de beurre|{BEURRE}|1"],
   ["**Monter.** Pesto, poulet, tomate, mozzarella entre deux tranches.", "**Dorer.** Beurré dehors, poêle moyenne couverte 3 min par face : doré, le fromage fond.", "**Couper.** En triangles ; salade."],
   age=3, cats=EX + ["enfants", "zero_dechet"])
 

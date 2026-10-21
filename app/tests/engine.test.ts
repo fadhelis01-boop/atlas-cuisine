@@ -26,6 +26,7 @@ import { cuesIn, saltDose } from "../src/lib/cues";
 import { fuzzyRecipes, parseIntents } from "../src/lib/intents";
 import etapes from "../src/data/etapes.json";
 import imagesCore from "../src/data/images.json";
+import credits from "../src/data/credits.json";
 import imagesMore from "../src/data/images_more.json";
 const images = { ...imagesCore, ...imagesMore };
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
@@ -426,4 +427,48 @@ const inTop = PRIORITE.filter((id) => top45.has(id)).length;
 console.log("   à tester en priorité :", PRIORITE.length, "plats ·", inTop, "parmi les 45 plus proposés de la simulation · protocole en", PROTOCOLE.length, "points");
 check("83 à tester en priorité : 30 plats existants, distincts, qui restent parmi les plus proposés par le planificateur (sinon régénérer la liste)",
   PRIORITE.length === 30 && new Set(PRIORITE).size === 30 && PRIORITE.every((id) => RECIPE_BY_ID[id]?.role === "plat") && inTop >= 22 && PROTOCOLE.length >= 5);
+
+// —— points ouverts de l'audit gourmet, réglés le 21/10/2026 ——
+// protéines : estimation par part (accompagnement compris), portions chiches relevées, repère qui dit quoi ajouter
+const platsG = RECIPES.filter((r) => r.role === "plat");
+const withProt = platsG.filter((r) => r.prot != null);
+const sortedP = withProt.map((r) => r.prot!).sort((a, b) => a - b); const medP = sortedP[Math.floor(sortedP.length / 2)];
+const RELEVES = ["salade_piemontaise", "tartines_sardines_citron", "tempura_legumes_crevettes", "tagliatelles_saumon_citron", "salade_lentilles_saumon_fume", "croque_poulet_pesto",
+  "japchae", "nouilles_sautees_boeuf", "lasagnes_bolognaise", "riz_saute_ananas", "yaki_udon", "kottu_roti", "pastitsio", "cornish_pasty", "tahchin", "riz_cantonais", "chou_braise_saucisses"];
+const light = withProt.filter((r) => r.prot! < 15);
+const hintOk = withProt.every((r) => { const b = balanceOf(r) ?? ""; return b.includes(`environ ${r.prot} g`) && (r.prot! >= 15 || (/léger/.test(b) && /un œuf/.test(b))); });
+console.log("   protéines : médiane", medP, "g par part ·", light.length, "plats légers, avec quoi ajouter · portions relevées :", RELEVES.map((id) => `${id} ${RECIPE_BY_ID[id].prot}`).slice(0, 4).join(", "), "…");
+check("84 protéines : chaque plat chiffré (sauf ceux comptés à la pièce), médiane ≥ 20 g, portions chiches relevées à ≥ 15 g, le repère d'équilibre donne la valeur et quoi ajouter quand c'est léger",
+  withProt.length >= platsG.length - 10 && medP >= 20 && RELEVES.every((id) => (RECIPE_BY_ID[id].prot ?? 99) >= 15) && hintOk);
+
+// acidité : chaque plat a un élément acide (dans la recette, ses sous-recettes ou à table), sinon la raison écrite de s'en passer
+const ACID = /citron|lime|vinaigre|tomate|yaourt|yogourt|cornichon|capre|tamarin|grenade|vin |vin$|vin blanc|vin rouge|cidre|biere|moutarde|creme fraiche|fromage blanc|labneh|kefir|sumac|ponzu|nuoc|kimchi|choucroute|orange|pommes? (?!de terre)|ananas|mangue verte|amchur|pickles|achards|lait ribot|ribot|fermente|miso|worcestershire|ketchup|bbq|barbecue|chutney|agrume|pamplemousse|kiwi|rhubarbe|groseille|cranberr|canneberge|airelle|vermouth|xeres|marsala|pulque|feta|chevre|salsa|tabasco|piment.*vinaigre|sriracha|gochujang|doenjang|rouille|aioli|mayonnaise|kaffir|combava|yuzu|limette|verjus|gari\b|gingembre marine|tzatziki/;
+const deepText = (r: Recipe, d = 0): string => r.ingredients.map((l) => (l.ref?.startsWith("SUB:") && d < 2 && RECIPE_BY_ID[l.ref.slice(4)]
+  ? deepText(RECIPE_BY_ID[l.ref.slice(4)], d + 1) + " " + RECIPE_BY_ID[l.ref.slice(4)].steps.join(" ") : `${l.ref ?? ""} ${l.label}`)).join(" ");
+const flat = platsG.filter((r) => !ACID.test(norm(`${deepText(r)} ${r.steps.join(" ")}`)));
+const sansRaison = flat.filter((r) => !r.sansAcide);
+const acidAdded = RECIPES.filter((r) => r.acideAjoute);
+console.log("   acidité : plats sans élément acide", flat.length, "· sans raison écrite :", sansRaison.length, sansRaison.slice(0, 6).map((r) => r.id).join(", "), "· lentilles :", RECIPE_BY_ID.lentilles_saucisses.steps.at(-1)!.slice(-70));
+check("85 acidité : aucun plat sans élément acide ni raison de tradition ; les exceptions restent rares (≤ 20) et expliquées",
+  sansRaison.length === 0 && flat.length <= 20 && flat.every((r) => (r.sansAcide ?? "").length > 30)
+  && RECIPE_BY_ID.lentilles_saucisses.ingredients.some((l) => /vinaigre/i.test(l.label)) && RECIPE_BY_ID.falafels.ingredients.some((l) => !!l.ref?.startsWith("Tahini"))
+  // un filet d'acide ne change pas les badges : ni trace d'alcool, ni allergène ajouté par l'acide choisi
+  && acidAdded.length >= 50 && acidAdded.every((r) => { const ing = INGREDIENTS[r.acideAjoute!]; return !!ing && !ing.derivs?.alcohol && !(ing.allergens ?? []).length; }));
+
+// vocabulaire du métier : expliqué à la première apparition dans l'étape (fiche) et dans le lexique
+const JARGON: [string, string][] = [["Roux", "bechamel"], ["Mantecare", "risotto_milanese"], ["Singer", "coq_au_vin"], ["À hauteur", "mafe_boeuf"], ["Napper / à la nappe", "blanquette_veau"],
+  ["Bouquet garni", "boeuf_bourguignon"], ["Sucs", "boeuf_bourguignon"], ["Paner à l'anglaise", "tonkatsu_poulet"], ["Filmer au contact", "creme_patissiere"]];
+const jOk = JARGON.filter(([t, id]) => RECIPE_BY_ID[id] && RECIPE_BY_ID[id].steps.some((st) => termsIn(st).some((x) => x.term === t)));
+const glossHits = RECIPES.filter((r) => termsIn(r.steps.join(" ")).length > 0).length;
+console.log("   lexique :", GLOSSAIRE.length, "termes · mots du métier expliqués dans l'étape :", jOk.length + "/" + JARGON.length, JARGON.filter((j) => !jOk.includes(j)).map(([t]) => t).join(", "), "· fiches avec au moins un geste expliqué :", glossHits);
+check("86 vocabulaire : roux, mantecare, singer, à hauteur, à la nappe… expliqués là où l'étape les emploie ; au moins 85 termes au lexique",
+  jOk.length === JARGON.length && GLOSSAIRE.length >= 85 && !termsIn("Sers la glace vanille avec des glaçons").some((t) => /Glacer/.test(t.term)));
+
+// photos des nouvelles fiches : sous licence libre (aucune image générée, D19)
+const IMG = images as Record<string, { kind?: string; license?: string }>;
+const NEW_PHOTOS = NOUVELLES.filter((id) => IMG[`recette/${id}`]);
+console.log("   photos des 20 nouvelles fiches :", NEW_PHOTOS.length, "· sans photo juste :", NOUVELLES.filter((id) => !NEW_PHOTOS.includes(id)).join(", "));
+check("87 photos : au moins 17 des 20 nouvelles fiches illustrées par une photo sous licence libre (les autres gardent l'illustration de leur catégorie)",
+  NEW_PHOTOS.length >= 17 && NEW_PHOTOS.every((id) => /^CC|domaine public|public domain/i.test((credits as Record<string, { license?: string }>)[`recette/${id}`]?.license ?? "")));
+
 console.log(`\n${passed} contrôles OK`);

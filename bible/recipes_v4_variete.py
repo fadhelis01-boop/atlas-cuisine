@@ -128,7 +128,7 @@ K("veloute_topinambour", "Velouté de topinambours, noisettes grillées", "Velou
 
 K("chou_braise_saucisses", "Chou vert braisé aux saucisses de volaille", "Chou braisé", "France › Auvergne-Rhône-Alpes", "P", 1, 4, 20, 50, "€", "Cocotte.",
   "Un chou vert blanchi puis braisé doucement avec carottes et saucisses, jusqu'à devenir fondant et doux : le plat d'hiver économique des fermes, ici avec des saucisses de volaille.",
-  ["1|chou vert frisé|Chou vert / frisé / kale|3", "4|saucisses de volaille (ou de bœuf)|Saucisse de bœuf / de veau / de volaille|3", f"3|carottes|{CAROTTE}|2", f"1|oignon|{OIG}|1", f"30 cl|de bouillon|{BOUILLON}|2", f"20 g|de beurre|{BEURRE}|1", f"1|bouquet garni|{LAURIER}|1", f"1 pincée|de sel|{SEL}|1"],
+  ["1|chou vert frisé|Chou vert / frisé / kale|3", "8|saucisses de volaille (ou de bœuf)|Saucisse de bœuf / de veau / de volaille|3", f"3|carottes|{CAROTTE}|2", f"1|oignon|{OIG}|1", f"30 cl|de bouillon|{BOUILLON}|2", f"20 g|de beurre|{BEURRE}|1", f"1|bouquet garni|{LAURIER}|1", f"1 pincée|de sel|{SEL}|1"],
   ["**Blanchir.** Chou en 8 quartiers, 5 min dans l'eau bouillante salée (il perd son amertume), égoutté.",
    "**Saucisses.** Dorées 5 min au beurre ; oignon et carottes en rondelles 5 min.",
    "**Braiser.** Chou, bouquet, bouillon ; couvert, 40 min à feu doux : le chou est fondant et a bu le bouillon. Goûte, poivre."],
