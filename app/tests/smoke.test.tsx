@@ -91,8 +91,15 @@ try {
   // 6. onglet juste : la cuisine des restes est rangée sous « Ma semaine »
   await go("restes");
   step("chaque écran allume son onglet (Restes → Ma semaine)", document.querySelector(".nav .tab.on .tab-lb")?.textContent === "Ma semaine", document.querySelector(".nav .tab.on .tab-lb")?.textContent ?? "aucun");
+  // 7. fin de l'accueil de bienvenue : l'adresse ne change pas, le titre de l'onglet doit suivre quand même
+  await act(async () => { store.setState((st) => { st.profile.onboarded = false; }); });
+  await go("recette/tarte_tatin");
+  const welcome = document.title;
+  await act(async () => { store.setState((st) => { st.profile.onboarded = true; }); });
+  await settle(); await act(async () => { await new Promise((r) => setTimeout(r, 150)); });
+  step("le titre suit la sortie de l'accueil de bienvenue", welcome.startsWith("Bienvenue") && document.title === "Tarte Tatin · ATLAS", `${welcome} → ${document.title}`);
 } catch (e) { failed++; origError("FAIL parcours :", (e as Error).message); }
-console.log(`${parcours} parcours sur 6`);
+console.log(`${parcours} parcours sur 7`);
 await act(async () => { root.unmount(); });
 console.log(`\n${2 * ROUTES.length - failed} rendus sur ${2 * ROUTES.length} sans erreur (${ROUTES.length} pages, profil famille puis nouvel utilisateur)`);
 process.exit(failed ? 1 : 0);

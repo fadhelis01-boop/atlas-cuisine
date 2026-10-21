@@ -298,7 +298,7 @@ Les 14 chantiers du §7 et les angles morts du §5 sont traités. Chacun est vé
 | Défauts axe-core (11 écrans) | 4 | **0** |
 | Photos publiées en ligne | 469 Mo (WebP + AVIF, 3 tailles) | **135 Mo** (AVIF 400/800 + WebP 400) ; 350 Mo de moins |
 | Publication | Branche neuve poussée en force à chaque fois | Incrémentale : seuls les fichiers modifiés partent |
-| Contrôles automatiques | 87 + rendu de 28 pages | **95** + 6 parcours avec clics + rendu de 28 pages × 2 profils |
+| Contrôles automatiques | 87 + rendu de 28 pages | **95** + 7 parcours avec clics + rendu de 28 pages × 2 profils |
 
 **Cible non atteinte :** la fiche n'affiche pas encore les ingrédients dans le premier écran (1,2 écran). L'en-tête ne garde que l'utile : titre, temps, badges régime et allergènes, saison, mention « non testée », actions. Le reste est replié.
 
@@ -351,13 +351,14 @@ Les 14 chantiers du §7 et les angles morts du §5 sont traités. Chacun est vé
 
 **Outillage**
 - **Tests découpés** en cinq suites isolées (`tests/e1` à `e5`) et un socle commun (`tests/helpers.ts`) : deux contrôles ne peuvent plus se télescoper.
-- **Six parcours avec clics** dans le test de rendu :
+- **Sept parcours avec clics** dans le test de rendu :
   - portions transmises au mode cuisine ;
   - titre et focus après un changement d'écran ;
   - lien d'évitement ;
   - semaine envoyée dans la liste de courses ;
   - liste reçue par lien puis ajoutée ;
   - onglet juste.
+  - titre de l'onglet à la sortie de l'accueil de bienvenue (défaut trouvé en vérifiant le site publié).
 - **Cliquet de lisibilité** (`scripts/lignes.mjs`) : le nombre de lignes de plus de 200 caractères ne peut que baisser (621 aujourd'hui, surtout des textes de techniques et de restes).
 - **`rolldown` épinglé**, avec une configuration de tests qui reproduit l'import `?raw` de Vite.
 

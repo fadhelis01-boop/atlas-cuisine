@@ -57,7 +57,8 @@ export default function App() {
   const settings = useStore((s) => s.settings);
   const pwa = usePwa();
   useTimerLoop();
-  useScreenChange(`${route.path.join("/")}?${route.query.toString()}`);
+  // l'écran change aussi sans changer d'adresse (fin de l'accueil de bienvenue) : l'état d'accueil fait partie de la clé
+  useScreenChange(`${onboarded ? 1 : 0}|${route.path.join("/")}?${route.query.toString()}`);
   useUsageCounter(route.path[0]);
   useEffect(() => { recordStartup(); }, []);
 

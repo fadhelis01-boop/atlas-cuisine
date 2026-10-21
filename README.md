@@ -16,7 +16,7 @@
 ```bash
 cd app && npm install
 npm run dev        # http://localhost:5196
-npm run build      # 95 contrôles (moteur, planificateur, famille, sécurité…) + rendu des 28 pages (2 profils) et 6 parcours avec clics + typage + lisibilité + version de production (dist/) + budget de poids
+npm run build      # 95 contrôles (moteur, planificateur, famille, sécurité…) + rendu des 28 pages (2 profils) et 7 parcours avec clics + typage + lisibilité + version de production (dist/) + budget de poids
 npm run deploy     # publication sur GitHub Pages (branche gh-pages)
 ```
 
