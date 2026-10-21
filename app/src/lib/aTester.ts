@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "curry_pois_chiches_express", "bar_croute_sel", "curry_legumes_coco", "crevettes_coco_citron_vert", "gratin_chou_fleur_lentilles", "hot_pot_familial", "falafels",
-  "moqueca", "bowl_tofu_croustillant", "larb_poulet", "tacos_al_pastor", "moules_marinieres", "bunny_chow_haricots", "bacalhau_bras", "shakshuka_haricots_blancs",
-  "breakfast_burrito", "lobio", "sapasui", "spaghetti_aglio_olio", "chilaquiles_verts", "tacos_poisson_express", "maharagwe", "salade_haricots_blancs_thon",
-  "dibi", "choucroute_mer", "stamppot_boerenkool", "spaghetti_vongole", "shakshuka", "nasi_goreng",
+  "moules_frites", "thiou_poulet", "lobio", "choucroute_mer", "risotto_courge_sauge", "pad_kra_pao_poulet", "curry_legumes_coco", "bacalhau_bras",
+  "frijoles_negros_cubanos", "moules_normande", "white_chicken_chili", "salade_poulet_mangue_thai", "tacos_papa_rajas", "curry_fidjien_legumes", "tibs_boeuf", "spaghetti_vongole",
+  "huevos_rancheros", "chili_con_carne", "tacos_poisson_express", "shakshuka", "waterzooi_poulet", "tajine_poulet_olives", "goan_fish_curry", "moqueca",
+  "arroz_con_pollo", "dorade_four", "falafels", "anda_curry", "croquettes_poisson", "lecso",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

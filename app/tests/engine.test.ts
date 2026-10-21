@@ -6,5 +6,6 @@ import "./e2-contenu-techniques";
 import "./e3-variete-famille";
 import "./e4-audit-gourmet";
 import "./e5-audit-dev-ux";
+import "./e6-variete-idees";
 
 console.log(`\n${passedCount()} contrôles OK`);

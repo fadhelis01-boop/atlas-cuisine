@@ -93,17 +93,6 @@ K("beurre_blanc", "Beurre blanc nantais", "Beurre blanc", "France › Pays de la
         "Vin blanc → **fumet de poisson + 1 c. à c. de citron** ; vinaigre de vin → **vinaigre de cidre**. **À tester**.")],
   keep="À servir tout de suite (tiède, au bain-marie, 30 min maximum).", age=3, cats=["sauces"], profil=["gras"], tech=["Réduire", "Monter au beurre"])
 
-K("carbonade_flamande", "Carbonade flamande", "Stoofvlees", "France › Hauts-de-France", "P", 2, 6, 30, 150, "€€", "Cocotte en fonte, four.",
-  "Du bœuf fondant mijoté à la bière brune et au pain d'épices : sucré-amer, profond, réconfortant. Avec des frites.",
-  [f"1,2 kg|de paleron en gros cubes|Paleron|3", f"3|oignons|{OIG}|2", f"75 cl|de bière brune|Bière (blonde, brune, blanche)|3",
-   f"3 tranches|de pain d'épices tartinées de moutarde|Pain de campagne / complet|2", f"2 c. à s.|de cassonade|{SUCRE}|1",
-   f"2 c. à s.|de vinaigre de cidre|{CIDRE}|1", f"2|feuilles de laurier et du thym|{LAURIER}|1", f"30 g|de beurre|{BEURRE}|1", f"1 c. à c.|de moutarde|{DIJON}|1", f"1 pincée|de sel et de poivre|{SEL}|0"],
-  ["**Saisir.** Fais dorer la viande en 3 fois dans le beurre. Réserve.", "**Oignons.** Fais-les fondre 10 min, ajoute la cassonade.",
-   "**Monter.** Remets la viande, verse la bière et le vinaigre, ajoute herbes et pain d'épices côté moutarde dessous.", "**Mijoter.** 2 h 30 au four à 150 °C (th. 5), couvert. Le pain fond et lie la sauce."],
-  var=[("Sans alcool", ["alcohol"], {"Bière (blonde, brune, blanche)": [("Bouillon d'os maison (bœuf/volaille)", 0.8), ("Jus de raisin / pomme (pur jus)", 0.2)]},
-        "Bière → **600 ml de bouillon + 150 ml de jus de pomme**, et 1 c. à s. de vinaigre de cidre en plus. **À tester**.")],
-  age=3, profil=["viande_rouge", "sucre"], sa=["Jus de raisin rouge"], a=["Bière brune"], tech=["Saisir", "Mijoter"], fetes=["Repas de famille"])
-
 K("gaufres", "Gaufres croustillantes", "Gaufres", "France › Hauts-de-France", "G", 1, 6, 20, 60, "€", "Gaufrier, saladier, fouet.",
   "Des gaufres légères, dorées et croustillantes, pour le goûter ou la Chandeleur.",
   [f"250 g|de farine|{F55}|3", f"2|œufs|{OEUF}|2", f"40 cl|de lait|{LAIT}|3", f"80 g|de beurre fondu|{BEURRE}|2", f"40 g|de sucre|{SUCRE}|1",

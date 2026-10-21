@@ -4,7 +4,7 @@ import { RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { FETES } from "../lib/content";
 import { evaluate } from "../lib/engine";
 import { go, href } from "../lib/router";
-import { backupDue, setState, useProfile, useStore } from "../lib/store";
+import { backupDue, getState, setState, useProfile, useStore } from "../lib/store";
 import { installDue } from "../lib/install";
 import { isIos, isStandalone } from "../lib/pwa";
 import { norm } from "../lib/text";
@@ -15,7 +15,8 @@ import { HeroArt } from "../components/art";
 import { MONTHS_FULL, SEASON_LABEL, type Zone, marketOfMonth, seasonFit, seasonOf, zoneOf } from "../lib/season";
 import { INGREDIENTS } from "../lib/data";
 import { sectionLook } from "./Dictionnaire";
-import { momentOf, propose } from "../lib/propose";
+import { type Proposal, momentOf, propose } from "../lib/propose";
+import { dailyPick, freshSeed, shuffled } from "../lib/variete";
 import { PARCOURS } from "../lib/parcours";
 import { kidFriendly } from "../lib/famille";
 
@@ -62,13 +63,8 @@ function greeting(h: number) {
 }
 
 /** Choix stable sur la journée (même liste toute la journée, nouvelle le lendemain). */
-function daily<T>(list: T[], n: number, salt: number) {
-  const day = Math.floor(Date.now() / 86400000) + salt;
-  if (list.length <= n) return list;
-  const out: T[] = []; const step = 7919 % list.length || 1;
-  for (let i = 0, k = (day * 31) % list.length; out.length < n; i++, k = (k + step) % list.length) if (!out.includes(list[k])) out.push(list[k]);
-  return out;
-}
+/** n éléments du jour : un vrai brassage par jour (l'ancienne version glissait d'un cran par jour, d'où des listes presque identiques). */
+const daily = <T,>(list: T[], n: number, salt: number) => dailyPick(list, n, salt);
 
 function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
   const f = seasonFit(r, zone);
@@ -81,19 +77,25 @@ const TIMES: [number, string][] = [[20, "20 min"], [45, "45 min"], [999, "J'ai l
 function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
   const fridge = useStore((s) => s.fridge);
   const [time, setTime] = useState(45);
-  const [seed, setSeed] = useState(0);
+  const [props, setProps] = useState<Proposal[] | null>(null);
   const hour = new Date().getHours();
-  const props = useMemo(() => (seed ? propose(visible, { hour, zone, maxMinutes: time, fridge: fridge.map((f) => f.ref), seed }) : []), [seed, time, visible, zone, fridge, hour]);
+  // chaque appui : une graine neuve, et les 45 dernières idées écartées (retour d'usage 2026-10-22)
+  const run = (t = time) => {
+    const res = propose(visible, { hour, zone, maxMinutes: t, fridge: fridge.map((f) => f.ref), seed: freshSeed(), recent: new Set(getState().proposed ?? []) });
+    setProps(res);
+    setState((s) => { s.proposed = [...res.map((x) => x.r.id), ...(s.proposed ?? [])].slice(0, 45); });
+  };
+  const seed = props ? 1 : 0;
   return (
     <section className="section propose card pad" aria-label="Propose-moi">
       <div className="propose-head">
         <h2 className="h3"><Icon name="dice" size={22} /> Pas d'idée ? <span className="meta">{momentOf(hour).label}</span></h2>
         <span className="chips" role="group" aria-label="Temps disponible">
-          {TIMES.map(([m, l]) => <button key={m} type="button" className={`chip ${time === m ? "on" : ""}`} aria-pressed={time === m} onClick={() => { setTime(m); if (seed) setSeed(seed + 1); }}>{l}</button>)}
+          {TIMES.map(([m, l]) => <button key={m} type="button" className={`chip ${time === m ? "on" : ""}`} aria-pressed={time === m} onClick={() => { setTime(m); if (props) run(m); }}>{l}</button>)}
         </span>
-        <button type="button" className="btn" onClick={() => setSeed(Date.now())}>{seed ? "Autres idées" : "Propose-moi"}</button>
+        <button type="button" className="btn" onClick={() => run()}>{seed ? "Autres idées" : "Propose-moi"}</button>
       </div>
-      {seed > 0 && (props.length
+      {props && (props.length
         ? <Grid>{props.map((x) => <RecipeCard key={x.r.id} r={x.r} note={<span className="meta why">{x.why.map(([ic, t]) => <span key={t}><Icon name={ic} size={14} className="ic-inline" />{t}</span>)}</span>} />)}</Grid>
         : <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>)}
       {seed > 0 && !fridge.length && <p className="small">Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.</p>}
@@ -177,7 +179,12 @@ export default function Home() {
   const news = useMemo(() => daily(visible.filter((r) => r.source.includes("vague 2") && r.role !== "autre"), 8, 1), [visible]);
   const pastry = useMemo(() => daily(visible.filter((r) => cravingById("patisserie").test(r) || cravingById("chocolat").test(r)), 8, 2), [visible]);
   const picked = craving ? CRAVINGS.find((c) => c.id === craving) : null;
-  const cravingList = useMemo(() => (picked ? daily(visible.filter(picked.test), 12, 5) : []), [picked, visible]);
+  const [cravingSeed, setCravingSeed] = useState(0);
+  const cravingList = useMemo(() => {
+    if (!picked) return [];
+    const list = visible.filter(picked.test);
+    return cravingSeed ? shuffled(list, cravingSeed).slice(0, 12) : daily(list, 12, 5); // « D'autres idées » : nouveau tirage
+  }, [picked, visible, cravingSeed]);
   // défi de la semaine (contre la lassitude) : de saison, jamais cuisiné, un niveau au-dessus ; change chaque lundi
   const cookedMap = useStore((st) => st.cooked);
   const cookedN = Object.values(cookedMap).reduce((x, n) => x + n, 0);
@@ -188,7 +195,7 @@ export default function Home() {
     const week = Math.floor((Date.now() / 86400000 + 3) / 7);
     return pool.length ? pool[(week * 7919) % pool.length] : null;
   }, [cookedN, visible, zone, cookedMap]);
-  const kidsPick = p.kidsAge !== null ? visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat").slice(0, 4) : [];
+  const kidsPick = p.kidsAge !== null ? daily(visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat"), 4, 11) : [];
 
   return (
     <main className="page home" id="contenu" tabIndex={-1}>
@@ -219,6 +226,7 @@ export default function Home() {
       {picked && (
         <Section title={picked.label} more={<button type="button" className="btn ghost small" onClick={() => setCraving(null)}>Fermer</button>}>
           {cravingList.length ? <div className="rail">{cravingList.map((r) => <RecipeCard key={r.id} r={r} />)}</div> : <p className="small">Rien pour ce filtre avec les réglages de ton foyer.</p>}
+          {cravingList.length >= 12 && <button type="button" className="btn ghost small" onClick={() => setCravingSeed(freshSeed())}><Icon name="refresh" size={18} /> D'autres idées</button>}
         </Section>
       )}
 

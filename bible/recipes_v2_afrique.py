@@ -97,12 +97,6 @@ K("kelewele", "Kelewele (plantain épicé)", "Kelewele", f"{M} › Ghana", "A", 
   ["**Mariner.** Plantain en dés avec gingembre et oignon râpés, épices, sel, 15 min.", "**Frire.** Dorés et caramélisés. Avec des cacahuètes grillées."],
   age=3, profil=["epice", "sucre"])
 
-K("misir_wot", "Misir wot (lentilles corail au berbéré)", "Misir wat", f"{M} › Éthiopie", "P", 1, 4, 15, 35, "€", "Cocotte.",
-  "Lentilles corail fondues dans une base d'oignons et de berbéré : épicé, végétalien, à manger avec du pain injera.",
-  ["250 g|de lentilles corail|Lentilles corail|3", f"3|oignons très finement hachés|{OIG}|3", "2 c. à s.|de berbéré maison|SUB:berbere_maison|3", f"3 gousses|d'ail|{AIL}|1", f"1 morceau|de gingembre|{GING}|1", f"2 c. à s.|de concentré|{CONC}|1", "4 c. à s.|de niter kibbeh ou d'huile|Ghee|1"],
-  ["**Oignons.** À sec 10 min jusqu'à ce qu'ils rendent leur eau, puis le gras, 10 min.", "**Épices.** Ail, gingembre, berbéré, concentré 2 min.", "**Lentilles.** Rincées + 70 cl d'eau, 25 min : crémeuses."],
-  age=3, profil=["epice"])
-
 K("doro_wat", "Doro wat (poulet au berbéré)", "Doro wat", f"{M} › Éthiopie", "P", 2, 6, 30, 90, "€€", "Cocotte.",
   "Le plat de fête éthiopien : poulet mijoté dans des oignons confits et le berbéré, avec des œufs durs.",
   [f"1,2 kg|de cuisses de poulet sans peau|{CUISSE}|3", f"1 kg|d'oignons|{OIG}|3", "3 c. à s.|de berbéré|SUB:berbere_maison|3", "80 g|de beurre clarifié épicé|Ghee|2", f"4 gousses|d'ail + gingembre|{AIL}|1", f"6|œufs durs|{OEUF}|2", f"1|citron|{CIT}|1"],

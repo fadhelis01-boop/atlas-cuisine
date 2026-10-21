@@ -49,6 +49,7 @@ export interface State {
   usage?: Record<string, number>; // écrans ouverts (compteur local, jamais envoyé ; joint à l'export du carnet si la personne le veut)
   shareUsage?: boolean; // joindre ce compteur à l'export du carnet d'essais
   installNudge?: string; // date de l'invitation à installer ATLAS (iPhone)
+  proposed?: string[]; // dernières idées de « Propose-moi » (45 au plus) : écartées des tirages suivants
   version?: number; // version du schéma de l'état (migrations)
 }
 

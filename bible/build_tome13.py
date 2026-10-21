@@ -57,7 +57,7 @@ assert all(d["id"] in APP for d in WAVE2), "fiche absente des données de l'appl
 # Lots (un fichier recipes_v2_*.py = un lot éditorial)
 LOTS = OrderedDict()
 for f in sorted(os.listdir(HERE)):
-    m = re.match(r"recipes_v[234]_(\w+)\.py$", f)  # v3 : audit du chef (16/10/2026) · v4 : audit gourmet (21/10/2026)
+    m = re.match(r"recipes_v[2345]_(\w+)\.py$", f)  # v3 : audit du chef (16/10/2026) · v4 : audit gourmet (21/10/2026)
     if not m or m.group(1) in ("base", "all"): continue
     src = open(os.path.join(HERE, f), encoding="utf-8").read()
     doc = re.search(r'"""(.*?)"""', src, re.S).group(1).strip().splitlines()[0]

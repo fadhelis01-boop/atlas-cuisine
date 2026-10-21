@@ -59,12 +59,6 @@ K("chimichurri", "Chimichurri", "Chimichurri", "Amérique latine & Caraïbes ›
   ["**Hacher.** Persil et ail au couteau (pas au mixeur : la texture compte).", "**Mélanger.** Tout ; 30 min de repos. Sur la viande avant et après la cuisson."],
   keep="1 semaine au frigo.", age=3, cats=["sauces"], fetes=["Barbecue d'été"], profil=["acide"], tech=["Marinade"])
 
-K("marinade_adobo", "Adobo de poulet (Philippines)", "Adobong manok", "Asie du Sud-Est › Philippines", "P", 1, 4, 10, 50, "€", "Cocotte.",
-  "Mariné puis mijoté dans le vinaigre, la sauce soja, l'ail et le laurier, puis doré : le plat national philippin.",
-  [f"1,2 kg|de cuisses de poulet|{CUISSE}|3", "12 cl|de vinaigre (riz ou cidre)|Vinaigre de cidre|3", f"8 cl|de sauce soja|{SOJA}|3", f"10 gousses|d'ail écrasées|{AIL}|2", "4|feuilles de laurier|Laurier|1", f"1 c. à c.|de poivre en grains|{POIVRE}|1", f"1 c. à s.|de sucre|{SUCRE}|1"],
-  ["**Mariner.** Tout, 1 h.", "**Mijoter.** Avec 20 cl d'eau, 35 min (ne remue pas les 5 premières minutes : l'acidité s'adoucit).", "**Dorer.** Sors le poulet, dore-le à la poêle ; réduis la sauce, nappe. Riz blanc."],
-  age=1, cats=["enfants"], profil=["acide"], tech=["Marinade"])
-
 K("marinade_provencale", "Marinade provençale pour grillades", "Marinade aux herbes", "France › Provence-Alpes-Côte d'Azur", "Ba", 1, 6, 5, 120, "€", "Saladier.",
   "Huile d'olive, herbes de Provence, ail, zeste de citron : pour agneau, poulet, légumes du barbecue.",
   [f"10 cl|d'huile d'olive|{HO}|3", "2 c. à s.|d'herbes de Provence|Herbes de Provence|3", f"3 gousses|d'ail|{AIL}|2", f"1|citron (zeste + jus)|{CIT}|2", f"1 c. à c.|de poivre|{POIVRE}|1"],

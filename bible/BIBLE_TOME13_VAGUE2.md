@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (884 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (988 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **884 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **954 recettes complètes** ;
+> 1. **988 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1058 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -43,7 +43,7 @@
 | Tourte poulet-champignons | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Filet de lieu au beurre blanc, riz | Nantes | LA, PO, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
 
-### Afrique subsaharienne : Sénégal, Côte d'Ivoire, Mali, Cameroun, Nigeria, Ghana, Éthiopie, Afrique du Sud, Madagascar, Congo. (23)
+### Afrique subsaharienne : Sénégal, Côte d'Ivoire, Mali, Cameroun, Nigeria, Ghana, Éthiopie, Afrique du Sud, Madagascar, Congo. (22)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -62,7 +62,6 @@
 | Brochettes suya | Nigeria | AR | ✅ | ✅ | ✅ | ✅ | 3 |
 | Puff-puff (beignets) | Nigeria | AR, GL | ✅ | ✅ | ✅ | ✅ | 1 |
 | Kelewele (plantain épicé) | Ghana | AR | ✅ | ✅ | ✅ | ✅ | 3 |
-| Misir wot (lentilles corail au berbéré) | Éthiopie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Doro wat (poulet au berbéré) | Éthiopie | LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Bobotie | Le Cap | LA, MO, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Chakalaka | Afrique du Sud | – | ✅ | ✅ | ✅ | ✅ | 3 |
@@ -269,7 +268,7 @@
 | Mousse au chocolat sans œuf (aquafaba) | Chocolaterie | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tablettes de chocolat garnies | Chocolaterie | FC, GL | ✅ | ✅ | ✅ | ✅ | 3 |
 
-### Condiments, bases et marinades maison, sans additifs (bouillon cube, nokoss, épices, marinades du monde). (31)
+### Condiments, bases et marinades maison, sans additifs (bouillon cube, nokoss, épices, marinades du monde). (30)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -282,7 +281,6 @@
 | Marinade jerk jamaïcaine | Jamaïque | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | – |
 | Marinade bulgogi (Corée) | Corée | GL, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Chimichurri | Argentine | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
-| Adobo de poulet (Philippines) | Philippines | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Marinade provençale pour grillades | Provence-Alpes-Côte d'Azur | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Sauce teriyaki maison (laque) | Japon | GL, SO | ✅ | 🍷 | ✅ | 🔄 | 3 |
 | Ras el-hanout maison | Maroc | – | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -407,7 +405,7 @@
 | Riz sauté végétarien aux légumes croquants | Chine | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Soupe de nouilles au miso, tofu et épinards | Japon | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
 
-### France (1/3) : Bretagne, Normandie, Nord, Est. (19)
+### France (1/3) : Bretagne, Normandie, Nord, Est. (18)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -421,7 +419,6 @@
 | Teurgoule (riz au lait à la cannelle) | Normandie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Rillettes de maquereau au citron | Bretagne | LA, MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 2 |
 | Beurre blanc nantais | Pays de la Loire | LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
-| Carbonade flamande | Hauts-de-France | GL, LA, MO | ✅ | 🍷 | ✅ | 🔄 | 3 |
 | Gaufres croustillantes | Hauts-de-France | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 2 |
 | Œufs mayonnaise | Île-de-France | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | – |
 | Steak frites, beurre maître d'hôtel | Île-de-France | LA | ✅ | ✅ | ✅ | ✅ | 3 |
@@ -1080,7 +1077,134 @@
 | Paella valenciana (poulet, lapin, haricots) | Valence | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Composer un plateau de fromages | France | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
 
-**Rubriques couvertes par la vague 2** : enfants : 442 · vegetarien : 114 · zero_dechet : 80 · sauces : 62 · express : 50 · brunch : 30 · boissons : 23 · pains : 23 · salade : 22 · pique_nique : 22 · fusion : 13 · fetes : 7.
+### Vague 6 · Retour d'usage (22/10/2026) : « peu de vrais plats ». Plats cuisinés du quotidien et de fête pour les régions (30)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Poisson cru à la tahitienne | Polynésie française | PO | ✅ | ✅ | ✅ | ✅ | 12 |
+| Bougna au poulet (Nouvelle-Calédonie) | Nouvelle-Calédonie | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Palusami (feuilles au coco, Samoa) | Samoa | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Curry de légumes fidjien (pommes de terre et pois chiches) | Fidji | MO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Lu sipi (agneau au coco et aux épinards, Tonga) | Tonga | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bar en croûte de macadamia et citron (Australie) | Australie | FC, GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Galettes de maïs à la néo-zélandaise, avocat et salsa | Nouvelle-Zélande | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Kokoda chaud : poisson au coco et au curry (Fidji) | Fidji | PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pot roast (bœuf braisé aux légumes, États-Unis) | États-Unis | PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Meatloaf (pain de viande laqué, États-Unis) | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Shrimp and grits (crevettes à la polenta crémeuse, Caroline du Sud) | États-Unis (Sud) | CR, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Clam chowder (chaudrée de palourdes, version sans lard) | États-Unis (Nouvelle-Angleterre) | CE, GL, LA, MM | ✅ | ✅ | ✅ | ✅ | 3 |
+| White chicken chili (chili blanc au poulet) | États-Unis (Sud-Ouest) | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Saumon « noirci » à la cajun, salade de chou au citron | États-Unis (Louisiane) | LA, PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Chou-fleur buffalo, sauce yaourt-ciboulette | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Chaudrée de maïs et pommes de terre (corn chowder) | États-Unis (Nouvelle-Angleterre) | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Chicken and dumplings (poulet et quenelles moelleuses) | États-Unis (Sud) | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Sloppy joes aux lentilles | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Ají de gallina (poulet en sauce crémeuse au piment doux, Pérou) | Pérou | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Arroz chaufa (riz sauté péruvien au poulet) | Pérou | GL, OE, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sancocho (pot-au-feu au poulet, plantain et manioc, Colombie) | Colombie | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pastel de choclo (gratin de maïs sur bœuf épicé, Chili) | Chili | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Locro (ragoût de maïs, courge et haricots, Argentine) | Argentine | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Picadillo cubain (bœuf haché aux olives et raisins) | Cuba | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Chiles rellenos (poivrons farcis au fromage, sauce tomate, Mexique) | Mexique | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bobó de camarão (crevettes à la crème de manioc, Brésil) | Brésil | CR | ✅ | ✅ | ✅ | ✅ | 3 |
+| Curry d'agneau à la jamaïcaine (curry goat) | Jamaïque | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Pelau (riz au poulet caramélisé, Trinité-et-Tobago) | Trinité-et-Tobago | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tacos de pommes de terre aux poivrons rôtis (tacos de papa con rajas) | Mexique | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Frijoles negros (haricots noirs mijotés à la cubaine, riz blanc) | Cuba | – | ✅ | ✅ | ✅ | ✅ | 1 |
+
+### Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés d'Asie du Sud, du Sud-Est et de l'Est absents du catalogue. (27)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Anda curry (curry d'œufs durs à la tomate, Inde) | Inde | OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Upma (semoule salée aux légumes et graines de moutarde, Inde du Sud) | Inde | FC, GL, MO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pav bhaji (purée de légumes épicée et petits pains beurrés, Mumbai) | Inde | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Curry de poisson de Goa (coco, tamarin et épices) | Inde (Goa) | PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Rogan josh (agneau mijoté au yaourt et aux épices, Cachemire) | Inde (Cachemire) | LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Keema matar (bœuf haché aux petits pois et épices, Inde) | Inde | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Poulet chettinad (poulet au poivre et à la coco grillée, Tamil Nadu) | Inde (Tamil Nadu) | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Bhindi masala (gombos sautés à l'oignon et aux épices, Inde) | Inde | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Egg bhurji (œufs brouillés épicés à l'indienne) | Inde | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Nasi lemak (riz au coco, œuf, cacahuètes et sambal, Malaisie) | Malaisie | AR, OE | ✅ | ✅ | ✅ | ✅ | 6 |
+| Bún chả au poulet (boulettes grillées, vermicelles et herbes, Hanoï) | Vietnam | PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Cá kho tộ (poisson caramélisé en cocotte, Vietnam) | Vietnam | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Khao soi (soupe-repas de nouilles au curry coco, Chiang Mai) | Thaïlande | GL, OE, PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Poulet aux noix de cajou (gai pad med mamuang, Thaïlande) | Thaïlande | FC, GL, MM, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sayur lodeh (légumes mijotés au lait de coco, Indonésie) | Indonésie | SO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pad see ew (nouilles larges sautées au bœuf et brocoli, Thaïlande) | Thaïlande | GL, MM, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Kai jeow (omelette thaïe soufflée et croustillante) | Thaïlande | OE, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Đậu phụ sốt cà chua (tofu doré sauce tomate, Vietnam) | Vietnam | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Ayam masak merah (poulet en sauce tomate pimentée, Malaisie) | Malaisie | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Canh chua (soupe aigre au poisson, tomate et ananas, Vietnam) | Vietnam | PO, SO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Oyakodon (bol de riz au poulet et à l'œuf, Japon) | Japon | GL, OE, PO, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Sundubu jjigae (ragoût de tofu soyeux épicé, Corée) | Corée | CR, GL, OE, PO, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Dakgalbi (poulet sauté au gochujang, chou et patate douce, Corée) | Corée | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Aubergines parfumées à la sichuanaise (yu xiang qiezi) | Chine (Sichuan) | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Di san xian (pommes de terre, aubergine et poivron sautés, Chine du Nord) | Chine (Dongbei) | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Nikujaga (bœuf et pommes de terre mijotés, Japon) | Japon | GL, PO, SO | ✅ | 🟡 traces | ✅ | ⛔ | 1 |
+| Saba misoni (maquereau mijoté au miso et au gingembre, Japon) | Japon | GL, PO, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+
+### Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés d'Europe du Nord, centrale et du Sud absents du catalogue, et (23)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Sauerbraten (bœuf mariné au vinaigre et aux épices, Rhénanie) | Allemagne | GL, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Pyttipanna (poêlée de pommes de terre et de bœuf, œuf au plat, Suède) | Suède | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Fiskesuppe (soupe de poisson crémeuse de Bergen, Norvège) | Norvège | CE, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lecsó (poivrons et tomates mijotés au paprika, œufs, Hongrie) | Hongrie | GL, OE, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Paprikás csirke (poulet au paprika et à la crème, Hongrie) | Hongrie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Fiskefrikadeller (boulettes de poisson danoises, sauce rémoulade au yaourt) | Danemark | GL, LA, MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Rouladen (paupiettes de bœuf moutarde-cornichon, Allemagne, version sans lard) | Allemagne | GL, MO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Laxpudding (gratin de saumon et pommes de terre à l'aneth, Suède) | Suède | LA, OE, PO | ✅ | 🟡 traces | ✅ | ⛔ | 1 |
+| Poulet Kiev (escalope panée au beurre d'ail et d'herbes, Ukraine) | Ukraine | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Risi e bisi (riz aux petits pois, Venise) | Italie (Vénétie) | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Arroz de marisco (riz aux fruits de mer en sauce, Portugal) | Portugal | CR, MM | ✅ | ✅ | ✅ | ✅ | 3 |
+| Spanakorizo (riz aux épinards, aneth et citron, Grèce) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Kleftiko (agneau en papillote au citron, à l'ail et à l'origan, Grèce) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Stifado (bœuf aux petits oignons, cannelle et vin rouge, Grèce) | Grèce | SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Pâtes à la genovese (sauce aux oignons fondus et au bœuf, Naples) | Italie (Campanie) | CE, GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Bacalao a la vizcaína (morue en sauce aux poivrons, Pays basque espagnol) | Espagne (Pays basque) | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Melanzane ripiene (aubergines farcies au pain, tomate et mozzarella, Pouilles) | Italie (Pouilles) | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tumbet (légumes en couches à la tomate, Majorque) | Espagne (Baléares) | OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mug cake au chocolat (2 minutes au micro-ondes) | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bananes rôties à la cannelle, yaourt et noix | Cuisine du quotidien | FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pommes poêlées au miel et au beurre, fromage blanc | Cuisine du quotidien | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Crumble à la poêle (fruits de saison, 20 minutes) | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Yaourt glacé minute aux fruits rouges (sans sorbetière) | Cuisine du quotidien | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+
+### Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés du Moyen-Orient, du Maghreb et d'Afrique subsaharienne, dont une (27)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Fatteh (pois chiches, yaourt à l'ail et pain grillé, Levant) | Liban | GL, LA, SE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Freekeh au poulet et aux amandes (Palestine, Jordanie) | Palestine | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Kabsa au poulet (riz épicé d'Arabie) | Arabie saoudite | FC | ✅ | ✅ | ✅ | ✅ | 1 |
+| Ghormeh sabzi (ragoût d'agneau aux herbes et haricots rouges, Iran) | Iran | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Sabzi polo ba mahi (riz aux herbes et poisson du Nouvel An persan) | Iran | LA, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Kousa mahshi (courgettes farcies, sauce tomate citronnée, Levant) | Syrie | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bamia (ragoût de gombos à la tomate et à la coriandre) | Irak | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Karnıyarık (aubergines fendues farcies au bœuf, Turquie) | Turquie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Ash reshteh (soupe-repas aux nouilles, herbes et légumineuses, Iran) | Iran | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Adas polo (riz aux lentilles, dattes et raisins, Iran) | Iran | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Khoresh bademjan (ragoût de bœuf aux aubergines et tomate, Iran) | Iran | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Çılbır (œufs pochés sur yaourt à l'ail, beurre au piment, Turquie) | Turquie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tlitli au poulet (pâtes en grains en sauce rouge, Algérie) | Algérie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mtewem (boulettes à l'ail en sauce blanche, Algérie) | Algérie | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tajine de boulettes de sardines à la tomate (Maroc) | Maroc | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Doubara (pois chiches épicés de Biskra, Algérie) | Algérie | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Tajine malsouka (gratin d'œufs au poulet et fromage, Tunisie) | Tunisie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Kafteji (légumes frits hachés aux œufs, Tunisie) | Tunisie | OE | ✅ | ✅ | ✅ | ✅ | 6 |
+| Waakye (riz aux haricots rouges, sauce tomate, Ghana) | Ghana | OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Pap et chakalaka (polenta blanche et ragoût de légumes épicé, Afrique du Sud) | Afrique du Sud | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tibs (bœuf sauté au berbéré et au romarin, Éthiopie) | Éthiopie | LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Atakilt wat (chou, carottes et pommes de terre au curcuma, Éthiopie) | Éthiopie | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Efo riro (épinards mijotés au poivron et au poisson fumé, Nigeria) | Nigeria | PO | ✅ | ✅ | ✅ | ✅ | 6 |
+| Matoke (bananes plantain en ragoût à la tomate, Ouganda) | Ouganda | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Caldou (poisson poché au citron, oignon et gombo, Sénégal) | Sénégal | PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Thiou poulet (ragoût de poulet à la tomate et aux légumes, Sénégal) | Sénégal | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Sukuma wiki et ugali (chou kale à la tomate et polenta ferme, Kenya) | Kenya | – | ✅ | ✅ | ✅ | ✅ | 1 |
+
+**Rubriques couvertes par la vague 2** : enfants : 494 · vegetarien : 152 · zero_dechet : 88 · express : 78 · sauces : 62 · brunch : 36 · fetes : 30 · boissons : 23 · pains : 23 · pique_nique : 23 · salade : 22 · fusion : 13.
 
 ---
 
@@ -1882,31 +2006,6 @@ Dés de plantain marinés au gingembre et piment, frits : sucrés, piquants, irr
 
 1. **Mariner.** Plantain en dés avec gingembre et oignon râpés, épices, sel, 15 min.
 2. **Frire.** Dorés et caramélisés. Avec des cacahuètes grillées.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Misir wot (lentilles corail au berbéré)
-
-*Misir wat · Afrique subsaharienne › Éthiopie · Plat*
-
-Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 35 min · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Cocotte.
-
-Lentilles corail fondues dans une base d'oignons et de berbéré : épicé, végétalien, à manger avec du pain injera.
-
-**Ingrédients** : 250 g de lentilles corail · 3 oignons très finement hachés · 2 c. à s. de berbéré maison · 3 gousses d'ail · 1 morceau de gingembre · 2 c. à s. de concentré · 4 c. à s. de niter kibbeh ou d'huile
-
-1. **Oignons.** À sec 10 min jusqu'à ce qu'ils rendent leur eau, puis le gras, 10 min.
-2. **Épices.** Ail, gingembre, berbéré, concentré 2 min.
-3. **Lentilles.** Rincées + 70 cl d'eau, 25 min : crémeuses.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -6518,33 +6617,6 @@ Persil, origan, ail, piment, vinaigre et huile : la sauce-marinade verte des gri
 
 ---
 
-### Adobo de poulet (Philippines)
-
-*Adobong manok · Asie du Sud-Est › Philippines · Plat*
-
-Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 50 min · coût €
-
-- ✅ Sans porc (calculé)
-- 🟡 **Traces d'alcool possibles** : Sauce soja claire
-- ⚠️ **Allergènes** : gluten, soja
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Mariné puis mijoté dans le vinaigre, la sauce soja, l'ail et le laurier, puis doré : le plat national philippin.
-
-**Ingrédients** : 1,2 kg de cuisses de poulet · 12 cl de vinaigre (riz ou cidre) · 8 cl de sauce soja · 10 gousses d'ail écrasées · 4 feuilles de laurier · 1 c. à c. de poivre en grains · 1 c. à s. de sucre
-
-1. **Mariner.** Tout, 1 h.
-2. **Mijoter.** Avec 20 cl d'eau, 35 min (ne remue pas les 5 premières minutes : l'acidité s'adoucit).
-3. **Dorer.** Sors le poulet, dore-le à la poêle ; réduis la sauce, nappe. Riz blanc.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Marinade
-
----
-
 ### Marinade provençale pour grillades
 
 *Marinade aux herbes · France › Provence-Alpes-Côte d'Azur · Base* · Fêtes : Barbecue d'été
@@ -9576,36 +9648,6 @@ La sauce des poissons de Loire : échalote réduite, beurre monté. Onctueuse et
 **Conservation** : À servir tout de suite (tiède, au bain-marie, 30 min maximum).
 
 **Techniques** : Réduire, Monter au beurre
-
----
-
-### Carbonade flamande
-
-*Stoofvlees · France › Hauts-de-France · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- 🍷 **Contient de l'alcool** : Bière (blonde, brune, blanche), Moutarde de Dijon
-- ⚠️ **Allergènes** : gluten, lait, moutarde ; **possibles selon marque** : sulfites
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Cocotte en fonte, four.
-
-Du bœuf fondant mijoté à la bière brune et au pain d'épices : sucré-amer, profond, réconfortant. Avec des frites.
-
-**Ingrédients** : 1,2 kg de paleron en gros cubes · 3 oignons · 75 cl de bière brune · 3 tranches de pain d'épices tartinées de moutarde · 2 c. à s. de cassonade · 2 c. à s. de vinaigre de cidre · 2 feuilles de laurier et du thym · 30 g de beurre · 1 c. à c. de moutarde · 1 pincée de sel et de poivre
-
-1. **Saisir.** Fais dorer la viande en 3 fois dans le beurre. Réserve.
-2. **Oignons.** Fais-les fondre 10 min, ajoute la cassonade.
-3. **Monter.** Remets la viande, verse la bière et le vinaigre, ajoute herbes et pain d'épices côté moutarde dessous.
-4. **Mijoter.** 2 h 30 au four à 150 °C (th. 5), couvert. Le pain fond et lie la sauce.
-
-- **Variante Sans alcool** : Bière → **600 ml de bouillon + 150 ml de jus de pomme**, et 1 c. à s. de vinaigre de cidre en plus. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Saisir, Mijoter
 
 ---
 
@@ -24109,6 +24151,3130 @@ Le service qui distingue un repas de fête à la française : entre le plat et l
 
 ---
 
+## 2.36 Vague 6 · Retour d'usage (22/10/2026) : « peu de vrais plats ». Plats cuisinés du quotidien et de fête pour les régions
+
+### Poisson cru à la tahitienne
+
+*I'a ota · Océanie › Polynésie française · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 12 ans.
+
+**Équipement** : Saladier, couteau bien aiguisé.
+
+Le plat de fête de Tahiti : du thon très frais en dés, « cuit » quelques minutes dans le citron vert, puis noyé de lait de coco avec concombre et tomate. Frais, nacré, tout en douceur.
+
+**Ingrédients** : 600 g de thon très frais (qualité « à consommer cru ») · 4 citrons verts · 20 cl de lait de coco · 1 concombre · 2 tomates · 1 carotte râpée · 2 cébettes · 1 pincée de sel
+
+1. **Couper.** Thon en dés de 1,5 cm, bien froid ; concombre épépiné et tomates en petits dés, carotte râpée, cébettes émincées.
+2. **Mariner.** Thon salé, jus des citrons verts, 10 min au frais en remuant une fois : l'extérieur blanchit, le cœur reste rose et brillant.
+3. **Égoutter.** Les deux tiers du jus jetés (sinon c'est trop acide).
+4. **Assembler.** Légumes et lait de coco versés, mélangés délicatement, 5 min au frais ; servi très froid, avec du riz.
+
+- Le poisson doit être d'une fraîcheur absolue : demande-le « pour manger cru » au poissonnier, ou utilise un thon surgelé puis décongelé au frigo.
+- Femmes enceintes et jeunes enfants : remplace par des crevettes cuites.
+
+**Conservation** : À manger dans l'heure, jamais le lendemain.
+
+---
+
+### Bougna au poulet (Nouvelle-Calédonie)
+
+*Bougna · Océanie › Nouvelle-Calédonie · Plat* · Fêtes : Repas de fête
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grand plat à four avec couvercle ou papier aluminium.
+
+Le plat kanak des grandes occasions, cuit traditionnellement sous les pierres chaudes : poulet, igname, patate douce et banane plantain, enveloppés et cuits longtemps dans le lait de coco. Ici au four, en cocotte fermée.
+
+**Ingrédients** : 1,2 kg de cuisses de poulet · 600 g d'igname (ou de pommes de terre) · 400 g de patate douce · 2 bananes plantain bien jaunes · 40 cl de lait de coco · 1 oignon · 1 citron vert · 2 feuilles de laurier · 1 c. à c. de sel
+
+1. **Préparer.** Tubercules et plantains épluchés en gros morceaux, oignon en lamelles ; poulet salé.
+2. **Monter.** Dans le plat : légumes au fond, poulet dessus, oignon, laurier ; lait de coco versé par-dessus.
+3. **Cuire.** Couvert hermétiquement, 1 h 30 à 170 °C : la viande se détache de l'os, les légumes fondent et ont bu le coco.
+4. **Finir.** Zeste et jus du citron vert au service : il réveille la douceur du coco.
+
+- Avec des feuilles de bananier (épiceries asiatiques), enveloppe le tout en paquet : plus parfumé.
+- Les restes se réchauffent très bien à couvert.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Palusami (feuilles au coco, Samoa)
+
+*Palusami · Océanie › Samoa · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four, papier aluminium.
+
+Aux Samoa, des feuilles de taro roulées autour d'une crème de coco à l'oignon, cuites jusqu'à devenir fondantes. Avec des épinards en branches et des blettes, on retrouve ce plat doux et réconfortant.
+
+**Ingrédients** : 600 g d'épinards en branches (ou de blettes) · 40 cl de crème de coco · 1 oignon · 1 citron vert · 400 g de patate douce · 1 pincée de sel
+
+1. **Préparer.** Patate douce en rondelles de 1 cm ; oignon finement émincé mélangé à la crème de coco salée.
+2. **Monter.** Dans le plat : rondelles de patate douce, épinards crus tassés, crème de coco à l'oignon par-dessus.
+3. **Cuire.** Couvert d'aluminium, 45 min à 180 °C : les épinards ont fondu dans une crème épaisse, la patate douce cède sous la lame.
+4. **Servir.** Un filet de citron vert, avec du riz ou du pain.
+
+- Version d'origine : feuilles de taro (épiceries africaines), à cuire au moins 1 h (crues, elles piquent la gorge).
+- Ajoute des dés de poisson blanc pour une version marine.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Curry de légumes fidjien (pommes de terre et pois chiches)
+
+*Fiji curry · Océanie › Fidji · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : moutarde ; **possibles selon marque** : céleri, gluten
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le curry des familles indo-fidjiennes, plus doux que son cousin indien : pommes de terre, pois chiches et tomate, parfumés aux graines de moutarde et au cumin, finis au citron vert.
+
+**Ingrédients** : 600 g de pommes de terre · 1 bocal (400 g) de pois chiches égouttés · 3 tomates (ou 400 g de pelées) · 1 oignon · 2 gousses d'ail · 1 morceau (2 cm) de gingembre · 2 c. à s. de curry doux · 1 c. à c. de graines de moutarde · 1 citron vert · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Torréfier.** Huile chaude, graines de moutarde 30 s : elles crépitent et sautent ; oignon émincé 6 min, jusqu'à blond.
+2. **Parfumer.** Ail et gingembre râpés, curry, 1 min en remuant : ça sent fort et bon, sans brûler.
+3. **Mijoter.** Pommes de terre en dés, tomates, 30 cl d'eau, sel ; 20 min à couvert à petit feu : la pointe du couteau entre sans résistance.
+4. **Finir.** Pois chiches 5 min ; jus de citron vert hors du feu ; goûte et rectifie le sel.
+
+- Avec du roti (pain plat) ou du riz.
+- Les Fidjiens y ajoutent souvent du thon en conserve : une version rapide et complète.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Torréfier les épices
+
+---
+
+### Lu sipi (agneau au coco et aux épinards, Tonga)
+
+*Lu sipi · Océanie › Tonga · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four ou cocotte.
+
+Le plat du dimanche aux Tonga : de l'agneau enveloppé de feuilles avec oignon et lait de coco, cuit longtemps jusqu'à devenir fondant. Les épinards remplacent ici les feuilles de taro.
+
+**Ingrédients** : 800 g d'épaule d'agneau en morceaux · 500 g d'épinards en branches · 40 cl de lait de coco · 2 oignons · 1 citron · 2 tomates · 1 c. à c. de sel · 1 pincée de poivre
+
+1. **Saisir.** Agneau salé, poivré, doré 8 min dans une cocotte sèche : il colore sur toutes les faces et rend un peu de gras.
+2. **Monter.** Oignons en lamelles et tomates en quartiers sur la viande ; épinards tassés par-dessus ; lait de coco versé.
+3. **Cuire.** Couvert, 1 h 30 à 160 °C : la viande se défait à la fourchette, la sauce est crémeuse et nappe.
+4. **Finir.** Jus de citron, sel ajusté ; avec du riz ou des patates douces vapeur.
+
+- Le collier d'agneau, moins cher, convient très bien.
+- Dégraisse la surface à la cuillère avant de servir si le coco a rendu beaucoup de gras.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Bar en croûte de macadamia et citron (Australie)
+
+*Macadamia-crusted barramundi · Océanie › Australie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 12 min · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque de four.
+
+En Australie, on cuit le barramundi sous une croûte de noix de macadamia, l'arbre natif du Queensland. Le bar ou le cabillaud s'y prêtent très bien : croûte dorée et croquante, chair nacrée.
+
+**Ingrédients** : 4 filets de bar (ou de cabillaud) · 80 g de noix de macadamia (ou de cajou) · 30 g de chapelure ou de panko · 1 citron · 20 g de beurre fondu · 1 c. à s. de persil · 1 pincée de sel
+
+1. **Croûte.** Noix concassées grossièrement au couteau, mélangées à la chapelure, au zeste de citron, au persil et au beurre fondu.
+2. **Monter.** Filets salés sur la plaque huilée, peau dessous ; croûte tassée sur le dessus.
+3. **Cuire.** 10 à 12 min à 210 °C : croûte dorée, chair opaque qui se sépare en feuillets.
+4. **Servir.** Quartiers de citron, salade verte ou riz.
+
+- Surveille la fin : les noix brunissent vite.
+- Sans fruits à coque : chapelure + parmesan.
+
+**Conservation** : Le jour même.
+
+---
+
+### Galettes de maïs à la néo-zélandaise, avocat et salsa
+
+*Corn fritters · Océanie › Nouvelle-Zélande · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle.
+
+Le brunch des cafés de Nouvelle-Zélande : des galettes moelleuses pleines de grains de maïs, servies avec avocat écrasé, tomate et citron vert. Un plat complet en vingt minutes.
+
+**Ingrédients** : 400 g de maïs doux (boîte égouttée ou surgelé) · 2 œufs · 100 g de farine · 1 c. à c. de levure chimique · 10 cl de lait · 2 cébettes · 2 avocats · 2 tomates · 1 citron vert · 2 c. à s. d'huile · 1 pincée de sel
+
+1. **Pâte.** Farine, levure, œufs, lait, sel : pâte épaisse et lisse ; maïs et cébettes émincées incorporés.
+2. **Cuire.** Poêle huilée moyenne-vive, une louche par galette, 3 min par face : bords dorés, dessus qui bulle avant de retourner.
+3. **Salsa.** Avocat écrasé à la fourchette avec le jus du citron vert et une pincée de sel ; tomates en dés.
+4. **Servir.** Galettes chaudes, avocat, tomate ; un œuf au plat pour les grandes faims.
+
+- Les galettes cuites se congèlent et se réchauffent au grille-pain.
+- Ajoute de la feta émiettée dans la pâte.
+
+**Conservation** : Le jour même ; galettes 2 jours au frigo.
+
+---
+
+### Kokoda chaud : poisson au coco et au curry (Fidji)
+
+*Fish lolo · Océanie › Fidji · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Aux Fidji, le poisson mijote dans le lolo, le lait de coco, avec oignon, tomate et un peu de curry. Une sauce douce et parfumée, prête en vingt minutes.
+
+**Ingrédients** : 600 g de poisson blanc ferme (cabillaud, lieu) · 40 cl de lait de coco · 1 oignon · 2 tomates · 1 c. à s. de curry doux · 2 gousses d'ail · 1 citron vert · 1 c. à s. d'huile · 1 pincée de sel
+
+1. **Revenir.** Oignon émincé dans l'huile, 5 min : translucide ; ail et curry 1 min, jusqu'à ce que ça sente bon.
+2. **Sauce.** Tomates en dés, lait de coco, sel ; 8 min à frémissement : la sauce épaissit et nappe la cuillère.
+3. **Pocher.** Poisson en gros morceaux posé dans la sauce, 5 à 7 min à couvert, sans remuer : la chair devient opaque et se sépare en lamelles.
+4. **Finir.** Jus de citron vert hors du feu ; avec du riz.
+
+- Remue en secouant la sauteuse plutôt qu'à la cuillère : le poisson reste en morceaux.
+
+**Conservation** : Le jour même ; 1 jour au frigo.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Pot roast (bœuf braisé aux légumes, États-Unis)
+
+*Pot roast · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons ; **possibles selon marque** : céleri, gluten, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte en fonte.
+
+Le plat du dimanche des familles américaines : un gros morceau de bœuf saisi puis braisé des heures avec carottes, oignons et pommes de terre, jusqu'à se couper à la cuillère. Une sauce courte et brillante.
+
+**Ingrédients** : 1,3 kg de paleron en un morceau · 6 carottes · 2 oignons · 800 g de petites pommes de terre · 2 c. à s. de concentré de tomate · 1 c. à s. de sauce Worcestershire · 50 cl de bouillon · 2 branches de thym · 2 c. à s. d'huile · 1 c. à c. de sel · 1 pincée de poivre
+
+1. **Saisir.** Viande séchée, salée, poivrée ; 10 min dans l'huile très chaude en tournant : croûte brune sur toutes les faces. Réserve.
+2. **Fond.** Oignons en quartiers 5 min ; concentré 1 min ; bouillon et Worcestershire en grattant les sucs.
+3. **Braiser.** Viande remise, thym, couvercle ; 2 h à 150 °C ; carottes et pommes de terre ajoutées, encore 1 h : la viande cède sous la cuillère, les légumes sont fondants.
+4. **Servir.** Viande en tranches épaisses, légumes autour ; jus réduit 5 min à feu vif s'il est trop liquide, nappé dessus.
+
+- Le lendemain, effiloché dans des sandwichs avec le jus.
+- À l'autocuiseur : 1 h après la mise en pression, légumes ajoutés à mi-cuisson.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Meatloaf (pain de viande laqué, États-Unis)
+
+*Meatloaf · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à cake, saladier.
+
+Le pain de viande de la cuisine familiale américaine : bœuf haché, oignon et pain trempé, cuit en moule et laqué d'un glaçage tomate un peu sucré. Moelleux chaud, parfait froid en sandwich.
+
+**Ingrédients** : 800 g de bœuf haché (15 % de gras) · 2 tranches de pain de mie trempées dans 10 cl de lait · 10 cl de lait · 1 oignon râpé · 1 œuf · 6 c. à s. de ketchup · 1 c. à s. de vinaigre de cidre · 1 c. à s. de sucre roux · 1 c. à c. de sel · 1 pincée de poivre
+
+1. **Mélanger.** Viande, pain trempé essoré, oignon râpé, œuf, sel, poivre, 2 c. à s. de ketchup : à la main, juste assez pour lier (trop pétri, il devient dur).
+2. **Mouler.** Tassé dans le moule à cake chemisé de papier cuisson.
+3. **Laquer.** Reste du ketchup mélangé au vinaigre et au sucre, étalé dessus.
+4. **Cuire.** 55 min à 180 °C : dessus laqué et brillant, jus clair en piquant le centre (70 °C à cœur) ; 10 min de repos avant de trancher.
+
+- Avec une purée et des haricots verts, comme aux États-Unis.
+- Glisse 3 œufs durs au milieu : joli à la coupe.
+
+**Conservation** : 3 jours au frigo ; tranches congelées.
+
+---
+
+### Shrimp and grits (crevettes à la polenta crémeuse, Caroline du Sud)
+
+*Shrimp and grits · Amérique du Nord › États-Unis (Sud) · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, poêle.
+
+Le plat du Sud des États-Unis : une polenta blanche crémeuse au cheddar, couverte de crevettes sautées au paprika, à l'ail et au citron. Simple, généreux, très parfumé.
+
+**Ingrédients** : 160 g de polenta (semoule de maïs) fine · 50 cl de lait · 100 g de cheddar râpé · 400 g de crevettes crues décortiquées · 2 gousses d'ail · 1 c. à c. de paprika fumé · 1 citron · 2 cébettes · 30 g de beurre · 1 pincée de sel
+
+1. **Polenta.** Lait et 50 cl d'eau salés à ébullition ; polenta en pluie en fouettant ; 10 min à feu doux en remuant : épaisse et lisse. Cheddar et la moitié du beurre hors du feu.
+2. **Crevettes.** Reste du beurre dans la poêle bien chaude, crevettes 2 min par face : roses et recourbées en C (en O, elles sont trop cuites).
+3. **Parfumer.** Ail et paprika 30 s ; jus de citron, la poêle grésille.
+4. **Servir.** Polenta dans l'assiette creuse, crevettes et leur jus dessus, cébettes ciselées.
+
+- La polenta épaissit en refroidissant : détends-la avec un peu de lait chaud.
+
+**Conservation** : Le jour même.
+
+---
+
+### Clam chowder (chaudrée de palourdes, version sans lard)
+
+*New England clam chowder · Amérique du Nord › États-Unis (Nouvelle-Angleterre) · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, lait, mollusques
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande casserole, passoire fine.
+
+La soupe-repas de Boston, épaisse et crémeuse, aux palourdes et pommes de terre. Le lard de la recette d'origine est remplacé par du beurre et une pointe de paprika fumé, qui gardent le goût fumé.
+
+**Ingrédients** : 1,5 kg de palourdes (ou de coques) · 600 g de pommes de terre · 1 oignon · 2 branches de céleri · 30 g de beurre · 2 c. à s. de farine · 40 cl de lait · 20 cl de crème · 1 c. à c. de paprika fumé · 2 branches de thym · 1 c. à s. de persil · 1 citron
+
+1. **Ouvrir.** Palourdes lavées dans 30 cl d'eau, couvert, 4 min à feu vif : elles s'ouvrent. Décortiquées ; jus filtré dans une passoire fine (le sable reste au fond).
+2. **Base.** Beurre, oignon et céleri en dés 6 min sans colorer ; paprika et farine 1 min.
+3. **Cuire.** Jus des palourdes, lait, pommes de terre en dés, thym ; 15 min à frémissement : la soupe épaissit et les pommes de terre cèdent.
+4. **Finir.** Crème et palourdes 2 min sans bouillir ; goûte (le jus est déjà salé) ; persil, filet de citron.
+
+- Jette les palourdes qui restent fermées après cuisson.
+- Avec des palourdes en conserve et leur jus : 15 min en tout.
+
+**Conservation** : 1 jour au frigo.
+
+---
+
+### White chicken chili (chili blanc au poulet)
+
+*White chicken chili · Amérique du Nord › États-Unis (Sud-Ouest) · Plat*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le chili « blanc » du Sud-Ouest américain : poulet, haricots blancs, piment vert et cumin, sans tomate, fini avec un peu de crème et du citron vert. Moins lourd que le chili rouge, très parfumé.
+
+**Ingrédients** : 600 g de blancs de poulet · 2 bocaux (800 g) de haricots blancs égouttés · 1 oignon · 2 gousses d'ail · 2 piments verts doux (ou 1 poivron vert) · 2 c. à c. de cumin · 75 cl de bouillon de volaille · 10 cl de crème · 1 citron vert · 1 bouquet de coriandre · 1 c. à c. de sel
+
+1. **Revenir.** Oignon, ail, piments émincés 6 min à feu moyen : tendres, sans couleur ; cumin 1 min.
+2. **Pocher.** Bouillon, poulet entier, la moitié des haricots écrasés (ils épaississent), le reste entier ; 20 min à frémissement : poulet blanc à cœur.
+3. **Effilocher.** Poulet sorti, effiloché à deux fourchettes, remis ; 5 min.
+4. **Finir.** Crème, jus de citron vert, coriandre ; goûte et sale.
+
+- Avec des chips de tortilla et de l'avocat.
+- Se congèle très bien en portions.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Saumon « noirci » à la cajun, salade de chou au citron
+
+*Blackened salmon · Amérique du Nord › États-Unis (Louisiane) · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle en fonte ou épaisse.
+
+La technique de la Louisiane : un poisson enrobé d'épices cajun saisi à feu vif, la croûte devient presque noire et très parfumée, le cœur reste fondant. Une salade de chou croquante et acidulée pour équilibrer.
+
+**Ingrédients** : 4 pavés de saumon · 2 c. à s. de mélange cajun · 1 c. à c. de paprika fumé · 1/2 chou blanc · 1 carotte · 2 citrons · 3 c. à s. de yaourt · 1 c. à s. d'huile · 1 pincée de sel
+
+1. **Salade.** Chou et carotte en fines lanières, yaourt, jus d'un citron, sel : 10 min, il s'attendrit un peu.
+2. **Épicer.** Pavés séchés, frottés d'huile puis roulés dans le cajun et le paprika.
+3. **Saisir.** Poêle très chaude, hotte allumée ; 3 min côté peau, 2 min de l'autre : croûte sombre et craquante, cœur nacré.
+4. **Servir.** Avec la salade et des quartiers de citron.
+
+- « Noirci » ne veut pas dire brûlé : ce sont les épices qui foncent. Si ça fume trop, baisse un peu le feu.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Chou-fleur buffalo, sauce yaourt-ciboulette
+
+*Buffalo cauliflower · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Plaque de four.
+
+Le chou-fleur rôti à la manière des ailes de poulet de Buffalo : enrobé d'une pâte légère, rôti croustillant puis laqué de sauce piquante au beurre, avec une sauce fraîche au yaourt. Un plat végétarien qui convertit.
+
+**Ingrédients** : 1 gros chou-fleur · 100 g de farine · 12 cl de lait · 1 c. à c. de poudre d'ail · 4 c. à s. de sauce piquante (type Tabasco ou sriracha) · 30 g de beurre fondu · 200 g de yaourt grec · 1 c. à s. de ciboulette · 1 citron · 1 pincée de sel
+
+1. **Enrober.** Chou-fleur en bouquets ; pâte farine-lait-poudre d'ail-sel, épaisse comme une crème ; bouquets roulés dedans.
+2. **Rôtir.** Plaque huilée, 20 min à 220 °C en retournant à mi-cuisson : bords dorés, pâte croustillante.
+3. **Laquer.** Sauce piquante et beurre fondu mélangés, bouquets enrobés ; 8 min au four : brillants, la sauce accroche.
+4. **Sauce.** Yaourt, ciboulette, jus de citron, sel ; avec du riz ou en wrap.
+
+- Pour les enfants : moitié moins de sauce piquante, plus de beurre.
+- Avec des bâtonnets de céleri et de carotte, comme aux États-Unis.
+
+**Conservation** : Le jour même (il ramollit).
+
+---
+
+### Chaudrée de maïs et pommes de terre (corn chowder)
+
+*Corn chowder · Amérique du Nord › États-Unis (Nouvelle-Angleterre) · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande casserole.
+
+La soupe-repas de fin d'été en Nouvelle-Angleterre : maïs doux, pommes de terre et poivron, épaissie au lait et à la crème, relevée de paprika fumé. Douce, épaisse, réconfortante.
+
+**Ingrédients** : 500 g de maïs doux (frais, surgelé ou en boîte) · 500 g de pommes de terre · 1 oignon · 1 poivron rouge · 30 g de beurre · 50 cl de lait · 40 cl de bouillon de légumes · 1 c. à c. de paprika fumé · 1 c. à s. de ciboulette · 1 citron vert · 1 pincée de sel
+
+1. **Revenir.** Beurre, oignon et poivron en dés 6 min : tendres, sans couleur ; paprika 30 s.
+2. **Cuire.** Pommes de terre en dés, bouillon, lait ; 15 min à frémissement : la pointe du couteau entre sans forcer.
+3. **Épaissir.** Maïs 5 min ; un tiers de la soupe mixé et remis : la chaudrée devient crémeuse.
+4. **Finir.** Sel, filet de citron vert, ciboulette.
+
+- Avec un bouillon de volaille, plus riche ; avec des crevettes ajoutées à la fin, plus festif.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Chicken and dumplings (poulet et quenelles moelleuses)
+
+*Chicken and dumplings · Amérique du Nord › États-Unis (Sud) · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte large avec couvercle.
+
+Le réconfort du Sud américain : un ragoût de poulet crémeux aux légumes, sur lequel cuisent à la vapeur des boulettes de pâte qui gonflent comme des nuages.
+
+**Ingrédients** : 1 kg de cuisses de poulet · 3 carottes · 2 branches de céleri · 1 oignon · 1,2 l de bouillon · 250 g de farine (quenelles) + 2 c. à s. (sauce) · 2 c. à c. de levure chimique · 20 cl de lait · 50 g de beurre · 2 branches de thym · 1 c. à s. de persil · 1 citron · 1 c. à c. de sel
+
+1. **Pocher.** Poulet, légumes en tronçons, thym, bouillon ; 30 min à frémissement : la viande se détache de l'os. Poulet effiloché sans peau ni os.
+2. **Lier.** 20 g de beurre et 2 c. à s. de farine en roux 2 min, une louche de bouillon en fouettant, reversé dans la cocotte ; poulet remis : la sauce nappe.
+3. **Quenelles.** Farine, levure, sel, 30 g de beurre sablé du bout des doigts, lait : pâte collante. Cuillerées posées sur le ragoût frémissant.
+4. **Cuire.** Couvert, 15 min sans soulever : quenelles gonflées, sèches à cœur (un pique-bois ressort net). Persil, filet de citron.
+
+- Ne soulève pas le couvercle : c'est la vapeur qui fait lever les quenelles.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Roux
+
+---
+
+### Sloppy joes aux lentilles
+
+*Lentil sloppy joes · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Le sandwich chaud des cantines américaines, version végétarienne : des lentilles mijotées dans une sauce tomate douce-acidulée, servies dans un pain moelleux. Les enfants l'adorent.
+
+**Ingrédients** : 200 g de lentilles vertes · 1 oignon · 1 poivron vert · 400 g de tomates pelées · 3 c. à s. de ketchup · 1 c. à s. de vinaigre de cidre · 1 c. à s. de sucre roux · 1 c. à c. de paprika · 4 pains à burger · 1 pincée de sel
+
+1. **Lentilles.** 20 min dans l'eau frémissante non salée : tendres mais entières ; égouttées.
+2. **Sauce.** Oignon et poivron en dés 6 min ; tomates, ketchup, vinaigre, sucre, paprika, sel ; 10 min : sauce épaisse.
+3. **Mijoter.** Lentilles ajoutées, 5 min en écrasant un peu : le mélange se tient à la cuillère.
+4. **Servir.** Dans les pains toastés, avec une salade de chou ou des cornichons.
+
+- Prépare la garniture la veille : meilleure réchauffée.
+
+**Conservation** : 3 jours au frigo ; garniture congelable.
+
+---
+
+### Ají de gallina (poulet en sauce crémeuse au piment doux, Pérou)
+
+*Ají de gallina · Amérique latine › Pérou · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, mixeur.
+
+Le plat de famille du Pérou : du poulet effiloché dans une sauce crémeuse et dorée au piment jaune, liée au pain et aux noix, servi avec riz, pommes de terre et œuf dur. Doux, épais, unique.
+
+**Ingrédients** : 700 g de blancs ou de cuisses de poulet · 2 c. à s. de pâte d'aji amarillo (ou 1 poivron jaune + 1 pincée de piment) · 3 tranches de pain de mie · 25 cl de lait (ou de lait concentré non sucré) · 50 g de noix (ou de cacahuètes) · 40 g de parmesan · 1 oignon · 2 gousses d'ail · 4 œufs durs · 1 citron vert · 1 c. à c. de sel
+
+1. **Pocher.** Poulet 20 min dans l'eau frémissante salée : blanc à cœur ; effiloché ; 40 cl de bouillon gardés.
+2. **Sauce.** Pain trempé dans le lait, mixé avec les noix et le parmesan : crème épaisse.
+3. **Base.** Oignon et ail 8 min à feu doux : très tendres ; pâte de piment 2 min, la base devient orangée et parfumée.
+4. **Lier.** Crème de pain, bouillon peu à peu, 8 min en remuant : la sauce nappe ; poulet 5 min ; filet de citron vert. Avec riz, pommes de terre et œufs durs en quartiers.
+
+- Sans aji amarillo : un poivron jaune grillé mixé dans la base, et une pincée de piment.
+- Ajoute du bouillon si la sauce épaissit trop en attendant.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Arroz chaufa (riz sauté péruvien au poulet)
+
+*Arroz chaufa · Amérique latine › Pérou · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou grande poêle.
+
+Né de la cuisine sino-péruvienne, le chaufa est le riz sauté le plus populaire de Lima : riz de la veille, poulet, œufs, cébettes, gingembre et sauce soja, sauté à feu très vif.
+
+**Ingrédients** : 600 g de riz cuit la veille (200 g cru) · 400 g de blanc de poulet · 3 œufs · 4 cébettes · 1 poivron rouge · 1 morceau (3 cm) de gingembre · 3 c. à s. de sauce soja · 1 c. à c. d'huile de sésame · 2 c. à s. d'huile neutre · 1 citron vert
+
+1. **Omelette.** Œufs battus, cuits en omelette fine 1 min, roulée et coupée en lanières.
+2. **Sauter.** Wok fumant, poulet en dés 4 min : doré, blanc à cœur ; gingembre râpé, poivron, blanc des cébettes 2 min.
+3. **Riz.** Riz froid égrené, 3 min sans trop remuer pour qu'il grille ; soja versé sur les bords brûlants du wok : il caramélise.
+4. **Finir.** Omelette, vert des cébettes, huile de sésame ; quartiers de citron vert.
+
+- Le riz doit être froid et sec, sinon il colle.
+
+**Conservation** : 24 h au frigo (riz cuit refroidi vite).
+
+**Techniques** : Sauter au wok
+
+---
+
+### Sancocho (pot-au-feu au poulet, plantain et manioc, Colombie)
+
+*Sancocho de gallina · Amérique latine › Colombie · Plat*
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande marmite.
+
+La soupe-repas du dimanche en Colombie et dans les Caraïbes : poulet, maïs en tronçons, plantain, manioc et pommes de terre, cuits ensemble dans un bouillon à la coriandre. Servie avec riz, avocat et citron vert.
+
+**Ingrédients** : 1,5 kg de cuisses de poulet · 2 épis de maïs en tronçons (ou 300 g de maïs) · 2 bananes plantain vertes · 500 g de manioc (surgelé) · 500 g de pommes de terre · 1 oignon · 3 gousses d'ail · 1 c. à c. de cumin · 1 bouquet de coriandre · 2 citrons verts · 2 avocats · 2 c. à c. de sel
+
+1. **Bouillon.** Poulet, oignon, ail, cumin, tiges de coriandre, 3 l d'eau salée ; 25 min à frémissement en écumant : bouillon clair et doré.
+2. **Légumes.** Manioc et plantain en tronçons 15 min ; pommes de terre et maïs 15 min : le manioc devient translucide, le plantain cède sous la lame.
+3. **Épaissir.** Quelques morceaux de pomme de terre écrasés contre la paroi : le bouillon devient velouté.
+4. **Servir.** Feuilles de coriandre ciselées ; avocat, citron vert et riz à côté.
+
+- Le manioc surgelé est déjà épluché et sans fibre centrale : bien plus simple.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Pastel de choclo (gratin de maïs sur bœuf épicé, Chili)
+
+*Pastel de choclo · Amérique latine › Chili · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, mixeur.
+
+Le gratin d'été du Chili : un fond de bœuf haché à l'oignon, au cumin, aux olives et à l'œuf dur, recouvert d'une purée de maïs au basilic, saupoudrée de sucre qui caramélise au four. Sucré-salé irrésistible.
+
+**Ingrédients** : 500 g de bœuf haché · 2 oignons · 1 c. à c. de cumin · 1 c. à c. de paprika · 12 olives noires · 3 œufs durs · 800 g de maïs doux (surgelé ou en boîte) · 10 cl de lait · 1 poignée de basilic · 1 c. à s. de sucre · 1 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Pino.** Oignons émincés 10 min à feu moyen : fondus et blonds ; bœuf, cumin, paprika, sel 8 min : la viande est grise puis dorée, le jus évaporé.
+2. **Purée.** Maïs, lait, basilic mixés grossièrement, puis épaissis 6 min à feu doux en remuant : consistance de purée épaisse ; salée.
+3. **Monter.** Pino au fond du plat, olives et œufs en quartiers, purée de maïs étalée dessus, sucre en pluie.
+4. **Gratiner.** 30 min à 200 °C : dessus doré, sucre caramélisé par endroits, bords qui bouillonnent ; servi avec une salade de tomates à l'oignon.
+
+- Version d'origine : poulet en morceaux et raisins secs dans le pino.
+- Une salade de tomates acidulée équilibre la douceur du maïs.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Locro (ragoût de maïs, courge et haricots, Argentine)
+
+*Locro · Amérique latine › Argentine · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande cocotte.
+
+Le plat national argentin du 25 mai : un ragoût épais de maïs, courge, haricots blancs et pommes de terre, servi avec une huile rouge au paprika. La version d'origine contient du porc ; celle-ci, végétarienne, garde toute sa générosité.
+
+**Ingrédients** : 400 g de maïs doux · 600 g de courge butternut · 2 bocaux (800 g) de haricots blancs égouttés · 400 g de pommes de terre · 2 oignons · 1 c. à c. de cumin · 2 c. à c. de paprika · 4 c. à s. d'huile · 4 cébettes · 1 citron · 2 c. à c. de sel
+
+1. **Base.** Oignons émincés dans 1 c. à s. d'huile, 8 min : tendres ; cumin 1 min.
+2. **Mijoter.** Courge et pommes de terre en dés, 1,2 l d'eau salée ; 40 min à petit feu en remuant de temps en temps : la courge se défait et épaissit tout.
+3. **Finir.** Maïs et haricots 15 min : un ragoût épais qui tient à la cuillère.
+4. **Huile rouge.** Reste d'huile tiédie avec le paprika et les cébettes émincées, 1 min sans fumer ; versée sur chaque assiette ; filet de citron.
+
+- Encore meilleur le lendemain.
+- Pour une version avec viande : 400 g de paleron en dés saisis au départ.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Picadillo cubain (bœuf haché aux olives et raisins)
+
+*Picadillo a la habanera · Amérique latine › Cuba · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Le plat de tous les jours à La Havane : bœuf haché mijoté en sauce tomate avec poivron, olives vertes, câpres et raisins secs. Sucré, salé, acidulé ; avec du riz blanc et des haricots noirs.
+
+**Ingrédients** : 500 g de bœuf haché · 1 oignon · 1 poivron vert · 2 gousses d'ail · 400 g de tomates pelées · 15 olives vertes · 1 c. à s. de câpres · 40 g de raisins secs · 1 c. à c. de cumin · 1 c. à s. de vinaigre de cidre · 1 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Revenir.** Oignon, poivron, ail 6 min : tendres ; cumin 30 s.
+2. **Dorer.** Bœuf à feu vif 6 min en l'émiettant : il perd sa couleur rose puis dore, le jus s'évapore.
+3. **Mijoter.** Tomates, olives coupées, câpres, raisins, sel ; 12 min : sauce épaisse qui enrobe.
+4. **Finir.** Vinaigre hors du feu ; avec riz blanc, haricots noirs et plantain frit.
+
+- Dans des empanadas ou des pommes de terre farcies, le lendemain.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+---
+
+### Chiles rellenos (poivrons farcis au fromage, sauce tomate, Mexique)
+
+*Chiles rellenos · Amérique latine › Mexique · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 40 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, plaque de four.
+
+Un classique mexicain : des piments poblanos rôtis, farcis de fromage, enrobés d'œuf battu en neige et dorés, dans une sauce tomate. Avec des poivrons longs doux, on garde l'esprit et la douceur.
+
+**Ingrédients** : 4 poivrons longs doux (type corne) ou poblanos · 250 g de mozzarella ou de queso fresco · 3 œufs (blancs et jaunes séparés) · 3 c. à s. de farine · 400 g de tomates pelées · 1 oignon · 1 gousse d'ail · 1 c. à c. d'origan · 1 citron vert · 10 cl d'huile · 1 pincée de sel
+
+1. **Rôtir.** Poivrons sous le gril 10 min en les tournant : peau noircie et cloquée ; 10 min dans un sac fermé, puis pelés, fendus et épépinés sans les déchirer.
+2. **Sauce.** Tomates, oignon, ail mixés ; 10 min à frémissement avec l'origan et le sel : sauce épaisse ; filet de citron vert.
+3. **Enrober.** Poivrons farcis de fromage, farinés ; blancs montés en neige ferme, jaunes incorporés délicatement ; poivrons trempés dedans.
+4. **Dorer.** Huile chaude, 2 min par face : dorés et gonflés ; égouttés ; servis sur la sauce.
+
+- Version légère : poivrons farcis, nappés de sauce, 15 min au four sans enrobage.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire
+
+---
+
+### Bobó de camarão (crevettes à la crème de manioc, Brésil)
+
+*Bobó de camarão · Amérique latine › Brésil · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 35 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, sauteuse, mixeur.
+
+Le plat de Bahia : des crevettes dans une crème onctueuse de manioc et de lait de coco, parfumée à la tomate, à la coriandre et au citron vert. Velouté et ensoleillé.
+
+**Ingrédients** : 500 g de manioc (surgelé) · 600 g de crevettes crues décortiquées · 40 cl de lait de coco · 1 oignon · 1 poivron rouge · 2 tomates · 2 gousses d'ail · 1 bouquet de coriandre · 2 citrons verts · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Manioc.** 25 min à l'eau salée : très tendre ; fibre centrale retirée ; mixé avec la moitié du lait de coco : crème lisse.
+2. **Mariner.** Crevettes avec le jus d'un citron vert, l'ail râpé et du sel, 10 min.
+3. **Base.** Oignon, poivron, tomates en dés 8 min dans l'huile : fondus ; crème de manioc et reste du coco, 5 min.
+4. **Cuire.** Crevettes 4 min : roses et recourbées ; coriandre, jus du second citron vert ; avec du riz.
+
+- L'huile de palme rouge (dendê) donne la couleur et le goût d'origine : 1 c. à s. à la fin.
+
+**Conservation** : Le jour même ; 1 jour au frigo.
+
+---
+
+### Curry d'agneau à la jamaïcaine (curry goat)
+
+*Curry goat · Amérique latine › Jamaïque · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 25 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte.
+
+Le curry des fêtes jamaïcaines, fait avec de la chèvre, ici avec de l'agneau : mariné aux épices, piment antillais et thym, puis mijoté longtemps avec des pommes de terre. Riche, parfumé, avec du riz aux haricots.
+
+**Ingrédients** : 1,2 kg d'épaule d'agneau en morceaux (ou de cabri) · 3 c. à s. de curry jamaïcain (ou de curry fort) · 1 oignon · 4 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 piment antillais (scotch bonnet) entier · 4 branches de thym · 500 g de pommes de terre · 1 citron vert · 2 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Mariner.** Viande frottée de curry, oignon, ail, gingembre râpés, thym, sel ; 2 h (ou une nuit) au frais.
+2. **Saisir.** Huile chaude, viande en deux fois, 8 min : bien colorée, les épices foncent sans brûler.
+3. **Mijoter.** Eau à hauteur, piment entier (sans le percer) ; couvert, 1 h 15 à petit feu ; pommes de terre 30 min : la viande se détache, la sauce épaissit.
+4. **Finir.** Piment retiré, jus de citron vert ; avec du riz.
+
+- Le piment entier parfume sans brûler : s'il éclate, le plat devient très fort.
+- Encore meilleur le lendemain.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Pelau (riz au poulet caramélisé, Trinité-et-Tobago)
+
+*Pelau · Amérique latine › Trinité-et-Tobago · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 25 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte en fonte.
+
+Le plat du dimanche de Trinité : le poulet est d'abord caramélisé dans le sucre brun, puis cuit avec riz, pois d'Angole et lait de coco en une seule cocotte. Une couleur ambrée et un goût unique.
+
+**Ingrédients** : 1 kg de hauts de cuisse de poulet · 3 c. à s. de sucre roux · 350 g de riz long · 1 bocal (400 g) de pois d'Angole ou de haricots rouges · 40 cl de lait de coco · 1 oignon · 3 gousses d'ail · 4 branches de thym · 2 carottes · 1 citron vert · 2 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Mariner.** Poulet avec ail, thym, oignon râpé, sel, jus du citron vert : 30 min.
+2. **Caraméliser.** Huile et sucre dans la cocotte à feu moyen, 3 min sans remuer : le sucre fond, mousse puis devient brun foncé (pas noir) ; poulet aussitôt, 8 min en tournant : il prend une couleur acajou.
+3. **Cuire.** Riz rincé, haricots, carottes en dés, lait de coco et 40 cl d'eau ; couvert, 25 min à feu doux : le riz a bu tout le liquide.
+4. **Reposer.** 5 min hors du feu ; mélangé à la fourchette ; avec une salade de chou.
+
+- Attention au caramel : prépare tout à côté, il passe du brun au brûlé en quelques secondes.
+
+**Conservation** : 24 h au frigo (riz refroidi vite).
+
+---
+
+### Tacos de pommes de terre aux poivrons rôtis (tacos de papa con rajas)
+
+*Tacos de papa con rajas · Amérique latine › Mexique · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, casserole.
+
+Les tacos végétariens des marchés mexicains : pommes de terre écrasées, lanières de poivrons rôtis et oignon fondu, un peu de crème et de fromage frais, avec une salsa verte au citron vert.
+
+**Ingrédients** : 600 g de pommes de terre · 2 poivrons verts · 1 oignon · 12 tortillas de maïs · 100 g de feta ou de queso fresco · 10 cl de crème · 1 bouquet de coriandre · 2 citrons verts · 1 piment vert · 2 c. à s. d'huile · 1 pincée de sel
+
+1. **Cuire.** Pommes de terre en dés 15 min à l'eau salée : tendres ; égouttées, écrasées grossièrement.
+2. **Rajas.** Poivrons en lanières et oignon en lamelles, 10 min dans l'huile à feu moyen : fondants, légèrement dorés ; crème 1 min, ça nappe.
+3. **Salsa.** Coriandre, piment, jus des citrons verts, sel, un peu d'eau, mixés.
+4. **Servir.** Tortillas chauffées 30 s par face à la poêle sèche : souples ; garnies de pommes de terre, rajas, fromage émietté, salsa.
+
+- Des tortillas de blé conviennent aussi.
+- Pour les enfants : salsa sans piment.
+
+**Conservation** : Garniture 2 jours au frigo.
+
+---
+
+### Frijoles negros (haricots noirs mijotés à la cubaine, riz blanc)
+
+*Frijoles negros · Amérique latine › Cuba · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le plat de chaque jour à Cuba, avec le riz blanc : des haricots noirs mijotés dans un sofrito d'oignon, de poivron et d'ail, au cumin et à l'origan, finis au vinaigre. Simple, profond, complet avec le riz.
+
+**Ingrédients** : 2 bocaux (800 g) de haricots noirs avec leur jus · 1 oignon · 1 poivron vert · 4 gousses d'ail · 1 c. à c. de cumin · 1 c. à c. d'origan · 2 feuilles de laurier · 1 c. à s. de vinaigre de vin (ou de cidre) · 1 c. à c. de sucre · 3 c. à s. d'huile d'olive · 1 pincée de sel
+
+1. **Sofrito.** Oignon, poivron, ail en petits dés dans l'huile, 10 min à feu doux : très tendres, sans couleur ; cumin et origan 1 min.
+2. **Mijoter.** Haricots et leur jus, laurier, 20 cl d'eau ; 25 min à petit feu : la sauce épaissit.
+3. **Lier.** Une louche de haricots écrasée et remise : le jus devient crémeux.
+4. **Finir.** Vinaigre, sucre, sel ; avec du riz blanc, de l'avocat et un œuf au plat.
+
+- Avec des haricots secs : une nuit de trempage, 1 h 30 de cuisson.
+
+**Conservation** : 4 jours au frigo ; se congèle.
+
+---
+
+## 2.37 Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés d'Asie du Sud, du Sud-Est et de l'Est absents du catalogue.
+
+### Anda curry (curry d'œufs durs à la tomate, Inde)
+
+*Anda curry · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse.
+
+Le curry des soirs pressés en Inde du Nord : des œufs durs dorés à la poêle, dans une sauce tomate-oignon au garam masala, au gingembre et à la coriandre. Végétarien, économique, très parfumé.
+
+**Ingrédients** : 8 œufs · 2 oignons · 400 g de tomates pelées · 3 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à c. de garam masala · 1 c. à c. de curcuma · 1 c. à c. de cumin (graines) · 1 bouquet de coriandre · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Œufs.** 9 min dans l'eau bouillante, refroidis, écalés, entaillés ; dorés 3 min dans 1 c. à s. d'huile avec le curcuma : peau jaune et légèrement croustillante.
+2. **Base.** Cumin 30 s dans le reste d'huile : il crépite ; oignons émincés 10 min : bien dorés ; ail et gingembre râpés 1 min.
+3. **Sauce.** Tomates, garam masala, sel, 15 cl d'eau ; 10 min : l'huile perle à la surface, la sauce épaissit.
+4. **Finir.** Œufs 5 min dans la sauce ; coriandre, jus de citron ; avec du riz ou des naans.
+
+- Entaille les œufs : la sauce y pénètre.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Torréfier les épices
+
+---
+
+### Upma (semoule salée aux légumes et graines de moutarde, Inde du Sud)
+
+*Upma · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Le petit-déjeuner d'Inde du Sud : de la semoule grillée puis gonflée dans l'eau avec oignon, carotte, petits pois, graines de moutarde et feuilles de curry, finie au citron. Salée, légère, prête en quinze minutes.
+
+**Ingrédients** : 200 g de semoule de blé fine · 1 oignon · 1 carotte · 100 g de petits pois · 1 c. à c. de graines de moutarde · 10 feuilles de curry (facultatif) *(facultatif)* · 1 morceau (2 cm) de gingembre · 30 g de noix de cajou · 1 citron · 1 bouquet de coriandre · 2 c. à s. d'huile (ou de ghee) · 1 c. à c. de sel
+
+1. **Griller.** Semoule à sec 4 min à feu moyen en remuant : elle sent le pain grillé, sans brunir. Réservée.
+2. **Tadka.** Huile chaude, moutarde 30 s : elle saute ; cajou, feuilles de curry, gingembre, oignon 4 min ; carotte en dés et petits pois 3 min.
+3. **Gonfler.** 50 cl d'eau bouillante salée ; semoule en pluie en remuant ; couvert, 3 min à feu doux : gonflée, souple, sans grumeaux.
+4. **Finir.** Jus de citron, coriandre ; avec un yaourt ou une chutney.
+
+- Pour un dîner : un œuf au plat dessus.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Torréfier les épices
+
+---
+
+### Pav bhaji (purée de légumes épicée et petits pains beurrés, Mumbai)
+
+*Pav bhaji · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle ou sauteuse, presse-purée.
+
+La street food reine de Mumbai : des légumes écrasés et mijotés au beurre avec tomate et épices, servis avec des petits pains dorés au beurre, de l'oignon cru et du citron. On saucé, on recommence.
+
+**Ingrédients** : 500 g de pommes de terre · 200 g de chou-fleur · 100 g de petits pois · 1 poivron vert · 3 tomates · 2 oignons · 2 c. à c. de garam masala (ou de mélange pav bhaji) · 60 g de beurre · 8 petits pains au lait ou buns · 2 citrons · 1 bouquet de coriandre · 1 c. à c. de sel
+
+1. **Cuire.** Pommes de terre, chou-fleur et petits pois 15 min à l'eau : très tendres ; égouttés.
+2. **Bhaji.** 30 g de beurre, un oignon et le poivron hachés 6 min ; tomates en dés 5 min : fondues ; épices 1 min.
+3. **Écraser.** Légumes ajoutés, écrasés directement dans la poêle, 10 cl d'eau, 8 min en écrasant et remuant : purée épaisse, rouge orangé ; sel, jus d'un citron.
+4. **Pav.** Pains ouverts, dorés 1 min dans le reste du beurre ; servis avec le bhaji, oignon cru haché, coriandre et quartiers de citron.
+
+- Une noix de beurre fondue sur le bhaji au moment de servir : c'est la signature de Mumbai.
+
+**Conservation** : Bhaji 2 jours au frigo.
+
+---
+
+### Curry de poisson de Goa (coco, tamarin et épices)
+
+*Goan fish curry · Asie du Sud › Inde (Goa) · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Sauteuse, mixeur.
+
+Le curry de la côte de Goa : une pâte d'épices, d'ail et de coco, acidulée au tamarin, dans laquelle le poisson cuit quelques minutes. Rouge, crémeux, vif.
+
+**Ingrédients** : 600 g de poisson blanc ferme (lieu, cabillaud, merlu) · 40 cl de lait de coco · 1 oignon · 4 gousses d'ail · 1 morceau (2 cm) de gingembre · 2 c. à c. de paprika · 1 c. à c. de curcuma · 1 c. à c. de cumin · 1 c. à s. de pâte de tamarin (ou le jus d'un citron) · 1 tomate · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Pâte.** Ail, gingembre, paprika, curcuma, cumin, tomate et la moitié du coco mixés : pâte lisse et rouge.
+2. **Base.** Oignon émincé 6 min dans l'huile : blond ; pâte 5 min en remuant : elle fonce et l'huile se sépare.
+3. **Sauce.** Reste du coco, tamarin, sel ; 5 min à frémissement : la sauce nappe la cuillère.
+4. **Pocher.** Poisson en gros morceaux, 6 min à couvert sans remuer : chair opaque qui se détache ; avec du riz.
+
+- Le tamarin fait tout : goûte, la sauce doit être franchement acidulée.
+
+**Conservation** : Le jour même ; 1 jour au frigo.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Rogan josh (agneau mijoté au yaourt et aux épices, Cachemire)
+
+*Rogan josh · Asie du Sud › Inde (Cachemire) · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 40 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte.
+
+Le plat des fêtes du Cachemire : de l'agneau mijoté avec yaourt, paprika, cardamome, girofle et fenouil, jusqu'à une sauce rouge profond. Aromatique plus que piquant.
+
+**Ingrédients** : 1 kg d'épaule d'agneau en morceaux · 250 g de yaourt · 2 oignons · 4 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 c. à s. de paprika · 6 gousses de cardamome · 4 clous de girofle · 1 c. à c. de graines de fenouil · 1 c. à c. de garam masala · 1 citron · 3 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Épices.** Cardamome, girofle, fenouil 1 min dans l'huile chaude : odorants ; oignons émincés 12 min : bruns.
+2. **Saisir.** Agneau, 10 min à feu vif en remuant : coloré ; ail, gingembre, paprika 2 min.
+3. **Mijoter.** Yaourt ajouté cuillère par cuillère en remuant (sinon il tranche), 20 cl d'eau, sel ; couvert, 1 h 15 à petit feu : la viande se défait, sauce épaisse, rouge sombre.
+4. **Finir.** Garam masala, jus de citron ; avec du riz basmati ou des naans.
+
+- Yaourt à température ambiante : il tranche moins.
+- Encore meilleur le lendemain.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Keema matar (bœuf haché aux petits pois et épices, Inde)
+
+*Keema matar · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse.
+
+Le haché du quotidien en Inde et au Pakistan : bœuf ou agneau haché mijoté avec oignon, tomate, gingembre, épices et petits pois. Rapide, généreux, avec du riz ou des pains plats.
+
+**Ingrédients** : 500 g de bœuf ou d'agneau haché · 250 g de petits pois (surgelés) · 2 oignons · 3 tomates · 3 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à c. de garam masala · 1 c. à c. de cumin · 1 c. à c. de curcuma · 1 citron · 1 bouquet de coriandre · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Base.** Cumin 30 s dans l'huile ; oignons hachés 8 min : dorés ; ail et gingembre 1 min.
+2. **Viande.** Feu vif, haché 6 min en l'émiettant : il perd sa couleur rose et dore ; curcuma et garam masala.
+3. **Mijoter.** Tomates en dés, 10 cl d'eau, sel ; 10 min : sauce épaisse qui enrobe ; petits pois 5 min : vert vif.
+4. **Finir.** Jus de citron, coriandre ; avec du riz ou des naans.
+
+- Les restes farcissent des parathas ou des samoussas.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+---
+
+### Poulet chettinad (poulet au poivre et à la coco grillée, Tamil Nadu)
+
+*Chettinad chicken · Asie du Sud › Inde (Tamil Nadu) · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 35 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle, cocotte, mixeur.
+
+Le curry le plus aromatique d'Inde du Sud : une pâte de noix de coco râpée, poivre noir, coriandre, cumin et fenouil grillés à sec, dans laquelle mijote le poulet. Poivré, profond, sans être brûlant.
+
+**Ingrédients** : 800 g de hauts de cuisse de poulet désossés · 50 g de noix de coco râpée · 2 c. à c. de poivre noir en grains · 2 c. à c. de graines de coriandre · 1 c. à c. de cumin · 1 c. à c. de graines de fenouil · 2 oignons · 2 tomates · 4 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Griller.** Coco, poivre, coriandre, cumin, fenouil à sec 4 min en remuant : la coco blondit, ça embaume ; mixés avec 10 cl d'eau : pâte épaisse.
+2. **Base.** Oignons émincés 10 min dans l'huile : dorés ; ail, gingembre 1 min ; tomates 5 min : fondues.
+3. **Mijoter.** Poulet en morceaux, pâte d'épices, sel, 20 cl d'eau ; 20 min à couvert : poulet blanc à cœur, sauce épaisse et brun doré.
+4. **Finir.** Jus de citron ; avec du riz ou des parathas.
+
+- Moins de poivre pour les enfants : la coco garde le plat doux.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Torréfier les épices
+
+---
+
+### Bhindi masala (gombos sautés à l'oignon et aux épices, Inde)
+
+*Bhindi masala · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle.
+
+Les gombos sautés à l'indienne, croquants et non gluants : saisis à feu vif, puis enrobés d'oignon, de tomate et d'épices, finis à l'amchur ou au citron. Un plat végétarien du quotidien.
+
+**Ingrédients** : 500 g de gombos (frais ou surgelés) · 2 oignons · 2 tomates · 1 c. à c. de cumin (graines) · 1 c. à c. de curcuma · 1 c. à c. de garam masala · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Saisir.** Gombos secs coupés en tronçons, 8 min à feu vif dans 2 c. à s. d'huile, sans couvrir : ils dorent, la bave disparaît. Réservés.
+2. **Base.** Cumin 30 s dans le reste d'huile ; oignons émincés 6 min : dorés ; curcuma ; tomates en dés 5 min : sauce épaisse.
+3. **Assembler.** Gombos, garam masala, sel, 3 min à feu moyen : enrobés et encore croquants.
+4. **Finir.** Jus de citron ; avec du dal et du riz, ou des chapatis.
+
+- Lave et sèche bien les gombos avant de les couper : l'eau les rend gluants.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Egg bhurji (œufs brouillés épicés à l'indienne)
+
+*Anda bhurji · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+Les œufs brouillés des matins indiens : oignon, tomate, piment vert et curcuma, puis des œufs remués doucement, beaucoup de coriandre. Avec du pain grillé ou un chapati, en dix minutes.
+
+**Ingrédients** : 4 œufs · 1 oignon · 1 tomate · 1 piment vert (facultatif) *(facultatif)* · 1/2 c. à c. de curcuma · 1/2 c. à c. de cumin · 1 c. à s. de coriandre · 15 g de beurre (ou de ghee) · 4 tranches de pain · 1/2 citron *(facultatif)* · 1 pincée de sel
+
+1. **Base.** Beurre, cumin 20 s ; oignon haché 4 min : translucide ; tomate et piment 2 min : la tomate fond ; curcuma.
+2. **Œufs.** Battus avec le sel, versés à feu doux ; remués lentement à la spatule 2 à 3 min : grumeaux crémeux, encore brillants.
+3. **Finir.** Hors du feu (ils continuent de cuire) ; coriandre.
+4. **Servir.** Avec le pain grillé, un filet de citron si tu veux.
+
+- Retire du feu une minute avant que ça te semble prêt : la chaleur finit la cuisson.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Nasi lemak (riz au coco, œuf, cacahuètes et sambal, Malaisie)
+
+*Nasi lemak · Asie du Sud-Est › Malaisie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, œufs ; **possibles selon marque** : crustacés
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole, poêle.
+
+Le plat national malaisien : un riz cuit dans le lait de coco avec gingembre, servi avec œuf dur, concombre, cacahuètes grillées et un sambal doux-pimenté. On compose chaque bouchée.
+
+**Ingrédients** : 300 g de riz long · 20 cl de lait de coco · 1 morceau (3 cm) de gingembre · 4 œufs durs · 1 concombre · 80 g de cacahuètes · 2 oignons · 2 c. à s. de sambal oelek · 1 c. à s. de pâte de tamarin (ou le jus d'un citron vert) · 1 c. à s. de sucre · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Riz.** Riz rincé, lait de coco, 25 cl d'eau, gingembre en tranches, sel ; couvert, 15 min à feu doux puis 10 min de repos : grains brillants et parfumés.
+2. **Sambal.** Oignons émincés 10 min dans l'huile : caramélisés ; sambal, tamarin, sucre, 10 cl d'eau, 5 min : sauce épaisse, rouge et brillante.
+3. **Cacahuètes.** 4 min à sec à la poêle en remuant : dorées et odorantes ; salées.
+4. **Servir.** Riz en dôme, sambal, œufs en moitiés, concombre en tranches, cacahuètes.
+
+- Avec du poulet frit ou des anchois séchés frits, comme en Malaisie.
+- Sambal à part pour les enfants.
+
+**Conservation** : 24 h au frigo (riz refroidi vite).
+
+---
+
+### Bún chả au poulet (boulettes grillées, vermicelles et herbes, Hanoï)
+
+*Bún chả · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Gril ou poêle-gril, saladier.
+
+Le déjeuner de Hanoï : des boulettes et des lanières grillées, plongées dans un bouillon tiède aigre-doux au nuoc-mâm, avec vermicelles de riz, salade et beaucoup d'herbes. Ici au poulet au lieu du porc.
+
+**Ingrédients** : 500 g de hauts de cuisse de poulet hachés au couteau · 250 g de vermicelles de riz · 4 c. à s. de sauce de poisson (nuoc-mâm) · 3 c. à s. de sucre · 2 citrons verts · 3 gousses d'ail · 2 échalotes · 1 salade · 1 bouquet de menthe · 1 bouquet de coriandre · 1 carotte · 1 piment
+
+1. **Mariner.** Poulet haché, échalotes et 2 gousses d'ail hachées, 1 c. à s. de nuoc-mâm, 1 c. à s. de sucre : 20 min ; galettes de 5 cm.
+2. **Sauce.** 30 cl d'eau tiède, reste du sucre et du nuoc-mâm, jus des citrons verts, ail et piment hachés, carotte en fines lamelles : aigre, sucré, salé à la fois.
+3. **Griller.** Galettes 4 min par face sur le gril chaud : marquées et caramélisées, cuites à cœur.
+4. **Servir.** Galettes plongées dans les bols de sauce ; vermicelles cuits (4 min, rincés), salade et herbes à côté ; on trempe tout dans la sauce.
+
+- Les vermicelles se servent à température ambiante, rincés à l'eau froide.
+
+**Conservation** : Le jour même.
+
+---
+
+### Cá kho tộ (poisson caramélisé en cocotte, Vietnam)
+
+*Cá kho tộ · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Petite cocotte en fonte ou casserole épaisse.
+
+Le plat de famille du Sud du Vietnam : des darnes de poisson mijotées dans un caramel au nuoc-mâm, au poivre et à l'échalote, jusqu'à être laquées. Très intense : un peu de poisson pour beaucoup de riz.
+
+**Ingrédients** : 4 darnes de poisson (cabillaud, merlu ou poisson-chat) · 3 c. à s. de sucre · 4 c. à s. de sauce de poisson (nuoc-mâm) · 3 échalotes · 3 gousses d'ail · 1 c. à c. de poivre noir concassé · 3 cébettes · 1 citron vert · 1 c. à s. d'huile
+
+1. **Caramel.** Sucre et 2 c. à s. d'eau dans la cocotte, 4 min à feu moyen sans remuer : caramel ambre foncé.
+2. **Arrêter.** Hors du feu, 10 cl d'eau versée (attention aux éclaboussures), nuoc-mâm, échalotes et ail émincés : le caramel se dissout.
+3. **Mijoter.** Darnes posées, retournées pour les enrober ; 25 min à petit feu à découvert, en arrosant : sauce sirupeuse, poisson brun et brillant.
+4. **Finir.** Poivre, cébettes ; un trait de citron vert ; avec beaucoup de riz et des légumes vapeur.
+
+- Le caramel doit être foncé (couleur de thé fort) : trop clair, le plat est fade ; noir, il est amer.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Caramel
+
+---
+
+### Khao soi (soupe-repas de nouilles au curry coco, Chiang Mai)
+
+*Khao soi · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs, poissons ; **possibles selon marque** : crustacés
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte, poêle.
+
+La soupe du Nord de la Thaïlande : nouilles aux œufs dans un bouillon au curry et au lait de coco, avec du poulet, couvertes de nouilles frites croustillantes, servies avec échalotes, citron vert et chou mariné.
+
+**Ingrédients** : 600 g de cuisses de poulet · 300 g de nouilles chinoises aux œufs · 40 cl de lait de coco · 2 c. à s. de pâte de curry rouge ou jaune · 1 c. à c. de curcuma · 2 c. à s. de sauce de poisson · 1 c. à s. de sucre · 2 citrons verts · 2 échalotes · 1 bouquet de coriandre · 10 cl d'huile
+
+1. **Curry.** Pâte de curry et curcuma dans 2 c. à s. de crème du coco, 2 min : l'huile se sépare, ça embaume.
+2. **Mijoter.** Poulet, reste du coco, 50 cl d'eau, sauce de poisson, sucre ; 25 min : la viande se détache.
+3. **Nouilles.** Une poignée frite 1 min dans l'huile chaude : croustillante et dorée ; le reste cuit 4 min à l'eau.
+4. **Servir.** Nouilles et poulet dans les bols, bouillon brûlant, nouilles frites dessus ; échalotes émincées, coriandre, citron vert à presser.
+
+- Le bouillon doit être un peu acidulé : le citron vert se presse à table, généreusement.
+
+**Conservation** : Bouillon 2 jours au frigo ; nouilles le jour même.
+
+---
+
+### Poulet aux noix de cajou (gai pad med mamuang, Thaïlande)
+
+*Gai pad med mamuang · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : fruits à coque, gluten, mollusques, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok.
+
+Le sauté thaï que tout le monde aime : poulet, noix de cajou grillées, oignon, poivron et cébette, laqués d'une sauce d'huître un peu sucrée et salée. Prêt en dix minutes de cuisson.
+
+**Ingrédients** : 500 g de blancs de poulet · 100 g de noix de cajou · 1 oignon · 1 poivron rouge · 3 cébettes · 3 gousses d'ail · 2 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 1 c. à c. de sucre · 1 c. à c. de fécule de maïs · 1 citron vert · 3 c. à s. d'huile
+
+1. **Préparer.** Poulet en lamelles enrobé de fécule ; sauce : huître, soja, sucre, 4 c. à s. d'eau.
+2. **Cajou.** 3 min à feu moyen dans l'huile : dorées ; retirées.
+3. **Sauter.** Feu vif, ail 20 s ; poulet 4 min : doré, blanc à cœur ; oignon et poivron 2 min : encore croquants.
+4. **Laquer.** Sauce, 1 min : elle épaissit et brille ; cajou et cébettes ; citron vert à presser ; avec du riz jasmin.
+
+- Tout doit être coupé avant d'allumer le feu : au wok, ça va très vite.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Sayur lodeh (légumes mijotés au lait de coco, Indonésie)
+
+*Sayur lodeh · Asie du Sud-Est › Indonésie · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le curry de légumes doux de Java : chou, haricots verts, courgette et tofu dans un bouillon de coco au curcuma, au gingembre et à la citronnelle. Réconfortant et léger à la fois.
+
+**Ingrédients** : 300 g de tofu ferme · 1/4 de chou blanc · 200 g de haricots verts · 1 courgette · 40 cl de lait de coco · 2 échalotes · 2 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 tige de citronnelle · 1 c. à c. de curcuma · 1 citron vert · 1 c. à c. de sel
+
+1. **Pâte.** Échalotes, ail, gingembre, curcuma pilés ou mixés avec 2 c. à s. d'eau.
+2. **Parfumer.** Pâte 3 min à feu moyen : elle sent fort et perd son goût cru ; lait de coco, 40 cl d'eau, citronnelle écrasée.
+3. **Légumes.** Haricots 5 min ; chou, courgette, tofu en dés 8 min : légumes tendres mais encore colorés.
+4. **Finir.** Sel, jus de citron vert ; avec du riz.
+
+- Avec un œuf dur coupé en deux dans chaque bol, comme à Java.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Pad see ew (nouilles larges sautées au bœuf et brocoli, Thaïlande)
+
+*Pad see ew · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, mollusques, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok.
+
+Les grosses nouilles de riz sautées à feu très vif avec bœuf, brocoli chinois et œuf, dans une sauce soja sucrée qui caramélise contre le wok. Le plat de rue le plus réconfortant de Bangkok.
+
+**Ingrédients** : 400 g de nouilles de riz larges (fraîches ou sèches réhydratées) · 300 g de rumsteck en fines lamelles · 300 g de brocoli (ou de chou chinois) · 2 œufs · 3 c. à s. de sauce soja · 1 c. à s. de sauce d'huître · 1 c. à s. de sucre · 3 gousses d'ail · 1 c. à s. de vinaigre de riz · 3 c. à s. d'huile
+
+1. **Sauce.** Soja, huître, sucre mélangés ; nouilles détachées une à une.
+2. **Saisir.** Wok fumant, ail 20 s, bœuf 2 min : bruni ; brocoli en petits bouquets 2 min avec 2 c. à s. d'eau : vert vif.
+3. **Nouilles.** Nouilles et sauce, étalées dans le wok, 1 min sans toucher : elles accrochent et caramélisent ; remuées, encore 1 min.
+4. **Œufs.** Poussés sur le côté, œufs cassés, brouillés 30 s puis mêlés ; vinaigre de riz à table.
+
+- Le goût vient de la caramélisation : feu au maximum, et pas trop de nouilles à la fois.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Kai jeow (omelette thaïe soufflée et croustillante)
+
+*Kai jeow · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou petite poêle profonde.
+
+L'omelette thaïe : des œufs battus à la sauce de poisson, versés dans l'huile très chaude, où ils gonflent comme un soufflé, dorés et croustillants dehors, moelleux dedans. Sur du riz, avec de la sriracha.
+
+**Ingrédients** : 4 œufs · 1 c. à s. de sauce de poisson (ou de soja) · 1 c. à c. de jus de citron vert · 2 cébettes · 10 cl d'huile · 1 c. à s. de sriracha · 300 g de riz cuit chaud
+
+1. **Battre.** Œufs, sauce de poisson, citron vert, cébettes émincées, 1 min énergiquement : mousseux (le citron les fait gonfler).
+2. **Chauffer.** Huile dans le wok jusqu'à ce qu'elle frémisse (un filet d'œuf grésille aussitôt).
+3. **Frire.** Œufs versés de haut d'un coup : ils gonflent en bouillonnant ; 1 min, retournés, 1 min : doré et croustillant sur les bords.
+4. **Servir.** Égoutté, posé sur le riz, sriracha.
+
+- Recule-toi en versant : l'huile très chaude crépite.
+- Ajoute des crevettes hachées ou du poulet dans les œufs.
+
+**Conservation** : À manger tout de suite.
+
+**Techniques** : Frire
+
+---
+
+### Đậu phụ sốt cà chua (tofu doré sauce tomate, Vietnam)
+
+*Đậu phụ sốt cà chua · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Le plat végétarien de tous les foyers vietnamiens : du tofu doré à la poêle, mijoté dans une sauce de tomates fraîches au nuoc-mâm ou au soja, avec cébette. Doux, acidulé, prêt en vingt minutes.
+
+**Ingrédients** : 400 g de tofu ferme · 4 tomates bien mûres · 2 échalotes · 2 gousses d'ail · 2 c. à s. de sauce soja (ou de nuoc-mâm) · 1 c. à c. de sucre · 3 cébettes · 1 bouquet de coriandre · 3 c. à s. d'huile
+
+1. **Dorer.** Tofu épongé, en cubes, 8 min dans l'huile en retournant : doré sur toutes les faces. Réservé.
+2. **Sauce.** Échalotes et ail 2 min ; tomates en quartiers 5 min en écrasant : elles fondent en sauce.
+3. **Mijoter.** Soja, sucre, 10 cl d'eau, tofu ; 5 min : la sauce enrobe et brille.
+4. **Finir.** Cébettes, coriandre ; avec du riz.
+
+- Presse le tofu 10 min entre deux torchons sous une planche : il dore mieux.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Ayam masak merah (poulet en sauce tomate pimentée, Malaisie)
+
+*Ayam masak merah · Asie du Sud-Est › Malaisie · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : crustacés
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte.
+
+Le poulet des fêtes malaises : doré, puis mijoté dans une sauce tomate épaisse au piment, à la citronnelle et au gingembre, adoucie d'un peu de lait de coco. Rouge, brillant, sucré-épicé.
+
+**Ingrédients** : 1 kg de cuisses de poulet · 400 g de tomates pelées · 2 c. à s. de concentré de tomate · 2 oignons · 4 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 tige de citronnelle · 1 c. à s. de sambal oelek · 10 cl de lait de coco · 1 c. à s. de sucre · 1 citron vert · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Dorer.** Poulet salé frotté de curcuma ou de sel, 10 min dans l'huile : peau dorée. Réservé.
+2. **Base.** Oignons, ail, gingembre mixés, 8 min : la pâte brunit ; sambal, citronnelle écrasée 2 min.
+3. **Mijoter.** Tomates, concentré, sucre, 20 cl d'eau, poulet ; couvert, 25 min : sauce épaisse, rouge brillant.
+4. **Finir.** Lait de coco 2 min ; jus de citron vert ; avec du riz.
+
+- Sambal à part pour les enfants.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Canh chua (soupe aigre au poisson, tomate et ananas, Vietnam)
+
+*Canh chua cá · Asie du Sud-Est › Vietnam · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande casserole.
+
+La soupe du delta du Mékong qu'on mange avec le riz : un bouillon aigre-doux au tamarin, avec poisson, ananas, tomate, germes de soja et beaucoup d'herbes. Léger et revigorant.
+
+**Ingrédients** : 500 g de poisson blanc en morceaux · 200 g d'ananas · 3 tomates · 150 g de germes de soja · 2 c. à s. de pâte de tamarin · 3 c. à s. de sauce de poisson · 1 c. à s. de sucre · 2 gousses d'ail · 1 bouquet de coriandre · 1 bouquet de basilic thaï (ou de menthe) · 1 piment · 1 c. à s. d'huile
+
+1. **Bouillon.** 1,2 l d'eau, tamarin dilué, sauce de poisson, sucre : à ébullition ; goûte, il doit être aigre, salé et un peu sucré.
+2. **Cuire.** Tomates et ananas en morceaux 5 min ; poisson 5 min à frémissement : chair opaque.
+3. **Finir.** Germes de soja 1 min : encore croquants ; ail doré 1 min dans l'huile versé dessus.
+4. **Servir.** Herbes et piment émincés à table ; avec du riz blanc.
+
+- Sans pâte de tamarin : le jus de 2 citrons verts.
+
+**Conservation** : Le jour même.
+
+---
+
+### Oyakodon (bol de riz au poulet et à l'œuf, Japon)
+
+*Oyakodon · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Dashi (instantané), Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, œufs, poissons, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Petite poêle avec couvercle.
+
+« Le parent et l'enfant » : du poulet et de l'oignon mijotés dans un bouillon dashi sucré-salé, liés à l'œuf à peine pris, versés sur du riz. Le plat réconfort du Japon, en vingt minutes. Ici sans mirin.
+
+**Ingrédients** : 300 g de hauts de cuisse de poulet · 3 œufs · 1 oignon · 15 cl de dashi (ou de bouillon léger) · 2 c. à s. de sauce soja · 1 c. à s. de sucre · 1 c. à c. de vinaigre de riz · 2 cébettes · 300 g de riz rond cuit chaud
+
+1. **Bouillon.** Dashi, soja, sucre, vinaigre de riz : à frémissement ; oignon en lamelles 3 min : translucide.
+2. **Poulet.** En petits morceaux, 6 min à frémissement : blanc à cœur.
+3. **Œufs.** Battus à peine (blanc et jaune encore distincts), versés en cercle ; couvert, 1 min à feu doux : pris dessus mais encore tremblotant.
+4. **Servir.** Glissé sur le riz dans les bols, cébettes.
+
+- Pour les tout-petits ou les femmes enceintes : 2 min de plus, œufs bien pris.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Sundubu jjigae (ragoût de tofu soyeux épicé, Corée)
+
+*Sundubu jjigae · Asie de l'Est › Corée · Plat*
+
+Niveau ⭐ · 2 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Dashi (instantané), Vinaigre de riz
+- ⚠️ **Allergènes** : crustacés, gluten, œufs, poissons, sésame, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Petite cocotte ou casserole.
+
+Le ragoût coréen bouillonnant : du tofu soyeux dans un bouillon rouge au gochugaru, avec courgette, champignons, palourdes ou crevettes, et un œuf cassé dedans à la fin. On le sert encore frémissant.
+
+**Ingrédients** : 400 g de tofu soyeux · 150 g de crevettes ou de palourdes · 1/2 courgette · 100 g de champignons · 2 œufs · 1 c. à s. de gochugaru (ou de piment doux + une pincée de piment fort) · 2 gousses d'ail · 1 c. à s. de sauce soja · 1 c. à c. d'huile de sésame · 50 cl de dashi ou de bouillon · 2 cébettes · 1 c. à c. de vinaigre de riz
+
+1. **Huile pimentée.** Huile de sésame, ail, gochugaru, 1 min à feu doux : l'huile devient rouge (sans brûler).
+2. **Bouillon.** Dashi, soja, courgette et champignons en dés ; 5 min.
+3. **Tofu.** Cuillerées de tofu soyeux, crevettes ; 4 min à frémissement : les crevettes rosissent.
+4. **Œuf.** Cassé au centre, 2 min : blanc pris ; cébettes, vinaigre ; servi bouillonnant avec du riz.
+
+- Version végétarienne : sans crevettes, avec plus de champignons.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Dakgalbi (poulet sauté au gochujang, chou et patate douce, Corée)
+
+*Dakgalbi · Asie de l'Est › Corée · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Gochujang, Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Grande poêle ou sauteuse.
+
+Le plat convivial de Chuncheon : du poulet mariné au gochujang, sauté sur une grande plaque avec chou, patate douce et oignon. On finit souvent avec du riz sauté dans la sauce.
+
+**Ingrédients** : 700 g de hauts de cuisse de poulet désossés · 3 c. à s. de gochujang · 2 c. à s. de sauce soja · 1 c. à s. de sucre · 3 gousses d'ail · 1/4 de chou blanc · 1 patate douce · 1 oignon · 3 cébettes · 1 c. à s. de vinaigre de riz · 1 c. à s. d'huile de sésame · 1 c. à s. de sésame
+
+1. **Mariner.** Poulet en morceaux, gochujang, soja, sucre, ail râpé, vinaigre : 20 min.
+2. **Patate douce.** En fines rondelles, 5 min dans l'huile de sésame avec 5 cl d'eau, couvert : à moitié tendre.
+3. **Sauter.** Poulet et sa marinade, chou en gros morceaux, oignon ; 12 min à feu moyen-vif en remuant : poulet cuit, chou fondant et laqué de sauce rouge.
+4. **Finir.** Cébettes, sésame ; à la fin, une bol de riz sauté 3 min dans le reste de sauce, comme en Corée.
+
+- Moins de gochujang (1 c. à s.) et un peu de miel pour les enfants.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Aubergines parfumées à la sichuanaise (yu xiang qiezi)
+
+*Yu xiang qiezi · Asie de l'Est › Chine (Sichuan) · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Wok.
+
+Des aubergines fondantes, laquées d'une sauce aigre-douce à l'ail, au gingembre et au piment, « parfumées comme du poisson » sans en contenir. Un grand classique végétarien du Sichuan.
+
+**Ingrédients** : 3 aubergines · 3 gousses d'ail · 1 morceau (3 cm) de gingembre · 1 c. à s. de pâte de piment (ou de sambal) · 2 c. à s. de sauce soja · 1 c. à s. de vinaigre noir (ou de cidre) · 1 c. à s. de sucre · 1 c. à c. de fécule de maïs · 3 cébettes · 4 c. à s. d'huile
+
+1. **Sauce.** Soja, vinaigre, sucre, fécule, 6 c. à s. d'eau.
+2. **Aubergines.** En bâtonnets, salées 10 min, épongées ; 8 min dans 3 c. à s. d'huile à feu vif : dorées, fondantes au cœur. Réservées.
+3. **Parfumer.** Reste d'huile, ail, gingembre, pâte de piment, blanc des cébettes, 1 min : l'huile rougit, ça embaume.
+4. **Laquer.** Aubergines et sauce, 1 min : elle épaissit et brille ; vert des cébettes ; avec du riz.
+
+- Au four pour moins de gras : bâtonnets huilés, 20 min à 220 °C, puis laqués à la poêle.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Di san xian (pommes de terre, aubergine et poivron sautés, Chine du Nord)
+
+*Di san xian · Asie de l'Est › Chine (Dongbei) · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Wok.
+
+« Les trois trésors de la terre » de la Mandchourie : pommes de terre, aubergine et poivron dorés séparément, puis enrobés d'une sauce à l'ail et au soja. Un plat végétarien populaire et généreux.
+
+**Ingrédients** : 2 pommes de terre · 2 aubergines · 1 poivron vert · 4 gousses d'ail · 2 c. à s. de sauce soja · 1 c. à c. de sucre · 1 c. à c. de fécule de maïs · 1 c. à c. de vinaigre de riz · 6 c. à s. d'huile
+
+1. **Sauce.** Soja, sucre, fécule, vinaigre, 8 c. à s. d'eau.
+2. **Dorer.** Pommes de terre en quartiers fins 8 min dans l'huile : dorées et tendres ; aubergine en gros dés 6 min : fondante ; poivron 1 min. Égouttés.
+3. **Ail.** 1 c. à s. d'huile, ail haché 20 s : doré pâle.
+4. **Laquer.** Légumes et sauce, 1 min à feu vif en remuant : tout brille ; avec du riz.
+
+- Version légère : légumes rôtis au four 25 min, puis laqués à la poêle.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Nikujaga (bœuf et pommes de terre mijotés, Japon)
+
+*Nikujaga · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Dashi (instantané), Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, poissons, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le plat de la maison au Japon : bœuf en fines tranches, pommes de terre, carottes et oignon mijotés dans un bouillon sucré-salé au soja, jusqu'à ce que les pommes de terre en soient imprégnées. Sans mirin ni saké ici.
+
+**Ingrédients** : 250 g de bœuf en tranches très fines (paleron, rumsteck) · 600 g de pommes de terre · 2 carottes · 1 oignon · 40 cl de dashi ou de bouillon léger · 3 c. à s. de sauce soja · 2 c. à s. de sucre · 1 c. à s. de vinaigre de riz · 100 g de petits pois (pour la couleur) · 1 c. à s. d'huile
+
+1. **Saisir.** Bœuf 2 min dans l'huile : il change de couleur ; oignon en quartiers 2 min.
+2. **Mijoter.** Pommes de terre en gros morceaux, carottes en biseau, dashi, sucre ; 10 min à frémissement en écumant.
+3. **Assaisonner.** Soja et vinaigre ; couvercle posé directement sur les légumes (ou un disque de papier), 12 min : pommes de terre tendres, bouillon réduit de moitié.
+4. **Finir.** Petits pois 2 min ; repos 10 min hors du feu : les pommes de terre boivent le jus ; avec du riz.
+
+- Le repos est important : c'est là que les légumes prennent le goût.
+
+**Conservation** : 3 jours au frigo, meilleur le lendemain.
+
+**Techniques** : Mijoter
+
+---
+
+### Saba misoni (maquereau mijoté au miso et au gingembre, Japon)
+
+*Saba no misoni · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Miso, Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, poissons, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse avec couvercle.
+
+Le maquereau à la japonaise : mijoté dans une sauce au miso, au gingembre et au sucre, qui atténue son goût fort et le rend fondant. Avec du riz et une soupe, c'est un repas de cantine japonaise.
+
+**Ingrédients** : 4 filets de maquereau · 3 c. à s. de miso · 1 c. à s. de sucre · 1 morceau (4 cm) de gingembre · 1 c. à s. de sauce soja · 1 c. à s. de vinaigre de riz · 2 cébettes
+
+1. **Préparer.** Filets coupés en deux, peau entaillée en croix ; ébouillantés 10 s (eau versée dessus) : l'odeur forte part.
+2. **Sauce.** 20 cl d'eau, sucre, soja, vinaigre, gingembre en lamelles : à frémissement.
+3. **Mijoter.** Poisson peau dessus, couvercle posé directement dessus, 8 min ; miso délayé dans la sauce, 5 min en arrosant : sauce brillante et épaissie.
+4. **Servir.** Nappé de sauce, gingembre et cébettes ; avec du riz.
+
+- Ne fais pas bouillir après le miso : il perd son parfum.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+## 2.38 Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés d'Europe du Nord, centrale et du Sud absents du catalogue, et
+
+### Sauerbraten (bœuf mariné au vinaigre et aux épices, Rhénanie)
+
+*Sauerbraten · Europe du Nord › Allemagne · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : gluten, sulfites ; **possibles selon marque** : fruits à coque, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, grand récipient pour la marinade.
+
+Le rôti du dimanche rhénan : un morceau de bœuf mariné deux jours dans le vinaigre, les oignons et les épices, puis braisé longuement. La sauce, liée au pain d'épices, est aigre-douce et profonde.
+
+**Ingrédients** : 1,2 kg de paleron ou de gîte en un morceau · 40 cl de vinaigre de vin rouge · 2 oignons · 2 carottes · 2 feuilles de laurier · 4 clous de girofle · 6 baies de genièvre · 4 tranches de pain d'épices (ou de spéculoos émiettés) · 40 g de raisins secs · 2 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Mariner.** Vinaigre, 40 cl d'eau, oignons et carottes en rondelles, laurier, girofle, genièvre portés à ébullition puis refroidis ; viande immergée, 2 jours au frigo en la retournant chaque jour.
+2. **Saisir.** Viande épongée, salée, 10 min dans l'huile chaude : brune sur toutes les faces.
+3. **Braiser.** Marinade filtrée et légumes, couvert, 2 h 30 à 160 °C : la viande se coupe à la cuillère.
+4. **Sauce.** Jus réduit 10 min avec le pain d'épices émietté et les raisins, en fouettant : épaisse, brillante, aigre-douce ; avec du chou rouge et des pommes vapeur.
+
+- Prévois-le le jeudi pour le dimanche.
+- Version express : 24 h de marinade suffisent pour un goût déjà marqué.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Pyttipanna (poêlée de pommes de terre et de bœuf, œuf au plat, Suède)
+
+*Pyttipanna · Europe du Nord › Suède · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle.
+
+Le plat suédois des restes : pommes de terre, oignon et viande coupés en petits dés et dorés à la poêle, avec un œuf au plat et des betteraves au vinaigre. Ici avec du bœuf rôti ou haché.
+
+**Ingrédients** : 800 g de pommes de terre cuites la veille · 400 g de restes de bœuf rôti (ou de bœuf haché) · 2 oignons · 4 œufs · 200 g de betteraves cuites · 2 c. à s. de vinaigre de cidre · 30 g de beurre · 1 c. à s. de persil · 1 c. à c. de sel · 1 pincée de poivre
+
+1. **Betteraves.** En dés, avec le vinaigre et une pincée de sel : 15 min.
+2. **Dorer.** Pommes de terre en dés de 1 cm, 12 min dans le beurre à feu moyen-vif en remuant peu : dorées et croustillantes.
+3. **Assembler.** Oignons en dés 5 min ; viande en dés 4 min : chaude et grillée ; sel, poivre.
+4. **Servir.** Un œuf au plat sur chaque assiette, betteraves, persil.
+
+- C'est le plat parfait pour un reste de pot-au-feu ou de rôti.
+- Les cornichons remplacent les betteraves.
+
+**Conservation** : Le jour même.
+
+---
+
+### Fiskesuppe (soupe de poisson crémeuse de Bergen, Norvège)
+
+*Bergensk fiskesuppe · Europe du Nord › Norvège · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande casserole.
+
+La soupe-repas des ports norvégiens : un bouillon crémeux aux carottes, poireau et céleri, où pochent quelques minutes du saumon et du cabillaud, avec beaucoup d'aneth. Doux, léger, réconfortant.
+
+**Ingrédients** : 300 g de cabillaud · 300 g de saumon · 2 carottes · 1 poireau · 1 morceau de céleri-rave · 1 l de fumet de poisson (ou de bouillon de légumes) · 20 cl de crème · 20 g de beurre · 1 bouquet d'aneth · 1 citron · 1 pincée de sel
+
+1. **Légumes.** Beurre, carottes, poireau et céleri en petits bâtonnets, 5 min sans colorer : brillants.
+2. **Bouillon.** Fumet, 12 min à frémissement : légumes tendres mais encore entiers.
+3. **Crème.** Crème, 2 min ; sel ajusté.
+4. **Pocher.** Poisson en gros dés, 4 min à feu très doux, sans bouillir : chair opaque, encore juteuse ; aneth, filet de citron ; avec du pain de seigle.
+
+- Ajoute des crevettes cuites au moment de servir pour une version de fête.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Lecsó (poivrons et tomates mijotés au paprika, œufs, Hongrie)
+
+*Lecsó · Europe du Nord › Hongrie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : gluten, œufs, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse.
+
+Le ragoût d'été hongrois : poivrons jaunes, oignon et tomates mijotés au paprika jusqu'à devenir fondants, souvent avec des œufs brouillés dedans. Avec du pain, un dîner végétarien simple et coloré.
+
+**Ingrédients** : 4 poivrons (jaunes, verts, rouges) · 4 tomates · 2 oignons · 2 c. à c. de paprika doux · 4 œufs · 2 c. à s. d'huile · 1 c. à c. de vinaigre de vin · 1 c. à c. de sel · 1 pain de campagne
+
+1. **Oignons.** Émincés, 6 min dans l'huile : tendres, à peine dorés ; paprika hors du feu (il brûle vite).
+2. **Poivrons.** En lanières, 10 min à feu moyen en remuant : souples.
+3. **Tomates.** En morceaux, sel ; 8 min : elles fondent en sauce, les poivrons sont fondants.
+4. **Œufs.** Battus, versés et remués doucement 2 min : crémeux ; vinaigre ; avec du pain.
+
+- Sans les œufs, c'est aussi un accompagnement de poulet ou de riz.
+
+**Conservation** : 2 jours au frigo (sans les œufs).
+
+---
+
+### Paprikás csirke (poulet au paprika et à la crème, Hongrie)
+
+*Csirkepaprikás · Europe du Nord › Hongrie · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le poulet au paprika de Budapest : mijoté avec beaucoup d'oignon et de paprika doux, puis lié à la crème aigre. Une sauce rouge orangé, onctueuse, qu'on mange avec des petites pâtes ou du riz.
+
+**Ingrédients** : 1 kg de cuisses de poulet · 2 oignons · 2 c. à s. de paprika doux · 1 poivron · 1 tomate · 20 cl de crème fraîche · 1 c. à s. de farine · 1 citron · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Oignons.** Hachés, 10 min dans l'huile à feu doux : très tendres et blonds.
+2. **Paprika.** Hors du feu, paprika mélangé (sur le feu, il brûle et devient amer) ; poulet, poivron, tomate en dés, 20 cl d'eau, sel.
+3. **Mijoter.** Couvert, 35 min à petit feu : le poulet se détache de l'os.
+4. **Lier.** Crème mélangée à la farine et à un filet de citron, versée en remuant, 3 min sans bouillir : la sauce nappe ; avec des pâtes ou du riz.
+
+- Le paprika hongrois doux, de bonne qualité, fait toute la différence.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Fiskefrikadeller (boulettes de poisson danoises, sauce rémoulade au yaourt)
+
+*Fiskefrikadeller · Europe du Nord › Danemark · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichon, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, poêle.
+
+Les galettes de poisson du Danemark : cabillaud mixé avec oignon, œuf et aneth, doré à la poêle, servi avec une sauce au yaourt, aux cornichons et à la moutarde, des pommes de terre et des carottes râpées.
+
+**Ingrédients** : 600 g de cabillaud ou de lieu · 1 oignon · 1 œuf · 3 c. à s. de farine · 10 cl de lait · 1 c. à s. d'aneth · 200 g de yaourt grec · 4 cornichons · 1 c. à c. de moutarde · 1 citron · 30 g de beurre · 1 c. à c. de sel
+
+1. **Mixer.** Poisson, oignon, œuf, farine, lait, sel : 30 s par à-coups, farce lisse ; aneth ; 15 min au frais (elle se raffermit).
+2. **Façonner.** À la cuillère, galettes ovales de 6 cm.
+3. **Dorer.** Beurre moussant, 4 min par face à feu moyen : dorées, fermes au toucher.
+4. **Sauce.** Yaourt, cornichons hachés, moutarde, jus de citron ; avec des pommes de terre et une salade.
+
+- Les enfants les aiment en sandwich, dans un pain au lait.
+
+**Conservation** : 2 jours au frigo ; les galettes cuites se congèlent.
+
+---
+
+### Rouladen (paupiettes de bœuf moutarde-cornichon, Allemagne, version sans lard)
+
+*Rinderrouladen · Europe du Nord › Allemagne · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Cornichon
+- ⚠️ **Allergènes** : gluten, moutarde ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, ficelle ou piques.
+
+Le plat du dimanche allemand : de fines tranches de bœuf tartinées de moutarde, roulées autour d'oignon et de cornichon, braisées dans une sauce brune. Le lard de la recette d'origine est remplacé par de la viande séchée.
+
+**Ingrédients** : 4 grandes tranches fines de bœuf (rumsteck, tranche) · 3 c. à s. de moutarde forte · 4 cornichons · 2 oignons · 4 tranches de viande des Grisons (à la place du lard) · 1 carotte · 1 c. à s. de concentré de tomate · 50 cl de bouillon · 1 c. à s. de farine · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Rouler.** Tranches aplaties, salées, tartinées de moutarde ; viande séchée, lamelles d'oignon, cornichon en long ; roulées serré, ficelées.
+2. **Saisir.** 8 min dans l'huile chaude : brunes sur toutes les faces ; réservées. Reste d'oignon et carotte 5 min ; concentré 1 min ; bouillon en grattant les sucs.
+3. **Braiser.** Roulades remises, couvert, 1 h 30 à petit feu : tendres à la fourchette.
+4. **Sauce.** Roulades retirées ; jus réduit 5 min, lié à la farine délayée : brune et nappante ; avec purée ou spätzle.
+
+- La version d'origine utilise du lard fumé ; la viande des Grisons donne le côté salé-fumé sans porc.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Laxpudding (gratin de saumon et pommes de terre à l'aneth, Suède)
+
+*Laxpudding · Europe du Nord › Suède · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 45 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Saumon fumé
+- ⚠️ **Allergènes** : lait, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin.
+
+Le gratin suédois des fêtes de famille : couches de pommes de terre et de saumon à l'aneth, sous une crème aux œufs qui prend au four. Servi avec du beurre fondu et du citron.
+
+**Ingrédients** : 800 g de pommes de terre · 300 g de saumon fumé ou de saumon frais · 3 œufs · 40 cl de lait · 1 bouquet d'aneth · 1 oignon · 30 g de beurre · 1 citron · 1 pincée de sel · 1 pincée de poivre
+
+1. **Pommes de terre.** En rondelles fines, 6 min à l'eau salée : à peine tendres ; égouttées.
+2. **Monter.** Plat beurré : pommes de terre, saumon, oignon émincé, aneth, en couches ; pommes de terre dessus.
+3. **Appareil.** Œufs et lait battus, poivre (le saumon fumé sale déjà) ; versés.
+4. **Cuire.** 40 min à 180 °C : dessus doré, appareil pris (la lame ressort propre) ; beurre fondu et citron.
+
+- Une très bonne façon d'utiliser les chutes de saumon fumé.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Poulet Kiev (escalope panée au beurre d'ail et d'herbes, Ukraine)
+
+*Kotleta po-kyivsky · Europe du Nord › Ukraine · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, plat à four.
+
+La côtelette de Kiev : un blanc de poulet aplati, roulé autour d'un beurre glacé à l'ail et aux herbes, pané deux fois puis doré. À la découpe, le beurre parfumé coule sur la purée.
+
+**Ingrédients** : 4 blancs de poulet · 80 g de beurre mou · 2 gousses d'ail · 1 c. à s. de persil · 1 c. à s. d'aneth · 1 citron · 2 œufs · 60 g de farine · 120 g de chapelure ou de panko · 4 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Beurre.** Beurre, ail râpé, herbes, zeste de citron, sel : en boudin dans du film, 30 min au congélateur : dur.
+2. **Rouler.** Blancs ouverts en portefeuille, aplatis entre deux films à 5 mm ; un morceau de beurre au centre ; roulés serré, bords rentrés.
+3. **Paner.** Farine, œuf, chapelure, puis œuf et chapelure une seconde fois (le beurre ne s'échappe pas).
+4. **Cuire.** Dorés 4 min dans l'huile en les tournant, puis 15 min à 200 °C : croûte dorée, 74 °C à cœur ; quartiers de citron, purée.
+
+- La double panure et le beurre bien froid sont le secret : sinon il fuit à la cuisson.
+
+**Conservation** : Le jour même.
+
+**Techniques** : paner à l'anglaise
+
+---
+
+### Risi e bisi (riz aux petits pois, Venise)
+
+*Risi e bisi · Europe du Sud › Italie (Vénétie) · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, cocotte.
+
+Le plat du printemps vénitien, entre soupe et risotto : du riz cuit dans un bouillon de petits pois, avec oignon, parmesan et persil. Plus fluide qu'un risotto, on le mange à la cuillère.
+
+**Ingrédients** : 250 g de riz à risotto · 500 g de petits pois (frais ou surgelés) · 1 oignon · 1,2 l de bouillon de légumes · 40 g de beurre · 50 g de parmesan · 1 c. à s. de persil · 1 citron · 1 pincée de sel
+
+1. **Base.** 20 g de beurre, oignon haché 6 min : translucide ; la moitié des petits pois 2 min.
+2. **Riz.** Riz 2 min en remuant : nacré ; bouillon chaud presque entier d'un coup, 15 min à frémissement en remuant de temps en temps.
+3. **Pois.** Reste des petits pois mixés avec un peu de bouillon, ajoutés 3 min : la soupe verdit et s'épaissit ; riz tendre, encore un peu ferme.
+4. **Finir.** Hors du feu, reste du beurre, parmesan, persil, zeste de citron : consistance de soupe épaisse.
+
+- Avec des petits pois frais, les cosses cuites 20 min font le bouillon (zéro déchet).
+
+**Conservation** : Le jour même (il épaissit en refroidissant).
+
+**Techniques** : nacrer le riz
+
+---
+
+### Arroz de marisco (riz aux fruits de mer en sauce, Portugal)
+
+*Arroz de marisco · Europe du Sud › Portugal · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 30 min · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, mollusques
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande cocotte.
+
+Le plat de fête des côtes portugaises : un riz « malandrinho », presque soupe, cuit avec tomate, crevettes, moules et calamars, beaucoup de coriandre et de citron. Se mange tout de suite, brûlant.
+
+**Ingrédients** : 250 g de riz rond ou à risotto · 400 g de crevettes entières · 1 kg de moules · 300 g de calamars en anneaux · 1 oignon · 3 gousses d'ail · 400 g de tomates pelées · 1 bouquet de coriandre · 1 citron · 1 piment (facultatif) *(facultatif)* · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Bouillon.** Moules dans 30 cl d'eau, couvert, 4 min : ouvertes ; décortiquées ; jus filtré. Têtes et carapaces des crevettes 10 min dans 80 cl d'eau : bouillon filtré.
+2. **Base.** Oignon et ail 6 min dans l'huile ; tomates 5 min ; calamars 3 min.
+3. **Riz.** Riz, bouillons (1 l en tout), sel, piment ; 15 min à frémissement : riz tendre, encore beaucoup de jus (plus que pour un risotto).
+4. **Finir.** Crevettes 3 min : roses ; moules ; coriandre, jus de citron ; servi aussitôt.
+
+- Le riz continue de boire le jus : sers-le encore très liquide.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Spanakorizo (riz aux épinards, aneth et citron, Grèce)
+
+*Spanakorizo · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le plat de carême grec : du riz cuit avec beaucoup d'épinards, cébette, aneth et menthe, fini au citron et à l'huile d'olive. Avec de la feta et du yaourt, un dîner végétarien complet.
+
+**Ingrédients** : 250 g de riz rond · 800 g d'épinards · 4 cébettes · 1 oignon · 1 bouquet d'aneth · 1 c. à s. de menthe · 2 citrons · 150 g de feta · 5 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Base.** Oignon et cébettes 6 min dans 3 c. à s. d'huile : tendres.
+2. **Épinards.** Ajoutés par poignées, 4 min : tombés ; sel.
+3. **Riz.** Riz, 50 cl d'eau bouillante ; couvert, 18 min à feu doux : riz tendre, encore un peu humide.
+4. **Finir.** Aneth, menthe, jus des citrons, reste d'huile ; 5 min de repos ; feta émiettée.
+
+- Encore meilleur tiède ; se mange aussi froid, en pique-nique.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Kleftiko (agneau en papillote au citron, à l'ail et à l'origan, Grèce)
+
+*Kleftiko · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 3 h 00 · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four, papier cuisson et aluminium.
+
+L'agneau « des voleurs » grec : de l'épaule enfermée en papillote avec pommes de terre, ail, citron et origan, cuite des heures à four doux. On ouvre un paquet de vapeur parfumée, la viande se défait.
+
+**Ingrédients** : 1,5 kg d'épaule d'agneau en gros morceaux · 1 kg de pommes de terre · 2 citrons · 6 gousses d'ail · 1 c. à s. d'origan · 1 oignon · 2 tomates · 100 g de feta · 4 c. à s. d'huile d'olive · 2 c. à c. de sel
+
+1. **Mariner.** Agneau frotté d'ail écrasé, origan, jus d'un citron, huile, sel : 1 h (ou une nuit).
+2. **Monter.** Grande feuille de papier cuisson sur l'aluminium ; pommes de terre en quartiers, oignon, tomates, viande, rondelles de citron ; paquet fermé hermétiquement.
+3. **Cuire.** 3 h à 160 °C : la viande se défait à la fourchette, les pommes de terre ont bu le jus.
+4. **Finir.** Paquet ouvert, feta émiettée, 15 min à 220 °C : tout dore ; jus du second citron.
+
+- C'est un plat qui attend : il supporte 30 min de plus au four sans souffrir.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Stifado (bœuf aux petits oignons, cannelle et vin rouge, Grèce)
+
+*Stifado · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin rouge, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le ragoût grec des dimanches d'hiver : du bœuf mijoté avec une montagne de petits oignons entiers, tomate, vin rouge, vinaigre, cannelle et clou de girofle. Doux, épicé, les oignons fondent.
+
+**Ingrédients** : 1,2 kg de paleron en gros dés · 800 g de petits oignons grelots (surgelés) · 25 cl de vin rouge · 400 g de tomates pelées · 2 c. à s. de concentré de tomate · 3 c. à s. de vinaigre de vin rouge · 1 bâton de cannelle · 3 clous de girofle · 2 feuilles de laurier · 3 gousses d'ail · 4 c. à s. d'huile d'olive · 2 c. à c. de sel
+
+1. **Saisir.** Bœuf salé, 10 min en deux fois dans l'huile chaude : bien bruni ; ail 1 min.
+2. **Déglacer.** Vin et vinaigre, en grattant les sucs, 3 min : l'odeur d'alcool s'en va.
+3. **Mijoter.** Tomates, concentré, cannelle, girofle, laurier, eau à hauteur ; couvert, 1 h 15 à petit feu.
+4. **Oignons.** Petits oignons dorés 8 min dans une poêle, ajoutés, 45 min : la viande se défait, les oignons sont fondants et brillants ; avec du riz ou des pâtes.
+
+- Les oignons grelots surgelés évitent l'épluchage, très long.
+
+- **Variante Sans alcool** : Vin rouge → **½ bouillon + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** (+ 1 c. à c. de concentré pour la couleur). **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 3 jours au frigo, meilleur le lendemain ; se congèle.
+
+**Techniques** : Déglacer
+
+---
+
+### Pâtes à la genovese (sauce aux oignons fondus et au bœuf, Naples)
+
+*Pasta alla genovese · Europe du Sud › Italie (Campanie) · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : céleri, gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Malgré son nom, une sauce napolitaine : un kilo et demi d'oignons fondus des heures avec du bœuf et un peu de vin blanc, jusqu'à devenir une crème ambrée et sucrée. Avec des pâtes tubulaires et du parmesan.
+
+**Ingrédients** : 600 g de paleron en morceaux · 1,5 kg d'oignons · 1 carotte · 1 branche de céleri · 15 cl de vin blanc sec · 500 g de pâtes (ziti, rigatoni) · 60 g de parmesan · 1 c. à c. de vinaigre de vin blanc · 4 c. à s. d'huile d'olive · 2 c. à c. de sel
+
+1. **Fond.** Carotte et céleri hachés 5 min dans l'huile ; viande 8 min : colorée ; vin, 3 min : l'alcool s'évapore.
+2. **Oignons.** Émincés finement, tous ajoutés avec le sel ; couvert, 2 h 30 à feu très doux en remuant de temps en temps : ils rendent leur eau puis fondent en crème brun doré.
+3. **Finir.** Découvert 20 min : sauce épaisse ; viande effilochée dans la sauce ; vinaigre.
+4. **Pâtes.** Al dente, mêlées à la sauce avec un peu d'eau de cuisson ; parmesan à table.
+
+- Prépare la sauce la veille : elle est encore meilleure et se congèle très bien.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : Sauce 4 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Bacalao a la vizcaína (morue en sauce aux poivrons, Pays basque espagnol)
+
+*Bacalao a la vizcaína · Europe du Sud › Espagne (Pays basque) · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons ; **possibles selon marque** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte en terre ou sauteuse.
+
+La morue de Bilbao : des morceaux dessalés, nappés d'une sauce rouge sombre d'oignons fondus et de poivrons séchés (ou rôtis), légèrement sucrée. Un plat de fête du Pays basque.
+
+**Ingrédients** : 800 g de morue salée dessalée 36 h (ou de cabillaud frais) · 3 oignons · 3 poivrons rouges · 1 c. à s. de paprika fumé · 1 c. à s. de concentré de tomate · 3 gousses d'ail · 30 g de pain rassis · 1 c. à s. de persil · 1 citron · 6 c. à s. d'huile d'olive
+
+1. **Poivrons.** Grillés 15 min sous le gril en les tournant : peau noircie ; pelés, chair mixée.
+2. **Sauce.** Oignons émincés 25 min à feu très doux dans 4 c. à s. d'huile avec l'ail : confits et dorés ; pain, paprika, concentré, poivrons, 20 cl d'eau, 5 min ; mixé : sauce lisse et rouge sombre.
+3. **Morue.** Morceaux confits 5 min peau dessous dans le reste d'huile à feu doux : ils deviennent nacrés.
+4. **Assembler.** Morue posée dans la sauce, 10 min à frémissement ; persil, filet de citron ; avec des pommes de terre.
+
+- Change l'eau de dessalage toutes les 8 h, au frigo.
+- Avec du cabillaud frais : sale-le 30 min avant, rince.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Melanzane ripiene (aubergines farcies au pain, tomate et mozzarella, Pouilles)
+
+*Melanzane ripiene · Europe du Sud › Italie (Pouilles) · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs ; **possibles selon marque** : gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four.
+
+Les aubergines farcies du Sud de l'Italie, version sans viande : leur chair hachée mélangée au pain, aux tomates, au basilic, au parmesan et à l'œuf, gratinées avec de la mozzarella. Fondantes et parfumées.
+
+**Ingrédients** : 4 aubergines · 100 g de pain rassis · 200 g de tomates cerises · 125 g de mozzarella · 50 g de parmesan · 1 œuf · 2 gousses d'ail · 1 poignée de basilic · 1 c. à s. de câpres · 4 c. à s. d'huile d'olive · 1 pincée de sel
+
+1. **Évider.** Aubergines coupées en deux, chair quadrillée ; 15 min à 200 °C : chair molle ; évidées en laissant 1 cm.
+2. **Farce.** Chair hachée, pain trempé essoré, tomates en dés, ail, basilic, câpres, parmesan, œuf, sel : farce souple.
+3. **Farcir.** Coques remplies, filet d'huile.
+4. **Gratiner.** 20 min à 190 °C ; mozzarella en dés, 8 min : fondue et dorée ; basilic frais.
+
+- Version d'origine des Pouilles : avec un peu de bœuf haché dans la farce.
+
+**Conservation** : 2 jours au frigo ; bonnes tièdes.
+
+---
+
+### Tumbet (légumes en couches à la tomate, Majorque)
+
+*Tumbet · Europe du Sud › Espagne (Baléares) · Plat*
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, plat à four.
+
+La cousine majorquine de la ratatouille : pommes de terre, aubergines et poivrons dorés séparément, montés en couches avec une sauce tomate à l'ail, puis passés au four. Avec un œuf au plat, un dîner complet.
+
+**Ingrédients** : 500 g de pommes de terre · 2 aubergines · 2 poivrons rouges · 400 g de tomates pelées · 3 gousses d'ail · 1 c. à c. de sucre · 1 c. à c. d'origan · 10 cl d'huile d'olive · 4 œufs (facultatif) *(facultatif)* · 1 c. à c. de sel
+
+1. **Dorer.** Dans l'huile, séparément : pommes de terre en rondelles 10 min, aubergines 8 min, poivrons en lanières 6 min ; dorés et tendres, salés, égouttés.
+2. **Sauce.** Ail 1 min, tomates, sucre, origan, sel ; 10 min : épaisse.
+3. **Monter.** Pommes de terre, aubergines, poivrons, sauce, en couches.
+4. **Cuire.** 15 min à 200 °C : la sauce bouillonne ; un œuf au plat dessus si tu veux.
+
+- Moins gras : légumes rôtis au four 25 min à 220 °C au lieu de frits.
+
+**Conservation** : 3 jours au frigo ; meilleur tiède.
+
+---
+
+### Mug cake au chocolat (2 minutes au micro-ondes)
+
+*Mug cake · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 1 portions · actif 5 min · repos/cuisson 2 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande tasse, micro-ondes.
+
+Le gâteau au chocolat express pour un goûter improvisé : tout se mélange dans la tasse, 90 secondes au micro-ondes, et c'est un fondant moelleux encore chaud.
+
+**Ingrédients** : 4 c. à s. de farine · 2 c. à s. de sucre · 2 c. à s. de cacao non sucré · 3 c. à s. de lait · 20 g de beurre fondu (ou 2 c. à s. d'huile) · 1 œuf · 1 pincée de levure chimique · 4 carrés de chocolat
+
+1. **Mélanger.** Dans la tasse : farine, sucre, cacao, levure ; œuf, lait, beurre fondu ; fouetté à la fourchette 30 s : pâte lisse.
+2. **Garnir.** Carrés de chocolat enfoncés au centre.
+3. **Cuire.** 70 à 90 s au micro-ondes (800 W) : il gonfle, le dessus est juste pris, encore un peu brillant au centre.
+4. **Servir.** 1 min de repos (c'est brûlant) ; avec un peu de crème ou une boule de glace.
+
+- Trop cuit, il devient caoutchouteux : commence par 70 s.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Bananes rôties à la cannelle, yaourt et noix
+
+*Bananes rôties · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four ou poêle.
+
+Les bananes un peu trop mûres deviennent un goûter chaud en 15 minutes : rôties dans leur jus avec un peu de miel et de cannelle, servies avec du yaourt et des noix.
+
+**Ingrédients** : 4 bananes bien mûres · 1 c. à s. de miel · 1 c. à c. de cannelle · 15 g de beurre · 1/2 citron · 300 g de yaourt grec · 40 g de noix
+
+1. **Préparer.** Bananes coupées en deux dans la longueur, dans le plat beurré ; miel, cannelle, jus de citron.
+2. **Rôtir.** 12 min à 200 °C : dorées, fondantes, un sirop se forme au fond.
+3. **Noix.** Concassées, 3 min à la poêle sèche : odorantes.
+4. **Servir.** Bananes tièdes sur le yaourt, sirop et noix dessus.
+
+- À la poêle : 3 min par face dans le beurre, même résultat.
+- Une recette anti-gaspi pour les bananes tachées.
+
+**Conservation** : À manger tiède.
+
+---
+
+### Pommes poêlées au miel et au beurre, fromage blanc
+
+*Pommes poêlées · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle.
+
+Des quartiers de pomme dorés au beurre et caramélisés au miel, avec une pointe de citron : un goûter chaud de l'automne en vingt minutes, sur du fromage blanc ou une crêpe.
+
+**Ingrédients** : 4 pommes (type golden ou reinette) · 20 g de beurre · 2 c. à s. de miel · 1/2 citron · 1 pincée de cannelle · 400 g de fromage blanc
+
+1. **Couper.** Pommes en quartiers épais, sans le cœur.
+2. **Dorer.** Beurre moussant, pommes 5 min à feu moyen-vif sans trop remuer : dorées d'un côté ; retournées, 3 min.
+3. **Caraméliser.** Miel et cannelle, 2 min : un sirop doré enrobe les quartiers ; jus de citron.
+4. **Servir.** Tièdes, sur le fromage blanc.
+
+- Avec un sablé émietté dessus : un « crumble » sans four.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Crumble à la poêle (fruits de saison, 20 minutes)
+
+*Crumble express · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Deux poêles.
+
+Le goût du crumble sans attendre le four : des fruits poêlés au beurre et une pâte à crumble dorée séparément à la poêle, réunis au dernier moment. Croquant et fondant en vingt minutes.
+
+**Ingrédients** : 600 g de fruits (pommes, poires, prunes, fruits rouges surgelés) · 80 g de farine · 40 g de flocons d'avoine · 60 g de sucre roux · 60 g de beurre · 1/2 citron · 1 pincée de cannelle
+
+1. **Crumble.** Farine, flocons, 40 g de sucre, 40 g de beurre froid sablés du bout des doigts : gros grumeaux.
+2. **Dorer.** Grumeaux à la poêle sèche, 6 min à feu moyen en remuant : dorés et croustillants ; ils refroidissent en durcissant.
+3. **Fruits.** En morceaux, dans le reste du beurre et du sucre, 6 min : tendres, sirupeux ; cannelle, citron.
+4. **Servir.** Fruits chauds dans les bols, crumble dessus au dernier moment.
+
+- Le crumble doré se garde une semaine en boîte : il en faut toujours d'avance.
+
+**Conservation** : Crumble doré 1 semaine en boîte.
+
+---
+
+### Yaourt glacé minute aux fruits rouges (sans sorbetière)
+
+*Frozen yogurt · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur puissant.
+
+Des fruits rouges surgelés mixés avec du yaourt grec et un peu de miel : une glace onctueuse en cinq minutes, sans sorbetière, à servir aussitôt.
+
+**Ingrédients** : 400 g de fruits rouges surgelés · 250 g de yaourt grec · 2 c. à s. de miel · 1/2 citron
+
+1. **Mixer.** Fruits surgelés, yaourt, miel, jus de citron : par à-coups 1 min, en raclant les parois.
+2. **Ajuster.** Trop dur : une cuillère de yaourt ; trop mou : 10 min au congélateur.
+3. **Servir.** Aussitôt, en boules : texture de glace à l'italienne.
+4. **Garder.** Le reste se congèle, à sortir 10 min avant.
+
+- Avec une banane surgelée, encore plus crémeux.
+- Un mixeur puissant est nécessaire.
+
+**Conservation** : Le reste 1 mois au congélateur.
+
+---
+
+## 2.39 Vague 6 · Retour d'usage (22/10/2026) : plats cuisinés du Moyen-Orient, du Maghreb et d'Afrique subsaharienne, dont une
+
+### Fatteh (pois chiches, yaourt à l'ail et pain grillé, Levant)
+
+*Fatteh hummus · Moyen-Orient › Liban · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, sésame
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat creux, poêle.
+
+Le plat du petit-déjeuner et des jours de fête au Levant : du pain pita grillé, des pois chiches chauds, une sauce yaourt-tahini à l'ail, des pignons dorés au beurre. Chaud, froid, croquant, fondant en une bouchée.
+
+**Ingrédients** : 2 bocaux (800 g) de pois chiches avec leur jus · 2 pains pita · 400 g de yaourt grec · 2 c. à s. de tahini · 2 gousses d'ail · 1 citron · 30 g de pignons de pin · 20 g de beurre · 1 c. à c. de cumin · 1 c. à c. de paprika · 1 c. à s. de persil · 1 pincée de sel
+
+1. **Griller.** Pitas en carrés, 8 min à 200 °C : dorés et cassants.
+2. **Chauffer.** Pois chiches et leur jus 5 min avec le cumin : bien chauds.
+3. **Sauce.** Yaourt, tahini, ail râpé, jus de citron, sel : lisse et nappante.
+4. **Monter.** Pain au fond, pois chiches et un peu de jus, sauce yaourt ; pignons dorés 2 min dans le beurre moussant avec le paprika, versés grésillants ; persil. À servir aussitôt, avant que le pain ramollisse.
+
+- Version complète : ajoute des restes de poulet effiloché ou d'aubergines frites.
+
+**Conservation** : À servir tout de suite.
+
+---
+
+### Freekeh au poulet et aux amandes (Palestine, Jordanie)
+
+*Freekeh bil djaj · Moyen-Orient › Palestine · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le blé vert grillé du Levant, au goût fumé, cuit dans le bouillon du poulet aux épices douces, couvert de poulet doré et d'amandes grillées. Un plat de fête simple et très parfumé.
+
+**Ingrédients** : 250 g de freekeh (ou de boulgour gros) · 1 kg de cuisses de poulet · 1 oignon · 1 c. à c. de cannelle · 1 c. à c. de baharat (ou de quatre-épices) · 50 g d'amandes effilées · 20 g de beurre · 1 citron · 200 g de yaourt · 1 c. à c. de sel
+
+1. **Pocher.** Poulet, oignon coupé en deux, cannelle, baharat, 1,2 l d'eau salée ; 30 min à frémissement : la viande se détache.
+2. **Freekeh.** Rincé, cuit dans 70 cl du bouillon filtré, couvert, 20 min à feu doux : tendre, tout le liquide absorbé.
+3. **Dorer.** Poulet effiloché ou en morceaux, saisi 5 min au beurre : doré ; amandes grillées à sec 3 min : blondes et odorantes.
+4. **Servir.** Freekeh, poulet, amandes ; yaourt et citron à côté.
+
+- Garde le reste du bouillon pour une soupe.
+- Avec du boulgour gros : 15 min de cuisson seulement.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Kabsa au poulet (riz épicé d'Arabie)
+
+*Kabsa · Moyen-Orient › Arabie saoudite · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande cocotte.
+
+Le riz du Golfe, cuit dans le bouillon du poulet avec tomate, cardamome, cannelle et citron séché, couvert de raisins et d'amandes. Chaque grain est parfumé ; on partage dans un grand plat.
+
+**Ingrédients** : 1,2 kg de cuisses de poulet · 450 g de riz basmati · 2 oignons · 2 tomates · 1 c. à s. de concentré de tomate · 4 gousses de cardamome · 1 bâton de cannelle · 1 c. à c. de baharat · 1 citron · 40 g de raisins secs · 40 g d'amandes · 2 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Dorer.** Poulet salé, doré 8 min dans l'huile : peau colorée ; oignons émincés 6 min : blonds.
+2. **Mijoter.** Tomates en dés, concentré, épices, citron piqué entier, 1 l d'eau ; 30 min à couvert : le poulet est tendre. Poulet sorti, gardé au chaud.
+3. **Riz.** Riz rincé dans le bouillon (75 cl, complété d'eau), couvert, 18 min à feu très doux : grains détachés, liquide absorbé.
+4. **Servir.** Riz en dôme, poulet passé 5 min sous le gril pour le faire dorer, raisins et amandes grillés ; salade de tomates au citron.
+
+- Le loomi (citron séché) est l'épice d'origine : un citron frais entier donne une acidité proche.
+
+**Conservation** : 24 h au frigo (riz refroidi vite).
+
+---
+
+### Ghormeh sabzi (ragoût d'agneau aux herbes et haricots rouges, Iran)
+
+*Ghormeh sabzi · Moyen-Orient › Iran · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, grande poêle.
+
+Le plat national iranien : une montagne d'herbes revenues longuement jusqu'à devenir presque noires, mijotées avec l'agneau, les haricots rouges et le citron. Profond, vert, acidulé.
+
+**Ingrédients** : 800 g d'épaule d'agneau en dés · 2 bouquets de persil · 1 bouquet de coriandre · 1 bouquet de ciboulette · 200 g d'épinards · 1 bocal (400 g) de haricots rouges · 1 oignon · 1 c. à c. de curcuma · 2 citrons · 1 c. à c. de fenugrec (graines moulues) · 4 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Herbes.** Herbes et épinards hachés très fins ; 20 min dans 3 c. à s. d'huile à feu moyen en remuant : elles foncent, sentent fort, presque sèches.
+2. **Viande.** Oignon émincé et agneau dans 1 c. à s. d'huile, 10 min ; curcuma 1 min : la viande est dorée.
+3. **Mijoter.** Herbes, fenugrec, eau à hauteur ; couvert, 1 h 15 à petit feu ; haricots et jus des citrons, 30 min : la viande cède, la sauce est sombre et épaisse.
+4. **Servir.** Goûte (acidulé, salé) ; avec du riz basmati.
+
+- Le temps passé à faire revenir les herbes fait tout le goût : ne l'abrège pas.
+- Les herbes séchées iraniennes (épiceries orientales) font gagner 20 min.
+
+**Conservation** : 3 jours au frigo, meilleur le lendemain ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Sabzi polo ba mahi (riz aux herbes et poisson du Nouvel An persan)
+
+*Sabzi polo ba mahi · Moyen-Orient › Iran · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte à fond épais, poêle.
+
+Le plat de Norouz, le Nouvel An persan : un riz vert d'herbes fraîches avec sa croûte dorée au fond (le tahdig), et un poisson poêlé au citron. Printanier et festif.
+
+**Ingrédients** : 350 g de riz basmati · 2 bouquets de persil · 1 bouquet de coriandre · 1 bouquet d'aneth · 1 bouquet de ciboulette · 4 filets de poisson blanc (cabillaud, bar) · 1 c. à c. de curcuma · 2 citrons · 40 g de beurre · 3 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Blanchir.** Riz rincé, 6 min dans beaucoup d'eau bouillante salée : tendre dehors, ferme au cœur ; égoutté ; mélangé aux herbes hachées.
+2. **Tahdig.** Fond de la cocotte huilé et beurré, riz en dôme, trois trous au manche de cuillère ; couvercle enveloppé d'un torchon, 10 min à feu moyen puis 30 min très doux : le fond grésille et dore.
+3. **Poisson.** Filets frottés de curcuma et de sel, 3 min par face dans l'huile : dorés, chair nacrée ; jus de citron.
+4. **Servir.** Cocotte retournée sur un plat : la croûte dorée dessus ; poisson et quartiers de citron.
+
+- Le torchon sous le couvercle absorbe la vapeur : le riz reste détaché et la croûte croustille.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Kousa mahshi (courgettes farcies, sauce tomate citronnée, Levant)
+
+*Kousa mahshi · Moyen-Orient › Syrie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 40 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Évidoir ou cuillère parisienne, cocotte.
+
+Les petites courgettes évidées et farcies de riz et de viande hachée aux épices, mijotées dans une sauce tomate à l'ail et au citron. Le plat de famille de Damas à Beyrouth.
+
+**Ingrédients** : 8 petites courgettes · 300 g d'agneau ou de bœuf haché · 120 g de riz rond · 400 g de tomates pelées · 1 c. à s. de concentré de tomate · 3 gousses d'ail · 1 c. à c. de menthe séchée · 1 c. à c. de baharat · 1 citron · 1 c. à c. de sel
+
+1. **Évider.** Courgettes coupées en deux tronçons, chair retirée en laissant 5 mm de paroi.
+2. **Farcir.** Viande, riz rincé, baharat, sel, 2 c. à s. de tomates : remplies aux trois quarts (le riz gonfle).
+3. **Mijoter.** Couchées dans la cocotte ; tomates, concentré, ail écrasé, menthe, 30 cl d'eau ; couvert, 45 min à petit feu : courgettes translucides, riz tendre à cœur.
+4. **Finir.** Jus de citron dans la sauce ; repos 10 min ; avec du yaourt.
+
+- La chair retirée fait une omelette ou une soupe (zéro déchet).
+- Version végétarienne : farce riz, tomate, herbes et pois chiches écrasés.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Bamia (ragoût de gombos à la tomate et à la coriandre)
+
+*Bamia · Moyen-Orient › Irak · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Les gombos mijotés en sauce tomate, avec beaucoup d'ail, de coriandre et un trait de citron : un plat de tout le Moyen-Orient, souvent avec de l'agneau, ici en version végétarienne avec des pois chiches.
+
+**Ingrédients** : 500 g de gombos (surgelés) · 1 bocal (400 g) de pois chiches · 400 g de tomates pelées · 1 c. à s. de concentré de tomate · 1 oignon · 5 gousses d'ail · 1 bouquet de coriandre · 1 citron · 1 c. à c. de cumin · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Saisir.** Gombos 5 min dans 1 c. à s. d'huile très chaude : ils brillent, la bave disparaît.
+2. **Base.** Oignon 6 min ; ail et la moitié de la coriandre écrasés ensemble 1 min ; cumin.
+3. **Mijoter.** Tomates, concentré, pois chiches, gombos, 20 cl d'eau ; 25 min à petit feu : gombos tendres, sauce épaisse.
+4. **Finir.** Jus de citron, reste de coriandre ; avec du riz.
+
+- Le citron et la saisie limitent le côté gluant des gombos.
+- Avec de l'agneau en dés : 1 h de mijotage avant d'ajouter les gombos.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Karnıyarık (aubergines fendues farcies au bœuf, Turquie)
+
+*Karnıyarık · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, plat à four.
+
+Le classique des cantines turques : des aubergines dorées entières, fendues et farcies de bœuf haché à la tomate, au poivron et au persil, puis cuites au four dans leur sauce. Avec un riz pilaf et du yaourt.
+
+**Ingrédients** : 4 aubergines moyennes · 350 g de bœuf haché · 1 oignon · 1 poivron vert · 3 tomates · 1 c. à s. de concentré de tomate · 2 gousses d'ail · 1 c. à s. de persil · 200 g de yaourt · 6 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Aubergines.** Pelées en bandes (zébrées), salées 15 min, épongées ; dorées entières dans l'huile 10 min en les tournant : molles et brunes.
+2. **Farce.** Oignon, poivron, ail 5 min ; bœuf 6 min : doré ; 1 tomate en dés, persil, sel.
+3. **Farcir.** Aubergines fendues sur la longueur, ouvertes à la cuillère, farcies ; une rondelle de tomate dessus ; concentré dilué dans 20 cl d'eau autour.
+4. **Cuire.** 30 min à 180 °C : dessus doré, sauce réduite ; yaourt à côté.
+
+- Version plus légère : aubergines badigeonnées d'huile et rôties 25 min au four au lieu de frites.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Ash reshteh (soupe-repas aux nouilles, herbes et légumineuses, Iran)
+
+*Ash reshteh · Moyen-Orient › Iran · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 10 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande marmite, poêle.
+
+La grande soupe épaisse de l'hiver iranien : haricots, pois chiches, lentilles, herbes fraîches et nouilles, servie avec du yaourt, des oignons frits et de la menthe grésillée. Un repas complet dans le bol.
+
+**Ingrédients** : 1 bocal (400 g) de pois chiches · 1 bocal (400 g) de haricots rouges · 100 g de lentilles vertes · 150 g de nouilles fines (ou de linguine cassées) · 1 bouquet de persil · 1 bouquet de coriandre · 300 g d'épinards · 2 oignons · 200 g de yaourt grec · 1 c. à s. de menthe séchée · 1 c. à c. de curcuma · 1 citron · 4 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Oignons.** Émincés, 15 min dans 3 c. à s. d'huile : bruns et croustillants ; la moitié réservée pour le dessus.
+2. **Mijoter.** Lentilles, curcuma, 2 l d'eau ; 25 min ; pois chiches, haricots, herbes et épinards hachés, 20 min : soupe épaisse et verte.
+3. **Nouilles.** 10 min dans la soupe : tendres ; elles épaississent encore ; sel, jus de citron.
+4. **Servir.** Yaourt en ruban, oignons frits, menthe grésillée 20 s dans 1 c. à s. d'huile chaude.
+
+- Le kashk (petit-lait fermenté) d'origine se remplace par le yaourt grec additionné d'un peu de citron.
+
+**Conservation** : 3 jours au frigo ; elle épaissit (ajoute de l'eau).
+
+---
+
+### Adas polo (riz aux lentilles, dattes et raisins, Iran)
+
+*Adas polo · Moyen-Orient › Iran · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Le riz iranien aux lentilles, couvert d'oignons caramélisés, de dattes et de raisins secs, parfumé à la cannelle. Sucré-salé, complet et économique.
+
+**Ingrédients** : 300 g de riz basmati · 150 g de lentilles vertes · 2 oignons · 8 dattes dénoyautées · 50 g de raisins secs · 1 c. à c. de cannelle · 30 g de beurre · 250 g de yaourt · 1 citron · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Lentilles.** 15 min à l'eau frémissante : tendres mais entières ; égouttées.
+2. **Riz.** Riz rincé, 6 min dans l'eau bouillante salée, égoutté ; mélangé aux lentilles ; cocotte beurrée, couvert, 25 min à feu très doux : grains détachés, fond doré.
+3. **Garniture.** Oignons émincés 15 min dans l'huile : caramélisés ; dattes en morceaux, raisins, cannelle 3 min : brillants et gonflés.
+4. **Servir.** Riz, garniture dessus ; yaourt citronné à côté.
+
+- Pour une version avec viande : boulettes d'agneau à la cannelle.
+
+**Conservation** : 24 h au frigo (riz refroidi vite).
+
+---
+
+### Khoresh bademjan (ragoût de bœuf aux aubergines et tomate, Iran)
+
+*Khoresh bademjan · Moyen-Orient › Iran · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, poêle.
+
+Un ragoût persan où le bœuf mijote dans la tomate au curcuma et au citron, avec des aubergines dorées posées dessus en fin de cuisson. Fondant et acidulé.
+
+**Ingrédients** : 800 g de paleron en dés · 3 aubergines · 2 oignons · 400 g de tomates pelées · 2 c. à s. de concentré de tomate · 1 c. à c. de curcuma · 2 citrons · 1 pincée de safran (facultatif) *(facultatif)* · 6 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Viande.** Oignons émincés et bœuf dans 2 c. à s. d'huile, 10 min : dorés ; curcuma 1 min.
+2. **Mijoter.** Tomates, concentré, jus des citrons, eau à hauteur ; couvert, 1 h 15 à petit feu : la viande cède.
+3. **Aubergines.** En bâtonnets, salées 15 min, épongées, dorées dans le reste de l'huile 8 min : brunes et moelleuses.
+4. **Finir.** Aubergines posées sur le ragoût, safran infusé, 15 min sans remuer ; avec du riz.
+
+- Le verjus d'origine (jus de raisin vert) se remplace par le citron.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Çılbır (œufs pochés sur yaourt à l'ail, beurre au piment, Turquie)
+
+*Çılbır · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, petite poêle.
+
+Le petit-déjeuner des palais ottomans : des œufs pochés posés sur un yaourt à l'ail, arrosés de beurre mousseux au piment doux. Avec du pain pour saucer, en dix minutes.
+
+**Ingrédients** : 4 œufs très frais · 300 g de yaourt grec · 1 gousse d'ail · 30 g de beurre · 1 c. à c. de piment doux (pul biber) ou de paprika · 1 c. à s. de vinaigre blanc · 1 c. à s. d'aneth · 1 pain de campagne · 1 pincée de sel
+
+1. **Yaourt.** À température ambiante, avec l'ail râpé et le sel ; étalé dans deux assiettes creuses.
+2. **Pocher.** Eau frémissante vinaigrée, tourbillon à la cuillère, œuf cassé au centre ; 3 min : blanc pris, jaune coulant.
+3. **Beurre.** Beurre fondu jusqu'à mousser et sentir la noisette (1 min), piment hors du feu : il devient rouge orangé.
+4. **Servir.** Œufs égouttés sur le yaourt, beurre pimenté, aneth ; pain grillé.
+
+- Œufs très frais : le blanc se tient autour du jaune.
+
+**Conservation** : À manger tout de suite.
+
+---
+
+### Tlitli au poulet (pâtes en grains en sauce rouge, Algérie)
+
+*Tlitli · Maghreb › Algérie · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte, couscoussier ou grande casserole.
+
+Le plat des fêtes de Constantine et d'Alger : des petites pâtes en grains cuites dans une sauce rouge au poulet, à la cannelle et aux pois chiches, servies avec des œufs durs. Réconfortant et généreux.
+
+**Ingrédients** : 500 g de tlitli ou de pâtes langues d'oiseau (orzo) · 1 kg de cuisses de poulet · 1 bocal (400 g) de pois chiches · 1 oignon · 2 c. à s. de concentré de tomate · 1 c. à c. de cannelle · 1 c. à c. de paprika · 4 œufs durs · 1 citron · 30 g de beurre · 2 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Sauce.** Oignon râpé, poulet, huile, épices, concentré : 10 min à feu moyen en remuant, le poulet prend la couleur rouge.
+2. **Mijoter.** Eau à hauteur (1,5 l), pois chiches ; 30 min : poulet tendre ; sorti et gardé au chaud.
+3. **Pâtes.** Pâtes beurrées, cuites dans la sauce bouillonnante en remuant, 12 à 15 min : elles ont bu la sauce, tendres et brillantes (ajoute de l'eau si besoin).
+4. **Servir.** Pâtes, poulet, pois chiches, œufs en quartiers ; filet de citron.
+
+- Les pâtes doivent rester humides : elles continuent de boire la sauce en attendant.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Mtewem (boulettes à l'ail en sauce blanche, Algérie)
+
+*Mtewem · Maghreb › Algérie · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le plat d'Alger dont le nom vient de « toum », l'ail : des boulettes de viande très aillées mijotées avec du poulet et des pois chiches dans une sauce blanche à la cannelle, finie au citron.
+
+**Ingrédients** : 500 g de bœuf ou d'agneau haché · 800 g de cuisses de poulet · 1 bocal (400 g) de pois chiches · 10 gousses d'ail · 1 oignon · 1 c. à c. de cannelle · 1 pincée de poivre · 1 bouquet de persil · 1 citron · 30 g de beurre · 2 c. à c. de sel
+
+1. **Boulettes.** Viande, la moitié de l'ail pilé, persil, cannelle, sel, poivre ; façonnées en boulettes de 3 cm.
+2. **Sauce.** Poulet, oignon râpé, reste de l'ail, beurre, sel : 8 min à feu moyen en remuant, sans colorer ; eau à hauteur, pois chiches ; 25 min.
+3. **Cuire.** Boulettes déposées dans la sauce frémissante, 20 min sans remuer : fermes et cuites à cœur.
+4. **Finir.** Sauce réduite si besoin, jus de citron ; avec du pain.
+
+- Version rouge : 1 c. à s. de concentré de tomate et du paprika dans la sauce.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Tajine de boulettes de sardines à la tomate (Maroc)
+
+*Tajine kefta dyal sardin · Maghreb › Maroc · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Tajine ou sauteuse avec couvercle, hachoir.
+
+La cuisine des ports marocains : des boulettes de sardines fraîches à la chermoula (coriandre, ail, cumin, citron), cuites dans une sauce tomate. Économique, très bon et plein d'oméga-3.
+
+**Ingrédients** : 800 g de sardines en filets · 1 bouquet de coriandre · 1 bouquet de persil · 4 gousses d'ail · 2 c. à c. de cumin · 2 c. à c. de paprika · 4 tomates · 1 citron · 40 g de riz cuit (ou de chapelure) · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Chermoula.** Herbes, ail, cumin, paprika, sel, jus de citron hachés fin.
+2. **Boulettes.** Filets hachés au couteau, la moitié de la chermoula, riz cuit : pâte qui se tient ; boulettes de 3 cm, mains mouillées.
+3. **Sauce.** Tomates râpées, reste de chermoula, huile, 10 cl d'eau ; 10 min : sauce épaisse.
+4. **Cuire.** Boulettes posées dans la sauce, couvert, 15 min à feu doux sans remuer : fermes, la sauce bouillonne autour ; rondelles de citron, avec du pain.
+
+- Demande au poissonnier de lever les filets.
+- Les boulettes crues se congèlent.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Doubara (pois chiches épicés de Biskra, Algérie)
+
+*Doubara · Maghreb › Algérie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole.
+
+Le plat de rue de Biskra : des pois chiches et des fèves dans une sauce relevée au cumin, à la harissa et à l'ail, couverts de tomate, de poivron et d'oignon crus, et beaucoup de citron. Chaud et frais à la fois.
+
+**Ingrédients** : 2 bocaux (800 g) de pois chiches · 4 gousses d'ail · 2 c. à c. de cumin · 1 c. à s. de harissa · 2 tomates · 1 poivron vert · 1 oignon rouge · 1 bouquet de persil · 2 citrons · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Sauce.** Ail pilé, cumin, harissa dans 2 c. à s. d'huile, 1 min : ça embaume ; pois chiches et leur jus, 20 cl d'eau.
+2. **Mijoter.** 20 min à petit feu : quelques pois chiches s'écrasent, la sauce s'épaissit.
+3. **Crudités.** Tomates, poivron, oignon en tout petits dés, persil haché.
+4. **Servir.** Pois chiches chauds dans les bols, crudités dessus, jus de citron et reste d'huile ; pain.
+
+- Pour les enfants : la harissa à part.
+
+**Conservation** : Pois chiches 3 jours au frigo ; crudités le jour même.
+
+---
+
+### Tajine malsouka (gratin d'œufs au poulet et fromage, Tunisie)
+
+*Tajine malsouka · Maghreb › Tunisie · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 35 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à manqué, poêle.
+
+Le « tajine » tunisien n'a rien d'un ragoût : c'est un gratin épais d'œufs, de poulet effiloché, de fromage et de persil, enfermé dans des feuilles de brick croustillantes. Il se mange chaud ou froid, en parts.
+
+**Ingrédients** : 400 g de blanc de poulet · 8 œufs · 6 feuilles de brick · 150 g de gruyère râpé · 1 oignon · 1 bouquet de persil · 1 c. à c. de curcuma · 30 g de beurre fondu · 1 citron · 1 c. à c. de sel
+
+1. **Poulet.** En dés avec l'oignon et le curcuma, 10 min à la poêle : blanc à cœur, doré.
+2. **Appareil.** Œufs battus, fromage, persil haché, poulet, sel.
+3. **Monter.** Moule beurré tapissé de 4 feuilles de brick beurrées qui débordent ; appareil versé ; bords rabattus, 2 feuilles beurrées dessus.
+4. **Cuire.** 30 min à 180 °C : dessus doré et croustillant, cœur pris (la lame ressort propre) ; quartiers de citron.
+
+- Une excellente façon de finir un reste de poulet rôti.
+
+**Conservation** : 2 jours au frigo ; se mange froid.
+
+---
+
+### Kafteji (légumes frits hachés aux œufs, Tunisie)
+
+*Kafteji · Maghreb › Tunisie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle profonde.
+
+Le sandwich-assiette de Tunis : pommes de terre, poivrons, courge et tomate frits puis hachés grossièrement avec des œufs, relevés de harissa et de cumin. Une texture fondante unique.
+
+**Ingrédients** : 400 g de pommes de terre · 2 poivrons verts · 300 g de courge ou de potiron · 2 tomates · 4 œufs · 1 c. à c. de harissa · 1 c. à c. de cumin · 1 citron · 30 cl d'huile de friture · 1 c. à c. de sel
+
+1. **Frire.** Légumes en dés, frits séparément à 170 °C : pommes de terre 8 min, poivrons et courge 5 min, tomates 2 min ; dorés et fondants ; égouttés.
+2. **Œufs.** Œufs frits 2 min dans l'huile : blanc pris, bords dentelés.
+3. **Hacher.** Tout ensemble sur la planche, au couteau, en gros morceaux ; harissa, cumin, sel, jus de citron.
+4. **Servir.** Chaud, dans du pain ou avec une salade de tomates.
+
+- Moins gras : légumes rôtis au four 30 min à 220 °C au lieu de frits.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire
+
+---
+
+### Waakye (riz aux haricots rouges, sauce tomate, Ghana)
+
+*Waakye · Afrique subsaharienne › Ghana · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Deux casseroles.
+
+Le petit-déjeuner et le déjeuner d'Accra : un riz cuit avec des haricots rouges, servi avec une sauce tomate pimentée (shito doux), un œuf dur et des bananes plantain frites. Complet et pas cher.
+
+**Ingrédients** : 300 g de riz long · 1 bocal (400 g) de haricots rouges · 400 g de tomates pelées · 1 oignon · 1 morceau (2 cm) de gingembre · 1 piment · 4 œufs durs · 2 bananes plantain mûres · 1 citron · 6 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Riz.** Riz rincé, haricots et leur jus, 50 cl d'eau, sel ; couvert, 18 min à feu doux : grains tendres, liquide absorbé, riz rosé.
+2. **Sauce.** Oignon, gingembre et piment mixés, 8 min dans 2 c. à s. d'huile : la pâte fonce ; tomates, 15 min : sauce épaisse et brillante ; jus de citron.
+3. **Plantain.** En rondelles obliques, 3 min par face dans le reste de l'huile : caramélisées.
+4. **Servir.** Riz, sauce, plantain, œufs durs en quartiers.
+
+- La couleur d'origine vient de feuilles de sorgho : les haricots rouges suffisent à la rosir.
+
+**Conservation** : 24 h au frigo (riz refroidi vite) ; sauce 4 jours.
+
+---
+
+### Pap et chakalaka (polenta blanche et ragoût de légumes épicé, Afrique du Sud)
+
+*Pap and chakalaka · Afrique subsaharienne › Afrique du Sud · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Deux casseroles.
+
+Le plat des braais sud-africains : une polenta ferme (le pap) avec le chakalaka, un ragoût vif de carottes, poivrons, haricots blancs et tomate au curry. Végétarien, coloré, nourrissant.
+
+**Ingrédients** : 200 g de polenta (semoule de maïs) · 1 bocal (400 g) de haricots blancs à la tomate ou nature · 3 carottes · 1 poivron · 1 oignon · 2 tomates · 2 gousses d'ail · 1 c. à s. de curry · 1 piment · 1 c. à s. de vinaigre de cidre · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Chakalaka.** Oignon, ail, piment 5 min ; curry 1 min ; carottes râpées et poivron en dés 8 min : tendres et encore un peu croquants.
+2. **Mijoter.** Tomates en dés et haricots, 10 min : sauce épaisse ; vinaigre et sel.
+3. **Pap.** 80 cl d'eau salée à ébullition ; polenta en pluie en fouettant ; 15 min à feu très doux en remuant : épaisse, elle se détache des parois.
+4. **Servir.** Pap en dômes à la louche mouillée, chakalaka à côté, chaud ou tiède.
+
+- Le chakalaka se garde 4 jours et se mange froid avec des grillades.
+
+**Conservation** : Chakalaka 4 jours au frigo.
+
+---
+
+### Tibs (bœuf sauté au berbéré et au romarin, Éthiopie)
+
+*Tibs · Afrique subsaharienne › Éthiopie · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Grande poêle ou wok.
+
+Le plat de fête rapide d'Éthiopie : des lanières de bœuf saisies avec oignon, piment vert, romarin et berbéré, finies au beurre épicé. Avec de l'injera ou du pain plat.
+
+**Ingrédients** : 600 g de rumsteck en lanières · 2 oignons · 2 piments verts doux · 1 c. à s. de berbéré (ou paprika + piment + cardamome) · 2 branches de romarin · 3 gousses d'ail · 30 g de beurre (ou de ghee) · 2 tomates · 1 citron · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Oignons.** Émincés, 8 min à sec dans la poêle chaude puis avec l'huile : ils colorent sans brûler.
+2. **Saisir.** Feu vif, bœuf en une couche, 2 min sans toucher : croûte brune ; retourné, 1 min.
+3. **Épicer.** Ail, piments, romarin, berbéré, tomates en dés, beurre, 2 min en secouant : la viande est enrobée, juste rosée au centre.
+4. **Servir.** Sel, jus de citron ; avec de l'injera, du pain plat ou du riz.
+
+- Saisis en deux fois si la poêle est petite : sinon la viande bout au lieu de dorer.
+
+**Conservation** : Le jour même.
+
+**Techniques** : saisir
+
+---
+
+### Atakilt wat (chou, carottes et pommes de terre au curcuma, Éthiopie)
+
+*Atakilt wat · Afrique subsaharienne › Éthiopie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Un des plats des jours de jeûne éthiopiens, donc végétalien : chou, carottes et pommes de terre fondus doucement à l'oignon, au gingembre et au curcuma. Doux, doré, apprécié des enfants.
+
+**Ingrédients** : 1/2 chou blanc · 4 carottes · 500 g de pommes de terre · 2 oignons · 3 gousses d'ail · 1 morceau (3 cm) de gingembre · 2 c. à c. de curcuma · 1 c. à c. de cumin · 1 citron · 4 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Base.** Oignons émincés, 10 min à feu moyen dans l'huile : tendres et blonds ; ail, gingembre, curcuma, cumin 1 min.
+2. **Légumes.** Carottes en bâtonnets et pommes de terre en dés, 20 cl d'eau, sel ; couvert, 15 min.
+3. **Chou.** En lanières, 15 min à couvert en remuant de temps en temps : tout est fondant, le jus a été bu.
+4. **Finir.** Jus de citron, sel ajusté ; avec du riz ou de l'injera.
+
+- Avec des lentilles corail au berbéré (misir wat), c'est le duo des repas éthiopiens.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Efo riro (épinards mijotés au poivron et au poisson fumé, Nigeria)
+
+*Efo riro · Afrique subsaharienne › Nigeria · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte, mixeur.
+
+Le plat yoruba du dimanche : une sauce de poivrons rouges, tomate et oignon réduite longuement, puis des épinards en quantité, avec du poisson fumé et du bœuf. Riche, très parfumé.
+
+**Ingrédients** : 800 g d'épinards · 400 g de bœuf (paleron) en dés · 150 g de maquereau fumé ou de poisson fumé · 2 poivrons rouges · 2 tomates · 1 oignon · 1 piment · 1 citron · 4 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Viande.** Bœuf, eau à hauteur, sel ; 25 min à frémissement : tendre ; bouillon gardé.
+2. **Sauce.** Poivrons, tomates, oignon, piment mixés grossièrement ; 15 min dans l'huile à feu moyen : l'eau s'évapore, la sauce devient rouge foncé et brillante, l'huile remonte.
+3. **Assembler.** Bœuf, poisson fumé émietté, 10 cl de bouillon, 5 min.
+4. **Épinards.** Ajoutés par poignées, 5 min : juste tombés et vert vif ; jus de citron, sel ; avec du riz ou de l'igname.
+
+- L'huile de palme rouge d'origine donne couleur et goût : 1 c. à s. avec l'huile.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Matoke (bananes plantain en ragoût à la tomate, Ouganda)
+
+*Matoke · Afrique subsaharienne › Ouganda · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+En Ouganda et au Kenya, les bananes vertes mijotées à la tomate et à l'oignon sont le plat de chaque jour. Avec du plantain vert, on obtient un ragoût doux et fondant, souvent enrichi de haricots.
+
+**Ingrédients** : 4 bananes plantain vertes · 1 bocal (400 g) de haricots rouges · 3 tomates · 1 oignon · 2 gousses d'ail · 1 c. à c. de curcuma · 1 bouquet de coriandre · 1 citron · 20 cl de lait de coco (facultatif) *(facultatif)* · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Plantain.** Épluché sous l'eau (huile sur les mains : il tache), en tronçons de 3 cm.
+2. **Base.** Oignon et ail 6 min dans l'huile ; curcuma ; tomates en dés 8 min : elles fondent en sauce.
+3. **Mijoter.** Plantain, haricots, 30 cl d'eau, sel ; couvert, 20 min : le plantain cède sous la lame et épaissit la sauce.
+4. **Finir.** Lait de coco si tu veux, 2 min ; coriandre, jus de citron.
+
+- Plus le plantain est vert, plus il est ferme et peu sucré : c'est ce qu'on cherche ici.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Caldou (poisson poché au citron, oignon et gombo, Sénégal)
+
+*Caldou · Afrique subsaharienne › Sénégal · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse.
+
+Le plat de Casamance : un poisson poché dans un bouillon d'oignon, de tomate et de gombo, très acidulé au citron, parfumé au piment entier. Léger, vif, avec du riz blanc.
+
+**Ingrédients** : 4 darnes de poisson blanc (capitaine, lieu, cabillaud) · 3 oignons · 2 tomates · 8 gombos (facultatif) *(facultatif)* · 3 citrons · 3 gousses d'ail · 1 piment entier · 1 bouquet de persil · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Mariner.** Poisson frotté d'ail pilé, persil et sel, 15 min.
+2. **Bouillon.** Oignons émincés 5 min dans l'huile sans colorer ; tomates en dés, gombos, piment entier, 50 cl d'eau ; 10 min.
+3. **Pocher.** Poisson posé dans le bouillon frémissant, couvert, 10 min : chair opaque qui se détache de l'arête.
+4. **Finir.** Jus des 3 citrons hors du feu (le bouillon doit être bien acide) ; avec du riz blanc.
+
+- Le piment entier, non percé, parfume sans brûler.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Thiou poulet (ragoût de poulet à la tomate et aux légumes, Sénégal)
+
+*Thiou ganaar · Afrique subsaharienne › Sénégal · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le ragoût de tous les jours au Sénégal : poulet doré, sauce tomate à l'oignon et à l'ail, carottes, pommes de terre et chou, parfumée au laurier et au piment. Avec du riz blanc.
+
+**Ingrédients** : 1,2 kg de cuisses de poulet · 2 oignons · 2 c. à s. de concentré de tomate · 4 gousses d'ail · 3 carottes · 400 g de pommes de terre · 1/4 de chou blanc · 2 feuilles de laurier · 1 piment · 1 citron · 3 c. à s. d'huile · 2 c. à c. de sel
+
+1. **Dorer.** Poulet salé, frotté d'ail, doré 8 min dans l'huile : peau colorée. Réservé.
+2. **Sauce.** Oignons émincés 8 min : blonds ; concentré dilué dans 10 cl d'eau, 5 min en remuant : il fonce et perd son acidité.
+3. **Mijoter.** Poulet, laurier, piment, 80 cl d'eau ; 15 min ; légumes en gros morceaux, 25 min : la pointe du couteau entre sans résistance.
+4. **Finir.** Jus de citron, sel ajusté ; avec du riz.
+
+- Version poisson (thiou poisson) : darnes posées 15 min en fin de cuisson.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Sukuma wiki et ugali (chou kale à la tomate et polenta ferme, Kenya)
+
+*Sukuma wiki na ugali · Afrique subsaharienne › Kenya · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, casserole.
+
+Le repas de base au Kenya, dont le nom signifie « pousser la semaine » : du chou kale sauté à la tomate et à l'oignon, avec l'ugali, une polenta ferme qu'on façonne à la main. Économique et vitaminé.
+
+**Ingrédients** : 400 g de chou kale (ou de chou vert) · 200 g de polenta blanche (semoule de maïs) · 2 tomates · 1 oignon · 2 gousses d'ail · 1 c. à c. de curry · 1 citron · 2 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Ugali.** 70 cl d'eau salée à ébullition ; polenta en pluie en remuant à la spatule ; 10 min à feu doux en écrasant les grumeaux : pâte très ferme qui se détache des parois.
+2. **Base.** Oignon et ail 5 min dans l'huile ; curry 30 s ; tomates en dés 5 min : fondues.
+3. **Kale.** En fines lanières, 6 min en remuant : vert sombre, tendre mais encore un peu croquant ; sel, jus de citron.
+4. **Servir.** Ugali démoulé en dôme ; on en prend un morceau à la main pour attraper le kale.
+
+- Ajoute des haricots rouges ou un œuf pour un repas plus complet.
+
+**Conservation** : Kale 2 jours au frigo.
+
+---
+
 ## 3. Nouvelles fiches techniques (application, rubrique Techniques)
 
 - **Pâtisserie française** : Pâte sucrée et pâte sablée (crémage) (niv. 2) · Crème pâtissière (niv. 1) · Pâte à choux (niv. 2) · Pâte feuilletée rapide (et tours) (niv. 3) · Les trois meringues (française, suisse, italienne) (niv. 2) · Crème anglaise (cuisson à la nappe) (niv. 2) · Chantilly, mascarpone montée et ganache montée (niv. 1) · Les biscuits de base (génoise, joconde, roulé) (niv. 2) · Caramel et cuissons du sucre (niv. 2) · Macaronnage (niv. 3)
@@ -24135,7 +27301,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2199 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2645 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 
