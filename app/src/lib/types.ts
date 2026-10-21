@@ -70,6 +70,7 @@ export interface Recipe {
   leftovers?: Leftover[]; // ingrédients entamés et quoi en faire (Tome 12 §6) : chargés à la demande (leftovers.json)
   videos: VideoLink[]; // la première vidéo liée (la liste complète se charge à la demande : useRecipeVideos)
   videoCount?: number;
+  side?: string | null; // accompagnement relié : id de fiche, ou « achat:<réf. Tome 3> » (audit gourmet)
   fusionNote?: string; // « Food fusion » : de quelles traditions la recette est le mélange
 }
 

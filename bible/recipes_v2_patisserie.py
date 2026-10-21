@@ -41,14 +41,6 @@ K("paris_brest", "Paris-Brest (crème mousseline pralinée)", "Paris-Brest", f"F
    "**Mousseline.** Crème pâtissière tiède + praliné ; fouette le beurre pommade et ajoute la crème en 3 fois : légère et ferme.", "**Monter.** Coupe la couronne en deux, garnis en rosaces, couvercle, sucre glace. 1 h au frais."],
   keep="48 h au frigo.", age=3, fetes=["Anniversaire", "Repas de famille"], profil=["sucre", "gras"], tech=["Pâte à choux", "Crème pâtissière", "Praliné"])
 
-K("tarte_citron_meringuee", "Tarte au citron meringuée", "Tarte au citron meringuée", IDF, "D", 2, 8, 50, 30, "€€", "Cercle ou moule 24 cm, casserole, batteur, chalumeau (ou gril).",
-  "Une pâte sablée croustillante, un crémeux de citron acidulé et une meringue italienne dorée.",
-  ["1|pâte sucrée (recette liée)|SUB:pate_sucree|3", f"4|citrons (jus et zestes)|{CIT}|3", f"4|œufs|{OEUF}|2", f"150 g|de sucre (crème)|{SUCRE}|2", f"20 g|de maïzena|Fécule de maïs (maïzena)|1", f"100 g|de beurre|{BEURRE}|2",
-   "3|blancs d'œufs|Blanc d'œuf|2", f"180 g|de sucre (meringue)|{SUCRE}|2"],
-  ["**Fond.** Cuis la pâte à blanc, 25 min à 165 °C.", "**Crème citron.** Jus, zestes, œufs, sucre, maïzena fouettés sur feu doux jusqu'à épaississement ; hors du feu, le beurre ; mixe. Coule sur le fond, 1 h au frais.",
-   "**Meringue italienne.** Sirop sucre + 5 cl d'eau à 118 °C versé sur les blancs mousseux ; fouette jusqu'à tiède.", "**Finir.** Meringue à la poche ou à la cuillère, colore au chalumeau."],
-  keep="48 h au frigo.", age=1, fetes=["Repas de famille"], profil=["acide", "sucre"], tech=["Pâte sucrée", "Meringue italienne"])
-
 K("pate_sucree", "Pâte sucrée aux amandes", "Pâte sucrée", IDF, "Ba", 1, 8, 15, 120, "€", "Saladier, rouleau, cercle 24 cm.",
   "Le fond de tarte des pâtissiers : fin, friable, qui ne se rétracte pas.",
   [f"200 g|de farine|{F55}|3", f"110 g|de beurre mou|{BEURRE}|3", "70 g|de sucre glace|Sucre glace|2", "25 g|de poudre d'amande|Farine d'amande / poudre d'amande|1", f"1|œuf|{OEUF}|2", f"1 pincée|de sel|{SEL}|0"],
@@ -103,24 +95,6 @@ K("financiers", "Financiers au beurre noisette", "Financier", IDF, "G", 1, 16, 1
   ["**Beurre noisette.** Cuis le beurre jusqu'à ce qu'il mousse et sente la noisette (brun clair) ; filtre.", "**Pâte.** Sucre, amande, farine, blancs juste mélangés (sans monter), puis beurre tiède.", "**Cuire.** Moules aux ¾, 12-15 min à 200 °C : bords dorés."],
   keep="5 jours en boîte.", age=1, cats=["enfants", "zero_dechet"], profil=["sucre"], tips=["La recette qui utilise les blancs restants d'une crème pâtissière."])
 
-K("clafoutis_cerises", "Clafoutis aux cerises", "Clafoutis", "France › Nouvelle-Aquitaine › Limousin", "D", 1, 6, 15, 40, "€", "Plat à gratin.",
-  "Des cerises entières (avec noyaux, pour le goût d'amande) dans un flan épais : le dessert de juin.",
-  ["600 g|de cerises|Cerise / griotte|3", f"3|œufs|{OEUF}|2", f"80 g|de sucre|{SUCRE}|2", f"80 g|de farine|{F55}|2", f"30 cl|de lait|{LAIT}|2", f"30 g|de beurre|{BEURRE}|1", f"1 pincée|de vanille|{VAN}|0"],
-  ["**Pâte.** Œufs, sucre, farine, puis lait et vanille : pâte à crêpes épaisse.", "**Cuire.** Plat beurré, cerises, pâte ; 40 min à 180 °C : gonflé et doré.", "**Servir.** Tiède, saupoudré de sucre."],
-  tips=["⚠️ Avec noyaux : prévenir les convives ; dénoyaute pour les jeunes enfants."], age=1, cats=["enfants"], profil=["sucre"])
-
-K("ile_flottante", "Île flottante", "Œufs à la neige", IDF, "D", 2, 6, 30, 15, "€", "Casserole, batteur, spatule.",
-  "Des blancs en neige pochés qui flottent sur une crème anglaise vanillée, filet de caramel.",
-  [f"75 cl|de lait|{LAIT}|3", f"6|œufs (séparés)|{OEUF}|3", f"150 g|de sucre|{SUCRE}|2", "1|gousse de vanille|Vanille (gousse)|2", f"80 g|de sucre (caramel)|{SUCRE}|1"],
-  ["**Anglaise.** Lait vanillé sur jaunes + 100 g de sucre, cuisson à la nappe (83 °C) ; refroidis.", "**Neige.** Blancs montés avec 50 g de sucre ; quenelles pochées 1 min par face dans un lait frémissant (ou 30 s au micro-ondes).", "**Servir.** Crème froide, îles, caramel en filet."],
-  age=1, cats=["enfants"], profil=["sucre"], tech=["Crème anglaise", "Caramel"])
-
-K("creme_brulee", "Crème brûlée", "Crème brûlée", IDF, "D", 1, 6, 15, 300, "€€", "Ramequins plats, chalumeau ou gril.",
-  "Une crème vanille très onctueuse, cuite doucement, sous une plaque de sucre caramélisé qui craque.",
-  [f"50 cl|de crème entière|{CL}|3", f"10 cl|de lait|{LAIT}|1", "6|jaunes d'œufs|Jaune d'œuf|3", f"80 g|de sucre|{SUCRE}|2", "1|gousse de vanille|Vanille (gousse)|2", "6 c. à s.|de cassonade|Sucre blanc / roux / cassonade / vergeoise|1"],
-  ["**Appareil.** Crème + lait vanillés chauds, versés sur jaunes + sucre sans faire mousser. Repos 1 h, écume.", "**Cuire.** 1 h à 100 °C : bords pris, centre tremblotant.", "**Froid.** 4 h. Cassonade, chalumeau au moment de servir."],
-  age=1, fetes=["Saint-Valentin", "Repas de famille"], profil=["sucre", "gras"], tech=["Caramel"], zw=[("Blancs d'œufs restants", "→ financiers ou meringues.")])
-
 K("creme_caramel", "Crème renversée au caramel", "Crème caramel", IDF, "D", 1, 6, 15, 280, "€", "Ramequins ou moule, bain-marie.",
   "Un flan aux œufs lisse et ferme, nappé de son caramel : le dessert des grands-mères.",
   [f"75 cl|de lait|{LAIT}|3", f"4|œufs + 2 jaunes|{OEUF}|3", f"120 g|de sucre|{SUCRE}|2", f"100 g|de sucre (caramel)|{SUCRE}|2", "1|gousse de vanille|Vanille (gousse)|1"],
@@ -132,14 +106,6 @@ K("charlotte_fraises", "Charlotte aux fraises", "Charlotte", IDF, "D", 2, 8, 35,
   ["30|biscuits cuillère|Boudoirs / biscuits cuillère|3", "500 g|de fraises|Fraise|3", f"30 cl|de crème|{CL}|2", "250 g|de mascarpone ou fromage blanc|Mascarpone|2", "80 g|de sucre glace|Sucre glace|1", "2 g|d'agar-agar|Gélatine de bœuf / poisson, agar-agar, pectine|1", f"10 cl|de sirop (sucre + eau)|{SUCRE}|1"],
   ["**Mousse.** 250 g de fraises mixées, chauffées 2 min avec l'agar-agar, tiédies ; chantilly au mascarpone + sucre glace, mélangée.", "**Monter.** Biscuits trempés 1 s dans le sirop contre les parois, mousse, fraises en morceaux, biscuits.", "**Prise.** 6 h au frais, sous une assiette. Démoule, fraises dessus."],
   age=1, cats=["enfants"], fetes=["Anniversaire"], profil=["sucre"], tech=["Chantilly"])
-
-K("baba_savarin", "Baba (au rhum ou au sirop d'agrumes)", "Baba au rhum", "France › Grand Est › Lorraine", "D", 2, 8, 30, 120, "€", "Moules à baba ou à savarin.",
-  "Une pâte levée imbibée de sirop bouillant, servie avec chantilly : version rhum traditionnelle, et sans alcool aux agrumes.",
-  [f"250 g|de farine|{F45}|3", f"3|œufs|{OEUF}|2", f"80 g|de beurre fondu|{BEURRE}|2", f"10 g|de levure|{LEV}|1", f"5 cl|de lait tiède|{LAIT}|1", f"500 g|de sucre (sirop)|{SUCRE}|2", "1 L|d'eau|-|0", "10 cl|de rhum ambré|Rhum ambré / blanc|2", f"1|orange (zeste)|Orange|1", f"20 cl|de crème montée|{CL}|1"],
-  ["**Pâte.** Farine, levure, lait, œufs, sel, 1 c. à s. de sucre ; bats 5 min ; beurre. Moules beurrés à moitié, pousse 1 h.", "**Cuire.** 20 min à 180 °C. Démoule.", "**Sirop.** Eau, sucre, zeste, bouillants ; le rhum hors du feu. Plonge les babas rassis jusqu'à ce qu'ils ne fassent plus de bulles.", "**Servir.** Arrosés de sirop, chantilly."],
-  var=[("Sans alcool", ["alcohol"], {"Rhum ambré / blanc": [("Orange", 0.5), ("Extrait de vanille liquide", 0.1), ("Mélasse / sirop de canne", 0.4)]},
-        "Rhum → **jus de 2 oranges + 1 c. à c. de vanille + 1 c. à s. de sirop de canne** dans le sirop : le baba reste parfumé et ambré. **À tester**.")],
-  age=None, kids="✓ dès 3 ans en version sans alcool.", profil=["sucre"])
 
 K("tropezienne", "Tarte tropézienne", "Tarte tropézienne", "France › Provence-Alpes-Côte d'Azur › Saint-Tropez", "D", 2, 8, 40, 180, "€€", "Cercle 24 cm, batteur.",
   "Brioche au sucre perlé coupée en deux, crème diplomate à la fleur d'oranger : le gâteau de la Côte d'Azur.",

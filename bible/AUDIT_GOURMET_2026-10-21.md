@@ -166,3 +166,33 @@ Le sel est en partie rattrapé : chaque fiche affiche automatiquement une dose d
 | 8 | Contrôle « au moins un repère et une durée par étape de cuisson » pour toute nouvelle fiche | P1 | 2 h |
 | 9 | Combler la variété : poissons du quotidien, légumes d'hiver en plat, desserts d'hiver, accompagnements | P2 | 1 à 2 jours |
 | 10 | Protocole de test en cuisine des 30 plats les plus proposés, avec retour par le carnet | P2 | en continu |
+
+## 7. Mise en œuvre (21 octobre 2026)
+
+Les dix recommandations et les angles morts du §5 sont appliqués. Chaque point est vérifié par un contrôle automatique (tests 76 à 83 de `app/tests/engine.test.ts`). **Aucune fiche n'est encore testée en cuisine.** Les nouvelles fiches et les réécritures restent des brouillons rédactionnels, comme le reste du catalogue.
+
+| # | Ce qui a été fait | Avant | Après (mesuré) |
+|---|---|---|---|
+| 1 | Planificateur : mémoire de **8 semaines** (au lieu des 4 proposées, nécessaires pour tenir la variété), tirage pondéré parmi les 24 meilleurs, pool de saison porté à 80 % des plats, rotation des cuisines du monde, garde-fou si la mémoire vide les candidats | 77 plats différents en 30 semaines ; moules-frites 30 fois | **194 plats différents en 26 semaines ; aucun plat plus de 4 fois** |
+| 2 | 31 grands classiques réécrits au niveau étalon (`recipes_v4_etalons.py`), dont le coq au vin cuit 2 h 30 à 3 h | Blanquette en 240 caractères, navarin en 2 étapes | Chacun a 4 étapes ou plus et au moins une astuce ; **chaque étape de cuisson donne une durée et un repère des sens** |
+| 3 | Ingrédients oubliés ajoutés aux listes (`complements_ingredients.py`, environ 60 fiches) ; 3 mentions figurées assumées | Une soixantaine de fiches signalées | **0** au contrôle « ingrédient courant cité dans les étapes mais absent de la liste » |
+| 4 | Accompagnement relié à chaque plat : 20 indiqués à la main, 91 déduits des étapes. Il s'affiche sur la fiche et rejoint les courses (sous-recettes comprises, un oubli corrigé au passage) | Riz de la blanquette absent des courses | **111 plats reliés**, courses complètes |
+| 5 | Week-end : un seul grand plat par jour, samedi midi en brunch ou en plat rapide, dimanche midi en menu complet (entrée, plat, dessert) qu'on peut retirer | 2 h 24 de cuisine par repas de week-end, 2 plats longs le même jour | **0 jour à deux grands plats, 0 samedi midi long, 26 menus du dimanche sur 26** |
+| 6 | Menus de fête : desserts de petit-déjeuner exclus, desserts de saison, répétition pénalisée, ni féculent sur féculent ni soupe-repas avant un plat en sauce, **plateau de fromages** dans les menus français | Bircher muesli en dessert ; mousse au citron 5 fois sur 24 ; 0 fromage | **0 petit-déjeuner ; même dessert au plus 3 fois sur 24 ; fromage dans 8 menus ; 0 féculent sur féculent** |
+| 7 | Osso buco et gigot de sept heures avec leur vin blanc et une variante sans alcool « À tester » (D21) ; vraie paella valenciana (poulet, lapin, haricots plats) | Vin retiré sans le dire ; paella mixta seule | Conforme à D21 ; valenciana ajoutée |
+| 8 | Contrôle permanent « durée et repère à chaque étape de cuisson » sur les étalons et toute nouvelle fiche (test 76) | — | En place |
+| 9 | 20 nouvelles fiches (`recipes_v4_variete.py`) : 4 accompagnements de base, 5 poissons du quotidien (maquereau, sardine, lieu, merlu), 5 légumes d'hiver en plat, 4 desserts d'hiver (poires, Bourdaloue, coings, mont-blanc), paella valenciana, plateau de fromages | 934 fiches | **954 fiches** |
+| 10 | Protocole d'essai : les 30 plats les plus proposés par la simulation, avec 6 points à noter, dans « Mes recettes » (rubrique « À tester en priorité », avec la progression lue dans le carnet) | Aucun ordre d'essai | Liste en place (`app/src/lib/aTester.ts`) ; le test 83 signale quand le planificateur change et qu'il faut la régénérer |
+
+**Angles morts du §5 :**
+- **Fromage et pain :** traités au point 6.
+- **Boisson de la semaine :** une boisson maison est proposée chaque semaine dans « Ma semaine ».
+- **Restes du dimanche :** le lundi propose un lien « Restes du dimanche » vers la cuisine des restes du plat de la veille.
+- **Goût des enfants :** le carnet demande « Les enfants ont aimé ? ». Un « non » écarte le plat de la semaine (test 82), un « oui » le favorise et s'affiche sur la carte de la recette.
+- **Saison des desserts :** les desserts de fête sont choisis selon la saison et le lieu, et 4 desserts d'hiver sont ajoutés.
+
+**Ce qui reste ouvert :**
+- **Parts de protéines légères (§4.2).** Les 40 plats signalés n'ont pas tous été repris ; seuls les étalons l'ont été.
+- **Assaisonnement sans acidité (§4.2).** Les 149 plats signalés ne sont pas corrigés : chaque cas demande un jugement de goût qui doit passer par l'essai.
+- **Vocabulaire du métier dans les fiches de la vague 2 (§3).** Pas encore réécrit en dehors des étalons.
+- **Photos des 20 nouvelles fiches.** Elles affichent l'illustration de leur catégorie (pas d'image générée, D19).

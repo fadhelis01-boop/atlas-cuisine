@@ -16,7 +16,7 @@ V2 = []
 
 def K(id, title, origin, region, kind, niveau, portions, actif, repos, cost, equip, intro, ing, steps,
       tips=(), keep="3 jours au frigo, dans une boîte fermée.", age=None, cats=(), fetes=(), profil=(), tech=(),
-      sa=(), a=(), var=(), kids=None, zw=()):
+      sa=(), a=(), var=(), kids=None, zw=(), side=None):
     lines = []
     for s in ing:
         q, label, ref, w = (s.split("|") + ["", "", "", "1"])[:4]
@@ -28,7 +28,7 @@ def K(id, title, origin, region, kind, niveau, portions, actif, repos, cost, equ
     R(id=id, title=title, origin=origin, region=region, kind=KIND[kind], niveau=niveau, portions=portions, actif=actif, repos=repos,
       cost=cost, equip=equip, intro=intro, ing=lines, steps=list(steps), astuces=list(tips), variantes=variantes, conservation=keep,
       zero_dechet=[f"**{z[0]}** {z[1]}" if isinstance(z, tuple) else z for z in zw], accords_sa=list(sa), accords_a=list(a), techniques=list(tech), enfants=kids, age=age,
-      cats=list(cats), fetes=list(fetes), profil=list(profil), tests="Quantités, temps et rendu à confirmer au Test 1 et au Test 2 (Tome 7 §2).", vague=2)
+      cats=list(cats), fetes=list(fetes), profil=list(profil), side=side, tests="Quantités, temps et rendu à confirmer au Test 1 et au Test 2 (Tome 7 §2).", vague=2)
     V2.append(id)
 
 # Raccourcis d'ingrédients courants (réf. exactes du Tome 3)

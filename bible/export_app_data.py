@@ -10,6 +10,13 @@ import recipes_data
 import recipes_v1_pains, recipes_v1_sauces, recipes_v1_plats, recipes_v1_desserts  # noqa: F401 (enregistrent leurs recettes)
 import recipes_v2_all  # noqa: F401 (vague 2, Tome 13)
 from recipes_data import RECIPES
+from complements_ingredients import ADD as _ADD_ING  # audit gourmet : ingrédients oubliés dans la liste
+for _d in RECIPES:
+    for _s in _ADD_ING.get(_d["id"], []):
+        _q, _l, _r, _w = (_s.split("|") + ["", "", "", "1"])[:4]
+        if not any((x[2] or "") == _r and x[1] == _l for x in _d["ing"]):
+            _d["ing"] = list(_d["ing"]) + [(_q, _l, _r, int(_w.rstrip("?") or 1), _w.endswith("?"))]
+assert set(_ADD_ING) <= {d["id"] for d in RECIPES}, set(_ADD_ING) - {d["id"] for d in RECIPES}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "app", "src", "data")
@@ -149,7 +156,7 @@ for d in RECIPES:
                       "replace": {k: [[i, r] for i, r in it] for k, it in v["replace"].items()}} for v in d["variantes"]],
         "storage": d["conservation"], "zeroWaste": d["zero_dechet"], "drinksNoAlcohol": d["accords_sa"], "drinksAlcohol": d["accords_a"],
         "techniques": d["techniques"], "kids": d["enfants"], "age": d.get("age"), "cats": d.get("cats", []),
-        "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""),
+        "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""), "side": d.get("side"),
         "source": "Tome 11 (vague 0)" if d["id"] in EXTRA else ("Tome 13 (vague 2)" if d.get("vague") == 2 else "Tome 12 (vague 1)"), "verified": "C",
     })
 
@@ -388,6 +395,31 @@ for r in recipes:
         _ages[1] += 1
         r["kids"] = (r.get("kids") or "").rstrip(" .") + ". Pour les plus petits : piment à part, ajouté seulement dans les assiettes des grands."
 print(f"âges ↔ piment : {_ages[0]} fiches passées à 6 ans, {_ages[1]} avec le piment à part")
+
+# ---------------------------------------------------------------- accompagnements (audit gourmet 2026-10-21, recommandation 4)
+# Chaque plat qui se sert « avec du riz, de la polenta, du pain… » reçoit un accompagnement relié (une fiche, ou un produit à
+# acheter), ajouté aux courses. Champ explicite `side` d'abord ; sinon déduit de la fin des étapes, si l'ingrédient manque.
+_SIDES = [(r"\bpolenta\b", "polenta_cremeuse", "Polenta"), (r"\bpuree\b", "puree_maison", "Pomme de terre"), (r"\bfrites\b", "frites_maison", "Pomme de terre"),
+          (r"\bsemoule\b|\bcouscous\b", "semoule_nature", "Semoule de couscous"), (r"\briz\b", "riz_nature", "Riz"),
+          (r"\bnaan\b", "naan", "Farine"), (r"\bpates\b|tagliatelle|macaroni", "pates_nature", "Pâtes"),
+          (r"\bpommes? vapeur\b", "pommes_vapeur", "Pomme de terre"), (r"\bpain\b|baguette", "achat:Baguette tradition", "Pain"), (r"\btortillas?\b", "achat:Tortillas de blé", "Tortillas")]
+_ids = {r["id"] for r in recipes}
+_side_n = [0, 0]
+for r in recipes:
+    if r["role"] != "plat": r["side"] = None; continue
+    if r.get("side"): _side_n[0] += 1; continue
+    tail = _n(" ".join(r["steps"][-2:]))
+    have = _n(" ".join((l.get("ref") or "") + " " + l.get("label", "") for l in r["ingredients"]))
+    for rx, sid, key in _SIDES:
+        if re.search(rx, tail) and _n(key).split()[0] not in have and (sid.startswith("achat:") or sid in _ids) and sid != r["id"]:
+            r["side"] = sid; _side_n[1] += 1; break
+    else:
+        r["side"] = None
+for r in recipes:
+    s_ = r.get("side")
+    assert not s_ or s_.startswith("achat:") or s_ in _ids, f"accompagnement inconnu : {r['id']} → {s_}"
+    if s_ and s_.startswith("achat:"): assert s_[6:] in REF, f"produit d'accompagnement hors Tome 3 : {s_}"
+print(f"accompagnements : {_side_n[0]} indiqués, {_side_n[1]} déduits des étapes")
 
 # ---------------------------------------------------------------- vidéos : la liste complète à la demande (audit famille, poids au démarrage)
 # recipes.json garde une seule vidéo (bouton « Voir la vidéo », filtre « avec vidéo ») et le nombre total.

@@ -6,9 +6,10 @@ import { seasonFit, type Zone } from "./season";
 import { norm, scaleQty } from "./text";
 import type { Leftover, Profile, Recipe } from "./types";
 import { isFish, isRich, kidFriendly, starchOf } from "./famille";
+import { composeMenus } from "./menu";
 
 export type Slot = "midi" | "soir";
-export interface DayPlan { midi?: string; soir?: string }
+export interface DayPlan { midi?: string; soir?: string; entree?: string; dessert?: string } // entrée et dessert : menu du dimanche midi
 export type WeekPlan = Record<string, DayPlan>; // clé : date ISO « 2026-10-19 »
 
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -39,51 +40,89 @@ export function proteinOf(r: Recipe): string {
 const TRIVIAL = /^(Ail|Oignon|Échalote|Sel|Poivre|Huile|Sucre|Beurre|Persil|Coriandre|Thym|Laurier|Ciboulette|Menthe|Basilic)/;
 const useful = (l: Leftover[]) => l.filter((x) => !TRIVIAL.test(x.ref) && !/^(Épices|Herbes|Huiles)/.test(INGREDIENTS[x.ref]?.section ?? ""));
 
-export interface AutoOptions { slots: Slot[]; weekdayMax: number; zone: Zone; profile: Profile; leftovers: Record<string, Leftover[]> | null; seed?: number }
+export interface AutoOptions {
+  slots: Slot[]; weekdayMax: number; zone: Zone; profile: Profile; leftovers: Record<string, Leftover[]> | null; seed?: number;
+  recent?: Set<string>;   // plats proposés ces 6 dernières semaines (audit gourmet) : ils ne reviennent pas
+  sundayMenu?: boolean;   // dimanche midi : entrée et dessert ajoutés au grand plat
+  kidsVerdict?: Record<string, "oui" | "non">; // carnet : « les enfants ont aimé » (bonus) ou non (écarté)
+}
 
-/** Remplit les cases vides : plats de saison (tiers le mieux classé), rapides en semaine, protéines variées,
- *  et quand un plat laisse un reste (ex. demi-chou, blancs d'œufs), le repas suivant qui l'utilise est favorisé. */
+/** Un « grand plat » : long ou de fête. Un seul par jour de week-end (audit gourmet). */
+export const isBigDish = (r: Recipe) => r.active + r.rest > 90 || (r.level >= 2 && r.fetes.length > 0);
+
+/** Remplit les cases vides. Plats de saison (moitié la mieux classée), rapides en semaine, protéines et régions variées,
+ *  équilibre (féculents, poisson, légumineuses), pas de plat vu ces 4 dernières semaines, tirage pondéré (jamais toujours
+ *  le même « meilleur »). Week-end : un seul grand plat par jour, samedi midi rapide ou brunch, dimanche midi en menu complet.
+ *  Quand un plat laisse un reste (ex. demi-chou, blancs d'œufs), le repas suivant qui l'utilise est favorisé. */
 export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPlan {
   const out: WeekPlan = structuredClone(plan);
   // plats du foyer : profil (porc, alcool, allergies) ET enfants (âge, piment) — audit famille
   const ok = RECIPES.filter((r) => r.role === "plat" && verdict(r, o.profile).availability !== "hidden" && kidFriendly(r, o.profile));
   const fit = new Map(ok.map((r) => [r.id, seasonFit(r, o.zone).score]));
-  const pool = [...ok].sort((a, b) => (fit.get(b.id)! - fit.get(a.id)!)).slice(0, Math.max(60, Math.round(ok.length * 0.45)));
+  const pool = [...ok].sort((a, b) => (fit.get(b.id)! - fit.get(a.id)!)).slice(0, Math.max(110, Math.round(ok.length * 0.8)));
   const used = new Set(Object.values(out).flatMap((d) => [d.midi, d.soir]).filter(Boolean) as string[]);
+  const recent = o.recent ?? new Set<string>();
   let rnd = (o.seed ?? Date.now()) % 2147483647 || 7;
   const random = () => (rnd = (rnd * 16807) % 2147483647) / 2147483647;
   let prev: Recipe | null = null;
   // équilibre (repères PNNS) : féculents variés, poisson et légumineuses 2 fois, un seul plat très riche
   const placed = Object.values(out).flatMap((d) => [d.midi, d.soir]).filter(Boolean).map((id) => RECIPE_BY_ID[id!]).filter(Boolean) as Recipe[];
-  const count = { fish: placed.filter(isFish).length, legumes: placed.filter((r) => starchOf(r) === "légumineuses").length, rich: placed.filter(isRich).length, starch: new Map<string, number>() };
-  for (const r of placed) { const st = starchOf(r); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1); }
+  const count = { fish: placed.filter(isFish).length, legumes: placed.filter((r) => starchOf(r) === "légumineuses").length, rich: placed.filter(isRich).length,
+    starch: new Map<string, number>(), macro: new Map<string, number>() };
+  for (const r of placed) { const st = starchOf(r); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1); count.macro.set(r.macro, (count.macro.get(r.macro) ?? 0) + 1); }
   const totalSlots = days.length * o.slots.length;
   let filled = 0;
-  for (const [, day] of days.entries()) {
+  for (const day of days) {
     const dow = new Date(`${day}T12:00:00`).getDay();
     const weekend = dow === 0 || dow === 6;
     for (const slot of o.slots) {
       const cur = out[day]?.[slot];
       if (cur) { prev = RECIPE_BY_ID[cur] ?? prev; continue; }
+      const other = out[day]?.[slot === "midi" ? "soir" : "midi"];
+      const bigToday = !!other && !!RECIPE_BY_ID[other] && isBigDish(RECIPE_BY_ID[other]);
       const leftRefs = new Set(prev && o.leftovers ? useful(o.leftovers[prev.id] ?? []).map((l) => l.ref) : []);
-      const cands = pool.filter((r) => !used.has(r.id) && (weekend || r.active + r.rest <= o.weekdayMax || (slot === "soir" && r.active <= 25 && r.rest <= 60)));
+      const fits = (r: Recipe) => {
+        if (used.has(r.id)) return false;
+        if (!weekend) return r.active + r.rest <= o.weekdayMax || (slot === "soir" && r.active <= 25 && r.rest <= 60);
+        if (bigToday) return r.active + r.rest <= 45 && !isBigDish(r);  // un seul grand plat par jour
+        if (dow === 6 && slot === "midi") return r.cats.includes("brunch") || r.active + r.rest <= 30; // samedi midi : brunch ou rapide
+        if (dow === 0 && slot === "soir") return r.active + r.rest <= 40;  // dimanche soir : léger, on a cuisiné à midi
+        return true;
+      };
+      let cands = pool.filter((r) => fits(r) && !recent.has(r.id) && o.kidsVerdict?.[r.id] !== "non");
+      if (cands.length < 6) cands = pool.filter(fits); // garde-fou : jamais de case vide à cause de la mémoire
       if (!cands.length) continue;
       const progress = (filled + 1) / totalSlots; // plus la semaine avance, plus les manques pèsent
       const score = (r: Recipe) => {
         const st = starchOf(r); const n = st ? count.starch.get(st) ?? 0 : 0;
-        return fit.get(r.id)! + random() * 3
+        return fit.get(r.id)!
           + (prev && proteinOf(prev) === proteinOf(r) ? -4 : 0) + (prev && prev.macro === r.macro ? -1.5 : 0)
+          + ((count.macro.get(r.macro) ?? 0) >= 2 ? -4 : 0)                    // rotation des cuisines du monde
           + (r.ingredients.some((l) => l.ref && leftRefs.has(l.ref)) ? 2.5 : 0) // le reste d'hier aide, sans écraser l'équilibre
           + (st && prev && starchOf(prev) === st ? -3 : 0) + (st && st !== "légumineuses" && n >= 2 ? -3 * (n - 1) : 0)
           + (isRich(r) ? (count.rich >= 1 ? -8 : -1) : 0)
           + (isFish(r) && count.fish < 2 ? 2 + 3 * progress : 0)
-          + (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0);
+          + (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0)
+          + (dow === 0 && slot === "midi" && isBigDish(r) ? 3 : 0)           // le dimanche midi, le grand plat de la semaine
+          + (o.kidsVerdict?.[r.id] === "oui" ? 2 : 0);                       // plébiscité par les enfants
       };
-      const best = cands.reduce((a, b) => (score(b) > score(a) ? b : a));
+      // tirage pondéré parmi les 24 meilleurs : varié d'une semaine à l'autre, sans sacrifier la cohérence
+      const top = cands.map((r) => [r, score(r)] as const).sort((a, b) => b[1] - a[1]).slice(0, 24);
+      const weights = top.map(([, s]) => Math.exp((s - top[0][1]) / 2.6));
+      let pick = random() * weights.reduce((a, b) => a + b, 0);
+      let best = top[0][0];
+      for (let i = 0; i < top.length; i++) { pick -= weights[i]; if (pick <= 0) { best = top[i][0]; break; } }
       out[day] = { ...out[day], [slot]: best.id };
       used.add(best.id); prev = best; filled++;
       const st = starchOf(best); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1);
+      count.macro.set(best.macro, (count.macro.get(best.macro) ?? 0) + 1);
       if (isFish(best)) count.fish++; if (st === "légumineuses") count.legumes++; if (isRich(best)) count.rich++;
+    }
+    // dimanche midi : un vrai repas de famille, entrée et dessert accordés au plat (composeur de menus)
+    const sun = out[day]?.midi;
+    if (o.sundayMenu && dow === 0 && sun && !out[day]?.entree && !out[day]?.dessert) {
+      const m = composeMenus(sun, o.profile).find((x) => x.name === "Classique");
+      if (m) out[day] = { ...out[day], entree: m.courses.find((c) => c.role === "entree")?.recipe.id, dessert: m.courses.find((c) => c.role === "dessert")?.recipe.id };
     }
   }
   return out;
@@ -126,7 +165,15 @@ export interface ShopLine { ref: string; label: string; section: string; from: s
 /** Liste de courses d'un ensemble de recettes (avec facteur de portions) : un article par produit, quantités additionnées quand c'est possible. */
 export function consolidate(items: { id: string; factor: number }[]): ShopLine[] {
   const by = new Map<string, { sums: Map<string, number>; other: string[]; from: Set<string> }>();
-  for (const { id, factor } of items) {
+  // accompagnement relié (audit gourmet) : sa fiche s'ajoute aux courses avec le même nombre de parts
+  const withSides = items.flatMap((it) => {
+    const side = RECIPE_BY_ID[it.id]?.side;
+    if (!side || side.startsWith("achat:")) return [it];
+    const sr = RECIPE_BY_ID[side]; const r = RECIPE_BY_ID[it.id];
+    return sr && r ? [it, { id: side, factor: (it.factor * r.portions) / sr.portions }] : [it];
+  });
+  const buys = items.map((it) => RECIPE_BY_ID[it.id]?.side).filter((x): x is string => !!x && x.startsWith("achat:")).map((x) => x.slice(6));
+  for (const { id, factor } of withSides) {
     const r = RECIPE_BY_ID[id]; if (!r) continue;
     for (const l of flatten(r.ingredients)) {
       if (!l.ref || l.optional) continue;
@@ -138,6 +185,7 @@ export function consolidate(items: { id: string; factor: number }[]): ShopLine[]
       by.set(l.ref, e);
     }
   }
+  for (const ref of buys) { const e = by.get(ref) ?? { sums: new Map<string, number>(), other: [] as string[], from: new Set<string>() }; e.other.push("pour accompagner"); e.from.add("accompagnement"); by.set(ref, e); }
   return [...by].map(([ref, e]) => {
     const name = ref.split(" (")[0];
     const section = INGREDIENTS[ref]?.section ?? "Autres";

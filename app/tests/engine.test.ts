@@ -19,6 +19,8 @@ import { ADOUCI, defaultPortions, householdPortions, kidFriendly, starchOf, week
 import { DEJA, PANIERS, piqueNique } from "../src/lib/piquenique";
 import { equipmentNotes } from "../src/lib/equipement";
 import { backupDue } from "../src/lib/store";
+import { composeMenus } from "../src/lib/menu";
+import { isBigDish } from "../src/lib/planner";
 import { balanceOf, finishFor } from "../src/lib/dressage";
 import { cuesIn, saltDose } from "../src/lib/cues";
 import { fuzzyRecipes, parseIntents } from "../src/lib/intents";
@@ -27,6 +29,7 @@ import imagesCore from "../src/data/images.json";
 import imagesMore from "../src/data/images_more.json";
 const images = { ...imagesCore, ...imagesMore };
 import { autoPlan, consolidate, prepAhead, proteinOf, weekDays } from "../src/lib/planner";
+import { PRIORITE, PROTOCOLE } from "../src/lib/aTester";
 import type { Profile, Recipe, RecipeLine, Rule } from "../src/lib/types";
 
 let passed = 0;
@@ -230,9 +233,9 @@ check("59 minuteurs nommés par le geste ; préchauffage repéré avant d'enfour
   gestureLabel(sp[1], 2) === "Choux (2/3)" && !!oc && /°C/.test(oc.temp) && RECIPES.filter((r) => r.role === "plat").every((r) => !!balanceOf(r)) && !!TECHNIQUES.find((t) => t.id === "convertir-mesures") && !!TECHNIQUES.find((t) => t.id === "presenter-une-assiette"));
 const savory = RECIPES.filter((r) => r.role === "plat" || r.role === "entree");
 const withCue = RECIPES.filter((r) => r.steps.some((st) => cuesIn(st).length > 0)).length;
-console.log("   sel :", saltDose(RECIPE_BY_ID["coq_au_vin"])?.text.slice(0, 50), "| pad thaï :", saltDose(RECIPE_BY_ID["pad_thai"])?.grams, "g · repères visuels sur", withCue, "fiches");
+console.log("   sel :", saltDose(RECIPE_BY_ID["kedjenou"])?.text.slice(0, 50), "| pad thaï :", saltDose(RECIPE_BY_ID["pad_thai"])?.grams, "g · repères visuels sur", withCue, "fiches");
 check("60 sel dosé : toute fiche salée a soit une ligne de sel, soit un dosage calculé ; moitié moins avec sauce soja ; repères visuels sur plus de la moitié des fiches",
-  savory.every((r) => flatten(r.ingredients).some((l) => l.ref?.startsWith("Sel")) || !!saltDose(r)) && saltDose(RECIPE_BY_ID["pad_thai"])!.grams < saltDose(RECIPE_BY_ID["coq_au_vin"])!.grams
+  savory.every((r) => flatten(r.ingredients).some((l) => l.ref?.startsWith("Sel")) || !!saltDose(r)) && saltDose(RECIPE_BY_ID["pad_thai"])!.grams < saltDose(RECIPE_BY_ID["kedjenou"])!.grams
   && cuesIn("Fais suer l'oignon 5 min").some((c) => c.startsWith("Oignon prêt")) && !cuesIn("Enlève la peau").some((c) => c.startsWith("Pousse")) && withCue > RECIPES.length / 2);
 const ET = etapes as Record<string, { k: string; c: string }[]>; const IM = images as Record<string, { avif?: number }>;
 check("61 photos de gestes et d'étapes : chaque sujet existe (technique ou recette), chaque photo est traitée en AVIF, légende sans numéro",
@@ -256,8 +259,8 @@ const CLASSIQUES = ["bucatini_amatriciana", "risotto_milanese", "spaghetti_vongo
   "poulet_tikka_masala", "massaman_poulet", "tom_yum_crevettes", "couscous_royal", "pastilla_poulet", "tajine_agneau_pruneaux", "fesenjan", "dolma_riz",
   "canard_laque_four", "apple_pie", "baba_ghanoush", "couscous_sept_legumes", "thali_vegetarien", "egusi_soup"];
 const manquants = CLASSIQUES.filter((id) => !RECIPE_BY_ID[id]);
-check("65 audit du chef : 30 grands classiques présents, ≤ 10 ingrédients et ≥ 3 étapes (Tome 13 §0)" + (manquants.length ? " — manquent " + manquants.join(",") : ""),
-  manquants.length === 0 && CLASSIQUES.every((id) => RECIPE_BY_ID[id].ingredients.length <= 10 && RECIPE_BY_ID[id].steps.length >= 3));
+check("65 audit du chef : 30 grands classiques présents, ≤ 10 ingrédients (12 pour un plat de fête, hors sel, poivre et garnitures facultatives) et ≥ 3 étapes (Tome 13 §0)" + (manquants.length ? " — manquent " + manquants.join(",") : ""),
+  manquants.length === 0 && CLASSIQUES.every((id) => RECIPE_BY_ID[id].ingredients.filter((l) => !l.optional && !/^(Sel|Poivre)/.test(l.ref ?? "")).length <= (RECIPE_BY_ID[id].fetes.length ? 12 : 10) && RECIPE_BY_ID[id].steps.length >= 3));
 const d21 = ["sarmale_boeuf", "dan_dan_noodles", "griot_poulet", "bigos_volaille", "full_english_volaille", "tourtiere_quebec", "zha_jiang_mian", "stamppot_boerenkool",
   "fabada_version", "choucroute_garnie_version", "cocido_madrileno_version", "tripes_caen_version", "pollo_pibil"];
 check("66 D21 : les versions des plats où le porc est structurant n'en contiennent pas (porc seulement en option signalée)",
@@ -332,4 +335,95 @@ check("75 pique-nique : ≥ 20 nouvelles fiches, toutes les fiches et paniers ex
   && pn.filter((r) => r.age !== null && r.age <= 3).length >= 10
   && backupDue({ favorites: ["a", "b", "c"], journal: {}, imports: [], week: {}, menus: [], settings: {} } as never) && !backupDue({ favorites: [], journal: {}, imports: [], week: {}, menus: [], settings: {} } as never));
 
+// 76-82 audit gourmet (21/10/2026)
+const ETALONS = ["blanquette_veau", "coq_au_vin", "pot_au_feu", "daube_provencale", "navarin_agneau", "poule_au_pot", "hachis_parmentier", "gigot_sept_heures", "tartiflette",
+  "cassoulet_volaille", "poulet_basquaise", "joues_boeuf_carottes", "souris_agneau", "confit_canard_maison", "bouillabaisse_express", "soupe_oignon", "lapin_moutarde", "sole_meuniere",
+  "creme_brulee", "ile_flottante", "tarte_tatin", "baba_savarin", "clafoutis_cerises", "tarte_citron_meringuee", "osso_buco", "lasagnes_bolognaise", "risotto_champignons",
+  "cacio_e_pepe", "panna_cotta", "moussaka", "butter_chicken"];
+const NOUVELLES = ["riz_nature", "semoule_nature", "pates_nature", "pommes_vapeur", "maquereaux_four_moutarde", "sardines_poelees_persillade", "lieu_croute_herbes",
+  "papillotes_poisson_legumes", "merlu_beurre_blanc_poireaux", "potimarron_farci_quinoa", "gratin_celeri_noix", "poelee_panais_pois_chiches", "veloute_topinambour",
+  "chou_braise_saucisses", "poires_pochees_vin_epices", "tarte_bourdaloue", "coings_rotis_miel", "mont_blanc_verrines", "paella_valenciana_traditionnelle", "plateau_fromages"];
+// une étape « de cuisson » parle de feu, de four ou de temps ; elle doit donner une durée ET un repère des sens
+const COOKS = /\b(mijot|fremi|poch|saisi|dore|dorer|rotir|rotis|braise|grill|gratin|frire|frit|cuire|cuis|cuit|cuites|bouillir|ebullition|reduire|reduite|caramelis|vapeur|poele|four)/;
+const NOT_COOK = /^\W*(servir|monter|preparer|egrener|garnir|fermer|conserver|saler|rincer|verifier|plat|pommes|legumes|choisir|disposer|accompagner|temperer|couper|trancher|badigeonner|parer|farce|farcir|marin|egoutter|vermicelles|creme de|infuser|reposer|refroidir|froid|prendre|couler|finir|lier|napper|demouler|tasser|melanger|griller les|pain)/;
+const REPERE = /dore|croustill|fondant|nappe|translucide|tendre|brillant|epais|°c|se detache|cede|lisse|gonfl|opaque|blond|brun|colore|reduit|sirupeux|ferme|prise?\b|tremble|caramel|odeur|sent|crepite|grille|bulles|bouillonn|fond|ambre|nacre|s.ecrase|cuillere|resistance|entier|jus clair|noisette|mousse|ondule|sillon|perle|rubis|rose|souple|sable|pics|bec|clair|fremi|goute|gout|brulant|absorbe|disparu|trous|sec\b|seche|tiede|chaud|couleur|sombre|evapor|sans color|colle|elastique|reduit|epaissi|ambr|cuites? a|al dente|cœur|coeur|ferme/;
+const DUREE = /\d+\s*(?:à\s*\d+\s*)?(?:min|h)\b|\d+\s*s\b|une nuit|toute la nuit/;
+const weakSteps = (ids: string[]) => ids.flatMap((id) => RECIPE_BY_ID[id].steps.filter((st) => COOKS.test(norm(st)) && !NOT_COOK.test(norm(st)) && !(DUREE.test(st) && REPERE.test(norm(st)))).map((st) => `${id}: ${st.slice(0, 90)}`));
+const weakE = weakSteps(ETALONS), weakN = weakSteps(NOUVELLES);
+console.log("   étalons :", ETALONS.length, "· étapes de cuisson sans durée ou sans repère :", weakE.length + weakN.length); for (const w of weakE.concat(weakN)) console.log("      ·", w);
+check("76 classiques réécrits au niveau étalon : ≥ 4 étapes, une astuce au moins, chaque étape de cuisson a une durée et un repère ; idem pour les nouvelles fiches",
+  ETALONS.every((id) => RECIPE_BY_ID[id] && RECIPE_BY_ID[id].steps.length >= 4 && RECIPE_BY_ID[id].tips.length >= 1 && RECIPE_BY_ID[id].steps.join(" ").length >= 450)
+  && NOUVELLES.every((id) => !!RECIPE_BY_ID[id]) && weakE.length === 0 && weakN.length === 0);
+
+// ingrédients cités dans les étapes mais absents de la liste (sous-recettes comprises)
+const OMIS: [string, RegExp][] = [["persil", /persil/], ["ciboulette", /ciboulette/], ["coriandre", /coriandre/], ["basilic", /basilic/], ["menthe", /menthe/], ["aneth", /aneth/],
+  ["citron", /citron|lime/], ["sucre", /sucre|miel|sirop|cassonade|vergeoise/], ["ail", /\bail\b|ail \(/], ["gingembre", /gingembre/], ["cebette", /cebette|oignon nouveau/],
+  ["beurre", /beurre|ghee/], ["parmesan", /parmesan|grana/], ["echalote", /echalote/], ["muscade", /muscade/], ["cannelle", /cannelle/], ["cumin", /cumin/], ["thym", /thym/], ["laurier", /laurier|bouquet garni/]];
+const FIGURE: Record<string, string> = { soupe_oignon: "sucre", potimarron_farci_quinoa: "beurre", mont_blanc_verrines: "beurre" };
+const linesDeep = (r: Recipe, d = 0): string => r.ingredients.map((l) => (l.ref?.startsWith("SUB:") && d < 2 && RECIPE_BY_ID[l.ref.slice(4)] ? linesDeep(RECIPE_BY_ID[l.ref.slice(4)], d + 1) : `${l.ref ?? ""} ${l.label}`)).join(" ");
+const omis = RECIPES.flatMap((r) => {
+  const st = norm(r.steps.join(" ")); const have = norm(linesDeep(r));
+  return OMIS.filter(([w, rx]) => new RegExp(`\\b${w}s?\\b`).test(st) && !rx.test(have) && FIGURE[r.id] !== w
+    && !(w === "beurre" && /beurre (noisette|de |d.)/.test(st)) && !(w === "citron" && /citron vert/.test(st) && /citron vert|lime/.test(have))).map(([w]) => `${r.id}:${w}`);
+});
+console.log("   ingrédients oubliés dans les listes :", omis.length, omis.slice(0, 6).join(", "));
+check("77 aucune fiche n'utilise dans ses étapes un ingrédient courant absent de sa liste (persil, sucre, ail, beurre, citron…)", omis.length === 0);
+
+const withSide = RECIPES.filter((r) => r.role === "plat" && r.side);
+const blanqShop = consolidate([{ id: "blanquette_veau", factor: 1 }]);
+console.log("   accompagnements reliés :", withSide.length, "plats · blanquette → courses avec", blanqShop.some((l) => /Riz/.test(l.ref)) ? "riz" : "SANS riz");
+check("78 accompagnements : au moins 100 plats reliés à une fiche ou à un produit, tous existants, et ils rejoignent les courses",
+  withSide.length >= 100 && withSide.every((r) => r.side!.startsWith("achat:") ? INGREDIENT_NAMES.includes(r.side!.slice(6)) : !!RECIPE_BY_ID[r.side!])
+  && blanqShop.some((l) => /Riz/.test(l.ref)) && consolidate([{ id: "tartiflette", factor: 1 }]).some((l) => /Salade/.test(l.ref)));
+
+// menus de fête
+const anchors = ["boeuf_bourguignon", "blanquette_veau", "couscous_royal", "pad_thai", "tartiflette", "risotto_champignons", "poulet_roti", "tajine_agneau_pruneaux"];
+const menus = anchors.map((a) => composeMenus(a, P0));
+const desserts = menus.flat().map((m) => m.courses.find((c) => c.role === "dessert")?.recipe).filter(Boolean) as Recipe[];
+const breakfastDessert = desserts.filter((d) => d.cats.includes("brunch") || /bircher|muesli|porridge|granola|smoothie|chia/.test(norm(d.title)));
+const dupWithin = menus.filter((ms) => new Set(ms.map((m) => m.courses.find((c) => c.role === "dessert")?.recipe.id)).size < ms.length).length;
+const maxSame = Math.max(...[...desserts.reduce((m, d) => m.set(d.id, (m.get(d.id) ?? 0) + 1), new Map<string, number>()).values()]);
+const cheese = menus.flat().filter((m) => m.courses.some((c) => c.recipe.id === "plateau_fromages"));
+const starchy = menus.flat().filter((m) => { const e = m.courses.find((c) => c.role === "entree")?.recipe; const pl = m.courses.find((c) => c.role === "plat")?.recipe; return e && pl && starchOf(e) && starchOf(pl) && starchOf(e) !== "légumineuses"; });
+console.log("   menus de fête :", desserts.length, "desserts · petit-déjeuner", breakfastDessert.length, "· même dessert au plus", maxSame, "fois · fromage dans", cheese.length, "menus · féculent sur féculent", starchy.length);
+check("79 menus de fête : jamais de petit-déjeuner en dessert, 3 desserts différents par plat, un même dessert au plus 3 fois sur 24, fromage dans les menus français classiques, pas de féculent sur féculent",
+  breakfastDessert.length === 0 && dupWithin === 0 && maxSame <= 3 && cheese.length >= 4 && starchy.length === 0
+  && composeMenus("blanquette_veau", P0)[0].courses.map((c) => c.role).join(",") === "entree,plat,autre,dessert");
+
+// planificateur sur 26 semaines avec sa mémoire
+const hist: Record<string, string> = {}; const freqW = new Map<string, number>(); let bigTwice = 0, satBad = 0, sunMenus = 0, sundays = 0;
+for (let w = 0; w < 26; w++) {
+  const ds = weekDays(0, new Date(Date.UTC(2026, 0, 5 + w * 7, 12)));
+  const first = new Date(`${ds[0]}T12:00:00`).getTime();
+  const recent = new Set(Object.entries(hist).filter(([, d]) => first - new Date(`${d}T12:00:00`).getTime() < 56 * 86400000).map(([id]) => id));
+  const pl = autoPlan(ds, {}, { slots: ["midi", "soir"], weekdayMax: 45, zone: "nord", profile: P0, leftovers: LEFT, seed: 7919 * (w + 1), recent, sundayMenu: true });
+  for (const d of ds) {
+    const dow = new Date(`${d}T12:00:00`).getDay();
+    const ids = [pl[d]?.midi, pl[d]?.soir].filter(Boolean) as string[];
+    for (const id of ids) { freqW.set(id, (freqW.get(id) ?? 0) + 1); hist[id] = d; }
+    if ((dow === 0 || dow === 6) && ids.filter((id) => isBigDish(RECIPE_BY_ID[id])).length > 1) bigTwice++;
+    if (dow === 6 && pl[d]?.midi) { const r = RECIPE_BY_ID[pl[d]!.midi!]; if (!(r.cats.includes("brunch") || r.active + r.rest <= 30)) satBad++; }
+    if (dow === 0) { sundays++; if (pl[d]?.entree && pl[d]?.dessert) sunMenus++; }
+  }
+}
+const maxW = Math.max(...freqW.values());
+console.log("   semaines (26, avec mémoire) :", freqW.size, "plats distincts · plat le plus fréquent", maxW, "fois · deux grands plats le même jour", bigTwice, "· samedi midi long", satBad, "· menus du dimanche", sunMenus + "/" + sundays);
+console.log("   à tester en priorité :", JSON.stringify([...freqW].sort((a, b) => b[1] - a[1]).slice(0, 30).map(([id]) => id)));
+check("80 semaine variée sur 6 mois : ≥ 180 plats différents, aucun plus de 7 fois, un seul grand plat par jour de week-end, samedi midi rapide ou brunch, menu complet chaque dimanche",
+  freqW.size >= 180 && maxW <= 7 && bigTwice === 0 && satBad === 0 && sunMenus === sundays);
+
+check("81 D21 et authenticité : osso buco et gigot de sept heures avec leur vin blanc et une variante sans alcool ; la vraie paella valenciana (poulet, lapin) existe",
+  ["osso_buco", "gigot_sept_heures"].every((id) => RECIPE_BY_ID[id].ingredients.some((l) => l.ref === "Vin blanc") && RECIPE_BY_ID[id].variants.some((v) => v.constraints.includes("alcohol")))
+  && RECIPE_BY_ID["paella_valenciana_traditionnelle"].ingredients.some((l) => l.ref === "Lapin") && RECIPE_BY_ID["coq_au_vin"].rest >= 180 + 600);
+
+const kidsPlan = autoPlan(weekDays(0, new Date("2026-10-19T12:00:00")), {}, { slots: ["soir"], weekdayMax: 45, zone: "nord", profile: P0, leftovers: LEFT, seed: 3, kidsVerdict: { moules_frites: "non", shakshuka: "non" } });
+check("82 carnet « les enfants n'ont pas aimé » : le plat ne revient plus dans la semaine", !Object.values(kidsPlan).some((d) => d.soir === "moules_frites" || d.soir === "shakshuka"));
+
+
+// recommandation 10 : protocole d'essai, d'abord les plats les plus proposés par « Ma semaine »
+const top45 = new Set([...freqW].sort((a, b) => b[1] - a[1]).slice(0, 45).map(([id]) => id));
+const inTop = PRIORITE.filter((id) => top45.has(id)).length;
+console.log("   à tester en priorité :", PRIORITE.length, "plats ·", inTop, "parmi les 45 plus proposés de la simulation · protocole en", PROTOCOLE.length, "points");
+check("83 à tester en priorité : 30 plats existants, distincts, qui restent parmi les plus proposés par le planificateur (sinon régénérer la liste)",
+  PRIORITE.length === 30 && new Set(PRIORITE).size === 30 && PRIORITE.every((id) => RECIPE_BY_ID[id]?.role === "plat") && inTop >= 22 && PROTOCOLE.length >= 5);
 console.log(`\n${passed} contrôles OK`);

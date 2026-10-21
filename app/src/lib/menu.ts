@@ -5,6 +5,17 @@ import { RECIPES, RECIPE_BY_ID } from "./data";
 import { refsOf, verdict } from "./engine";
 import { ACCORDS } from "./content";
 import type { Profile, Recipe, Role } from "./types";
+import { starchOf } from "./famille";
+import { detectZone, seasonFit } from "./season";
+import { norm } from "./text";
+
+// Audit gourmet (21/10/2026) : un dessert de menu n'est jamais un petit-déjeuner ; pas deux féculents dominants ni une
+// soupe-repas avant un plat en sauce ; desserts de saison et variés d'un menu à l'autre ; service fromage à la française.
+const BREAKFAST = /bircher|muesli|porridge|granola|overnight|smoothie|pudding de chia|chia|pancake|pain perdu|tartine|parfait|yaourt|congee/;
+const isBreakfast = (r: Recipe) => r.cats.includes("brunch") || BREAKFAST.test(norm(r.title));
+const MEAL_SOUP = /chorba|harira|minestrone|garbure|ribollita|soupe paysanne|pho|ramen|bortsch|lohikeitto|pozole|sancocho|caldo/;
+const isSaucy = (r: Recipe) => r.role === "plat" && r.rest >= 60 && /mijot|braise|sauce|ragout|curry|tajine|daube/.test(norm(r.title + " " + r.steps.join(" ")));
+const jitter = (a: string, b: string) => { let h = 0; for (const c of a + "|" + b) h = (h * 31 + c.charCodeAt(0)) >>> 0; return (h % 100) / 40; }; // 0 à 2,5 : varie selon le plat d'appel
 
 export interface MenuProposal {
   name: "Classique" | "Léger" | "Audacieux";
@@ -63,6 +74,7 @@ export function composeMenus(anchorId: string, p: Profile): MenuProposal[] {
   const anchorRole: Role = anchor.role === "autre" ? "plat" : anchor.role;
   const roles: Role[] = (["entree", "plat", "dessert"] as Role[]).filter((x) => x !== anchorRole);
   const out: MenuProposal[] = [];
+  const zone = detectZone();
   for (const mode of ["Classique", "Léger", "Audacieux"] as const) {
     const chosen: { role: Role; recipe: Recipe; adapted: boolean }[] = [{ role: anchorRole, recipe: anchor, adapted: usable(anchor)?.adapted ?? false }];
     const reasons: string[] = [];
@@ -78,6 +90,17 @@ export function composeMenus(anchorId: string, p: Profile): MenuProposal[] {
         if (mode === "Léger") s += isLight(c.r) ? 4 : isRich(c.r) ? -4 : 0;
         if (c.adapted) s -= 1; // une version adaptée « à tester » passe après une recette d'origine conforme
         if (used.has(c.r.id)) s -= 6; // varier les trois propositions
+        if (role === "dessert") {
+          if (isBreakfast(c.r)) continue;                                  // un bircher n'est pas un dessert de fête
+          const f = seasonFit(c.r, zone).score; s += f > 0 ? 1.5 : f < 0 ? -3 : 0;
+        }
+        const plat = role === "plat" ? c.r : chosen.find((x) => x.role === "plat")?.recipe;
+        const entree = role === "entree" ? c.r : chosen.find((x) => x.role === "entree")?.recipe;
+        if (plat && entree) {
+          if (starchOf(entree) && starchOf(plat) && starchOf(entree) !== "légumineuses") s -= 6; // féculent sur féculent
+          if (MEAL_SOUP.test(norm(entree.title)) && isSaucy(plat)) s -= 6;                       // soupe-repas puis plat en sauce
+        }
+        s += jitter(anchor.id, c.r.id);
         s -= Math.max(0, c.r.active - 40) / 20;
         if (!best || s > best.s) best = { ...c, s, why, zw };
       }
@@ -88,7 +111,10 @@ export function composeMenus(anchorId: string, p: Profile): MenuProposal[] {
         zeroWaste.push(...best.zw);
       }
     }
-    const order: Role[] = ["entree", "plat", "dessert"];
+    // service fromage : menus français classiques et légers, entre le plat et le dessert
+    const cheese = RECIPE_BY_ID["plateau_fromages"];
+    if (cheese && mode !== "Audacieux" && anchor.macro === "france" && !p.vegetarian && usable(cheese)) chosen.push({ role: "autre", recipe: cheese, adapted: false });
+    const order: Role[] = ["entree", "plat", "autre", "dessert"];
     chosen.sort((a, b) => order.indexOf(a.role) - order.indexOf(b.role));
     const main = chosen.find((c) => c.role === "plat")?.recipe ?? anchor;
     const prof = main.profile.find((x) => ACCORDS[x]) ?? "leger";

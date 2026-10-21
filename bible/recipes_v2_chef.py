@@ -11,18 +11,6 @@ K("cote_boeuf", "Côte de bœuf, beurre maître d'hôtel", "Côte de bœuf", FR,
    "**Four.** 150 °C jusqu'à 48 °C à cœur pour saignant (20-25 min), 53 °C pour à point.", "**Repos.** 15 min sous aluminium : la température monte de 4 °C. Tranche contre les fibres, fleur de sel, poivre, beurre."],
   keep="Restes : 2 jours au frigo ; froids en salade ou en sandwich.", age=None, kids="✓ dès 3 ans, tranches bien cuites aux extrémités.", fetes=["Barbecue d'été", "Repas de famille"], profil=["viande_rouge"], tech=["Cuisson de la viande", "Arroser", "Repos de la viande"])
 
-K("gigot_sept_heures", "Gigot de sept heures", "Gigot de sept heures", FR, "P", 1, 8, 20, 420, "€€€", "Cocotte en fonte avec couvercle, four.",
-  "Un gigot qui cuit si longtemps qu'il se mange à la cuillère, confit avec ses légumes : peu de travail, beaucoup de patience.",
-  ["1|gigot d'agneau de 2,2 kg|Gigot d'agneau|3", f"2 têtes|d'ail|{AIL}|2", f"4|carottes|{CAROTTE}|2", f"3|oignons|{OIG}|1", f"4 branches|de thym et romarin|{THYM}|1", f"50 cl|de bouillon|{BOUILLON}|2", f"2 c. à s.|d'huile d'olive|{HO}|1"],
-  ["**Dorer.** Le gigot sur toutes les faces dans la cocotte, 15 min.", "**Garnir.** Légumes, ail en chemise, herbes, bouillon.", "**Cuire.** Couvercle (cordon de pâte farine-eau idéalement), 7 h à 120 °C, arrose 2 fois."],
-  age=1, fetes=["Pâques", "Repas de famille"], profil=["viande_rouge"], tech=["Mijoter", "Basse température"])
-
-K("souris_agneau", "Souris d'agneau confites au miel et romarin", "Souris d'agneau", FR, "P", 1, 4, 20, 180, "€€€", "Cocotte, four.",
-  "Des jarrets d'agneau caramélisés au miel, confits 3 h : la viande se détache de l'os.",
-  ["4|souris d'agneau|Gigot d'agneau|3", f"2 c. à s.|de miel|{MIEL}|2", f"1 tête|d'ail|{AIL}|2", f"3 branches|de romarin|{THYM}|2", f"2|oignons|{OIG}|1", f"400 g|de tomates pelées|{PELEES}|1", f"30 cl|de bouillon|{BOUILLON}|2"],
-  ["**Dorer.** Les souris salées, 10 min.", "**Mijoter.** Oignons, ail, tomates, romarin, bouillon ; couvert, 2 h 30 à 150 °C.", "**Laquer.** Miel au pinceau, 20 min découvert en arrosant."],
-  age=1, fetes=["Repas de famille"], profil=["viande_rouge", "sucre"], tech=["Mijoter"])
-
 K("poulet_crapaudine", "Poulet en crapaudine au citron et à l'ail", "Poulet en crapaudine", FR, "P", 2, 4, 20, 45, "€€", "Ciseaux à volaille, plaque, four.",
   "Le poulet ouvert à plat cuit deux fois plus vite et uniformément : peau croustillante partout, chair juteuse.",
   ["1|poulet de 1,6 kg|Poulet entier|3", f"2|citrons|{CIT}|2", f"6 gousses|d'ail|{AIL}|2", f"4 branches|de thym|{THYM}|1", f"3 c. à s.|d'huile d'olive|{HO}|1", f"1 c. à s.|de gros sel|{SEL}|0"],
@@ -34,44 +22,6 @@ K("poulet_basse_temp", "Suprêmes de volaille basse température, jus réduit", 
   [f"4|suprêmes de poulet avec peau|{BLANC_P}|3", f"30 g|de beurre|{BEURRE}|2", f"20 cl|de bouillon de volaille|{BOUILLON}|2", f"2 branches|de thym|{THYM}|1", f"1|échalote|{ECH}|1"],
   ["**Saumure.** 1 h dans 1 L d'eau + 60 g de sel + 30 g de sucre (facultatif mais spectaculaire).", "**Saisir.** Côté peau, 5 min jusqu'à doré croustillant.", "**Four.** Côté peau dessus, 100 °C jusqu'à 74 °C à cœur (45-60 min).", "**Jus.** Échalote dans la poêle, bouillon, gratte, réduis ; beurre froid."],
   age=1, cats=["enfants"], profil=["leger"], tech=["Saumure", "Basse température", "Déglacer"])
-
-K("lapin_moutarde", "Lapin à la moutarde", "Lapin à la moutarde", "France › Bourgogne-Franche-Comté", "P", 1, 4, 20, 60, "€€", "Cocotte.",
-  "Morceaux de lapin badigeonnés de moutarde, dorés et mijotés à la crème : tendre et relevé.",
-  ["1|lapin en morceaux|Lapin|3", f"4 c. à s.|de moutarde de Dijon|{DIJON}|3", f"20 cl|de crème|{CF}|2", f"20 cl|de bouillon (ou vin blanc)|{BOUILLON}|2", f"2|échalotes|{ECH}|1", f"2 branches|de thym|{THYM}|1", f"20 g|de beurre|{BEURRE}|1"],
-  ["**Badigeonner.** Moutarde sur les morceaux, 30 min.", "**Dorer.** Au beurre, échalotes.", "**Mijoter.** Bouillon, thym, couvert 45 min ; crème, 10 min."],
-  age=1, profil=["viande_rouge"])
-
-K("pot_au_feu", "Pot-au-feu", "Pot-au-feu", "France › Île-de-France", "P", 1, 8, 30, 210, "€€", "Grand faitout.",
-  "Plusieurs morceaux de bœuf pochés longuement avec légumes et os à moelle : le bouillon d'abord, puis la viande avec moutarde, cornichons et gros sel.",
-  ["800 g|de paleron|Paleron|3", "800 g|de macreuse ou gîte|Macreuse / gîte|2", "600 g|de jarret ou plat de côtes|Jarret de bœuf|2", "4|os à moelle|Os à moelle|1", f"8|carottes|{CAROTTE}|2", "4|poireaux|Poireau|2", "4|navets|Navet / navet boule d'or|1", "1|céleri-rave|Céleri-rave|1", f"8|pommes de terre|{PDT}|2", f"1|oignon piqué de girofle + bouquet garni|{OIG}|1"],
-  ["**Pocher.** Viandes dans l'eau froide, portées à frémissement ; écume 20 min. Oignon, bouquet garni, gros sel ; 2 h 30 à frémissement.", "**Légumes.** 45 min avant la fin ; os à moelle (enveloppés de sel aux deux bouts) 20 min.", "**Servir.** Bouillon avec vermicelles ; viandes, légumes, moutarde, cornichons, fleur de sel."],
-  keep="Bouillon : 3 mois congelé. Restes de viande : hachis parmentier (recette liée).", age=1, cats=["zero_dechet"], fetes=["Repas de famille"], profil=["leger"], tech=["Bouillon"])
-
-K("daube_provencale", "Daube provençale", "Daube", "France › Provence-Alpes-Côte d'Azur", "P", 1, 6, 30, 210, "€€", "Cocotte, four.",
-  "Bœuf mariné au vin rouge, orange, olives et herbes, mijoté jusqu'à fondre : la sauce sert ensuite aux macaronis.",
-  ["1,5 kg|de joue ou paleron|Joue de bœuf|3", "75 cl|de vin rouge|Vin rouge|3", f"2|carottes|{CAROTTE}|1", f"2|oignons|{OIG}|1", "1|orange (zeste en bandes)|Orange|2", "100 g|d'olives noires|Olives (vertes / noires)|1", f"4 gousses|d'ail|{AIL}|1", f"1|bouquet garni + 1 clou de girofle|{LAURIER}|1", f"2 c. à s.|de concentré|{CONC}|1"],
-  ["**Mariner.** Viande, vin, légumes, zeste, herbes, 12 h.", "**Saisir.** Viande égouttée, dorée ; marinade bouillie 2 min, versée avec le concentré.", "**Cuire.** 3 h à 150 °C couvert ; olives les 30 dernières minutes."],
-  var=[("Sans alcool", ["alcohol"], {"Vin rouge": [("Jus de pomme / raisin / orange (pur jus)", 0.4), ("Bouillon d'os maison (bœuf/volaille)", 0.5), ("Vinaigre de vin rouge / blanc", 0.05)]},
-        "Vin rouge → **½ bouillon de bœuf + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** : couleur, fruit et acidité. **À tester**.")],
-  keep="4 jours ; meilleure réchauffée.", age=None, kids="✓ dès 3 ans en version sans alcool.", fetes=["Repas de famille"], profil=["viande_rouge"], tech=["Mijoter", "Marinade"])
-
-K("joues_boeuf_carottes", "Joues de bœuf aux carottes", "Bœuf carottes", "France › Île-de-France", "P", 1, 6, 20, 180, "€€", "Cocotte.",
-  "Des joues qui deviennent fondantes, des carottes confites dans la sauce : un plat familial sans alcool.",
-  ["1,5 kg|de joues de bœuf|Joue de bœuf|3", f"1 kg|de carottes|{CAROTTE}|3", f"2|oignons|{OIG}|1", f"1 c. à s.|de concentré|{CONC}|1", f"1 c. à s.|de farine|{F55}|1", f"75 cl|de bouillon de bœuf|{BOUILLON}|2", f"1|bouquet garni|{LAURIER}|1"],
-  ["**Saisir.** Joues en gros morceaux, dorées ; oignons, farine, concentré.", "**Mijoter.** Bouillon, bouquet garni, 2 h couvert ; carottes en rondelles, 1 h."],
-  age=1, cats=["enfants"], profil=["viande_rouge"], tech=["Mijoter"])
-
-K("osso_buco", "Osso buco à la milanaise (gremolata)", "Ossobuco alla milanese", "Europe du Sud › Italie › Lombardie", "P", 1, 4, 20, 120, "€€", "Cocotte.",
-  "Jarret de veau braisé à la tomate, os à moelle fondant, et une gremolata citron-ail-persil au moment de servir.",
-  ["4|tranches de jarret de veau|Jarret de veau|3", f"400 g|de tomates pelées|{PELEES}|2", f"1|oignon + 1 carotte + 1 branche de céleri|{OIG}|1", f"25 cl|de bouillon|{BOUILLON}|2", f"2 c. à s.|de farine|{F55}|1", f"1|citron (zeste)|{CIT}|2", f"1 bouquet|de persil + 1 gousse d'ail|{PERSIL}|1", f"30 g|de beurre|{BEURRE}|1"],
-  ["**Saisir.** Jarrets farinés, entaillés en bordure (ils ne gondolent pas), dorés au beurre.", "**Braiser.** Légumes, tomates, bouillon, 1 h 45 couvert.", "**Gremolata.** Zeste, ail, persil hachés ensemble, au service. Avec risotto ou polenta."],
-  age=1, profil=["viande_rouge"], tech=["Mijoter"])
-
-K("confit_canard_maison", "Confit de canard maison", "Confit de canard", "France › Nouvelle-Aquitaine › Gascogne", "P", 2, 4, 20, 1620, "€€", "Cocotte, four, thermomètre.",
-  "Cuisses salées une nuit puis confites 3 h dans leur graisse : tendres, à poêler côté peau au moment de servir.",
-  ["4|cuisses de canard|Canard : magret, cuisse|3", "1 kg|de graisse de canard|Graisse de canard|3", "60 g|de gros sel|Sel fin / gros sel / fleur de sel|2", f"4 gousses|d'ail|{AIL}|1", f"4 branches|de thym + 2 feuilles de laurier|{THYM}|1", f"1 c. à c.|de poivre|{POIVRE}|0"],
-  ["**Saler.** Sel, poivre, thym, ail ; 12-24 h au frigo.", "**Confire.** Rince, sèche, couvre de graisse fondue ; 3 h à 100 °C (petits frémissements).", "**Servir.** Poêle côté peau 8 min, croustillant. Avec pommes sarladaises (dans la graisse)."],
-  keep="3 semaines au frigo couvertes de graisse.", age=1, profil=["gras"], tech=["Confire"])
 
 K("bar_croute_sel", "Bar en croûte de sel", "Loup en croûte de sel", FR, "P", 1, 4, 15, 30, "€€€", "Plat à four, maillet.",
   "Le poisson entier cuit à l'étouffée dans une coque de sel : chair nacrée, juteuse, jamais trop salée.",
@@ -90,12 +40,6 @@ K("cabillaud_papillote", "Cabillaud en papillote, légumes et citron", "Papillot
   ["4|dos de cabillaud|Cabillaud / morue fraîche|3", "2|courgettes en julienne|Courgette|2", f"2|carottes en julienne|{CAROTTE}|1", f"1|citron|{CIT}|2", "1 bouquet|d'aneth ou de basilic|Aneth|1", f"4 c. à s.|d'huile d'olive|{HO}|1", f"4 c. à s.|de vin blanc ou d'eau|-|0"],
   ["**Monter.** Feuille de papier, légumes, poisson salé, rondelle de citron, herbes, huile, liquide.", "**Fermer.** En demi-lune, bord roulé serré.", "**Cuire.** 12-15 min à 200 °C : elle gonfle. On l'ouvre à table."],
   age=1, cats=["enfants"], profil=["poisson", "leger"], tech=["Papillote"])
-
-K("sole_meuniere", "Sole meunière", "Sole meunière", FR, "P", 2, 2, 15, 10, "€€€", "Grande poêle ovale.",
-  "La sole farinée, dorée au beurre, arrosée d'un beurre noisette citronné : le classique des grandes brasseries.",
-  ["2|soles portion (300 g) pelées|Sole, limande|3", f"30 g|de farine|{F55}|1", f"80 g|de beurre|{BEURRE}|3", f"1|citron|{CIT}|2", f"1 c. à s.|de persil|{PERSIL}|1"],
-  ["**Fariner.** Soles salées, farinées, tapotées.", "**Cuire.** 30 g de beurre moussant, 4 min par face côté peau blanche d'abord, en arrosant.", "**Beurre noisette.** Reste du beurre jusqu'à noisette, jus de citron, persil, nappe."],
-  age=1, profil=["poisson", "gras"], tech=["Poisson plat", "Cuisson du poisson"])
 
 K("saint_jacques_poelees", "Saint-Jacques poêlées, purée de panais", "Noix de Saint-Jacques poêlées", FR, "P", 2, 4, 25, 25, "€€€", "Poêle, casserole, mixeur.",
   "Noix saisies 1 minute par face, croûte dorée et cœur translucide, sur une purée de panais douce et sucrée.",

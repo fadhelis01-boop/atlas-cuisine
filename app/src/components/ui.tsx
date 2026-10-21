@@ -53,6 +53,7 @@ export function DietBadges({ r, v, lines }: { r: Recipe; v?: Verdict; lines?: Re
 export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
   const p = useProfile();
   const fav = useStore((s) => s.favorites.includes(r.id));
+  const kidsLove = useStore((s) => s.journal?.[r.id]?.kids === "oui");
   const v = verdict(r, p);
   return (
     <article className={`card rcard ${v.availability === "hidden" ? "dim" : ""}`}>
@@ -63,6 +64,7 @@ export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
           <p className="meta"><Icon name={MACRO_BY_ID[r.macro]?.icon ?? "globe"} size={15} className="ic-inline" /> {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · <Icon name="timer" size={14} className="ic-inline" />{minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {levelLabel(r.level)}</p>
           {v.availability === "adaptable" && <p className="meta adapt"><Icon name="swap" size={15} className="ic-inline" /> {v.adapted?.variantName}</p>}
           {v.availability === "hidden" && <p className="meta bad-text"><Icon name="ban" size={15} className="ic-inline" /> {v.reasons[0]}</p>}
+          {kidsLove && <p className="meta ok-text"><Icon name="kid" size={15} className="ic-inline" /> Les enfants ont aimé</p>}
           {note}
         </div>
       </a>

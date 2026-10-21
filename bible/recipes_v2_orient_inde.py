@@ -100,12 +100,6 @@ K("khachapuri", "Khachapuri (pain au fromage géorgien)", "Khachapuri adjarouli"
   ["**Pâte.** Pain au lait, pousse 1 h.", "**Barques.** Ovales, bords roulés et pincés aux extrémités, garnis de fromages mélangés.", "**Cuire.** 15 min à 230 °C ; jaune au centre, 2 min ; beurre. On mélange et on trempe les bords."],
   age=None, kids="✓ dès 3 ans avec le jaune bien cuit.", profil=["gras"])
 
-K("butter_chicken", "Poulet au beurre (butter chicken)", "Murgh makhani", f"{AS} › Inde › Delhi", "P", 1, 6, 30, 40, "€€", "Four ou poêle, cocotte, mixeur.",
-  "Poulet tandoori dans une sauce tomate-beurre-crème douce et parfumée : le curry préféré des enfants.",
-  [f"1 kg|de hauts de cuisse de poulet|{CUISSE}|3", "1|recette de marinade tandoori|SUB:marinade_tandoori|2", f"800 g|de tomates pelées|{PELEES}|3", f"60 g|de beurre|{BEURRE}|2", f"15 cl|de crème|{CL}|2", f"1 morceau|de gingembre + 4 gousses d'ail|{GING}|1", "1 c. à c.|de garam masala|Garam masala|1", "1 c. à s.|de fenugrec séché (kasuri methi)|Fenugrec|1", f"1 c. à c.|de miel|{MIEL}|0"],
-  ["**Poulet.** Mariné 4 h, grillé 15 min à 240 °C.", "**Sauce.** Beurre, ail-gingembre, tomates, 20 min ; mixe.", "**Finir.** Crème, garam masala, fenugrec émietté, miel, poulet en morceaux, 10 min. Avec naan et riz."],
-  age=1, cats=["enfants"], profil=["gras"], kids="✓ dès 1 an, sans piment.")
-
 K("chana_masala", "Chana masala (curry de pois chiches)", "Chole", f"{AS} › Inde › Pendjab", "P", 1, 4, 15, 30, "€", "Cocotte.",
   "Pois chiches dans une sauce épaisse oignon-tomate épicée, relevée d'amchur (ou citron) : végétal et généreux.",
   [f"500 g|de pois chiches cuits|{POIS}|3", f"2|oignons|{OIG}|2", f"3|tomates|{TOM}|2", f"1 morceau|de gingembre + 3 gousses d'ail|{GING}|1", f"1 c. à c.|de cumin graines|{CUMIN}|1", "1 c. à s.|de garam masala|Garam masala|2", f"½ c. à c.|de curcuma|{CURC}|1", f"1|citron|{CIT}|1", f"1 bouquet|de coriandre|{CORI}|1", f"3 c. à s.|d'huile|{HN}|1"],

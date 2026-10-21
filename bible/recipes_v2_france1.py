@@ -93,14 +93,6 @@ K("beurre_blanc", "Beurre blanc nantais", "Beurre blanc", "France › Pays de la
         "Vin blanc → **fumet de poisson + 1 c. à c. de citron** ; vinaigre de vin → **vinaigre de cidre**. **À tester**.")],
   keep="À servir tout de suite (tiède, au bain-marie, 30 min maximum).", age=3, cats=["sauces"], profil=["gras"], tech=["Réduire", "Monter au beurre"])
 
-K("tarte_tatin", "Tarte Tatin", "Tarte des demoiselles Tatin", "France › Centre-Val de Loire", "D", 2, 8, 25, 45, "€", "Moule à manqué (pas à fond amovible), four.",
-  "Des pommes confites dans un caramel au beurre, sous une pâte croustillante qu'on retourne au dernier moment.",
-  [f"1 kg|de pommes (6 à 7)|Pomme|3", f"150 g|de sucre|{SUCRE}|3", f"80 g|de beurre demi-sel|{BEURRE}|2", "1|pâte brisée (recette liée)|SUB:pate_brisee|3"],
-  ["**Caramel.** Dans le moule sur le feu, fais fondre sucre et beurre jusqu'à un caramel blond. ⚠️ Très chaud.",
-   "**Pommes.** Range les quartiers de pommes serrés, bombé vers le bas. Cuis 10 min sur le feu.", "**Pâte.** Couvre de pâte, rentre les bords à l'intérieur, pique.",
-   "**Four.** 35 min à 190 °C (th. 6-7).", "**Retourner.** Attends 5 min, pose un plat dessus et retourne d'un coup (gants !)."],
-  tips=["Le caramel colle au moule ? Remets 1 min sur le feu avant de retourner."], keep="2 jours ; tiède, c'est meilleur.", age=3, profil=["sucre"], tech=["Caramel"], sa=["Jus de pomme chaud"], a=["Cidre"])
-
 K("carbonade_flamande", "Carbonade flamande", "Stoofvlees", "France › Hauts-de-France", "P", 2, 6, 30, 150, "€€", "Cocotte en fonte, four.",
   "Du bœuf fondant mijoté à la bière brune et au pain d'épices : sucré-amer, profond, réconfortant. Avec des frites.",
   [f"1,2 kg|de paleron en gros cubes|Paleron|3", f"3|oignons|{OIG}|2", f"75 cl|de bière brune|Bière (blonde, brune, blanche)|3",
@@ -119,14 +111,6 @@ K("gaufres", "Gaufres croustillantes", "Gaufres", "France › Hauts-de-France", 
   ["**Pâte.** Mélange farine, sucre, levure, sel. Ajoute œufs, puis lait peu à peu, puis beurre fondu.", "**Repos.** 1 h si possible.",
    "**Cuisson.** Gaufrier bien chaud et graissé : 1 louche, 3 à 4 min, jusqu'à ce qu'elles soient dorées."],
   age=2, cats=["enfants", "pains"], fetes=["Chandeleur", "Anniversaire"], profil=["sucre"], sa=["Chocolat chaud"])
-
-K("soupe_oignon", "Soupe à l'oignon gratinée", "Gratinée des Halles", "France › Île-de-France", "So", 1, 4, 20, 45, "€", "Cocotte, bols allant au four.",
-  "Des oignons longuement caramélisés, un bouillon brûlant, du pain et du fromage gratiné : le réconfort parisien.",
-  [f"1 kg|d'oignons|{OIG}|3", f"40 g|de beurre|{BEURRE}|2", f"1 c. à s.|de farine|{F55}|1", f"1,2 L|de bouillon|{BOUILLON}|3",
-   f"10 cl|de vin blanc (facultatif)|Vin blanc|0?", "8 tranches|de baguette rassise|Pain rassis (réservé)|2", f"150 g|de gruyère râpé|{GRUY}|2", f"1 pincée|de sel et de poivre|{SEL}|0"],
-  ["**Oignons.** Fais-les fondre dans le beurre 30 min à feu moyen-doux, jusqu'à ce qu'ils soient bruns et sucrés.", "**Liaison.** Saupoudre de farine, remue 1 min, mouille avec le bouillon (et le vin). 15 min.",
-   "**Gratiner.** Verse dans les bols, pose le pain, couvre de fromage, 5 min sous le gril. ⚠️ Bols brûlants."],
-  age=3, profil=["gras"], cats=["zero_dechet"], sa=["Bouillon chaud, eau"], a=["Vin blanc sec"], tech=["Faire revenir", "Gratiner"])
 
 K("oeufs_mayonnaise", "Œufs mayonnaise", "Œufs mayonnaise", "France › Île-de-France", "E", 1, 4, 15, 10, "€", "Casserole, bol, fouet.",
   "L'entrée de bistrot par excellence : des œufs durs juste cuits et une vraie mayonnaise maison.",

@@ -11,35 +11,11 @@ K("spaghetti_aglio_olio", "Spaghetti aglio, olio e peperoncino", "Spaghetti agli
    "**Lier.** Pâtes + eau de cuisson dans la poêle, saute 1 min : l'huile devient crémeuse. Persil."],
   age=3, cats=["enfants"], profil=["gras", "epice"], kids="✓ dès 3 ans sans piment.")
 
-K("cacio_e_pepe", "Pâtes cacio e pepe", "Cacio e pepe", f"{M} › Italie › Latium", "P", 2, 4, 10, 12, "€€", "Casserole, poêle, bol.",
-  "Pecorino, poivre noir grillé et eau des pâtes : trois ingrédients, une crème soyeuse.",
-  [f"400 g|de spaghetti ou tonnarelli|{PATES}|3", "150 g|de pecorino romano finement râpé|Pecorino|3", f"2 c. à c.|de poivre noir concassé|{POIVRE}|2"],
-  ["**Pâtes.** Cuis dans peu d'eau peu salée (le pecorino est salé). Garde 30 cl d'eau.", "**Poivre.** Toaste-le 1 min à sec dans la poêle, ajoute une louche d'eau.",
-   "**Crème.** Bol : pecorino + un peu d'eau tiède (pas bouillante) → pâte lisse.", "**Lier.** Pâtes dans la poêle hors du feu, crème de pecorino, remue vite en ajoutant de l'eau jusqu'à ce que ce soit nappant."],
-  age=3, profil=["gras"])
-
 K("pates_pesto", "Pesto alla genovese maison", "Pesto genovese", f"{M} › Italie › Ligurie", "S", 1, 4, 10, 0, "€€", "Mortier ou mixeur (bol froid).",
   "Basilic, pignons, ail, parmesan, pecorino et huile d'olive : un vert vif quand il est fait minute.",
   ["60 g|de basilic (feuilles)|Basilic|3", "30 g|de pignons|Pignons de pin|2", f"1 gousse|d'ail|{AIL}|1", f"40 g|de parmesan|{PARM}|2", "20 g|de pecorino|Pecorino|1", f"10 cl|d'huile d'olive douce|{HO}|2", f"1 pincée|de gros sel|{SEL}|0"],
   ["**Piler.** Ail et sel, puis basilic par poignées en tournant, pignons.", "**Finir.** Fromages, puis l'huile en filet. Au mixeur : à-coups courts, bol passé au froid, pour ne pas noircir le basilic."],
   keep="3 jours au frigo sous une couche d'huile ; 3 mois congelé en glaçons.", age=1, cats=["sauces", "enfants"], profil=["gras"])
-
-K("risotto_champignons", "Risotto aux champignons", "Risotto ai funghi", f"{M} › Italie › Lombardie", "P", 2, 4, 35, 0, "€€", "Sauteuse, casserole (bouillon).",
-  "Riz crémeux nappé de parmesan et de champignons dorés : le secret est de remuer et d'ajouter le bouillon peu à peu.",
-  ["320 g|de riz à risotto|Riz à risotto (arborio, carnaroli)|3", "400 g|de champignons (Paris et pleurotes)|Champignon de Paris|3", f"1,2 L|de bouillon de volaille chaud|{BOUILLON}|2", f"1|échalote|{ECH}|1",
-   f"10 cl|de vin blanc|Vin blanc|1", f"60 g|de parmesan|{PARM}|2", f"50 g|de beurre|{BEURRE}|2", f"1 c. à s.|de persil|{PERSIL}|0"],
-  ["**Champignons.** Dore-les à feu vif avec un peu de beurre ; réserve.", "**Nacrer.** Échalote fondue, riz 2 min jusqu'à ce qu'il soit translucide. Vin, laisse évaporer.",
-   "**Cuire.** Bouillon louche par louche en remuant, 18 min : le riz est tendre avec un cœur légèrement ferme.", "**Mantecare.** Hors du feu, beurre froid et parmesan, remue vivement, couvre 2 min. Champignons et persil."],
-  var=[("Sans alcool", ["alcohol"], {"Vin blanc": [("Jus de citron (bouteille)", 0.1), ("Bouillon d'os maison (bœuf/volaille)", 0.9)]}, "Vin blanc → **bouillon + 1 c. à s. de jus de citron** (acidité). **À tester**.")],
-  age=1, cats=["enfants"], profil=["gras"], kids="✓ dès 1 an en version sans alcool.")
-
-K("lasagnes_bolognaise", "Lasagnes à la bolognaise", "Lasagne alla bolognese", f"{M} › Italie › Émilie-Romagne", "P", 2, 8, 45, 150, "€€", "Cocotte, casserole, plat à gratin.",
-  "Ragù mijoté longuement, béchamel, pâtes et parmesan : on prend le temps du dimanche, le reste est simple.",
-  [f"600 g|de bœuf haché|{HACHE}|3", "250 g|de lasagnes|Lasagnes|3", f"800 g|de tomates pelées|{PELEES}|2", f"1|carotte|{CAROTTE}|1", "1|branche de céleri|Céleri-branche|1", f"1|oignon|{OIG}|1",
-   f"25 cl|de lait (ragù)|{LAIT}|1", f"60 cl|de lait (béchamel)|{LAIT}|2", f"60 g|de beurre + 60 g de farine|{BEURRE}|2", f"100 g|de parmesan|{PARM}|2", f"1 pincée|de muscade|{MUSC}|0"],
-  ["**Ragù.** Carotte, céleri, oignon hachés fins 10 min ; viande jusqu'à ce qu'elle grésille ; 25 cl de lait, laisse absorber ; tomates. 2 h à feu très doux.",
-   "**Béchamel.** Beurre, farine, lait chaud, muscade : nappante.", "**Monter.** Ragù, pâtes, ragù, béchamel, parmesan… 4 couches, finir béchamel-parmesan.", "**Cuire.** 40 min à 180 °C ; 15 min de repos avant de couper."],
-  keep="4 jours au frigo ; se congèle en parts.", age=1, cats=["enfants"], profil=["viande_rouge", "gras"], fetes=["Repas de famille"])
 
 K("saltimbocca_dinde", "Saltimbocca de dinde à la sauge", "Saltimbocca alla romana", f"{M} › Italie › Latium", "P", 1, 4, 15, 10, "€€", "Poêle, cure-dents.",
   "Escalopes fines, sauge et jambon cru, dorées et déglacées : version dinde avec viande des Grisons, le saveur est là.",
@@ -59,12 +35,6 @@ K("panzanella", "Panzanella toscane", "Panzanella", f"{M} › Italie › Toscane
   ["300 g|de pain rassis|Pain rassis (réservé)|3", f"6|tomates bien mûres|{TOM}|3", "1|concombre|Concombre|1", "1|oignon rouge|Oignon rouge|1", "1 poignée|de basilic|Basilic|2", f"6 c. à s.|d'huile d'olive|{HO}|2", "2 c. à s.|de vinaigre de vin rouge|Vinaigre de vin rouge / blanc|1", f"1 c. à c.|de sel|{SEL}|0"],
   ["**Jus.** Tomates en morceaux, salées : 15 min, elles rendent leur eau.", "**Pain.** En gros cubes, mélangé aux tomates, huile, vinaigre.", "**Finir.** Concombre, oignon émincé, basilic ; 20 min de repos."],
   age=3, cats=["zero_dechet"], profil=["leger", "acide"], fetes=["Barbecue d'été"])
-
-K("panna_cotta", "Panna cotta vanille, coulis de fruits rouges", "Panna cotta", f"{M} › Italie › Piémont", "D", 1, 6, 15, 240, "€", "Casserole, verrines.",
-  "Une crème prise tremblotante, vanillée, et un coulis acidulé : se prépare la veille.",
-  [f"50 cl|de crème|{CL}|3", f"60 g|de sucre|{SUCRE}|2", "1|gousse de vanille|Vanille (gousse)|2", "2 g|d'agar-agar (ou 3 feuilles de gélatine de poisson)|Gélatine de bœuf / poisson, agar-agar, pectine|1", "250 g|de fruits rouges|Framboise / mûre / myrtille|2"],
-  ["**Crème.** Chauffe crème, sucre, vanille grattée et agar-agar ; bouillir 2 min en fouettant.", "**Prendre.** Verrines, 4 h au frigo.", "**Coulis.** Fruits + 1 c. à s. de sucre mixés, filtrés."],
-  age=1, cats=["enfants"], profil=["sucre", "gras"], fetes=["Saint-Valentin"])
 
 K("polpette_sugo", "Boulettes à la sauce tomate (polpette al sugo)", "Polpette al sugo", f"{M} › Italie › Pouilles", "P", 1, 4, 30, 30, "€", "Sauteuse.",
   "Des boulettes moelleuses (grâce au pain trempé) qui mijotent dans la tomate : avec des pâtes ou du pain.",
@@ -144,13 +114,6 @@ K("caldo_verde", "Caldo verde (soupe au chou)", "Caldo verde", f"{M} › Portuga
   [f"800 g|de pommes de terre|{PDT}|3", "300 g|de chou kale ou vert, en chiffonnade très fine|Chou vert / frisé / kale|3", f"1|oignon|{OIG}|1", f"2 gousses|d'ail|{AIL}|1", "100 g|de chorizo de bœuf en rondelles|Chorizo de bœuf ou de volaille|1?", f"4 c. à s.|d'huile d'olive|{HO}|2"],
   ["**Base.** Pommes de terre, oignon, ail dans 1,5 L d'eau salée, 20 min ; mixe.", "**Chou.** Ajoute la chiffonnade 5 min : vert vif.", "**Servir.** Rondelles de chorizo poêlées, huile d'olive."],
   age=1, profil=["leger"])
-
-K("moussaka", "Moussaka", "Mousakás", f"{M} › Grèce", "P", 2, 8, 50, 60, "€€", "Plat à gratin, poêle, casserole.",
-  "Aubergines rôties, agneau à la cannelle et tomate, béchamel épaisse dorée : réconfortant et parfumé.",
-  ["4|aubergines|Aubergine|3", "700 g|d'agneau ou de bœuf haché|Agneau haché|3", f"400 g|de tomates pelées|{PELEES}|2", f"2|oignons|{OIG}|1", f"1 c. à c.|de cannelle|{CANN}|1", "1 c. à c.|d'origan|Origan frais / sec|1",
-   f"60 cl|de lait|{LAIT}|2", f"60 g|de beurre + 60 g de farine|{BEURRE}|2", f"2|jaunes d'œufs|Jaune d'œuf|1", f"60 g|de parmesan ou kefalotyri|{PARM}|1", f"4 c. à s.|d'huile d'olive|{HO}|1"],
-  ["**Aubergines.** Tranches huilées, 25 min à 220 °C (pas de friture : plus léger).", "**Viande.** Oignons, viande, cannelle, origan, tomates ; 20 min.", "**Béchamel.** Épaisse, avec jaunes et fromage hors du feu.", "**Monter.** Aubergines, viande, aubergines, béchamel ; 45 min à 180 °C. Repos 20 min."],
-  age=1, profil=["viande_rouge", "gras"], fetes=["Repas de famille"])
 
 K("souvlaki_poulet", "Souvlaki de poulet et pita", "Souvlaki", f"{M} › Grèce", "P", 1, 4, 25, 15, "€€", "Brochettes, gril ou poêle-gril.",
   "Brochettes marinées au citron et à l'origan, pita chaude, tzatziki, tomate et oignon rouge.",

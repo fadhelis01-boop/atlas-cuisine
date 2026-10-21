@@ -59,13 +59,6 @@ K("fondue_savoyarde", "Fondue savoyarde", "Fondue savoyarde", "France › Auverg
   keep="Le reste : en gratin ou sur des pommes de terre le lendemain.", age=None, kids="✓ dès 3 ans en version sans alcool (le vin cuit garde de l'alcool).", fetes=["Noël", "Repas de famille"], profil=["gras"], cats=["zero_dechet"],
   sa=["Thé noir chaud", "Eau"], a=["Vin blanc de Savoie"])
 
-K("tartiflette", "Tartiflette", "Tartiflette", "France › Auvergne-Rhône-Alpes › Savoie", "P", 1, 6, 25, 40, "€€", "Plat à gratin, poêle, four.",
-  "Pommes de terre, oignons fondus, lardons, crème et reblochon qui coule : simple et généreuse.",
-  [f"1,5 kg|de pommes de terre|{PDT}|3", f"1|reblochon|Reblochon / raclette / mont-d'or|3", f"200 g|de lardons|Lardons|2", f"2|oignons|{OIG}|2", f"20 cl|de crème fraîche|{CF}|2", f"10 cl|de vin blanc (facultatif)|Vin blanc|0?", f"1 pincée|de poivre|{POIVRE}|0"],
-  ["**Pommes de terre.** Cuis-les entières à l'eau 20 min, épluche, coupe en rondelles.", "**Poêlée.** Fais dorer lardons et oignons, déglace au vin.",
-   "**Monter.** Plat : pommes de terre, lardons-oignons, crème ; le reblochon coupé en deux dans l'épaisseur, croûte dessus.", "**Gratiner.** 20 min à 200 °C (th. 6-7)."],
-  age=3, profil=["gras"], fetes=["Repas de famille"], sa=["Jus de pomme pétillant"], a=["Vin blanc de Savoie"])
-
 K("gratin_crozets", "Gratin de crozets (ou petites pâtes) au beaufort", "Croziflette", "France › Auvergne-Rhône-Alpes › Savoie", "A", 1, 4, 15, 30, "€", "Casserole, plat à gratin.",
   "Les petites pâtes carrées de Savoie, nappées de crème et de beaufort, gratinées. Avec des pâtes courtes si tu n'en trouves pas.",
   [f"400 g|de crozets ou de petites pâtes|{PATES}|3", f"25 cl|de crème liquide|{CL}|2", f"150 g|de beaufort râpé|{GRUY}|3", f"1|oignon|{OIG}|1", f"1 pincée|de sel, poivre|{SEL}|0"],

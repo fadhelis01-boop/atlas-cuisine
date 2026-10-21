@@ -3,6 +3,10 @@ import { useEffect, useMemo, useState } from "react";
 import { RECIPE_BY_ID, loadLeftovers } from "../lib/data";
 import { COST_PER_PART, autoPlan, consolidate, dayName, leftoverLink, prepAhead, weekDays, type Slot, type WeekPlan } from "../lib/planner";
 import { householdLabel, householdPortions, weekBalance } from "../lib/famille";
+import { restesOfRecipe } from "../lib/restes";
+import { RECIPES } from "../lib/data";
+import { verdict } from "../lib/engine";
+import { seasonFit } from "../lib/season";
 import { href } from "../lib/router";
 import { zoneOf } from "../lib/season";
 import { setState, uid, useProfile, useStore } from "../lib/store";
@@ -12,6 +16,8 @@ import { Chip, Cover, Page } from "../components/ui";
 import { toast } from "../lib/toast";
 
 const SLOT_LABEL: Record<Slot, string> = { midi: "Midi", soir: "Soir" };
+/** Libellé d'un accompagnement : fiche reliée ou produit à acheter. */
+export const sideLabel = (side: string) => side.startsWith("achat:") ? side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase() : (RECIPE_BY_ID[side]?.title.split(" (")[0].toLowerCase() ?? side);
 const DEFAULT_PREFS = { people: 2, slots: ["soir"] as Slot[], weekdayMax: 45 };
 const shortDate = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
 
@@ -33,18 +39,31 @@ export default function Semaine({ add }: { add: string | null }) {
     // on ne garde que les semaines en cours et à venir : le planning ne grossit pas indéfiniment
     const from = weekDays(0)[0];
     s.week = Object.fromEntries(Object.entries(next).filter(([d, v]) => d >= from && (v.midi || v.soir)));
+    // mémoire du planificateur (audit gourmet) : la dernière date de chaque plat, gardée 8 semaines
+    const h = { ...(s.weekHistory ?? {}) };
+    for (const [d, v] of Object.entries(s.week)) for (const id of [v.midi, v.soir]) if (id && (!h[id] || h[id] < d)) h[id] = d;
+    const limit = new Date(Date.now() - 70 * 86400000).toISOString().slice(0, 10);
+    s.weekHistory = Object.fromEntries(Object.entries(h).filter(([, d]) => d >= limit));
   });
+  const history = useStore((s) => s.weekHistory);
+  const journal = useStore((s) => s.journal);
+  const kidsVerdict = useMemo(() => Object.fromEntries(Object.entries(journal ?? {}).filter(([, e]) => e.kids).map(([id, e]) => [id, e.kids!])), [journal]);
+  // plats vus dans les 8 semaines qui précèdent les jours affichés (hors ces jours-là)
+  const recent = useMemo(() => {
+    const first = new Date(`${days[0]}T12:00:00`).getTime();
+    return new Set(Object.entries(history ?? {}).filter(([, d]) => !days.includes(d) && Math.abs(new Date(`${d}T12:00:00`).getTime() - first) < 56 * 86400000).map(([id]) => id));
+  }, [history, days]);
   const setPrefs = (p: Partial<typeof prefs>) => setState((s) => { s.weekPrefs = { ...prefs, ...p }; });
   const fill = (base: WeekPlan, onlyDays = days) => {
     if (!left) return;
-    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now() }));
+    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent, sundayMenu: prefs.slots.includes("midi"), kidsVerdict }));
   };
   const clearWeek = () => { const next = { ...plan }; for (const d of days) delete next[d]; return next; };
   const reroll = (day: string, slot: Slot) => {
     const cur = plan[day]?.[slot];
     const next: WeekPlan = { ...plan, [day]: { ...plan[day], [slot]: undefined } };
     if (!left) return;
-    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now() });
+    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent: new Set([...recent, ...(cur ? [cur] : [])]) });
     // ne remplir que la case demandée, et pas avec le même plat
     const pick = filled[day]?.[slot];
     save({ ...plan, [day]: { ...plan[day], [slot]: pick && pick !== cur ? pick : undefined } });
@@ -53,8 +72,9 @@ export default function Semaine({ add }: { add: string | null }) {
   const put = (day: string, slot: Slot, id: string) => { save({ ...plan, [day]: { ...plan[day], [slot]: id } }); setMsg(`${RECIPE_BY_ID[id].title.split(" (")[0]} : ajouté le ${dayName(day)} ${SLOT_LABEL[slot].toLowerCase()}.`); };
 
   const planned = days.flatMap((d) => (["midi", "soir"] as Slot[]).map((s) => plan[d]?.[s]).filter(Boolean) as string[]);
+  const extras = days.flatMap((d) => [plan[d]?.entree, plan[d]?.dessert]).filter(Boolean) as string[];
   const shop = () => {
-    const lines = consolidate(planned.map((id) => ({ id, factor: prefs.people / (RECIPE_BY_ID[id]?.portions || prefs.people) })));
+    const lines = consolidate([...planned, ...extras].map((id) => ({ id, factor: prefs.people / (RECIPE_BY_ID[id]?.portions || prefs.people) })));
     setState((s) => {
       s.shopping = s.shopping.filter((i) => i.from !== "Ma semaine");
       for (const l of lines) s.shopping.push({ id: uid(), ref: l.ref, label: l.label, from: "Ma semaine", done: false, section: l.section });
@@ -67,6 +87,12 @@ export default function Semaine({ add }: { add: string | null }) {
     try { if (navigator.share) await navigator.share({ title: "Ma semaine ATLAS", text }); else { await navigator.clipboard.writeText(text); toast("Planning copié : colle-le dans un message"); } } catch { /* annulé */ }
   };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
+  // boisson maison de la semaine (audit gourmet) : sans alcool, de saison, change chaque semaine
+  const drink = useMemo(() => {
+    const zone = zoneOf(zoneSetting);
+    const list = RECIPES.filter((r) => r.role === "boisson" && verdict(r, { ...profile, alcohol: "standard" }).availability === "ok" && r.active <= 20).sort((a, b) => seasonFit(b, zone).score - seasonFit(a, zone).score).slice(0, 12);
+    return list.length ? list[Math.floor(new Date(`${days[0]}T12:00:00`).getTime() / (7 * 86400000)) % list.length] : null;
+  }, [days, zoneSetting, profile]);
   const balance = useMemo(() => weekBalance(planned.map((id) => RECIPE_BY_ID[id]).filter(Boolean)), [planned.join()]);
   const budget = Math.round(planned.reduce((a, id) => a + (COST_PER_PART[RECIPE_BY_ID[id]?.cost ?? "€€"] ?? 4), 0) * prefs.people / 5) * 5;
   const slotsShown: Slot[] = (["midi", "soir"] as Slot[]).filter((s) => prefs.slots.includes(s) || days.some((d) => plan[d]?.[s]));
@@ -114,7 +140,7 @@ export default function Semaine({ add }: { add: string | null }) {
 
       <ol className="week">
         {days.map((d, i) => (
-          <li key={d} className={`week-day ${i >= 5 ? "weekend" : ""}`}>
+          <li key={d} className={`week-day ${[0, 6].includes(new Date(`${d}T12:00:00`).getDay()) ? "weekend" : ""}`}>
             <h2 className="h3">{dayName(d)} <span className="meta">{shortDate(d)}</span></h2>
             {slotsShown.map((s) => {
               const id = plan[d]?.[s]; const r = id ? RECIPE_BY_ID[id] : undefined;
@@ -128,7 +154,8 @@ export default function Semaine({ add }: { add: string | null }) {
                       <a className="week-meal" href={href(`/recette/${r.id}?portions=${prefs.people}`)}>
                         <Cover r={r} />
                         <span><strong>{r.title.split(" (")[0]}</strong><br /><span className="meta">{minutes(r.active)}{r.rest > 0 ? ` + ${minutes(r.rest)} sans rien faire` : ""}</span>
-                          {link && <><br /><span className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> utilise le reste de {link} de la veille</span></>}</span>
+                          {link && <><br /><span className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> utilise le reste de {link} de la veille</span></>}
+                          {r.side && <><br /><span className="small">avec {sideLabel(r.side)}</span></>}</span>
                       </a>
                       <span className="week-acts">
                         <button className="btn ghost small" title="Proposer un autre plat" aria-label={`Autre plat pour ${dayName(d)} ${s}`} onClick={() => reroll(d, s)}><Icon name="refresh" size={18} /></button>
@@ -141,9 +168,20 @@ export default function Semaine({ add }: { add: string | null }) {
                 </div>
               );
             })}
+            {(plan[d]?.entree || plan[d]?.dessert) && (
+              <p className="small week-sunday"><Icon name="plate" size={15} className="ic-inline" /> Menu du dimanche :{" "}
+                {plan[d]?.entree && RECIPE_BY_ID[plan[d]!.entree!] && <>en entrée <a href={href(`/recette/${plan[d]!.entree}`)}>{RECIPE_BY_ID[plan[d]!.entree!].title.split(" (")[0]}</a></>}
+                {plan[d]?.dessert && RECIPE_BY_ID[plan[d]!.dessert!] && <>, en dessert <a href={href(`/recette/${plan[d]!.dessert}`)}>{RECIPE_BY_ID[plan[d]!.dessert!].title.split(" (")[0]}</a></>}
+                {" "}<button className="btn ghost small" onClick={() => save({ ...plan, [d]: { ...plan[d], entree: undefined, dessert: undefined } })}>Retirer</button></p>
+            )}
+            {new Date(`${d}T12:00:00`).getDay() === 1 && i > 0 && (() => {
+              const sun = plan[days[i - 1]]?.midi ?? plan[days[i - 1]]?.soir; const sr = sun ? RECIPE_BY_ID[sun] : null; const rs = sr ? restesOfRecipe(sr) : [];
+              return rs.length ? <p className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> Restes du dimanche : <a href={href(`/restes?r=${rs.map((x) => x.id).join(",")}`)}>idées pour ce soir</a></p> : null;
+            })()}
           </li>
         ))}
       </ol>
+      {drink && <p className="small"><Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine : <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer en carafe pour les repas.</p>}
       <p className="small">Pour placer une recette précise : sur sa fiche, touche « Planifier ». Les plats proposés respectent ton profil (porc, alcool, allergies) et la saison de l'endroit où tu es.</p>
 
       {planned.length > 0 && (

@@ -156,11 +156,22 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
 
   const addToShopping = () => {
     const before = getState().shopping.length;
+    // les sous-recettes (pâte, marinade, sauce) et l'accompagnement relié rejoignent aussi la liste (audit gourmet)
+    const expand = (ls: typeof lines, f: number, from: string, depth = 0): { l: (typeof lines)[number]; f: number; from: string }[] =>
+      ls.flatMap((l) => {
+        const sub = l.ref?.startsWith("SUB:") ? RECIPE_BY_ID[l.ref.slice(4)] : undefined;
+        return sub && depth < 2 ? expand(sub.ingredients, f, from, depth + 1) : l.ref && !l.ref.startsWith("SUB:") && !l.optional ? [{ l, f, from }] : [];
+      });
+    const sideR = r.side && !r.side.startsWith("achat:") ? RECIPE_BY_ID[r.side] : undefined;
+    const all = [...expand(lines, factor, r.title), ...(sideR ? expand(sideR.ingredients, (portions / sideR.portions), r.title) : [])];
     setState((s) => {
-      for (const l of lines) {
-        if (!l.ref || l.ref.startsWith("SUB:")) continue;
-        if (s.shopping.some((x) => x.ref === l.ref && !x.done && x.from === r.title)) continue;
-        s.shopping.push({ id: uid(), ref: l.ref, label: `${scaleQty(l.qty, factor)} ${l.label}`.trim(), from: r.title, done: false, section: INGREDIENTS[l.ref]?.section ?? "Autres" });
+      for (const { l, f, from } of all) {
+        if (s.shopping.some((x) => x.ref === l.ref && !x.done && x.from === from)) continue;
+        s.shopping.push({ id: uid(), ref: l.ref!, label: `${scaleQty(l.qty, f)} ${l.label}`.trim(), from, done: false, section: INGREDIENTS[l.ref!]?.section ?? "Autres" });
+      }
+      if (r.side?.startsWith("achat:") && !s.shopping.some((x) => x.ref === r.side!.slice(6) && !x.done)) {
+        const ref = r.side.slice(6);
+        s.shopping.push({ id: uid(), ref, label: `${ref.split(" (")[0].split(" / ")[0]} (pour accompagner)`, from: r.title, done: false, section: INGREDIENTS[ref]?.section ?? "Autres" });
       }
     });
     const added = getState().shopping.length - before;
@@ -242,6 +253,9 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       <RecipeToc />
       <div className="two-col">
         <Section title="Ingrédients" id="r-ingredients">
+          {r.side && <p className="side-note"><Icon name="plate" size={18} className="ic-inline" /> <strong>Accompagnement :</strong>{" "}
+            {r.side.startsWith("achat:") ? r.side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase() : <a href={href(`/recette/${r.side}?portions=${portions}`)}>{RECIPE_BY_ID[r.side]?.title.split(" (")[0].toLowerCase()}</a>}
+            <span className="small"> · ajouté aux courses avec la recette</span></p>}
           <div className="portions" role="group" aria-label="Nombre de portions">
             <button className="btn small ghost" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
             <span><strong>{portions}</strong> {r.role === "boisson" || r.kind === "Sauce" ? "portions" : "personnes"}</span>

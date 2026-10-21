@@ -2,15 +2,6 @@
 """Vague 2 · France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer."""
 from recipes_v2_base import *
 
-K("cassoulet_volaille", "Cassoulet de Castelnaudary (version canard-bœuf)", "Cassoulet", "France › Occitanie › Lauragais", "P", 2, 8, 40, 240, "€€", "Grande cocotte ou cassole, four.",
-  "Haricots fondants, confit de canard et saucisses gratinés longuement. Le cassoulet d'origine est au porc : ici une version inspirée, canard et saucisses de bœuf, au goût fumé conservé.",
-  ["800 g|de haricots lingots secs|Haricots blancs / lingots|3", "4|cuisses de canard confites|Canard : magret, cuisse|3", "6|saucisses de bœuf ou de volaille|Saucisse de bœuf / de veau / de volaille|2",
-   f"2|oignons|{OIG}|1", f"1|carotte|{CAROTTE}|1", f"4 gousses|d'ail|{AIL}|2", f"2 c. à s.|de concentré de tomate|{CONC}|1", f"1|bouquet garni|{LAURIER}|1", f"1 c. à c.|de paprika fumé|{PFUME}|1", f"1 pincée|de sel, poivre|{SEL}|0"],
-  ["**Haricots.** Trempe-les une nuit ; cuis 1 h dans l'eau non salée avec oignon, carotte, ail, bouquet garni et paprika fumé. Garde le bouillon.",
-   "**Viandes.** Dore les saucisses et le confit dans la graisse du confit.", "**Monter.** Cassole frottée d'ail : haricots, viandes, haricots ; couvre de bouillon tomaté.",
-   "**Four.** 2 h 30 à 150 °C (th. 5). Enfonce la croûte 3 fois pendant la cuisson et rajoute du bouillon : c'est elle qui fait le cassoulet."],
-  keep="4 jours au frigo ; encore meilleur réchauffé.", age=3, profil=["gras", "viande_rouge"], fetes=["Repas de famille"], a=["Vin de Corbières"], sa=["Jus de raisin rouge"])
-
 K("magret_cerises", "Magret de canard aux cerises", "Magret aux cerises", "France › Nouvelle-Aquitaine › Gascogne", "P", 2, 4, 20, 20, "€€€", "Poêle, casserole.",
   "Un magret rosé à la peau croustillante, une sauce aigre-douce aux cerises : chic et rapide.",
   ["2|magrets de canard|Canard : magret, cuisse|3", "300 g|de cerises dénoyautées (fraîches ou surgelées)|Cerise / griotte|3", f"2 c. à s.|de vinaigre balsamique|Vinaigre balsamique|1", f"1 c. à s.|de miel|{MIEL}|1", f"1 pincée|de fleur de sel, poivre|{SEL}|0"],
@@ -38,12 +29,6 @@ K("piperade", "Piperade basque", "Piperade", "France › Nouvelle-Aquitaine › 
    "**Œufs.** Casse-les dessus, couvre 4 min (ou brouille-les dedans)."],
   age=1, cats=["enfants"], profil=["leger"], kids="✓ dès 1 an, sans piment pour les petits.")
 
-K("poulet_basquaise", "Poulet basquaise", "Poulet basquaise", "France › Nouvelle-Aquitaine › Pays basque", "P", 1, 6, 25, 50, "€€", "Cocotte.",
-  "Morceaux de poulet dorés puis mijotés dans la piperade : couleur, douceur et une pointe de piment.",
-  [f"6|cuisses de poulet|{CUISSE}|3", f"3|poivrons|{POIVRON}|3", f"800 g|de tomates pelées|{PELEES}|2", f"2|oignons|{OIG}|2", f"3 gousses|d'ail|{AIL}|1", f"1 c. à c.|de piment d'Espelette|Piment d'Espelette|2", f"3 c. à s.|d'huile d'olive|{HO}|1", f"1 c. à c.|de sel|{SEL}|0"],
-  ["**Dorer.** Les cuisses salées, peau en dessous, 10 min ; réserve.", "**Piperade.** Oignons, poivrons, ail 10 min ; tomates et Espelette.", "**Mijoter.** Remets le poulet 40 min à couvert. Avec du riz."],
-  age=1, cats=["enfants"], profil=["leger"], sa=["Citronnade"], a=["Irouléguy rouge"])
-
 K("gateau_basque", "Gâteau basque à la crème", "Gâteau basque (etxeko biskotxa)", "France › Nouvelle-Aquitaine › Pays basque", "D", 2, 8, 40, 45, "€", "Moule à manqué 24 cm, casserole.",
   "Une pâte sablée beurrée qui renferme une crème pâtissière à la vanille (ou une confiture de cerises noires).",
   [f"300 g|de farine|{F55}|3", f"200 g|de beurre mou|{BEURRE}|3", f"200 g|de sucre|{SUCRE}|2", f"3|œufs (2 + 1 jaune pour dorer)|{OEUF}|2", f"1 c. à c.|de levure chimique|{LEVC}|0",
@@ -61,14 +46,6 @@ K("canneles", "Cannelés bordelais", "Canelé", "France › Nouvelle-Aquitaine �
   var=[("Sans alcool", ["alcohol"], {"Rhum ambré / blanc": [("Extrait de vanille liquide", 0.3), ("Mélasse / sirop de canne", 0.3)]},
         "Rhum → **1 c. à c. d'extrait de vanille + 1 c. à c. de sirop de canne** : on retrouve la note ambrée. **À tester**.")],
   age=3, fetes=["Anniversaire"], profil=["sucre"], sa=["Café", "Thé noir"])
-
-K("poule_au_pot", "Poule au pot farcie (version poulet)", "Poule au pot", "France › Nouvelle-Aquitaine › Béarn", "P", 2, 6, 40, 150, "€€", "Grand faitout, ficelle.",
-  "Une volaille pochée avec ses légumes, farcie de pain et d'herbes : bouillon, viande et légumes en un plat.",
-  ["1|poule ou gros poulet|Poulet entier|3", f"4|carottes|{CAROTTE}|2", f"3|poireaux|Poireau|2", "4|navets|Navet / navet boule d'or|1", f"1|oignon piqué de 2 clous de girofle|{OIG}|1",
-   "200 g|de pain rassis (farce)|Pain rassis (réservé)|2", f"2|œufs (farce)|{OEUF}|1", "200 g|de foies de volaille (farce)|Foies / gésiers de volaille|1", f"1 bouquet|de persil|{PERSIL}|1", f"2 gousses|d'ail|{AIL}|1", f"1|bouquet garni|{LAURIER}|1"],
-  ["**Farce.** Pain trempé dans du lait et pressé, foies hachés, œufs, persil, ail, sel. Farcis la volaille, ferme à la ficelle.",
-   "**Pocher.** Couvre d'eau froide avec oignon et bouquet garni ; frémissement 1 h 30, écume.", "**Légumes.** Ajoute-les 45 min avant la fin. Sers bouillon d'abord, puis la poule tranchée avec légumes et farce."],
-  keep="Le bouillon se congèle 3 mois : base de soupe ou de risotto.", age=1, cats=["zero_dechet"], profil=["leger"], fetes=["Repas de famille"])
 
 K("tourin", "Tourin à l'ail", "Tourin", "France › Nouvelle-Aquitaine › Périgord", "So", 1, 4, 15, 25, "€", "Casserole.",
   "Une soupe d'ail doux et d'oignon liée à l'œuf, sur du pain : économique et réconfortante.",
@@ -89,19 +66,6 @@ K("tielle_setoise", "Tielle sétoise", "Tielle", "France › Occitanie › Sète
    f"1 c. à c.|de paprika|{PAPRIKA}|1", f"1 pincée|de piment|{CAYENNE}|1", f"3 c. à s.|d'huile d'olive|{HO}|1"],
   ["**Garniture.** Oignons et ail fondus, calamars 5 min, tomates, épices ; 30 min jusqu'à ce que ce soit épais. Refroidis.", "**Monter.** Deux tiers de pâte dans le moule, garniture, couvercle de pâte, soude les bords en les roulant.", "**Cuire.** 40 min à 200 °C, doré à la tomate (badigeonne avec le jus)."],
   age=3, profil=["poisson"], sa=["Citronnade"])
-
-K("navarin_agneau", "Navarin d'agneau printanier", "Navarin", "France › Île-de-France", "P", 2, 6, 30, 90, "€€", "Cocotte.",
-  "Un ragoût d'agneau tendre aux petits légumes nouveaux : le plat de Pâques par excellence.",
-  ["1,2 kg|d'épaule d'agneau en morceaux|Épaule d'agneau|3", "12|navets nouveaux|Navet / navet boule d'or|2", f"12|petites carottes|{CAROTTE}|2", f"500 g|de pommes de terre grenaille|{PDT}|2",
-   "200 g|de petits pois|Petits pois / pois gourmands|1", f"1|oignon|{OIG}|1", f"1 c. à s.|de concentré de tomate|{CONC}|1", f"1 c. à s.|de farine|{F55}|1", f"1|bouquet garni|{LAURIER}|1"],
-  ["**Saisir.** Dore l'agneau, saupoudre de farine, ajoute concentré, oignon, bouquet garni et eau à hauteur. 1 h à couvert.", "**Légumes.** Ajoute navets, carottes et pommes de terre 25 min, puis petits pois 5 min."],
-  age=1, fetes=["Pâques"], profil=["viande_rouge"], a=["Saint-Émilion"], sa=["Jus de raisin rouge"])
-
-K("hachis_parmentier", "Hachis parmentier", "Hachis parmentier", "France › Île-de-France", "P", 1, 6, 30, 30, "€", "Plat à gratin, poêle, casserole.",
-  "Une viande hachée fondante sous une purée gratinée : le classique des familles et des cantines.",
-  [f"600 g|de bœuf haché|{HACHE}|3", f"1,2 kg|de pommes de terre|{PDT}|3", f"2|oignons|{OIG}|2", f"20 cl|de lait|{LAIT}|1", f"50 g|de beurre|{BEURRE}|2", f"1 c. à s.|de concentré de tomate|{CONC}|1", f"60 g|de fromage râpé|{GRUY}|1", f"1 pincée|de muscade|{MUSC}|0"],
-  ["**Purée.** Pommes de terre cuites écrasées avec lait chaud, beurre, muscade, sel.", "**Viande.** Oignons fondus, viande saisie, concentré, persil, sel, poivre.", "**Monter et gratiner.** Viande, purée, fromage ; 20 min à 200 °C."],
-  age=1, cats=["enfants", "zero_dechet"], profil=["viande_rouge"], tips=["Restes de pot-au-feu ou de rôti : c'est la version d'origine anti-gaspi."])
 
 K("blanquette_poulet", "Blanquette de poulet express", "Blanquette", "France › Île-de-France", "P", 1, 4, 20, 35, "€€", "Cocotte.",
   "Toute la douceur de la blanquette, en 1 heure, avec du poulet : sauce blanche citronnée, champignons, carottes.",

@@ -69,24 +69,7 @@ K("tourte_poulet_champignons", "Tourte poulet-champignons", "Chicken and mushroo
   "Poulet et champignons dans une sauce crémeuse, sous un couvercle de pâte feuilletée dorée.",
   ["2|pâtes feuilletées|Pâte feuilletée (prête)|3", f"500 g|de poulet en dés|{BLANC_P}|3", "300 g|de champignons|Champignon de Paris|2", f"1|oignon|{OIG}|1", f"20 cl|de crème|{CF}|2", f"10 cl|de bouillon|{BOUILLON}|1", f"1 c. à s.|de maïzena|Fécule de maïs (maïzena)|1", f"1|œuf|{OEUF}|1"],
   ["**Garniture.** Poulet doré, oignon, champignons, bouillon, crème, maïzena : épaisse. Refroidie.", "**Monter.** Pâte, garniture, couvercle, cheminée, dorure.", "**Cuire.** 35 min à 200 °C."], age=1, cats=["enfants"], profil=["gras"])
-K("coq_au_vin", "Coq au vin (ou version sans alcool)", "Coq au vin", "France › Bourgogne-Franche-Comté", "P", 2, 6, 40, 120, "€€", "Cocotte.",
-  "Volaille marinée au vin rouge, mijotée avec champignons et petits oignons : le grand classique bourguignon.",
-  ["1|coq ou gros poulet en morceaux|Poulet entier|3", "75 cl|de vin rouge de Bourgogne|Vin rouge|3", "200 g|de lardons (ou de dinde fumée)|Lardons|1", "250 g|de champignons|Champignon de Paris|2", "12|petits oignons grelots|Oignon jaune|1", f"2|carottes|{CAROTTE}|1", f"2 c. à s.|de farine|{F55}|1", f"1|bouquet garni|{LAURIER}|1", f"3 gousses|d'ail|{AIL}|1"],
-  ["**Mariner.** Volaille, vin, carottes, bouquet garni, une nuit.", "**Saisir.** Morceaux égouttés dorés, farine, marinade bouillie.", "**Mijoter.** 1 h 30 ; lardons, oignons et champignons dorés à part, ajoutés 20 min avant la fin."],
-  var=[("Sans alcool", ["alcohol"], {"Vin rouge": [("Jus de pomme / raisin / orange (pur jus)", 0.4), ("Bouillon d'os maison (bœuf/volaille)", 0.5), ("Vinaigre de vin rouge / blanc", 0.05)]},
-        "Vin rouge → **½ bouillon de volaille + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** (+ 1 c. à c. de concentré pour la couleur). **À tester**.")],
-  age=None, kids="✓ dès 3 ans en version sans alcool.", fetes=["Repas de famille"], profil=["viande_rouge"], tech=["Mijoter", "Marinade"])
 K("filet_lieu_beurre_blanc", "Filet de lieu au beurre blanc, riz", "Lieu au beurre blanc", "France › Pays de la Loire › Nantes", "P", 1, 4, 15, 15, "€€", "Poêle, casserole.",
   "Un poisson blanc abordable, rôti côté peau, nappé du beurre blanc nantais.",
   ["4|filets de lieu noir|Colin, lieu noir, merlu|3", "1|recette de beurre blanc|SUB:beurre_blanc|3", f"250 g|de riz|{RIZ}|2", f"1 c. à s.|d'huile|{HN}|1"],
   ["**Poisson.** Côté peau, 5 min, retourne 1 min.", "**Servir.** Riz, poisson, beurre blanc."], age=1, cats=["enfants"], profil=["poisson"], tech=["Cuisson du poisson"])
-K("blanquette_veau", "Blanquette de veau à l'ancienne", "Blanquette de veau", "France › Île-de-France", "P", 2, 6, 30, 105, "€€€", "Cocotte.",
-  "Veau poché avec ses légumes, sauce blanche liée à la crème et au jaune, champignons et petits oignons.",
-  ["1,2 kg|d'épaule et tendron de veau|Épaule / tendron de veau|3", f"2|carottes|{CAROTTE}|2", "1|poireau|Poireau|1", f"1|oignon piqué de girofle|{OIG}|1", "250 g|de champignons|Champignon de Paris|2", f"20 cl|de crème|{CF}|2", "2|jaunes d'œufs|Jaune d'œuf|1", f"40 g|de beurre + 40 g de farine|{BEURRE}|2", f"½|citron|{CIT}|1", f"1|bouquet garni|{LAURIER}|1"],
-  ["**Pocher.** Veau en eau froide, écume ; légumes, bouquet garni ; 1 h 30 à frémissement.", "**Velouté.** Roux, 75 cl de bouillon filtré, 10 min ; champignons.", "**Lier.** Hors du feu, crème + jaunes + citron ; remets la viande sans bouillir. Riz."],
-  age=1, cats=["enfants"], fetes=["Repas de famille"], profil=["gras"], tech=["Roux", "Bouillon"])
-K("bouillabaisse_express", "Bouillabaisse express (version familiale)", "Bouillabaisse", "France › Provence-Alpes-Côte d'Azur › Marseille", "P", 2, 6, 40, 40, "€€€", "Faitout large.",
-  "Plusieurs poissons fermes cuits dans un bouillon safrané tomate-fenouil-orange, avec pommes de terre, rouille et croûtons.",
-  ["1,5 kg|de poissons variés (lotte, grondin, rascasse, merlan)|Lotte|3", "1|recette de soupe de poissons (base)|SUB:soupe_poisson_rouille|3", f"6|pommes de terre|{PDT}|2", "1|orange (zeste)|Orange|1", "1 pincée|de safran|Safran (pistils)|2", f"4 c. à s.|d'huile d'olive|{HO}|1"],
-  ["**Base.** Soupe de poissons portée à ébullition avec zeste et safran.", "**Pommes de terre.** En rondelles épaisses, 15 min.", "**Poissons.** Les fermes d'abord, puis les tendres : 8-10 min à gros bouillon (l'huile émulsionne).", "**Servir.** Bouillon d'abord sur croûtons-rouille, puis poissons et pommes de terre."],
-  age=3, fetes=["Repas de famille"], profil=["poisson"], tech=["Cuisson du poisson"])

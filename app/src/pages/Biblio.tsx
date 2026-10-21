@@ -1,4 +1,5 @@
 import { Icon } from "../components/icons";
+import { aTester, PROTOCOLE } from "../lib/aTester";
 import { RECIPE_BY_ID } from "../lib/data";
 import { href } from "../lib/router";
 import { setState, useStore } from "../lib/store";
@@ -20,6 +21,7 @@ export default function Biblio() {
     const a = document.createElement("a"); a.href = url; a.download = `atlas-essais-${new Date().toISOString().slice(0, 10)}.md`; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
+  const prio = aTester();
   const cookedList = Object.entries(cooked).sort((a, b) => b[1] - a[1]).map(([id, n]) => ({ r: RECIPE_BY_ID[id], n })).filter((x) => x.r);
   return (
     <Page title="Mes recettes" sub="Favoris, carnet, menus, imports et recettes déjà cuisinées.">
@@ -32,6 +34,12 @@ export default function Biblio() {
           (sel, temps, quantités, ordre des gestes) : l'export produit un tableau à renvoyer pour corriger les fiches.</p>
         {tried.length ? <ul>{tried.map(([id, e]) => <li key={id}><a href={href(`/recette/${id}`)}>{RECIPE_BY_ID[id].title}</a> <span className="meta">· {e.rating ? "★".repeat(e.rating) : "sans note"} · {new Date(e.date).toLocaleDateString("fr-FR")}</span>{e.note && <><br /><span className="small">{e.note}</span></>}</li>)}</ul>
           : <Empty>Après avoir cuisiné (mode cuisine, dernière étape) ou sur une fiche, remplis « Mon carnet ».</Empty>}
+      </Section>
+      <Section title={`À tester en priorité (${prio.filter((r) => journal[r.id]).length}/${prio.length})`}>
+        <p className="small">Les 30 plats que « Ma semaine » propose le plus souvent. Les essayer d'abord corrige les fiches qui servent le plus.</p>
+        <ol className="small">{PROTOCOLE.map((t) => <li key={t}>{t}</li>)}</ol>
+        <ul className="links-list">{prio.map((r) => <li key={r.id}><a href={href(`/recette/${r.id}`)}>{r.title}</a>{" "}
+          {journal[r.id] ? <span className="ok-text">· essayé{journal[r.id].rating ? ` (${journal[r.id].rating}/5)` : ""}</span> : <span className="meta">· à essayer</span>}</li>)}</ul>
       </Section>
       <Section title={`Menus (${menus.length})`}>
         {menus.length ? menus.map((m) => (

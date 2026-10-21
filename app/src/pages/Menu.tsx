@@ -10,7 +10,7 @@ import { minutes } from "../lib/text";
 import { EVIN } from "../lib/content";
 import { Cover, Page } from "../components/ui";
 
-const ROLE: Record<string, string> = { entree: "Entrée", plat: "Plat", dessert: "Dessert" };
+const ROLE: Record<string, string> = { entree: "Entrée", plat: "Plat", autre: "Fromage", dessert: "Dessert" };
 
 const FREEZE = /congel/;
 /** Ce qui se prépare la veille ou se congèle, pour un menu donné (audit 🟠 5). */
@@ -61,7 +61,7 @@ export default function MenuPage({ id }: { id: string }) {
                 <li key={c.role}>
                   <a href={href(`/recette/${c.recipe.id}`)} className="course">
                     <Cover r={c.recipe} />
-                    <span><span className="meta">{ROLE[c.role]}</span><br /><strong>{c.recipe.title}</strong>{c.adapted && <span className="meta"> · 🔄 version adaptée</span>}</span>
+                    <span><span className="meta">{ROLE[c.role]}</span><br /><strong>{c.recipe.title}</strong>{c.adapted && <span className="meta"> · version adaptée</span>}</span>
                   </a>
                 </li>
               ))}

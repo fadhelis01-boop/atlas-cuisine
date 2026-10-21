@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (864 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (884 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **864 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **934 recettes complètes** ;
+> 1. **884 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **954 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -21,7 +21,7 @@
 
 ## 1. Récapitulatif par lot (calculé)
 
-### Accompagnements de base et classiques français manquants (pour compléter menus et composeur). (20)
+### Accompagnements de base et classiques français manquants (pour compléter menus et composeur). (17)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -41,10 +41,7 @@
 | Soupe de lentilles corail au cumin (mercimek) | Turquie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Soupe de poissons, rouille et croûtons | Marseille | MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 | Tourte poulet-champignons | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Coq au vin (ou version sans alcool) | Bourgogne-Franche-Comté | GL, SU | 🐖 | 🍷 | 🔄 | 🔄 | – |
 | Filet de lieu au beurre blanc, riz | Nantes | LA, PO, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
-| Blanquette de veau à l'ancienne | Île-de-France | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Bouillabaisse express (version familiale) | Marseille | MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 
 ### Afrique subsaharienne : Sénégal, Côte d'Ivoire, Mali, Cameroun, Nigeria, Ghana, Éthiopie, Afrique du Sud, Madagascar, Congo. (23)
 
@@ -224,25 +221,16 @@
 | Verrines yaourt, fruits et granola | États-Unis | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Œufs cocotte aux épinards et au saumon fumé | Cuisine du quotidien | LA, OE, PO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
 
-### Cahier du chef : viandes, volailles, poissons, fruits de mer et œufs, pour pratiquer les cuissons. (27)
+### Cahier du chef : viandes, volailles, poissons, fruits de mer et œufs, pour pratiquer les cuissons. (18)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
 | Côte de bœuf, beurre maître d'hôtel | Cuisine de chef | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | – |
-| Gigot de sept heures | Cuisine de chef | – | ✅ | ✅ | ✅ | ✅ | 1 |
-| Souris d'agneau confites au miel et romarin | Cuisine de chef | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Poulet en crapaudine au citron et à l'ail | Cuisine de chef | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Suprêmes de volaille basse température, jus réduit | Cuisine de chef | LA | ✅ | ✅ | ✅ | ✅ | 1 |
-| Lapin à la moutarde | Bourgogne-Franche-Comté | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
-| Pot-au-feu | Île-de-France | CE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Daube provençale | Provence-Alpes-Côte d'Azur | SU | ✅ | 🍷 | ✅ | 🔄 | – |
-| Joues de bœuf aux carottes | Île-de-France | GL | ✅ | ✅ | ✅ | ✅ | 1 |
-| Osso buco à la milanaise (gremolata) | Lombardie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
-| Confit de canard maison | Gascogne | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Bar en croûte de sel | Cuisine de chef | OE, PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Pavé de saumon peau croustillante, sauce vierge | Cuisine de chef | PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Cabillaud en papillote, légumes et citron | Cuisine de chef | PO | ✅ | ✅ | ✅ | ✅ | 1 |
-| Sole meunière | Cuisine de chef | GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Saint-Jacques poêlées, purée de panais | Cuisine de chef | LA, MM | ✅ | ✅ | ✅ | ✅ | 3 |
 | Dorade au four, fenouil et olives | Grèce | PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Maquereaux grillés, moutarde et citron | Bretagne | MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
@@ -344,19 +332,15 @@
 | Kasha de sarrasin aux champignons | Russie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Blinis maison | Russie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 
-### Europe du Sud : Italie, Espagne, Portugal, Grèce. (26)
+### Europe du Sud : Italie, Espagne, Portugal, Grèce. (21)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
 | Spaghetti aglio, olio e peperoncino | Campanie | GL | ✅ | ✅ | ✅ | ✅ | 3 |
-| Pâtes cacio e pepe | Latium | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Pesto alla genovese maison | Ligurie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
-| Risotto aux champignons | Lombardie | LA, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
-| Lasagnes à la bolognaise | Émilie-Romagne | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Saltimbocca de dinde à la sauge | Latium | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Caponata sicilienne | Sicile | CE, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 | Panzanella toscane | Toscane | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
-| Panna cotta vanille, coulis de fruits rouges | Piémont | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Boulettes à la sauce tomate (polpette al sugo) | Pouilles | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Minestrone | Lombardie | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tortilla de patatas | Espagne | OE | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -369,7 +353,6 @@
 | Pastéis de nata | Lisbonne | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Bacalhau à Brás | Lisbonne | OE, PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Caldo verde (soupe au chou) | Minho | – | ✅ | ✅ | ✅ | ✅ | 1 |
-| Moussaka | Grèce | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Souvlaki de poulet et pita | Grèce | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Salade grecque (horiatiki) | Grèce | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Spanakopita (feuilleté épinards-feta) | Grèce | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -424,7 +407,7 @@
 | Riz sauté végétarien aux légumes croquants | Chine | GL, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Soupe de nouilles au miso, tofu et épinards | Japon | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
 
-### France (1/3) : Bretagne, Normandie, Nord, Est. (21)
+### France (1/3) : Bretagne, Normandie, Nord, Est. (19)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -438,10 +421,8 @@
 | Teurgoule (riz au lait à la cannelle) | Normandie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Rillettes de maquereau au citron | Bretagne | LA, MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 2 |
 | Beurre blanc nantais | Pays de la Loire | LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
-| Tarte Tatin | Centre-Val de Loire | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Carbonade flamande | Hauts-de-France | GL, LA, MO | ✅ | 🍷 | ✅ | 🔄 | 3 |
 | Gaufres croustillantes | Hauts-de-France | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 2 |
-| Soupe à l'oignon gratinée | Île-de-France | GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
 | Œufs mayonnaise | Île-de-France | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | – |
 | Steak frites, beurre maître d'hôtel | Île-de-France | LA | ✅ | ✅ | ✅ | ✅ | 3 |
 | Croque-monsieur à la béchamel | Île-de-France | GL, LA | 🐖 | ✅ | 🔄 | ✅ | 2 |
@@ -450,7 +431,7 @@
 | Bretzels maison | Alsace | GL, LA | ✅ | ✅ | ✅ | ✅ | 4 |
 | Madeleines à la bosse | Lorraine | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 2 |
 
-### France (2/3) : Est, Bourgogne, Alpes, Lyonnais, Provence, Corse. (21)
+### France (2/3) : Est, Bourgogne, Alpes, Lyonnais, Provence, Corse. (20)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -461,7 +442,6 @@
 | Escargots au beurre persillé | Bourgogne-Franche-Comté | LA, MM | ✅ | ✅ | ✅ | ✅ | – |
 | Gratin de pommes de terre au comté | Bourgogne-Franche-Comté | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Fondue savoyarde | Savoie | LA, SU | ✅ | 🍷 | ✅ | 🔄 | – |
-| Tartiflette | Savoie | LA, SU | 🐖 | 🍷 | 🔄 | 🔄 | 3 |
 | Gratin de crozets (ou petites pâtes) au beaufort | Savoie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Salade lyonnaise | Lyonnais | MO, OE | 🐖 | 🟡 traces | 🔄 | 🔄 | – |
 | Aligot | Aubrac | LA | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -476,24 +456,19 @@
 | Veau aux olives (Corse) | Corse | SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
 | Fiadone (gâteau corse au brocciu) | Corse | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 
-### France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer. (27)
+### France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer. (22)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
-| Cassoulet de Castelnaudary (version canard-bœuf) | Lauragais | – | ✅ | ✅ | ✅ | ✅ | 3 |
 | Magret de canard aux cerises | Gascogne | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 | Pommes de terre sarladaises | Périgord | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Garbure (soupe paysanne du Béarn) | Béarn | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Piperade basque | Pays basque | OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Poulet basquaise | Pays basque | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Gâteau basque à la crème | Pays basque | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Cannelés bordelais | Bordeaux | GL, LA, OE | ✅ | 🍷 | ✅ | 🔄 | 3 |
-| Poule au pot farcie (version poulet) | Béarn | OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tourin à l'ail | Périgord | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Brandade de morue gratinée | Nîmes | GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tielle sétoise | Sète | GL, MM | ✅ | ✅ | ✅ | ✅ | 3 |
-| Navarin d'agneau printanier | Île-de-France | GL | ✅ | ✅ | ✅ | ✅ | 1 |
-| Hachis parmentier | Île-de-France | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Blanquette de poulet express | Île-de-France | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Flamiche aux poireaux | Picardie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Welsh du Nord | Nord | GL, LA, MO, OE | ✅ | 🍷 | ✅ | 🔄 | – |
@@ -606,7 +581,7 @@
 | Gallo pinto (riz aux haricots noirs) | Costa Rica | OE, PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Ropa vieja (bœuf effiloché cubain) | Cuba | – | ✅ | ✅ | ✅ | ✅ | 3 |
 
-### Moyen-Orient & Caucase, Asie du Sud. (29)
+### Moyen-Orient & Caucase, Asie du Sud. (28)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -626,7 +601,6 @@
 | Riz persan au tahdig | Iran | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Ragoût d'agneau aux herbes (ghormeh sabzi simplifié) | Iran | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Khachapuri (pain au fromage géorgien) | Géorgie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | – |
-| Poulet au beurre (butter chicken) | Delhi | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Chana masala (curry de pois chiches) | Pendjab | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Palak paneer | Pendjab | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Paneer maison | Inde | LA | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -640,7 +614,7 @@
 | Lassi salé à la menthe et au cumin | Inde | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Dal curry au lait de coco (Sri Lanka) | Sri Lanka | MO | ✅ | ✅ | ✅ | ✅ | 1 |
 
-### Pâtisserie et viennoiserie françaises (cahier du chef pâtissier : recettes de maison, gestes de pro). (32)
+### Pâtisserie et viennoiserie françaises (cahier du chef pâtissier : recettes de maison, gestes de pro). (27)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
 |---|---|---|---|---|---|---|---|
@@ -649,7 +623,6 @@
 | Chouquettes | Paris | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Profiteroles, sauce chocolat chaude | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Paris-Brest (crème mousseline pralinée) | Maisons-Laffitte | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
-| Tarte au citron meringuée | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Pâte sucrée aux amandes | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tarte aux fraises | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tarte au chocolat noir | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -658,12 +631,8 @@
 | Fraisier | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Macarons framboise | Paris | FC, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Financiers au beurre noisette | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Clafoutis aux cerises | Limousin | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Île flottante | Paris | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Crème brûlée | Paris | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Crème renversée au caramel | Paris | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Charlotte aux fraises | Paris | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
-| Baba (au rhum ou au sirop d'agrumes) | Lorraine | GL, LA, OE | ✅ | 🍷 | ✅ | 🔄 | – |
 | Tarte tropézienne | Saint-Tropez | GL, LA, OE | ✅ | 🟡 traces | ✅ | ⛔ | 1 |
 | Croissants pur beurre | Paris | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
 | Pains au chocolat (chocolatines) | Paris | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -844,7 +813,7 @@
 | Ribs de bœuf laqués (plat de côtes) | États-Unis | PO | ✅ | ✅ | ✅ | ✅ | 1 |
 | Tamales au poulet en feuille de bananier | Oaxaca | CE, LA | 🟡 | ✅ | 🔄 | ✅ | 3 |
 | Griot (version poulet) et pikliz | Haïti | – | ✅ | ✅ | ✅ | ✅ | 6 |
-| Couscous aux sept légumes (végétarien) | Maroc | GL | ✅ | ✅ | ✅ | ✅ | 1 |
+| Couscous aux sept légumes (végétarien) | Maroc | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Méchoui d'épaule d'agneau au four | Maroc | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 | Baba ghanoush (caviar d'aubergine fumé au tahini) | Liban | SE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Quiche aux poireaux et comté | Hauts-de-France | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
@@ -921,7 +890,7 @@
 | Nihari (jarret de bœuf mijoté toute la nuit) | Lahore | GL, LA | ✅ | ✅ | ✅ | ✅ | 6 |
 | Birria de bœuf et son consommé (Jalisco) | Jalisco | – | ✅ | ✅ | ✅ | ✅ | 6 |
 | Pollo pibil (la cochinita pibil, version poulet) | Yucatán | – | ✅ | ✅ | ✅ | ✅ | 3 |
-| Langue de bœuf sauce piquante | Bourgogne-Franche-Comté | GL, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Langue de bœuf sauce piquante | Bourgogne-Franche-Comté | GL, LA, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 | Queue de bœuf mijotée à la jamaïcaine (oxtail) | Jamaïque | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
 | Galbi-jjim (côtes de bœuf braisées coréennes) | Corée | GL, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
 | Niu rou mian (soupe de nouilles au bœuf braisé de Taïwan) | Taïwan | GL, OE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
@@ -1050,7 +1019,68 @@
 | Crackers de pain rassis aux herbes | France | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Eau infusée concombre, agrumes et menthe | France | – | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 424 · vegetarien : 109 · zero_dechet : 77 · sauces : 62 · express : 48 · brunch : 30 · boissons : 23 · pains : 23 · salade : 22 · pique_nique : 22 · fusion : 13 · fetes : 6.
+### Vague 5 · Audit gourmet (21/10/2026), recommandation 2 : les grands classiques réécrits au niveau des fiches étalons du (31)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Blanquette de veau à l'ancienne | Île-de-France | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Coq au vin | Bourgogne-Franche-Comté | GL, LA, SU | 🐖 | 🍷 | 🔄 | 🔄 | – |
+| Pot-au-feu | Île-de-France | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Daube provençale | Provence-Alpes-Côte d'Azur | SU | ✅ | 🍷 | ✅ | 🔄 | – |
+| Navarin d'agneau printanier | Île-de-France | GL | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poule au pot farcie (version poulet) | Béarn | OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Hachis Parmentier | Île-de-France | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Gigot de sept heures | France | GL, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Souris d'agneau confites au miel et romarin | France | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Joues de bœuf aux carottes | Île-de-France | GL | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lapin à la moutarde | Bourgogne-Franche-Comté | LA, MO, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Poulet basquaise | Pays basque | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tartiflette | Savoie | LA, SU | 🐖 | 🍷 | 🔄 | 🔄 | 3 |
+| Cassoulet de Castelnaudary (version canard-bœuf) | Lauragais | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Confit de canard maison | Gascogne | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Sole meunière | France | GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Bouillabaisse express (version familiale) | Marseille | MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Soupe à l'oignon gratinée | Île-de-France | GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Osso buco à la milanaise (gremolata) | Lombardie | GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Lasagnes à la bolognaise | Émilie-Romagne | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Risotto aux champignons | Lombardie | LA, SU | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Pâtes cacio e pepe | Latium | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Moussaka | Grèce | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poulet au beurre (butter chicken) | Delhi | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Crème brûlée | Paris | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Île flottante | Paris | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tarte Tatin | Centre-Val de Loire | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Baba (au rhum ou au sirop d'agrumes) | Lorraine | GL, LA, OE | ✅ | 🍷 | ✅ | 🔄 | – |
+| Clafoutis aux cerises | Limousin | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tarte au citron meringuée | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Panna cotta vanille, coulis de fruits rouges | Piémont | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+
+### Vague 5 · Audit gourmet (21/10/2026), recommandations 4, 7 et 9 : les accompagnements de base (reliés aux plats et ajoutés (20)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Riz blanc parfait (par absorption) | Asie de l'Est | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Semoule de couscous moelleuse | Algérie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâtes au beurre et parmesan (cuisson juste) | Italie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pommes de terre vapeur au persil | France | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Maquereaux au four, moutarde et citron | Bretagne | MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sardines poêlées en persillade | Provence-Alpes-Côte d'Azur | GL, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Lieu noir en croûte d'herbes et de chapelure | France | GL, LA, MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Papillotes de poisson aux petits légumes | France | LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Merlu poché, fondue de poireaux | Pays de la Loire | LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Potimarron rôti farci au quinoa, feta et noix | France | FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Gratin de céleri-rave et pommes de terre aux noix | France | CE, FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poêlée de panais, carottes et pois chiches rôtis au miel et cumin | France | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Velouté de topinambours, noisettes grillées | France | FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Chou vert braisé aux saucisses de volaille | Auvergne-Rhône-Alpes | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poires pochées au vin et aux épices | Bourgogne-Franche-Comté | SU | ✅ | 🍷 | ✅ | 🔄 | – |
+| Tarte Bourdaloue (poires et crème d'amande) | Paris | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Coings rôtis au miel et à la vanille | France | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mont-blanc en verrines (marrons et chantilly) | Auvergne-Rhône-Alpes | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Paella valenciana (poulet, lapin, haricots) | Valence | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Composer un plateau de fromages | France | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+
+**Rubriques couvertes par la vague 2** : enfants : 442 · vegetarien : 114 · zero_dechet : 80 · sauces : 62 · express : 50 · brunch : 30 · boissons : 23 · pains : 23 · salade : 22 · pique_nique : 22 · fusion : 13 · fetes : 7.
 
 ---
 
@@ -1338,7 +1368,7 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 8 min · coût €
 
 Toasts de chèvre gratinés au miel et thym sur une salade aux noix, vinaigrette balsamique.
 
-**Ingrédients** : 8 tranches de baguette · 200 g de bûche de chèvre · 2 c. à s. de miel · 1 salade (mesclun) · 40 g de noix · 2 c. à s. de vinaigre balsamique · 4 c. à s. d'huile d'olive
+**Ingrédients** : 8 tranches de baguette · 200 g de bûche de chèvre · 2 c. à s. de miel · 1 salade (mesclun) · 40 g de noix · 2 c. à s. de vinaigre balsamique · 4 c. à s. d'huile d'olive · 2 brins de thym
 
 1. **Toasts.** Chèvre sur pain, miel, thym, 6-8 min sous le gril.
 2. **Salade.** Vinaigrette, noix, toasts chauds dessus.
@@ -1448,35 +1478,6 @@ Poulet et champignons dans une sauce crémeuse, sous un couvercle de pâte feuil
 
 ---
 
-### Coq au vin (ou version sans alcool)
-
-*Coq au vin · France › Bourgogne-Franche-Comté · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 00 · coût €€
-
-- 🐖 **Contient du porc** : Lardons
-- 🍷 **Contient de l'alcool** : Vin rouge
-- ⚠️ **Allergènes** : gluten, sulfites
-- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
-
-**Équipement** : Cocotte.
-
-Volaille marinée au vin rouge, mijotée avec champignons et petits oignons : le grand classique bourguignon.
-
-**Ingrédients** : 1 coq ou gros poulet en morceaux · 75 cl de vin rouge de Bourgogne · 200 g de lardons (ou de dinde fumée) · 250 g de champignons · 12 petits oignons grelots · 2 carottes · 2 c. à s. de farine · 1 bouquet garni · 3 gousses d'ail
-
-1. **Mariner.** Volaille, vin, carottes, bouquet garni, une nuit.
-2. **Saisir.** Morceaux égouttés dorés, farine, marinade bouillie.
-3. **Mijoter.** 1 h 30 ; lardons, oignons et champignons dorés à part, ajoutés 20 min avant la fin.
-
-- **Variante Sans alcool** : Vin rouge → **½ bouillon de volaille + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** (+ 1 c. à c. de concentré pour la couleur). **À tester**. *Calcul* : porc **violates**, alcool **trace**.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Mijoter, Marinade
-
----
-
 ### Filet de lieu au beurre blanc, riz
 
 *Lieu au beurre blanc · France › Pays de la Loire › Nantes · Plat*
@@ -1503,61 +1504,6 @@ Un poisson blanc abordable, rôti côté peau, nappé du beurre blanc nantais.
 
 ---
 
-### Blanquette de veau à l'ancienne
-
-*Blanquette de veau · France › Île-de-France · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 45 · coût €€€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Veau poché avec ses légumes, sauce blanche liée à la crème et au jaune, champignons et petits oignons.
-
-**Ingrédients** : 1,2 kg d'épaule et tendron de veau · 2 carottes · 1 poireau · 1 oignon piqué de girofle · 250 g de champignons · 20 cl de crème · 2 jaunes d'œufs · 40 g de beurre + 40 g de farine · ½ citron · 1 bouquet garni
-
-1. **Pocher.** Veau en eau froide, écume ; légumes, bouquet garni ; 1 h 30 à frémissement.
-2. **Velouté.** Roux, 75 cl de bouillon filtré, 10 min ; champignons.
-3. **Lier.** Hors du feu, crème + jaunes + citron ; remets la viande sans bouillir. Riz.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Roux, Bouillon
-
----
-
-### Bouillabaisse express (version familiale)
-
-*Bouillabaisse · France › Provence-Alpes-Côte d'Azur › Marseille · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 40 min · coût €€€
-
-- ✅ Sans porc (calculé)
-- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
-- ⚠️ **Allergènes** : moutarde, œufs, poissons ; **possibles selon marque** : céleri, gluten, lait, sulfites
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Faitout large.
-
-Plusieurs poissons fermes cuits dans un bouillon safrané tomate-fenouil-orange, avec pommes de terre, rouille et croûtons.
-
-**Ingrédients** : 1,5 kg de poissons variés (lotte, grondin, rascasse, merlan) · 1 recette de soupe de poissons (base) · 6 pommes de terre · 1 orange (zeste) · 1 pincée de safran · 4 c. à s. d'huile d'olive
-
-1. **Base.** Soupe de poissons portée à ébullition avec zeste et safran.
-2. **Pommes de terre.** En rondelles épaisses, 15 min.
-3. **Poissons.** Les fermes d'abord, puis les tendres : 8-10 min à gros bouillon (l'huile émulsionne).
-4. **Servir.** Bouillon d'abord sur croûtons-rouille, puis poissons et pommes de terre.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Cuisson du poisson
-
----
-
 ## 2.2 Afrique subsaharienne : Sénégal, Côte d'Ivoire, Mali, Cameroun, Nigeria, Ghana, Éthiopie, Afrique du Sud, Madagascar, Congo.
 
 ### Thiéboudienne (riz au poisson)
@@ -1575,7 +1521,7 @@ Niveau ⭐⭐ · 6 portions · actif 50 min · repos/cuisson 1 h 15 · coût €
 
 Le plat national sénégalais : poisson farci au nokoss, légumes fondants et riz cuit dans la sauce tomate, avec son gratin croustillant au fond (le xooñ).
 
-**Ingrédients** : 1,2 kg de poisson ferme (thiof, mérou, dorade) en darnes · 1 recette de nokoss (liée) · 500 g de riz brisé ou long · 70 g de concentré de tomate · 1 chou en quartiers · 2 carottes · 1 aubergine · 1 morceau de manioc · 200 g de potiron · 6 gombos · 1 morceau de poisson séché (guedj, facultatif) *(facultatif)* · 15 cl d'huile · 2 oignons · 1 piment antillais entier
+**Ingrédients** : 1,2 kg de poisson ferme (thiof, mérou, dorade) en darnes · 1 recette de nokoss (liée) · 500 g de riz brisé ou long · 70 g de concentré de tomate · 1 chou en quartiers · 2 carottes · 1 aubergine · 1 morceau de manioc · 200 g de potiron · 6 gombos · 1 morceau de poisson séché (guedj, facultatif) *(facultatif)* · 15 cl d'huile · 2 oignons · 1 piment antillais entier · 2 citrons verts (au service) *(facultatif)*
 
 1. **Farcir.** Entaille le poisson et remplis de nokoss ; dore-le dans l'huile, réserve.
 2. **Sauce.** Oignons, concentré dilué, 10 min ; 2 L d'eau, poisson séché, piment entier ; légumes durs d'abord (manioc, carottes, chou), puis les tendres. Remets le poisson 15 min.
@@ -1830,7 +1776,7 @@ Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 45 min · coût €€
 
 Poulet, plantains frits et légumes mijotés : le plat des grandes occasions au Cameroun, riche en couleurs.
 
-**Ingrédients** : 1,2 kg de poulet en morceaux · 3 plantains mûrs · 2 carottes · 200 g de haricots verts · 1 poivron · 3 tomates · 2 oignons · 1 morceau de gingembre + 3 gousses d'ail · 30 cl d'huile
+**Ingrédients** : 1,2 kg de poulet en morceaux · 3 plantains mûrs · 2 carottes · 200 g de haricots verts · 1 poivron · 3 tomates · 2 oignons · 1 morceau de gingembre + 3 gousses d'ail · 30 cl d'huile · 1 c. à s. de persil haché *(facultatif)*
 
 1. **Poulet.** Mariné ail-gingembre, doré.
 2. **Plantains.** En rondelles frites, réservées.
@@ -2358,7 +2304,7 @@ Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 20 min · coût €€
 
 Poulet mariné au piment doux, achiote et ananas, saisi, dans des tortillas de maïs, oignon, coriandre, ananas grillé.
 
-**Ingrédients** : 800 g de hauts de cuisse · 12 tortillas de maïs · ½ ananas · 2 piments guajillo ou 2 c. à s. de piment doux · 1 c. à s. d'achiote (ou paprika) · 1 c. à c. de cumin + origan · 3 c. à s. de vinaigre · 1 oignon blanc · 1 bouquet de coriandre · 2 citrons verts
+**Ingrédients** : 800 g de hauts de cuisse · 12 tortillas de maïs · ½ ananas · 2 piments guajillo ou 2 c. à s. de piment doux · 1 c. à s. d'achiote (ou paprika) · 1 c. à c. de cumin + origan · 3 c. à s. de vinaigre · 1 oignon blanc · 1 bouquet de coriandre · 2 citrons verts · 3 gousses d'ail
 
 1. **Marinade.** Piments réhydratés, achiote, épices, vinaigre, ail, 100 g d'ananas : mixés. Poulet 4 h.
 2. **Cuire.** Saisi en entier, émincé, recroustillé.
@@ -2408,7 +2354,7 @@ Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 25 min · coût €
 
 Tortillas roulées autour de poulet effiloché, nappées d'une sauce aux piments doux et gratinées.
 
-**Ingrédients** : 12 tortillas de maïs ou blé · 600 g de poulet cuit effiloché · 3 piments ancho réhydratés · 400 g de tomates pelées · 1 oignon · 2 gousses d'ail · 1 c. à c. de cumin · 200 g de fromage râpé · 10 cl de crème
+**Ingrédients** : 12 tortillas de maïs ou blé · 600 g de poulet cuit effiloché · 3 piments ancho réhydratés · 400 g de tomates pelées · 1 oignon · 2 gousses d'ail · 1 c. à c. de cumin · 200 g de fromage râpé · 10 cl de crème · ½ bouquet de coriandre *(facultatif)*
 
 1. **Sauce.** Piments, tomates, oignon, ail, cumin mixés, cuits 10 min.
 2. **Rouler.** Tortillas trempées dans la sauce, poulet, roulées serrées.
@@ -3408,7 +3354,7 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 4 h 00 · coût €
 
 Un bouillon clair de bœuf parfumé à la badiane, cannelle et oignon grillé, nouilles de riz, bœuf cru tranché qui cuit dans le bol.
 
-**Ingrédients** : 1,5 kg d'os à moelle et jarret de bœuf · 300 g de rumsteck très finement tranché · 400 g de nouilles de riz plates · 2 oignons + 1 morceau de gingembre grillés · 3 badianes + 1 bâton de cannelle + 4 clous de girofle · 4 c. à s. de sauce de poisson · 1 bouquet de basilic thaï, coriandre, menthe · 200 g de pousses de soja · 2 citrons verts
+**Ingrédients** : 1,5 kg d'os à moelle et jarret de bœuf · 300 g de rumsteck très finement tranché · 400 g de nouilles de riz plates · 2 oignons + 1 morceau de gingembre grillés · 3 badianes + 1 bâton de cannelle + 4 clous de girofle · 4 c. à s. de sauce de poisson · 1 bouquet de basilic thaï, coriandre, menthe · 200 g de pousses de soja · 2 citrons verts · 1 c. à s. de sucre
 
 1. **Blanchir.** Os et jarret 5 min, rincés (bouillon clair).
 2. **Griller.** Oignons et gingembre noircis à sec, épices toastées.
@@ -3434,7 +3380,7 @@ Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 30 min · coût €
 
 Baguette croustillante, poulet mariné, pickles de carotte-daikon, concombre, coriandre, piment et mayonnaise : le sandwich franco-vietnamien.
 
-**Ingrédients** : 2 baguettes · 500 g de hauts de cuisse émincés · 2 bâtons de citronnelle · 2 carottes · ½ daikon · 5 cl de vinaigre de riz · 1 concombre · 1 bouquet de coriandre · 4 c. à s. de mayonnaise · 1 c. à s. de sauce de poisson
+**Ingrédients** : 2 baguettes · 500 g de hauts de cuisse émincés · 2 bâtons de citronnelle · 2 carottes · ½ daikon · 5 cl de vinaigre de riz · 1 concombre · 1 bouquet de coriandre · 4 c. à s. de mayonnaise · 1 c. à s. de sauce de poisson · 2 c. à s. de sucre · 2 gousses d'ail
 
 1. **Pickles.** Carotte et daikon en julienne, vinaigre + sucre + sel, 30 min.
 2. **Poulet.** Mariné citronnelle, ail, sauce de poisson, sucre ; poêlé 8 min.
@@ -5210,7 +5156,7 @@ Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 12 min · coût €
 
 Triangles de tortilla dorés, mijotés une minute dans une sauce tomate-piment, fromage, crème, oignon rouge et œuf : l'anti-gaspi mexicain du matin.
 
-**Ingrédients** : 6 tortillas de maïs (un peu rassises) · 400 g de tomates pelées · 1 piment · 1 gousse d'ail · 2 œufs · 60 g de feta ou queso fresco · 3 c. à s. de crème · ¼ oignon rouge
+**Ingrédients** : 6 tortillas de maïs (un peu rassises) · 400 g de tomates pelées · 1 piment · 1 gousse d'ail · 2 œufs · 60 g de feta ou queso fresco · 3 c. à s. de crème · ¼ oignon rouge · ½ bouquet de coriandre *(facultatif)*
 
 1. **Chips.** Tortillas en triangles, dorées à la poêle huilée ou au four : croustillantes.
 2. **Sauce.** Tomates, piment, ail mixés, 8 min à frémissement ; les chips 1 min dedans (elles restent un peu croquantes).
@@ -5283,7 +5229,7 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 12 min · coût €€
 
 Œuf cuit au bain-marie sur un lit d'épinards et de saumon fumé, crème et ciboulette : à tremper avec des mouillettes.
 
-**Ingrédients** : 4 œufs · 100 g d'épinards · 80 g de saumon fumé · 4 c. à s. de crème · 1 c. à s. de ciboulette
+**Ingrédients** : 4 œufs · 100 g d'épinards · 80 g de saumon fumé · 4 c. à s. de crème · 1 c. à s. de ciboulette · 10 g de beurre (ramequins)
 
 1. **Préchauffer.** Four 180 °C ; ramequins beurrés.
 2. **Garnir.** Épinards tombés à la poêle, saumon, 1 c. à s. de crème, l'œuf cassé dessus.
@@ -5322,60 +5268,6 @@ Une pièce épaisse saisie puis finie au four jusqu'à la cuisson voulue, repos�
 **Conservation** : Restes : 2 jours au frigo ; froids en salade ou en sandwich.
 
 **Techniques** : Cuisson de la viande, Arroser, Repos de la viande
-
----
-
-### Gigot de sept heures
-
-*Gigot de sept heures · France › Cuisine de chef · Plat* · Fêtes : Pâques, Repas de famille
-
-Niveau ⭐ · 8 portions · actif 20 min · repos/cuisson 7 h 00 · coût €€€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte en fonte avec couvercle, four.
-
-Un gigot qui cuit si longtemps qu'il se mange à la cuillère, confit avec ses légumes : peu de travail, beaucoup de patience.
-
-**Ingrédients** : 1 gigot d'agneau de 2,2 kg · 2 têtes d'ail · 4 carottes · 3 oignons · 4 branches de thym et romarin · 50 cl de bouillon · 2 c. à s. d'huile d'olive
-
-1. **Dorer.** Le gigot sur toutes les faces dans la cocotte, 15 min.
-2. **Garnir.** Légumes, ail en chemise, herbes, bouillon.
-3. **Cuire.** Couvercle (cordon de pâte farine-eau idéalement), 7 h à 120 °C, arrose 2 fois.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Mijoter, Basse température
-
----
-
-### Souris d'agneau confites au miel et romarin
-
-*Souris d'agneau · France › Cuisine de chef · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 3 h 00 · coût €€€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte, four.
-
-Des jarrets d'agneau caramélisés au miel, confits 3 h : la viande se détache de l'os.
-
-**Ingrédients** : 4 souris d'agneau · 2 c. à s. de miel · 1 tête d'ail · 3 branches de romarin · 2 oignons · 400 g de tomates pelées · 30 cl de bouillon
-
-1. **Dorer.** Les souris salées, 10 min.
-2. **Mijoter.** Oignons, ail, tomates, romarin, bouillon ; couvert, 2 h 30 à 150 °C.
-3. **Laquer.** Miel au pinceau, 20 min découvert en arrosant.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Mijoter
 
 ---
 
@@ -5421,7 +5313,7 @@ Niveau ⭐⭐ · 4 portions · actif 15 min · repos/cuisson 1 h 15 · coût €
 
 Des blancs de poulet juteux comme jamais : saisis côté peau, cuits doucement au four jusqu'à 74 °C pile, jus déglacé.
 
-**Ingrédients** : 4 suprêmes de poulet avec peau · 30 g de beurre · 20 cl de bouillon de volaille · 2 branches de thym · 1 échalote
+**Ingrédients** : 4 suprêmes de poulet avec peau · 30 g de beurre · 20 cl de bouillon de volaille · 2 branches de thym · 1 échalote · 30 g de sucre (saumure, facultatif) *(facultatif)*
 
 1. **Saumure.** 1 h dans 1 L d'eau + 60 g de sel + 30 g de sucre (facultatif mais spectaculaire).
 2. **Saisir.** Côté peau, 5 min jusqu'à doré croustillant.
@@ -5431,167 +5323,6 @@ Des blancs de poulet juteux comme jamais : saisis côté peau, cuits doucement a
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
 **Techniques** : Saumure, Basse température, Déglacer
-
----
-
-### Lapin à la moutarde
-
-*Lapin à la moutarde · France › Bourgogne-Franche-Comté · Plat*
-
-Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 1 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
-- ⚠️ **Allergènes** : lait, moutarde ; **possibles selon marque** : céleri, sulfites
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Morceaux de lapin badigeonnés de moutarde, dorés et mijotés à la crème : tendre et relevé.
-
-**Ingrédients** : 1 lapin en morceaux · 4 c. à s. de moutarde de Dijon · 20 cl de crème · 20 cl de bouillon (ou vin blanc) · 2 échalotes · 2 branches de thym · 20 g de beurre
-
-1. **Badigeonner.** Moutarde sur les morceaux, 30 min.
-2. **Dorer.** Au beurre, échalotes.
-3. **Mijoter.** Bouillon, thym, couvert 45 min ; crème, 10 min.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Pot-au-feu
-
-*Pot-au-feu · France › Île-de-France · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐ · 8 portions · actif 30 min · repos/cuisson 3 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : céleri
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Grand faitout.
-
-Plusieurs morceaux de bœuf pochés longuement avec légumes et os à moelle : le bouillon d'abord, puis la viande avec moutarde, cornichons et gros sel.
-
-**Ingrédients** : 800 g de paleron · 800 g de macreuse ou gîte · 600 g de jarret ou plat de côtes · 4 os à moelle · 8 carottes · 4 poireaux · 4 navets · 1 céleri-rave · 8 pommes de terre · 1 oignon piqué de girofle + bouquet garni
-
-1. **Pocher.** Viandes dans l'eau froide, portées à frémissement ; écume 20 min. Oignon, bouquet garni, gros sel ; 2 h 30 à frémissement.
-2. **Légumes.** 45 min avant la fin ; os à moelle (enveloppés de sel aux deux bouts) 20 min.
-3. **Servir.** Bouillon avec vermicelles ; viandes, légumes, moutarde, cornichons, fleur de sel.
-
-**Conservation** : Bouillon : 3 mois congelé. Restes de viande : hachis parmentier (recette liée).
-
-**Techniques** : Bouillon
-
----
-
-### Daube provençale
-
-*Daube · France › Provence-Alpes-Côte d'Azur · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- 🍷 **Contient de l'alcool** : Vin rouge
-- ⚠️ **Allergènes** : sulfites
-- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
-
-**Équipement** : Cocotte, four.
-
-Bœuf mariné au vin rouge, orange, olives et herbes, mijoté jusqu'à fondre : la sauce sert ensuite aux macaronis.
-
-**Ingrédients** : 1,5 kg de joue ou paleron · 75 cl de vin rouge · 2 carottes · 2 oignons · 1 orange (zeste en bandes) · 100 g d'olives noires · 4 gousses d'ail · 1 bouquet garni + 1 clou de girofle · 2 c. à s. de concentré
-
-1. **Mariner.** Viande, vin, légumes, zeste, herbes, 12 h.
-2. **Saisir.** Viande égouttée, dorée ; marinade bouillie 2 min, versée avec le concentré.
-3. **Cuire.** 3 h à 150 °C couvert ; olives les 30 dernières minutes.
-
-- **Variante Sans alcool** : Vin rouge → **½ bouillon de bœuf + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** : couleur, fruit et acidité. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
-
-**Conservation** : 4 jours ; meilleure réchauffée.
-
-**Techniques** : Mijoter, Marinade
-
----
-
-### Joues de bœuf aux carottes
-
-*Bœuf carottes · France › Île-de-France · Plat*
-
-Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 3 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten ; **possibles selon marque** : céleri
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Des joues qui deviennent fondantes, des carottes confites dans la sauce : un plat familial sans alcool.
-
-**Ingrédients** : 1,5 kg de joues de bœuf · 1 kg de carottes · 2 oignons · 1 c. à s. de concentré · 1 c. à s. de farine · 75 cl de bouillon de bœuf · 1 bouquet garni
-
-1. **Saisir.** Joues en gros morceaux, dorées ; oignons, farine, concentré.
-2. **Mijoter.** Bouillon, bouquet garni, 2 h couvert ; carottes en rondelles, 1 h.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Mijoter
-
----
-
-### Osso buco à la milanaise (gremolata)
-
-*Ossobuco alla milanese · Europe du Sud › Italie › Lombardie · Plat*
-
-Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 2 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Jarret de veau braisé à la tomate, os à moelle fondant, et une gremolata citron-ail-persil au moment de servir.
-
-**Ingrédients** : 4 tranches de jarret de veau · 400 g de tomates pelées · 1 oignon + 1 carotte + 1 branche de céleri · 25 cl de bouillon · 2 c. à s. de farine · 1 citron (zeste) · 1 bouquet de persil + 1 gousse d'ail · 30 g de beurre
-
-1. **Saisir.** Jarrets farinés, entaillés en bordure (ils ne gondolent pas), dorés au beurre.
-2. **Braiser.** Légumes, tomates, bouillon, 1 h 45 couvert.
-3. **Gremolata.** Zeste, ail, persil hachés ensemble, au service. Avec risotto ou polenta.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Mijoter
-
----
-
-### Confit de canard maison
-
-*Confit de canard · France › Nouvelle-Aquitaine › Gascogne · Plat*
-
-Niveau ⭐⭐ · 4 portions · actif 20 min · repos/cuisson 27 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : aucun déclaré
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte, four, thermomètre.
-
-Cuisses salées une nuit puis confites 3 h dans leur graisse : tendres, à poêler côté peau au moment de servir.
-
-**Ingrédients** : 4 cuisses de canard · 1 kg de graisse de canard · 60 g de gros sel · 4 gousses d'ail · 4 branches de thym + 2 feuilles de laurier · 1 c. à c. de poivre
-
-1. **Saler.** Sel, poivre, thym, ail ; 12-24 h au frigo.
-2. **Confire.** Rince, sèche, couvre de graisse fondue ; 3 h à 100 °C (petits frémissements).
-3. **Servir.** Poêle côté peau 8 min, croustillant. Avec pommes sarladaises (dans la graisse).
-
-**Conservation** : 3 semaines au frigo couvertes de graisse.
-
-**Techniques** : Confire
 
 ---
 
@@ -5674,33 +5405,6 @@ Cuisson douce à la vapeur dans sa papillote : le poisson garde son jus, les lé
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
 **Techniques** : Papillote
-
----
-
-### Sole meunière
-
-*Sole meunière · France › Cuisine de chef · Plat*
-
-Niveau ⭐⭐ · 2 portions · actif 15 min · repos/cuisson 10 min · coût €€€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten, lait, poissons
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Grande poêle ovale.
-
-La sole farinée, dorée au beurre, arrosée d'un beurre noisette citronné : le classique des grandes brasseries.
-
-**Ingrédients** : 2 soles portion (300 g) pelées · 30 g de farine · 80 g de beurre · 1 citron · 1 c. à s. de persil
-
-1. **Fariner.** Soles salées, farinées, tapotées.
-2. **Cuire.** 30 g de beurre moussant, 4 min par face côté peau blanche d'abord, en arrosant.
-3. **Beurre noisette.** Reste du beurre jusqu'à noisette, jus de citron, persil, nappe.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Poisson plat, Cuisson du poisson
 
 ---
 
@@ -7688,7 +7392,7 @@ Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 40 min · coût €
 
 Pommes, raisins, cannelle et chapelure grillée au beurre roulés dans une pâte fine : avec la pâte filo, c'est facile.
 
-**Ingrédients** : 8 feuilles de filo · 1 kg de pommes acidulées · 60 g de raisins secs · 80 g de sucre · 1 c. à c. de cannelle · 60 g de chapelure · 100 g de beurre fondu · 1 c. à s. de sucre glace
+**Ingrédients** : 8 feuilles de filo · 1 kg de pommes acidulées · 60 g de raisins secs · 80 g de sucre · 1 c. à c. de cannelle · 60 g de chapelure · 100 g de beurre fondu · 1 c. à s. de sucre glace · ½ citron (jus)
 
 1. **Garniture.** Pommes en fines lamelles, sucre, cannelle, raisins, jus de citron.
 2. **Chapelure.** Dorée dans 40 g de beurre.
@@ -7953,32 +7657,6 @@ Ail doré, huile d'olive, piment et persil : le plat de minuit italien, prêt en
 
 ---
 
-### Pâtes cacio e pepe
-
-*Cacio e pepe · Europe du Sud › Italie › Latium · Plat*
-
-Niveau ⭐⭐ · 4 portions · actif 10 min · repos/cuisson 12 min · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten, lait
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Casserole, poêle, bol.
-
-Pecorino, poivre noir grillé et eau des pâtes : trois ingrédients, une crème soyeuse.
-
-**Ingrédients** : 400 g de spaghetti ou tonnarelli · 150 g de pecorino romano finement râpé · 2 c. à c. de poivre noir concassé
-
-1. **Pâtes.** Cuis dans peu d'eau peu salée (le pecorino est salé). Garde 30 cl d'eau.
-2. **Poivre.** Toaste-le 1 min à sec dans la poêle, ajoute une louche d'eau.
-3. **Crème.** Bol : pecorino + un peu d'eau tiède (pas bouillante) → pâte lisse.
-4. **Lier.** Pâtes dans la poêle hors du feu, crème de pecorino, remue vite en ajoutant de l'eau jusqu'à ce que ce soit nappant.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
 ### Pesto alla genovese maison
 
 *Pesto genovese · Europe du Sud › Italie › Ligurie · Sauce*
@@ -8000,60 +7678,6 @@ Basilic, pignons, ail, parmesan, pecorino et huile d'olive : un vert vif quand i
 2. **Finir.** Fromages, puis l'huile en filet. Au mixeur : à-coups courts, bol passé au froid, pour ne pas noircir le basilic.
 
 **Conservation** : 3 jours au frigo sous une couche d'huile ; 3 mois congelé en glaçons.
-
----
-
-### Risotto aux champignons
-
-*Risotto ai funghi · Europe du Sud › Italie › Lombardie · Plat*
-
-Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 0 min · coût €€
-
-- ✅ Sans porc (calculé)
-- 🍷 **Contient de l'alcool** : Vin blanc
-- ⚠️ **Allergènes** : lait, sulfites ; **possibles selon marque** : céleri
-- 👶 **Enfants** : ✓ dès 1 an en version sans alcool.
-
-**Équipement** : Sauteuse, casserole (bouillon).
-
-Riz crémeux nappé de parmesan et de champignons dorés : le secret est de remuer et d'ajouter le bouillon peu à peu.
-
-**Ingrédients** : 320 g de riz à risotto · 400 g de champignons (Paris et pleurotes) · 1,2 L de bouillon de volaille chaud · 1 échalote · 10 cl de vin blanc · 60 g de parmesan · 50 g de beurre · 1 c. à s. de persil
-
-1. **Champignons.** Dore-les à feu vif avec un peu de beurre ; réserve.
-2. **Nacrer.** Échalote fondue, riz 2 min jusqu'à ce qu'il soit translucide. Vin, laisse évaporer.
-3. **Cuire.** Bouillon louche par louche en remuant, 18 min : le riz est tendre avec un cœur légèrement ferme.
-4. **Mantecare.** Hors du feu, beurre froid et parmesan, remue vivement, couvre 2 min. Champignons et persil.
-
-- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron** (acidité). **À tester**. *Calcul* : porc **ok**, alcool **ok**.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Lasagnes à la bolognaise
-
-*Lasagne alla bolognese · Europe du Sud › Italie › Émilie-Romagne · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 8 portions · actif 45 min · repos/cuisson 2 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : céleri, gluten, lait ; **possibles selon marque** : œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte, casserole, plat à gratin.
-
-Ragù mijoté longuement, béchamel, pâtes et parmesan : on prend le temps du dimanche, le reste est simple.
-
-**Ingrédients** : 600 g de bœuf haché · 250 g de lasagnes · 800 g de tomates pelées · 1 carotte · 1 branche de céleri · 1 oignon · 25 cl de lait (ragù) · 60 cl de lait (béchamel) · 60 g de beurre + 60 g de farine · 100 g de parmesan · 1 pincée de muscade
-
-1. **Ragù.** Carotte, céleri, oignon hachés fins 10 min ; viande jusqu'à ce qu'elle grésille ; 25 cl de lait, laisse absorber ; tomates. 2 h à feu très doux.
-2. **Béchamel.** Beurre, farine, lait chaud, muscade : nappante.
-3. **Monter.** Ragù, pâtes, ragù, béchamel, parmesan… 4 couches, finir béchamel-parmesan.
-4. **Cuire.** 40 min à 180 °C ; 15 min de repos avant de couper.
-
-**Conservation** : 4 jours au frigo ; se congèle en parts.
 
 ---
 
@@ -8127,31 +7751,6 @@ La salade anti-gaspi : pain rassis gorgé de jus de tomates, oignon rouge, conco
 1. **Jus.** Tomates en morceaux, salées : 15 min, elles rendent leur eau.
 2. **Pain.** En gros cubes, mélangé aux tomates, huile, vinaigre.
 3. **Finir.** Concombre, oignon émincé, basilic ; 20 min de repos.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Panna cotta vanille, coulis de fruits rouges
-
-*Panna cotta · Europe du Sud › Italie › Piémont · Dessert* · Fêtes : Saint-Valentin
-
-Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 4 h 00 · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Casserole, verrines.
-
-Une crème prise tremblotante, vanillée, et un coulis acidulé : se prépare la veille.
-
-**Ingrédients** : 50 cl de crème · 60 g de sucre · 1 gousse de vanille · 2 g d'agar-agar (ou 3 feuilles de gélatine de poisson) · 250 g de fruits rouges
-
-1. **Crème.** Chauffe crème, sucre, vanille grattée et agar-agar ; bouillir 2 min en fouettant.
-2. **Prendre.** Verrines, 4 h au frigo.
-3. **Coulis.** Fruits + 1 c. à s. de sucre mixés, filtrés.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -8452,32 +8051,6 @@ Une soupe de pommes de terre mixée, du chou très finement ciselé et un filet 
 1. **Base.** Pommes de terre, oignon, ail dans 1,5 L d'eau salée, 20 min ; mixe.
 2. **Chou.** Ajoute la chiffonnade 5 min : vert vif.
 3. **Servir.** Rondelles de chorizo poêlées, huile d'olive.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Moussaka
-
-*Mousakás · Europe du Sud › Grèce · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 1 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Plat à gratin, poêle, casserole.
-
-Aubergines rôties, agneau à la cannelle et tomate, béchamel épaisse dorée : réconfortant et parfumé.
-
-**Ingrédients** : 4 aubergines · 700 g d'agneau ou de bœuf haché · 400 g de tomates pelées · 2 oignons · 1 c. à c. de cannelle · 1 c. à c. d'origan · 60 cl de lait · 60 g de beurre + 60 g de farine · 2 jaunes d'œufs · 60 g de parmesan ou kefalotyri · 4 c. à s. d'huile d'olive
-
-1. **Aubergines.** Tranches huilées, 25 min à 220 °C (pas de friture : plus léger).
-2. **Viande.** Oignons, viande, cannelle, origan, tomates ; 20 min.
-3. **Béchamel.** Épaisse, avec jaunes et fromage hors du feu.
-4. **Monter.** Aubergines, viande, aubergines, béchamel ; 45 min à 180 °C. Repos 20 min.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -9126,7 +8699,7 @@ Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
 
 Petits pois surgelés, oignon et menthe : vert éclatant, doux, prêt en 17 minutes ; chaud l'hiver, froid l'été.
 
-**Ingrédients** : 500 g de petits pois surgelés · 1 oignon · 60 cl de bouillon de légumes · 8 feuilles de menthe · 3 c. à s. de crème *(facultatif)*
+**Ingrédients** : 500 g de petits pois surgelés · 1 oignon · 60 cl de bouillon de légumes · 8 feuilles de menthe · 3 c. à s. de crème *(facultatif)* · 20 g de beurre
 
 1. **Suer.** Oignon 4 min au beurre.
 2. **Cuire.** Petits pois et bouillon, 6 min seulement : ils restent bien verts.
@@ -9201,7 +8774,7 @@ Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 6 min · coût €
 
 Le plat de rue le plus populaire de Thaïlande : poulet haché sauté à l'ail, au piment et au basilic, servi sur riz avec un œuf frit.
 
-**Ingrédients** : 300 g de poulet haché (ou blanc haché au couteau) · 3 gousses d'ail · 1-2 piments · 1 poignée de basilic thaï (ou basilic) · 1 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 2 œufs · 300 g de riz cuit
+**Ingrédients** : 300 g de poulet haché (ou blanc haché au couteau) · 3 gousses d'ail · 1-2 piments · 1 poignée de basilic thaï (ou basilic) · 1 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 2 œufs · 300 g de riz cuit · 1 pincée de sucre
 
 1. **Sauter.** Ail et piment pilés 20 s dans l'huile chaude ; poulet, 4 min en l'émiettant : il n'est plus rose.
 2. **Assaisonner.** Sauce d'huître, soja, une pincée de sucre, basilic : il tombe en 10 s.
@@ -10006,37 +9579,6 @@ La sauce des poissons de Loire : échalote réduite, beurre monté. Onctueuse et
 
 ---
 
-### Tarte Tatin
-
-*Tarte des demoiselles Tatin · France › Centre-Val de Loire · Dessert*
-
-Niveau ⭐⭐ · 8 portions · actif 25 min · repos/cuisson 45 min · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten, lait
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Moule à manqué (pas à fond amovible), four.
-
-Des pommes confites dans un caramel au beurre, sous une pâte croustillante qu'on retourne au dernier moment.
-
-**Ingrédients** : 1 kg de pommes (6 à 7) · 150 g de sucre · 80 g de beurre demi-sel · 1 pâte brisée (recette liée)
-
-1. **Caramel.** Dans le moule sur le feu, fais fondre sucre et beurre jusqu'à un caramel blond. ⚠️ Très chaud.
-2. **Pommes.** Range les quartiers de pommes serrés, bombé vers le bas. Cuis 10 min sur le feu.
-3. **Pâte.** Couvre de pâte, rentre les bords à l'intérieur, pique.
-4. **Four.** 35 min à 190 °C (th. 6-7).
-5. **Retourner.** Attends 5 min, pose un plat dessus et retourne d'un coup (gants !).
-
-- Le caramel colle au moule ? Remets 1 min sur le feu avant de retourner.
-
-**Conservation** : 2 jours ; tiède, c'est meilleur.
-
-**Techniques** : Caramel
-
----
-
 ### Carbonade flamande
 
 *Stoofvlees · France › Hauts-de-France · Plat* · Fêtes : Repas de famille
@@ -10089,33 +9631,6 @@ Des gaufres légères, dorées et croustillantes, pour le goûter ou la Chandele
 3. **Cuisson.** Gaufrier bien chaud et graissé : 1 louche, 3 à 4 min, jusqu'à ce qu'elles soient dorées.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Soupe à l'oignon gratinée
-
-*Gratinée des Halles · France › Île-de-France · Entrée*
-
-Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 45 min · coût €
-
-- ✅ Sans porc (calculé)
-- 🍷 **Contient de l'alcool** : Vin blanc
-- ⚠️ **Allergènes** : gluten, lait, sulfites ; **possibles selon marque** : céleri, œufs
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Cocotte, bols allant au four.
-
-Des oignons longuement caramélisés, un bouillon brûlant, du pain et du fromage gratiné : le réconfort parisien.
-
-**Ingrédients** : 1 kg d'oignons · 40 g de beurre · 1 c. à s. de farine · 1,2 L de bouillon · 10 cl de vin blanc (facultatif) *(facultatif)* · 8 tranches de baguette rassise · 150 g de gruyère râpé · 1 pincée de sel et de poivre
-
-1. **Oignons.** Fais-les fondre dans le beurre 30 min à feu moyen-doux, jusqu'à ce qu'ils soient bruns et sucrés.
-2. **Liaison.** Saupoudre de farine, remue 1 min, mouille avec le bouillon (et le vin). 15 min.
-3. **Gratiner.** Verse dans les bols, pose le pain, couvre de fromage, 5 min sous le gril. ⚠️ Bols brûlants.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Faire revenir, Gratiner
 
 ---
 
@@ -10485,32 +10000,6 @@ Trois fromages fondus avec du vin blanc, du pain qu'on y trempe : le plat conviv
 
 ---
 
-### Tartiflette
-
-*Tartiflette · France › Auvergne-Rhône-Alpes › Savoie · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 40 min · coût €€
-
-- 🐖 **Contient du porc** : Lardons
-- 🍷 **Contient de l'alcool** : Vin blanc
-- ⚠️ **Allergènes** : lait, sulfites
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Plat à gratin, poêle, four.
-
-Pommes de terre, oignons fondus, lardons, crème et reblochon qui coule : simple et généreuse.
-
-**Ingrédients** : 1,5 kg de pommes de terre · 1 reblochon · 200 g de lardons · 2 oignons · 20 cl de crème fraîche · 10 cl de vin blanc (facultatif) *(facultatif)* · 1 pincée de poivre
-
-1. **Pommes de terre.** Cuis-les entières à l'eau 20 min, épluche, coupe en rondelles.
-2. **Poêlée.** Fais dorer lardons et oignons, déglace au vin.
-3. **Monter.** Plat : pommes de terre, lardons-oignons, crème ; le reblochon coupé en deux dans l'épaisseur, croûte dessus.
-4. **Gratiner.** 20 min à 200 °C (th. 6-7).
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
 ### Gratin de crozets (ou petites pâtes) au beaufort
 
 *Croziflette · France › Auvergne-Rhône-Alpes › Savoie · Accompagnement*
@@ -10753,7 +10242,7 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 30 min · coût €
 
 Morue pochée, légumes vapeur et œufs durs autour d'une mayonnaise à l'ail très relevée : le repas du vendredi en Provence.
 
-**Ingrédients** : 800 g de cabillaud ou de morue dessalée · 6 pommes de terre · 6 carottes · 300 g de haricots verts · 6 œufs · 1 tête d'ail (aïoli) · 2 jaunes d'œufs · 30 cl d'huile d'olive douce · ½ citron
+**Ingrédients** : 800 g de cabillaud ou de morue dessalée · 6 pommes de terre · 6 carottes · 300 g de haricots verts · 6 œufs · 1 tête d'ail (aïoli) · 2 jaunes d'œufs · 30 cl d'huile d'olive douce · ½ citron · 2 feuilles de laurier
 
 1. **Aïoli.** Pile 6 gousses d'ail avec du sel en pâte, ajoute les jaunes, puis l'huile en filet en fouettant. Citron.
 2. **Légumes.** Cuis-les à la vapeur, chacun son temps. Œufs durs 10 min.
@@ -10840,32 +10329,6 @@ Un gâteau sans farine, léger et citronné, au fromage frais corse (ou à la ri
 ---
 
 ## 2.16 France (3/3) : Sud-Ouest, Centre, bistrot parisien, Outre-mer.
-
-### Cassoulet de Castelnaudary (version canard-bœuf)
-
-*Cassoulet · France › Occitanie › Lauragais · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 4 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : aucun déclaré
-- 👶 **Enfants** : ✓ dès 3 ans.
-
-**Équipement** : Grande cocotte ou cassole, four.
-
-Haricots fondants, confit de canard et saucisses gratinés longuement. Le cassoulet d'origine est au porc : ici une version inspirée, canard et saucisses de bœuf, au goût fumé conservé.
-
-**Ingrédients** : 800 g de haricots lingots secs · 4 cuisses de canard confites · 6 saucisses de bœuf ou de volaille · 2 oignons · 1 carotte · 4 gousses d'ail · 2 c. à s. de concentré de tomate · 1 bouquet garni · 1 c. à c. de paprika fumé · 1 pincée de sel, poivre
-
-1. **Haricots.** Trempe-les une nuit ; cuis 1 h dans l'eau non salée avec oignon, carotte, ail, bouquet garni et paprika fumé. Garde le bouillon.
-2. **Viandes.** Dore les saucisses et le confit dans la graisse du confit.
-3. **Monter.** Cassole frottée d'ail : haricots, viandes, haricots ; couvre de bouillon tomaté.
-4. **Four.** 2 h 30 à 150 °C (th. 5). Enfonce la croûte 3 fois pendant la cuisson et rajoute du bouillon : c'est elle qui fait le cassoulet.
-
-**Conservation** : 4 jours au frigo ; encore meilleur réchauffé.
-
----
 
 ### Magret de canard aux cerises
 
@@ -10966,31 +10429,6 @@ Poivrons, tomates et oignons fondus au piment d'Espelette ; on y casse des œufs
 
 ---
 
-### Poulet basquaise
-
-*Poulet basquaise · France › Nouvelle-Aquitaine › Pays basque · Plat*
-
-Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 50 min · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : aucun déclaré
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Morceaux de poulet dorés puis mijotés dans la piperade : couleur, douceur et une pointe de piment.
-
-**Ingrédients** : 6 cuisses de poulet · 3 poivrons · 800 g de tomates pelées · 2 oignons · 3 gousses d'ail · 1 c. à c. de piment d'Espelette · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
-
-1. **Dorer.** Les cuisses salées, peau en dessous, 10 min ; réserve.
-2. **Piperade.** Oignons, poivrons, ail 10 min ; tomates et Espelette.
-3. **Mijoter.** Remets le poulet 40 min à couvert. Avec du riz.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
 ### Gâteau basque à la crème
 
 *Gâteau basque (etxeko biskotxa) · France › Nouvelle-Aquitaine › Pays basque · Dessert* · Fêtes : Repas de famille
@@ -11041,31 +10479,6 @@ Croûte caramélisée, cœur moelleux à la vanille : le secret est le repos de 
 - **Variante Sans alcool** : Rhum → **1 c. à c. d'extrait de vanille + 1 c. à c. de sirop de canne** : on retrouve la note ambrée. **À tester**. *Calcul* : porc **ok**, alcool **violates**.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Poule au pot farcie (version poulet)
-
-*Poule au pot · France › Nouvelle-Aquitaine › Béarn · Plat* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : œufs ; **possibles selon marque** : gluten, lait
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Grand faitout, ficelle.
-
-Une volaille pochée avec ses légumes, farcie de pain et d'herbes : bouillon, viande et légumes en un plat.
-
-**Ingrédients** : 1 poule ou gros poulet · 4 carottes · 3 poireaux · 4 navets · 1 oignon piqué de 2 clous de girofle · 200 g de pain rassis (farce) · 2 œufs (farce) · 200 g de foies de volaille (farce) · 1 bouquet de persil · 2 gousses d'ail · 1 bouquet garni
-
-1. **Farce.** Pain trempé dans du lait et pressé, foies hachés, œufs, persil, ail, sel. Farcis la volaille, ferme à la ficelle.
-2. **Pocher.** Couvre d'eau froide avec oignon et bouquet garni ; frémissement 1 h 30, écume.
-3. **Légumes.** Ajoute-les 45 min avant la fin. Sers bouillon d'abord, puis la poule tranchée avec légumes et farce.
-
-**Conservation** : Le bouillon se congèle 3 mois : base de soupe ou de risotto.
 
 ---
 
@@ -11140,57 +10553,6 @@ Une tourte à pâte levée garnie de calamars à la tomate épicée : le casse-c
 1. **Garniture.** Oignons et ail fondus, calamars 5 min, tomates, épices ; 30 min jusqu'à ce que ce soit épais. Refroidis.
 2. **Monter.** Deux tiers de pâte dans le moule, garniture, couvercle de pâte, soude les bords en les roulant.
 3. **Cuire.** 40 min à 200 °C, doré à la tomate (badigeonne avec le jus).
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Navarin d'agneau printanier
-
-*Navarin · France › Île-de-France · Plat* · Fêtes : Pâques
-
-Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 30 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cocotte.
-
-Un ragoût d'agneau tendre aux petits légumes nouveaux : le plat de Pâques par excellence.
-
-**Ingrédients** : 1,2 kg d'épaule d'agneau en morceaux · 12 navets nouveaux · 12 petites carottes · 500 g de pommes de terre grenaille · 200 g de petits pois · 1 oignon · 1 c. à s. de concentré de tomate · 1 c. à s. de farine · 1 bouquet garni
-
-1. **Saisir.** Dore l'agneau, saupoudre de farine, ajoute concentré, oignon, bouquet garni et eau à hauteur. 1 h à couvert.
-2. **Légumes.** Ajoute navets, carottes et pommes de terre 25 min, puis petits pois 5 min.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Hachis parmentier
-
-*Hachis parmentier · France › Île-de-France · Plat*
-
-Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 30 min · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Plat à gratin, poêle, casserole.
-
-Une viande hachée fondante sous une purée gratinée : le classique des familles et des cantines.
-
-**Ingrédients** : 600 g de bœuf haché · 1,2 kg de pommes de terre · 2 oignons · 20 cl de lait · 50 g de beurre · 1 c. à s. de concentré de tomate · 60 g de fromage râpé · 1 pincée de muscade
-
-1. **Purée.** Pommes de terre cuites écrasées avec lait chaud, beurre, muscade, sel.
-2. **Viande.** Oignons fondus, viande saisie, concentré, persil, sel, poivre.
-3. **Monter et gratiner.** Viande, purée, fromage ; 20 min à 200 °C.
-
-- Restes de pot-au-feu ou de rôti : c'est la version d'origine anti-gaspi.
 
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
@@ -11915,7 +11277,7 @@ Niveau ⭐⭐ · 20 portions · actif 25 min · repos/cuisson 12 h 00 · coût �
 
 Un gâteau de semoule fourré aux amandes, imbibé de sirop à la fleur d'oranger : fondant, se prépare la veille.
 
-**Ingrédients** : 500 g de semoule moyenne · 150 g de sucre · 125 g de beurre fondu · 25 cl d'eau de fleur d'oranger + eau · 200 g d'amandes en poudre · 60 cl de sirop (500 g sucre + 50 cl eau + citron)
+**Ingrédients** : 500 g de semoule moyenne · 150 g de sucre · 125 g de beurre fondu · 25 cl d'eau de fleur d'oranger + eau · 200 g d'amandes en poudre · 60 cl de sirop (500 g sucre + 50 cl eau + citron) · 1 c. à c. de cannelle
 
 1. **Repos.** Semoule, sucre, beurre ; mouille à l'eau de fleur d'oranger, sable mouillé. 8 h.
 2. **Monter.** Moitié tassée, amandes sucrées-cannelle, l'autre moitié ; losanges, amande.
@@ -12140,7 +11502,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €€
 
 Né à Hawaï, influencé par le Japon : riz vinaigré, saumon mariné soja-sésame, avocat, edamame, mangue, chou.
 
-**Ingrédients** : 300 g de riz à sushi · 400 g de saumon extra-frais (ou cuit) · 4 c. à s. de sauce soja · 1 c. à s. d'huile de sésame · 2 avocats · 150 g d'edamame · 1 mangue · ¼ chou rouge · 3 c. à s. de vinaigre de riz
+**Ingrédients** : 300 g de riz à sushi · 400 g de saumon extra-frais (ou cuit) · 4 c. à s. de sauce soja · 1 c. à s. d'huile de sésame · 2 avocats · 150 g d'edamame · 1 mangue · ¼ chou rouge · 3 c. à s. de vinaigre de riz · 1 c. à c. de sucre (riz vinaigré)
 
 1. **Riz.** Cuit, assaisonné au vinaigre de riz sucré-salé.
 2. **Saumon.** En dés, soja, sésame, 10 min.
@@ -12318,7 +11680,7 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 15 min · coût €
 
 Tomate, olives, câpres, anchois, ail et piment : une sauce de placard, puissante, prête pendant la cuisson des pâtes.
 
-**Ingrédients** : 400 g de spaghetti · 400 g de tomates pelées · 80 g d'olives noires · 2 c. à s. de câpres · 4 filets d'anchois · 3 gousses d'ail · 1 pincée de piment · 4 c. à s. d'huile d'olive
+**Ingrédients** : 400 g de spaghetti · 400 g de tomates pelées · 80 g d'olives noires · 2 c. à s. de câpres · 4 filets d'anchois · 3 gousses d'ail · 1 pincée de piment · 4 c. à s. d'huile d'olive · 1 c. à s. de persil haché *(facultatif)*
 
 1. **Sauce.** Ail, anchois (ils fondent), piment ; tomates, olives, câpres, 10 min.
 2. **Lier.** Pâtes al dente, eau de cuisson, persil.
@@ -12699,7 +12061,7 @@ Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 40 min · coût €
 
 Haricots noirs, sofrito poivron-oignon-ail, cumin et origan, mixés à moitié : épaisse, avec riz et citron vert.
 
-**Ingrédients** : 600 g de haricots noirs cuits · 1 poivron vert · 1 oignon · 4 gousses d'ail · 1 c. à c. de cumin + origan · 1 L de bouillon · 1 citron vert
+**Ingrédients** : 600 g de haricots noirs cuits · 1 poivron vert · 1 oignon · 4 gousses d'ail · 1 c. à c. de cumin + origan · 1 L de bouillon · 1 citron vert · ½ bouquet de coriandre *(facultatif)*
 
 1. **Sofrito.** Oignon, poivron, ail, épices 10 min.
 2. **Cuire.** Haricots, bouillon, 25 min ; mixe la moitié.
@@ -12901,7 +12263,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
 
 Lanières de poulet passées dans la farine, l'œuf et la chapelure au parmesan, cuites au four : croustillantes sans friture.
 
-**Ingrédients** : 4 blancs de poulet · 100 g de chapelure (ou panko) · 30 g de parmesan · 2 œufs · 50 g de farine · 1 c. à c. de paprika · 3 c. à s. d'huile
+**Ingrédients** : 4 blancs de poulet · 100 g de chapelure (ou panko) · 30 g de parmesan · 2 œufs · 50 g de farine · 1 c. à c. de paprika · 3 c. à s. d'huile · 1 citron (au service) *(facultatif)*
 
 1. **Paner.** Lanières dans la farine, puis l'œuf battu salé, puis la chapelure au parmesan et paprika (une main sèche, une main mouillée).
 2. **Cuire.** Plaque huilée, un filet d'huile dessus ; 210 °C, 18-20 min en retournant à mi-cuisson : dorés, jus clair.
@@ -14032,31 +13394,6 @@ Barques de pâte à pain remplies de fromage fondu, avec un jaune d'œuf et du b
 
 ---
 
-### Poulet au beurre (butter chicken)
-
-*Murgh makhani · Asie du Sud › Inde › Delhi · Plat*
-
-Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 40 min · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait
-- 👶 **Enfants** : ✓ dès 1 an, sans piment.
-
-**Équipement** : Four ou poêle, cocotte, mixeur.
-
-Poulet tandoori dans une sauce tomate-beurre-crème douce et parfumée : le curry préféré des enfants.
-
-**Ingrédients** : 1 kg de hauts de cuisse de poulet · 1 recette de marinade tandoori · 800 g de tomates pelées · 60 g de beurre · 15 cl de crème · 1 morceau de gingembre + 4 gousses d'ail · 1 c. à c. de garam masala · 1 c. à s. de fenugrec séché (kasuri methi) · 1 c. à c. de miel
-
-1. **Poulet.** Mariné 4 h, grillé 15 min à 240 °C.
-2. **Sauce.** Beurre, ail-gingembre, tomates, 20 min ; mixe.
-3. **Finir.** Crème, garam masala, fenugrec émietté, miel, poulet en morceaux, 10 min. Avec naan et riz.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
 ### Chana masala (curry de pois chiches)
 
 *Chole · Asie du Sud › Inde › Pendjab · Plat*
@@ -14494,34 +13831,6 @@ Une couronne de pâte à choux aux amandes, garnie d'une crème mousseline au pr
 
 ---
 
-### Tarte au citron meringuée
-
-*Tarte au citron meringuée · France › Île-de-France › Paris · Dessert* · Fêtes : Repas de famille
-
-Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 30 min · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Cercle ou moule 24 cm, casserole, batteur, chalumeau (ou gril).
-
-Une pâte sablée croustillante, un crémeux de citron acidulé et une meringue italienne dorée.
-
-**Ingrédients** : 1 pâte sucrée (recette liée) · 4 citrons (jus et zestes) · 4 œufs · 150 g de sucre (crème) · 20 g de maïzena · 100 g de beurre · 3 blancs d'œufs · 180 g de sucre (meringue)
-
-1. **Fond.** Cuis la pâte à blanc, 25 min à 165 °C.
-2. **Crème citron.** Jus, zestes, œufs, sucre, maïzena fouettés sur feu doux jusqu'à épaississement ; hors du feu, le beurre ; mixe. Coule sur le fond, 1 h au frais.
-3. **Meringue italienne.** Sirop sucre + 5 cl d'eau à 118 °C versé sur les blancs mousseux ; fouette jusqu'à tiède.
-4. **Finir.** Meringue à la poche ou à la cuillère, colore au chalumeau.
-
-**Conservation** : 48 h au frigo.
-
-**Techniques** : Pâte sucrée, Meringue italienne
-
----
-
 ### Pâte sucrée aux amandes
 
 *Pâte sucrée · France › Île-de-France › Paris · Base*
@@ -14741,87 +14050,6 @@ Petits gâteaux aux blancs d'œufs, à l'amande et au beurre noisette : moelleux
 
 ---
 
-### Clafoutis aux cerises
-
-*Clafoutis · France › Nouvelle-Aquitaine › Limousin · Dessert*
-
-Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 40 min · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten, lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Plat à gratin.
-
-Des cerises entières (avec noyaux, pour le goût d'amande) dans un flan épais : le dessert de juin.
-
-**Ingrédients** : 600 g de cerises · 3 œufs · 80 g de sucre · 80 g de farine · 30 cl de lait · 30 g de beurre · 1 pincée de vanille
-
-1. **Pâte.** Œufs, sucre, farine, puis lait et vanille : pâte à crêpes épaisse.
-2. **Cuire.** Plat beurré, cerises, pâte ; 40 min à 180 °C : gonflé et doré.
-3. **Servir.** Tiède, saupoudré de sucre.
-
-- ⚠️ Avec noyaux : prévenir les convives ; dénoyaute pour les jeunes enfants.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
----
-
-### Île flottante
-
-*Œufs à la neige · France › Île-de-France › Paris · Dessert*
-
-Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 15 min · coût €
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Casserole, batteur, spatule.
-
-Des blancs en neige pochés qui flottent sur une crème anglaise vanillée, filet de caramel.
-
-**Ingrédients** : 75 cl de lait · 6 œufs (séparés) · 150 g de sucre · 1 gousse de vanille · 80 g de sucre (caramel)
-
-1. **Anglaise.** Lait vanillé sur jaunes + 100 g de sucre, cuisson à la nappe (83 °C) ; refroidis.
-2. **Neige.** Blancs montés avec 50 g de sucre ; quenelles pochées 1 min par face dans un lait frémissant (ou 30 s au micro-ondes).
-3. **Servir.** Crème froide, îles, caramel en filet.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
-
-**Techniques** : Crème anglaise, Caramel
-
----
-
-### Crème brûlée
-
-*Crème brûlée · France › Île-de-France › Paris · Dessert* · Fêtes : Saint-Valentin, Repas de famille
-
-Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 5 h 00 · coût €€
-
-- ✅ Sans porc (calculé)
-- ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : lait, œufs
-- 👶 **Enfants** : ✓ dès 1 an.
-
-**Équipement** : Ramequins plats, chalumeau ou gril.
-
-Une crème vanille très onctueuse, cuite doucement, sous une plaque de sucre caramélisé qui craque.
-
-**Ingrédients** : 50 cl de crème entière · 10 cl de lait · 6 jaunes d'œufs · 80 g de sucre · 1 gousse de vanille · 6 c. à s. de cassonade
-
-1. **Appareil.** Crème + lait vanillés chauds, versés sur jaunes + sucre sans faire mousser. Repos 1 h, écume.
-2. **Cuire.** 1 h à 100 °C : bords pris, centre tremblotant.
-3. **Froid.** 4 h. Cassonade, chalumeau au moment de servir.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée. · **Zéro déchet** : **Blancs d'œufs restants** → financiers ou meringues.
-
-**Techniques** : Caramel
-
----
-
 ### Crème renversée au caramel
 
 *Crème caramel · France › Île-de-France › Paris · Dessert*
@@ -14873,34 +14101,6 @@ Biscuits cuillère imbibés, mousse légère aux fraises : un gâteau sans cuiss
 **Conservation** : 3 jours au frigo, dans une boîte fermée.
 
 **Techniques** : Chantilly
-
----
-
-### Baba (au rhum ou au sirop d'agrumes)
-
-*Baba au rhum · France › Grand Est › Lorraine · Dessert*
-
-Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 2 h 00 · coût €
-
-- ✅ Sans porc (calculé)
-- 🍷 **Contient de l'alcool** : Rhum ambré / blanc
-- ⚠️ **Allergènes** : gluten, lait, œufs
-- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
-
-**Équipement** : Moules à baba ou à savarin.
-
-Une pâte levée imbibée de sirop bouillant, servie avec chantilly : version rhum traditionnelle, et sans alcool aux agrumes.
-
-**Ingrédients** : 250 g de farine · 3 œufs · 80 g de beurre fondu · 10 g de levure · 5 cl de lait tiède · 500 g de sucre (sirop) · 1 L d'eau · 10 cl de rhum ambré · 1 orange (zeste) · 20 cl de crème montée
-
-1. **Pâte.** Farine, levure, lait, œufs, sel, 1 c. à s. de sucre ; bats 5 min ; beurre. Moules beurrés à moitié, pousse 1 h.
-2. **Cuire.** 20 min à 180 °C. Démoule.
-3. **Sirop.** Eau, sucre, zeste, bouillants ; le rhum hors du feu. Plonge les babas rassis jusqu'à ce qu'ils ne fassent plus de bulles.
-4. **Servir.** Arrosés de sirop, chantilly.
-
-- **Variante Sans alcool** : Rhum → **jus de 2 oranges + 1 c. à c. de vanille + 1 c. à s. de sirop de canne** dans le sirop : le baba reste parfumé et ambré. **À tester**. *Calcul* : porc **ok**, alcool **violates**.
-
-**Conservation** : 3 jours au frigo, dans une boîte fermée.
 
 ---
 
@@ -15829,7 +15029,7 @@ Niveau ⭐ · 8 portions · actif 15 min · repos/cuisson 45 min · coût €
 
 Pain ou brioche rassis, lait, œufs, sucre et raisins : le gâteau anti-gaspi de toutes les grands-mères.
 
-**Ingrédients** : 300 g de pain ou brioche rassis · 50 cl de lait · 3 œufs · 100 g de sucre · 60 g de raisins secs · 1 pincée de cannelle
+**Ingrédients** : 300 g de pain ou brioche rassis · 50 cl de lait · 3 œufs · 100 g de sucre · 60 g de raisins secs · 1 pincée de cannelle · 10 g de beurre (moule)
 
 1. **Tremper.** Pain dans le lait chaud, 15 min ; écrase.
 2. **Mélanger.** Œufs, sucre, raisins.
@@ -16006,7 +15206,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
 
 Poulet grillé, mangue, chou, carotte, herbes et cacahuètes, sauce citron vert-sauce de poisson-piment : sucré, acide, salé, piquant.
 
-**Ingrédients** : 2 blancs de poulet · 1 mangue ferme · ¼ chou chinois · 1 carotte · ½ bouquet de coriandre · ½ bouquet de menthe · 40 g de cacahuètes · 2 citrons verts · 2 c. à s. de sauce de poisson · 1 piment *(facultatif)*
+**Ingrédients** : 2 blancs de poulet · 1 mangue ferme · ¼ chou chinois · 1 carotte · ½ bouquet de coriandre · ½ bouquet de menthe · 40 g de cacahuètes · 2 citrons verts · 2 c. à s. de sauce de poisson · 1 piment *(facultatif)* · 1 c. à s. de sucre
 
 1. **Poulet.** Saisi 6 min par face, tranché.
 2. **Sauce.** Citron vert, sauce de poisson, 1 c. à s. de sucre, piment haché.
@@ -16031,7 +15231,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 5 min · coût €
 
 Nouilles de sarrasin froides, edamame, concombre, carotte et sauce sésame-soja-vinaigre de riz : fraîche et végétarienne.
 
-**Ingrédients** : 250 g de nouilles soba · 150 g d'edamame · ½ concombre · 1 carotte · 3 c. à s. de sauce soja · 2 c. à s. de vinaigre de riz · 1 c. à s. d'huile de sésame · 1 c. à s. de sésame · 2 cébettes
+**Ingrédients** : 250 g de nouilles soba · 150 g d'edamame · ½ concombre · 1 carotte · 3 c. à s. de sauce soja · 2 c. à s. de vinaigre de riz · 1 c. à s. d'huile de sésame · 1 c. à s. de sésame · 2 cébettes · 1 c. à c. de sucre
 
 1. **Cuire.** Soba 4-5 min, rincées à l'eau froide en les frottant : elles ne collent plus.
 2. **Sauce.** Soja, vinaigre, huile de sésame, 1 c. à c. de sucre.
@@ -16279,7 +15479,7 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
 
 Concombre écrasé (pas coupé : la sauce pénètre mieux), ail, vinaigre noir, huile pimentée et sésame : l'entrée froide du Sichuan.
 
-**Ingrédients** : 2 concombres · 2 gousses d'ail · 1 c. à s. de vinaigre noir (ou de riz) · 1 c. à s. de sauce soja · 1 c. à c. d'huile pimentée *(facultatif)* · 1 c. à c. d'huile de sésame · 1 c. à c. de sésame
+**Ingrédients** : 2 concombres · 2 gousses d'ail · 1 c. à s. de vinaigre noir (ou de riz) · 1 c. à s. de sauce soja · 1 c. à c. d'huile pimentée *(facultatif)* · 1 c. à c. d'huile de sésame · 1 c. à c. de sésame · 1 pincée de sucre
 
 1. **Écraser.** Concombre frappé au rouleau, puis en morceaux ; salé 10 min, égoutté.
 2. **Assaisonner.** Ail, vinaigre, soja, sucre (1 pincée), huiles ; sésame.
@@ -17563,7 +16763,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €€
 
 Fines lamelles de bœuf et oignon mijotées quelques minutes dans un bouillon sucré-salé, sur un bol de riz : le repas rapide des Japonais.
 
-**Ingrédients** : 400 g de bœuf en tranches très fines (rumsteck, paleron) · 2 oignons · 320 g de riz rond · 4 c. à s. de sauce soja · 3 c. à s. de mirin · 2 c. à s. de saké *(facultatif)* · 20 cl de dashi (ou bouillon léger) · 1 c. à c. de gingembre mariné *(facultatif)*
+**Ingrédients** : 400 g de bœuf en tranches très fines (rumsteck, paleron) · 2 oignons · 320 g de riz rond · 4 c. à s. de sauce soja · 3 c. à s. de mirin · 2 c. à s. de saké *(facultatif)* · 20 cl de dashi (ou bouillon léger) · 1 c. à c. de gingembre mariné *(facultatif)* · 1 c. à s. de sucre
 
 1. **Riz.** Rincé jusqu'à eau claire, cuit (1,2 fois son volume d'eau, 12 min couvert, 10 min de repos).
 2. **Mijoter.** Dashi, soja, mirin, saké, sucre (1 c. à s.) frémissants ; oignon en lamelles, 5 min : translucide.
@@ -17700,7 +16900,7 @@ Niveau ⭐⭐ · 4 portions · actif 45 min · repos/cuisson 30 min · coût €
 
 Riz vinaigré roulé dans la feuille de nori autour d'un seul ingrédient : un atelier convivial. Par défaut sans poisson cru (saumon cuit ou thon en boîte).
 
-**Ingrédients** : 300 g de riz rond pour sushi · 4 c. à s. de vinaigre de riz · 1 c. à s. de sucre · 4 feuilles de nori · 1 concombre · 150 g de thon en conserve ou de saumon cuit · 1 c. à s. de sauce soja · 1 c. à c. de wasabi *(facultatif)*
+**Ingrédients** : 300 g de riz rond pour sushi · 4 c. à s. de vinaigre de riz · 1 c. à s. de sucre · 4 feuilles de nori · 1 concombre · 150 g de thon en conserve ou de saumon cuit · 1 c. à s. de sauce soja · 1 c. à c. de wasabi *(facultatif)* · 2 c. à s. de gingembre mariné *(facultatif)*
 
 1. **Riz.** Rincé, cuit (33 cl d'eau, 12 min, 10 min de repos) ; vinaigre + sucre + 1 c. à c. de sel mélangés en coupant, éventé : brillant, tiède.
 2. **Rouler.** Demi-feuille de nori brillante dessous, riz en couche fine (mains mouillées) en laissant 1 cm en haut ; un bâtonnet de garniture ; roulé serré avec la natte.
@@ -17727,7 +16927,7 @@ Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 10 min · coût €
 
 Vermicelles transparents et élastiques sautés avec bœuf, épinards, carotte, champignons et huile de sésame : le plat des fêtes coréennes.
 
-**Ingrédients** : 200 g de vermicelles de patate douce (ou de haricot mungo) · 200 g de bœuf en lanières · 150 g d'épinards · 1 carotte · 6 shiitake · 4 c. à s. de sauce soja · 2 c. à s. d'huile de sésame · 1 c. à s. de sucre · 1 c. à s. de sésame
+**Ingrédients** : 200 g de vermicelles de patate douce (ou de haricot mungo) · 200 g de bœuf en lanières · 150 g d'épinards · 1 carotte · 6 shiitake · 4 c. à s. de sauce soja · 2 c. à s. d'huile de sésame · 1 c. à s. de sucre · 1 c. à s. de sésame · 2 gousses d'ail
 
 1. **Vermicelles.** Cuits 6 min, rincés, coupés aux ciseaux, assaisonnés de 1 c. à s. de soja et d'huile de sésame.
 2. **Sauter séparément.** Carotte en julienne, champignons, bœuf mariné (soja, sucre, ail), chacun 2-3 min ; épinards blanchis et pressés.
@@ -18156,7 +17356,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €€
 
 Le curry thaï d'influence persane : doux, épicé à la cannelle et à la cardamome, avec pommes de terre, oignons et cacahuètes. Élu souvent « meilleur plat du monde ».
 
-**Ingrédients** : 700 g de cuisses de poulet désossées · 3 c. à s. de pâte de curry massaman (ou rouge + ½ c. à c. de cannelle) · 40 cl de lait de coco · 3 pommes de terre · 1 oignon · 50 g de cacahuètes grillées · 1 c. à s. de pâte de tamarin *(facultatif)* · 2 c. à s. de sauce de poisson · 1 bâton de cannelle
+**Ingrédients** : 700 g de cuisses de poulet désossées · 3 c. à s. de pâte de curry massaman (ou rouge + ½ c. à c. de cannelle) · 40 cl de lait de coco · 3 pommes de terre · 1 oignon · 50 g de cacahuètes grillées · 1 c. à s. de pâte de tamarin *(facultatif)* · 2 c. à s. de sauce de poisson · 1 bâton de cannelle · 1 c. à s. de sucre (de palme ou roux)
 
 1. **Frire la pâte.** Crème de coco 3 min, pâte 2 min.
 2. **Mijoter.** Poulet en morceaux, pommes de terre en cubes, oignon en quartiers, cannelle, reste du lait + 20 cl d'eau, 30 min : tendre.
@@ -18256,7 +17456,7 @@ Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 1 h 00 · coût €
 
 Poulet poché tout doucement (chair soyeuse), riz cuit dans son bouillon à l'ail et au gingembre, trois sauces : le plat national de Singapour.
 
-**Ingrédients** : 1 poulet de 1,5 kg · 350 g de riz jasmin · 1 morceau de gingembre (5 cm) · 4 gousses d'ail · 4 cébettes · 3 c. à s. de sauce soja · 1 c. à s. de sriracha ou sauce piment *(facultatif)* · 1 concombre
+**Ingrédients** : 1 poulet de 1,5 kg · 350 g de riz jasmin · 1 morceau de gingembre (5 cm) · 4 gousses d'ail · 4 cébettes · 3 c. à s. de sauce soja · 1 c. à s. de sriracha ou sauce piment *(facultatif)* · 1 concombre · 2 citrons verts (sauce piment)
 
 1. **Pocher.** Poulet couvert d'eau salée avec gingembre et cébettes ; frémissement à peine, 35 min, puis 20 min hors du feu couvert : 74 °C ; plongé dans l'eau glacée (peau ferme).
 2. **Riz.** Ail haché et riz revenus dans un peu de gras du poulet, cuit dans 1,2 fois son volume de bouillon.
@@ -18283,7 +17483,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
 
 Dés de bœuf marinés et saisis, sur salade, tomate et oignon, avec une sauce citron vert-poivre de Kampot ; souvent un œuf au plat. Simple et très vif.
 
-**Ingrédients** : 500 g de rumsteck · 3 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 1 c. à s. de ketchup ou sucre · 2 citrons verts · 1 c. à c. de poivre noir concassé · 1 salade · 2 tomates · 1 oignon rouge
+**Ingrédients** : 500 g de rumsteck · 3 c. à s. de sauce d'huître · 1 c. à s. de sauce soja · 1 c. à s. de ketchup ou sucre · 2 citrons verts · 1 c. à c. de poivre noir concassé · 1 salade · 2 tomates · 1 oignon rouge · 2 gousses d'ail
 
 1. **Mariner.** Bœuf en cubes, sauce d'huître, soja, ketchup, ail, 20 min.
 2. **Saisir.** Wok fumant, 2-3 min : bruni dehors, rosé dedans.
@@ -18385,7 +17585,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 45 min · coût €
 
 Un bouillon rubis de betteraves, légumes et ail, aigrelet au citron : servi clair en tasse à Noël en Pologne, ou plus épais avec chou et pommes de terre en Ukraine (borchtch).
 
-**Ingrédients** : 4 betteraves crues · 2 carottes · 1 poireau · 1 oignon · 2 gousses d'ail · 1 citron · 1 l de bouillon de légumes · 1 c. à s. d'aneth · 10 cl de crème *(facultatif)*
+**Ingrédients** : 4 betteraves crues · 2 carottes · 1 poireau · 1 oignon · 2 gousses d'ail · 1 citron · 1 l de bouillon de légumes · 1 c. à s. d'aneth · 10 cl de crème *(facultatif)* · 1 pincée de sucre (si besoin) *(facultatif)*
 
 1. **Bouillon.** Légumes et 3 betteraves en morceaux, 1,2 l d'eau ou bouillon, 40 min ; filtré.
 2. **Couleur.** 1 betterave crue râpée, 10 min sans bouillir, citron : rouge vif (le citron fixe la couleur).
@@ -18589,7 +17789,7 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 0 min · coût €�
 
 Une marmite de bouillon frémissant au centre de la table, où chacun cuit lamelles de bœuf, crevettes, tofu, champignons et légumes, puis les trempe dans sa sauce. Bouillon doux pour les enfants, pimenté pour les autres.
 
-**Ingrédients** : 2 l de bouillon de volaille · 600 g de bœuf en lamelles très fines · 300 g de crevettes · 400 g de tofu · 300 g de champignons (shiitake, enoki) · 1 chou chinois · 200 g de nouilles · 1 morceau de gingembre · 2 c. à s. d'huile pimentée *(facultatif)*
+**Ingrédients** : 2 l de bouillon de volaille · 600 g de bœuf en lamelles très fines · 300 g de crevettes · 400 g de tofu · 300 g de champignons (shiitake, enoki) · 1 chou chinois · 200 g de nouilles · 1 morceau de gingembre · 2 c. à s. d'huile pimentée *(facultatif)* · 4 gousses d'ail (sauces) · 4 cébettes
 
 1. **Bouillon.** Bouillon, gingembre, cébette ; une moitié corsée d'huile pimentée et de poivre du Sichuan si caquelon double.
 2. **Plateaux.** Viande étalée en rosace (mi-congelée pour la trancher fin), crevettes, tofu en cubes, légumes, nouilles.
@@ -18689,7 +17889,7 @@ Niveau ⭐⭐⭐ · 12 portions · actif 1 h 15 · repos/cuisson 1 h 30 · coût
 
 Pâte de maïs fouettée avec du bouillon et du beurre (à la place du saindoux), farcie de poulet en sauce rouge, enveloppée et cuite à la vapeur : les petits paquets de fête mexicains.
 
-**Ingrédients** : 500 g de farine de maïs nixtamalisée (masa harina) · 150 g de beurre mou (à la place du saindoux) · 50 cl de bouillon de volaille · 1 c. à c. de levure chimique · 400 g de poulet cuit effiloché · 3 piments séchés (ou paprika fumé) · 2 tomates · 1 paquet de feuilles de bananier (ou papier sulfurisé)
+**Ingrédients** : 500 g de farine de maïs nixtamalisée (masa harina) · 150 g de beurre mou (à la place du saindoux) · 50 cl de bouillon de volaille · 1 c. à c. de levure chimique · 400 g de poulet cuit effiloché · 3 piments séchés (ou paprika fumé) · 2 tomates · 1 paquet de feuilles de bananier (ou papier sulfurisé) · 2 gousses d'ail
 
 1. **Farce.** Piments trempés mixés avec tomates, ail, sel, 10 min de cuisson ; poulet dedans.
 2. **Masa.** Beurre fouetté 3 min, masa, levure, sel, bouillon tiède petit à petit, 5 min : légère (une boulette flotte dans l'eau).
@@ -18714,7 +17914,7 @@ Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 1 h 30 · coût €
 
 Le griot haïtien est du porc mariné aux agrumes et à l'épis, braisé puis frit. Selon D21 : version poulet, même méthode, avec le pikliz (chou mariné au vinaigre et au piment) et des bananes pesées.
 
-**Ingrédients** : 1 kg de hauts de cuisse en morceaux · 2 oranges amères (ou 1 orange + 1 citron vert) · 2 citrons verts · 1 bouquet de persil et thym · 4 gousses d'ail · 1 piment scotch bonnet (ou piment oiseau) · ¼ chou · 25 cl de vinaigre blanc · 2 plantains verts *(facultatif)*
+**Ingrédients** : 1 kg de hauts de cuisse en morceaux · 2 oranges amères (ou 1 orange + 1 citron vert) · 2 citrons verts · 1 bouquet de persil et thym · 4 gousses d'ail · 1 piment scotch bonnet (ou piment oiseau) · ¼ chou · 25 cl de vinaigre blanc · 2 plantains verts *(facultatif)* · 4 cébettes (épis) · 1 oignon (pikliz)
 
 1. **Pikliz (la veille).** Chou, carotte, oignon émincés, piment, vinaigre, sel, en bocal.
 2. **Mariner et braiser.** Poulet frotté d'épis (persil, thym, ail, cébette, piment mixés), jus d'agrumes, 4 h ; braisé à couvert dans la marinade + 20 cl d'eau, 40 min, jusqu'à évaporation.
@@ -18732,14 +17932,14 @@ Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 00 · coût €
 
 - ✅ Sans porc (calculé)
 - ✅ Sans alcool (calculé)
-- ⚠️ **Allergènes** : gluten
+- ⚠️ **Allergènes** : gluten, lait
 - 👶 **Enfants** : ✓ dès 1 an.
 
 **Équipement** : Couscoussier ou faitout.
 
 Le couscous du vendredi marocain dans sa version végétale : sept légumes de saison, pois chiches, bouillon au safran et au ras el-hanout, tfaya (oignons-raisins confits) en option.
 
-**Ingrédients** : 500 g de semoule moyenne · 3 carottes · 2 courgettes · 2 navets · 300 g de courge · 2 tomates · 200 g de pois chiches cuits · 1 pincée de safran · 1 c. à c. de ras el-hanout · 2 oignons (+ 40 g de raisins secs pour la tfaya) *(facultatif)*
+**Ingrédients** : 500 g de semoule moyenne · 3 carottes · 2 courgettes · 2 navets · 300 g de courge · 2 tomates · 200 g de pois chiches cuits · 1 pincée de safran · 1 c. à c. de ras el-hanout · 2 oignons (+ 40 g de raisins secs pour la tfaya) *(facultatif)* · 40 g de beurre · 1 c. à c. de cannelle (tfaya) *(facultatif)*
 
 1. **Bouillon.** Oignon, tomates, épices, 2 l d'eau, 15 min ; carottes et navets 20 min (un quart de chou si tu en as) ; courgettes, courge, pois chiches 15 min.
 2. **Graine.** Deux passages à la vapeur (ou express : 1 pour 1 d'eau bouillante salée + beurre, 5 min).
@@ -18841,7 +18041,7 @@ Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €€
 
 Les minuscules ravioles au comté et au persil (achetées en plaques) en couches avec de la crème et du fromage : gratinées en 20 minutes, un plat de fête express.
 
-**Ingrédients** : 4 plaques de ravioles du Dauphiné · 30 cl de crème · 100 g de comté râpé · 1 c. à s. de persil · 1 pincée de muscade
+**Ingrédients** : 4 plaques de ravioles du Dauphiné · 30 cl de crème · 100 g de comté râpé · 1 c. à s. de persil · 1 pincée de muscade · 10 g de beurre (plat)
 
 1. **Monter.** Plat beurré, une plaque de ravioles, crème, fromage ; ainsi de suite.
 2. **Gratiner.** 200 °C, 15-20 min : bouillonnant et doré.
@@ -19058,7 +18258,7 @@ Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €
 
 Filets de sole pochés, sauce crème-champignons au jus de cuisson et moules : le grand classique normand, ramené à 40 minutes.
 
-**Ingrédients** : 8 filets de sole (ou limande) · 250 g de champignons · 500 g de moules (facultatif) *(facultatif)* · 20 cl de crème · 15 cl de cidre ou de vin blanc · 1 échalote · 20 g de beurre · 1 jaune d'œuf
+**Ingrédients** : 8 filets de sole (ou limande) · 250 g de champignons · 500 g de moules (facultatif) *(facultatif)* · 20 cl de crème · 15 cl de cidre ou de vin blanc · 1 échalote · 20 g de beurre · 1 jaune d'œuf · 1 c. à s. de persil haché *(facultatif)*
 
 1. **Pocher.** Filets roulés dans un plat beurré, échalote, cidre ; papier sulfurisé ; 180 °C, 10-12 min : blancs et fermes.
 2. **Sauce.** Jus de cuisson réduit de moitié avec les champignons ; crème, 3 min ; hors du feu, jaune : nappante.
@@ -19270,7 +18470,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
 
 Le velouté de chou-fleur de la cuisine classique, crémeux et délicat, avec quelques bouquets rôtis et de la ciboulette.
 
-**Ingrédients** : 1 chou-fleur · 1 pomme de terre · 1 oignon · 80 cl de bouillon de légumes · 15 cl de crème · 1 c. à s. de ciboulette
+**Ingrédients** : 1 chou-fleur · 1 pomme de terre · 1 oignon · 80 cl de bouillon de légumes · 15 cl de crème · 1 c. à s. de ciboulette · 20 g de beurre
 
 1. **Suer.** Oignon 5 min au beurre, sans coloration.
 2. **Cuire.** Chou-fleur (garde 8 petits bouquets) et pomme de terre, bouillon, 20 min.
@@ -20165,7 +19365,7 @@ Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 00 · coût €€
 
 Le plat d'hiver de l'Alsace : choucroute crue braisée au riesling et au genièvre, garnie de saucisses, de viandes fumées et de pommes de terre. Ici sans porc (D21) : saucisses de Strasbourg de volaille, bœuf fumé, poitrine de dinde fumée.
 
-**Ingrédients** : 1,5 kg de choucroute crue · 6 saucisses de Strasbourg de volaille ou de bœuf · 300 g de poitrine de dinde fumée · 400 g de bœuf fumé en morceau · 25 cl de riesling · 1 oignon · 10 baies de genièvre · 6 pommes de terre · 40 g de graisse de canard ou beurre
+**Ingrédients** : 1,5 kg de choucroute crue · 6 saucisses de Strasbourg de volaille ou de bœuf · 300 g de poitrine de dinde fumée · 400 g de bœuf fumé en morceau · 25 cl de riesling · 1 oignon · 10 baies de genièvre · 6 pommes de terre · 40 g de graisse de canard ou beurre · 2 feuilles de laurier
 
 1. **Choucroute.** Rincée à l'eau froide si elle est très acide, pressée.
 2. **Braiser.** Oignon fondu dans la graisse, choucroute, genièvre, laurier ; riesling et 25 cl d'eau ; bœuf fumé et dinde fumée enfouis ; couvert, 1 h 30 à feu doux.
@@ -20315,7 +19515,7 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 6 h 00 · coût €
 
 « Nihar » veut dire le matin : le jarret de bœuf mijote toute la nuit dans une sauce épicée au fenouil et au gingembre, liée à la farine complète, et se mange au petit matin avec du naan, gingembre, piment vert et citron. Le plat du vendredi de Lahore et Karachi.
 
-**Ingrédients** : 1,5 kg de jarret de bœuf avec os · 3 c. à s. de farine complète · 2 oignons · 1 c. à s. de gingembre-ail · 2 c. à c. de garam masala · 1 c. à c. de graines de fenouil · 1 c. à c. de piment · 5 c. à s. de ghee · 2 citrons verts · 1 morceau de gingembre (julienne)
+**Ingrédients** : 1,5 kg de jarret de bœuf avec os · 3 c. à s. de farine complète · 2 oignons · 1 c. à s. de gingembre-ail · 2 c. à c. de garam masala · 1 c. à c. de graines de fenouil · 1 c. à c. de piment · 5 c. à s. de ghee · 2 citrons verts · 1 morceau de gingembre (julienne) · ½ bouquet de coriandre *(facultatif)*
 
 1. **Saisir.** Oignons dorés dans le ghee (moitié réservée pour la fin) ; viande, gingembre-ail, épices et fenouil moulus, 5 min.
 2. **Nuit.** Eau à 3 cm au-dessus, couvercle, feu le plus doux (ou four 120 °C), 6 à 8 h : la viande se détache de l'os.
@@ -20344,7 +19544,7 @@ Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 4 h 00 · coût €
 
 Bœuf mariné dans une sauce de piments séchés, vinaigre et épices, mijoté jusqu'à s'effilocher. On le mange en tacos trempés dans le bouillon rouge (« quesabirria ») ou en bol de consommé avec oignon, coriandre et citron vert.
 
-**Ingrédients** : 1,5 kg de paleron et jarret de bœuf · 5 piments séchés (guajillo, ancho) · 3 tomates · 4 c. à s. de vinaigre de cidre · 1 c. à c. de cumin · 1 c. à c. d'origan · 1 bâton de cannelle · 1 oignon · 16 tortillas de maïs · 2 citrons verts
+**Ingrédients** : 1,5 kg de paleron et jarret de bœuf · 5 piments séchés (guajillo, ancho) · 3 tomates · 4 c. à s. de vinaigre de cidre · 1 c. à c. de cumin · 1 c. à c. d'origan · 1 bâton de cannelle · 1 oignon · 16 tortillas de maïs · 2 citrons verts · ½ bouquet de coriandre *(facultatif)* · 4 gousses d'ail · 2 feuilles de laurier
 
 1. **Sauce.** Piments épépinés grillés 30 s, trempés 20 min ; mixés avec tomates, ail, vinaigre, épices : rouge sombre.
 2. **Mariner.** Viande en gros morceaux enrobée de sauce, 4 h ou une nuit.
@@ -20394,14 +19594,14 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 00 · coût €
 
 - ✅ Sans porc (calculé)
 - 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc, Cornichon
-- ⚠️ **Allergènes** : gluten, sulfites ; **possibles selon marque** : moutarde
+- ⚠️ **Allergènes** : gluten, lait, sulfites ; **possibles selon marque** : moutarde
 - 👶 **Enfants** : ✓ dès 3 ans.
 
 **Équipement** : Faitout, casserole.
 
 Le plat de bistrot et de grand-mère : langue pochée longuement comme un pot-au-feu, pelée, tranchée et nappée d'une sauce brune au vinaigre, cornichons et câpres. Tendre, fondante et franchement relevée.
 
-**Ingrédients** : 1 langue de bœuf (1,2 kg) · 2 carottes · 1 oignon piqué de clous de girofle · 1 bouquet garni · 3 échalotes · 5 cl de vinaigre de vin · 2 c. à s. de concentré de tomate · 30 g de farine · 8 cornichons · 1 c. à s. de câpres
+**Ingrédients** : 1 langue de bœuf (1,2 kg) · 2 carottes · 1 oignon piqué de clous de girofle · 1 bouquet garni · 3 échalotes · 5 cl de vinaigre de vin · 2 c. à s. de concentré de tomate · 30 g de farine · 8 cornichons · 1 c. à s. de câpres · 1 c. à s. de persil haché *(facultatif)* · 30 g de beurre (roux)
 
 1. **Dégorger et pocher.** Langue 2 h dans l'eau froide ; blanchie 10 min, rincée ; puis eau froide, carottes, oignon, bouquet, gros sel ; frémissement 3 h.
 2. **Peler.** Tiède, la peau blanche s'enlève en un seul geste (une incision dessous) ; parures retirées ; tranches de 1 cm gardées dans un peu de bouillon.
@@ -20431,7 +19631,7 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 3 h 30 · coût €
 
 La queue de bœuf brunie, mijotée des heures avec thym, cébette, piment antillais et piment de la Jamaïque, puis des haricots blancs moelleux à la fin : une sauce collante et brillante, le plat du dimanche de Kingston, avec riz et pois.
 
-**Ingrédients** : 1,8 kg de queue de bœuf en tronçons · 400 g de gros haricots blancs cuits (butter beans) · 1 oignon · 4 cébettes · 6 brins de thym · 1 piment antillais entier (non percé) · 1 c. à c. de piment de la Jamaïque (ou quatre-épices) · 1 c. à s. de cassonade · 2 c. à s. de sauce soja · 1 c. à s. de concentré de tomate
+**Ingrédients** : 1,8 kg de queue de bœuf en tronçons · 400 g de gros haricots blancs cuits (butter beans) · 1 oignon · 4 cébettes · 6 brins de thym · 1 piment antillais entier (non percé) · 1 c. à c. de piment de la Jamaïque (ou quatre-épices) · 1 c. à s. de cassonade · 2 c. à s. de sauce soja · 1 c. à s. de concentré de tomate · 4 gousses d'ail
 
 1. **Mariner.** Tronçons frottés de soja, ail, thym, épices, une nuit.
 2. **Brunir.** Cassonade dans un peu d'huile jusqu'à brun foncé ; viande saisie dedans en 2 fois : laquée.
@@ -20460,7 +19660,7 @@ Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 30 · coût €
 
 Le plat des fêtes coréennes (Chuseok, Nouvel An) : plat de côtes de bœuf braisé dans une sauce soja sucrée à la poire, avec radis, carottes, châtaignes et champignons qui s'imprègnent. Laqué et tendre.
 
-**Ingrédients** : 1,5 kg de plat de côtes de bœuf (ou paleron) · 8 c. à s. de sauce soja · 1 poire mûre râpée · 300 g de radis daikon · 2 carottes · 12 châtaignes cuites *(facultatif)* · 8 shiitake · 6 gousses d'ail · 2 c. à s. de sucre · 1 c. à s. d'huile de sésame
+**Ingrédients** : 1,5 kg de plat de côtes de bœuf (ou paleron) · 8 c. à s. de sauce soja · 1 poire mûre râpée · 300 g de radis daikon · 2 carottes · 12 châtaignes cuites *(facultatif)* · 8 shiitake · 6 gousses d'ail · 2 c. à s. de sucre · 1 c. à s. d'huile de sésame · 1 morceau de gingembre (3 cm) · 3 cébettes *(facultatif)*
 
 1. **Dégorger et blanchir.** Côtes 1 h dans l'eau froide, puis 10 min dans l'eau bouillante ; rincées (sauce claire, sans écume).
 2. **Sauce.** Soja, poire râpée, ail, sucre, sésame, gingembre, 50 cl d'eau.
@@ -20573,7 +19773,7 @@ Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 2 h 30 · coût €
 
 Très gros haricots blancs cuits au four dans une sauce tomate à l'huile d'olive, aneth et persil, jusqu'à ce que le dessus caramélise : un des grands plats végétariens grecs, servi tiède avec de la feta et du pain.
 
-**Ingrédients** : 500 g de gros haricots blancs secs (gigantes, ou lingots) · 800 g de tomates concassées · 2 oignons · 2 carottes · 3 gousses d'ail · 1 bouquet d'aneth · 1 bouquet de persil · 10 cl d'huile d'olive · 150 g de feta *(facultatif)*
+**Ingrédients** : 500 g de gros haricots blancs secs (gigantes, ou lingots) · 800 g de tomates concassées · 2 oignons · 2 carottes · 3 gousses d'ail · 1 bouquet d'aneth · 1 bouquet de persil · 10 cl d'huile d'olive · 150 g de feta *(facultatif)* · 1 pincée de sucre (si les tomates sont acides) *(facultatif)*
 
 1. **Haricots.** Trempés une nuit, cuits 45 min à l'eau : tendres mais entiers.
 2. **Sauce.** Oignons, carottes râpées, ail dans la moitié de l'huile, 10 min ; tomates, 15 min ; herbes, sel, sucre si acide.
@@ -20680,7 +19880,7 @@ Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 30 · coût €
 
 Courgettes, aubergines, pommes de terre, poivrons et tomates rôtis lentement à l'huile d'olive et à l'origan jusqu'à confire : le cousin grec de la ratatouille, encore meilleur le lendemain.
 
-**Ingrédients** : 3 courgettes · 2 aubergines · 4 pommes de terre · 2 poivrons · 4 tomates · 2 oignons rouges · 1 c. à s. d'origan · 12 cl d'huile d'olive · 150 g de feta *(facultatif)*
+**Ingrédients** : 3 courgettes · 2 aubergines · 4 pommes de terre · 2 poivrons · 4 tomates · 2 oignons rouges · 1 c. à s. d'origan · 12 cl d'huile d'olive · 150 g de feta *(facultatif)* · 3 gousses d'ail
 
 1. **Couper.** Légumes en morceaux de taille égale ; tomates râpées.
 2. **Assaisonner.** Tout mélangé avec l'huile, l'origan, l'ail, sel, poivre ; 10 cl d'eau.
@@ -20837,7 +20037,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €€
 
 Saumon, pommes de terre, poireau, crème et beaucoup d'aneth dans un bouillon clair : la soupe des lacs finlandais, douce et complète.
 
-**Ingrédients** : 500 g de saumon sans peau · 500 g de pommes de terre · 1 poireau · 20 cl de crème · 1 bouquet d'aneth · 1 l de fumet ou d'eau
+**Ingrédients** : 500 g de saumon sans peau · 500 g de pommes de terre · 1 poireau · 20 cl de crème · 1 bouquet d'aneth · 1 l de fumet ou d'eau · 20 g de beurre
 
 1. **Base.** Poireau fondu 5 min au beurre ; pommes de terre en dés, fumet, 15 min : tendres.
 2. **Saumon.** En cubes, 5 min à frémissement : opaque.
@@ -21068,7 +20268,7 @@ Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
 
 Purée de pommes de terre écrasée avec du chou kale, servie avec une saucisse fumée et un puits de jus : l'hiver néerlandais. Saucisse de volaille fumée par défaut.
 
-**Ingrédients** : 1 kg de pommes de terre · 500 g de chou kale · 4 saucisses fumées de volaille · 10 cl de lait · 30 g de beurre · 1 c. à c. de moutarde *(facultatif)*
+**Ingrédients** : 1 kg de pommes de terre · 500 g de chou kale · 4 saucisses fumées de volaille · 10 cl de lait · 30 g de beurre · 1 c. à c. de moutarde *(facultatif)* · 1 pincée de muscade *(facultatif)*
 
 1. **Cuire ensemble.** Pommes de terre en morceaux et kale émincé par-dessus, eau salée, 20 min.
 2. **Écraser.** Égouttés, beurre, lait chaud : purée grossière verte ; poivre, muscade.
@@ -21224,7 +20424,7 @@ Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 30 min · coût €€
 
 Le riz créole tout-en-un : poulet, chorizo, crevettes, trinité de légumes, tomates et épices cajun, cuits ensemble jusqu'à ce que le riz boive tout.
 
-**Ingrédients** : 350 g de riz long · 4 cuisses de poulet désossées · 150 g de chorizo de bœuf ou de volaille · 200 g de crevettes *(facultatif)* · 1 oignon · 1 poivron · 2 branches de céleri · 400 g de tomates pelées · 2 c. à c. de mélange cajun · 70 cl de bouillon
+**Ingrédients** : 350 g de riz long · 4 cuisses de poulet désossées · 150 g de chorizo de bœuf ou de volaille · 200 g de crevettes *(facultatif)* · 1 oignon · 1 poivron · 2 branches de céleri · 400 g de tomates pelées · 2 c. à c. de mélange cajun · 70 cl de bouillon · 2 cébettes *(facultatif)*
 
 1. **Dorer.** Poulet en morceaux et chorizo, 6 min ; légumes 5 min ; épices.
 2. **Cuire.** Riz 1 min, tomates, bouillon ; couvert 20 min à feu doux sans remuer.
@@ -21401,7 +20601,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €€
 
 Poisson blanc et crevettes mijotés dans le lait de coco, tomate, poivrons, coriandre et un peu d'huile de palme : le ragoût de Bahia.
 
-**Ingrédients** : 600 g de poisson blanc ferme · 200 g de crevettes · 40 cl de lait de coco · 2 tomates · 1 poivron · 1 oignon · 2 citrons verts · 1 bouquet de coriandre · 1 c. à s. d'huile de palme rouge (ou paprika) *(facultatif)*
+**Ingrédients** : 600 g de poisson blanc ferme · 200 g de crevettes · 40 cl de lait de coco · 2 tomates · 1 poivron · 1 oignon · 2 citrons verts · 1 bouquet de coriandre · 1 c. à s. d'huile de palme rouge (ou paprika) *(facultatif)* · 2 gousses d'ail
 
 1. **Mariner.** Poisson en morceaux, citron vert, ail, sel, 15 min.
 2. **Étager.** Oignon, poivron, tomate en rondelles, poisson, crevettes ; lait de coco, huile de palme.
@@ -21607,7 +20807,7 @@ Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 1 h 30 · coût €
 
 Le couscous des grandes tablées : bouillon aux sept légumes, pois chiches, poulet et agneau mijotés, merguez grillées à part, graine roulée et cuite à la vapeur trois fois.
 
-**Ingrédients** : 1 kg de semoule moyenne · 800 g d'épaule d'agneau en morceaux · 4 cuisses de poulet · 8 merguez · 4 carottes · 3 courgettes · 2 navets · 250 g de pois chiches cuits · 2 c. à c. de ras el-hanout · 80 g de beurre
+**Ingrédients** : 1 kg de semoule moyenne · 800 g d'épaule d'agneau en morceaux · 4 cuisses de poulet · 8 merguez · 4 carottes · 3 courgettes · 2 navets · 250 g de pois chiches cuits · 2 c. à c. de ras el-hanout · 80 g de beurre · 2 oignons
 
 1. **Bouillon.** Viandes dorées avec 2 oignons et les épices (1 c. à s. de concentré de tomate si tu aimes) ; 3 l d'eau, 45 min ; carottes et navets 20 min, courgettes et pois chiches 15 min.
 2. **Graine.** Semoule mouillée d'un verre d'eau salée, roulée entre les mains, 15 min ; 1ʳᵉ vapeur au-dessus du bouillon (20 min dès que la vapeur traverse) ; aérée, remouillée ; 2ᵉ vapeur ; beurrée.
@@ -21659,7 +20859,7 @@ Niveau ⭐⭐⭐ · 8 portions · actif 1 h 15 · repos/cuisson 1 h 15 · coût 
 
 Feuilles de brick croustillantes, poulet effiloché au safran et aux oignons, œufs brouillés dans la sauce, amandes sucrées à la fleur d'oranger, cannelle et sucre glace : le chef-d'œuvre sucré-salé de Fès.
 
-**Ingrédients** : 6 cuisses de poulet · 10 feuilles de brick · 3 oignons · 4 œufs · 150 g d'amandes · 1 pincée de safran · 2 c. à c. de cannelle · 2 c. à s. de sucre glace · 1 c. à s. d'eau de fleur d'oranger · 80 g de beurre fondu
+**Ingrédients** : 6 cuisses de poulet · 10 feuilles de brick · 3 oignons · 4 œufs · 150 g d'amandes · 1 pincée de safran · 2 c. à c. de cannelle · 2 c. à s. de sucre glace · 1 c. à s. d'eau de fleur d'oranger · 80 g de beurre fondu · 1 c. à c. de gingembre en poudre · 1 bouquet de persil
 
 1. **Poulet.** Cuit 1 h avec oignons râpés, safran, gingembre, cannelle, persil, 40 cl d'eau ; effiloché ; sauce réduite, œufs battus ajoutés en remuant : brouillés crémeux.
 2. **Amandes.** Grillées, concassées avec 2 c. à s. de sucre glace, cannelle, fleur d'oranger.
@@ -21861,7 +21061,7 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 00 · coût €
 
 Le plat national jordanien : agneau mijoté dans une sauce de yaourt fermenté (jameed), sur riz au curcuma et pain fin, amandes et pignons grillés. Ici avec du yaourt grec stabilisé.
 
-**Ingrédients** : 1,2 kg d'épaule d'agneau en morceaux · 500 g de yaourt grec · 1 c. à s. de fécule · 400 g de riz long · ½ c. à c. de curcuma · 50 g d'amandes et pignons · 1 pain fin (marqouq ou lavash) · 2 gousses de cardamome
+**Ingrédients** : 1,2 kg d'épaule d'agneau en morceaux · 500 g de yaourt grec · 1 c. à s. de fécule · 400 g de riz long · ½ c. à c. de curcuma · 50 g d'amandes et pignons · 1 pain fin (marqouq ou lavash) · 2 gousses de cardamome · 1 oignon · 2 feuilles de laurier
 
 1. **Agneau.** Blanchi 5 min, rincé ; mijoté 1 h 30 avec oignon, cardamome, laurier, 1,5 l d'eau.
 2. **Sauce yaourt.** Yaourt + fécule fouettés, délayés de bouillon chaud, chauffés en remuant toujours dans le même sens (il ne tranche pas) ; agneau dedans, 20 min.
@@ -22236,7 +21436,7 @@ Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
 
 Un quart de pain de mie évidé rempli de curry : le street-food de la communauté indienne de Durban. La version « beans bunny » est végétarienne et très bon marché.
 
-**Ingrédients** : 1 pain de mie non tranché (ou 4 petits pains) · 500 g de haricots (rouges ou blancs) cuits · 2 pommes de terre · 1 oignon · 2 tomates · 2 c. à s. de curry · 1 c. à s. de gingembre · 1 bouquet de coriandre
+**Ingrédients** : 1 pain de mie non tranché (ou 4 petits pains) · 500 g de haricots (rouges ou blancs) cuits · 2 pommes de terre · 1 oignon · 2 tomates · 2 c. à s. de curry · 1 c. à s. de gingembre · 1 bouquet de coriandre · 3 gousses d'ail
 
 1. **Curry.** Oignon 8 min, gingembre, ail, curry 1 min ; tomates, pommes de terre en dés, haricots, 30 cl d'eau, 25 min : épais.
 2. **Pain.** Coupé en quarts, mie retirée (gardée comme « couvercle »).
@@ -22563,7 +21763,7 @@ Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 30 min · coût €
 
 Galettes de pâte très fine farcies d'épinards et feta, pliées et cuites à sec puis beurrées : le plat des marchés turcs, croustillant et fondant.
 
-**Ingrédients** : 300 g de farine · 15 cl de yaourt · 300 g d'épinards · 200 g de feta · 1 oignon · 30 g de beurre fondu · 1 c. à c. de flocons de piment *(facultatif)*
+**Ingrédients** : 300 g de farine · 15 cl de yaourt · 300 g d'épinards · 200 g de feta · 1 oignon · 30 g de beurre fondu · 1 c. à c. de flocons de piment *(facultatif)* · 1 citron (au service) *(facultatif)*
 
 1. **Pâte.** Farine, yaourt, sel, 10 cl d'eau : souple ; 30 min.
 2. **Farce.** Épinards crus hachés, salés, pressés ; oignon, feta, piment.
@@ -22640,7 +21840,7 @@ Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 40 min · coût €
 
 Grosses perles de semoule (ou couscous perlé) cuites dans une sauce rouge aux légumes, pois chiches et herbes : le plat d'hiver des familles algériennes, ici sans viande.
 
-**Ingrédients** : 400 g de berkoukes ou couscous perlé · 200 g de pois chiches cuits · 2 carottes · 2 courgettes · 1 pomme de terre · 2 c. à s. de concentré de tomate · 1 c. à c. de ras el-hanout · 1 bouquet de coriandre · 1 oignon
+**Ingrédients** : 400 g de berkoukes ou couscous perlé · 200 g de pois chiches cuits · 2 carottes · 2 courgettes · 1 pomme de terre · 2 c. à s. de concentré de tomate · 1 c. à c. de ras el-hanout · 1 bouquet de coriandre · 1 oignon · 1 citron (au service) *(facultatif)*
 
 1. **Sauce.** Oignon, concentré, épices, légumes en dés, 1,5 l d'eau, 20 min.
 2. **Berkoukes.** Revenus 3 min à l'huile ; dans la sauce avec les pois chiches, 15-20 min en remuant : tendres, sauce épaissie.
@@ -22963,7 +22163,7 @@ Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 4 h 00 · coût €
 
 Le grand sandwich rond de La Nouvelle-Orléans, pressé plusieurs heures pour que la salade d'olives imbibe la mie. L'original est aux charcuteries ; ici légumes grillés, mozzarella et olivade.
 
-**Ingrédients** : 1 grand pain rond · 1 aubergine · 2 courgettes · 2 poivrons grillés · 250 g de mozzarella · 150 g d'olives vertes et noires · 1 c. à s. de câpres · 6 c. à s. d'huile d'olive · 1 c. à c. d'origan
+**Ingrédients** : 1 grand pain rond · 1 aubergine · 2 courgettes · 2 poivrons grillés · 250 g de mozzarella · 150 g d'olives vertes et noires · 1 c. à s. de câpres · 6 c. à s. d'huile d'olive · 1 c. à c. d'origan · 1 gousse d'ail
 
 1. **Olivade.** Olives, câpres, ail, origan hachés grossièrement avec l'huile et un trait de vinaigre.
 2. **Légumes.** Aubergine et courgettes en tranches, grillées 3 min par face.
@@ -23326,6 +22526,1589 @@ La boisson du pique-nique sans sucre ni bouteille jetable : de l'eau fraîche pa
 
 ---
 
+## 2.34 Vague 5 · Audit gourmet (21/10/2026), recommandation 2 : les grands classiques réécrits au niveau des fiches étalons du
+
+### Blanquette de veau à l'ancienne
+
+*Blanquette de veau · France › Île-de-France · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 00 · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande cocotte, casserole, fouet.
+
+Le veau poché tout doucement avec ses légumes ; son bouillon devient un velouté nacré, lié à la crème et au jaune, avec champignons et petits oignons. Une sauce blanche qui ne doit jamais bouillir à la fin.
+
+**Ingrédients** : 1,2 kg d'épaule et de tendron de veau en morceaux · 2 carottes · 1 poireau (le blanc) · 1 oignon piqué de 2 clous de girofle + 1 bouquet garni · 250 g de champignons de Paris + 12 petits oignons · 40 g de beurre + 40 g de farine · 20 cl de crème fraîche épaisse · 2 jaunes d'œufs · ½ citron · 1 c. à c. de gros sel
+
+1. **Blanchir.** Viande dans une grande casserole d'eau froide, portée à ébullition puis 2 min à gros bouillon : une écume grise monte. Égoutte, rince la viande et la cocotte (c'est ce qui garde la sauce blanche).
+2. **Pocher.** Viande remise dans 2 l d'eau froide avec carottes en tronçons, poireau, oignon piqué, bouquet garni et le gros sel. Frémissement à peine visible, 1 h 30 à couvert entrouvert, en écumant les 10 premières minutes : la viande cède sous la pointe d'un couteau.
+3. **Garniture.** Champignons en quartiers et petits oignons, 10 min dans 2 louches de bouillon et une noix de beurre, à couvert : tendres et brillants.
+4. **Velouté.** Viande et légumes gardés au chaud ; bouillon filtré. Roux : beurre fondu + farine, 2 min sans colorer (il doit rester blanc). Verse 75 cl de bouillon chaud en fouettant, 10 min à petit feu : il nappe la cuillère.
+5. **Liaison.** Hors du feu, jaunes + crème + jus de citron fouettés ; ajoute une louche de velouté chaud, puis verse le tout dans la casserole en fouettant. Chauffe 1 min sans bouillir (sinon les jaunes cuisent en grains).
+6. **Réunir.** Viande, garniture et velouté, 5 min à feu très doux. Goûte : sel, poivre blanc, un trait de citron si c'est plat.
+
+- Le blanchiment n'est pas une manie de chef : c'est lui qui donne une sauce nacrée et non grise.
+- Préparée la veille sans la liaison, elle se réchauffe doucement et on lie au dernier moment.
+- Le bouillon restant : une soupe aux vermicelles le lendemain.
+
+**Conservation** : 3 jours au frigo ; ne se congèle pas une fois liée (la sauce tourne).
+
+**Techniques** : Roux, Bouillon
+
+---
+
+### Coq au vin
+
+*Coq au vin · France › Bourgogne-Franche-Comté · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 50 min · repos/cuisson 17 h 00 · coût €€
+
+- 🐖 **Contient du porc** : Lardons
+- 🍷 **Contient de l'alcool** : Vin rouge
+- ⚠️ **Allergènes** : gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
+
+**Équipement** : Grande cocotte, passoire.
+
+La volaille marinée une nuit dans un vin de Bourgogne, saisie, puis mijotée jusqu'à ce que la chair se détache ; garniture de lardons, champignons et petits oignons. Un vrai coq demande 2 h 30 à 3 h ; un gros poulet fermier, 1 h 15.
+
+**Ingrédients** : 1 coq (ou gros poulet fermier) de 2,5 kg en 8 morceaux · 75 cl de vin rouge de Bourgogne · 150 g de lardons · 250 g de champignons de Paris + 12 petits oignons · 2 carottes + 1 oignon · 3 gousses d'ail + 1 bouquet garni · 2 c. à s. de farine · 30 g de beurre · 1 c. à c. de sel
+
+1. **Mariner (la veille).** Morceaux, vin, carottes et oignon en rondelles, ail écrasé, bouquet garni ; filmé, 12 h au frais.
+2. **Égoutter.** Morceaux sortis et épongés sur du papier (mouillés, ils ne dorent pas) ; marinade gardée.
+3. **Lardons et saisie.** Lardons dorés 5 min à sec, réservés. Dans leur graisse + le beurre, morceaux salés dorés en 2 fois, 4 min par face : peau brun doré.
+4. **Singer.** Légumes de la marinade 5 min ; farine saupoudrée sur la viande remise, 2 min en remuant (elle doit roussir sans brûler).
+5. **Mouiller et mijoter.** Marinade portée à ébullition à part 2 min (elle perd son âpreté), versée sur la viande. Couvercle, feu très doux : **2 h 30 à 3 h pour un coq**, 1 h 15 pour un poulet fermier. C'est cuit quand la chair se détache de l'os à la fourchette.
+6. **Garniture.** 20 min avant la fin, champignons et petits oignons dorés à part 8 min ; ajoutés avec les lardons.
+7. **Finir.** Sauce trop liquide : morceaux sortis, sauce réduite à découvert 10 min jusqu'à napper la cuillère. Goûte, rectifie le sel.
+
+- Encore meilleur réchauffé le lendemain : la sauce s'arrondit.
+- Un vin que tu boirais : un vin de cuisine donne une sauce aigre.
+- Le coq est rare en boucherie : commande-le ; sinon un poulet fermier Label Rouge, et la cuisson courte.
+
+- **Variante Sans alcool** : Vin rouge → **½ bouillon + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** (+ 1 c. à c. de concentré pour la couleur). **À tester**. *Calcul* : porc **violates**, alcool **trace**.
+
+- **Variante Sans porc** : Lardons → **lardons de dinde ou de volaille fumés**, dorés dans 1 c. à s. d'huile (ils sont plus maigres). **À tester**. *Calcul* : porc **ok**, alcool **violates**.
+
+**Conservation** : 3 jours au frigo ; se congèle 3 mois.
+
+**Techniques** : Mijoter, Marinade
+
+---
+
+### Pot-au-feu
+
+*Pot-au-feu · France › Île-de-France · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 8 portions · actif 40 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Très grand faitout, écumoire.
+
+Trois morceaux de bœuf (un maigre, un gélatineux, un persillé) pochés très doucement avec leurs légumes et leurs os à moelle. On sert d'abord le bouillon, puis la viande avec gros sel, moutarde et cornichons.
+
+**Ingrédients** : 800 g de paleron · 800 g de macreuse ou de gîte · 600 g de jarret ou plat de côtes · 4 os à moelle · 8 carottes · 4 poireaux · 4 navets + ½ céleri-rave · 8 pommes de terre (à part) · 1 oignon piqué de girofle + bouquet garni · 1 c. à s. de gros sel
+
+1. **Départ à froid.** Viandes ficelées dans 5 l d'eau froide, portées doucement à frémissement : la viande rend son jus au bouillon. Écume 20 min sans laisser bouillir (sinon le bouillon se trouble).
+2. **Aromates.** Oignon piqué, bouquet garni, gros sel ; frémissement à peine visible, couvercle entrouvert, 2 h 30.
+3. **Légumes.** Carottes, poireaux ficelés en botte, navets et céleri en gros morceaux : 45 min avant la fin. Ils doivent être tendres, pas en purée.
+4. **Pommes de terre.** Cuites à part dans un peu de bouillon, 25 min (dans la marmite, elles troubleraient le bouillon).
+5. **Os à moelle.** Extrémités frottées de gros sel (la moelle ne s'échappe pas), 20 min dans le bouillon.
+6. **Servir.** Bouillon dégraissé en premier (vermicelles si tu veux) ; viande tranchée contre les fibres, légumes, moelle sur pain grillé, gros sel, moutarde, cornichons.
+
+- La viande est cuite quand elle se coupe à la cuillère ; trop bouillie, elle devient sèche et filandreuse.
+- Bouillon refroidi une nuit : le gras se retire en plaque.
+- Les restes : hachis Parmentier, salade de bœuf vinaigrette.
+
+**Conservation** : Bouillon : 3 jours au frigo, 3 mois congelé. Viande : 3 jours.
+
+**Techniques** : Bouillon
+
+---
+
+### Daube provençale
+
+*Daube · France › Provence-Alpes-Côte d'Azur · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 40 min · repos/cuisson 16 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin rouge
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
+
+**Équipement** : Cocotte en fonte, four.
+
+Le bœuf mariné une nuit au vin rouge avec zeste d'orange, girofle et herbes, puis cuit des heures au four : la viande s'effiloche, la sauce est brune et parfumée. À Nice, le reste de sauce nappe les macaronis du lendemain.
+
+**Ingrédients** : 1,5 kg de joue ou paleron en gros cubes · 75 cl de vin rouge corsé · 2 carottes + 2 oignons · 1 orange (zeste en bandes) · 100 g d'olives noires · 4 gousses d'ail · 1 bouquet garni + 2 clous de girofle · 2 c. à s. de concentré de tomate · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Mariner (la veille).** Viande, vin, légumes en rondelles, ail, zeste, girofle, bouquet ; 12 h au frais, retournée une fois.
+2. **Saisir.** Viande égouttée et séchée, salée, dorée en 3 fois dans l'huile, 3 min par face : croûte brune. Légumes de la marinade 5 min.
+3. **Mouiller.** Marinade bouillie 2 min à part, versée avec le concentré ; la viande doit être juste couverte.
+4. **Cuire.** Couvercle, four 150 °C, 3 h. Olives les 30 dernières minutes. C'est prêt quand un cube s'écrase à la cuillère.
+5. **Réduire.** Sauce trop claire : viande sortie, sauce réduite à feu vif 10 min, jusqu'à napper. Goûte : sel, poivre, un zeste d'orange frais.
+
+- Elle est meilleure le lendemain : refroidis-la dans la cocotte, le gras se retire, la sauce s'arrondit.
+- Les restes de sauce : macaronis à la daube, gratinés au parmesan.
+
+- **Variante Sans alcool** : Vin rouge → **½ bouillon + ⅖ jus de raisin rouge + 2 c. à s. de vinaigre de vin** (+ 1 c. à c. de concentré pour la couleur). **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 4 jours au frigo ; 3 mois au congélateur.
+
+**Techniques** : Mijoter, Marinade
+
+---
+
+### Navarin d'agneau printanier
+
+*Navarin · France › Île-de-France · Plat* · Fêtes : Pâques
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 1 h 40 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Un ragoût d'agneau à la sauce brune légère, cuit avec des légumes nouveaux ajoutés au fil de la cuisson pour qu'ils restent entiers : le plat de Pâques.
+
+**Ingrédients** : 1,2 kg d'épaule et de collier d'agneau en morceaux · 12 navets nouveaux · 12 petites carottes · 500 g de pommes de terre grenaille · 200 g de petits pois · 1 oignon + 2 gousses d'ail · 1 c. à s. de concentré + 1 c. à c. de sucre · 1 c. à s. de farine · 1 bouquet garni · 1 c. à c. de sel · 1 c. à s. de persil haché *(facultatif)*
+
+1. **Saisir.** Agneau séché, salé, doré en 2 fois dans 2 c. à s. d'huile, 3 min par face. Le sucre à la fin : il caramélise et colore la sauce.
+2. **Singer.** Oignon 3 min, farine 1 min en remuant, concentré, ail, bouquet garni.
+3. **Mouiller.** Eau chaude à hauteur, en grattant les sucs. Couvert, frémissement doux, 1 h : la viande devient tendre.
+4. **Dégraisser.** Le gras remonté en surface retiré à la louche (l'agneau en rend beaucoup).
+5. **Légumes en deux temps.** Carottes, navets et pommes de terre 25 min : tendres à la pointe du couteau. Petits pois 5 min, à découvert : ils restent verts.
+6. **Finir.** Sauce réduite 5 min à découvert si besoin, jusqu'à napper la cuillère ; goûte, rectifie le sel, poivre, persil.
+
+- Le collier donne du moelleux, l'épaule de la tenue : le mélange des deux est le bon.
+- Hors saison : carottes et navets coupés en bâtonnets, petits pois surgelés.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Poule au pot farcie (version poulet)
+
+*Poule au pot · France › Nouvelle-Aquitaine › Béarn · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 50 min · repos/cuisson 2 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : œufs ; **possibles selon marque** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grand faitout, ficelle, aiguille à brider (ou cure-dents).
+
+La volaille farcie de pain, de foies et d'herbes, pochée avec ses légumes : un bouillon doré, une chair moelleuse, et la farce tranchée comme un pâté. Version poulet (une poule demande 3 h).
+
+**Ingrédients** : 1 gros poulet fermier (ou une poule) · 4 carottes · 3 poireaux · 4 navets · 1 oignon piqué de 2 clous de girofle + bouquet garni · 200 g de pain rassis · 2 œufs · 200 g de foies de volaille · 1 bouquet de persil + 2 gousses d'ail · 1 c. à s. de gros sel
+
+1. **Farce.** Pain trempé dans un peu de lait, pressé ; foies hachés, œufs, persil et ail hachés, sel, poivre : une pâte souple qui se tient.
+2. **Farcir et fermer.** Volaille farcie sans tasser (la farce gonfle), ouverture cousue ou fermée aux cure-dents, pattes ficelées.
+3. **Pocher.** Eau froide à hauteur, gros sel, oignon piqué, bouquet garni ; frémissement très doux, écume 10 min. 1 h 30 pour un poulet, 3 h pour une poule.
+4. **Légumes.** 45 min avant la fin, en gros morceaux : tendres sans s'écraser.
+5. **Vérifier.** Une cuisse se détache facilement, le jus qui sort est clair ; au thermomètre, 74 °C au cœur de la farce.
+6. **Servir.** Bouillon dégraissé en premier ; volaille découpée, farce en tranches épaisses, légumes, gros sel et cornichons.
+
+- La farce cuit dans la volaille : elle doit atteindre 74 °C, le thermomètre est utile.
+- Le bouillon fait une soupe, un risotto ou une sauce les jours suivants.
+
+**Conservation** : Bouillon : 3 mois au congélateur. Volaille : 3 jours.
+
+**Techniques** : Bouillon
+
+---
+
+### Hachis Parmentier
+
+*Hachis Parmentier · France › Île-de-France · Plat*
+
+Niveau ⭐ · 6 portions · actif 35 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, poêle, casserole, presse-purée.
+
+Une viande hachée revenue aux oignons, juteuse et bien assaisonnée, sous une purée beurrée qui dore au four. La version d'origine se fait avec les restes de pot-au-feu ou de rôti.
+
+**Ingrédients** : 600 g de bœuf haché (ou restes de pot-au-feu) · 1,2 kg de pommes de terre farineuses · 2 oignons · 20 cl de lait · 60 g de beurre · 1 c. à s. de concentré de tomate · 60 g de fromage râpé · 1 bouquet de persil · 1 pincée de muscade · 1 c. à c. de sel
+
+1. **Pommes de terre.** Épluchées, en gros morceaux, départ eau froide salée, 20-25 min : la lame entre sans résistance.
+2. **Purée.** Égouttées, séchées 1 min sur le feu, écrasées au presse-purée (jamais au mixeur : elle devient collante). Beurre puis lait chaud, muscade, sel : souple mais pas liquide.
+3. **Oignons.** Émincés, 8 min dans un peu de beurre à feu moyen : fondants et blonds.
+4. **Viande.** Feu vif, viande émiettée, 5 min sans trop remuer pour qu'elle dore ; concentré, sel, poivre, persil haché, 2 min. Elle doit rester juteuse (un trait de bouillon si elle sèche).
+5. **Monter.** Viande au fond du plat, purée lissée à la spatule puis striée à la fourchette, fromage, noisettes de beurre.
+6. **Gratiner.** 20 min à 200 °C, puis 3 min sous le gril : les stries dorent et croustillent. Repos 5 min avant de servir.
+
+- Avec des restes de pot-au-feu ou de rôti hachés au couteau, il est encore meilleur : c'est la recette d'origine.
+- Une salade verte vinaigrée à côté équilibre le plat.
+
+**Conservation** : 3 jours au frigo ; se congèle 3 mois en parts.
+
+**Techniques** : Gratiner
+
+---
+
+### Gigot de sept heures
+
+*Gigot de sept heures · France · Plat* · Fêtes : Pâques, Repas de famille
+
+Niveau ⭐ · 8 portions · actif 30 min · repos/cuisson 7 h 30 · coût €€€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : gluten, sulfites ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte en fonte ovale avec couvercle, four.
+
+Un gigot cuit si longtemps, à si basse température, qu'il se sert à la cuillère, confit dans le vin blanc avec ses têtes d'ail et ses légumes. Peu de travail, beaucoup de patience.
+
+**Ingrédients** : 1 gigot d'agneau de 2,2 kg · 50 cl de vin blanc sec · 2 têtes d'ail · 4 carottes + 3 oignons · 4 branches de thym et romarin · 30 cl de bouillon · 3 c. à s. d'huile d'olive · 200 g de farine + eau (cordon, facultatif) *(facultatif)* · 1 c. à c. de sel
+
+1. **Saler.** Gigot sorti 1 h avant, salé et poivré partout.
+2. **Dorer.** Cocotte, huile, feu moyen-vif : gigot doré sur toutes ses faces, 15 min au total. Pas de brûlé au fond : les sucs font la sauce.
+3. **Garnir.** Carottes et oignons en gros morceaux, têtes d'ail coupées en deux, herbes ; vin blanc et bouillon (à mi-hauteur de la viande).
+4. **Fermer.** Couvercle, et si tu veux le faire comme autrefois, un boudin de pâte farine-eau tout autour (la vapeur ne s'échappe pas).
+5. **Cuire.** 7 h à 120 °C, sans ouvrir si la cocotte est lutée ; sinon arrose 2 fois. C'est prêt quand la viande se défait à la cuillère.
+6. **Servir.** Le jus réduit 5 min à feu vif s'il est trop clair ; ail confit pressé dedans. Gigot posé entier sur le plat, servi à la cuillère.
+
+- Le lendemain, il est encore meilleur : réchauffé doucement 1 h à 120 °C dans son jus.
+- Avec des flageolets ou une purée.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : 3 jours au frigo dans son jus.
+
+**Techniques** : Mijoter, Basse température
+
+---
+
+### Souris d'agneau confites au miel et romarin
+
+*Souris d'agneau · France · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 3 h 10 · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte, four.
+
+Les jarrets d'agneau dorés, confits trois heures dans une sauce tomate à l'ail et au romarin, puis laqués au miel : la viande se détache de l'os.
+
+**Ingrédients** : 4 souris d'agneau · 2 c. à s. de miel · 1 tête d'ail · 3 branches de romarin · 2 oignons · 400 g de tomates pelées · 30 cl de bouillon · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Dorer.** Souris salées, dorées sur toutes les faces dans l'huile, 10 min : brun profond.
+2. **Base.** Oignons émincés 5 min, gousses d'ail entières en chemise, romarin, tomates, bouillon : à mi-hauteur.
+3. **Confire.** Couvert, four 150 °C, 2 h 30, en retournant à mi-cuisson : la viande se détache de l'os à la fourchette.
+4. **Laquer.** Découvert, miel au pinceau, 20 min à 180 °C en arrosant 2 fois : brillantes et caramélisées.
+5. **Sauce.** Jus réduit 5 min s'il est trop clair ; ail confit écrasé dedans. Goûte, rectifie.
+
+- Commande les souris à l'avance : chaque gigot n'en a qu'une.
+- Le jus restant parfume une semoule ou une purée le lendemain.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Joues de bœuf aux carottes
+
+*Bœuf carottes · France › Île-de-France · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 3 h 20 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Des joues de bœuf qui deviennent fondantes comme du confit, des carottes qui s'imprègnent de la sauce : le bœuf-carottes de famille, sans alcool.
+
+**Ingrédients** : 1,5 kg de joues de bœuf · 1 kg de carottes · 2 oignons · 1 c. à s. de concentré · 1 c. à s. de farine · 75 cl de bouillon de bœuf · 1 bouquet garni · 2 c. à s. d'huile · 1 c. à c. de sel · 1 c. à s. de persil haché *(facultatif)*
+
+1. **Parer.** Joues débarrassées de la grosse membrane, en 3 morceaux ; séchées, salées.
+2. **Saisir.** Huile fumante, en 2 fois, 4 min par face : croûte brune (c'est le goût de la sauce).
+3. **Singer.** Oignons 5 min, farine 1 min, concentré 1 min : ça doit sentir le grillé, pas le brûlé.
+4. **Mijoter.** Bouillon chaud en grattant les sucs, bouquet garni ; frémissement très doux, couvert, 2 h.
+5. **Carottes.** En rondelles épaisses, 1 h de plus : la viande s'écrase à la cuillère, les carottes sont confites.
+6. **Finir.** Sauce réduite 5 à 10 min à découvert, jusqu'à napper la cuillère ; goûte, poivre, persil.
+
+- Encore meilleur réchauffé : prépare-le la veille.
+- Les joues en sauce se congèlent très bien en portions.
+
+**Conservation** : 4 jours au frigo ; 3 mois au congélateur.
+
+**Techniques** : Mijoter
+
+---
+
+### Lapin à la moutarde
+
+*Lapin à la moutarde · France › Bourgogne-Franche-Comté · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 1 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Moutarde de Dijon, Vin blanc
+- ⚠️ **Allergènes** : lait, moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Morceaux de lapin enduits de moutarde, dorés, mijotés au vin blanc puis liés à la crème et à la moutarde à l'ancienne : tendre, relevé, très bourguignon.
+
+**Ingrédients** : 1 lapin en 8 morceaux · 4 c. à s. de moutarde de Dijon + 1 c. à s. à l'ancienne · 20 cl de crème fraîche · 20 cl de vin blanc sec · 2 échalotes · 3 branches de thym · 20 g de beurre + 1 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Badigeonner.** Morceaux salés, poivrés, enduits de moutarde de Dijon ; 30 min.
+2. **Dorer.** Beurre et huile moussants, morceaux dorés 3 min par face sans les brûler (la moutarde colore vite) ; échalotes émincées 2 min.
+3. **Mijoter.** Vin blanc et thym, couvercle, frémissement 40 min : la chair se détache de l'os.
+4. **Lier.** Crème et moutarde à l'ancienne, 10 min à découvert : la sauce nappe. Goûte : la moutarde perd sa force en cuisant, un trait de Dijon cru à la fin la réveille.
+
+- Pas de lapin : des cuisses de poulet, même recette, 35 min de mijotage.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Poulet basquaise
+
+*Poulet basquaise · France › Nouvelle-Aquitaine › Pays basque · Plat*
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 55 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Les morceaux de poulet dorés puis mijotés dans la piperade (poivrons, tomates, oignons fondus) relevée au piment d'Espelette : de la couleur, de la douceur, une pointe de chaleur.
+
+**Ingrédients** : 6 cuisses de poulet · 3 poivrons (rouge, vert, jaune) · 800 g de tomates pelées (ou 6 tomates mûres) · 2 oignons · 3 gousses d'ail · 1 c. à c. de piment d'Espelette · 1 bouquet thym-laurier · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Dorer.** Cuisses salées, peau en dessous, dans l'huile chaude, 8 min sans bouger puis 4 min de l'autre côté : peau dorée et croustillante. Réserve.
+2. **Piperade.** Dans la graisse, oignons et poivrons en lanières, 12 min à feu moyen : fondants, légèrement colorés. Ail 1 min.
+3. **Sauce.** Tomates écrasées, Espelette, bouquet, 10 min.
+4. **Mijoter.** Cuisses posées peau au-dessus (elle reste plus croustillante), couvert, 35 min à feu doux : 74 °C à cœur, jus clair.
+5. **Finir.** Couvercle retiré 5 min si la sauce est claire ; goûte, sel, une pincée d'Espelette au service.
+
+- Encore meilleur réchauffé.
+- Pour les enfants : l'Espelette est doux, mais sers-en un peu à part si besoin.
+
+**Conservation** : 3 jours au frigo ; se congèle 3 mois.
+
+**Techniques** : Mijoter
+
+---
+
+### Tartiflette
+
+*Tartiflette · France › Auvergne-Rhône-Alpes › Savoie · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 45 min · coût €€
+
+- 🐖 **Contient du porc** : Lardons
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à gratin, poêle, casserole.
+
+Pommes de terre fermes, oignons fondus, lardons, un peu de vin blanc et de crème, et un reblochon entier qui fond par-dessus : le plat des retours de ski, généreux et sans détour.
+
+**Ingrédients** : 1,5 kg de pommes de terre à chair ferme · 1 reblochon fermier · 200 g de lardons · 2 oignons · 15 cl de crème fraîche · 10 cl de vin blanc de Savoie · 1 gousse d'ail · 1 pincée de poivre
+
+1. **Pommes de terre.** Entières, en robe des champs, départ eau froide salée, 20 min : encore un peu fermes. Épluchées tièdes, en rondelles épaisses.
+2. **Lardons et oignons.** Lardons à sec 5 min, oignons émincés 10 min dans leur gras : blonds et fondants. Vin blanc, 2 min pour qu'il s'évapore à moitié.
+3. **Monter.** Plat frotté d'ail : pommes de terre, lardons-oignons, pommes de terre, crème. Reblochon coupé en deux dans l'épaisseur, croûte vers le haut.
+4. **Gratiner.** 25 min à 200 °C : le fromage coule, la croûte dore, la crème bouillonne sur les bords. Pas de sel (reblochon et lardons le sont).
+
+- Une salade verte bien vinaigrée à côté est indispensable : elle coupe le gras.
+- Le reblochon fermier (pastille verte) a plus de goût que le laitier (pastille rouge).
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **violates**, alcool **ok**.
+
+- **Variante Sans porc** : Lardons → **lardons de dinde ou de volaille fumés**, dorés dans 1 c. à s. d'huile (ils sont plus maigres). **À tester**. *Calcul* : porc **ok**, alcool **violates**.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Gratiner
+
+---
+
+### Cassoulet de Castelnaudary (version canard-bœuf)
+
+*Cassoulet · France › Occitanie › Lauragais · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 17 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande cassole ou cocotte en terre, four.
+
+Haricots fondants cuits dans leur bouillon, confit de canard et saucisses, gratinés longuement jusqu'à former une croûte qu'on enfonce sept fois. L'original est au porc : version inspirée canard et saucisses de bœuf (D21), au goût fumé conservé.
+
+**Ingrédients** : 800 g de haricots lingots secs · 4 cuisses de canard confites · 6 saucisses de bœuf ou de volaille · 2 oignons + 1 carotte · 4 gousses d'ail · 2 c. à s. de concentré de tomate · 1 bouquet garni · 1 c. à c. de paprika fumé · 1 c. à c. de sel
+
+1. **Tremper (la veille).** Haricots dans trois fois leur volume d'eau froide, 12 h.
+2. **Cuire les haricots.** Départ eau froide, 5 min d'ébullition, égouttés ; puis eau neuve, oignon, carotte, 2 gousses d'ail, bouquet, paprika fumé : frémissement 1 h, sans sel (sinon ils durcissent). Ils sont tendres mais entiers. Sale à la fin.
+3. **Viandes.** Confit dégraissé et doré côté peau 8 min dans sa graisse ; saucisses dorées 5 min.
+4. **Monter.** Cassole frottée d'ail : haricots, viandes, haricots ; bouillon de cuisson mêlé au concentré jusqu'à hauteur.
+5. **Gratiner.** Four 150 °C, 3 h. Une croûte dorée se forme : enfonce-la à la cuillère toutes les 30 min (au moins 3 fois, la tradition en compte 7) et rajoute un peu de bouillon si ça sèche.
+6. **Servir.** Brûlant, dans la cassole, avec une salade verte.
+
+- Il est meilleur réchauffé : cuit la veille, recuit 1 h à 150 °C.
+- Les haricots doivent rester entiers : pas d'ébullition franche.
+
+**Conservation** : 4 jours au frigo ; encore meilleur réchauffé.
+
+**Techniques** : Mijoter, Gratiner
+
+---
+
+### Confit de canard maison
+
+*Confit de canard · France › Nouvelle-Aquitaine › Gascogne · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 27 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte, four, thermomètre.
+
+Des cuisses salées une nuit, rincées, puis confites trois heures dans leur graisse à petits frémissements : tendres à cœur, à poêler côté peau au moment de servir.
+
+**Ingrédients** : 4 cuisses de canard · 1 kg de graisse de canard · 60 g de gros sel · 4 gousses d'ail · 4 branches de thym + 2 feuilles de laurier · 1 c. à c. de poivre · 800 g de pommes de terre (sarladaises) *(facultatif)* · 1 c. à s. de persil haché (pommes sarladaises) *(facultatif)*
+
+1. **Saler.** Cuisses frottées de gros sel, poivre, thym émietté, ail écrasé ; 12 à 24 h au frigo dans un plat couvert (le sel tire l'eau et parfume).
+2. **Rincer.** Sel rincé à l'eau froide, cuisses bien séchées.
+3. **Confire.** Graisse fondue dans la cocotte, cuisses immergées, ail et laurier ; four 100 °C, 3 h : de toutes petites bulles, jamais d'ébullition. C'est cuit quand l'os se détache en tournant.
+4. **Conserver.** Cuisses rangées dans un bocal ou une terrine, couvertes de leur graisse filtrée.
+5. **Servir.** Poêle froide, côté peau, feu moyen, 8 min sans bouger : peau dorée et croustillante ; 2 min de l'autre côté. Pommes de terre en rondelles sautées dans la graisse avec ail et persil.
+
+- La graisse se réutilise trois ou quatre fois : filtrée, gardée au frais.
+- Le confit se garde trois semaines au frigo, à condition d'être entièrement couvert de graisse.
+
+**Conservation** : 3 semaines au frigo couvert de graisse.
+
+**Techniques** : Confire
+
+---
+
+### Sole meunière
+
+*Sole meunière · France · Plat*
+
+Niveau ⭐⭐ · 2 portions · actif 15 min · repos/cuisson 12 min · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle ovale, spatule large.
+
+La sole farinée, dorée au beurre, arrosée d'un beurre noisette au citron et au persil : le plat des grandes brasseries, réussi en dix minutes si la poêle est à la bonne température.
+
+**Ingrédients** : 2 soles portion (300 g) vidées et pelées · 30 g de farine · 80 g de beurre · 1 citron · 1 c. à s. de persil haché · 1 pincée de fleur de sel
+
+1. **Fariner.** Soles séchées, salées des deux côtés, farinées puis tapotées : une pellicule fine (trop de farine fait une croûte pâteuse).
+2. **Cuire.** 30 g de beurre et un filet d'huile, feu moyen : quand le beurre mousse sans brunir, sole côté peau blanche, 4 min en arrosant de beurre ; retournée délicatement, 3 à 4 min. La chair se détache de l'arête centrale.
+3. **Beurre noisette.** Soles sur assiettes chaudes. Poêle essuyée, 50 g de beurre, 1 à 2 min jusqu'à ce qu'il mousse, sente la noisette et prenne une couleur blonde : hors du feu, jus de citron (ça crépite), persil.
+4. **Servir.** Nappée aussitôt, quartier de citron, pommes vapeur.
+
+- Une limande ou une plie : même recette, 2 min de moins.
+- Demande au poissonnier de peler la peau noire : c'est délicat à la maison.
+
+**Conservation** : À manger aussitôt.
+
+**Techniques** : Poisson plat, Cuisson du poisson
+
+---
+
+### Bouillabaisse express (version familiale)
+
+*Bouillabaisse · France › Provence-Alpes-Côte d'Azur › Marseille · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 45 min · repos/cuisson 40 min · coût €€€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs, poissons ; **possibles selon marque** : céleri, gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Faitout large, mixeur.
+
+Plusieurs poissons fermes cuits à gros bouillon dans une soupe de poissons safranée à l'orange et au fenouil, avec pommes de terre, rouille et croûtons. Le gros bouillon n'est pas une erreur : il émulsionne l'huile et lie le bouillon.
+
+**Ingrédients** : 1,5 kg de poissons variés (lotte, grondin, rascasse, merlan) · 1 recette de soupe de poissons (base) · 6 pommes de terre à chair ferme · 1 orange (zeste) · 1 pincée de safran · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Poissons.** En gros tronçons, frottés d'huile, de safran et de sel ; 30 min au frais.
+2. **Base.** Soupe de poissons portée à ébullition 5 min avec le zeste d'orange et le reste du safran : rouge orangé, l'odeur de safran monte.
+3. **Pommes de terre.** En rondelles de 1 cm, 15 min dans la soupe : tendres.
+4. **Poissons.** Les fermes d'abord (lotte, grondin) 5 min, puis les tendres (merlan) 4 min, **à gros bouillon** : l'huile émulsionne, le bouillon s'épaissit. Ils sont cuits quand la chair devient opaque et se détache.
+5. **Servir.** Le bouillon d'abord sur des croûtons frottés d'ail et tartinés de rouille ; puis poissons et pommes de terre sur un plat.
+
+- Demande au poissonnier de vider, écailler et couper les poissons, et garde les têtes pour la soupe.
+- Pas de lotte : cabillaud et lieu, en tronçons épais.
+
+**Conservation** : Le jour même (le poisson réchauffé se défait).
+
+**Techniques** : Cuisson du poisson
+
+---
+
+### Soupe à l'oignon gratinée
+
+*Gratinée des Halles · France › Île-de-France · Entrée*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : gluten, lait, sulfites ; **possibles selon marque** : céleri, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, bols allant au four.
+
+Des oignons caramélisés très lentement jusqu'au brun noisette, un bouillon brûlant, le pain rassis et le fromage gratiné : la soupe des petits matins des Halles. Tout le goût vient de la patience sur les oignons.
+
+**Ingrédients** : 1 kg d'oignons jaunes · 40 g de beurre · 1 c. à s. de farine · 1,2 L de bouillon de bœuf · 10 cl de vin blanc sec · 8 tranches de baguette rassise · 150 g de comté râpé · 1 c. à c. de sel
+
+1. **Caraméliser.** Oignons émincés finement, beurre, une pincée de sel (il fait rendre l'eau), feu moyen-doux, 40 min en remuant toutes les 5 min : ils passent du blond au brun noisette, très sucrés. S'ils attachent, une cuillère d'eau et on gratte.
+2. **Lier.** Farine, 1 min en remuant. Vin blanc, gratte le fond, 2 min.
+3. **Mouiller.** Bouillon chaud, 15 min à frémissement. Goûte : sel, poivre.
+4. **Pain.** Tranches grillées au four 5 min : sèches et dorées (elles tiendront dans la soupe).
+5. **Gratiner.** Bols remplis aux trois quarts, pain, fromage généreux ; 5 min sous le gril : le fromage bouillonne et brunit. ⚠️ Bols brûlants.
+
+- Les oignons cuits d'avance se congèlent : la soupe se fait ensuite en 20 min.
+- Sans vin : un trait de vinaigre de cidre pour l'acidité.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : Soupe sans pain : 3 jours au frigo.
+
+**Techniques** : Faire revenir, Gratiner
+
+---
+
+### Osso buco à la milanaise (gremolata)
+
+*Ossobuco alla milanese · Europe du Sud › Italie › Lombardie · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : gluten, lait, sulfites ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte large (les jarrets à plat).
+
+Le jarret de veau tranché avec son os à moelle, fariné, doré, braisé au vin blanc avec un soffritto et un peu de tomate ; au service, la gremolata citron-ail-persil réveille tout. À Milan, il se sert sur un risotto au safran.
+
+**Ingrédients** : 4 tranches de jarret de veau (4 cm) · 15 cl de vin blanc sec · 200 g de tomates pelées · 1 oignon + 1 carotte + 1 branche de céleri · 25 cl de bouillon · 2 c. à s. de farine · 1 citron non traité (zeste) · 1 bouquet de persil + 1 gousse d'ail · 30 g de beurre + 1 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Préparer.** Bordure des jarrets entaillée en 3 endroits (la peau se rétracte, ils restent plats) ; salés, farinés, tapotés.
+2. **Dorer.** Beurre et huile moussants, jarrets 4 min par face : bien dorés. Réserve.
+3. **Soffritto.** Oignon, carotte, céleri en petits dés, 8 min à feu doux : fondants.
+4. **Braiser.** Vin blanc, gratte les sucs, 2 min ; tomates, bouillon, jarrets remis à plat (le liquide à mi-hauteur). Couvert, frémissement doux, 1 h 45, en les retournant une fois : la viande se détache de l'os.
+5. **Gremolata.** Zeste de citron, ail et persil hachés ensemble très fin, au dernier moment.
+6. **Servir.** Sauce réduite si besoin ; jarrets nappés, gremolata dessus, cuillère pour la moelle.
+
+- La moelle est le meilleur morceau : une petite cuillère pour chacun.
+- Plus simple qu'un risotto : de la polenta crémeuse.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc** : l'acidité et le fruit du vin. **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : 3 jours au frigo (gremolata au moment).
+
+**Techniques** : Mijoter
+
+---
+
+### Lasagnes à la bolognaise
+
+*Lasagne alla bolognese · Europe du Sud › Italie › Émilie-Romagne · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 50 min · repos/cuisson 2 h 40 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte, casserole, plat à gratin.
+
+Un ragù cuit deux heures, qui n'a rien d'une sauce tomate à la viande ; une béchamel fluide à la muscade ; des feuilles de pâte et du parmesan : on prend le temps du dimanche, le montage est simple.
+
+**Ingrédients** : 600 g de bœuf haché (15 % de gras) · 250 g de feuilles de lasagnes · 800 g de tomates pelées · 1 carotte + 1 branche de céleri + 1 oignon · 25 cl + 70 cl de lait (ragù + béchamel) · 60 g de beurre + 60 g de farine · 100 g de parmesan · 1 pincée de muscade · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Soffritto.** Carotte, céleri, oignon hachés très fin, huile, 10 min à feu doux : fondants, sans couleur.
+2. **Viande.** Feu moyen-vif, viande émiettée, 8 min jusqu'à ce qu'elle grésille et dore légèrement ; sel.
+3. **Lait.** 25 cl de lait, laissé s'absorber complètement en 10 min (il attendrit la viande, c'est le secret bolognais).
+4. **Mijoter.** Tomates écrasées, 2 h à feu très doux, à couvert entrouvert, en remuant de temps en temps : sauce épaisse, l'huile perle en surface.
+5. **Béchamel.** Beurre fondu, farine 2 min, lait chaud d'un coup en fouettant, 5 min : nappante mais fluide (elle épaissit au four) ; muscade, sel.
+6. **Monter.** Fond de béchamel, pâtes, ragù, béchamel, parmesan ; 4 couches ; finir béchamel et parmesan.
+7. **Cuire et reposer.** 40 min à 180 °C : dessus doré, bords qui bouillonnent. 15 min de repos avant de couper (sinon tout s'effondre).
+
+- Le ragù se fait la veille et se congèle : le dimanche, il ne reste que le montage.
+- Feuilles sèches « sans précuisson » : la béchamel fluide suffit à les cuire.
+
+**Conservation** : 4 jours au frigo ; se congèle en parts.
+
+**Techniques** : Roux, Mijoter
+
+---
+
+### Risotto aux champignons
+
+*Risotto ai funghi · Europe du Sud › Italie › Lombardie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 35 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : lait, sulfites ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an en version sans alcool.
+
+**Équipement** : Sauteuse à bords hauts, casserole (bouillon).
+
+Un riz crémeux sans crème : le grain nacré, mouillé louche par louche d'un bouillon brûlant, puis travaillé hors du feu avec beurre froid et parmesan. Les champignons sont dorés à part pour garder leur goût.
+
+**Ingrédients** : 320 g de riz à risotto (carnaroli ou arborio) · 400 g de champignons (Paris et pleurotes) · 1,2 L de bouillon de volaille · 1 échalote · 10 cl de vin blanc sec · 60 g de parmesan · 60 g de beurre froid · 1 c. à s. de persil · 1 pincée de sel
+
+1. **Bouillon.** Chauffé 5 min puis gardé frémissant à côté (froid, il casserait la cuisson).
+2. **Champignons.** Poêle très chaude, une noix de beurre, en 2 fois, 5 min sans trop remuer : dorés, pas bouillis. Salés à la fin. Réserve.
+3. **Nacrer.** Échalote ciselée, une noix de beurre, 3 min : translucide. Riz, 2 min en remuant : les grains deviennent nacrés et crépitent.
+4. **Vin.** Versé d'un coup, remue jusqu'à évaporation (l'odeur d'alcool disparaît).
+5. **Cuire.** Bouillon louche par louche, en remuant souvent, la suivante quand la précédente est presque absorbée : 16 à 18 min. Goûte : tendre, avec un cœur à peine ferme. Sale à mi-cuisson.
+6. **Mantecare.** Hors du feu, beurre froid en dés et parmesan, remue vivement 1 min : crémeux et ondulant (« all'onda »). Couvre 2 min. Champignons et persil.
+
+- Le risotto n'attend pas : sers-le dès qu'il ondule dans l'assiette.
+- Les restes : arancini (boulettes panées) le lendemain.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron** (acidité). **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : Le jour même ; les restes en arancini.
+
+**Techniques** : nacrer le riz
+
+---
+
+### Pâtes cacio e pepe
+
+*Cacio e pepe · Europe du Sud › Italie › Latium · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 15 min · repos/cuisson 12 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole large (peu d'eau), poêle, bol.
+
+Trois ingrédients, une technique : le pecorino fondu avec l'eau amidonnée des pâtes et le poivre torréfié forme une crème soyeuse. Raté, il fait des grumeaux ; réussi, c'est un des plats les plus fins de Rome.
+
+**Ingrédients** : 400 g de spaghetti ou tonnarelli · 150 g de pecorino romano râpé très fin · 2 c. à c. de poivre noir concassé · 1 pincée de gros sel
+
+1. **Pâtes.** Peu d'eau (2 l pour 400 g) et peu salée : elle sera riche en amidon et le pecorino est salé. Cuisson 2 min de moins que le paquet : encore fermes au cœur. Garde 40 cl d'eau.
+2. **Poivre.** Concassé, torréfié 1 min à sec dans la poêle : il sent fort. Une louche d'eau des pâtes, 1 min.
+3. **Crème de pecorino.** Dans un bol, pecorino + quelques cuillères d'eau des pâtes **tiède** (pas bouillante, sinon il file) : pâte lisse comme une crème épaisse.
+4. **Finir les pâtes.** Pâtes dans la poêle au poivre, 2 min en ajoutant de l'eau : elles finissent de cuire et libèrent leur amidon.
+5. **Lier.** Hors du feu, attends 30 s, crème de pecorino, remue vite et sans arrêt en ajoutant de l'eau cuillère par cuillère : la sauce nappe et brille. Sers tout de suite.
+
+- Des grumeaux : la poêle était trop chaude. Une cuillère d'eau tiède et on remue fort, ça se rattrape souvent.
+- Râpe le pecorino à la râpe fine (microplane) : il fond sans grains.
+
+**Conservation** : À manger aussitôt.
+
+**Techniques** : Pâtes
+
+---
+
+### Moussaka
+
+*Mousakás · Europe du Sud › Grèce · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 1 h 00 · repos/cuisson 1 h 20 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin profond, poêle, casserole.
+
+Des aubergines rôties, un agneau à la tomate parfumé à la cannelle et au piment de la Jamaïque, une béchamel épaisse liée au jaune qui gonfle et dore : réconfortante, très parfumée, meilleure tiède.
+
+**Ingrédients** : 4 aubergines · 700 g d'agneau haché (ou de bœuf) · 400 g de tomates pelées · 2 oignons + 2 gousses d'ail · 1 c. à c. de cannelle + 1 pincée de quatre-épices · 1 c. à c. d'origan · 60 cl de lait · 60 g de beurre + 60 g de farine · 2 jaunes d'œufs · 60 g de parmesan ou kefalotyri
+
+1. **Aubergines.** Tranches de 1 cm salées 20 min, épongées, huilées au pinceau, 25 min à 220 °C : dorées et fondantes (pas de friture, plus léger).
+2. **Sauce.** Oignons 8 min, ail ; viande émiettée 8 min à feu vif jusqu'à dorer ; cannelle, quatre-épices, origan, tomates, sel ; 25 min à découvert : épaisse, presque sèche (sinon la moussaka rend de l'eau).
+3. **Béchamel.** Beurre, farine 2 min, lait chaud, 5 min : épaisse. Hors du feu, jaunes et fromage : elle gonfle et dore au four.
+4. **Monter.** Aubergines, viande, aubergines, béchamel lissée.
+5. **Cuire.** 45 min à 180 °C : dessus doré et soufflé.
+6. **Reposer.** 20 min au moins : elle se tient et se coupe en parts nettes.
+
+- Elle est encore meilleure le lendemain, tiède.
+- Végétarienne : des lentilles cuites à la place de la viande.
+
+**Conservation** : 4 jours au frigo ; se congèle en parts.
+
+**Techniques** : Roux
+
+---
+
+### Poulet au beurre (butter chicken)
+
+*Murgh makhani · Asie du Sud › Inde › Delhi · Plat*
+
+Niveau ⭐ · 6 portions · actif 35 min · repos/cuisson 4 h 40 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an, sans piment.
+
+**Équipement** : Four (gril) ou poêle, cocotte, mixeur.
+
+Du poulet mariné au yaourt et grillé jusqu'à charbonner un peu, dans une sauce tomate-beurre-crème douce, parfumée au fenugrec : le curry préféré des enfants, sans piment fort.
+
+**Ingrédients** : 1 kg de hauts de cuisse de poulet · 1 recette de marinade tandoori · 800 g de tomates pelées · 60 g de beurre · 15 cl de crème · 1 morceau de gingembre (3 cm) + 4 gousses d'ail · 1 c. à c. de garam masala · 1 c. à s. de fenugrec séché (kasuri methi) · 1 c. à c. de miel · 1 c. à c. de sel
+
+1. **Mariner.** Poulet en gros morceaux dans la marinade, 4 h au moins (une nuit, c'est mieux).
+2. **Griller.** Sous le gril, plaque haute, 12-15 min en retournant : bords noircis par endroits, 74 °C à cœur.
+3. **Sauce.** Beurre, gingembre et ail râpés 1 min (ça sent, sans brûler) ; tomates, sel, 20 min à feu moyen : réduite d'un tiers. Mixée très lisse.
+4. **Finir.** Crème, garam masala, fenugrec froissé entre les paumes, miel ; poulet, 10 min à feu doux : la sauce nappe, orange et brillante.
+5. **Goûter.** Trop acide : un peu de miel ; pas assez rond : une noix de beurre.
+
+- Le fenugrec séché fait le goût de restaurant : il se trouve en épicerie indienne.
+- Les restes se réchauffent très bien, et se congèlent.
+
+**Conservation** : 3 jours au frigo ; 3 mois au congélateur.
+
+---
+
+### Crème brûlée
+
+*Crème brûlée · France › Île-de-France › Paris · Dessert* · Fêtes : Saint-Valentin, Repas de famille
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 5 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Ramequins plats, plat à four, chalumeau (ou gril).
+
+Une crème à la vanille cuite très doucement, si onctueuse qu'elle tremble encore, sous une fine plaque de sucre caramélisé qui craque sous la cuillère.
+
+**Ingrédients** : 50 cl de crème entière · 10 cl de lait entier · 6 jaunes d'œufs · 80 g de sucre · 1 gousse de vanille · 6 c. à s. de cassonade
+
+1. **Infuser.** Crème, lait, gousse fendue et grattée portés au frémissement ; hors du feu, couvert, 20 min.
+2. **Appareil.** Jaunes et sucre mélangés à la spatule sans faire mousser (les bulles font une crème trouée) ; crème tiède versée en filet.
+3. **Reposer.** 1 h au frais, puis la mousse retirée à la cuillère : surface lisse.
+4. **Cuire.** Ramequins dans un plat, four 100 °C, 50 min à 1 h : les bords sont pris, le centre tremble comme une gelée quand on secoue doucement.
+5. **Refroidir.** 4 h au frigo au moins.
+6. **Brûler.** Juste avant de servir : une fine couche de cassonade, chalumeau tenu à 5 cm en tournant : sucre ambré, craquant (ou 2 min sous le gril, en surveillant).
+
+- Les 6 blancs : financiers ou meringues.
+- Ne brûle qu'au dernier moment : au frigo, le caramel fond.
+
+**Conservation** : Crèmes cuites : 3 jours au frigo ; caramélisées : à servir aussitôt. · **Zéro déchet** : **Blancs d'œufs restants** → financiers ou meringues.
+
+**Techniques** : Caramel
+
+---
+
+### Île flottante
+
+*Œufs à la neige · France › Île-de-France › Paris · Dessert*
+
+Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, batteur, thermomètre (utile), spatule.
+
+Des blancs en neige pochés qui flottent sur une crème anglaise vanillée bien froide, sous un filet de caramel : le dessert de bistrot qu'on rate rarement si on surveille l'anglaise.
+
+**Ingrédients** : 75 cl de lait entier · 6 œufs (séparés) · 150 g de sucre · 1 gousse de vanille · 80 g de sucre (caramel)
+
+1. **Infuser.** Lait et vanille grattée au frémissement, 10 min hors du feu.
+2. **Anglaise.** Jaunes + 100 g de sucre blanchis 1 min ; lait chaud versé en filet ; tout remis à feu doux en remuant en 8 sans arrêt, 6-8 min, jusqu'à 83 °C : la crème nappe la spatule et un doigt y trace un sillon net. Jamais d'ébullition (elle tournerait).
+3. **Refroidir.** Filtrée dans un bol froid, film au contact ; 2 h au frigo.
+4. **Îles.** Blancs + pincée de sel montés en neige ferme, 50 g de sucre en pluie à la fin : brillants. Quenelles pochées dans un lait frémissant, 1 min par face : elles gonflent et se tiennent (ou 30 s au micro-ondes sur une assiette). Égouttées.
+5. **Caramel.** 80 g de sucre + 2 c. à s. d'eau, sans remuer, jusqu'à ambré ; hors du feu.
+6. **Servir.** Anglaise bien froide, îles dessus, caramel en filet.
+
+- Anglaise tournée (grains) : mixée aussitôt 30 s au mixeur plongeant, elle redevient souvent lisse.
+- Le lait de pochage des îles sert ensuite pour l'anglaise : rien ne se perd.
+
+**Conservation** : Anglaise : 2 jours au frigo ; îles : le jour même.
+
+**Techniques** : Crème anglaise, Caramel
+
+---
+
+### Tarte Tatin
+
+*Tarte des demoiselles Tatin · France › Centre-Val de Loire · Dessert*
+
+Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule à manqué sans fond amovible (ou poêle allant au four), four.
+
+Des pommes confites dans un caramel au beurre jusqu'à devenir ambrées et translucides, sous une pâte croustillante, retournée tiède : le dessert né d'une erreur heureuse à Lamotte-Beuvron.
+
+**Ingrédients** : 1,2 kg de pommes qui tiennent (Reinette, Golden, Boskoop) · 150 g de sucre · 80 g de beurre demi-sel · 1 pâte brisée (recette liée) · 20 cl de crème fraîche (pour servir) *(facultatif)*
+
+1. **Pommes.** Épluchées, en quartiers épais (elles fondent à la cuisson).
+2. **Caramel.** Dans le moule sur feu moyen, sucre et beurre : ça fond, mousse, puis prend une couleur blonde en 6-8 min. ⚠️ Très chaud.
+3. **Ranger.** Hors du feu, quartiers serrés debout, bombé vers le bas (ils tassent en cuisant). Remets 15 min sur feu moyen : le jus des pommes et le caramel bouillonnent et l'ambre remonte.
+4. **Couvrir.** Pâte posée, bords rentrés à l'intérieur entre pommes et moule, piquée.
+5. **Cuire.** 35 min à 190 °C : pâte dorée, caramel qui bouillonne sur les bords.
+6. **Retourner.** 10 min de repos (le caramel se raffermit un peu), plat posé dessus, retourné d'un coup avec des gants. Une pomme restée au moule se remet à sa place.
+
+- Le caramel colle au moule : 1 min sur le feu avant de retourner.
+- Tiède avec de la crème fraîche épaisse, c'est la tradition.
+
+**Conservation** : 2 jours ; tiède, c'est meilleur.
+
+**Techniques** : Caramel
+
+---
+
+### Baba (au rhum ou au sirop d'agrumes)
+
+*Baba au rhum · France › Grand Est › Lorraine · Dessert*
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 3 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Rhum ambré / blanc
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
+
+**Équipement** : Moules à baba ou à savarin, batteur ou robot.
+
+Une pâte levée très légère, séchée puis plongée dans un sirop bouillant jusqu'à ce qu'elle ne fasse plus de bulles, servie avec une chantilly : version rhum traditionnelle, et sans alcool aux agrumes en variante.
+
+**Ingrédients** : 250 g de farine · 3 œufs · 80 g de beurre fondu tiède · 10 g de levure boulangère sèche · 5 cl de lait tiède · 500 g de sucre (sirop) + 1 l d'eau · 10 cl de rhum ambré · 1 orange (zeste) · 20 cl de crème fleurette bien froide
+
+1. **Pâte.** Levure délayée dans le lait ; farine, sel, 1 c. à s. de sucre, œufs : bats 8 min (robot ou à la main) jusqu'à une pâte élastique qui se décolle. Beurre en 3 fois.
+2. **Pousser.** Moules beurrés remplis à moitié, 1 h au chaud : la pâte arrive en haut.
+3. **Cuire.** 20 min à 180 °C : dorés. Démoulés, laissés sécher une nuit (rassis, ils boivent mieux le sirop).
+4. **Sirop.** Eau, sucre, zeste, 5 min d'ébullition : le sucre a fondu, le sirop est limpide. Le rhum hors du feu.
+5. **Imbiber.** Babas plongés dans le sirop chaud (pas bouillant), retournés, jusqu'à ce qu'ils ne fassent plus de bulles : 2-3 min. Égouttés sur grille.
+6. **Servir.** Arrosés d'un peu de sirop, chantilly peu sucrée.
+
+- Pas assez imbibés : ils sont secs au centre ; trop : ils s'effondrent. Le signal est la fin des bulles.
+
+- **Variante Sans alcool** : Rhum → **jus de 2 oranges + 1 c. à c. de vanille + 1 c. à s. de sirop de canne** dans le sirop : le baba reste parfumé et ambré. **À tester**. *Calcul* : porc **ok**, alcool **violates**.
+
+**Conservation** : 2 jours au frigo, imbibés.
+
+**Techniques** : Pâte levée
+
+---
+
+### Clafoutis aux cerises
+
+*Clafoutis · France › Nouvelle-Aquitaine › Limousin · Dessert*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin en terre ou porcelaine.
+
+Des cerises noires entières, avec leurs noyaux qui donnent un goût d'amande, dans un flan épais et doré : le dessert de juin du Limousin.
+
+**Ingrédients** : 600 g de cerises noires bien mûres · 3 œufs · 80 g de sucre · 80 g de farine · 30 cl de lait entier · 30 g de beurre · 1 pincée de vanille + 1 pincée de sel
+
+1. **Plat.** Beurré généreusement, saupoudré de sucre : il fait une fine croûte caramélisée.
+2. **Pâte.** Œufs et sucre fouettés 1 min, farine et sel, puis le lait peu à peu et la vanille : une pâte à crêpes épaisse, sans grumeaux. 15 min de repos.
+3. **Cerises.** Lavées, équeutées, séchées (mouillées, elles délaient le flan), en une couche serrée.
+4. **Cuire.** Pâte versée, four 180 °C, 40-45 min : gonflé, doré, une lame plantée ressort sèche.
+5. **Servir.** Tiède, saupoudré de sucre : il retombe, c'est normal.
+
+- ⚠️ Avec noyaux : prévenir les convives ; dénoyaute pour les jeunes enfants (le goût d'amande sera plus discret).
+- Hors saison : pommes poêlées au beurre ou poires.
+
+**Conservation** : 2 jours au frais.
+
+---
+
+### Tarte au citron meringuée
+
+*Tarte au citron meringuée · France › Île-de-France › Paris · Dessert* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 1 h 00 · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cercle ou moule 24 cm, casserole, batteur, thermomètre, chalumeau (ou gril).
+
+Une pâte sucrée croustillante, une crème au citron acidulée et fondante, une meringue italienne lisse et dorée : trois préparations, chacune avec son repère.
+
+**Ingrédients** : 1 pâte sucrée (recette liée) · 4 citrons non traités (jus et zestes) · 4 œufs · 150 g de sucre (crème) · 20 g de maïzena · 100 g de beurre froid · 3 blancs d'œufs · 180 g de sucre (meringue)
+
+1. **Fond.** Pâte foncée, 30 min au frais, piquée ; cuite à blanc 25 min à 165 °C : uniformément blonde. Refroidie.
+2. **Crème citron.** Zestes, jus, œufs, sucre et maïzena fouettés dans une casserole, feu doux, en fouettant sans arrêt : au premier bouillon, elle épaissit d'un coup ; 1 min de plus. Hors du feu, beurre froid en dés, mixée 30 s : lisse et brillante.
+3. **Couler.** Sur le fond froid, lissée ; 1 h au frais : elle se tient.
+4. **Meringue italienne.** Sucre + 5 cl d'eau jusqu'à 118 °C ; pendant ce temps, blancs mousseux. Sirop versé en filet le long du bol, batteur en marche ; fouetter 8 min jusqu'à tiède : épaisse, brillante, en bec d'oiseau.
+5. **Finir.** Meringue à la poche ou à la cuillère en vagues ; dorée au chalumeau ou 2 min sous le gril en surveillant.
+
+- Sans thermomètre : le sirop est à 118 °C quand une goutte dans l'eau froide forme une boule souple.
+- La meringue italienne est cuite par le sirop : elle se garde sans pleurer.
+
+**Conservation** : 48 h au frigo.
+
+**Techniques** : Pâte sucrée, Meringue italienne
+
+---
+
+### Panna cotta vanille, coulis de fruits rouges
+
+*Panna cotta · Europe du Sud › Italie › Piémont · Dessert* · Fêtes : Saint-Valentin
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 4 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, verrines ou ramequins.
+
+Une crème cuite (« panna cotta ») juste prise, qui tremble, parfumée à la vanille, sous un coulis de fruits rouges acidulé : se prépare la veille, se démoule ou se sert en verrine.
+
+**Ingrédients** : 50 cl de crème entière · 60 g de sucre · 1 gousse de vanille · 2 g d'agar-agar (ou 3 feuilles de gélatine de poisson) · 250 g de fruits rouges · ½ citron
+
+1. **Infuser.** Crème, sucre et vanille grattée portés au frémissement ; 10 min hors du feu, couvert.
+2. **Gélifier.** Agar-agar ajouté, 2 min d'ébullition en fouettant (sans ébullition, il ne prend pas) : la crème nappe légèrement la cuillère. Avec la gélatine : feuilles ramollies à l'eau froide, essorées, ajoutées hors du feu.
+3. **Prendre.** Versée dans les verrines, 4 h au frigo : elle tremble quand on les secoue.
+4. **Coulis.** Fruits, 2 c. à s. de sucre et le jus de citron mixés, filtrés : brillant et acidulé.
+5. **Démouler (facultatif).** Ramequins trempés 5 s dans l'eau chaude, couteau sur le bord, retournés.
+
+- Trop ferme, elle ressemble à un flan : le bon dosage tremble. Retiens la quantité d'agar-agar exacte.
+- Gélatine porcine exclue : agar-agar ou gélatine de poisson.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+## 2.35 Vague 5 · Audit gourmet (21/10/2026), recommandations 4, 7 et 9 : les accompagnements de base (reliés aux plats et ajoutés
+
+### Riz blanc parfait (par absorption)
+
+*Riz nature · Asie de l'Est · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole avec couvercle.
+
+Le riz qui accompagne la moitié des plats du monde, grain détaché, jamais collant : la méthode par absorption, sans égoutter.
+
+**Ingrédients** : 300 g de riz long (basmati ou thaï) · 45 cl d'eau (1,5 fois le volume du riz) · 1 pincée de sel · 10 g de beurre (facultatif) *(facultatif)*
+
+1. **Rincer.** Riz dans une passoire sous l'eau froide, en frottant, jusqu'à ce que l'eau soit claire (1 min) : c'est l'amidon qui fait coller.
+2. **Cuire.** Riz, eau froide et sel portés à ébullition à découvert ; dès que ça bout, couvercle et feu au plus bas, 12 min sans soulever : l'eau a disparu, de petits trous se forment en surface.
+3. **Reposer.** Hors du feu, 5 min toujours couvert : la vapeur finit la cuisson.
+4. **Égrener.** À la fourchette, une noisette de beurre si tu veux.
+
+- Riz complet : 2 fois son volume d'eau et 35 min.
+- Refroidis vite les restes et garde-les 24 h au plus : riz sauté le lendemain.
+
+**Conservation** : 24 h au frigo, refroidi en moins d'1 h.
+
+**Techniques** : Cuire le riz
+
+---
+
+### Semoule de couscous moelleuse
+
+*Semoule nature · Maghreb › Algérie · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Saladier, film ou assiette.
+
+La semoule moyenne gonflée hors du feu, beurrée et égrenée : 10 minutes pour accompagner tajines, ragoûts et merguez.
+
+**Ingrédients** : 300 g de semoule moyenne · 30 cl d'eau ou de bouillon bouillant · 20 g de beurre (ou 2 c. à s. d'huile d'olive) · 1 pincée de sel
+
+1. **Mouiller.** Semoule, sel et un filet d'huile frottés entre les mains ; liquide bouillant versé d'un coup à hauteur.
+2. **Gonfler.** Couvert, 5 min : le liquide est absorbé.
+3. **Égrener.** Beurre en dés, égrenée à la fourchette puis entre les paumes : chaque grain se sépare. Goûte, sale.
+
+- Pour un couscous de fête, la semoule passe à la vapeur : voir le couscous royal.
+
+**Conservation** : 3 jours au frigo ; 2 min au micro-ondes avec une cuillère d'eau.
+
+---
+
+### Pâtes au beurre et parmesan (cuisson juste)
+
+*Pâtes nature · Europe du Sud › Italie · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande casserole.
+
+Des pâtes fraîches ou sèches cuites dans beaucoup d'eau bien salée, liées d'un peu d'eau de cuisson, de beurre et de parmesan : l'accompagnement des daubes, lapins et ragoûts.
+
+**Ingrédients** : 400 g de tagliatelles ou de pâtes courtes · 30 g de beurre · 40 g de parmesan · 1 c. à s. de gros sel pour 4 l d'eau
+
+1. **Eau.** 4 l d'eau à gros bouillon, puis le sel : elle doit avoir le goût d'une soupe bien assaisonnée.
+2. **Cuire.** Pâtes, remuées la première minute (elles ne collent pas) ; 1 min de moins que le paquet : tendres avec un cœur à peine ferme. Garde une tasse d'eau.
+3. **Lier.** Égouttées sans rincer, beurre, parmesan et 3 c. à s. d'eau de cuisson, remuées 30 s : brillantes.
+
+- Ne rince jamais les pâtes chaudes : l'amidon fait tenir la sauce.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Pâtes
+
+---
+
+### Pommes de terre vapeur au persil
+
+*Pommes vapeur · France · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cuit-vapeur ou casserole avec panier.
+
+Des pommes de terre à chair ferme cuites à la vapeur, tendres et entières, roulées dans le beurre et le persil : l'accompagnement des poissons et des plats en sauce.
+
+**Ingrédients** : 800 g de pommes de terre à chair ferme (charlotte, roseval) · 20 g de beurre · 1 c. à s. de persil haché · 1 pincée de fleur de sel
+
+1. **Préparer.** Épluchées (ou brossées si nouvelles), coupées en morceaux égaux de la taille d'un œuf (elles cuisent en même temps).
+2. **Cuire.** Panier au-dessus de l'eau frémissante, couvert, 20-25 min : la pointe du couteau entre sans résistance.
+3. **Finir.** Beurre fondu, persil, fleur de sel.
+
+**Conservation** : 2 jours au frigo ; en salade ou sautées le lendemain.
+
+---
+
+### Maquereaux au four, moutarde et citron
+
+*Maquereaux au four · France › Bretagne · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four.
+
+Le maquereau, poisson gras bon marché et plein d'oméga-3, en filets badigeonnés de moutarde à l'ancienne, rôtis 12 minutes : la moutarde et le citron équilibrent sa richesse.
+
+**Ingrédients** : 8 filets de maquereau · 2 c. à s. de moutarde à l'ancienne · 1 citron · 1 oignon rouge · 2 c. à s. d'huile d'olive · 1 c. à s. de persil · 1 pincée de sel
+
+1. **Préparer.** Filets passés du bout des doigts pour sentir les arêtes, retirées à la pince ; salés, posés peau dessous sur l'oignon émincé huilé.
+2. **Badigeonner.** Moutarde étalée sur la chair, rondelles de citron.
+3. **Cuire.** 12 min à 200 °C : la chair devient opaque et se détache en feuillets.
+4. **Servir.** Persil, jus de citron, pommes vapeur ou salade de lentilles.
+
+- Demande au poissonnier de lever les filets.
+- Les restes émiettés font des rillettes avec du fromage frais.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Sardines poêlées en persillade
+
+*Sardines persillade · France › Provence-Alpes-Côte d'Azur · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle.
+
+Des sardines fraîches ouvertes en portefeuille, saisies côté peau puis arrosées d'une persillade à l'ail et au citron : cinq minutes de cuisson, un goût de vacances.
+
+**Ingrédients** : 16 sardines fraîches en filets (ou en portefeuille) · 2 gousses d'ail · 1 bouquet de persil · 1 citron · 3 c. à s. d'huile d'olive · 2 c. à s. de farine · 1 pincée de sel
+
+1. **Préparer.** Filets séchés, salés, farinés côté peau seulement (elle croustille sans coller).
+2. **Saisir.** Poêle très chaude, huile, côté peau 2 min sans bouger : peau dorée qui se décolle seule ; 30 s côté chair.
+3. **Persillade.** Hors du feu, ail et persil hachés dans la poêle chaude, 20 s (l'ail ne doit pas brunir), jus de citron, versée sur les sardines.
+
+- Sardines entières : le poissonnier les vide, ou on les grille au barbecue 3 min par face.
+
+**Conservation** : Le jour même.
+
+---
+
+### Lieu noir en croûte d'herbes et de chapelure
+
+*Lieu en croûte · France · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four.
+
+Des pavés de lieu noir, poisson blanc abordable, sous une croûte croustillante de chapelure, parmesan et herbes : les enfants l'adorent, il ne sèche pas.
+
+**Ingrédients** : 4 pavés de lieu noir (ou merlu) · 60 g de chapelure ou de pain rassis mixé · 30 g de parmesan · 1 bouquet de persil et ciboulette · 40 g de beurre fondu · 1 citron (zeste) · 1 c. à c. de moutarde · 1 pincée de sel
+
+1. **Croûte.** Chapelure, parmesan, herbes hachées, zeste, beurre fondu : un sable humide qui se tient pressé.
+2. **Monter.** Pavés salés dans le plat beurré, fine couche de moutarde (la croûte colle), croûte tassée sur 5 mm.
+3. **Cuire.** 15 min à 200 °C : croûte dorée, chair opaque qui se détache en lamelles.
+4. **Servir.** Quartiers de citron ; riz, purée ou légumes rôtis.
+
+- Pain rassis mixé à la place de la chapelure : anti-gaspi et meilleur.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Papillotes de poisson aux petits légumes
+
+*Papillotes · France · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Papier sulfurisé, plaque.
+
+Le poisson blanc cuit à l'étuvée dans son papier avec des julienne de légumes, citron et herbes : rien ne sèche, tout garde son goût, et chacun ouvre sa papillote.
+
+**Ingrédients** : 4 filets de cabillaud ou de lieu · 2 carottes · 1 courgette · 1 poireau (le blanc) · 1 citron · 20 g de beurre · 1 c. à s. d'aneth ou de ciboulette · 1 pincée de sel
+
+1. **Légumes.** En fins bâtonnets (julienne) : ils cuisent en même temps que le poisson.
+2. **Monter.** Feuille de papier de 30 cm : lit de légumes salés, filet salé, rondelle de citron, noisette de beurre, herbes ; bords repliés serrés en demi-lune.
+3. **Cuire.** 15 min à 200 °C : la papillote gonfle.
+4. **Servir.** Ouverte à table (attention à la vapeur) : chair nacrée, qui s'effeuille.
+
+- Poisson surgelé : décongelé au frigo, bien séché, 3 min de plus.
+
+**Conservation** : Le jour même ; les restes 2 jours au frigo.
+
+---
+
+### Merlu poché, fondue de poireaux
+
+*Merlu aux poireaux · France › Pays de la Loire · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, casserole large.
+
+Le merlu, poisson tendre et fin, poché à frémissement dans un court-bouillon, servi sur une fondue de poireaux à la crème citronnée : doux et soyeux.
+
+**Ingrédients** : 4 pavés de merlu · 4 poireaux · 20 cl de crème · 30 g de beurre · 1 citron · 1 bouquet garni + 1 oignon · 1 pincée de sel
+
+1. **Fondue.** Poireaux émincés et lavés, beurre, sel, couvert, 15 min à feu doux : fondants, sans couleur ; crème et jus de citron, 3 min.
+2. **Court-bouillon.** 1 l d'eau salée, oignon, bouquet garni, 10 min de frémissement.
+3. **Pocher.** Merlu, frémissement à peine visible, 6-8 min : opaque à cœur, il se détache en lamelles. Jamais d'ébullition (il se défait).
+4. **Servir.** Merlu égoutté sur la fondue, poivre, un trait de citron.
+
+**Conservation** : Le jour même ; les restes 2 jours au frigo.
+
+---
+
+### Potimarron rôti farci au quinoa, feta et noix
+
+*Potimarron farci · France · Plat* · Fêtes : Halloween
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, four.
+
+Des demi-potimarrons rôtis (la peau se mange), remplis de quinoa aux herbes, feta, noix et canneberges : un plat végétarien de fête d'automne.
+
+**Ingrédients** : 2 potimarrons moyens · 150 g de quinoa · 150 g de feta · 50 g de noix · 30 g de raisins secs ou canneberges · 1 bouquet de persil · 3 c. à s. d'huile d'olive · 1 c. à c. de cumin · 1 pincée de sel
+
+1. **Rôtir.** Potimarrons coupés en deux, graines retirées (gardées : grillées, elles se grignotent) ; huile, sel, cumin ; face coupée en dessous, 35 min à 200 °C : la pointe du couteau entre comme dans du beurre.
+2. **Quinoa.** Rincé, cuit 12 min dans 2 fois son volume d'eau salée, égoutté.
+3. **Farce.** Quinoa, feta émiettée, noix concassées, raisins, persil, huile.
+4. **Gratiner.** Farce tassée dans les demi-potimarrons, 10 min au four : la feta dore.
+
+- Les graines rincées, séchées, huilées et salées, 10 min au four : un apéritif.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Gratin de céleri-rave et pommes de terre aux noix
+
+*Gratin de céleri · France · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, fruits à coque, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, mandoline (ou couteau).
+
+Le céleri-rave, doux et parfumé, en fines tranches avec des pommes de terre, cuit dans le lait et la crème à l'ail, couvert de comté et de noix : le gratin d'hiver qui change du dauphinois.
+
+**Ingrédients** : 1 céleri-rave (800 g) · 600 g de pommes de terre · 50 cl de lait · 20 cl de crème · 100 g de comté râpé · 50 g de noix · 1 gousse d'ail · 1 pincée de muscade · 1 c. à c. de sel
+
+1. **Trancher.** Céleri et pommes de terre épluchés, en tranches de 3 mm (mandoline).
+2. **Précuire.** Lait, crème, ail écrasé, sel, muscade portés à frémissement ; tranches dedans 10 min : le liquide épaissit (l'amidon), les tranches s'assouplissent.
+3. **Monter.** Plat frotté d'ail, tranches et leur crème, comté, noix concassées.
+4. **Cuire.** 45 min à 180 °C : doré, la lame entre sans résistance. 10 min de repos.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Poêlée de panais, carottes et pois chiches rôtis au miel et cumin
+
+*Légumes racines rôtis · France · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, four.
+
+Panais, carottes et oignons rouges rôtis jusqu'à caraméliser avec des pois chiches croustillants, miel, cumin, et une sauce yaourt-citron : un plat complet et végétarien avec les légumes d'hiver.
+
+**Ingrédients** : 4 panais · 4 carottes · 2 oignons rouges · 400 g de pois chiches cuits · 1 c. à s. de miel · 1 c. à c. de cumin · 4 c. à s. d'huile d'olive · 150 g de yaourt grec + ½ citron · 1 pincée de sel
+
+1. **Couper.** Panais et carottes en bâtonnets égaux, oignons en quartiers ; pois chiches égouttés et séchés (sinon ils ne croustillent pas).
+2. **Rôtir.** Huile, cumin, sel ; plaque en une seule couche (entassés, ils cuisent à la vapeur), 25 min à 210 °C.
+3. **Laquer.** Miel en filet, 10 min : bords caramélisés, pois chiches croustillants.
+4. **Sauce.** Yaourt, jus de citron, sel ; sur les légumes au service.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Velouté de topinambours, noisettes grillées
+
+*Velouté de topinambours · France · Entrée*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Faitout, mixeur.
+
+Le topinambour a un goût d'artichaut et de noisette : en velouté avec un peu de pomme de terre et de crème, c'est une soupe d'hiver délicate.
+
+**Ingrédients** : 600 g de topinambours · 1 pomme de terre · 1 oignon · 80 cl de bouillon de légumes · 10 cl de crème · 30 g de noisettes *(facultatif)* · 20 g de beurre · 1 pincée de sel
+
+1. **Éplucher.** Topinambours brossés et pelés à l'économe, en morceaux, dans l'eau citronnée (ils noircissent à l'air).
+2. **Suer.** Oignon au beurre 5 min sans colorer ; topinambours et pomme de terre, 3 min.
+3. **Cuire.** Bouillon, 25 min : tendres.
+4. **Mixer.** Avec la crème, 2 min : très lisse. Goûte, sale. Noisettes grillées à sec 3 min, concassées dessus.
+
+- Le topinambour peut être indigeste pour certains : une pomme de terre dans la soupe et une cuisson complète aident.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+---
+
+### Chou vert braisé aux saucisses de volaille
+
+*Chou braisé · France › Auvergne-Rhône-Alpes · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Un chou vert blanchi puis braisé doucement avec carottes et saucisses, jusqu'à devenir fondant et doux : le plat d'hiver économique des fermes, ici avec des saucisses de volaille.
+
+**Ingrédients** : 1 chou vert frisé · 4 saucisses de volaille (ou de bœuf) · 3 carottes · 1 oignon · 30 cl de bouillon · 20 g de beurre · 1 bouquet garni · 1 pincée de sel
+
+1. **Blanchir.** Chou en 8 quartiers, 5 min dans l'eau bouillante salée (il perd son amertume), égoutté.
+2. **Saucisses.** Dorées 5 min au beurre ; oignon et carottes en rondelles 5 min.
+3. **Braiser.** Chou, bouquet, bouillon ; couvert, 40 min à feu doux : le chou est fondant et a bu le bouillon. Goûte, poivre.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Poires pochées au vin et aux épices
+
+*Poires au vin · France › Bourgogne-Franche-Comté · Dessert* · Fêtes : Noël, Repas de famille
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin rouge
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans en version sans alcool.
+
+**Équipement** : Casserole juste à la taille des poires.
+
+Des poires entières pochées dans un vin rouge sucré à la cannelle, à l'orange et au poivre, jusqu'à devenir rubis et fondantes ; le sirop réduit les nappe.
+
+**Ingrédients** : 6 poires fermes (conférence, williams) · 75 cl de vin rouge fruité · 150 g de sucre · 1 orange (zeste en bandes) · 1 bâton de cannelle + 2 clous de girofle + 4 grains de poivre · 1 gousse de vanille *(facultatif)*
+
+1. **Sirop.** Vin, sucre, zeste, épices, vanille fendue : 5 min à frémissement, le sucre a fondu.
+2. **Pocher.** Poires épluchées en gardant la queue, debout dans le sirop (couvertes, sinon arrosées), 25-35 min à frémissement : la lame entre sans résistance.
+3. **Infuser.** Hors du feu, une nuit si possible : elles deviennent rubis jusqu'au cœur.
+4. **Napper.** Sirop réduit 10 min à gros bouillon : sirupeux, il nappe la cuillère.
+
+- **Variante Sans alcool** : Vin rouge → **jus de raisin rouge + 1 c. à s. de vinaigre de vin** : la couleur et le fruit. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 4 jours au frigo dans leur sirop.
+
+---
+
+### Tarte Bourdaloue (poires et crème d'amande)
+
+*Tarte Bourdaloue · France › Île-de-France › Paris · Dessert* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à tarte 24 cm, four.
+
+Des demi-poires pochées en éventail sur une crème d'amande moelleuse, dans une pâte sucrée : la tarte de pâtisserie parisienne la plus réconfortante de l'hiver.
+
+**Ingrédients** : 1 pâte sucrée (recette liée) · 6 demi-poires pochées (ou au sirop) · 100 g de beurre mou · 100 g de sucre · 100 g de poudre d'amande · 2 œufs · 30 g d'amandes effilées · 2 c. à s. de confiture d'abricot (nappage) *(facultatif)*
+
+1. **Fond.** Pâte foncée, 30 min au frais.
+2. **Crème d'amande.** Beurre mou et sucre fouettés 2 min, poudre d'amande, œufs un à un : crème lisse et légère.
+3. **Garnir.** Crème étalée sur la pâte crue ; demi-poires bien égouttées, tranchées finement et poussées en éventail ; amandes effilées.
+4. **Cuire.** 40-45 min à 170 °C : la crème d'amande gonfle autour des poires et dore.
+5. **Napper.** Tiède, confiture d'abricot chauffée au pinceau : brillante.
+
+**Conservation** : 3 jours au frais.
+
+**Techniques** : Pâte sucrée
+
+---
+
+### Coings rôtis au miel et à la vanille
+
+*Coings rôtis · France · Dessert*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 1 h 15 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four.
+
+Le coing, immangeable cru, devient rose, parfumé et fondant après une longue cuisson au four avec miel, beurre et vanille : un dessert d'automne oublié.
+
+**Ingrédients** : 2 gros coings · 4 c. à s. de miel · 40 g de beurre · 1 gousse de vanille · 1 orange (jus) · 20 cl de crème ou de yaourt grec *(facultatif)*
+
+1. **Préparer.** Coings frottés (leur duvet), coupés en quartiers, cœur dur retiré (couteau solide : c'est très ferme). On garde la peau.
+2. **Rôtir.** Plat beurré, quartiers, miel, jus d'orange, vanille fendue, 10 cl d'eau ; couvert d'aluminium, 45 min à 170 °C : les quartiers s'attendrissent et rosissent.
+3. **Caraméliser.** Découvert, 20-30 min en arrosant : chair rosée, translucide, sirop épais.
+4. **Servir.** Tièdes, avec crème ou yaourt.
+
+- Les pelures et les cœurs, cuits 30 min dans l'eau, donnent une gelée naturelle.
+
+**Conservation** : 4 jours au frigo.
+
+---
+
+### Mont-blanc en verrines (marrons et chantilly)
+
+*Mont-blanc · France › Auvergne-Rhône-Alpes · Dessert* · Fêtes : Noël
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Batteur, poche à douille fine (ou presse-purée), verrines.
+
+Une meringue croquante, une chantilly peu sucrée et des vermicelles de crème de marrons : le dessert de salon de thé, en verrines sans cuisson ni difficulté.
+
+**Ingrédients** : 500 g de crème de marrons vanillée · 30 cl de crème fleurette très froide · 6 petites meringues (ou recette liée) · 1 c. à s. de sucre glace · 50 g de chocolat noir (facultatif) *(facultatif)*
+
+1. **Chantilly.** Crème et bol au froid 15 min ; fouettée avec le sucre glace jusqu'à former des pics souples (pas plus : elle tournerait en beurre).
+2. **Monter.** Meringue émiettée au fond, chantilly.
+3. **Vermicelles.** Crème de marrons à la poche à douille fine (ou au presse-purée) en fils sur la chantilly.
+4. **Servir.** 30 min au frais ; copeaux de chocolat.
+
+**Conservation** : Le jour même.
+
+---
+
+### Paella valenciana (poulet, lapin, haricots)
+
+*Paella valenciana · Europe du Sud › Espagne › Valence · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle large et plate (paellera 38 cm ou plus).
+
+La vraie paella de Valence, celle des familles le dimanche : poulet et lapin dorés, haricots plats et gros haricots blancs, tomate râpée, safran, romarin, un riz qui cuit sans qu'on y touche et accroche juste ce qu'il faut au fond (le socarrat). Pas de fruits de mer.
+
+**Ingrédients** : 600 g de cuisses de poulet en morceaux · 600 g de lapin en morceaux · 400 g de riz rond (bomba ou à paella) · 200 g de haricots verts plats · 200 g de gros haricots blancs cuits (garrofó) · 2 tomates mûres râpées · 1 pincée de safran + 1 c. à c. de paprika · 1 branche de romarin · 8 c. à s. d'huile d'olive · 1 c. à s. de sel · 1 citron (au service) *(facultatif)*
+
+1. **Dorer.** Huile dans la paellera, viandes salées, 15 min à feu moyen en les retournant : dorées de partout (c'est le goût du bouillon).
+2. **Légumes.** Haricots plats en tronçons 5 min ; viandes poussées sur les bords, tomate râpée et paprika au centre, 5 min : la tomate devient une pâte sombre.
+3. **Bouillon.** 1,5 l d'eau, haricots blancs, safran, sel ; 20 min à frémissement : un bouillon un peu trop salé (le riz l'absorbera). Goûte.
+4. **Riz.** Versé en croix, réparti d'un geste, **et on ne remue plus jamais**. Feu vif 8 min, puis moyen 8 min ; romarin posé dessus les 5 dernières minutes.
+5. **Socarrat.** 1 à 2 min à feu vif à la fin : ça crépite et sent le grillé sans brûler, le fond caramélise.
+6. **Reposer.** Hors du feu, couvert d'un torchon, 5 min. Servie dans la poêle, avec des quartiers de citron.
+
+- Une poêle plus grande vaut mieux qu'un riz épais : 1 à 2 cm de riz au plus.
+- Pas de lapin : tout en poulet. Pas de garrofó : lingots ou cocos.
+
+**Conservation** : Le jour même.
+
+---
+
+### Composer un plateau de fromages
+
+*Plateau de fromages · France · Accompagnement* · Fêtes : Repas de famille, Noël
+
+Niveau ⭐ · 8 portions · actif 15 min · repos/cuisson 1 h 00 · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Planche, couteaux.
+
+Le service qui distingue un repas de fête à la française : entre le plat et le dessert, trois à cinq fromages de familles différentes, du plus doux au plus fort, avec pain, fruits et noix.
+
+**Ingrédients** : 150 g de pâte molle (camembert, brie) · 150 g de pâte pressée (comté, beaufort) · 120 g de persillé (roquefort, bleu) · 120 g de chèvre (bûche, crottin) · 1 pain de campagne ou aux noix · 1 grappe de raisin ou des figues · 50 g de noix · 2 c. à s. de miel ou de confiture *(facultatif)*
+
+1. **Choisir.** Une famille de chaque : une pâte molle, une pâte pressée, un persillé, un chèvre ; 40 à 60 g par personne en tout (80 g si c'est le plat).
+2. **Tempérer.** Sortis du frigo 1 h avant, emballage retiré : à température, ils libèrent leurs arômes.
+3. **Disposer.** Du plus doux au plus fort dans le sens des aiguilles d'une montre, un couteau par fromage (le bleu parfume tout).
+4. **Accompagner.** Pain tranché, raisin, noix, un peu de miel pour le bleu ou le chèvre.
+
+- Pour les enfants et les femmes enceintes : fromages au lait pasteurisé ou pâtes pressées cuites (comté, beaufort).
+- Les restes, emballés dans du papier, font un gratin de pâtes ou une soupe à l'oignon.
+
+**Conservation** : Chaque fromage dans son papier, au bas du frigo.
+
+---
+
 ## 3. Nouvelles fiches techniques (application, rubrique Techniques)
 
 - **Pâtisserie française** : Pâte sucrée et pâte sablée (crémage) (niv. 2) · Crème pâtissière (niv. 1) · Pâte à choux (niv. 2) · Pâte feuilletée rapide (et tours) (niv. 3) · Les trois meringues (française, suisse, italienne) (niv. 2) · Crème anglaise (cuisson à la nappe) (niv. 2) · Chantilly, mascarpone montée et ganache montée (niv. 1) · Les biscuits de base (génoise, joconde, roulé) (niv. 2) · Caramel et cuissons du sucre (niv. 2) · Macaronnage (niv. 3)
@@ -23352,7 +24135,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2095 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2178 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 
