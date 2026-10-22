@@ -3,7 +3,7 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const PLAFOND = Number(process.argv[2] ?? NaN) || 618;
+const PLAFOND = Number(process.argv[2] ?? NaN) || 617;
 const files = [];
 const walk = (d) => { for (const n of readdirSync(d)) { const p = join(d, n); if (statSync(p).isDirectory()) { if (n !== "data") walk(p); } else if (/\.(ts|tsx)$/.test(n)) files.push(p); } };
 walk("src");

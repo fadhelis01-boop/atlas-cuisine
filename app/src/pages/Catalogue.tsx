@@ -40,7 +40,10 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
       && (!cheap || r.cost === "€") && (!occ || r.fetes.includes(occ)) && (!macro || r.macro === macro) && (!veg || evaluate(r).flesh.length === 0)
       && (!video || (r.videoCount ?? r.videos.length) > 0) && (!kids || (r.age !== null && r.age <= 3)));
     if (q.trim()) l = search(l, q, (r) => [r.title, r.origin, r.regionPath.join(" "), r.ingredients.map((i) => i.label).join(" ")], 600);
-    else if (sort === "saison") l = l.map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]).map(([r]) => r);
+    // sans filtre de type, les plats et desserts de saison d'abord : un bouillon en cube ou une pâte de curry, riches en
+    // légumes de saison, ne doivent pas ouvrir le catalogue
+    else if (sort === "saison") l = l.map((r) => [r, seasonFit(r, zone).score - (!type && (r.role === "autre" || r.role === "boisson") ? 1000 : 0)] as const)
+      .sort((a, b) => b[1] - a[1]).map(([r]) => r);
     else if (sort === "rapide") l = [...l].sort((a, b) => a.active + a.rest - (b.active + b.rest));
     else if (sort === "facile") l = [...l].sort((a, b) => a.level - b.level || a.ingredients.length - b.ingredients.length);
     else l = [...l].sort((a, b) => norm(a.title).localeCompare(norm(b.title)));

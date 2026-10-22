@@ -60,8 +60,21 @@ const REF_INDEX = [...KEYS.entries()].map(([k, n]) => ({ k, n })).sort((a, b) =>
 const NEUTRAL = /\b(eau|glacons?)\b/;
 
 /** Rapproche une ligne d'ingrédient d'une entrée du référentiel (Tome 3). */
+// Mots courants des légendes que le premier mot rapprocherait mal (« viande de bœuf » → viande des Grisons,
+// « huile d'olive » → olives) : vérifiés avant le référentiel. Relus à la main le 22/10/2026.
+const ALIASES: [RegExp, string][] = [
+  [/\bhuile d.?olive\b/, "Huile d'olive vierge extra"], [/\bhuile (neutre|de tournesol|de colza|vegetale)\b|^\W*\d*\s*\w*\s*huile\W*$/, "Huile de tournesol / colza"],
+  [/\b(viande|boeuf) hachee?\b|\bsteaks? hache/, "Bœuf haché"], [/\bagneau hache|viande hachee? d.?agneau/, "Agneau haché"],
+  [/\b(haut|hauts|cuisse|cuisses|pilon|pilons) de poulet\b/, "Cuisse / pilon de poulet"], [/\b(blanc|blancs|filet|filets|escalope|escalopes) de poulet\b/, "Blanc de poulet"],
+  [/\bpoulet entier\b/, "Poulet entier"], [/\b(viande de boeuf|boeuf a mijoter|boeuf a braiser|boeuf)\b/, "Paleron"], [/\b(viande d.?agneau|agneau)\b/, "Épaule d'agneau"],
+  [/\bcreme (liquide|entiere|fleurette)\b/, "Crème fleurette (liquide)"], [/\bcreme fraiche\b/, "Crème fraîche"], [/\bfromage rape\b/, "Gruyère / comté / emmental / beaufort"],
+];
+
 export function matchIngredient(text: string): string | null {
-  const t = ` ${sing(norm(text))} `;
+  const nt = norm(text);
+  // « bouillon de bœuf », « fond de veau », « graisse de canard » : jamais rabattus sur la viande (le moteur doit garder le doute)
+  if (!/\b(bouillon|cube|fond|graisse|jus|saucisse|merguez|chorizo|jambon|bacon|lardon)/.test(nt)) for (const [re, ref] of ALIASES) if (re.test(nt) && INGREDIENTS[ref]) return ref;
+  const t = ` ${sing(nt)} `;
   for (const { n, k } of REF_INDEX) if (t.includes(` ${k} `)) return n;
   return null;
 }
@@ -85,6 +98,17 @@ export function classify(raw: string, url = ""): Classified {
     if (/^\d|\b(\d+\s*(g|kg|ml|cl|l|c\.?\s*à\s*[sc]|cas|cac|tbsp|tsp|cups?|gousses?|pinc[ée]e)\b)|^(une?|deux|trois|quatre)\s/i.test(l) && l.length < 90) ingredients.push({ text: l, ref: matchIngredient(l) });
     else if (l.length > 40 && /\b(ajoute|mélange|cuire|cuis|faire|laisse|mets|verse|coupe|enfourne|mix)/i.test(l)) steps.push(l);
   }
+  // Légendes TikTok écrites d'un seul bloc : « Ingrédients : 600 g de paleron, 1 oignon, persil, cumin… » (retour d'usage
+  // du 22/10/2026) : la liste qui suit le mot « ingrédients » est découpée aux virgules.
+  if (ingredients.length < 2) {
+    const block = text.match(/ingr[ée]dients?\s*(?:pour[^:\n]*)?:?\s*([^\n]*(?:\n(?!\s*(?:pr[ée]paration|[ée]tapes?|instructions?|recette)\b)[^\n]*)*)/i)?.[1] ?? "";
+    const items = block.split(/\n|,|;|•|·|\s[-–]\s/).map((x) => x.replace(/^(?:[-*•]\s*|\d+[.)]\s+)/, "").replace(/\.$/, "").trim())
+      .filter((x) => x.length > 1 && x.length < 70 && !/^(pr[ée]paration|[ée]tapes?|instructions?)/i.test(x));
+    if (items.length >= 2) {
+      const seen = new Set(ingredients.map((i) => i.text));
+      for (const x of items) if (!seen.has(x) && !(NEUTRAL.test(norm(x)) && x.length < 40)) { ingredients.push({ text: x, ref: matchIngredient(x) }); seen.add(x); }
+    }
+  }
   const unknown = ingredients.filter((i) => !i.ref).length;
   if (unknown) warnings.push(`${unknown} ingrédient(s) non reconnu(s) : statut « à vérifier », jamais « sans porc » garanti.`);
 
@@ -97,7 +121,9 @@ export function classify(raw: string, url = ""): Classified {
   const alcohol = refAlc || ALC.test(n) ? "oui" : refAlcDoubt || ALC_DOUBT.test(n) || unknown || !ingredients.length ? "doute" : "non";
 
   const firstLine = text.split("\n").find((l) => l.trim()) ?? "";
-  const title = firstLine.replace(/#\S+/g, "").replace(/https?:\S+/g, "").trim().slice(0, 90) || titleFromUrl(url);
+  // le titre s'arrête avant la liste d'ingrédients et la première quantité
+  const cut = firstLine.replace(/#\S+/g, "").replace(/https?:\S+/g, "").split(/\bingr[ée]dients?\b|🛒|📝|\s\d+(?:[.,]\d+)?\s?(?:g|kg|ml|cl|l)\b/i)[0];
+  const title = cut.replace(/[\s:.,;–-]+$/, "").trim().slice(0, 90) || titleFromUrl(url);
   return { cat, macro, pork, alcohol, ingredients, steps, title, warnings };
 }
 

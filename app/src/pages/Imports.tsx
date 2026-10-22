@@ -75,16 +75,20 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
   const [busy, setBusy] = useState(false);
   const analyse = (cap = caption, u = url) => { const c = classify(cap, u); setRes(c); setTitle(c.title); setCat(c.cat); return c; };
   // Coller (ou partager) un lien suffit : titre, légende et auteur sont lus sur TikTok / YouTube / Vimeo, puis la recette est triée.
+  // une lecture lancée avant que la légende change ne doit pas afficher un résultat périmé
+  const latest = useRef(0);
   const auto = async (u: string, cap: string, saveAfter = false) => {
     if (!/^https?:\/\//.test(u)) return;
+    const token = ++latest.current;
     let text = cap;
     if (canFetchMeta(u)) {
       setBusy(true);
       const m = await fetchMeta(u);
       setBusy(false);
+      if (token !== latest.current) return;
       if (m) { setAuthor(m.author); if (!text) { text = m.title; setCaption(m.title); } }
       const c0 = classify(text, u);
-      if (c0.cat === "a_verifier" && m?.author) { const ac = await creatorCat(m.author); if (ac) { const c = { ...c0, cat: ac }; setRes(c); setTitle(c.title); setCat(ac); if (saveAfter) doSave(c, u, text, c.title, ac, m.author); return; } }
+      if (c0.cat === "a_verifier" && m?.author) { const ac = await creatorCat(m.author); if (token !== latest.current) return; if (ac) { const c = { ...c0, cat: ac }; setRes(c); setTitle(c.title); setCat(ac); if (saveAfter) doSave(c, u, text, c.title, ac, m.author); return; } }
     }
     const c = analyse(text, u);
     if (saveAfter) doSave(c, u, text, c.title, c.cat);
@@ -141,7 +145,7 @@ function Importer({ initial, onDone }: { initial: string; onDone: () => void }) 
           {busy && <p className="small" role="status">Lecture du titre et de la légende…</p>}
           {author && <p className="small">Auteur·e : <strong>{author}</strong></p>}
           <label className="field">Légende ou texte de la recette (copie-colle la description de la vidéo)
-            <textarea rows={6} value={caption} onChange={(e) => setCaption(e.target.value)} placeholder={"Poulet yassa 🍋\nIngrédients : 4 cuisses de poulet, 6 oignons, 4 citrons…"} />
+            <textarea rows={6} value={caption} onChange={(e) => { setCaption(e.target.value); setRes(null); latest.current++; setBusy(false); }} placeholder={"Poulet yassa 🍋\nIngrédients : 4 cuisses de poulet, 6 oignons, 4 citrons…"} />
           </label>
           <button className="btn" onClick={() => void auto(url.trim(), caption)} disabled={(!url && !caption) || busy}>Analyser et trier</button>
           <p className="small">Astuce : colle juste le lien (TikTok, YouTube, Vimeo) : titre, légende et auteur sont lus automatiquement. Sur Android, utilise « Partager › ATLAS » depuis l'application TikTok ou YouTube : la recette est classée et enregistrée d'un geste.</p>

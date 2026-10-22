@@ -8,5 +8,6 @@ import "./e4-audit-gourmet";
 import "./e5-audit-dev-ux";
 import "./e6-variete-idees";
 import "./e7-favoris-tiktok";
+import "./e8-frigo";
 
 console.log(`\n${passedCount()} contrôles OK`);

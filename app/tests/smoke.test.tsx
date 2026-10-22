@@ -98,8 +98,25 @@ try {
   await act(async () => { store.setState((st) => { st.profile.onboarded = true; }); });
   await settle(); await act(async () => { await new Promise((r) => setTimeout(r, 150)); });
   step("le titre suit la sortie de l'accueil de bienvenue", welcome.startsWith("Bienvenue") && document.title === "Tarte Tatin · ATLAS", `${welcome} → ${document.title}`);
+  // 8. frigo (retour d'usage du 22/10/2026) : un bouton lance la recherche, « D'autres idées » renouvelle, le menu complet a ses 3 services
+  await go("frigo");
+  const goBtn = () => document.querySelector<HTMLButtonElement>(".frigo-go");
+  const disabledEmpty = !!goBtn()?.disabled;
+  for (const t of ["Œufs", "Tomate", "Courgette", "Poulet"]) await click(byText("button.chip", t));
+  await click(goBtn());
+  const titles = () => [...document.querySelectorAll("[aria-live] .rcard h3")].map((h) => h.textContent);
+  const first = titles();
+  await click(byText("button", "D'autres idées"));
+  const second = titles();
+  await click(byText("[role=radio]", "Un menu complet"));
+  const stale = !!document.querySelector(".notice");
+  await click(goBtn());
+  const slots = document.querySelectorAll(".menu-slot .rcard").length;
+  step("frigo : bouton de lancement, 6 idées, d'autres idées toutes nouvelles, menu complet en 3 services",
+    disabledEmpty && first.length === 6 && second.length === 6 && !second.some((t) => first.includes(t)) && stale && slots === 3,
+    JSON.stringify({ disabledEmpty, first: first.length, second: second.length, stale, slots }));
 } catch (e) { failed++; origError("FAIL parcours :", (e as Error).message); }
-console.log(`${parcours} parcours sur 7`);
+console.log(`${parcours} parcours sur 8`);
 await act(async () => { root.unmount(); });
 console.log(`\n${2 * ROUTES.length - failed} rendus sur ${2 * ROUTES.length} sans erreur (${ROUTES.length} pages, profil famille puis nouvel utilisateur)`);
 process.exit(failed ? 1 : 0);
