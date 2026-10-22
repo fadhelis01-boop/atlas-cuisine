@@ -39,3 +39,15 @@ check("103 import : titre sans la liste, ingrédients d'une ligne découpés aux
   c.title === "La recette du tajine de bœuf, olives, citron confit 🍋" && c.ingredients.length >= 9 && c.cat === "maghreb"
   && c.ingredients[0].ref === "Paleron" && c.ingredients.at(-1)!.ref === "Huile d'olive vierge extra"
   && matchIngredient("1 cube de bouillon de bœuf") !== "Paleron" && matchIngredient("2 hauts de cuisse de poulet") === "Cuisse / pilon de poulet");
+
+// —— 104 barre « ajouter un ingrédient » : les mots de tous les jours trouvent le bon produit
+import { findIngredients } from "../src/lib/ingredientSearch";
+const fi = (q: string) => findIngredients(q);
+const probes = { fromage: fi("fromage"), oeuf: fi("oeuf"), pdt: fi("pdt"), lardons: fi("lardons"), creme: fi("crème"), poulet: fi("poulet"), steak: fi("steak haché"), x: fi("zzzz") };
+console.log("   barre d'ingrédients :", Object.entries(probes).map(([k, v]) => `${k} → ${v.slice(0, 2).join(" | ") || "rien"}`).join(" · "));
+check("104 barre d'ingrédients : « fromage » → fromages (pas de fromage de tête en tête), « oeuf » sans bœuf, « pdt » → pommes de terre, « lardons » → lardons de volaille d'abord, « crème » → crème fraîche, rien d'inventé",
+  probes.fromage[0] === "Gruyère / comté / emmental / beaufort" && probes.fromage.length === 8 && !probes.fromage.slice(0, 6).includes("Fromage de tête")
+  && probes.oeuf[0] === "Œuf entier (frais)" && !probes.oeuf.some((n) => /Bœuf/.test(n)) && probes.pdt[0] === "Pomme de terre"
+  && probes.lardons[0] === "Lardons de dinde / de volaille fumés" && !probes.lardons.some((n) => /Salsifis|Rhum/.test(n))
+  && probes.creme[0] === "Crème fraîche" && probes.poulet.includes("Cuisse / pilon de poulet") && probes.steak[0] === "Bœuf haché" && probes.x.length === 0
+  && findIngredients("fromage", ["Gruyère / comté / emmental / beaufort"])[0] === "Mozzarella / burrata");

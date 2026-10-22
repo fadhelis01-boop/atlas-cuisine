@@ -102,6 +102,13 @@ try {
   await go("frigo");
   const goBtn = () => document.querySelector<HTMLButtonElement>(".frigo-go");
   const disabledEmpty = !!goBtn()?.disabled;
+  // la barre : un mot courant puis Entrée ajoute le premier ingrédient proposé
+  const bar = document.querySelector<HTMLInputElement>(".picker input")!;
+  await act(async () => { Object.getOwnPropertyDescriptor(w.HTMLInputElement.prototype, "value")!.set!.call(bar, "fromage"); bar.dispatchEvent(new w.Event("input", { bubbles: true })); });
+  await settle();
+  await act(async () => { bar.dispatchEvent(new w.KeyboardEvent("keydown", { key: "Enter", bubbles: true })); });
+  await settle();
+  const barOk = !!byText("[aria-label='Ingrédients sélectionnés'] .chip", "Gruyère") && bar.value === "";
   for (const t of ["Œufs", "Tomate", "Courgette", "Poulet"]) await click(byText("button.chip", t));
   await click(goBtn());
   const titles = () => [...document.querySelectorAll("[aria-live] .rcard h3")].map((h) => h.textContent);
@@ -112,9 +119,9 @@ try {
   const stale = !!document.querySelector(".notice");
   await click(goBtn());
   const slots = document.querySelectorAll(".menu-slot .rcard").length;
-  step("frigo : bouton de lancement, 6 idées, d'autres idées toutes nouvelles, menu complet en 3 services",
-    disabledEmpty && first.length === 6 && second.length === 6 && !second.some((t) => first.includes(t)) && stale && slots === 3,
-    JSON.stringify({ disabledEmpty, first: first.length, second: second.length, stale, slots }));
+  step("frigo : la barre ajoute un ingrédient avec Entrée, bouton de lancement, 6 idées, d'autres idées toutes nouvelles, menu complet en 3 services",
+    barOk && disabledEmpty && first.length === 6 && second.length === 6 && !second.some((t) => first.includes(t)) && stale && slots === 3,
+    JSON.stringify({ barOk, disabledEmpty, first: first.length, second: second.length, stale, slots }));
 } catch (e) { failed++; origError("FAIL parcours :", (e as Error).message); }
 console.log(`${parcours} parcours sur 8`);
 await act(async () => { root.unmount(); });

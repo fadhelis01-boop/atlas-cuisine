@@ -1,12 +1,13 @@
 import { useMemo, useRef, useState } from "react";
-import { INGREDIENT_NAMES, INGREDIENTS, RECIPES } from "../lib/data";
+import { INGREDIENTS, RECIPES } from "../lib/data";
+import { findIngredients } from "../lib/ingredientSearch";
 import { STAPLES, verdict } from "../lib/engine";
 import { buildMenu, COURSES, pickIdeas, rankFor, type Course, type FridgeIdea, type FridgeMenu } from "../lib/frigo";
 import { freshSeed } from "../lib/variete";
 import { toast } from "../lib/toast";
 import { href } from "../lib/router";
 import { setState, uid, useProfile, useStore, type FridgeItem } from "../lib/store";
-import { norm, search } from "../lib/text";
+import { norm } from "../lib/text";
 import { DLC_DDM } from "../lib/content";
 import { Chip, Empty, Grid, Page, RecipeCard, Section } from "../components/ui";
 import { Icon } from "../components/icons";
@@ -23,25 +24,35 @@ const daysLeft = (d: string | null) => (d ? Math.ceil((new Date(d).getTime() - D
 
 function IngredientPicker({ onPick, exclude }: { onPick: (n: string) => void; exclude: string[] }) {
   const [q, setQ] = useState("");
-  // les ingrédients courants passent devant (« riz » → riz long avant riz gluant)
-  const hits = q.length >= 2 ? search(INGREDIENT_NAMES.filter((n) => !exclude.includes(n)), q, (n) => [n], 30)
-    .sort((a, b) => Number(COMMON.includes(b) || STAPLES.has(b)) - Number(COMMON.includes(a) || STAPLES.has(a))).slice(0, 8) : [];
+  const hits = findIngredients(q, exclude, COMMON);
+  const pick = (h: string) => { onPick(h); setQ(""); toast(`${short(h)} ajouté`); };
+  // un nom de plat tapé ici (« lasagnes ») : on propose d'aller le chercher dans les recettes
+  const dish = q.trim().length >= 3 && !hits.length ? RECIPES.find((r) => norm(r.title).includes(norm(q.trim()))) : undefined;
   return (
     <div className="picker">
-      <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Ajouter un ingrédient (ex. courgette, lentilles…)" aria-label="Ajouter un ingrédient" />
+      <input type="search" value={q} onChange={(e) => setQ(e.target.value)} enterKeyHint="done"
+        onKeyDown={(e) => { if (e.key === "Enter" && hits[0]) { e.preventDefault(); pick(hits[0]); } }}
+        placeholder="Tape un ingrédient que tu as (ex. fromage, poulet, pdt…)" aria-label="Ajouter un ingrédient que tu as" />
       {hits.length > 0 && (
-        <ul className="picker-list" role="listbox">
-          {hits.map((h) => <li key={h}><button onClick={() => { onPick(h); setQ(""); }}>{h}</button></li>)}
+        <ul className="picker-list" role="listbox" aria-label="Touche un ingrédient pour l'ajouter">
+          {hits.map((h, i) => <li key={h}><button type="button" onClick={() => pick(h)}>+ {h}{i === 0 && <span className="meta"> · Entrée</span>}</button></li>)}
         </ul>
+      )}
+      {q.trim().length >= 2 && !hits.length && (
+        <p className="small picker-empty">Aucun ingrédient ne s'appelle « {q.trim()} ». Essaie un mot plus simple (« poulet », « fromage », « crème »)
+          {dish && <>, ou cherche la recette : <a href={href(`/recherche?q=${encodeURIComponent(q.trim())}`)}>« {q.trim()} » dans les recettes</a></>}.</p>
       )}
     </div>
   );
 }
 
+const FRIGO_SUB = "1. Ajoute ce que tu as : tape-le dans la barre ou touche-le plus bas. 2. Choisis un plat, une entrée, un dessert ou un menu. "
+  + "3. Lance : ATLAS utilise d'abord ce qui arrive à sa date limite.";
+
 export default function Frigo() {
   const [tab, setTab] = useState<"cuisiner" | "frigo">("cuisiner");
   return (
-    <Page photo="rubrique/frigo" title="Avec ce que j'ai" sub="Choisis tes ingrédients : ATLAS propose les recettes qui les utilisent, en priorité ceux qui arrivent à leur date limite.">
+    <Page photo="rubrique/frigo" title="Avec ce que j'ai" sub={FRIGO_SUB}>
       <div className="row frigo-head">
         <div className="seg" role="tablist" aria-label="Frigo">
           <button role="tab" aria-selected={tab === "cuisiner"} className={tab === "cuisiner" ? "on" : ""} onClick={() => setTab("cuisiner")}>Que cuisiner ?</button>
