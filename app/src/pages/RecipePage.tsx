@@ -36,6 +36,13 @@ export function Rich({ text }: { text: string }) {
   return <>{parts.map((p, i) => (p.startsWith("**") ? <strong key={i}>{p.slice(2, -2)}</strong> : <span key={i}>{p}</span>))}</>;
 }
 
+/** Crédits regroupés par auteur : [« @auteur », ses liens], dans l'ordre d'importance. */
+function creditGroups(credit: NonNullable<Recipe["credit"]>): [string, string[]][] {
+  const m = new Map<string, string[]>();
+  for (const c of credit) m.set(c.author, [...(m.get(c.author) ?? []), c.url]);
+  return [...m];
+}
+
 function SeasonBadge({ r }: { r: Recipe }) {
   const zone = zoneOf(useStore((st) => st.settings.zone));
   const f = seasonFit(r, zone);
@@ -257,6 +264,16 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       {kidsAlert && <div className="banner warn"><Icon name="kid" size={16} className="ic-inline" /> Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}</div>}
 
       <Intro text={r.intro} />
+      {r.credit?.length ? (
+        <p className="small meta recipe-credit">
+          D'après {creditGroups(r.credit).map(([author, urls], i, all) => (
+            <span key={author}>{i ? (i === all.length - 1 ? " et " : ", ") : ""}{urls.length > 1 ? "les vidéos" : "la vidéo"} de{" "}
+              <a href={safeHref(urls[0])} target="_blank" rel="noopener noreferrer">{author}</a>
+              {urls.length > 1 && <> ({urls.map((u, k) => <span key={u}>{k ? ", " : ""}<a href={safeHref(u)} target="_blank" rel="noopener noreferrer">{k + 1}</a></span>)})</>}
+            </span>
+          ))} (TikTok). Fiche réécrite par ATLAS, quantités et étapes à confirmer en cuisine.
+        </p>
+      ) : null}
 
       <RecipeToc />
       <div className="two-col">
@@ -348,7 +365,9 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       )}
       <RecipeVideos r={r} />
       <p className="no-print"><button type="button" className="btn ghost small" onClick={() => window.print()}>Imprimer la fiche</button></p>
-      <p className="small source">Source : bible ATLAS, {r.source}. Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).</p>
+      <p className="small source">
+        Source : bible ATLAS, {r.source}{r.credit?.length ? `, d'après ${creditGroups(r.credit).map(([a]) => a).join(", ")}` : ""}.
+        {" "}Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).</p>
     </main>
   );
 }

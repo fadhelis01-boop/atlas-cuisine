@@ -70,6 +70,8 @@ export interface Recipe {
   leftovers?: Leftover[]; // ingrédients entamés et quoi en faire (Tome 12 §6) : chargés à la demande (leftovers.json)
   videos: VideoLink[]; // la première vidéo liée (la liste complète se charge à la demande : useRecipeVideos)
   videoCount?: number;
+  /** fiche écrite d'après une ou plusieurs vidéos de créateurs (crédit + lien) */
+  credit?: { author: string; url: string }[];
   side?: string | null;
   /** protéines par part, en grammes (estimation à l'export, accompagnement compris) */
   prot?: number | null;

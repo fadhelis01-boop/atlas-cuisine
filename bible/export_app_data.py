@@ -175,6 +175,8 @@ for d in RECIPES:
         "techniques": d["techniques"], "kids": d["enfants"], "age": d.get("age"), "cats": d.get("cats", []),
         "fetes": d.get("fetes", []), "profile": d.get("profil", []), "tests": d.get("tests", ""), "side": d.get("side"), "sansAcide": d.get("sans_acide"), "acideAjoute": d.get("acide_ref"),
         "source": "Tome 11 (vague 0)" if d["id"] in EXTRA else ("Tome 13 (vague 2)" if d.get("vague") == 2 else "Tome 12 (vague 1)"), "verified": "C",
+        # fiche écrite par ATLAS d'après une vidéo (favoris TikTok du 22/10/2026) : crédit + lien, jamais le texte de l'auteur
+        **({"credit": d["credit"]} if d.get("credit") else {}),
     })
 
 # ---------------------------------------------------------------- zéro déchet ingrédient par ingrédient (Tome 12 §6)
@@ -225,7 +227,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
           "Pains, pâtes": "pains", "Sauces": "sauces", "Fait maison sans additifs": "fait_maison", "Desserts": "desserts", "Boissons": "boissons",
           "Techniques": "techniques", "Zéro déchet": "zero_dechet", "À vérifier": "a_verifier", "Hors cuisine": None, "Moyen-Orient": "moyen_orient"}
 imports = []
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""
@@ -251,6 +253,7 @@ for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tikto
                         "pork": "🐖" in rest, "alcohol": "🍷" in rest, "fete": "🎉" in rest, "photo": "carrousel" in rest,
                         **({"lang": l} if (l := next((c for f, c in (("🇬🇧", "en"), ("🇩🇪", "de"), ("🇳🇱", "nl")) if f in rest), "")) else {})})
 
+imports = list({it["url"]: it for it in reversed(imports)}.values())[::-1]  # une vidéo relevée deux fois (favori + profil) : la première rubrique gagne
 # ---------------------------------------------------------------- vidéos : lecture dans l'application
 # TikTok : intégration officielle (tiktok.com/embed/v2/<id>) pour les vidéos ; les carrousels photo s'ouvrent dans TikTok.
 # Cooking with Morgane : la vidéo YouTube de chaque recette (relevée sur sa page le 14/10/2026).
@@ -348,6 +351,21 @@ for r in recipes:
     hits.sort(key=lambda it: (it["source"] != "Cooking with Morgane", not it.get("embed"), it["pork"] or it["alcohol"]))
     if hits: VIDEOS[r["id"]] = [{"url": it["url"], "title": it["title"], "source": it["source"], "author": it["author"], "embed": it.get("embed", ""),
                                  "pork": it["pork"], "alcohol": it["alcohol"]} for it in hits[:8]]
+# Favoris TikTok du 22/10/2026 : la vidéo d'origine d'une fiche créditée passe en tête, puis les vidéos d'un même plat
+# relevées à la main (videos_favoris.py), puis celles trouvées par mots-clés. Huit au plus.
+from videos_favoris import EN_PLUS as _EN_PLUS
+_IMP_BY_URL = {it["url"]: it for it in imports}
+assert not set(_EN_PLUS) - {r["id"] for r in recipes}, set(_EN_PLUS) - {r["id"] for r in recipes}
+def _vid(url, author=None, credited=False):
+    it = _IMP_BY_URL.get(url)
+    m = re.search(r"tiktok\.com/@([\w.]+)/video/(\d+)", url)
+    return {"url": url, "title": it["title"] if it else "Vidéo d'origine", "source": "TikTok", "author": (author or (it or {}).get("author") or m.group(1)).lstrip("@"),
+            "embed": (it or {}).get("embed") or f"tt:{m.group(2)}", "pork": False if credited else bool(it and it["pork"]), "alcohol": False if credited else bool(it and it["alcohol"])}
+for r in recipes:
+    first = [_vid(c["url"], c["author"], True) for c in r.get("credit") or []] + [_vid(u) for u in _EN_PLUS.get(r["id"], [])]
+    if first:
+        seen = {v["url"] for v in first}
+        VIDEOS[r["id"]] = (first + [x for x in VIDEOS.get(r["id"], []) if x["url"] not in seen])[:8]
 for r in recipes: r["videos"] = VIDEOS.get(r["id"], [])
 
 # une recette listée dans « fêtes » ET dans sa catégorie : on garde la catégorie et le drapeau fête
@@ -460,9 +478,13 @@ dump("recipe_videos.json", VIDS)
 # Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index garde ce qu'il faut aux cartes, à la recherche, au moteur et au
 # planificateur ; le détail d'une fiche (étapes, introduction, vidéos, conseils, matériel, conservation) part dans un second
 # fichier, lu juste après le premier affichage (et tout de suite par les écrans qui en ont besoin).
-DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage")
+DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit")
 detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
 index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
+# Ingrédients de l'index en tableaux [quantité, libellé, réf., poids(, 1 si facultatif)] : 13 Ko compressés de moins au
+# démarrage (place pour les fiches TikTok du 22/10/2026) ; data.ts les remet en objets à la lecture.
+for x in index:
+    x["ingredients"] = [[l["qty"], l["label"], l["ref"], l["weight"]] + ([1] if l["optional"] else []) for l in x["ingredients"]]
 from renommages import RENAMES
 _ids_all = {r["id"] for r in recipes}
 assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"

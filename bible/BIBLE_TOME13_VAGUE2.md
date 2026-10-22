@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (988 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (1069 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **988 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1058 recettes complètes** ;
+> 1. **1069 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1139 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -1204,7 +1204,108 @@
 | Thiou poulet (ragoût de poulet à la tomate et aux légumes, Sénégal) | Sénégal | – | ✅ | ✅ | ✅ | ✅ | 3 |
 | Sukuma wiki et ugali (chou kale à la tomate et polenta ferme, Kenya) | Kenya | – | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 494 · vegetarien : 152 · zero_dechet : 88 · express : 78 · sauces : 62 · brunch : 36 · fetes : 30 · boissons : 23 · pains : 23 · pique_nique : 23 · salade : 22 · fusion : 13.
+### Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : desserts et goûters absents du catalogue, choisis parmi (8)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Tarte aux trois chocolats sans cuisson | Pâtisserie | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Brioches roulées à la pâte à tartiner chocolat-noisette | Pâtisserie | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Moelleux à la noix de coco et au yaourt | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Crêpe cake au chocolat (gâteau de crêpes, ganache montée et crème mascarpone) | Pâtisserie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Biscuits craquelés au citron (lemon crinkles) | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lemonies (brownies au citron, fondants et acidulés) | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Fonkie (fondant au chocolat sur une base de cookie) | Pâtisserie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Perles de tapioca au lait de coco et à la mangue | Sénégal | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+
+### Vague 7 (suite) · Favoris TikTok du 22/10/2026 et vidéos les plus populaires des créateurs suivis (onglet « Populaire » de (24)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Tajine de bœuf aux olives, citron confit et pommes de terre | Maroc | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Bœuf sauté aux oignons, gingembre et cébette (Chine) | Chine | GL, MM, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Cuisses de poulet à la citronnelle et au citron, touche de beurre | Laos | GL, LA, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Karaage (poulet frit japonais mariné soja-gingembre) | Japon | AR, GL, OE, SE, SO | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Nuggets de poisson aux légumes, frites de polenta et sauce aux agrumes | Cuisine du quotidien | GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Cassolettes crémeuses de crevettes aux poireaux, gratinées | Cuisine du quotidien | CR, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lasagnes aux crevettes et au crabe, béchamel citronnée | Cuisine du quotidien | CR, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Maakouda (galettes de pommes de terre à l'ail et à la coriandre), sauce tartare légère | Algérie | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Pâtes crémeuses aux oignons fondus et au parmesan | Cuisine du quotidien | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Chou vert et œufs poêlés, sauce soja-ail-piment (Chine) | Chine (Sichuan) | GL, OE, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Avazine (épinards à la tomate et à l'ail, Kabylie), œufs pochés | Algérie | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Aubergines panées à la scamorza (melanzana alla pullastiello, Naples) | Italie (Campanie) | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade de pommes de terre écrasées et rôties, sauce yaourt-concombre aux herbes | Suède | LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Croustillants de chou-fleur au parmesan (four ou air fryer) | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Riz à l'ail doré, tomate et laurier | Portugal | CE | 🟡 | ✅ | 🔄 | ✅ | 1 |
+| Pains kebab moelleux à la poêle (au yaourt) | Turquie | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Feuilles de brick maison (dyouls) | Tunisie | GL | ✅ | ✅ | ✅ | ✅ | 1 |
+| Cachir maison au poulet et aux olives (mortadelle algérienne sans porc) | Algérie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâte à tartiner noisette et chocolat blanc (façon El Mordjene) | Algérie | FC, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tiramisu au citron (lemon curd et mascarpone) | Italie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Crema al caffè (crème fouettée au café, comme au bar italien) | Italie | LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Sbriciolata au citron (tarte crumble à la crème au citron) | Italie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Biscuits cuillère maison (boudoirs) | Pâtisserie | GL, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Cake au citron moelleux (zeste infusé dans le jus) | Pâtisserie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+
+### Vague 7 (fin) · Vidéos les plus enregistrées lues en dernier (22/10/2026) : cheesecakes de @on_est_gourmands (les vidéos (9)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Cheesecake sans cuisson chocolat-noisette (crème au fromage frais et ganache) | États-Unis | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Cheesecake au yaourt, cuisson courte sans bain-marie | États-Unis | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Risotto cacio e pepe (pecorino, parmesan et poivre grillé) | Italie | CE, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Poulet du Général Tao (croustillant, sauce sucrée-acidulée pimentée) | Chine | AR, GL, OE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Salade au poulet du traiteur chinois, vinaigrette blanche | Cuisine du quotidien | MO, OE, SE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Börek express au papier de riz et au fromage (à la poêle) | Turquie | LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Galettes de pommes de terre au fromage fondant (à la poêle) | Ukraine | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lobia (curry de haricots cornille à la tomate, Pakistan) | Pakistan | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Omelette masala (oignon, tomate, piment vert, coriandre) | Inde | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+
+### Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les (40)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Hauts de cuisse au miel, à l'ail et au citron poivré (au four) | États-Unis | GL, LA, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Poulet « Marry me » (crème, tomates séchées, parmesan) | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Roulé de pommes de terre au poulet et fromage frais ail-fines herbes | Cuisine du quotidien | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Polpette di pollo al limone (boulettes de poulet à la ricotta et au citron) | Italie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tsukune (brochettes de boulettes de poulet laquées, Japon) | Japon | GL, OE, SE, SO | ✅ | 🍷 | ✅ | 🔄 | 1 |
+| Poulet Gaston Gérard (crème, moutarde et comté gratiné, Dijon) | Bourgogne | LA, MO, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Soso ya mwamba (poulet à la sauce arachide, RD Congo) | RD Congo | AR | ✅ | ✅ | ✅ | ✅ | 2 |
+| Curry de poulet du Suriname (pommes de terre, massalé) | Suriname | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tangia marrakchia (jarret de bœuf confit au citron confit et au cumin) | Maroc | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Marka jelbana (ragoût d'agneau aux petits pois, Tunisie) | Tunisie | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Mloukhiya (bœuf mijoté dans la sauce de corète, Tunisie) | Tunisie | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Arayes (pitas grillées farcies au bœuf et à la feta, sauce yaourt) | Liban | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tombik döner maison (pain turc garni de viande grillée, salade oignon-sumac) | Turquie | GL, LA | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Islak burger (burgers « mouillés » à la sauce tomate-beurre, Istanbul) | Turquie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Loco moco (steak haché, riz, sauce oignons-champignons et œuf au plat, Hawaï) | Hawaï | GL, MO, OE, PO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Brochettes bœuf et comté, marinade soja-moutarde-miel (air fryer ou four) | Cuisine du quotidien | GL, LA, MO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Salade thaïe à la bavette (chou rouge, herbes, cacahuètes) | Thaïlande | AR, GL, PO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Asun jollof (riz jollof au chevreau grillé pimenté, Nigeria) | Nigeria | – | ✅ | ✅ | ✅ | ✅ | 6 |
+| Ndambé (haricots cornille mijotés au bœuf, Sénégal) | Sénégal | – | ✅ | ✅ | ✅ | ✅ | 3 |
+| Coquillettes au bœuf effiloché, sauce tomate-soja (one pot) | Sénégal | GL, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Pâtes aux crevettes « toscanes » (crème, tomates cerises, épinards, parmesan) | États-Unis | CR, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Crevettes poêlées au beurre chimichurri (persil, coriandre, citron vert) | Argentine | CR, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Pastels au thon, sauce oignon-tomate (beignets farcis, Sénégal) | Sénégal | AR, GL, LA, OE, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Pâtes aux sardines, citron, fenouil et chapelure dorée (Sicile) | Italie (Sicile) | GL, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Orecchiette froides au thon, tomates cerises, mozzarella et citron | Italie (Pouilles) | GL, LA, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Poulpe rôti au four, pommes de terre écrasées et huile persillée (Portugal) | Portugal | MM | ✅ | ✅ | ✅ | ✅ | 3 |
+| Spaghetti all'assassina (pâtes grillées dans la poêle, sauce tomate pimentée, Bari) | Italie (Pouilles) | GL, LA | ✅ | ✅ | ✅ | ✅ | 6 |
+| Pâtes à la crème de poivrons rouges, basilic et parmesan | Italie | GL, LA, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Spaghetti carbonara d'asperges (sans lardons) | Italie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Spaghetti au pesto de citron et d'amandes (Sicile) | Italie (Sicile) | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Nouilles de pommes de terre maison, sauce ail-piment-vinaigre noir | Chine | GL, SE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Fouti (riz aux aubergines africaines et gombos, Guinée) | Guinée | CR, PO | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade japonaise de pommes de terre aux œufs et au concombre | Japon | LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Salade pantesca (pommes de terre, tomates, câpres et olives, île de Pantelleria) | Italie (Sicile) | SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Terrine de poisson froide aux légumes et à l'aneth | Cuisine du quotidien | LA, OE, PO | ✅ | ✅ | ✅ | ✅ | 1 |
+| Tamago sando (sandwich japonais à l'œuf crémeux) | Japon | GL, LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Grande crêpe soufflée au four, dinde et fromage (Allemagne, version sans jambon) | Allemagne | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Cheeseburger bombs (petits pains briochés farcis bœuf et cheddar) | États-Unis | GL, LA, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Ablo (petits pains vapeur au riz et au maïs, Togo et Bénin) | Togo | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mille-feuille de pommes de terre au beurre clarifié et au parmesan | Suisse | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+
+**Rubriques couvertes par la vague 2** : enfants : 537 · vegetarien : 171 · express : 96 · zero_dechet : 88 · sauces : 62 · fetes : 51 · brunch : 38 · pique_nique : 26 · pains : 25 · salade : 24 · boissons : 23 · fusion : 15.
 
 ---
 
@@ -27275,6 +27376,2268 @@ Le repas de base au Kenya, dont le nom signifie « pousser la semaine » : du ch
 
 ---
 
+## 2.40 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : desserts et goûters absents du catalogue, choisis parmi
+
+### Tarte aux trois chocolats sans cuisson
+
+*Tarte 3 chocolats · France › Pâtisserie · Dessert* · Fêtes : Anniversaire, Noël, Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : fruits à coque, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cercle ou moule à tarte de 20 cm à fond amovible, 3 saladiers.
+
+La tarte la plus enregistrée des favoris : un fond de biscuits au cacao et de beurre, puis trois ganaches posées l'une sur l'autre, chocolat blanc, au lait et noir. Rien ne passe au four, tout se joue au réfrigérateur.
+
+**Ingrédients** : 150 g de biscuits au cacao · 60 g de beurre fondu · 375 g de crème liquide entière (3 × 125 g) · 240 g de chocolat blanc · 190 g de chocolat au lait · 110 g de chocolat noir · 1 c. à s. de cacao en poudre *(facultatif)* · 1 pincée de fleur de sel
+
+1. **Fond.** Biscuits mixés en poudre, beurre fondu, sel : sable humide ; tassé au dos d'une cuillère sur le fond et les bords ; 30 min au frais.
+2. **Ganache blanche.** 125 g de crème chauffée jusqu'au frémissement (3 min), versée sur le chocolat blanc haché, 1 min de repos, mélangée du centre vers l'extérieur : lisse et brillante ; coulée sur le fond, 1 h au frais : la surface est ferme.
+3. **Ganache au lait.** Même geste avec le chocolat au lait ; coulée doucement sur le dos d'une cuillère pour ne pas creuser la couche blanche ; 1 h au frais.
+4. **Ganache noire.** Même geste avec le chocolat noir ; coulée en dernier ; 3 h au frais (ou une nuit) : prise, elle se tranche net ; cacao tamisé en bordure si tu veux.
+
+- La ganache blanche a plus de chocolat que la noire : c'est normal, le chocolat blanc fige moins.
+- Un couteau passé sous l'eau chaude et essuyé à chaque part pour des couches bien nettes.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Ganache
+
+---
+
+### Brioches roulées à la pâte à tartiner chocolat-noisette
+
+*Nutella brioche rolls · France › Pâtisserie · Goûter / dessert* · Fêtes : Anniversaire
+
+Niveau ⭐⭐ · 12 portions · actif 40 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Saladier ou robot, moule de 24 × 30 cm, rouleau.
+
+Une pâte à brioche souple roulée autour d'une couche généreuse de pâte à tartiner, coupée en tranches et cuite serrée dans un plat : des brioches qui se détachent en spirales fondantes. Le goûter vedette des favoris.
+
+**Ingrédients** : 500 g de farine · 20 cl de lait tiède · 2 œufs (+ 1 jaune pour dorer) · 100 g de beurre mou · 60 g de sucre · 7 g de levure boulangère sèche · 250 g de pâte à tartiner chocolat-noisette (ou maison) · 1 sachet de sucre vanillé *(facultatif)* · 1 pincée de sel
+
+1. **Pâte.** Lait tiède, sucre, levure, 5 min : mousseux ; œufs, vanille, farine, sel : pétrie 5 min ; beurre mou en morceaux, pétrie 8 min : lisse, elle se décolle du bol.
+2. **Pousse.** 1 h 30 au chaud sous un torchon : doublée de volume.
+3. **Rouler.** Étalée en rectangle de 40 × 30 cm ; pâte à tartiner (tiédie 20 s au micro-ondes) en couche fine jusqu'aux bords ; roulée serrée par le grand côté, 15 min au congélateur ; coupée en 12 tranches au fil ou au couteau bien aiguisé.
+4. **Cuire.** Serrées dans le moule, 45 min de pousse : elles se touchent ; jaune d'œuf au pinceau, 25 min à 175 °C : bien dorées, le cœur cuit (98 °C) ; tièdes.
+
+- 15 min au congélateur avant de couper : les spirales restent nettes.
+- La pâte à tartiner maison de l'appli (moins sucrée) fonctionne aussi.
+
+**Conservation** : 2 jours dans une boîte ; se congèlent.
+
+**Techniques** : Pétrir une pâte riche
+
+---
+
+### Moelleux à la noix de coco et au yaourt
+
+*Moelleux coco · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 8 portions · actif 10 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule rond de 20 cm, saladier.
+
+Un gâteau tout simple à la noix de coco râpée, rendu tendre par le yaourt et le lait, au beurre demi-sel. Il se prépare en 10 minutes sans balance compliquée, et reste moelleux trois jours.
+
+**Ingrédients** : 115 g de noix de coco râpée (+ un peu pour finir) · 125 g de yaourt nature · 11 cl de lait · 75 g de beurre demi-sel fondu · 110 g de sucre · 3 œufs · 80 g de farine · 1 sachet de sucre vanillé · 1/2 sachet de levure chimique
+
+1. **Battre.** Œufs, sucre et sucre vanillé, 1 min : mousseux.
+2. **Liquides.** Yaourt, lait, beurre fondu : mélangé lisse.
+3. **Secs.** Farine, coco, levure : incorporés juste assez pour qu'il ne reste pas de farine.
+4. **Cuire.** Moule beurré, 30 min à 180 °C : doré, la lame ressort sèche ; coco parsemée sur les bords encore chauds.
+
+- Au lait et au yaourt de soja, il est sans lactose.
+
+**Conservation** : 3 jours sous cloche.
+
+---
+
+### Crêpe cake au chocolat (gâteau de crêpes, ganache montée et crème mascarpone)
+
+*Crêpes cake · France › Pâtisserie · Dessert* · Fêtes : Anniversaire, Chandeleur
+
+Niveau ⭐⭐⭐ · 10 portions · actif 1 h 00 · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle à crêpes de 20 cm, batteur, plat.
+
+Une vingtaine de fines crêpes au cacao empilées avec une ganache montée au chocolat noir et une crème au mascarpone. Le gâteau d'anniversaire sans four qui impressionne toujours.
+
+**Ingrédients** : 125 g de farine · 20 g de cacao en poudre · 4 œufs · 30 cl de lait · 80 g de sucre (40 + 40) · 4 c. à s. d'huile neutre · 100 g de chocolat noir · 60 cl de crème liquide entière, très froide · 125 g de mascarpone · 1 pincée de sel
+
+1. **Ganache montée (la veille).** 10 cl de crème portée au frémissement (2 min), versée sur le chocolat haché : lisse ; 20 cl de crème froide ajoutés ; 4 h au frais au minimum.
+2. **Crêpes.** Farine, cacao, 40 g de sucre, sel ; œufs, lait peu à peu, huile : pâte lisse, 30 min de repos ; crêpes fines, 1 min par face à feu moyen : elles se décollent d'un coup ; refroidies à plat.
+3. **Crèmes.** Ganache fouettée 2 min : ferme et mousseuse ; mascarpone, 30 cl de crème froide et 40 g de sucre fouettés : crème lisse qui tient au fouet.
+4. **Monter.** Une crêpe, une fine couche de crème (en alternant les deux), une crêpe… ; ganache sur le dessus ; 3 h au frais : il se tranche net.
+
+- Des couches fines de crème : c'est le nombre de crêpes qui fait le gâteau.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Ganache montée, Cuire une crêpe
+
+---
+
+### Biscuits craquelés au citron (lemon crinkles)
+
+*Lemon crinkles · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 20 portions · actif 20 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Saladier, plaque.
+
+Des biscuits tendres au cœur, craquelés de blanc à la cuisson car roulés dans le sucre glace, très parfumés au zeste et au jus de citron. La pâte doit reposer au froid : prévois-la la veille ou le matin.
+
+**Ingrédients** : 260 g de farine · 2 citrons (zeste et jus) · 115 g de sucre · 95 g de beurre fondu · 2 œufs · 1 sachet de sucre vanillé · 1 pincée de bicarbonate · 50 g de sucre glace
+
+1. **Parfumer.** Sucre, sucre vanillé et zestes frottés du bout des doigts : sable humide et parfumé.
+2. **Pâte.** Beurre fondu, œufs, jus de citron ; farine et bicarbonate : pâte molle et collante (c'est normal) ; 2 h au frigo : ferme.
+3. **Rouler.** Boules de 25 g roulées dans le sucre glace, épaisse couche ; espacées sur la plaque.
+4. **Cuire.** 11 à 12 min à 180 °C : craquelées, à peine blondes dessous, encore tendres au centre (elles raffermissent en refroidissant).
+
+**Conservation** : 5 jours dans une boîte.
+
+---
+
+### Lemonies (brownies au citron, fondants et acidulés)
+
+*Lemonies · Amérique du Nord › États-Unis · Goûter / dessert*
+
+Niveau ⭐ · 12 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule carré de 20 cm, saladier.
+
+Le brownie version citron : une pâte dense et fondante, sans chocolat, au beurre et au zeste, nappée d'un glaçage au jus de citron qui craque. Cinq ingrédients et un goût de tarte au citron.
+
+**Ingrédients** : 3 œufs · 120 g de sucre · 120 g de beurre fondu · 150 g de farine · 2 citrons (zeste et jus) · 80 g de sucre glace · 1 pincée de sel
+
+1. **Battre.** Œufs, sucre, zestes, 2 min : mousseux et pâle.
+2. **Pâte.** Beurre fondu, jus d'un citron, sel ; farine incorporée sans trop travailler : pâte lisse et épaisse.
+3. **Cuire.** Moule chemisé, 22 à 25 min à 170 °C : bords dorés, centre juste pris qui tremble à peine (fondant une fois froid).
+4. **Glacer.** Sucre glace et jus du second citron : glaçage épais ; étalé sur le gâteau refroidi ; 30 min : il fige ; en carrés.
+
+**Conservation** : 4 jours au frigo.
+
+---
+
+### Fonkie (fondant au chocolat sur une base de cookie)
+
+*Fonkie · France › Pâtisserie · Dessert* · Fêtes : Anniversaire
+
+Niveau ⭐⭐ · 8 portions · actif 25 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule de 20 cm, bain-marie ou micro-ondes.
+
+Deux desserts en un : une pâte à cookie aux pépites précuite en fond de moule, puis un appareil à fondant au chocolat versé dessus. Le dessous croustille, le dessus reste coulant.
+
+**Ingrédients** : 190 g de beurre (100 mou + 90 fondu) · 45 g de cassonade · 4 œufs (1 + 3) · 270 g de farine (200 + 70) · 1/2 c. à c. de levure chimique · 210 g de chocolat noir (60 en morceaux + 150) · 90 g de sucre · 1 pincée de sel
+
+1. **Cookie.** Beurre mou et cassonade crémés ; un œuf ; 200 g de farine, levure, sel ; chocolat en morceaux : pâte homogène ; étalée dans le moule chemisé, 30 min au frais.
+2. **Précuire.** 8 min à 180 °C : bords pris, centre encore mou.
+3. **Fondant.** Chocolat et beurre fondus (bain-marie, 5 min) : lisses ; 3 œufs et sucre fouettés 1 min, chocolat tiédi, 70 g de farine : appareil brillant ; versé sur le cookie.
+4. **Cuire.** 15 à 18 min à 180 °C : bords pris, centre qui tremble encore ; 20 min de repos avant de démouler.
+
+- Avec une boule de glace vanille ou une cuillère de crème fraîche épaisse.
+
+**Conservation** : 2 jours ; 10 s au micro-ondes pour retrouver le cœur coulant.
+
+---
+
+### Perles de tapioca au lait de coco et à la mangue
+
+*Tapioca mangue-coco · Afrique subsaharienne › Sénégal · Dessert*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole.
+
+Un dessert frais servi au Sénégal comme en Asie : des perles de tapioca cuites jusqu'à devenir translucides, mêlées au lait de coco et au lait concentré, avec une mangue bien mûre en dés.
+
+**Ingrédients** : 50 g de perles de tapioca · 15 cl de lait de coco · 3 c. à s. de lait concentré sucré · 1 grosse mangue bien mûre · 1/2 citron vert *(facultatif)*
+
+1. **Cuire.** Perles versées dans 2 l d'eau bouillante, 15 à 20 min en remuant souvent : translucides, juste un point blanc au centre ; 5 min hors du feu, couvert : le point disparaît.
+2. **Rincer.** À l'eau froide dans une passoire : les perles se détachent.
+3. **Lier.** Lait de coco et lait concentré mélangés aux perles.
+4. **Servir.** Mangue en dés, un trait de citron vert ; frais.
+
+**Conservation** : 1 jour au frigo (le tapioca durcit ensuite).
+
+---
+
+## 2.41 Vague 7 (suite) · Favoris TikTok du 22/10/2026 et vidéos les plus populaires des créateurs suivis (onglet « Populaire » de
+
+### Tajine de bœuf aux olives, citron confit et pommes de terre
+
+*Tajine de bœuf · Maghreb › Maroc · Plat* · Fêtes : Ramadan / Aïd, Repas de famille
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Tajine en terre ou cocotte à fond épais.
+
+Le tajine de bœuf de tous les jours : paleron mariné au curcuma, gingembre, ail et cumin, mijoté longtemps avec un oignon, puis couvert de quartiers de pommes de terre, d'olives vertes et de citron confit. La sauce réduit et devient onctueuse.
+
+**Ingrédients** : 600 g de paleron en gros cubes · 2 pommes de terre · 100 g d'olives vertes dénoyautées · 1 citron confit · 1 oignon · 1 c. à s. de curcuma · 1 c. à s. de gingembre en poudre · 1 c. à c. d'ail (2 gousses) · 1/2 c. à s. de cumin · 1/2 botte de persil · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Mariner.** Viande, épices, ail écrasé, huile, sel et poivre : 30 min (une nuit, c'est mieux).
+2. **Saisir.** Dans le tajine, viande et oignon râpé, 10 min à feu moyen en remuant : la viande colore, l'oignon fond ; 40 cl d'eau, persil en bouquet.
+3. **Mijoter.** Couvert, 1 h 30 à feu doux : la viande cède sous la fourchette (ajoute un peu d'eau si ça attache).
+4. **Garnir.** Pommes de terre en quartiers disposées en étoile, olives, citron confit en lamelles ; couvert, 30 min : pommes de terre fondantes, sauce courte et brillante ; avec du pain.
+
+- Version aux carottes : 2 carottes en bâtonnets avec les pommes de terre et de la coriandre au lieu du persil (deuxième vidéo de l'auteur).
+- Dessalé 10 min dans l'eau, le citron confit est moins salé : goûte avant de saler.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Bœuf sauté aux oignons, gingembre et cébette (Chine)
+
+*Cōng bào niúròu · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, mollusques, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou grande poêle.
+
+Le bœuf aux oignons des restaurants chinois, fait à la maison : de fines lamelles marinées et enrobées de fécule (elles restent tendres), saisies très vite au wok avec beaucoup d'oignon, d'ail et de gingembre.
+
+**Ingrédients** : 400 g de bavette ou de rumsteck · 2 oignons · 1 c. à s. de sauce soja claire (+ 1 c. à c. de foncée) · 1 c. à s. de sauce d'huître (ou de miel) · 1 c. à s. de fécule de maïs · 1 c. à s. d'huile de sésame · 2 gousses d'ail · 4 cm de gingembre · 2 cébettes · 3 c. à s. d'huile · 1 c. à c. de vinaigre de cidre
+
+1. **Mariner.** Bœuf en lamelles fines contre les fibres ; soja, sauce d'huître, fécule, huile de sésame, poivre : 20 min.
+2. **Saisir.** Wok fumant, 2 c. à s. d'huile, bœuf en une couche, 1 min sans toucher puis 1 min en remuant : saisi, encore rosé ; réservé.
+3. **Oignons.** Reste d'huile, oignons en quartiers, ail et gingembre en lamelles, 3 min à feu vif : dorés sur les bords, encore croquants.
+4. **Finir.** Bœuf remis, cébette, vinaigre, 1 min : la sauce nappe et brille ; avec du riz.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Cuisses de poulet à la citronnelle et au citron, touche de beurre
+
+*Kai yang ta khrai (façon maison) · Asie du Sud-Est › Laos · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, lait, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande poêle.
+
+Une marinade de Thaïlande et du Laos : citronnelle, ail, poivre noir, soja et un peu de sucre sur des cuisses désossées, cuites peau dessous jusqu'à croustiller, finies au beurre et au citron. Avec du riz gluant ou du riz blanc.
+
+**Ingrédients** : 1 kg de cuisses de poulet désossées · 1 bâton de citronnelle · 4 gousses d'ail · 3 c. à s. de sauce soja · 1/2 c. à s. de sucre roux · 1 c. à c. de poivre noir moulu · 1 c. à s. de jus de citron · 25 g de beurre · 1 c. à s. d'huile
+
+1. **Mariner.** Citronnelle (partie tendre) et ail hachés très fin, soja, sucre, poivre ; cuisses enrobées : 30 min.
+2. **Cuire.** Poêle huilée, peau dessous, 12 min à feu moyen sans toucher : peau dorée et croustillante ; retournées, 8 min : 74 °C à cœur.
+3. **Laquer.** Beurre et marinade restante, 1 min en arrosant : sauce brillante et parfumée.
+4. **Servir.** Jus de citron, tranché ; avec du riz et des crudités.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Karaage (poulet frit japonais mariné soja-gingembre)
+
+*Karaage · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Sauce soja claire, Saké / saké de cuisine
+- ⚠️ **Allergènes** : arachide, gluten, œufs, sésame, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole à friture, thermomètre.
+
+Le poulet frit des izakayas : morceaux de haut de cuisse massés avec soja, saké, gingembre, ail et œuf, roulés dans la fécule de pomme de terre et frits deux fois. Croûte fine et craquante, chair très juteuse.
+
+**Ingrédients** : 600 g de hauts de cuisse désossés · 2 c. à s. de sauce soja · 2 c. à s. de saké de cuisine · 1 c. à c. de gingembre râpé · 1 c. à c. d'ail râpé · 1 œuf · 1 c. à c. d'huile de sésame · 1/2 c. à c. de sucre · 80 g de fécule de pomme de terre · 1 citron, en quartiers · 1 l d'huile de friture
+
+1. **Mariner.** Poulet en morceaux de 4 cm, massé avec soja, saké, gingembre, ail, huile de sésame, sucre et œuf battu : 30 min au frais.
+2. **Enrober.** Juste avant, roulés généreusement dans la fécule, l'excédent secoué.
+3. **Première friture.** 3 min à 170 °C : pâles, à peine dorés ; 4 min de repos sur une grille (la chaleur finit de cuire l'intérieur).
+4. **Seconde friture.** 1 min à 190 °C : croûte dorée et craquante, 74 °C à cœur ; avec du citron et du chou émincé.
+
+- La double cuisson garde le poulet juteux et la croûte croustillante plus longtemps.
+
+- **Variante Sans alcool** : Saké → **bouillon de volaille + quelques gouttes de vinaigre de riz**. **À tester**. *Calcul* : porc **uncertain**, alcool **trace**.
+
+**Conservation** : Le jour même ; 5 min au four chaud pour recroustiller.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Nuggets de poisson aux légumes, frites de polenta et sauce aux agrumes
+
+*Nuggets de poisson · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 40 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, plaque, plat carré.
+
+Un plat d'enfants revisité : poisson blanc mixé avec carotte et brocoli, en petites bouchées panées cuites au four, avec des frites de polenta au parmesan et une sauce au yaourt, au citron et à l'orange.
+
+**Ingrédients** : 400 g de poisson blanc (cabillaud, lieu) · 2 carottes · 100 g de brocoli · 3 c. à s. de chapelure (+ pour paner) · 200 g de polenta · 30 g de parmesan · 200 g de yaourt grec · 1 citron (zeste et jus) · 1 orange (zeste et un trait de jus) · 1 c. à s. de ciboulette · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Polenta.** Versée en pluie dans 1,2 l d'eau bouillante salée, 5 min en remuant : épaisse ; parmesan ; étalée sur 2 cm dans un plat huilé, 1 h au frais : ferme ; en bâtonnets.
+2. **Nuggets.** Poisson, carottes, brocoli, chapelure, zestes, sel, poivre mixés : pâte qui se tient ; boulettes aplaties, roulées dans la chapelure.
+3. **Cuire.** Frites et nuggets sur la plaque, un filet d'huile, 30 min à 200 °C (nuggets retirés à 15 min) : frites dorées et croustillantes, nuggets fermes et dorés.
+4. **Sauce.** Yaourt, ciboulette, zestes, un trait de jus d'orange et de citron, sel.
+
+**Conservation** : Nuggets crus : se congèlent.
+
+---
+
+### Cassolettes crémeuses de crevettes aux poireaux, gratinées
+
+*Cassolettes de crevettes · France › Cuisine du quotidien · Plat* · Fêtes : Noël, Repas de famille
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, 4 cassolettes ou un plat à gratin.
+
+Des poireaux fondus au beurre, des crevettes, de la crème et du fromage, gratinés en petites cassolettes. Une entrée chaude de fête ou un plat simple avec du riz ou du pain grillé.
+
+**Ingrédients** : 400 g de crevettes décortiquées · 2 poireaux · 1 échalote · 1 gousse d'ail · 20 cl de crème fraîche épaisse · 100 g de fromage râpé · 20 g de beurre · 1/2 citron · 1 c. à s. de ciboulette · 1 pincée de sel
+
+1. **Fondre.** Beurre, poireaux, échalote et ail émincés, 8 min à feu moyen : fondants, sans couleur.
+2. **Crevettes.** 2 min : elles rosissent ; crème, sel, poivre, un trait de citron, 2 min : la sauce nappe.
+3. **Garnir.** En cassolettes, fromage râpé dessus.
+4. **Gratiner.** 12 min à 200 °C : dorées et bouillonnantes ; ciboulette.
+
+**Conservation** : Le jour même.
+
+---
+
+### Lasagnes aux crevettes et au crabe, béchamel citronnée
+
+*Lasagnes de la mer · France › Cuisine du quotidien · Plat* · Fêtes : Noël, Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 40 min · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, gluten, lait ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à gratin, casserole.
+
+Une lasagne de fête sans viande : crevettes et chair de crabe dans une béchamel à la crème relevée de citron, entre des feuilles de pâtes, sous une croûte de mozzarella et de parmesan.
+
+**Ingrédients** : 12 feuilles de lasagnes · 300 g de crevettes décortiquées · 200 g de chair de crabe · 50 cl de lait · 40 g de beurre · 40 g de farine · 20 cl de crème fraîche · 150 g de mozzarella râpée · 50 g de parmesan · 1 petit oignon · 1 citron · 1 c. à c. de sel
+
+1. **Béchamel.** Beurre fondu, farine, 2 min en remuant : mélange blond et mousseux ; lait froid en fouettant, 5 min : épaisse et lisse ; crème, sel, zeste de citron.
+2. **Garniture.** Oignon haché 4 min dans un filet d'huile ; crevettes 2 min : roses ; hors du feu, crabe émietté, jus d'un demi-citron, la moitié de la béchamel.
+3. **Monter.** Béchamel au fond, feuilles, garniture, en 3 couches ; reste de béchamel, mozzarella, parmesan.
+4. **Cuire.** 35 à 40 min à 180 °C : dessus doré et bouillonnant, la lame entre sans résistance ; 10 min de repos.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Faire un roux
+
+---
+
+### Maakouda (galettes de pommes de terre à l'ail et à la coriandre), sauce tartare légère
+
+*Maakouda · Maghreb › Algérie · Plat* · Fêtes : Ramadan / Aïd
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, casserole.
+
+Les beignets de pommes de terre d'Algérie, du Maroc et de Tunisie : purée relevée d'ail, de cumin, de gingembre, de piment et de coriandre, liée à l'œuf, dorée à la poêle. Avec une sauce tartare légère à l'œuf dur et une salade, c'est un dîner végétarien complet.
+
+**Ingrédients** : 4 pommes de terre farineuses · 3 œufs (1 pour les galettes, 2 pour la sauce) · 3 gousses d'ail · 1 poignée de coriandre · 1 c. à s. de fécule de maïs · 1 c. à c. de cumin · 1/2 c. à c. de gingembre en poudre · 1/2 c. à c. de flocons de piment · 1 c. à s. de moutarde · 1 c. à s. de câpres et 1 cornichon · 1 citron · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Cuire.** Pommes de terre en morceaux, 18 min à l'eau salée : tendres ; deux œufs, 10 min : durs ; pommes de terre écrasées et refroidies 10 min.
+2. **Pâte.** Purée, un œuf, ail râpé, coriandre hachée, fécule, épices, sel : pâte souple qui se façonne ; galettes de 7 cm, 1,5 cm d'épaisseur.
+3. **Dorer.** 3 c. à s. d'huile, 4 min par face à feu moyen : croûte bien dorée, cœur chaud et moelleux.
+4. **Sauce.** Œufs durs écrasés avec moutarde, 1 c. à s. d'huile, un trait d'eau et de citron, câpres et cornichon hachés, sel : sauce épaisse ; avec une salade verte.
+
+- En sandwich dans un pain, avec harissa et salade, c'est le casse-croûte des rues d'Alger.
+
+**Conservation** : 2 jours au frigo ; réchauffées à la poêle.
+
+---
+
+### Pâtes crémeuses aux oignons fondus et au parmesan
+
+*Pâtes aux oignons · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, faitout.
+
+Deux gros oignons cuits lentement au beurre jusqu'à devenir doux et blonds, liés en sauce veloutée au bouillon, à la crème et au parmesan. Un plat végétarien de placard, réconfortant et très économique.
+
+**Ingrédients** : 200 g de pâtes · 2 gros oignons · 30 g de beurre · 1 c. à s. de farine · 35 cl de bouillon de légumes · 2 c. à s. de crème fraîche · 30 g de parmesan · 2 gousses d'ail · 2 c. à s. de persil · 150 g de champignons de Paris *(facultatif)* · 1 pincée de sel
+
+1. **Fondre.** Beurre, oignons émincés fin, sel, 20 min à feu doux en remuant de temps en temps : très tendres, blonds et doux ; ail les 2 dernières minutes (et champignons émincés, si tu en mets, 5 min avant).
+2. **Lier.** Farine, 1 min ; bouillon versé peu à peu, 5 min : sauce épaisse et lisse ; crème.
+3. **Pâtes.** Cuites 1 min de moins que le paquet ; une louche d'eau de cuisson gardée.
+4. **Mélanger.** Pâtes dans la sauce, parmesan, un peu d'eau de cuisson, 1 min : crémeuse et brillante ; persil, poivre.
+
+**Conservation** : Le jour même.
+
+---
+
+### Chou vert et œufs poêlés, sauce soja-ail-piment (Chine)
+
+*Chou aux œufs à la chinoise · Asie de l'Est › Chine (Sichuan) · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, œufs, sésame, soja ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Wok ou grande poêle, casserole.
+
+Un dîner à moins d'un euro par personne : chou vert déchiré à la main, blanchi une minute pour rester croquant, sauté à l'ail avec des œufs frits et une sauce soja, ketchup et huile pimentée. Rapide, généreux, très bon.
+
+**Ingrédients** : 1/2 chou vert (400 g) · 5 œufs · 3 gousses d'ail · 1 c. à s. de sauce soja · 1 c. à s. de ketchup · 1 c. à c. d'huile pimentée *(facultatif)* · 1 c. à c. d'huile de sésame · 1 c. à c. de sésame · 1 c. à c. de vinaigre de cidre · 2 c. à s. d'huile · 1 pincée de sel
+
+1. **Blanchir.** Chou déchiré en morceaux, 1 min dans l'eau bouillante salée : vert vif ; plongé dans l'eau glacée, égoutté.
+2. **Œufs.** Huile chaude, œufs battus, 1 min sans toucher puis cassés en gros morceaux : dorés sur les bords, encore moelleux ; réservés.
+3. **Sauter.** Ail haché 30 s : il sent ; chou, 2 min à feu vif : croquant, brillant.
+4. **Lier.** Soja, ketchup, huile pimentée, vinaigre, 2 c. à s. d'eau ; œufs remis, 30 s : tout est enrobé ; huile de sésame, sésame ; avec du riz.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Avazine (épinards à la tomate et à l'ail, Kabylie), œufs pochés
+
+*Avazine s waghrum · Maghreb › Algérie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse à couvercle.
+
+Les épinards à la kabyle : tombés dans une sauce tomate à l'ail et au paprika, à l'huile d'olive, mangés avec la galette ou le pain. Ici avec des œufs pochés dans la sauce pour en faire un plat complet, comme une chakchouka verte.
+
+**Ingrédients** : 800 g d'épinards frais (ou 600 g surgelés) · 3 tomates · 1 c. à s. de concentré de tomate · 3 gousses d'ail · 1 oignon *(facultatif)* · 1 c. à c. de paprika · 4 œufs · 4 c. à s. d'huile d'olive · 1 c. à c. de sel · 1 galette ou pain de semoule *(facultatif)*
+
+1. **Sauce.** Huile, oignon émincé 5 min, ail râpé 1 min ; tomates en dés, concentré, paprika, sel, 10 min : compotée.
+2. **Épinards.** Ajoutés par poignées, 5 min en remuant : tombés, brillants ; 5 min de plus à découvert : l'eau s'évapore.
+3. **Œufs.** Quatre creux, un œuf dans chacun, couvert, 6 min à feu doux : blancs pris, jaunes coulants.
+4. **Servir.** Un filet d'huile d'olive, poivre ; avec la galette ou du pain.
+
+**Conservation** : Épinards : 2 jours au frigo (sans les œufs).
+
+---
+
+### Aubergines panées à la scamorza (melanzana alla pullastiello, Naples)
+
+*Melanzana alla pullastiello · Europe du Sud › Italie (Campanie) · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, plat à four.
+
+La recette des mamans napolitaines : tranches d'aubergine passées dans la farine et l'œuf, dorées, puis gratinées en sandwich autour de la scamorza fumée (ou de la mozzarella), « comme un petit poulet ». Avec une salade de tomates.
+
+**Ingrédients** : 2 aubergines · 250 g de scamorza fumée ou de mozzarella · 3 œufs · 60 g de farine · 30 g de parmesan · quelques feuilles de basilic · 10 cl d'huile de tournesol · 3 tomates (salade) · 1 c. à c. de sel
+
+1. **Dégorger.** Aubergines en tranches de 1 cm, salées, 20 min ; épongées.
+2. **Paner.** Farine, puis œufs battus avec parmesan, sel et poivre.
+3. **Dorer.** 3 min par face dans l'huile chaude : dorées, fondantes ; égouttées.
+4. **Gratiner.** Deux tranches avec scamorza et basilic entre elles, sur la plaque, 8 min à 200 °C : fromage filant ; avec les tomates en salade, huile d'olive et sel.
+
+**Conservation** : Le jour même.
+
+---
+
+### Salade de pommes de terre écrasées et rôties, sauce yaourt-concombre aux herbes
+
+*Smashed potato salad · Europe du Nord › Suède · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, plaque.
+
+Des petites pommes de terre cuites, écrasées, rôties jusqu'à croustiller, puis mélangées tièdes à une sauce au yaourt, aux deux moutardes, au concombre, à l'échalote et aux herbes. Une salade fraîche et croquante.
+
+**Ingrédients** : 500 g de petites pommes de terre · 200 g de yaourt grec (ou de fromage blanc) · 1/2 concombre · 1 échalote · 1 c. à c. de moutarde (et 1 d'ancienne) · 1 c. à c. de mayonnaise · 1 c. à s. d'aneth, ciboulette et persil · 1/2 citron · 1 c. à c. de paprika fumé · 3 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Cuire.** Pommes de terre entières, 18 min à l'eau salée : tendres.
+2. **Écraser.** Sur la plaque, écrasées d'un coup de verre ; huile, paprika, sel.
+3. **Rôtir.** 30 min à 200 °C : bords dorés et croustillants ; 10 min pour tiédir.
+4. **Sauce.** Yaourt, moutardes, mayonnaise, concombre en dés, échalote hachée, herbes, jus de citron, sel ; pommes de terre mélangées juste avant de servir.
+
+**Conservation** : Le jour même (sauce : 2 jours).
+
+---
+
+### Croustillants de chou-fleur au parmesan (four ou air fryer)
+
+*Croustillants de chou-fleur · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque ou air fryer, 3 assiettes creuses.
+
+Des fleurettes de chou-fleur panées à l'anglaise avec panko et parmesan, cuites au four : croustillantes dehors, tendres dedans. Les enfants qui boudent le chou-fleur les mangent comme des frites, avec une sauce yaourt.
+
+**Ingrédients** : 1 chou-fleur · 60 g de farine · 2 œufs · 100 g de panko · 50 g de parmesan · 1 c. à c. d'ail en poudre · 1 c. à c. de paprika · 150 g de yaourt nature (sauce) · 1/2 citron · 2 c. à s. d'huile · 1/2 c. à c. de sel
+
+1. **Paner.** Fleurettes de même taille ; farine, œufs battus, puis panko, parmesan, ail, paprika, sel mélangés : bien enrobées.
+2. **Cuire.** Sur la plaque huilée, un filet d'huile dessus, 25 min à 210 °C en retournant à mi-cuisson (ou 15 min à 200 °C en air fryer) : dorées, croustillantes, tendres à la pointe du couteau.
+3. **Sauce.** Yaourt, jus de citron, sel, poivre.
+4. **Servir.** Tout de suite, avec la sauce à part.
+
+**Conservation** : Le jour même.
+
+**Techniques** : paner à l'anglaise
+
+---
+
+### Riz à l'ail doré, tomate et laurier
+
+*Riz à l'ail · Europe du Sud › Portugal · Accompagnement*
+
+Niveau ⭐ · 4 portions · actif 5 min · repos/cuisson 20 min · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri ; **possibles selon marque** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole à fond épais.
+
+Huit gousses d'ail dorées dans l'huile d'olive, une cuillère de concentré, du laurier et une pointe de muscade : le riz cuit dans ce parfum et devient l'accompagnement qu'on finit à la cuillère.
+
+**Ingrédients** : 250 g de riz long · 8 gousses d'ail · 3 c. à s. d'huile d'olive · 1 c. à s. de concentré de tomate · 50 cl de bouillon de volaille (ou de légumes) · 1 feuille de laurier · 1 pincée de muscade · 1 pincée de sel
+
+1. **Ail.** Émincé, 3 min dans l'huile à feu moyen-doux : blond et parfumé, jamais brun (il deviendrait amer).
+2. **Nacrer.** Riz rincé et égoutté, 2 min en remuant : grains translucides ; concentré, 30 s.
+3. **Cuire.** Bouillon chaud, laurier, muscade, sel ; couvert, 15 min à feu très doux : l'eau est bue.
+4. **Reposer.** 5 min hors du feu, couvert ; égrené à la fourchette.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Pains kebab moelleux à la poêle (au yaourt)
+
+*Pains kebab · Moyen-Orient › Turquie · Pain*
+
+Niveau ⭐ · 8 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Saladier, poêle, rouleau.
+
+De grands pains plats souples, à la pâte au yaourt et au lait, cuits à sec dans la poêle : ils gonflent et se garnissent comme au snack (kebab, falafels, poulet grillé).
+
+**Ingrédients** : 530 g de farine · 13 cl de lait tiède · 1 yaourt nature · 7 g de levure boulangère sèche · 1 c. à s. d'huile d'olive · 1 c. à c. de sucre · 1 c. à c. de sel
+
+1. **Pâte.** Lait, 13 cl d'eau tiède, sucre, levure, 5 min ; yaourt, huile, farine, sel : pétrie 8 min, souple et un peu collante.
+2. **Pousse.** 1 h au chaud : doublée.
+3. **Façonner.** 8 boules, étalées en disques de 20 cm, 15 min de repos.
+4. **Cuire.** Poêle sans matière grasse à feu moyen, 2 min par face : ils gonflent, marqués de taches dorées ; gardés sous un torchon pour rester souples.
+
+**Conservation** : 2 jours dans un sac ; se congèlent.
+
+---
+
+### Feuilles de brick maison (dyouls)
+
+*Dyouls / ouarka · Maghreb › Tunisie · Base*
+
+Niveau ⭐⭐ · 25 portions · actif 1 h 00 · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle antiadhésive, grand pinceau large, film alimentaire.
+
+Les feuilles fines des bricks, bourek et pastillas, faites à la maison avec seulement farine, eau et sel : une pâte très liquide étalée au pinceau sur une poêle tiède, qui sèche en quelques secondes.
+
+**Ingrédients** : 500 g de farine · 1,25 l d'eau froide · 1 c. à c. de sel · 2 c. à s. d'huile neutre
+
+1. **Pâte.** Farine, sel et eau versée peu à peu en fouettant : lisse et fluide comme une pâte à crêpes légère ; 30 min de repos.
+2. **Étaler.** Poêle à feu doux posée à l'envers sur une casserole d'eau frémissante (ou poêle tiède) ; pâte étalée au pinceau en couche très fine.
+3. **Sécher.** 30 s à 1 min : la feuille blanchit, se décolle seule sur les bords, sans dorer.
+4. **Conserver.** Décollée, huilée légèrement au pinceau, empilée sous un film pour qu'elle reste souple.
+
+- Pas de couleur : une feuille dorée est trop cuite et casse au pliage.
+
+**Conservation** : 3 jours au frigo sous film ; se congèlent à plat.
+
+---
+
+### Cachir maison au poulet et aux olives (mortadelle algérienne sans porc)
+
+*Cachir · Maghreb › Algérie · Base*
+
+Niveau ⭐⭐ · 8 portions · actif 20 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, film alimentaire résistant à la chaleur, grande casserole.
+
+La mortadelle de volaille des sandwichs algériens, faite maison et sans additif : escalope mixée avec fromage fondu, œufs, semoule et épices, roulée autour d'olives, pochée dans un film puis refroidie. Elle se tranche fin.
+
+**Ingrédients** : 350 g d'escalope de poulet ou de dinde · 3 portions de fromage fondu · 3 œufs · 4 c. à s. de semoule fine · 6 cl d'huile (moitié olive, moitié tournesol) · 1 c. à c. de paprika, ail, cumin et cannelle · 100 g d'olives vertes dénoyautées · 1 c. à s. de harissa *(facultatif)* · 1 c. à c. de sel
+
+1. **Mixer.** Poulet, fromage, œufs, semoule, huile, épices, sel : pâte très lisse et collante.
+2. **Rouler.** Sur un grand film, en boudin de 6 cm, olives enfoncées au centre ; serré comme un bonbon, plusieurs tours, extrémités nouées.
+3. **Pocher.** 45 min dans l'eau frémissante (pas de bouillon fort) : ferme au toucher, 74 °C à cœur.
+4. **Refroidir.** Dans l'eau froide, puis une nuit au frais : se tranche net ; en sandwich, en salade ou en apéritif.
+
+**Conservation** : 5 jours au frigo ; se congèle en tranches.
+
+---
+
+### Pâte à tartiner noisette et chocolat blanc (façon El Mordjene)
+
+*El Mordjene · Maghreb › Algérie · Base*
+
+Niveau ⭐ · 12 portions · actif 20 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, lait ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur puissant, poêle, bocaux.
+
+La crème algérienne devenue phénomène en France : des noisettes grillées mixées en beurre, mélangées à du chocolat blanc fondu, du lait et du lait concentré. Le goût d'une barre chocolat-noisette, sans huile de palme.
+
+**Ingrédients** : 200 g de noisettes décortiquées · 200 g de chocolat blanc · 13 cl de lait tiède · 80 g de lait concentré sucré · 4 c. à s. d'huile de noisette (ou neutre) · 1 pincée de vanille en poudre · 1 pincée de sel
+
+1. **Torréfier.** Noisettes 8 min à 170 °C : dorées, la peau se détache ; frottées dans un torchon.
+2. **Mixer.** Encore tièdes, avec l'huile, 5 à 8 min en raclant : beurre de noisette coulant.
+3. **Fondre.** Chocolat blanc au bain-marie, 5 min : lisse ; ajouté au mixeur avec le lait, le lait concentré, la vanille, le sel : crème lisse et brillante.
+4. **Conserver.** En bocaux, au frais : elle épaissit en refroidissant.
+
+**Conservation** : 2 semaines au frigo.
+
+---
+
+### Tiramisu au citron (lemon curd et mascarpone)
+
+*Tiramisù al limone · Europe du Sud › Italie · Dessert* · Fêtes : Anniversaire, Repas de famille
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, plat de 20 cm, batteur.
+
+Le tiramisu de l'été, sans café : un lemon curd maison, dont la moitié parfume une crème au mascarpone, et des biscuits cuillère juste trempés dans un sirop citronné. Acidulé, frais, très demandé.
+
+**Ingrédients** : 3 œufs (+ 2 jaunes) · 3 citrons (zeste et jus) · 170 g de sucre · 40 g de beurre · 250 g de mascarpone · 20 cl de crème liquide froide · 24 biscuits cuillère · 15 cl de lait (ou d'eau)
+
+1. **Lemon curd.** Œufs, jaunes, 120 g de sucre, zestes et jus de 2 citrons dans une casserole, 6 min à feu doux en fouettant sans arrêt : épais, il nappe la cuillère ; beurre hors du feu ; filmé au contact, 1 h au frais.
+2. **Crème.** Mascarpone, crème froide et 30 g de sucre fouettés : ferme ; la moitié du curd incorporée.
+3. **Tremper.** Lait, jus du dernier citron, 20 g de sucre ; biscuits passés 1 s de chaque côté (ils ne doivent pas s'effondrer).
+4. **Monter.** Biscuits, crème, biscuits, crème ; reste du curd en marbrure dessus ; 6 h au frais (une nuit, c'est mieux) : il se tient à la découpe.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Crema al caffè (crème fouettée au café, comme au bar italien)
+
+*Crema al caffè · Europe du Sud › Italie · Dessert* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 4 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Batteur, verrines, congélateur.
+
+La crème glacée au café des bars d'Italie, sans sorbetière : crème fouettée avec de l'espresso refroidi et du sucre glace, prise au congélateur puis refouettée. Mousseuse, à peine glacée, à la cuillère.
+
+**Ingrédients** : 50 cl de crème liquide entière, très froide · 2 tasses d'espresso (10 cl), refroidi · 80 g de sucre glace · 1 c. à c. de cacao (pour finir) *(facultatif)*
+
+1. **Fouetter.** Crème très froide, sucre glace et café, 3 min au batteur : chantilly souple, elle forme des pics mous.
+2. **Prendre.** 2 h au congélateur dans une boîte.
+3. **Refouetter.** 1 min au batteur : mousseuse, légère, à peine glacée.
+4. **Servir.** En verrines, cacao tamisé ; ou 2 h de plus au congélateur pour une version plus ferme.
+
+- Avec un café décaféiné, les enfants en ont aussi.
+
+**Conservation** : 1 semaine au congélateur (5 min dehors avant de servir).
+
+---
+
+### Sbriciolata au citron (tarte crumble à la crème au citron)
+
+*Sbriciolata al limone · Europe du Sud › Italie · Dessert*
+
+Niveau ⭐⭐ · 10 portions · actif 30 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule de 24 cm, casserole.
+
+La « tarte émiettée » italienne : une pâte sablée au zeste de citron qu'on ne roule pas, émiettée au fond et dessus d'une crème pâtissière au citron. Croquante, fondante, très simple à réussir.
+
+**Ingrédients** : 400 g de farine · 290 g de sucre (150 + 140) · 100 g de beurre · 6 œufs (2 entiers + 4 jaunes) · 8 g de levure chimique · 2 citrons (zeste et jus) · 40 cl de lait · 35 g de fécule de maïs
+
+1. **Crème.** Jaunes, 140 g de sucre, zeste d'un citron, fécule, jus filtré ; lait chaud versé en fouettant, 5 min à feu doux sans cesser : épaisse, elle nappe ; filmée au contact, refroidie.
+2. **Sable.** Farine, 150 g de sucre, levure, zeste du second citron, beurre en dés : sablés du bout des doigts ; 2 œufs : grosses miettes humides (sans former de boule).
+3. **Monter.** Deux tiers des miettes tassées légèrement au fond du moule, crème, reste des miettes parsemé dessus.
+4. **Cuire.** 40 min à 180 °C : dessus doré et croustillant ; refroidie complètement avant de démouler (la crème se raffermit).
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Crème pâtissière
+
+---
+
+### Biscuits cuillère maison (boudoirs)
+
+*Biscuits à la cuillère · France › Pâtisserie · Goûter / dessert*
+
+Niveau ⭐⭐ · 30 portions · actif 30 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Batteur, poche à douille de 12 mm, plaques.
+
+Les biscuits légers du tiramisu et de la charlotte, faits maison : jaunes et blancs montés séparément avec le sucre, farine et fécule incorporées délicatement, poudrés trois fois de sucre glace pour la croûte perlée.
+
+**Ingrédients** : 4 œufs · 120 g de sucre · 60 g de farine · 60 g de fécule de pomme de terre · 40 g de sucre glace
+
+1. **Monter.** Jaunes et 60 g de sucre fouettés 3 min : blancs et doublés ; blancs montés en neige ferme en ajoutant 60 g de sucre : brillants, bec d'oiseau.
+2. **Incorporer.** Farine et fécule tamisées dans les jaunes ; un quart des blancs pour détendre, le reste à la maryse en soulevant : mousse légère, sans grumeaux.
+3. **Pocher.** Bâtonnets de 10 cm espacés ; sucre glace tamisé 3 fois, à 2 min d'intervalle : il perle.
+4. **Cuire.** 10 à 12 min à 190 °C : à peine blonds, secs dessus, souples au toucher ; décollés tièdes.
+
+**Conservation** : 1 semaine en boîte métallique.
+
+**Techniques** : Monter des blancs en neige, Incorporer délicatement
+
+---
+
+### Cake au citron moelleux (zeste infusé dans le jus)
+
+*Cake au citron · France › Pâtisserie · Goûter / dessert*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Petit moule à cake, saladier.
+
+Le cake au citron du pâtissier : le zeste infuse dans le jus pendant qu'on prépare la pâte, le beurre est fondu mais tiède, et la cuisson est douce pour un cake moelleux, brillant, très parfumé, avec sa fente sur le dessus.
+
+**Ingrédients** : 2 œufs · 100 g de sucre · 100 g de farine · 1/2 sachet de levure chimique · 60 g de beurre fondu tiède · 2 c. à s. d'huile de pépins de raisin · 1 citron (zeste et jus) · 60 g de sucre glace (glaçage) *(facultatif)*
+
+1. **Infuser.** Zeste râpé directement dans le jus pressé ; il infuse pendant le reste.
+2. **Pâte.** Œufs et sucre fouettés 1 min ; farine et levure ; huile ; jus et zeste ; beurre fondu tiède (chaud, il active trop tôt la levure) : pâte lisse et brillante.
+3. **Cuire.** Moule chemisé, un trait de beurre mou au centre pour la fente, 35 min à 160 °C : doré, fendu, la lame ressort sèche.
+4. **Glacer.** Tiède, sucre glace délayé dans 1 c. à s. de jus de citron, au pinceau : fine croûte brillante.
+
+**Conservation** : 4 jours filmé.
+
+---
+
+## 2.42 Vague 7 (fin) · Vidéos les plus enregistrées lues en dernier (22/10/2026) : cheesecakes de @on_est_gourmands (les vidéos
+
+### Cheesecake sans cuisson chocolat-noisette (crème au fromage frais et ganache)
+
+*No-bake cheesecake · Amérique du Nord › États-Unis · Dessert* · Fêtes : Anniversaire, Repas de famille, Noël
+
+Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 0 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait ; **possibles selon marque** : œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule à charnière de 20 cm, batteur.
+
+Le dessert le plus enregistré de tous les favoris : un fond de biscuits au cacao, une crème au fromage frais allégée de chantilly, et une ganache au chocolat coulée dessus. Pas de four, une nuit au frais.
+
+**Ingrédients** : 200 g de biscuits au cacao · 80 g de beurre fondu · 400 g de fromage frais (type Philadelphia) · 30 cl de crème liquide entière froide (20 + 10) · 1 c. à s. de sucre glace · 1/2 gousse de vanille · 100 g de chocolat noir ou au lait · 40 g de noisettes grillées concassées
+
+1. **Fond.** Biscuits mixés, beurre fondu : sable humide ; tassé au fond du moule ; 30 min au frais.
+2. **Crème.** Fromage frais, sucre glace, graines de vanille fouettés : lisses ; 20 cl de crème montée en chantilly ferme, incorporée à la maryse : mousse dense ; étalée sur le fond ; 2 h au frais.
+3. **Ganache.** 10 cl de crème portée au frémissement (2 min), versée sur le chocolat haché, 1 min, mélangée : lisse et brillante ; tiédie 10 min, coulée sur la crème.
+4. **Prendre.** Noisettes dessus, une nuit au frais : il se démoule net.
+
+- Version pistache (même vidéaste) : 2 c. à s. de pâte de pistache mélangée à du praliné et des crêpes dentelle émiettées sur le fond, crème parfumée à la pistache, sans ganache.
+- Version caramel : un caramel au beurre salé (120 g de sucre, 80 g de crème, 50 g de beurre demi-sel) refroidi, coulé à la place de la ganache, fond de spéculoos.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Ganache, Chantilly
+
+---
+
+### Cheesecake au yaourt, cuisson courte sans bain-marie
+
+*Cheesecake au yaourt · Amérique du Nord › États-Unis · Dessert* · Fêtes : Anniversaire
+
+Niveau ⭐⭐ · 8 portions · actif 20 min · repos/cuisson 45 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cercle ou moule de 20 cm, saladier.
+
+Un cheesecake cuit plus léger que le new-yorkais : la moitié du fromage est remplacée par du yaourt, la cuisson est douce et courte, sans bain-marie. Crémeux, il se découpe parfaitement, nappé d'une pâte à tartiner tiédie.
+
+**Ingrédients** : 200 g de biscuits (petits-beurre, spéculoos) · 80 g de beurre fondu · 500 g de fromage frais (type Philadelphia) · 250 g de yaourt nature · 50 g de sucre · 2 œufs · 1/2 gousse de vanille (graines) · 100 g de pâte à tartiner noisette (pour finir) *(facultatif)*
+
+1. **Fond.** Biscuits mixés, beurre fondu, tassés au fond du moule ; 15 min à 170 °C : doré et ferme.
+2. **Appareil.** Fromage, sucre et vanille mélangés à la spatule ; yaourt, puis œufs un à un, sans fouetter fort (pas de bulles) : lisse.
+3. **Cuire.** Sur le fond précuit, 30 min à 150 °C : bords pris, centre qui tremble encore ; 1 h dans le four éteint, porte entrouverte (il ne fend pas).
+4. **Reposer.** Une nuit au frais ; pâte à tartiner tiédie 15 s, coulée dessus au moment de servir.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Risotto cacio e pepe (pecorino, parmesan et poivre grillé)
+
+*Risotto cacio e pepe · Europe du Sud › Italie · Plat*
+
+Niveau ⭐⭐ · 2 portions · actif 10 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : céleri, lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse large, petite poêle.
+
+Le goût des pâtes cacio e pepe dans un risotto : poivre concassé grillé à sec, crème de pecorino et de parmesan montée à l'eau poivrée, ajoutée hors du feu au riz crémeux. Végétarien, très gourmand.
+
+**Ingrédients** : 200 g de riz carnaroli ou arborio · 75 g de pecorino râpé fin · 50 g de parmesan râpé fin · 1 c. à s. de poivre noir en grains · 30 g de beurre · 70 cl de bouillon de légumes chaud · 8 cl de vin blanc sec · 1/2 citron (zeste) *(facultatif)*
+
+1. **Poivre.** Concassé grossièrement, 1 min à sec dans la petite poêle : il sent fort ; une pincée gardée ; 12 cl d'eau chaude, 1 min : eau poivrée.
+2. **Crème.** Parmesan et ⅔ du pecorino, eau poivrée tiède (pas bouillante) versée peu à peu en fouettant : crème lisse et épaisse.
+3. **Risotto.** Moitié du beurre, riz 1 min : bords translucides ; vin, absorbé ; bouillon louche par louche, 17 min en remuant souvent : grains tendres avec un léger cœur, texture qui ondule.
+4. **Lier.** Hors du feu, reste du beurre et crème de fromage, 1 min en remuant vivement : crémeux et brillant ; reste du pecorino et poivre gardé, zeste si tu veux.
+
+- Hors du feu toujours : sur le feu, le pecorino forme des grumeaux.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : Le jour même.
+
+---
+
+### Poulet du Général Tao (croustillant, sauce sucrée-acidulée pimentée)
+
+*Zuǒ zōngtáng jī · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre noir chinois (Chinkiang)
+- ⚠️ **Allergènes** : arachide, gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole à friture, wok, thermomètre.
+
+Le classique des restaurants chinois d'Amérique du Nord, version maison : hauts de cuisse marinés au blanc d'œuf, frits deux fois pour un croustillant qui tient, enrobés d'une sauce à l'ail, au gingembre, au vinaigre noir et au piment.
+
+**Ingrédients** : 4 hauts de cuisse désossés (600 g) · 1 blanc d'œuf · 80 g de fécule de pomme de terre (+ ½ c. à s. pour la sauce) · 3 gousses d'ail · 3 cm de gingembre · 4 piments séchés · 3 c. à s. de sucre · 2 c. à s. de sauce soja · 2 c. à s. de vinaigre noir chinois (ou de riz) · 1 cébette et 1 c. à c. de sésame · 1 l d'huile de friture
+
+1. **Mariner.** Poulet en gros morceaux, sel, poivre, blanc d'œuf, 1 c. à s. de fécule : 30 min.
+2. **Frire deux fois.** Enrobé de fécule ; 3 min à 170 °C : pâle et pris ; 3 min de repos ; 1 min 30 à 190 °C : doré et très croustillant ; égoutté.
+3. **Sauce.** Sucre, soja, vinaigre, ½ c. à s. de fécule, 6 cl d'eau mélangés ; wok, 1 c. à s. d'huile, ail et gingembre râpés, piments, 30 s ; sauce, 1 min : épaisse et brillante.
+4. **Enrober.** Poulet, 20 s en sautant : tout est laqué, encore croustillant ; cébette, sésame ; avec du riz.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Salade au poulet du traiteur chinois, vinaigrette blanche
+
+*Salade du traiteur chinois · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 2 portions · actif 20 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs, sésame ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier, fouet.
+
+La salade des traiteurs chinois de France : batavia émincée très fin et carotte en julienne, rafraîchies dans l'eau glacée, poulet poché, et la fameuse sauce blanche, une mayonnaise sucrée, vinaigrée et allongée d'eau froide.
+
+**Ingrédients** : 1 blanc de poulet · 1 salade batavia · 1 carotte · 2 jaunes d'œufs · 1 c. à s. de moutarde de Dijon · 3 c. à c. de sucre · 2 c. à s. de vinaigre blanc · 15 cl d'huile de tournesol (+ un peu d'olive) · 1 c. à c. d'huile de sésame · 1/2 citron · 1 pincée de sel
+
+1. **Pocher.** Poulet dans l'eau frémissante salée, 3 min ; feu coupé, 12 min dans l'eau chaude : blanc et juteux, 74 °C à cœur ; émincé.
+2. **Croquant.** Batavia émincée fin, carotte en julienne, 10 min dans l'eau glacée ; égouttées, bien essorées.
+3. **Sauce.** Jaunes, moutarde, sucre, sel, poivre, vinaigre ; huile en filet en fouettant : mayonnaise ferme ; 3 à 4 c. à s. d'eau froide : fluide et nappante ; sésame, citron.
+4. **Servir.** Salade, carotte, poulet, sauce généreuse.
+
+**Conservation** : Sauce : 2 jours au frigo ; salade le jour même.
+
+---
+
+### Börek express au papier de riz et au fromage (à la poêle)
+
+*Börek au papier de riz · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle antiadhésive de 24 cm, grande assiette.
+
+La version rapide du börek qui a fait le tour des réseaux : des feuilles de riz trempées dans un mélange d'œufs, de lait et de yaourt, empilées à la poêle autour d'une couche de fromage. Croustillant dehors, fondant comme une pâte feuilletée dedans.
+
+**Ingrédients** : 20 feuilles de riz (galettes de 22 cm) · 2 œufs · 12 cl de lait · 4 c. à s. de yaourt nature · 4 c. à s. d'huile neutre · 150 g de feta émiettée · 100 g de mozzarella râpée · 1 cébette · 1 noix de beurre · 1/2 c. à c. de sel
+
+1. **Bain.** Œufs, lait, yaourt, huile, sel fouettés dans un plat large.
+2. **Empiler.** Poêle beurrée ; 10 feuilles trempées 5 s chacune dans le bain, posées l'une sur l'autre ; fromages et cébette ; 10 autres feuilles trempées ; reste du bain versé dessus.
+3. **Cuire.** 10 min à feu moyen-doux, couvercle entrouvert, bulles percées au couteau : dessous doré et croustillant.
+4. **Retourner.** À l'aide d'une assiette, 8 min de l'autre côté : doré, le fromage coule ; en parts, avec une salade de tomates.
+
+**Conservation** : Le jour même.
+
+---
+
+### Galettes de pommes de terre au fromage fondant (à la poêle)
+
+*Galettes pomme de terre-fromage · Europe du Nord › Ukraine · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, poêle.
+
+Des galettes de purée et de farine, fourrées d'un cœur de fromage qui fond, dorées à la poêle : un plat de placard qui plaît à toute la famille, avec de la crème aigre à l'aneth et une salade.
+
+**Ingrédients** : 800 g de pommes de terre farineuses · 120 g de farine · 1 œuf · 150 g de mozzarella ou d'emmental · 20 cl de crème fraîche · 1 c. à s. d'aneth ou de ciboulette · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Purée.** Pommes de terre à l'eau salée, 20 min : tendres ; écrasées, tiédies 10 min.
+2. **Pâte.** Farine, œuf, sel : pâte souple qui ne colle plus aux mains (un peu de farine si besoin).
+3. **Fourrer.** 8 boules aplaties, un dé de fromage au centre, refermées, aplaties en galettes de 2 cm.
+4. **Dorer.** 4 min par face dans l'huile à feu moyen : croûte dorée, fromage fondu ; crème mélangée à l'aneth et une pincée de sel, à côté.
+
+**Conservation** : 2 jours au frigo ; réchauffées à la poêle.
+
+---
+
+### Lobia (curry de haricots cornille à la tomate, Pakistan)
+
+*Lobia masala · Asie du Sud › Pakistan · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le curry de haricots à œil noir des cuisines familiales du Pakistan et de l'Inde du Nord : oignon roussi, tomate, gingembre, ail et épices, haricots mijotés jusqu'à être crémeux. Avec du riz basmati ou des chapatis.
+
+**Ingrédients** : 500 g de haricots cornille cuits (ou 200 g secs, trempés une nuit) · 2 oignons · 3 tomates · 3 gousses d'ail · 2 cm de gingembre · 1 c. à c. de cumin en grains · 1/2 c. à c. de curcuma · 1 c. à c. de garam masala · 1/2 c. à c. de piment en poudre · 1 poignée de coriandre · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Oignons.** Cumin 30 s dans l'huile chaude : il crépite ; oignons émincés, 10 min : bien dorés.
+2. **Masala.** Ail et gingembre râpés 1 min ; tomates en dés, curcuma, piment, sel, 8 min : l'huile se sépare de la sauce.
+3. **Mijoter.** Haricots et 40 cl d'eau, 20 min à petit feu : quelques haricots écrasés à la cuillère épaississent la sauce, crémeuse.
+4. **Finir.** Garam masala, coriandre, jus de citron ; avec du riz.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Omelette masala (oignon, tomate, piment vert, coriandre)
+
+*Masala omelette · Asie du Sud › Inde · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 6 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle.
+
+L'omelette des petits déjeuners indiens et pakistanais : œufs battus avec oignon, tomate, piment vert et coriandre, une pincée de curcuma et de piment, cuite fine et pliée. Avec un paratha, du pain ou du riz.
+
+**Ingrédients** : 4 œufs · 1 petit oignon · 1 tomate · 1 piment vert · 1 c. à s. de coriandre · 1 pincée de curcuma · 1 pincée de piment en poudre · 1 noix de beurre ou de ghee · 1 pincée de sel · 2 chapatis ou parathas *(facultatif)*
+
+1. **Battre.** Œufs, sel, curcuma, piment en poudre ; oignon, tomate épépinée, piment vert et coriandre hachés fin.
+2. **Cuire.** Beurre fondu, omelette étalée, 3 min à feu moyen sans remuer : bords dorés, dessus presque pris.
+3. **Plier.** Retournée ou pliée en deux, 1 min : dorée, cœur juste cuit.
+4. **Servir.** Avec un pain plat chaud et du ketchup, comme dans les rues de Lahore.
+
+**Conservation** : Le jour même.
+
+---
+
+## 2.43 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les
+
+### Hauts de cuisse au miel, à l'ail et au citron poivré (au four)
+
+*Honey garlic lemon pepper chicken · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, lait, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque, grille, petite casserole.
+
+Des hauts de cuisse frottés d'épices (poivre citronné, paprika fumé, ail), rôtis à four chaud jusqu'à la peau croustillante, puis laqués d'une sauce au beurre, au miel, à l'ail et au citron. La recette américaine la plus enregistrée des favoris.
+
+**Ingrédients** : 8 hauts de cuisse de poulet avec la peau · 2 citrons (zeste, jus et 4 rondelles) · 4 c. à s. de miel · 4 gousses d'ail · 40 g de beurre · 2 c. à c. de paprika fumé · 1 c. à c. d'ail et d'oignon en poudre · 1 c. à s. de sauce soja · 3 c. à s. d'huile d'olive · 1 c. à c. de poivre noir concassé · 1 c. à c. de sel
+
+1. **Frotter.** Zeste d'un citron, poivre concassé, paprika, poudres, sel et huile en pâte ; étalée sur et sous la peau des cuisses ; 2 h au frais si tu peux (30 min minimum).
+2. **Rôtir.** Sur une grille, peau dessous, 25 min à 215 °C ; retournées, 20 à 25 min : peau dorée et croustillante, jus clair à la piqûre (74 °C à cœur).
+3. **Sauce.** Beurre fondu, ail haché 1 min (il blondit sans brûler) ; miel, jus d'un citron, soja et les rondelles de citron, 3 min à frémissement : sirupeuse.
+4. **Laquer.** Cuisses passées dans la sauce, 3 min sous le gril : brillantes, à peine caramélisées ; avec du riz ou des haricots verts.
+
+- Ne double pas les rondelles de citron si tu doubles la recette : la peau rend la sauce amère.
+- Au barbecue ou au air fryer (200 °C, 22 min), même sauce à la fin.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Poulet « Marry me » (crème, tomates séchées, parmesan)
+
+*Marry me chicken · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Grande sauteuse.
+
+Le poulet devenu célèbre sur les réseaux : des hauts de cuisse dorés, mijotés dans une crème aux tomates séchées, à l'ail, au paprika et au parmesan. On le dit si bon qu'il vaut une demande en mariage.
+
+**Ingrédients** : 6 hauts de cuisse de poulet désossés · 6 tomates séchées à l'huile · 30 cl de crème liquide · 20 cl de bouillon de volaille · 50 g de parmesan · 3 échalotes · 3 gousses d'ail · 2 c. à c. de paprika doux · 1 c. à c. d'herbes de Provence · 2 c. à s. de farine · 1/2 citron · 20 g de beurre · 1 c. à c. de sel
+
+1. **Fariner.** Cuisses salées, poivrées, passées dans la farine ; tapotées.
+2. **Dorer.** Beurre et un filet d'huile des tomates, 5 min par face à feu moyen-vif : croûte dorée ; réservées (pas cuites à cœur).
+3. **Sauce.** Échalotes émincées 3 min, ail 1 min, paprika, herbes, tomates séchées en lanières ; bouillon en grattant les sucs, crème, parmesan : 3 min, la sauce nappe.
+4. **Mijoter.** Poulet remis avec son jus, 12 min à feu doux à couvert entrouvert : 74 °C à cœur, sauce rouge orangé et onctueuse ; filet de citron ; avec des pâtes ou du riz.
+
+- L'huile du bocal de tomates séchées sert à dorer : elle parfume tout.
+- Une poignée d'épinards en fin de cuisson pour du vert.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Roulé de pommes de terre au poulet et fromage frais ail-fines herbes
+
+*Roulé de pommes de terre · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque, papier cuisson, poêle.
+
+Une feuille de fines lamelles de pommes de terre soudées par le fromage fondu, garnie d'un poulet à la crème et au fromage ail-fines herbes, puis roulée et gratinée. Spectaculaire et facile, idéal pour un dîner du dimanche.
+
+**Ingrédients** : 5 pommes de terre moyennes · 2 blancs de poulet · 200 g de mozzarella râpée · 2 c. à s. de fromage frais ail et fines herbes · 20 cl de crème liquide · 100 g de cheddar râpé · 1 c. à c. d'ail en poudre · 1 c. à s. de persil · 1 c. à s. de moutarde · 1 c. à c. de sel
+
+1. **Feuille.** Pommes de terre en lamelles de 2 mm (mandoline) ; sur le papier, une fine couche de mozzarella, les lamelles serrées en rectangle qui se chevauchent, sel, encore un peu de mozzarella.
+2. **Précuire.** 18 min à 200 °C : lamelles tendres et souples, fromage fondu qui les soude ; 5 min de repos.
+3. **Garniture.** Poulet en petits dés, 6 min à la poêle : doré ; crème, fromage frais, moutarde, ail, sel, 3 min : crémeux et nappant.
+4. **Rouler.** Garniture étalée, roulé serré à l'aide du papier ; cheddar dessus, 10 min à 200 °C : gratiné, doré ; persil, tranché en 8.
+
+- Variante : saumon fumé, courgette râpée pressée et ciboulette à la place du poulet (version @totocuistot).
+- Les pommes de terre farineuses collent mieux entre elles.
+
+- **Variante Saumon fumé** : Poulet → **saumon fumé en tranches + 1 courgette râpée et pressée**, posés crus sur la feuille avant de rouler. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : Le jour même ; se réchauffe 10 min au four.
+
+---
+
+### Polpette di pollo al limone (boulettes de poulet à la ricotta et au citron)
+
+*Polpette di pollo al limone · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, mixeur.
+
+Des boulettes très moelleuses : poulet haché, ricotta et mie de pain trempée, beaucoup de zeste de citron, parmesan et herbes. Dorées au beurre puis glacées d'un jus citronné, elles plaisent aux enfants comme aux grands.
+
+**Ingrédients** : 600 g de blanc ou de haut de cuisse de poulet · 250 g de ricotta · 100 g de mie de pain · 10 cl de lait · 1 œuf · 1 citron (zeste et jus) · 40 g de parmesan · 1 gousse d'ail · 1 poignée de persil et de basilic · 20 g de beurre · 2 c. à s. de farine · 1 c. à c. de sel
+
+1. **Farce.** Mie trempée dans le lait et pressée ; poulet mixé par à-coups avec la mie, la ricotta, l'œuf, le zeste, le parmesan, l'ail, les herbes et le sel : farce souple qui se roule (sinon, une cuillère de chapelure).
+2. **Façonner.** Boulettes de la taille d'une noix, roulées dans la farine ; 15 min au frais.
+3. **Dorer.** Beurre moussant et un filet d'huile, 8 min en les roulant : dorées sur toutes les faces.
+4. **Glacer.** Jus du citron et 10 cl d'eau, 5 min à couvert : sauce réduite et brillante, boulettes fermes au toucher (74 °C) ; avec une purée ou des pâtes au beurre.
+
+- Ne mets de chapelure que si la farce colle : trop, et les boulettes durcissent.
+
+**Conservation** : 2 jours au frigo ; crues, se congèlent.
+
+---
+
+### Tsukune (brochettes de boulettes de poulet laquées, Japon)
+
+*Tsukune · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 25 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Sauce soja claire, Mirin, Saké / saké de cuisine
+- ⚠️ **Allergènes** : gluten, œufs, sésame, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, piques en bois.
+
+Les boulettes des bars à yakitori : haut de cuisse de poulet haché avec oignon, gingembre et un peu de fécule, poêlées puis laquées d'une sauce teriyaki maison jusqu'à briller. Avec du riz et un jaune d'œuf pour tremper.
+
+**Ingrédients** : 400 g de hauts de cuisse de poulet désossés · 1 oignon · 1 c. à c. de gingembre râpé · 1 blanc d'œuf · 1 c. à s. de fécule de pomme de terre · 4 c. à s. de sauce soja · 3 c. à s. de mirin · 2 c. à s. de saké · 1 c. à s. de sucre · 1 cébette · 1 c. à c. de sésame · 1 c. à s. d'huile · 1 c. à s. de vinaigre de cidre (concombre) *(facultatif)*
+
+1. **Hacher.** Poulet haché au couteau ou mixé par à-coups (pas en purée) ; oignon finement haché, gingembre, blanc d'œuf, fécule, 1 c. à s. de soja : pétri 2 min, la farce colle.
+2. **Façonner.** Mains mouillées, 12 boulettes allongées ; 10 min au frais.
+3. **Poêler.** Huile, 4 min par face à feu moyen : dorées ; 3 c. à s. d'eau, couvert 4 min : fermes au toucher.
+4. **Laquer.** Soja, mirin, saké, sucre versés, 2 à 3 min en les roulant : sauce sirupeuse et brillante ; piquées sur des brochettes, cébette et sésame ; avec du riz et un concombre en rondelles, 10 min dans le vinaigre avec une pincée de sucre.
+
+- Garde un jaune d'œuf très frais pour y tremper les tsukune, comme au Japon.
+- Les hauts de cuisse donnent des boulettes plus juteuses que le blanc.
+
+- **Variante Sans alcool** : Saké → **bouillon de volaille + quelques gouttes de vinaigre de riz**. **À tester**. *Calcul* : porc **uncertain**, alcool **violates**.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Poulet Gaston Gérard (crème, moutarde et comté gratiné, Dijon)
+
+*Poulet Gaston Gérard · France › Bourgogne · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Moutarde de Dijon, Moutarde à l'ancienne
+- ⚠️ **Allergènes** : lait, moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, plat à gratin.
+
+Le poulet du maire de Dijon, inventé par accident en 1930 : des morceaux dorés, mijotés au vin blanc, puis nappés d'une sauce à la crème, à la moutarde et au paprika, couverte de comté et gratinée.
+
+**Ingrédients** : 4 cuisses de poulet (ou 1 poulet découpé) · 20 cl de vin blanc sec · 25 cl de crème liquide · 2 c. à s. de moutarde de Dijon · 1 c. à s. de moutarde à l'ancienne · 120 g de comté râpé · 2 oignons · 1 c. à s. de paprika · 20 g de beurre · 1 c. à c. de sel
+
+1. **Dorer.** Beurre, poulet salé, 10 min en le retournant : doré partout ; oignons émincés, 5 min : fondants.
+2. **Mijoter.** Vin blanc en grattant les sucs, 2 min ; couvert, 30 min à feu doux : chair qui se détache de l'os.
+3. **Sauce.** Poulet dans le plat à gratin ; jus de cuisson avec crème, moutardes et paprika, réduit 5 min : nappant.
+4. **Gratiner.** Sauce sur le poulet, comté dessus, 10 min à 220 °C : croûte dorée et bouillonnante ; avec des pommes vapeur ou du riz.
+
+- Comté de 12 mois au moins : il gratine mieux et a plus de goût.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Soso ya mwamba (poulet à la sauce arachide, RD Congo)
+
+*Soso ya mwamba · Afrique subsaharienne › RD Congo · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 20 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide
+- 👶 **Enfants** : ✓ dès 2 ans.
+
+**Équipement** : Cocotte, poêle.
+
+Le poulet du dimanche à Kinshasa : pilons et ailes épicés, dorés, puis mijotés dans une sauce tomate liée à la pâte d'arachide, avec persil et coriandre. Plus léger en arachide que le mafé, on le sert avec du riz ou du fufu.
+
+**Ingrédients** : 4 pilons et 4 ailes de poulet · 2 c. à s. de pâte d'arachide (sans sucre) · 2 tomates · 1 c. à s. de concentré de tomate · 1 oignon · 2 gousses d'ail · 1 c. à c. de gingembre · 1 c. à c. de paprika · 1 poignée de persil et de coriandre · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Épicer.** Poulet avec sel, poivre, paprika, gingembre, la moitié de l'ail et 1 c. à s. d'huile ; 30 min.
+2. **Dorer.** 12 min à la poêle à feu moyen-vif, en retournant : bien doré (il finira de cuire dans la sauce).
+3. **Sauce.** Dans la cocotte, oignon 5 min ; reste d'ail, tomates en dés et concentré, 8 min : compotée ; pâte d'arachide délayée dans 50 cl d'eau bouillante, mélangée : lisse.
+4. **Mijoter.** Poulet ajouté, 25 min à petit feu : sauce épaisse et brillante, une fine couche d'huile en surface, chair tendre ; herbes et un filet de citron ; avec du riz.
+
+- Remue souvent : l'arachide accroche vite au fond.
+- Un piment entier dans la sauce pour qui aime le piquant (retiré avant de servir aux enfants).
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Curry de poulet du Suriname (pommes de terre, massalé)
+
+*Kip kerrie · Amérique latine › Suriname · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le curry des familles surinamaises, d'origine indienne : poulet mariné au citron vert, à l'ail et au thym, mijoté avec beaucoup de curry, du garam masala et des pommes de terre qui épaississent la sauce. Avec du riz ou du roti.
+
+**Ingrédients** : 1 kg de poulet en morceaux · 6 pommes de terre · 2 c. à s. de curry · 2 c. à s. de garam masala (ou de massalé) · 1 oignon · 4 gousses d'ail · 4 branches de thym · 2 citrons verts · 1 piment *(facultatif)* · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Mariner.** Poulet frotté au jus d'un citron vert, rincé ; ail écrasé, thym, sel, 1 c. à s. de curry : 1 h (ou une nuit).
+2. **Épices.** Huile, oignon émincé 5 min ; curry et garam masala, 1 min en remuant : ça sent fort, sans brûler.
+3. **Mijoter.** Poulet, 5 min pour l'enrober ; pommes de terre en quartiers, 50 cl d'eau, piment entier ; couvert, 40 min à feu doux : pommes de terre fondantes qui s'écrasent sur les bords, sauce épaisse.
+4. **Finir.** Jus du second citron vert, sel ajusté ; avec du riz.
+
+**Conservation** : 3 jours au frigo ; meilleur le lendemain.
+
+**Techniques** : Mijoter
+
+---
+
+### Tangia marrakchia (jarret de bœuf confit au citron confit et au cumin)
+
+*Tanjia marrakchia · Maghreb › Maroc · Plat* · Fêtes : Ramadan / Aïd, Repas de famille
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 3 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte en fonte (ou jarre en terre).
+
+Le plat des hommes de Marrakech, cuit autrefois dans la cendre du hammam : du jarret enfermé avec ail, citron confit, cumin, safran et huile d'olive, sans presque d'eau. Il confit dans son jus jusqu'à se défaire.
+
+**Ingrédients** : 1,2 kg de jarret de bœuf en morceaux · 1 citron confit · 5 gousses d'ail · 2 c. à c. de cumin moulu et 1 c. à c. en grains · 1 pincée de safran · 6 c. à s. d'huile d'olive · 1 c. à c. de sel · 1 c. à c. de poivre
+
+1. **Remplir.** Dans la cocotte, viande, ail émincé, citron confit en morceaux, cumin, sel, poivre, safran infusé dans 15 cl d'eau tiède, huile : bien mélangé.
+2. **Confire.** Couvercle fermé (un papier sulfurisé dessous pour l'étanchéité), 3 h à 150 °C au four : viande qui se défait à la fourchette, jus court et doré.
+3. **Réduire.** Si le jus est trop liquide, 10 min à découvert à feu vif : sirupeux, la viande brille.
+4. **Servir.** Avec du pain chaud pour saucer et une salade de tomates.
+
+- À l'autocuiseur : 1 h après le sifflement, sans ajouter d'eau : la viande cuit dans son propre jus.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Marka jelbana (ragoût d'agneau aux petits pois, Tunisie)
+
+*Marqa jelbana · Maghreb › Tunisie · Plat* · Fêtes : Ramadan / Aïd
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 1 h 10 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le ragoût tunisien de printemps : agneau mijoté dans une sauce tomate relevée de harissa, de tabel et de curcuma, avec des petits pois et des pommes de terre. Rouge, parfumé, on le sauce avec du pain.
+
+**Ingrédients** : 600 g d'épaule ou de collier d'agneau en morceaux · 300 g de petits pois (frais ou surgelés) · 2 pommes de terre · 4 tomates mixées (ou 400 g de concassée) · 2 c. à s. de concentré de tomate · 1 c. à c. de harissa · 1 c. à c. de tabel (ou de coriandre moulue) · 1 c. à c. de curcuma · 1 oignon · 2 gousses d'ail · 3 c. à s. d'huile d'olive · 1 c. à s. de persil · 1 c. à c. de sel
+
+1. **Saisir.** Huile, agneau, 8 min : doré ; oignon émincé et ail, 4 min.
+2. **Sauce.** Concentré, harissa, épices, 1 min ; tomates, 80 cl d'eau bouillante, sel : à frémissement.
+3. **Mijoter.** Couvert, 45 min à feu doux : agneau presque tendre.
+4. **Légumes.** Pommes de terre en quartiers, 15 min ; petits pois, 10 min : tout est tendre, la sauce épaissie nappe la cuillère ; persil, avec du pain.
+
+- Le tabel tunisien (coriandre, carvi, ail séché) se trouve en épicerie orientale ; la coriandre moulue le remplace.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Mloukhiya (bœuf mijoté dans la sauce de corète, Tunisie)
+
+*Mloukhiya · Maghreb › Tunisie · Plat* · Fêtes : Ramadan / Aïd, Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 20 min · repos/cuisson 4 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte à fond épais.
+
+Le plat noir et brillant des fêtes tunisiennes (on le prépare au Nouvel An de l'Hégire) : de la poudre de feuilles de corète cuite très longtemps dans l'huile d'olive avec du bœuf, de l'ail et des épices. Une sauce profonde, presque comme un chocolat salé.
+
+**Ingrédients** : 750 g de bœuf à mijoter (basse côte, gîte) · 100 g de poudre de mloukhiya (corète, épicerie orientale) · 15 cl d'huile d'olive · 5 gousses d'ail · 1 c. à s. de paprika · 1 c. à s. de tabel (ou de coriandre moulue) · 1 c. à c. de harissa · 1 c. à c. de concentré de tomate · 3 feuilles de laurier · 1 citron · 1 c. à c. de sel
+
+1. **Délayer.** Poudre et huile mélangées à froid dans la cocotte : pâte lisse ; 1,5 l d'eau tiède versée peu à peu en fouettant, sans grumeaux.
+2. **Cuire la sauce.** Laurier, 1 h à feu très doux en remuant souvent : la sauce fonce et épaissit.
+3. **Viande.** Bœuf en gros cubes frotté d'ail, d'épices, de harissa et de concentré ; ajouté, 3 h à frémissement à peine, en remuant toutes les 20 min : viande fondante, sauce noire, brillante, l'huile remonte en surface.
+4. **Servir.** Sel ajusté, avec du pain et un quartier de citron pour chacun.
+
+- Plus le feu est doux, plus le goût est profond : jamais de bouillon franc.
+- Se prépare la veille : elle est meilleure réchauffée.
+
+**Conservation** : 4 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Arayes (pitas grillées farcies au bœuf et à la feta, sauce yaourt)
+
+*Arayes · Moyen-Orient › Liban · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle-gril ou four, ou air fryer.
+
+Le snack libanais qui croustille : des demi-pitas fourrées de viande hachée épicée (cannelle, cumin, coriandre) et de feta, grillées jusqu'à ce que le pain soit doré et la viande juteuse. Avec une sauce au yaourt citronnée.
+
+**Ingrédients** : 400 g de bœuf haché · 4 pains pitas · 100 g de feta · 1 oignon · 2 gousses d'ail · 1 c. à c. de cumin, cannelle, coriandre moulue (mélangés) · 1 c. à s. de persil ou de menthe · 200 g de yaourt grec · 1 citron · 2 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Farce.** Viande, oignon râpé et pressé, une gousse d'ail, épices, herbes, feta émiettée, sel : mélangé du bout des doigts.
+2. **Garnir.** Pitas coupées en deux, une couche fine de farce (1 cm) dans chaque poche, tassée jusqu'aux bords ; extérieur badigeonné d'huile.
+3. **Griller.** 5 à 6 min par face à la poêle-gril à feu moyen (ou 12 min à 200 °C) : pain doré et croustillant, viande cuite à cœur (70 °C).
+4. **Sauce.** Yaourt, l'autre gousse d'ail râpée, jus de citron, huile, sel ; arayes coupés en triangles, à tremper.
+
+- Couche fine de viande : le pain grille avant que la viande ne cuise, sinon.
+- À l'agneau haché, c'est la version d'origine.
+
+**Conservation** : Le jour même.
+
+---
+
+### Tombik döner maison (pain turc garni de viande grillée, salade oignon-sumac)
+
+*Tombik döner · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichon
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle-gril, four.
+
+Le sandwich d'Istanbul en pain rond et bombé : une viande hachée assouplie au yaourt et au jus d'oignon, cuite en plaque fine puis émincée, glissée avec une salade d'oignon au sumac, des tomates et des pickles.
+
+**Ingrédients** : 500 g de bœuf haché · 4 pains ronds (pide, pitas épaisses) · 2 c. à s. de yaourt grec · 2 c. à s. de lait · 2 oignons (un en jus, un en salade) · 1 c. à s. de sumac (ou un jus de citron) · 1/2 c. à s. de flocons de piment · 1 c. à s. de thym · 2 tomates · 4 cornichons · 1 c. à s. de beurre fondu · 1 c. à c. de sel
+
+1. **Viande.** Un oignon râpé et pressé (on garde le jus) ; viande, jus d'oignon, yaourt, lait, piment, thym, beurre, sel : pétri 3 min, collant ; 30 min au frais.
+2. **Cuire.** Étalée en plaque de 1 cm entre deux papiers, 18 min à 220 °C : dorée sur les bords, ferme ; tranchée en fines lamelles.
+3. **Salade.** Second oignon émincé fin, sumac, huile d'olive, sel : 10 min.
+4. **Monter.** Pains ouverts en poche et passés 2 min au four (chauds, souples) ; viande, salade d'oignon, tomates, cornichons ; avec des frites maison.
+
+**Conservation** : Le jour même.
+
+---
+
+### Islak burger (burgers « mouillés » à la sauce tomate-beurre, Istanbul)
+
+*Islak burger · Moyen-Orient › Turquie · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, casserole, cocotte ou boîte fermée.
+
+Le burger de la place Taksim : un petit pain mou garni d'une boulette d'agneau à l'ail, trempé dans une sauce tomate au beurre puis gardé à l'étouffée pour qu'il fonde. Ça se mange en deux bouchées, debout.
+
+**Ingrédients** : 400 g d'agneau haché (ou de bœuf) · 4 petits pains à burger mous · 200 g de coulis de tomate · 1 c. à s. de concentré de tomate · 30 g de beurre · 1 oignon · 2 gousses d'ail · 1 œuf · 1 c. à c. de cumin et de paprika · 1 c. à c. d'origan · 1 pincée de sucre · 1 c. à c. de sel
+
+1. **Steaks.** Viande, oignon haché, une gousse d'ail, œuf, cumin, paprika, sel : 4 galettes fines ; 4 min par face à la poêle : dorées, 70 °C à cœur.
+2. **Sauce.** Beurre fondu, ail 1 min, concentré 1 min, coulis, origan, sucre, sel, 10 cl d'eau : 8 min à frémissement, lisse et brillante.
+3. **Tremper.** Pains ouverts, steak dedans ; chaque burger passé dans la sauce ou nappé généreusement dessus et dessous.
+4. **Étuver.** Serrés dans une cocotte fermée, 10 min au chaud (four 80 °C) : le pain est fondant, imbibé, encore entier.
+
+- Plus ils attendent à l'étouffée, plus ils sont « islak » : c'est le but.
+
+**Conservation** : Le jour même.
+
+---
+
+### Loco moco (steak haché, riz, sauce oignons-champignons et œuf au plat, Hawaï)
+
+*Loco moco · Océanie › Hawaï · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, moutarde, œufs, poissons, soja ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle, casserole.
+
+Le plat-réconfort hawaïen : un bol de riz, un steak haché maison, une sauce brune aux oignons et aux champignons, et un œuf au plat coulant par-dessus. Simple et complet.
+
+**Ingrédients** : 600 g de bœuf haché · 320 g de riz · 4 œufs (+ 1 pour les steaks) · 300 g de champignons de Paris · 2 oignons · 50 cl de bouillon de bœuf · 4 c. à s. de sauce soja · 1 c. à s. de sauce Worcestershire · 1 c. à s. de moutarde · 2 c. à s. de farine · 2 c. à s. de chapelure
+
+1. **Steaks.** Viande, 1 œuf, 1 c. à s. de soja, Worcestershire, chapelure, poivre : 4 steaks épais ; 4 min par face à feu vif : bien bruns, 70 °C à cœur ; réservés.
+2. **Sauce.** Dans la même poêle, oignons émincés 5 min, champignons 6 min : dorés ; farine 1 min ; bouillon, soja, moutarde en fouettant, 5 min : brune et nappante.
+3. **Œufs.** Au plat, 3 min à feu doux : blanc pris, jaune coulant.
+4. **Monter.** Riz chaud, steak, sauce, œuf au plat ; poivre.
+
+**Conservation** : Le jour même (steaks et sauce : 2 jours au frigo).
+
+---
+
+### Brochettes bœuf et comté, marinade soja-moutarde-miel (air fryer ou four)
+
+*Brochettes bœuf-fromage · France › Cuisine du quotidien · Plat* · Fêtes : Barbecue d'été
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, soja ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Air fryer ou four, piques en bois.
+
+Des cubes de bavette marinés soja, moutarde, miel et ail, piqués en alternance avec des dés de comté, cuits quelques minutes à chaleur vive : viande rosée, fromage qui commence à fondre.
+
+**Ingrédients** : 600 g de bavette ou de rumsteck · 150 g de comté · 2 c. à s. de sauce soja · 1 c. à s. de moutarde · 1 c. à s. de miel · 2 gousses d'ail · 1 pincée de poivre · 1 citron *(facultatif)*
+
+1. **Mariner.** Viande en cubes de 3 cm avec soja, moutarde, miel, ail râpé, poivre : 30 min.
+2. **Piquer.** Comté en cubes de 2 cm (sortis du frigo au dernier moment) ; brochettes en alternant viande et fromage.
+3. **Cuire.** 7 min à 200 °C en air fryer (ou 8 min sous le gril du four) : viande saisie, rosée à cœur, fromage qui commence à couler.
+4. **Servir.** Tout de suite, un filet de citron, avec une salade et des pommes de terre.
+
+- Le comté bien froid tient mieux à la cuisson.
+- Pour une viande à point, 2 min de plus.
+
+**Conservation** : Le jour même.
+
+---
+
+### Salade thaïe à la bavette (chou rouge, herbes, cacahuètes)
+
+*Yam nuea · Asie du Sud-Est › Thaïlande · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : arachide, gluten, poissons, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle-gril.
+
+La salade de bœuf grillé à la thaïe, en version de tous les jours : bavette marinée et saisie, tranchée fin sur du chou rouge, de la carotte et beaucoup d'herbes, avec une sauce citron vert, nuoc-mâm et miel.
+
+**Ingrédients** : 500 g de bavette · 1/4 de chou rouge · 1 carotte · 1 oignon rouge · 1 bouquet de coriandre et de menthe · 4 c. à s. de sauce soja · 1 c. à s. de sauce de poisson · 2 citrons verts · 2 c. à s. de miel · 40 g de cacahuètes grillées · 1 piment *(facultatif)*
+
+1. **Mariner.** Bavette avec 2 c. à s. de soja, 1 de miel, un trait de citron vert : 30 min.
+2. **Saisir.** Poêle-gril très chaude, 3 min par face : croûte brune, cœur rosé ; 5 min de repos, tranchée fin contre les fibres.
+3. **Légumes.** Chou émincé très fin, carotte râpée, oignon rouge en lamelles, herbes effeuillées.
+4. **Sauce.** Reste de soja et de miel, sauce de poisson, jus des citrons verts, 2 c. à s. d'eau, piment ; versée sur tout ; cacahuètes concassées.
+
+- Une pincée de bicarbonate dans la marinade attendrit la bavette (une astuce de restaurant).
+
+**Conservation** : Le jour même (sauce à part : 3 jours).
+
+---
+
+### Asun jollof (riz jollof au chevreau grillé pimenté, Nigeria)
+
+*Asun jollof rice · Afrique subsaharienne › Nigeria · Plat* · Fêtes : Repas de famille, Nouvel An, Anniversaire
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 1 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : céleri, gluten, moutarde
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte, four ou air fryer, mixeur.
+
+Le jollof des grandes fêtes nigérianes : riz cuit dans une sauce de tomates et poivrons réduite, avec des morceaux de chèvre bouillis puis grillés et sautés aux oignons et au piment (l'asun). Ici, l'agneau remplace la chèvre si tu n'en trouves pas.
+
+**Ingrédients** : 1 kg de chèvre (ou d'épaule d'agneau) en morceaux · 500 g de riz long étuvé · 4 tomates · 2 poivrons rouges · 70 g de concentré de tomate · 2 oignons · 1 piment antillais · 1 c. à s. de curry · 1 c. à s. de thym · 2 feuilles de laurier · 10 cl d'huile · 2 c. à c. de sel
+
+1. **Viande.** Morceaux couverts d'eau salée, 1 h à frémissement : tendres ; égouttés (bouillon gardé), 15 min à 200 °C : bords grillés et croustillants.
+2. **Asun.** Un oignon émincé et la moitié du piment haché, 4 min dans 2 c. à s. d'huile ; viande grillée, 3 min : enrobée, piquante.
+3. **Base.** Tomates, poivrons, reste du piment et ½ oignon mixés ; reste d'huile, oignon 4 min, concentré 5 min : il fonce ; purée mixée, 20 min à feu moyen : réduite de moitié, l'huile remonte.
+4. **Riz.** Riz lavé, curry, thym, laurier, sel, 50 cl de bouillon de viande : couvert d'un papier puis du couvercle, 30 min à feu très doux sans remuer : grains tendres et rouges, le fond légèrement grillé ; asun mélangé dessus.
+
+- Le fond un peu attaché (« party jollof ») est recherché : ne gratte pas, mélange-le.
+- Les étals africains et certains bouchers halal vendent la viande de chèvre.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Ndambé (haricots cornille mijotés au bœuf, Sénégal)
+
+*Ndambé · Afrique subsaharienne › Sénégal · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte.
+
+Le mijoté de haricots cornille de Dakar, qu'on mange au petit matin dans un pain : bœuf mariné aux aromates, haricots, oignon et tomate cuits longtemps jusqu'à devenir crémeux. Le cousin sénégalais de la loubia.
+
+**Ingrédients** : 200 g de haricots cornille (niébé), trempés 8 h · 500 g de bœuf à mijoter · 1 oignon · 2 tomates · 3 c. à s. de concentré de tomate · 1 poivron vert · 4 gousses d'ail · 1 c. à c. de gingembre · 2 feuilles de laurier · 1 citron · 3 c. à s. d'huile · 1 c. à c. de sel
+
+1. **Marinade.** Poivron, ail, gingembre, sel et poivre mixés ; frottés sur le bœuf en cubes, 30 min.
+2. **Saisir.** Huile, viande, 8 min : dorée ; oignon émincé 5 min ; tomates en dés et concentré, 5 min : compotés.
+3. **Mijoter.** Haricots égouttés, laurier, 1,5 l d'eau ; couvert, 1 h 45 à petit feu : haricots fondants qui s'écrasent, viande tendre, sauce épaisse (ajoute de l'eau s'il le faut).
+4. **Servir.** Sel ajusté, filet de citron ; dans du pain, ou avec du riz.
+
+**Conservation** : 3 jours au frigo ; se congèle.
+
+**Techniques** : Mijoter
+
+---
+
+### Coquillettes au bœuf effiloché, sauce tomate-soja (one pot)
+
+*Bœuf effiloché & coquillettes · Afrique subsaharienne › Sénégal · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Cocotte.
+
+Un plat de famille à la sénégalaise de NiangCook : du bœuf mijoté avec épices, tomate et sauces soja jusqu'à s'effilocher, puis des coquillettes cuites directement dans la sauce. Tout en une cocotte.
+
+**Ingrédients** : 500 g de bœuf à mijoter (plat de côte, paleron) · 300 g de coquillettes · 400 g de chair de tomate · 1 oignon rouge · 3 c. à s. de sauce soja · 2 c. à s. de sauce soja sucrée · 1 c. à c. de harissa · 1 c. à c. de curcuma, paprika, cumin et gingembre · 2 c. à s. d'huile d'olive · 1 citron *(facultatif)*
+
+1. **Saisir.** Viande en gros morceaux frottée d'épices et de sel ; huile, 8 min : brune ; oignon émincé, 4 min.
+2. **Mijoter.** Tomate, ½ boîte d'eau, sauces soja, harissa ; couvert, 1 h 45 à petit feu : la viande s'effiloche à la fourchette.
+3. **Effilocher.** Viande défaite dans la sauce à deux fourchettes.
+4. **Pâtes.** Coquillettes et 60 cl d'eau bouillante, 10 min en remuant : al dente, la sauce les enrobe et brille ; filet de citron.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Pâtes aux crevettes « toscanes » (crème, tomates cerises, épinards, parmesan)
+
+*Tuscan shrimp pasta · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse, faitout.
+
+Une recette italo-américaine : crevettes épicées saisies, sauce à la crème avec ail, poivron, tomates cerises, épinards et parmesan, mélangée à des pâtes. Prête en 30 minutes.
+
+**Ingrédients** : 400 g de crevettes crues décortiquées · 350 g de pâtes (penne, fusilli) · 25 cl de crème liquide · 200 g de tomates cerises · 2 poignées de pousses d'épinard · 1 poivron rouge · 50 g de parmesan · 4 gousses d'ail · 1 c. à c. de paprika · 20 g de beurre · 1/2 citron · 1 c. à c. de sel
+
+1. **Pâtes.** Eau bouillante salée, 1 min de moins que le paquet ; un bol d'eau de cuisson gardé.
+2. **Crevettes.** Paprika, sel ; 1 à 2 min par face dans un filet d'huile : roses et opaques ; réservées.
+3. **Sauce.** Beurre, poivron en dés 4 min, ail 1 min, tomates coupées en deux 3 min : elles éclatent ; crème et parmesan, 3 min : nappante ; épinards, 1 min : tombés.
+4. **Lier.** Pâtes et crevettes, un peu d'eau de cuisson, 1 min : sauce brillante qui enrobe ; jus de citron, poivre.
+
+**Conservation** : Le jour même.
+
+---
+
+### Crevettes poêlées au beurre chimichurri (persil, coriandre, citron vert)
+
+*Gambas con manteca chimichurri · Amérique latine › Argentine · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 6 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc
+- ⚠️ **Allergènes** : crustacés, lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle.
+
+Des crevettes saisies à feu vif, déglacées au vin blanc, puis enrobées hors du feu d'un beurre aux herbes, à l'ail, au piment et au citron vert, inspiré du chimichurri argentin. Avec du pain ou du riz.
+
+**Ingrédients** : 600 g de grosses crevettes crues décortiquées · 60 g de beurre mou · 1 poignée de persil · 1 poignée de coriandre · 1 gousse d'ail · 1 piment rouge · 1 c. à s. de paprika · 1 citron vert (zeste et jus) · 10 cl de vin blanc · 1 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Beurre.** Beurre, herbes hachées, ail râpé, piment, paprika, zeste et jus de citron vert, sel : mélangé lisse.
+2. **Saisir.** Huile très chaude, crevettes en une couche, 2 à 3 min : roses, bords dorés.
+3. **Déglacer.** Vin blanc, 1 min à gros bouillons : réduit de moitié.
+4. **Enrober.** Hors du feu, le beurre aux herbes, en secouant : il fond en sauce brillante ; tout de suite, avec du pain grillé.
+
+- Le beurre se garde 1 semaine au frigo : il va aussi sur une viande grillée.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **ok**.
+
+**Conservation** : Le jour même.
+
+---
+
+### Pastels au thon, sauce oignon-tomate (beignets farcis, Sénégal)
+
+*Pastels · Afrique subsaharienne › Sénégal · Plat* · Fêtes : Repas de famille, Ramadan / Aïd, Apéritif dînatoire
+
+Niveau ⭐⭐ · 6 portions · actif 50 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : arachide, gluten, lait, œufs, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Rouleau, emporte-pièce (ou bol), friteuse ou grande casserole.
+
+Les chaussons frits de Dakar, héritiers des pastéis portugais : une pâte souple au beurre, une farce de thon aux oignons et au persil, servis brûlants avec une sauce d'oignons à la tomate et au citron vert. Apéritif, entrée ou repas.
+
+**Ingrédients** : 500 g de farine · 3 œufs · 100 g de beurre fondu · 10 cl de lait · 1 c. à c. de levure chimique · 300 g de thon en conserve · 3 oignons · 1 c. à s. de concentré de tomate · 2 tomates · 1 citron vert · 1 bouquet de persil · 2 c. à c. de sel · 1 l d'huile de friture
+
+1. **Pâte.** Farine, levure, sel ; œufs, beurre fondu, lait : pétrie 5 min, lisse et souple ; 30 min sous un torchon.
+2. **Farce.** Un oignon haché, 5 min dans l'huile : fondant ; thon émietté, persil, poivre, 3 min : sèche et parfumée.
+3. **Façonner.** Pâte étalée à 2 mm, disques de 9 cm ; une cuillère de farce, pliés en demi-lune, bords soudés à la fourchette.
+4. **Frire.** 4 à 5 min à 170 °C, en les retournant : gonflés, bien dorés ; égouttés sur du papier.
+5. **Sauce.** Deux oignons émincés, 10 min dans 5 cl d'huile : fondants ; concentré, tomates en dés, 10 min : compotée ; jus de citron vert ; à côté des pastels.
+
+- Crus, ils se congèlent à plat : frits sans décongeler, 2 min de plus.
+
+**Conservation** : Le jour même (crus, se congèlent).
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Pâtes aux sardines, citron, fenouil et chapelure dorée (Sicile)
+
+*Pasta con le sarde (version du placard) · Europe du Sud › Italie (Sicile) · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Faitout, poêle.
+
+Une boîte de sardines devient un plat sicilien : sardines fondues avec échalote, ail, fenouil, olives et câpres, liées à l'eau des pâtes, puis zeste de citron et chapelure grillée à l'ail par-dessus.
+
+**Ingrédients** : 250 g de spaghetti ou de bucatini · 1 boîte de sardines à l'huile · 1 échalote · 1 gousse d'ail · 2 c. à s. d'olives et 1 c. à s. de câpres · 1/2 c. à c. de graines de fenouil · 1 citron (zeste et jus) · 3 c. à s. de chapelure (ou de pain rassis mixé) · 1 c. à s. de persil · 1 pincée de piment
+
+1. **Chapelure.** 3 min à sec dans la poêle avec un filet de l'huile des sardines : dorée et croquante ; réservée.
+2. **Pâtes.** Eau bouillante salée, 1 min de moins que le paquet ; un bol d'eau de cuisson gardé.
+3. **Sauce.** Huile de la boîte, échalote 3 min, ail, fenouil, piment 1 min ; sardines écrasées, olives, câpres, 2 min : elles fondent.
+4. **Lier.** Pâtes et une louche d'eau de cuisson, 1 min en remuant : sauce qui enrobe ; zeste et jus de citron, persil ; chapelure au moment de servir.
+
+- La chapelure remplace le parmesan : en Sicile, on n'en met pas sur le poisson.
+
+**Conservation** : Le jour même.
+
+---
+
+### Orecchiette froides au thon, tomates cerises, mozzarella et citron
+
+*Orecchiette al tonno · Europe du Sud › Italie (Pouilles) · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Faitout.
+
+Une salade de pâtes d'été à l'italienne : orecchiette, tomates cerises marinées à l'ail et au basilic, thon, mozzarella crémeuse et zeste de citron, à l'huile d'olive. Fraîche, pour le pique-nique ou le dîner.
+
+**Ingrédients** : 350 g d'orecchiette · 500 g de tomates cerises (jaunes et rouges) · 250 g de mozzarella · 150 g de thon (au naturel ou à l'huile) · 1 citron (zeste et un filet de jus) · 1 gousse d'ail · 1 bouquet de basilic · 4 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Mariner.** Tomates coupées en deux, ail écrasé, basilic, huile, sel : 20 min (elles rendent leur jus).
+2. **Cuire.** Pâtes 1 min de plus que le paquet dans l'eau salée : bien tendres (elles raffermissent en refroidissant) ; rincées à l'eau froide.
+3. **Mélanger.** Pâtes, tomates et leur jus (ail retiré), thon émietté, mozzarella en morceaux.
+4. **Finir.** Zeste et jus de citron, poivre, basilic ; 15 min au frais.
+
+**Conservation** : 1 jour au frigo (mozzarella ajoutée au dernier moment).
+
+---
+
+### Poulpe rôti au four, pommes de terre écrasées et huile persillée (Portugal)
+
+*Polvo à lagareiro · Europe du Sud › Portugal · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 20 min · repos/cuisson 1 h 30 · coût €€€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : mollusques
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, plaque, mixeur.
+
+Le plat de fête portugais : poulpe cuit doucement dans son eau jusqu'à être tendre, rôti à four chaud avec des petites pommes de terre écrasées, arrosé d'une huile d'olive à l'ail et au persil.
+
+**Ingrédients** : 1,5 kg de poulpe (surgelé : plus tendre) · 1,2 kg de petites pommes de terre · 1 oignon · 15 cl d'huile d'olive · 4 gousses d'ail · 1 bouquet de persil · 1 citron · 1 c. à c. de sel
+
+1. **Cuire le poulpe.** Dans la cocotte avec l'oignon entier, sans eau, couvert : 60 min à feu doux (il rend son eau) : un couteau entre sans résistance dans le tentacule.
+2. **Pommes de terre.** Entières, 20 min à l'eau salée : tendres ; écrasées d'un coup de paume, peau comprise.
+3. **Huile.** Huile, ail, persil mixés ; sel.
+4. **Rôtir.** Poulpe en tentacules et pommes de terre sur la plaque, la moitié de l'huile, 15 min à 230 °C : bords grillés et croustillants ; reste d'huile et citron en servant.
+
+- Congeler le poulpe frais 48 h l'attendrit, comme le battaient les pêcheurs.
+
+**Conservation** : Le jour même.
+
+---
+
+### Spaghetti all'assassina (pâtes grillées dans la poêle, sauce tomate pimentée, Bari)
+
+*Spaghetti all'assassina · Europe du Sud › Italie (Pouilles) · Plat*
+
+Niveau ⭐ · 2 portions · actif 5 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Grande poêle en fer ou en inox.
+
+La recette culte de Bari : des spaghetti crus cuits directement dans la poêle avec un bouillon de tomate ajouté louche après louche, jusqu'à ce qu'ils grillent et attachent un peu. Croquants, fumés, pimentés.
+
+**Ingrédients** : 240 g de spaghetti · 350 g de purée de tomate (passata) · 30 g de concentré de tomate · 1 gousse d'ail · 1 piment rouge · 6 c. à s. d'huile d'olive · 100 g de stracciatella ou de burrata *(facultatif)* · 1 c. à c. de sel
+
+1. **Bouillon.** 1 l d'eau chaude, concentré, un tiers de la passata, sel : gardé frémissant.
+2. **Base.** Huile, ail écrasé et piment, 1 min : parfumés ; reste de passata, 2 min : la sauce bouillonne.
+3. **Griller.** Spaghetti crus en une couche dans la sauce, 3 min sans toucher : ils attachent et noircissent par endroits ; retournés, une louche de bouillon ; on recommence 15 min, louche après louche : pâtes al dente, grillées, sauce presque sèche.
+4. **Servir.** Stracciatella fraîche dessus si tu veux, pour adoucir.
+
+- Ne remue pas : le goût vient des parties qui attachent (c'est voulu).
+
+**Conservation** : Le jour même.
+
+---
+
+### Pâtes à la crème de poivrons rouges, basilic et parmesan
+
+*Pasta con crema di peperoni · Europe du Sud › Italie · Plat*
+
+Niveau ⭐ · 2 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse, mixeur.
+
+Trois poivrons rouges fondus avec un oignon puis mixés : une sauce orange vif, douce et onctueuse, sans crème, liée à l'eau des pâtes et au parmesan. Un plat végétarien qui plaît aux enfants.
+
+**Ingrédients** : 200 g de pâtes (calamarata, rigatoni) · 3 poivrons rouges · 1 oignon · 40 g de parmesan · 8 feuilles de basilic · 3 c. à s. d'huile d'olive · 1 c. à c. de vinaigre de vin · 1 c. à c. de sel
+
+1. **Fondre.** Huile, oignon émincé 5 min ; poivrons en lanières, sel, couvert, 20 min à feu doux : très tendres, ils s'écrasent.
+2. **Mixer.** Avec le basilic, le vinaigre et une louche d'eau de cuisson : crème lisse.
+3. **Pâtes.** Cuites 1 min de moins que le paquet.
+4. **Lier.** Pâtes dans la crème de poivron, parmesan, un peu d'eau de cuisson, 1 min : brillante et nappante ; basilic frais.
+
+**Conservation** : Sauce : 3 jours au frigo.
+
+---
+
+### Spaghetti carbonara d'asperges (sans lardons)
+
+*Carbonara di asparagi · Europe du Sud › Italie · Plat*
+
+Niveau ⭐⭐ · 2 portions · actif 15 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Faitout, mixeur, poêle.
+
+La carbonara de printemps, végétarienne : les tiges d'asperges mixées en crème, les pointes poêlées, des jaunes d'œufs, du pecorino et du parmesan, et beaucoup de poivre noir. Aucune viande, toute la gourmandise.
+
+**Ingrédients** : 200 g de spaghetti · 300 g d'asperges vertes · 4 jaunes et 1 entier d'œufs · 30 g de parmesan · 30 g de pecorino · 5 feuilles de basilic · 2 c. à s. d'huile d'olive · 1 c. à c. de poivre noir · 1/2 citron (zeste)
+
+1. **Asperges.** Bout dur coupé ; entières, 5 min à l'eau salée : tendres ; pointes réservées, tiges mixées avec l'huile et le basilic : crème lisse.
+2. **Œufs.** Jaunes, œuf, fromages râpés, beaucoup de poivre : crème épaisse.
+3. **Pointes.** 2 min à la poêle avec un filet d'huile : dorées.
+4. **Lier.** Pâtes al dente, hors du feu, crème d'asperge puis œufs et une louche d'eau de cuisson, en remuant vite 1 min : sauce lisse et nappante, pas d'œufs brouillés ; pointes, zeste de citron.
+
+- Hors du feu, toujours : les œufs cuisent avec la chaleur des pâtes (vers 65 °C).
+
+**Conservation** : Le jour même.
+
+---
+
+### Spaghetti au pesto de citron et d'amandes (Sicile)
+
+*Pesto di limone · Europe du Sud › Italie (Sicile) · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, faitout.
+
+Un pesto sans pignons ni grosse botte de basilic : citron entier (zeste et jus), amandes, parmesan, quelques feuilles de basilic et huile d'olive. Mixé en une minute, très frais, pour les soirs d'été.
+
+**Ingrédients** : 350 g de spaghetti · 1 citron non traité (zeste et jus) · 60 g d'amandes · 40 g de parmesan · 6 feuilles de basilic · 5 c. à s. d'huile d'olive · 1 petite gousse d'ail *(facultatif)* · 1 c. à c. de sel
+
+1. **Amandes.** 4 min à sec dans la poêle : dorées, elles sentent la noisette.
+2. **Pesto.** Amandes, zeste, jus d'un demi-citron, parmesan, basilic, ail, huile, sel : mixé par à-coups, texture granuleuse.
+3. **Pâtes.** Cuites al dente dans l'eau salée ; une louche d'eau de cuisson gardée.
+4. **Lier.** Hors du feu, pesto et eau de cuisson, 30 s en remuant : sauce crémeuse ; reste de jus de citron selon le goût.
+
+**Conservation** : Pesto : 3 jours au frigo sous une fine couche d'huile.
+
+---
+
+### Nouilles de pommes de terre maison, sauce ail-piment-vinaigre noir
+
+*Tǔdòu fěn (nouilles de pomme de terre) · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 40 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Vinaigre noir chinois (Chinkiang)
+- ⚠️ **Allergènes** : gluten, sésame, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Presse-purée, rouleau, poêle.
+
+Des nouilles faites avec de la purée de pommes de terre et de la fécule : élastiques, brillantes, très « chewy ». Arrosées d'huile fumante sur l'ail, le piment et la cébette, avec soja et vinaigre noir.
+
+**Ingrédients** : 500 g de pommes de terre farineuses · 360 g de fécule de pomme de terre · 4 gousses d'ail · 2 cébettes · 2 c. à s. de sauce soja · 2 c. à s. de vinaigre noir chinois (ou de riz) · 2 c. à s. de piment coréen ou de flocons de piment · 1 c. à c. de sucre · 3 c. à s. d'huile · 1 c. à c. de sésame · 1/2 c. à c. de sel
+
+1. **Purée.** Pommes de terre à l'eau, 20 min : tendres ; écrasées très fin, encore chaudes.
+2. **Pâte.** Purée, fécule, sel et 12 cl d'eau chaude : pétrie 3 min, lisse et souple ; étalée à 5 mm, en lanières de 1 cm.
+3. **Cuire.** 3 à 4 min à l'eau bouillante : elles remontent et deviennent translucides ; égouttées.
+4. **Sauce.** Ail haché, cébette, piment, sucre, sésame dans un bol ; huile chauffée 2 min jusqu'à fumer légèrement, versée dessus : ça grésille ; soja et vinaigre ; nouilles mélangées tout de suite.
+
+- La pâte se dessèche vite : garde-la sous un film en façonnant.
+
+**Conservation** : Le jour même.
+
+---
+
+### Fouti (riz aux aubergines africaines et gombos, Guinée)
+
+*Fouti / lafidi · Afrique subsaharienne › Guinée · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : crustacés, poissons
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Cocotte, mortier ou fourchette.
+
+Le riz du soir en Guinée : aubergines et gombos cuits puis écrasés avec l'huile rouge, le soumbala, le piment et la poudre de poisson, mélangés au riz. Un plat simple, fumé, très parfumé.
+
+**Ingrédients** : 320 g de riz · 4 petites aubergines (africaines ou violettes) · 13 gombos · 2 oignons · 3 c. à s. d'huile de palme rouge · 1 c. à s. de crevettes séchées en poudre · 1 c. à s. de poisson fumé émietté · 1 c. à c. de soumbala (netetou) · 1 piment antillais *(facultatif)* · 1 citron · 1 c. à c. de sel
+
+1. **Riz.** Riz lavé, 3,5 volumes d'eau pour 3, sel, 15 min couvert : l'eau est bue ; 10 min hors du feu.
+2. **Légumes.** Aubergines en morceaux, gombos entiers, oignons, piment, à couvert d'eau, 20 min : très tendres, les gombos filent.
+3. **Écraser.** Égouttés (un peu d'eau gardée), écrasés grossièrement avec l'huile rouge, le soumbala, la poudre de crevettes et le poisson : une sauce épaisse, orangée.
+4. **Mélanger.** Riz et sauce mélangés à la cuillère, 3 min à feu doux : grains enrobés et brillants ; un filet de citron à table.
+
+- Sans huile de palme, un filet d'huile d'arachide et une pincée de paprika pour la couleur.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Salade japonaise de pommes de terre aux œufs et au concombre
+
+*Potato sarada · Asie de l'Est › Japon · Entrée*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Vinaigre de riz
+- ⚠️ **Allergènes** : lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole.
+
+La salade de pommes de terre des bentos : à moitié écrasée, crémeuse, avec œufs durs, concombre croquant et une sauce au yaourt, à la mayonnaise et à la moutarde. Ici avec des lardons de volaille grillés.
+
+**Ingrédients** : 4 pommes de terre · 3 œufs · 2 petits concombres · 100 g de lardons de volaille *(facultatif)* · 150 g de yaourt grec · 1 c. à s. de mayonnaise · 1 c. à c. de moutarde · 1 c. à s. de vinaigre de riz · 1 c. à c. de sel
+
+1. **Cuire.** Pommes de terre en morceaux, 15 min à l'eau salée : tendres ; œufs, 10 min : durs, refroidis à l'eau froide.
+2. **Écraser.** Pommes de terre égouttées, vinaigre tout de suite (elles le boivent), écrasées à moitié : il reste des morceaux.
+3. **Croquant.** Concombre en fines rondelles, une pincée de sel, 10 min, pressé ; lardons 4 min à sec : grillés.
+4. **Mélanger.** Yaourt, mayonnaise, moutarde ; tout mélangé, œufs en quartiers dessus, poivre.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Salade pantesca (pommes de terre, tomates, câpres et olives, île de Pantelleria)
+
+*Insalata pantesca · Europe du Sud › Italie (Sicile) · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole.
+
+La salade de l'île de Pantelleria, entre Sicile et Tunisie : pommes de terre tièdes, tomates mûres, oignon rouge, olives noires, câpres et origan, à l'huile d'olive et au vinaigre. Un plat d'été à elle seule, avec du thon si tu veux.
+
+**Ingrédients** : 1 kg de pommes de terre · 500 g de tomates cerises · 2 oignons rouges · 80 g d'olives noires · 1 c. à s. de câpres · 2 c. à s. de vinaigre de vin · 1 c. à c. d'origan · quelques feuilles de basilic · 5 c. à s. d'huile d'olive · 1 c. à c. de sel
+
+1. **Cuire.** Pommes de terre entières dans leur peau, 20 min à l'eau salée : la lame entre sans résistance.
+2. **Oignon.** Émincé, 10 min dans le vinaigre : il rosit et s'adoucit.
+3. **Assembler.** Pommes de terre pelées tièdes en morceaux, tomates coupées, olives, câpres, oignon et son vinaigre, origan, huile, sel.
+4. **Reposer.** 15 min à température ambiante : les pommes de terre boivent l'assaisonnement ; basilic.
+
+**Conservation** : 1 jour au frigo (meilleure à température ambiante).
+
+---
+
+### Terrine de poisson froide aux légumes et à l'aneth
+
+*Terrine de poisson · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 6 portions · actif 20 min · repos/cuisson 50 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait, œufs, poissons
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à cake, plat pour bain-marie.
+
+Une entrée fraîche qui se prépare la veille : poisson blanc et saumon en dés, liés aux œufs et à la crème, avec carotte, petits pois et aneth, cuits au bain-marie. Avec une sauce au yaourt citronnée.
+
+**Ingrédients** : 400 g de poisson (saumon et cabillaud, frais ou surgelé) · 3 œufs · 20 cl de crème fraîche · 1 carotte · 80 g de petits pois *(facultatif)* · 1 échalote · 1 c. à s. d'aneth · 1 citron · 150 g de yaourt nature · 1 c. à c. de sel
+
+1. **Appareil.** Œufs, crème, sel, poivre, 1 c. à s. de jus de citron fouettés ; poisson en petits dés, carotte râpée, échalote hachée, petits pois, aneth.
+2. **Cuire.** Moule chemisé de papier, au bain-marie, 50 min à 170 °C : prise, la lame ressort sèche.
+3. **Refroidir.** 4 h au frais au minimum : ferme, elle se tranche net.
+4. **Sauce.** Yaourt, reste de jus de citron, aneth, sel ; terrine en tranches épaisses.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Tamago sando (sandwich japonais à l'œuf crémeux)
+
+*Tamago sando · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 2 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, film alimentaire.
+
+Le sandwich des konbini japonais : un pain de mie très moelleux, sans croûte, garni d'une salade d'œufs épaisse et crémeuse (jaunes écrasés à la mayonnaise, blancs hachés). Serré dans un film, puis coupé net.
+
+**Ingrédients** : 4 tranches de pain de mie moelleux · 4 œufs · 3 c. à s. de mayonnaise · 2 c. à c. de lait · 1 noix de beurre mou · 1 c. à c. de moutarde · 1 pincée de sucre · 1 pincée de sel
+
+1. **Œufs.** Plongés dans l'eau bouillante, 9 min : durs, jaune juste pris ; eau froide, écalés.
+2. **Garniture.** Blancs hachés fin ; jaunes écrasés avec mayonnaise, lait, sucre, sel, poivre : crème lisse ; blancs incorporés.
+3. **Monter.** Pain beurré, moutarde fine sur deux tranches ; garniture bombée au centre, refermé.
+4. **Serrer.** Filmé serré, 20 min au frais ; croûtes coupées, tranché en deux à travers le film : bords nets.
+
+- La mayonnaise japonaise (Kewpie) est plus riche, mais une mayonnaise ordinaire fonctionne très bien.
+
+**Conservation** : Le jour même, au frais.
+
+---
+
+### Grande crêpe soufflée au four, dinde et fromage (Allemagne, version sans jambon)
+
+*Ofenpfannkuchen · Europe du Nord › Allemagne · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plaque à four creuse, papier cuisson.
+
+La crêpe géante allemande cuite sur la plaque du four : une pâte à crêpes épaisse qui gonfle, garnie à mi-cuisson de jambon de dinde et de fromage râpé, puis roulée ou coupée en carrés. Un dîner en 30 minutes.
+
+**Ingrédients** : 160 g de farine · 40 cl de lait · 3 œufs · 150 g de jambon de dinde · 150 g de fromage râpé · 1 c. à s. de ciboulette · 3 c. à s. d'huile · 1 pincée de sel · 1 salade verte et 1 c. à s. de vinaigre de cidre *(facultatif)*
+
+1. **Pâte.** Farine, œufs, lait, huile, sel fouettés : lisse et fluide.
+2. **Cuire.** Versée sur la plaque tapissée de papier huilé, 10 min à 200 °C : prise et dorée sur les bords.
+3. **Garnir.** Dinde en lanières et fromage dessus, 10 min : fromage fondu et gratiné, la crêpe gonflée par endroits.
+4. **Servir.** Ciboulette, roulée et tranchée ou coupée en carrés ; avec une salade vinaigrée.
+
+- Garnitures faciles : champignons, épinards, tomates cerises, restes de poulet.
+
+**Conservation** : Le jour même.
+
+---
+
+### Cheeseburger bombs (petits pains briochés farcis bœuf et cheddar)
+
+*Cheeseburger bombs · Amérique du Nord › États-Unis · Plat* · Fêtes : Anniversaire, Apéritif dînatoire
+
+Niveau ⭐⭐ · 8 portions · actif 40 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichon
+- ⚠️ **Allergènes** : gluten, lait, œufs, poissons ; **possibles selon marque** : moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Robot ou saladier, plaque.
+
+Des petits pains briochés fourrés de bœuf haché épicé et de cheddar, cuits serrés puis badigeonnés de beurre à l'ail et au persil. À partager, pour un apéro dînatoire ou un match.
+
+**Ingrédients** : 450 g de farine T45 · 18 cl de lait tiède · 7 g de levure boulangère sèche · 2 œufs · 60 g de beurre (+ 50 g pour le beurre à l'ail) · 50 g de sucre · 450 g de bœuf haché · 180 g de cheddar · 1 c. à c. de sauce Worcestershire · 1 c. à c. de paprika fumé · 2 gousses d'ail · 1 c. à s. de persil · 1 c. à c. de sel · 4 cornichons, à côté *(facultatif)*
+
+1. **Pâte.** Lait tiède, sucre, levure, 10 min : mousseux ; un œuf, 60 g de beurre fondu, farine, sel : pétrie 8 min, lisse ; 1 h au chaud : doublée.
+2. **Farce.** Bœuf, 6 min à la poêle en l'émiettant : bien doré ; Worcestershire, paprika, sel, poivre ; refroidie.
+3. **Façonner.** Pâte en 16 boules aplaties ; une cuillère de farce et un cube de cheddar dans chacune, refermées, soudure dessous, serrées sur la plaque ; 30 min de repos ; l'autre œuf battu dessus.
+4. **Cuire.** 20 min à 180 °C : bien dorés, gonflés ; beurre fondu à l'ail et au persil au pinceau dès la sortie ; avec des cornichons.
+
+**Conservation** : 2 jours, réchauffés 5 min au four.
+
+---
+
+### Ablo (petits pains vapeur au riz et au maïs, Togo et Bénin)
+
+*Ablo · Afrique subsaharienne › Togo · Accompagnement*
+
+Niveau ⭐⭐ · 6 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, cuit-vapeur, petits moules ou ramequins.
+
+Les petits gâteaux blancs vapeur du Togo et du Bénin, un peu sucrés, levés et moelleux, qu'on mange avec du poisson frit, des crevettes ou une sauce tomate pimentée. Faits de riz cuit mixé, de farine de maïs et de fécule.
+
+**Ingrédients** : 1 bol de riz cuit (bien tendre) · 2 bols de farine de maïs fine · 2 bols de fécule de maïs · 1/2 bol de sucre · 8 g de levure boulangère · 1 c. à c. de levure chimique · 1 pincée de sel
+
+1. **Mixer.** Riz cuit avec un peu d'eau : crème très lisse.
+2. **Pâte.** Farine, fécule, sucre, sel, levure boulangère délayée dans un peu d'eau tiède, la crème de riz : pâte épaisse et lisse ; 2 h au chaud : bullée et gonflée.
+3. **Lever.** Levure chimique incorporée ; pâte versée aux ⅔ des moules huilés.
+4. **Vapeur.** 20 à 25 min à couvert : gonflés, fermes et brillants, un cure-dent ressort sec ; tièdes, avec une sauce tomate pimentée ou du poisson grillé.
+
+- Sans moules : en petits tas sur des feuilles de papier cuisson huilées.
+
+**Conservation** : 2 jours, réchauffés à la vapeur.
+
+---
+
+### Mille-feuille de pommes de terre au beurre clarifié et au parmesan
+
+*Kartoffel-Mille-Feuille · Europe du Nord › Suisse · Accompagnement*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 45 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mandoline, petit moule rectangulaire, papier cuisson.
+
+Des dizaines de lamelles fines de pommes de terre empilées avec du beurre clarifié et du parmesan, cuites serrées, refroidies sous un poids, puis coupées en barres et dorées sur toutes les faces. Croustillant dehors, fondant dedans.
+
+**Ingrédients** : 800 g de pommes de terre à chair ferme · 80 g de parmesan · 60 g de beurre clarifié (ou de ghee) · 1 c. à c. de sel · 2 branches de thym
+
+1. **Lamelles.** Pommes de terre en tranches de 1 à 2 mm à la mandoline ; mélangées avec le beurre fondu, le parmesan, le thym effeuillé, le sel.
+2. **Empiler.** Couches serrées et régulières dans le moule tapissé de papier, jusqu'en haut ; papier dessus.
+3. **Cuire.** 45 min à 180 °C : la lame entre sans résistance ; refroidi sous un poids (une brique de lait), une nuit au frais : compact.
+4. **Dorer.** Démoulé, en barres de 2 cm ; 2 min par face à la poêle ou 15 min à 220 °C : croustillantes et dorées, les couches visibles ; une pincée de sel.
+
+- La veille : c'est le repos sous poids qui permet de couper des barres nettes.
+
+**Conservation** : Cuit et pressé : 3 jours au frigo.
+
+---
+
 ## 3. Nouvelles fiches techniques (application, rubrique Techniques)
 
 - **Pâtisserie française** : Pâte sucrée et pâte sablée (crémage) (niv. 2) · Crème pâtissière (niv. 1) · Pâte à choux (niv. 2) · Pâte feuilletée rapide (et tours) (niv. 3) · Les trois meringues (française, suisse, italienne) (niv. 2) · Crème anglaise (cuisson à la nappe) (niv. 2) · Chantilly, mascarpone montée et ganache montée (niv. 1) · Les biscuits de base (génoise, joconde, roulé) (niv. 2) · Caramel et cuissons du sucre (niv. 2) · Macaronnage (niv. 3)
@@ -27301,7 +29664,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2645 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2945 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 

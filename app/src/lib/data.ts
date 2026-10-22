@@ -12,7 +12,10 @@ export const INGREDIENTS = ingredientsJson as unknown as Record<string, Ingredie
 // Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index (cartes, recherche, moteur, planificateur) est lu en JSON.parse,
 // deux fois plus rapide qu'un littéral JavaScript ; le détail d'une fiche arrive juste après le premier affichage.
 const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "" };
-export const RECIPES = (JSON.parse(recipesRaw) as Recipe[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r }));
+// Ingrédients rangés en tableaux [quantité, libellé, réf., poids, facultatif?] dans l'index (plus léger) : remis en objets ici.
+type PackedLine = [string, string, string | null, number, 1?];
+export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r,
+  ingredients: r.ingredients.map(([qty, label, ref, weight, opt]) => ({ qty, label, ref, weight, optional: opt === 1 })) }) as unknown as Recipe);
 setRenames(renamesJson as Record<string, string>);
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];
@@ -31,7 +34,7 @@ export function useImportLibrary(): ImportEntry[] {
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
-type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage">>;
+type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit">>;
 let DETAILS = false;
 let detP: Promise<void> | null = null;
 const detLs = new Set<() => void>();
