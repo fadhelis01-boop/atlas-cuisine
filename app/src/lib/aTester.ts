@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "thiou_poulet", "moqueca", "curry_legumes_coco", "larb_poulet", "bunny_chow_haricots", "hot_pot_familial", "gratin_celeri_noix",
-  "crevettes_coco_citron_vert", "white_chicken_chili", "cassolettes_crevettes_poireaux", "shakshuka_haricots_blancs", "bacalhau_bras", "shakshuka", "choucroute_mer", "curry_pois_chiches_express",
-  "goan_fish_curry", "anda_curry", "spaghetti_vongole", "bar_croute_sel", "frijoles_negros_cubanos", "moules_normande", "fiskesuppe", "risotto_courge_sauge",
-  "lecso", "tacos_papa_rajas", "pap_chakalaka", "chili_con_carne", "salade_poulet_mangue_thai", "dorade_four",
+  "moules_frites", "thiou_poulet", "moqueca", "curry_legumes_coco", "lok_lak", "moules_marinieres", "huevos_rancheros", "tacos_papa_rajas",
+  "cassolettes_crevettes_poireaux", "falafels", "bacalhau_bras", "garba", "poulet_mayo_ivoirien", "sandwich_merguez_orientale", "lobio", "spaghetti_vongole",
+  "croquettes_poisson", "frijoles_negros_cubanos", "nouilles_sautees_boeuf", "anda_curry", "fiskesuppe", "chili_con_carne", "gratin_chou_fleur_lentilles", "shakshuka",
+  "dorade_four", "locro_vegetarien", "salade_thai_bavette", "goan_fish_curry", "pyttipanna_boeuf", "crevettes_coco_citron_vert",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

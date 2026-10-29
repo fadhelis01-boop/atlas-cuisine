@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (1069 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (1108 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **1069 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1139 recettes complètes** ;
+> 1. **1108 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1178 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -1260,6 +1260,60 @@
 | Lobia (curry de haricots cornille à la tomate, Pakistan) | Pakistan | – | ✅ | ✅ | ✅ | ✅ | 3 |
 | Omelette masala (oignon, tomate, piment vert, coriandre) | Inde | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 
+### Vague 8 · Favoris TikTok ajoutés entre le 22/10 et le 29/10/2026 (compte connecté par le propriétaire). Fiches réécrites (10)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Cookies Rocher au cœur coulant noisette, enrobage chocolat au lait et noisettes | Food fusion | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Muffins double chocolat au cœur de pâte à tartiner | États-Unis | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Lasagnes montagnardes à la raclette (oignons fondants, version jambon de dinde) | Bourgogne-Franche-Comté | GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Sauce gombo à l'ivoirienne (bœuf, poisson fumé, huile de palme) | Côte d'Ivoire | CE, PO | 🟡 | ✅ | 🔄 | ✅ | 6 |
+| Sandwich merguez à l'orientale (poivrons confits, harissa, sauce yaourt-citron) | Maghreb | GL, LA | 🟡 | ✅ | 🔄 | ✅ | 6 |
+| Eiersalat, salade d'œufs à l'allemande (moutarde, cornichons, ciboulette) | Allemagne | GL, LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Sauce curry-mangue façon fast-food (sans additifs) | Food fusion | LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sauce bourguignonne pour fondue (mayonnaise aux herbes, câpres et cornichons) | Bourgogne | MO, OE, SU | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Sirop de citron maison (zestes infusés une nuit) | Cuisine du quotidien | – | ✅ | ✅ | ✅ | ✅ | 1 |
+| Vinaigre de pommes maison avec les épluchures (anti-gaspi) | Anti-gaspi | – | ✅ | ✅ | ✅ | ✅ | – |
+
+### Vague 8 (suite) · Vidéos les plus enregistrées des auteurs des favoris du 29/10/2026, jamais explorés jusqu'ici (onglet (17)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Ficelle picarde (crêpes roulées aux champignons, gratinées ; version jambon de dinde) | Hauts-de-France | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Potée au chou (version bœuf fumé et saucisses de volaille) | Bourgogne-Franche-Comté | – | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Hackbraten, le pain de viande alsacien (bœuf et veau, sauce aux oignons) | Alsace | LA, MO, OE, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Salade de bœuf grillé, feta, avocat et roquette (vinaigrette citron-moutarde) | Cuisine du quotidien | LA, MO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Médaillons de grosse courgette farcis au bœuf, sauce tomate au basilic, gratinés à la mozzarella | Cuisine du quotidien | LA, SU | ✅ | 🍷 | ✅ | 🔄 | 3 |
+| Rouleaux croustillants de brick au bœuf et au reblochon | Food fusion | GL, LA, MO, SU | ✅ | 🍷 | ✅ | 🔄 | 6 |
+| Poulet mayo à l'ivoirienne (poulet mariné, rôti, nappé de sauce mayonnaise aux oignons) | Côte d'Ivoire | CE, MO, OE | 🟡 | 🟡 traces | 🔄 | 🔄 | 3 |
+| Gésiers de poulet sautés à l'ivoirienne (oignons, tomate, poivron, piment) | Côte d'Ivoire | CE | 🟡 | ✅ | 🔄 | ✅ | 6 |
+| Garba (attiéké, thon frit, piment et oignon cru) | Côte d'Ivoire | CE, PO | 🟡 | ✅ | 🔄 | ✅ | 6 |
+| Pâtes crémeuses one-pot et poulet croustillant épicé | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Poêlée de pommes de terre et viande hachée aux épices (10 minutes de préparation) | Cuisine du quotidien | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Gratin crémeux de pommes de terre et poulet | Cuisine du quotidien | LA, SU | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Gâteau invisible de courgettes au chèvre et au parmesan | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Pâtes au Mont d'Or fondu, champignons et vin blanc du Jura | Bourgogne-Franche-Comté | GL, LA, SU | ✅ | 🍷 | ✅ | 🔄 | 6 |
+| Pâtes au pesto de vert de poireau et de persil (anti-gaspi) | Anti-gaspi | FC, GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tatin de carottes au miel et au cumin, crème au citron | Anti-gaspi | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Salade « westaf » (salade composée d'Afrique de l'Ouest, version œufs) | Côte d'Ivoire | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+
+### Vague 8 (fin) · Auteurs des favoris du 29/10/2026 : goûters, entrées, bases et deux plats végétariens tirés de leurs (12)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Petit fromage pané croustillant et pommes de terre rôties au paprika fumé | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Boules de pommes de terre croustillantes au cœur de mozzarella | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Soupe froide de concombre à l'orange, au zaatar et à la fleur d'oranger | Maroc | LA, SE | ✅ | 🟡 traces | ✅ | ⛔ | 1 |
+| Velouté d'épluchures et de talons d'asperges (anti-gaspi) | Anti-gaspi | CE, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Barres cookie s'mores (biscuit, chocolat, guimauve grillée) | États-Unis | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Moelleux au chocolat cuit à la poêle (sans four) | Cuisine du quotidien | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Fleurs de pommes feuilletées (roses de pommes) | Cuisine du quotidien | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Dampfnudeln (petits pains cuits à la vapeur, dessous caramélisé, sauce vanille) | Alsace | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+| Buns fourrés fromage-dinde à la moutarde (façon boulangerie industrielle, en mieux) | Cuisine du quotidien | GL, LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Lait concentré sucré maison (lait réduit au sucre) | Cuisine du quotidien | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mayonnaise sans œuf au lait de soja (au mixeur plongeant) | Cuisine du quotidien | MO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Sirop de fraise maison (fraises et sucre, 15 minutes) | Cuisine du quotidien | – | ✅ | ✅ | ✅ | ✅ | 1 |
+
 ### Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les (40)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -1305,7 +1359,7 @@
 | Ablo (petits pains vapeur au riz et au maïs, Togo et Bénin) | Togo | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Mille-feuille de pommes de terre au beurre clarifié et au parmesan | Suisse | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 537 · vegetarien : 171 · express : 96 · zero_dechet : 88 · sauces : 62 · fetes : 51 · brunch : 38 · pique_nique : 26 · pains : 25 · salade : 24 · boissons : 23 · fusion : 15.
+**Rubriques couvertes par la vague 2** : enfants : 556 · vegetarien : 182 · express : 105 · zero_dechet : 88 · sauces : 62 · fetes : 57 · brunch : 38 · pique_nique : 28 · salade : 26 · pains : 25 · boissons : 23 · fusion : 15.
 
 ---
 
@@ -28508,7 +28562,1088 @@ L'omelette des petits déjeuners indiens et pakistanais : œufs battus avec oign
 
 ---
 
-## 2.43 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les
+## 2.43 Vague 8 · Favoris TikTok ajoutés entre le 22/10 et le 29/10/2026 (compte connecté par le propriétaire). Fiches réécrites
+
+### Cookies Rocher au cœur coulant noisette, enrobage chocolat au lait et noisettes
+
+*Cookies Rocher · France › Food fusion · Goûter / dessert* · Fêtes : Anniversaire
+
+Niveau ⭐⭐ · 5 portions · actif 30 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque, papier cuisson, petite casserole, congélateur.
+
+Le favori le plus enregistré de la semaine : de gros cookies épais qui cachent une boule de pâte à tartiner congelée (elle reste coulante à la cuisson), trempés une fois refroidis dans un chocolat au lait aux noisettes, comme la confiserie.
+
+**Ingrédients** : 120 g de pâte à tartiner noisette (cœurs) · 120 g de beurre mou · 140 g de sucre (90 g de cassonade + 50 g de blanc) · 1 œuf · 220 g de farine · 10 g de maïzena · 1/2 c. à c. de bicarbonate (+ ½ c. à c. de levure chimique) · 100 g de chocolat noir haché · 250 g de chocolat au lait (enrobage) · 50 g de noisettes grillées concassées · 10 g d'huile de coco désodorisée · 1 gousse de vanille (graines) ou 1 sachet de sucre vanillé *(facultatif)*
+
+1. **Cœurs.** Pâte à tartiner en 5 petits tas sur papier cuisson ; 1 h 30 au congélateur : durs comme des galets.
+2. **Pâte.** Beurre et sucres mélangés 2 min : crème claire ; œuf et vanille ; farine, maïzena, bicarbonate, levure, une pincée de sel, à la spatule juste assez pour ne plus voir de farine ; chocolat haché.
+3. **Fourrer.** 5 boules de 120 g ; chacune aplatie dans la main, un cœur congelé au centre, pâte refermée sans trou ; 30 min au frigo.
+4. **Cuire.** 14 à 17 min à 175 °C (chaleur statique), bien espacés : bords dorés, centre encore pâle et mou ; refroidir complètement sur la plaque (1 h), sinon ils cassent.
+5. **Enrober.** Chocolat au lait fondu au bain-marie (45 °C au plus) avec l'huile de coco, noisettes ; cookies trempés à moitié ou entièrement, sur papier cuisson ; 30 min au frais : enrobage figé et brillant.
+
+- La vanille liquide contient de l'alcool : graines de gousse ou sucre vanillé à la place.
+- Sans huile de coco : l'enrobage fige aussi, un peu moins brillant.
+
+**Conservation** : 4 jours dans une boîte fermée, au frais l'été.
+
+---
+
+### Muffins double chocolat au cœur de pâte à tartiner
+
+*Double chocolate Nutella muffins · Amérique du Nord › États-Unis · Goûter / dessert* · Fêtes : Anniversaire
+
+Niveau ⭐ · 12 portions · actif 15 min · repos/cuisson 22 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à 12 muffins, caissettes, 2 saladiers.
+
+Des muffins américains très chocolatés, bien bombés : une pâte au cacao et aux pépites, une cuillerée de pâte à tartiner cachée au milieu, et le four démarré très chaud pour qu'ils montent d'un coup.
+
+**Ingrédients** : 250 g de farine · 40 g de cacao non sucré · 150 g de sucre · 2 c. à c. de levure chimique (+ ½ c. à c. de bicarbonate) · 2 œufs · 20 cl de lait · 1 c. à s. de jus de citron (dans le lait) · 10 cl d'huile neutre · 150 g de pépites de chocolat · 12 c. à c. de pâte à tartiner noisette
+
+1. **Lait ribot.** Lait et jus de citron, 5 min : il épaissit et tranche légèrement (c'est voulu).
+2. **Sec.** Farine, cacao, sucre, levure, bicarbonate, une pincée de sel : mélangés au fouet.
+3. **Humide.** Œufs, lait citronné, huile ; versé sur le sec, mélangé à la spatule 15 s : encore quelques grumeaux, pas plus ; ⅔ des pépites.
+4. **Garnir.** Une cuillerée de pâte au fond de chaque caissette, une cuillère à café de pâte à tartiner, recouverte de pâte jusqu'en haut ; reste des pépites dessus.
+5. **Cuire.** 5 min à 220 °C : ils gonflent ; puis 17 min à 180 °C sans ouvrir : dôme ferme sous le doigt, pique qui ressort avec quelques miettes (le cœur reste fondant).
+
+**Conservation** : 3 jours dans une boîte fermée.
+
+---
+
+### Lasagnes montagnardes à la raclette (oignons fondants, version jambon de dinde)
+
+*Lasagnes à la raclette · France › Bourgogne-Franche-Comté · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 35 min · repos/cuisson 40 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : gluten, lait, sulfites ; **possibles selon marque** : œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à gratin de 30 cm, casserole, poêle.
+
+Des lasagnes de montagne : oignons fondus et déglacés, jambon, béchamel maison et tranches de raclette entre chaque couche de pâte, gratinées jusqu'à ce que le fromage coule sur les bords. Ici avec du jambon de dinde ; salade verte bien vinaigrée à côté.
+
+**Ingrédients** : 12 feuilles de lasagne (sans précuisson) · 400 g de fromage à raclette en tranches · 6 tranches de jambon de dinde · 3 oignons · 10 cl de vin blanc sec · 100 g de beurre (80 g pour la béchamel) · 80 g de farine · 80 cl de lait · 1 pincée de muscade · 1 salade verte, vinaigrette moutarde-vinaigre de vin
+
+1. **Oignons.** Émincés, 20 g de beurre, 15 min à feu moyen : fondants et blonds ; vin blanc, 2 min : il ne reste qu'un fond sirupeux.
+2. **Béchamel.** 80 g de beurre fondu, farine, 2 min en remuant : roux mousseux ; lait froid en fouettant, 8 min : nappe la cuillère ; sel, poivre, muscade.
+3. **Monter.** Béchamel au fond ; lasagnes ; oignons, jambon en lanières, raclette ; béchamel ; on recommence 3 fois ; dernière couche : lasagnes, béchamel, raclette.
+4. **Cuire.** 40 min à 180 °C : dessus doré et bouillonnant, pointe de couteau qui entre sans résistance dans les pâtes ; 10 min de repos pour couper net ; salade vinaigrée à côté.
+
+- Version d'origine : jambon blanc de porc (même quantité).
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 2 jours au frigo ; se réchauffe au four.
+
+**Techniques** : Faire un roux
+
+---
+
+### Sauce gombo à l'ivoirienne (bœuf, poisson fumé, huile de palme)
+
+*Sauce gombo · Afrique subsaharienne › Côte d'Ivoire · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 10 · coût €€
+
+- 🟡 Porc possible : Bouillon cube bœuf
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, poissons ; **possibles selon marque** : gluten
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Grande marmite, couteau, planche.
+
+La sauce gluante préférée d'Abidjan : viande mijotée, poisson fumé émietté, gombos coupés en rondelles qui lient la sauce, une touche d'huile de palme rouge et du piment entier. Avec du foutou, du riz blanc ou du placali.
+
+**Ingrédients** : 500 g de gombos frais (ou surgelés) · 500 g de bœuf à mijoter en cubes (paleron) · 150 g de poisson fumé (maquereau, chinchard) · 2 tomates · 1 oignon · 2 gousses d'ail · 1 piment antillais entier · 4 c. à s. d'huile de palme rouge · 1 cube de bouillon · 1 citron vert
+
+1. **Viande.** Bœuf, oignon émincé, ail, sel, 1 l d'eau ; 45 min à petit frémissement : tendre à la fourchette.
+2. **Base.** Tomates mixées, cube, poisson fumé émietté sans arêtes, piment entier (non percé) ; 10 min.
+3. **Gombos.** Lavés, bien séchés, coupés en rondelles fines (ou râpés pour une sauce plus filante) ; ajoutés avec l'huile de palme, 15 min à feu doux, sans couvercle, en remuant peu : la sauce file à la cuillère.
+4. **Servir.** Piment retiré ; quelques gouttes de citron vert au moment de servir : la sauce reste gluante mais s'éclaire ; avec foutou, riz ou placali.
+
+- Le piment entier parfume sans brûler ; percé, il rend la sauce très forte.
+- Plus de liant : une partie des gombos râpés au lieu d'être coupés.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Sandwich merguez à l'orientale (poivrons confits, harissa, sauce yaourt-citron)
+
+*Sandwich merguez · Afrique du Nord › Maghreb · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- 🟡 Porc possible : Merguez (agneau/bœuf)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle, petit bol.
+
+Le sandwich des snacks et des fêtes de quartier : merguez dorées à la poêle, poivrons et oignons fondus dans leur jus épicé, harissa, et une sauce yaourt au citron et à la menthe pour la fraîcheur, dans une baguette ou un pain rond.
+
+**Ingrédients** : 8 merguez (bœuf, agneau) · 2 baguettes (ou 4 pains ronds) · 2 poivrons · 1 oignon · 1 c. à c. de harissa · 150 g de yaourt nature · 1/2 citron · 4 feuilles de menthe · 1 c. à c. de cumin · 1 c. à s. d'huile d'olive
+
+1. **Légumes.** Poivrons et oignon en lanières, huile, cumin, sel, 12 min à feu moyen : fondants et légèrement caramélisés ; harissa, 30 s.
+2. **Merguez.** Piquées 2 fois, dans la poêle sans matière grasse, 8 à 10 min en les tournant : bien dorées, plus de rose au centre.
+3. **Sauce.** Yaourt, jus de citron, menthe ciselée, sel : fraîche et acidulée.
+4. **Monter.** Pain ouvert, réchauffé 2 min au four ; sauce, légumes, merguez, encore un trait de sauce.
+
+**Conservation** : Le jour même.
+
+---
+
+### Eiersalat, salade d'œufs à l'allemande (moutarde, cornichons, ciboulette)
+
+*Eiersalat · Europe du Nord › Allemagne · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon, Cornichon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, saladier.
+
+Le cousin allemand des œufs mimosa : des œufs durs grossièrement hachés, liés d'une sauce à la mayonnaise et au yaourt, relevée de moutarde, de cornichons et de leur vinaigre, et de beaucoup de ciboulette. Sur du pain de seigle ou dans un petit pain.
+
+**Ingrédients** : 8 œufs · 3 c. à s. de mayonnaise maison · 3 c. à s. de yaourt nature (ou grec) · 1 c. à s. de moutarde de Dijon · 4 cornichons + 1 c. à s. de leur vinaigre · 1/2 botte de ciboulette · 1/2 oignon rouge (ou 1 échalote) · 1 pincée de paprika · 4 tranches de pain de seigle ou complet *(facultatif)*
+
+1. **Cuire.** Œufs dans l'eau bouillante, 10 min ; 5 min dans l'eau glacée : jaune bien pris mais encore doré, sans cerne verte ; écalés.
+2. **Sauce.** Mayonnaise, yaourt, moutarde, vinaigre des cornichons, sel, poivre : souple et acidulée.
+3. **Mélanger.** Œufs hachés au couteau en gros morceaux, cornichons et oignon en tout petits dés, ciboulette ; sauce, à la fourchette, sans écraser.
+4. **Reposer.** 30 min au frais : les saveurs se mêlent ; paprika dessus, sur le pain.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Sauce curry-mangue façon fast-food (sans additifs)
+
+*Sauce curry mango · France › Food fusion · Sauce*
+
+Niveau ⭐ · 6 portions · actif 10 min · repos/cuisson 5 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, œufs ; **possibles selon marque** : céleri, gluten, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Mixeur plongeant, bocal.
+
+La sauce sucrée-épicée des nuggets de fast-food refaite à la maison : mangue mixée, curry doux, une base de mayonnaise allégée au yaourt, et du citron vert pour la fraîcheur. Sans arôme ni épaississant.
+
+**Ingrédients** : 150 g de mangue bien mûre (fraîche ou surgelée) · 3 c. à s. de mayonnaise maison · 2 c. à s. de yaourt nature · 1 c. à c. de curry doux · 1/2 c. à c. de curcuma · 1 c. à c. de miel · 1/2 citron vert · 1 pincée de sel
+
+1. **Épices.** Curry et curcuma 30 s dans une poêle sèche : ils sentent fort (le goût cru disparaît).
+2. **Mixer.** Mangue, épices, miel, jus de citron vert, sel, 1 min au mixeur : purée très lisse.
+3. **Lier.** Mayonnaise et yaourt à la cuillère : sauce nappante, jaune orangé.
+4. **Reposer.** 30 min au frais : elle épaissit un peu ; ajuster citron et sel.
+
+**Conservation** : 3 jours au frigo (mayonnaise maison).
+
+---
+
+### Sauce bourguignonne pour fondue (mayonnaise aux herbes, câpres et cornichons)
+
+*Sauce bourguignonne · France › Bourgogne · Sauce* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon, Cornichon, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : moutarde, œufs, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Bol, fouet ou mixeur plongeant.
+
+La sauce qu'on achète en pot pour la fondue bourguignonne, faite en 5 minutes : une mayonnaise relevée de moutarde forte, d'échalote, de câpres, de cornichons hachés et d'herbes, avec une pointe de concentré de tomate pour la couleur. Pour la viande, les frites, les pommes de terre vapeur.
+
+**Ingrédients** : 1 mayonnaise maison (1 jaune, 20 cl d'huile) · 1 c. à s. de moutarde de Dijon · 1 échalote · 1 c. à s. de câpres · 4 cornichons · 1 c. à s. de persil haché (+ estragon si tu en as) · 1 c. à c. de concentré de tomate · 1 c. à c. de vinaigre de vin · 1 pincée de paprika
+
+1. **Hacher.** Échalote, câpres, cornichons et herbes hachés très fin au couteau.
+2. **Assaisonner.** Mayonnaise ferme, moutarde, concentré de tomate, vinaigre, paprika, au fouet : rose pâle et lisse.
+3. **Mélanger.** Hachis incorporé ; poivre ; elle doit tenir sur la cuillère.
+4. **Reposer.** 1 h au frais : l'échalote se fond dans la sauce.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Sirop de citron maison (zestes infusés une nuit)
+
+*Sirop de citron · France › Cuisine du quotidien · Boisson*
+
+Niveau ⭐ · 15 portions · actif 15 min · repos/cuisson 24 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, râpe fine, bouteille en verre.
+
+Un sirop de citron sans arôme ni conservateur : les zestes infusent une nuit dans l'eau bouillie avec le jus, puis on fait fondre le sucre. Une part de sirop pour sept d'eau fraîche ou gazeuse ; aussi dans les thés glacés et sur un gâteau.
+
+**Ingrédients** : 4 citrons non traités (zestes et jus) · 500 g de sucre · 50 cl d'eau
+
+1. **Zester.** Zestes râpés directement au-dessus de la casserole d'eau : les huiles parfumées tombent dans l'eau ; jus filtré (sans pépins).
+2. **Infuser.** Eau, zestes et jus portés à ébullition, 1 min ; couvert, une nuit (24 h, c'est encore mieux) : l'eau est jaune pâle et sent fort le citron.
+3. **Sucrer.** Porté à nouveau à ébullition, sucre versé, 2 min en remuant : sirop limpide.
+4. **Conserver.** Filtré, en bouteille ébouillantée, refroidi puis au frigo.
+
+**Conservation** : 1 mois au frigo, bouteille fermée.
+
+---
+
+### Vinaigre de pommes maison avec les épluchures (anti-gaspi)
+
+*Vinaigre d'épluchures · France › Anti-gaspi · Base*
+
+Niveau ⭐⭐ · 1 portions · actif 15 min · repos/cuisson 1008 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : Pour les adultes et les grands enfants.
+
+**Équipement** : Grand bocal en verre, torchon propre, élastique.
+
+Les épluchures et trognons de pommes d'une tarte deviennent du vinaigre : un peu de sucre et de levure les font fermenter, puis l'air les transforme en vinaigre en quelques semaines. Pour les vinaigrettes et les pickles.
+
+**Ingrédients** : 300 g d'épluchures et trognons de pommes bio · 50 cl d'eau filtrée ou bouillie refroidie · 2 c. à s. de cassonade · 5 g de levure boulangère sèche
+
+1. **Mettre en bocal.** Épluchures dans le bocal ébouillanté ; eau et sucre mélangés, levure ; elles doivent être couvertes (une petite assiette pour les maintenir sous l'eau).
+2. **Première fermentation.** Torchon et élastique (l'air doit passer), à l'abri de la lumière, 2 semaines ; remuer chaque jour : de petites bulles, une odeur de cidre.
+3. **Filtrer.** Épluchures retirées, liquide remis dans le bocal propre, torchon, 4 à 6 semaines : un voile gélatineux (la « mère ») se forme, l'odeur devient franchement vinaigrée.
+4. **Mettre en bouteille.** Quand il pique comme un vinaigre : filtré, en bouteille ; la mère se garde pour lancer le suivant.
+
+- Moisissure duveteuse (bleue, verte, noire) en surface : tout jeter. Le voile lisse et beige est normal.
+- Pendant la première fermentation il contient un peu d'alcool, qui disparaît en devenant vinaigre.
+
+**Conservation** : Des mois au placard, bouteille fermée. · **Zéro déchet** : **Épluchures de pommes** d'une tarte ou d'une compote : on les congèle au fur et à mesure jusqu'à en avoir 300 g.
+
+---
+
+## 2.44 Vague 8 (suite) · Vidéos les plus enregistrées des auteurs des favoris du 29/10/2026, jamais explorés jusqu'ici (onglet
+
+### Ficelle picarde (crêpes roulées aux champignons, gratinées ; version jambon de dinde)
+
+*Ficelle picarde · France › Hauts-de-France · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 40 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle à crêpes, poêle, plat à gratin.
+
+L'entrée chaude des brasseries d'Amiens devenue plat complet : des crêpes garnies d'une tranche de jambon et d'une duxelles de champignons à la crème, roulées, nappées de crème et gratinées. Ici avec du jambon de dinde.
+
+**Ingrédients** : 250 g de farine · 4 œufs · 50 cl de lait · 40 g de beurre (20 g fondu dans la pâte) · 500 g de champignons de Paris · 2 échalotes · 25 cl de crème fraîche · 8 tranches de jambon de dinde · 150 g de fromage râpé · 1/2 citron
+
+1. **Pâte.** Farine, sel, œufs, lait versé peu à peu en fouettant, beurre fondu : lisse et fluide ; 30 min de repos ; 8 crêpes fines, 1 min par face.
+2. **Duxelles.** Champignons hachés fin, échalotes, 10 g de beurre, 12 min à feu vif : toute l'eau s'est évaporée, ils grésillent ; jus de citron, 10 cl de crème, 2 min : farce épaisse ; sel, poivre.
+3. **Rouler.** Chaque crêpe : une tranche de jambon, 2 c. à s. de duxelles, roulée serrée ; dans le plat beurré, côte à côte.
+4. **Gratiner.** Reste de crème salé et poivré dessus, fromage ; 20 min à 200 °C : bouillonnant et doré ; salade verte vinaigrée à côté.
+
+- Version d'origine : jambon blanc de porc.
+
+**Conservation** : 2 jours au frigo.
+
+**Techniques** : Cuire une crêpe
+
+---
+
+### Potée au chou (version bœuf fumé et saucisses de volaille)
+
+*Potée · France › Bourgogne-Franche-Comté · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 2 h 30 · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Cornichon
+- ⚠️ **Allergènes** : aucun déclaré ; **possibles selon marque** : moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Très grande marmite.
+
+Le plat d'hiver des campagnes de l'Est : un chou frisé blanchi, des carottes, des navets et des pommes de terre cuits doucement dans le bouillon des viandes fumées. Le porc fumé de la recette d'origine est remplacé par un jarret de bœuf, de la poitrine de dinde fumée et des saucisses de volaille ; moutarde et cornichons à table.
+
+**Ingrédients** : 1 chou vert frisé · 1 jarret de bœuf (1 kg) · 300 g de poitrine de dinde fumée (en morceau) · 4 saucisses de volaille fumées · 6 carottes · 3 navets · 6 pommes de terre · 1 oignon piqué de 4 clous de girofle · 1 bouquet garni (thym, laurier) · 1 bocal de cornichons, moutarde forte
+
+1. **Bouillon.** Jarret et dinde fumée dans 4 l d'eau froide, porté à frémir, écume retirée ; oignon piqué, bouquet garni, poivre (pas de sel : le fumé sale) ; 1 h 30 à petit frémissement.
+2. **Chou.** Coupé en 6, plongé 5 min dans l'eau bouillante : il perd son amertume ; égoutté.
+3. **Légumes.** Chou, carottes, navets dans la marmite, 30 min ; pommes de terre et saucisses, 25 min : couteau qui entre sans forcer dans les pommes de terre, viande qui se détache de l'os.
+4. **Servir.** Viandes tranchées sur les légumes, une louche de bouillon ; moutarde et cornichons à table pour l'acidité. Le bouillon en trop fait une soupe le lendemain.
+
+- Version d'origine : jarret de porc fumé, lard, saucisses de Montbéliard.
+
+**Conservation** : 3 jours au frigo.
+
+**Techniques** : Mijoter
+
+---
+
+### Hackbraten, le pain de viande alsacien (bœuf et veau, sauce aux oignons)
+
+*Hackbraten · France › Grand Est › Alsace · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : lait, moutarde, œufs, sulfites ; **possibles selon marque** : céleri, gluten
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à four, poêle.
+
+Les Fleischkiechle (galettes de viande alsaciennes) en un seul bloc au four : même farce de viande, pain trempé, oignon et persil, moulée en pain et rôtie, avec une sauce aux oignons déglacée au vinaigre. Moins de travail, autant de goût ; avec une salade de pommes de terre.
+
+**Ingrédients** : 500 g de bœuf haché · 300 g de veau haché (épaule) · 2 tranches de pain rassis · 10 cl de lait · 1 œuf · 2 oignons · 1/2 botte de persil · 1 c. à s. de moutarde · 1 c. à s. de vinaigre de vin · 20 cl de bouillon
+
+1. **Farce.** Pain trempé dans le lait, essoré ; 1 oignon haché fondu 5 min ; viandes, pain, oignon, œuf, persil, moutarde, sel (10 g), poivre, mélangés à la main 2 min : farce qui se tient.
+2. **Mouler.** Pain ovale de 6 cm de haut dans le plat huilé, surface lissée à la main mouillée.
+3. **Cuire.** 50 à 60 min à 180 °C : dessus bruni, jus clair quand on pique au centre (70 °C à cœur) ; 10 min de repos sous une feuille.
+4. **Sauce.** 2e oignon émincé dans le jus du plat, 8 min à la poêle : doré ; vinaigre, bouillon, 3 min : sauce courte ; sur les tranches.
+
+- Version Fleischkiechle : même farce en galettes de 2 cm, 5 min par face à la poêle.
+- Recette d'origine : moitié porc, moitié bœuf.
+
+**Conservation** : 3 jours au frigo ; excellent froid en sandwich.
+
+---
+
+### Salade de bœuf grillé, feta, avocat et roquette (vinaigrette citron-moutarde)
+
+*Salade de bœuf · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 8 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle en fonte ou grill, saladier.
+
+Une salade-repas d'été : du bœuf saisi saignant et tranché fin, sur roquette, tomate, concombre, oignon rouge, avocat et feta, avec une vinaigrette moutarde-citron.
+
+**Ingrédients** : 4 tranches de bœuf à griller (bavette, rumsteck) · 1 bloc de feta (200 g) · 1 avocat · 1 tomate · 1/2 concombre · 1/2 oignon rouge · 2 poignées de roquette · 1 citron (jus) · 1 c. à c. de moutarde · 4 c. à s. d'huile d'olive
+
+1. **Vinaigrette.** Moutarde, jus de citron, 1 c. à s. de vinaigre, sel ; huile en fouettant : émulsionnée.
+2. **Bœuf.** Sorti 20 min avant, séché, salé ; poêle fumante, 2 min par face : croûte brune, cœur rose ; 5 min de repos, tranché fin contre les fibres.
+3. **Légumes.** Tomate et concombre en dés, oignon émincé très fin (5 min dans la vinaigrette pour l'adoucir), avocat en tranches arrosé de citron.
+4. **Monter.** Roquette, légumes, feta émiettée, bœuf avec son jus de repos, vinaigrette au dernier moment.
+
+**Conservation** : Le jour même.
+
+---
+
+### Médaillons de grosse courgette farcis au bœuf, sauce tomate au basilic, gratinés à la mozzarella
+
+*Courgette farcie en médaillons · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Vinaigre balsamique
+- ⚠️ **Allergènes** : lait, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four, poêle, cuillère parisienne ou petite cuillère.
+
+La solution pour les courgettes géantes du jardin : coupées en tronçons épais et creusées, farcies de bœuf haché aux échalotes, nappées d'une sauce tomate au vin blanc et au basilic, gratinées à la mozzarella.
+
+**Ingrédients** : 1 grosse courgette (1,2 kg) ou 4 rondes · 500 g de bœuf haché · 1 échalote et 1 oignon · 1 gousse d'ail · 30 cl de coulis de tomate · 10 cl de vin blanc sec · 1 mozzarella · 1 petit bouquet de basilic · 1 pincée de piment d'Espelette · 1 c. à c. de vinaigre balsamique ou de vin
+
+1. **Médaillons.** Courgette en tronçons de 4 cm, chair creusée en laissant un fond de 1 cm ; chair hachée gardée ; 10 min à 200 °C : ils commencent à s'attendrir.
+2. **Farce.** Échalote, oignon, ail, 5 min ; bœuf, 6 min en émiettant : plus de rose ; chair de courgette, 5 min : l'eau s'évapore ; sel, Espelette.
+3. **Sauce.** Vin blanc dans la poêle, 1 min ; coulis, vinaigre, basilic, 10 min : épaisse.
+4. **Cuire.** Sauce au fond du plat, médaillons farcis dessus, mozzarella en tranches ; 25 min à 190 °C : fromage doré, pointe de couteau qui traverse la courgette sans forcer.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Rouleaux croustillants de brick au bœuf et au reblochon
+
+*Rouleaux reblochon-bœuf · France › Food fusion · Entrée* · Fêtes : Apéritif dînatoire
+
+Niveau ⭐ · 15 portions · actif 30 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Poêle, plaque, pinceau.
+
+Le goût d'une tartiflette en cigare croustillant : bœuf haché aux oignons, crème et moutarde à l'ancienne, un bâtonnet de reblochon, roulés dans la brick et dorés au four. Pour l'apéritif, ou en plat avec une grande salade.
+
+**Ingrédients** : 700 g de bœuf haché · 1 reblochon · 2 oignons · 10 cl de crème fraîche · 10 cl de vin blanc · 2 c. à s. de moutarde à l'ancienne · 15 feuilles de brick · 40 g de beurre fondu · 1 salade verte et 1 c. à s. de vinaigre de cidre
+
+1. **Farce.** Oignons émincés, 8 min : blonds ; bœuf, 6 min : plus de rose ; vin blanc, 2 min ; crème et moutarde, 3 min : farce liée, pas liquide ; sel, poivre ; tiédie.
+2. **Rouler.** Feuille de brick, 2 c. à s. de farce en boudin, un bâtonnet de reblochon ; côtés rabattus, roulée serrée ; badigeonnée de beurre.
+3. **Cuire.** 15 min à 200 °C sur papier cuisson : dorés et croustillants, fromage qui perle aux bouts.
+4. **Servir.** 3 min de repos (le fromage brûle), coupés en biais ; avec la salade à la vinaigrette au vinaigre de cidre.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : Le jour même (ils ramollissent).
+
+---
+
+### Poulet mayo à l'ivoirienne (poulet mariné, rôti, nappé de sauce mayonnaise aux oignons)
+
+*Poulet mayo · Afrique subsaharienne › Côte d'Ivoire · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 50 min · coût €€
+
+- 🟡 Porc possible : Bouillon cube volaille
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : céleri, moutarde, œufs ; **possibles selon marque** : gluten, soja, sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plat à four, saladier.
+
+Un des plats de fête les plus demandés d'Abidjan : des morceaux de poulet marinés à l'ail, au gingembre et à la moutarde, rôtis, puis nappés d'une sauce à la mayonnaise, aux oignons, aux poivrons et au citron et repassés au four. Avec de l'attiéké ou des alloco.
+
+**Ingrédients** : 1,2 kg de cuisses de poulet (ou un poulet découpé) · 4 gousses d'ail · 3 cm de gingembre · 2 c. à s. de moutarde · 1 cube de bouillon · 6 c. à s. de mayonnaise maison · 2 oignons · 1 poivron vert · 1 citron vert · 1 piment frais (facultatif) *(facultatif)*
+
+1. **Mariner.** Ail et gingembre mixés, 1 c. à s. de moutarde, cube écrasé, poivre, un filet d'huile ; sur le poulet incisé, 1 h au frais (une nuit, c'est mieux).
+2. **Rôtir.** 35 min à 200 °C, retourné à mi-cuisson : peau dorée, jus clair à la piqûre.
+3. **Sauce.** Oignons et poivron émincés très fin, mayonnaise, reste de moutarde, jus du citron vert, piment haché, 2 c. à s. du jus de cuisson : nappante et acidulée.
+4. **Napper.** Sauce sur le poulet, 10 min à 220 °C : elle dore par endroits ; avec attiéké ou alloco.
+
+**Conservation** : Le jour même.
+
+---
+
+### Gésiers de poulet sautés à l'ivoirienne (oignons, tomate, poivron, piment)
+
+*Gésiers sautés · Afrique subsaharienne › Côte d'Ivoire · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 50 min · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri ; **possibles selon marque** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Cocotte, grande poêle.
+
+Les gésiers des maquis : cuits d'abord dans un bouillon parfumé pour les attendrir, puis sautés à feu vif avec oignons, tomate, poivron et piment jusqu'à ce qu'ils brillent. Avec des alloco, de l'attiéké ou en brochettes.
+
+**Ingrédients** : 800 g de gésiers de poulet nettoyés · 2 oignons · 2 tomates · 1 poivron · 3 gousses d'ail · 3 cm de gingembre · 1 piment frais · 1 cube de bouillon · 1 citron vert · 3 c. à s. d'huile
+
+1. **Attendrir.** Gésiers lavés au citron, dans l'eau avec ail, gingembre, cube, demi-oignon ; 40 min à frémissement : tendres sous la dent ; égouttés, bouillon gardé.
+2. **Saisir.** Huile très chaude, gésiers bien secs, 5 min sans trop remuer : ils dorent et grésillent.
+3. **Sauter.** Oignon et poivron en lanières, piment, 4 min ; tomates en dés et 5 cl de bouillon, 5 min : sauce courte qui enrobe et brille.
+4. **Finir.** Jus du citron vert, sel ; avec alloco ou attiéké.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Garba (attiéké, thon frit, piment et oignon cru)
+
+*Garba · Afrique subsaharienne › Côte d'Ivoire · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 15 min · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, poissons ; **possibles selon marque** : gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole à friture ou grande poêle, cuit-vapeur.
+
+Le plat populaire d'Abidjan : de l'attiéké chaud arrosé d'huile de friture, du thon (ou du poisson blanc) frit en gros morceaux, piment frais écrasé, oignon et tomate crus, sel cube. Rapide, généreux, très relevé.
+
+**Ingrédients** : 600 g d'attiéké · 600 g de thon frais en tranches (ou poisson blanc ferme) · 2 oignons · 2 tomates · 2 piments frais · 1 cube de bouillon · 1 citron vert · 30 cl d'huile de friture
+
+1. **Poisson.** Tranches salées, poivrées, frites 4 à 5 min dans 2 cm d'huile chaude (170 °C) : bien dorées, chair opaque jusqu'au centre ; égouttées, huile gardée.
+2. **Attiéké.** 10 min à la vapeur (ou 3 min au micro-ondes, couvert, avec 2 c. à s. d'eau), égrené à la fourchette : chaud et léger.
+3. **Condiments.** Oignons et tomates en dés, piments écrasés avec le cube et un peu de sel.
+4. **Servir.** Attiéké arrosé de 2 c. à s. de l'huile de friture, poisson, oignon, tomate, piment ; quelques gouttes de citron vert.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Pâtes crémeuses one-pot et poulet croustillant épicé
+
+*Pâtes au poulet frit · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 3 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri, moutarde
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle, sauteuse.
+
+La recette étudiante la plus enregistrée de @chez.zakia77 : des pâtes cuites directement dans un mélange de lait, de crème et d'eau (une seule casserole, pas d'égouttage), finies au parmesan, et des aiguillettes de poulet panées à la farine de maïs épicée, frites à la poêle.
+
+**Ingrédients** : 2 blancs de poulet · 4 c. à s. de farine de maïs (ou de blé) · 1 c. à c. de curry (+ curcuma, piment de Cayenne) · 250 g de pâtes courtes · 20 cl de lait · 20 cl de crème liquide · 60 g de parmesan râpé · 1 gousse d'ail · 1/2 citron · 5 c. à s. d'huile
+
+1. **Paner.** Poulet en aiguillettes, sel, poivre ; roulé dans la farine de maïs mélangée au curry, au curcuma et à une pincée de Cayenne.
+2. **Frire.** 5 c. à s. d'huile bien chaude, 3 min par face : doré et croustillant, plus de rose au centre ; sur papier absorbant.
+3. **Pâtes.** Ail écrasé, lait, crème, 20 cl d'eau, sel, portés à frémir ; pâtes, 10 à 12 min en remuant souvent : al dente, sauce réduite qui nappe.
+4. **Finir.** Hors du feu, parmesan, poivre, un trait de citron ; poulet tranché dessus au dernier moment pour qu'il reste croustillant.
+
+**Conservation** : Le jour même.
+
+---
+
+### Poêlée de pommes de terre et viande hachée aux épices (10 minutes de préparation)
+
+*Pommes de terre à la viande hachée · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Grande poêle avec couvercle.
+
+Un plat étudiant en une poêle : pommes de terre en petits dés dorées puis cuites à couvert, bœuf haché aux oignons, paprika et cumin, persil et un yaourt citronné à côté.
+
+**Ingrédients** : 800 g de pommes de terre · 400 g de bœuf haché · 1 oignon · 1 gousse d'ail · 1 c. à c. de paprika · 1/2 c. à c. de cumin · 1/2 botte de persil · 150 g de yaourt nature · 1/2 citron · 3 c. à s. d'huile
+
+1. **Dorer.** Pommes de terre en dés de 1,5 cm, huile chaude, 8 min sans trop remuer : faces dorées.
+2. **Cuire.** Couvert, feu moyen, 12 min en remuant 2 fois : tendres à la pointe du couteau.
+3. **Viande.** Poussées sur le côté ; oignon, ail, bœuf, paprika, cumin, sel, 6 min en émiettant : bœuf bruni ; tout mélangé, 2 min à découvert : ça croustille.
+4. **Servir.** Persil, yaourt salé et citronné à côté.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Gratin crémeux de pommes de terre et poulet
+
+*Gratin pommes de terre-poulet · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 55 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : lait, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Plat à gratin, poêle, mandoline (facultative).
+
+Un gratin dauphinois qui devient plat complet : des lamelles de pommes de terre, des morceaux de poulet dorés à l'ail et au paprika, une crème au lait muscadée et du fromage râpé gratiné.
+
+**Ingrédients** : 1 kg de pommes de terre · 3 blancs de poulet (ou 5 hauts de cuisse désossés) · 30 cl de crème liquide · 20 cl de lait · 2 gousses d'ail · 1 c. à c. de paprika · 120 g de fromage râpé · 1 pincée de muscade · 1 salade verte et sa vinaigrette moutarde
+
+1. **Poulet.** En dés, sel, paprika, 1 gousse d'ail, 5 min à la poêle : doré à l'extérieur (il finira de cuire au four).
+2. **Crème.** Crème, lait, ail écrasé, sel (1 c. à c.), poivre, muscade, portés à frémir 2 min.
+3. **Monter.** Pommes de terre en lamelles de 3 mm ; plat frotté avec la gousse d'ail coupée : moitié des lamelles, poulet, reste des lamelles ; crème chaude ; fromage.
+4. **Cuire.** 50 à 55 min à 180 °C : dessus gratiné, couteau qui traverse sans résistance ; 10 min de repos ; salade bien vinaigrée à côté.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Gâteau invisible de courgettes au chèvre et au parmesan
+
+*Gâteau invisible courgette · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à cake, mandoline.
+
+Des dizaines de lamelles de courgette prises dans un appareil aux œufs, au parmesan et au chèvre, cuites en cake : à la découpe, on voit les couches. Servi froid avec une salade, c'est le plat d'été idéal à préparer la veille.
+
+**Ingrédients** : 1 kg de courgettes · 150 g de chèvre frais · 3 œufs · 20 cl de lait · 10 cl de crème liquide · 80 g de farine · 50 g de parmesan râpé · 1 gousse d'ail · 1 petit bouquet de basilic ou de menthe · 1 citron (zeste et jus pour la salade)
+
+1. **Dégorger.** Courgettes en lamelles très fines à la mandoline, salées, 20 min ; pressées et séchées dans un torchon : elles ne rendront pas d'eau à la cuisson.
+2. **Appareil.** Œufs, lait, crème fouettés ; farine, parmesan, ail râpé, zeste, poivre : lisse.
+3. **Monter.** Courgettes, chèvre émietté et herbes mélangés délicatement dans l'appareil ; dans le moule chemisé, tassés.
+4. **Cuire.** 45 à 50 min à 180 °C : doré, lame qui ressort sèche ; refroidi puis 4 h au frigo (une nuit, c'est mieux) pour couper net ; salade au jus de citron à côté.
+
+- Version d'origine : 4 tranches de jambon en dés (jambon de dinde, même quantité).
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Pâtes au Mont d'Or fondu, champignons et vin blanc du Jura
+
+*Pâtes au Mont d'Or · France › Bourgogne-Franche-Comté · Plat*
+
+Niveau ⭐ · 3 portions · actif 15 min · repos/cuisson 25 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🍷 **Contient de l'alcool** : Vin blanc, Vinaigre de vin rouge / blanc
+- ⚠️ **Allergènes** : gluten, lait, sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Four, sauteuse.
+
+Le Mont d'Or chaud de l'hiver comtois devient sauce : la boîte rôtie au four avec ail et vin blanc, versée sur des pâtes et des champignons poêlés. Très riche : persil et poivre en quantité, et une salade bien vinaigrée à côté.
+
+**Ingrédients** : 250 g de pâtes · 1 Mont d'Or (ou reblochon) · 300 g de champignons de Paris · 1 oignon · 2 gousses d'ail · 15 cl de vin blanc sec (Jura) · 2 c. à s. de crème · 1/2 botte de persil · 1 salade verte, vinaigrette au vinaigre de vin
+
+1. **Fromage.** Boîte de Mont d'Or (dans sa boîte, couvercle ôté, bois emballé de papier aluminium), croûte incisée, 1 gousse d'ail en lamelles plantée, 5 cl de vin ; 20 min à 200 °C : coulant et bouillonnant.
+2. **Champignons.** Émincés, à feu vif, 8 min : l'eau s'évapore, ils dorent ; oignon et ail, 3 min ; reste du vin, 2 min ; crème.
+3. **Pâtes.** Cuites al dente, mêlées aux champignons avec un peu d'eau de cuisson.
+4. **Servir.** Mont d'Or versé à la cuillère sur les pâtes, persil, poivre ; salade vinaigrée.
+
+- Version d'origine : 2 saucisses de Montbéliard (porc) en rondelles avec les champignons.
+
+- **Variante Sans alcool** : Vin blanc → **bouillon + 1 c. à s. de jus de citron + un trait de jus de raisin blanc**. **À tester**. *Calcul* : porc **ok**, alcool **trace**.
+
+**Conservation** : Le jour même.
+
+---
+
+### Pâtes au pesto de vert de poireau et de persil (anti-gaspi)
+
+*Pesto de vert de poireau · France › Anti-gaspi · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 12 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Mixeur, casserole.
+
+Le vert du poireau, qu'on jette souvent, blanchi puis mixé avec du persil, du parmesan, des noix et de l'huile d'olive : un pesto doux et très vert pour des pâtes, avec un zeste de citron.
+
+**Ingrédients** : 1 beau poireau (le vert ; le blanc garde pour une fondue) · 1 bouquet de persil · 50 g de parmesan râpé · 40 g de cerneaux de noix (ou d'amandes) · 1 gousse d'ail · 10 cl d'huile d'olive · 1 citron (zeste et jus) · 350 g de pâtes
+
+1. **Blanchir.** Vert de poireau lavé (le sable se cache entre les feuilles), émincé, 3 min dans l'eau bouillante salée ; eau glacée : il garde sa couleur.
+2. **Mixer.** Poireau bien pressé, persil, noix grillées 3 min à sec, ail, parmesan, zeste, huile, 1 min : pesto épais ; sel, jus de citron.
+3. **Pâtes.** Al dente ; une louche d'eau de cuisson gardée.
+4. **Lier.** Hors du feu, pesto et eau de cuisson, en remuant : crémeux et brillant ; parmesan.
+
+**Conservation** : Pesto : 4 jours au frigo sous une couche d'huile ; se congèle. · **Zéro déchet** : **Vert de poireau** qu'on jette d'habitude : c'est lui qui fait la sauce.
+
+---
+
+### Tatin de carottes au miel et au cumin, crème au citron
+
+*Tatin de carottes · France › Anti-gaspi · Plat*
+
+Niveau ⭐ · 4 portions · actif 25 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule à manqué de 24 cm (pas à fond amovible), poêle.
+
+Une tarte renversée salée : carottes rôties dans un caramel au beurre, au miel et au cumin, sous une pâte feuilletée. On la retourne, brillante et caramélisée, et on la sert avec une crème fraîche au citron et une salade. Marche aussi avec panais, betteraves ou céleri.
+
+**Ingrédients** : 800 g de carottes (fanes gardées) · 1 pâte feuilletée · 30 g de beurre · 2 c. à s. de miel · 1 c. à c. de cumin · 2 brins de thym · 150 g de crème fraîche épaisse · 1 citron (zeste et jus) · 60 g de feta ou de chèvre (facultatif) *(facultatif)*
+
+1. **Précuire.** Carottes en tronçons de 4 cm (coupés en deux si grosses), 8 min dans l'eau bouillante salée : encore fermes.
+2. **Caraméliser.** Beurre, miel, cumin, thym dans le moule sur le feu, 2 min : ça mousse et blondit ; carottes serrées debout ou couchées, 5 min : elles brillent.
+3. **Couvrir.** Pâte posée dessus, bords rentrés contre les carottes, piquée ; 30 min à 200 °C : pâte gonflée et dorée.
+4. **Retourner.** 5 min de repos, plat posé dessus, retourné d'un coup ; feta émiettée ; crème mélangée au zeste, au jus de citron et au sel, à côté.
+
+**Conservation** : Le jour même. · **Zéro déchet** : **Fanes de carottes** en pesto (même méthode que le vert de poireau).
+
+---
+
+### Salade « westaf » (salade composée d'Afrique de l'Ouest, version œufs)
+
+*Salade westaf · Afrique subsaharienne › Côte d'Ivoire · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, grand plat de service.
+
+La salade composée des fêtes ivoiriennes et sénégalaises, montée en rangées sur un grand plat : laitue, tomates, concombre, carottes râpées, betterave, maïs, haricots verts, avocat, œufs durs, et une sauce à la mayonnaise et à la moutarde bien citronnée. Souvent avec des sardines ou du thon : ici en version végétarienne.
+
+**Ingrédients** : 1 laitue · 4 œufs · 2 tomates · 1 concombre · 2 carottes · 1 betterave cuite · 140 g de maïs doux · 200 g de haricots verts · 1 avocat · 4 c. à s. de mayonnaise maison · 1 c. à s. de moutarde · 1 citron vert
+
+1. **Cuire.** Œufs 10 min, eau glacée ; haricots verts 7 min dans l'eau salée : croquants, eau glacée.
+2. **Préparer.** Laitue émincée, tomates en quartiers, concombre en rondelles, carottes râpées, betterave en dés, maïs égoutté, avocat en tranches arrosé de citron vert.
+3. **Monter.** Laitue au fond du plat ; chaque légume en rangée bien séparée ; œufs en quartiers au centre.
+4. **Sauce.** Mayonnaise, moutarde, jus de citron vert, 2 c. à s. d'eau, sel : fluide et acidulée ; à table, chacun mélange.
+
+- Version d'origine : une boîte de sardines ou de thon en plus.
+
+**Conservation** : Le jour même.
+
+---
+
+## 2.45 Vague 8 (fin) · Auteurs des favoris du 29/10/2026 : goûters, entrées, bases et deux plats végétariens tirés de leurs
+
+### Petit fromage pané croustillant et pommes de terre rôties au paprika fumé
+
+*Fromage pané · France › Cuisine du quotidien · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque, 3 assiettes creuses, poêle.
+
+Un petit fromage à croûte fleurie (type Caprice des Dieux ou camembert) pané deux fois et doré à la poêle : croustillant dehors, coulant dedans. Avec des quartiers de pommes de terre rôtis au paprika fumé et une salade à la vinaigrette moutardée.
+
+**Ingrédients** : 2 petits fromages à croûte fleurie (200 g chacun) · 1 kg de pommes de terre · 2 c. à c. de paprika fumé · 2 œufs · 80 g de chapelure · 3 c. à s. de farine · 5 c. à s. d'huile · 1 salade verte · 1 c. à s. de vinaigre de cidre (+ 1 c. à c. de moutarde) · 1 c. à s. de confiture d'airelles ou de figues (facultatif) *(facultatif)*
+
+1. **Pommes de terre.** En quartiers, 2 c. à s. d'huile, paprika fumé, sel ; 35 min à 210 °C, retournées à mi-cuisson : dorées, tendres au cœur.
+2. **Paner.** Fromages coupés en deux (ou entiers), bien froids ; farine, œuf battu, chapelure, puis une 2e fois œuf et chapelure : aucune faille, sinon il coule ; 15 min au congélateur.
+3. **Dorer.** 3 c. à s. d'huile, feu moyen, 2 à 3 min par face : chapelure dorée, fromage qui se bombe sans percer.
+4. **Servir.** Tout de suite, avec les pommes de terre, la salade vinaigrée et la confiture.
+
+**Conservation** : Le jour même.
+
+---
+
+### Boules de pommes de terre croustillantes au cœur de mozzarella
+
+*Boules de purée à la mozzarella · France › Cuisine du quotidien · Entrée* · Fêtes : Apéritif dînatoire
+
+Niveau ⭐ · 16 portions · actif 30 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, poêle profonde ou friteuse, 3 assiettes creuses.
+
+Une purée bien sèche relevée d'ail et de parmesan, roulée autour d'un dé de mozzarella, panée et frite : croustillante, filante au milieu. Idéal pour finir un reste de purée ; une sauce yaourt-citron à côté.
+
+**Ingrédients** : 700 g de pommes de terre farineuses · 125 g de mozzarella (bien égouttée) en dés · 40 g de parmesan râpé · 1 gousse d'ail · 2 œufs (1 pour la purée) · 100 g de chapelure · 3 c. à s. de farine · 1/2 botte de persil ou de ciboulette · 150 g de yaourt + ½ citron (sauce) · 50 cl d'huile de friture
+
+1. **Purée.** Pommes de terre cuites à l'eau salée 20 min, bien égouttées, 2 min dans la casserole sur le feu : elles fument et sèchent ; écrasées avec parmesan, ail râpé, 1 œuf, herbes, sel ; refroidie.
+2. **Former.** 16 boules, un dé de mozzarella au centre, bien refermées ; farine, œuf battu, chapelure.
+3. **Frire.** 3 min à 175 °C, par petites quantités : bien dorées ; égouttées. (Au four : 20 min à 210 °C, badigeonnées d'huile.)
+4. **Sauce.** Yaourt, jus de citron, sel, herbes : à côté.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Soupe froide de concombre à l'orange, au zaatar et à la fleur d'oranger
+
+*Soupe froide marocaine au concombre · Afrique du Nord › Maroc · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 1 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Eau de fleur d'oranger
+- ⚠️ **Allergènes** : lait, sésame
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur, passoire fine.
+
+Une soupe glacée des jours de canicule : concombre mixé avec du jus d'orange et de citron, quelques gouttes de fleur d'oranger, servie très froide avec un filet d'huile d'olive et du zaatar.
+
+**Ingrédients** : 2 concombres · 2 oranges (jus) + quelques suprêmes · 1 citron · 1 c. à c. d'eau de fleur d'oranger · 1 c. à s. de zaatar · 2 c. à s. d'huile d'olive · 100 g de yaourt grec (facultatif) *(facultatif)* · 1 pincée de sel
+
+1. **Mixer.** Concombres épluchés à moitié (une peau sur deux), épépinés, jus d'orange et de citron, sel, 1 min : très lisse ; passés au tamis pour une soupe soyeuse.
+2. **Parfumer.** Fleur d'oranger, goutte à goutte : elle doit se deviner, pas dominer.
+3. **Refroidir.** 1 h au frigo au moins : bien glacée.
+4. **Servir.** Une cuillerée de yaourt, suprêmes d'orange, huile d'olive, zaatar.
+
+**Conservation** : 1 jour au frigo.
+
+---
+
+### Velouté d'épluchures et de talons d'asperges (anti-gaspi)
+
+*Velouté d'asperges anti-gaspi · France › Anti-gaspi · Entrée*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, mixeur, passoire fine.
+
+Les épluchures et les bouts durs des asperges blanches ou vertes, qu'on jette d'habitude, cuits avec une pomme de terre et un oignon : mixés et filtrés, ils donnent un velouté très parfumé. Pendant que les asperges elles-mêmes servent à un autre plat.
+
+**Ingrédients** : 400 g d'épluchures et talons d'asperges (1 kg d'asperges) · 1 pomme de terre · 1 oignon · 20 g de beurre · 80 cl d'eau ou de bouillon de légumes · 10 cl de crème · 1/2 citron · 1/2 botte de ciboulette *(facultatif)*
+
+1. **Suer.** Oignon émincé, beurre, 5 min : translucide.
+2. **Cuire.** Épluchures, talons coupés en morceaux, pomme de terre en dés, bouillon ; 25 min à frémissement : talons tendres.
+3. **Mixer et filtrer.** 2 min au mixeur ; passé au tamis fin en pressant : on retire les fibres ; velouté lisse.
+4. **Finir.** Crème, sel, quelques gouttes de citron : il se réveille ; ciboulette.
+
+**Conservation** : 2 jours au frigo ; se congèle. · **Zéro déchet** : **Épluchures d'asperges** c'est tout le velouté.
+
+---
+
+### Barres cookie s'mores (biscuit, chocolat, guimauve grillée)
+
+*S'mores cookie bars · Amérique du Nord › États-Unis · Goûter / dessert* · Fêtes : Anniversaire
+
+Niveau ⭐ · 16 portions · actif 20 min · repos/cuisson 30 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : fruits à coque, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Moule carré de 20 cm, papier cuisson.
+
+La vidéo la plus enregistrée de tous les profils lus cette semaine : une pâte à cookie en deux couches, du chocolat et des guimauves au milieu, et des guimauves dorées sous le gril sur le dessus, comme au feu de camp. Un fond de biscuits graham remplacé par des petits-beurre.
+
+**Ingrédients** : 170 g de beurre fondu · 200 g de sucre (150 g de cassonade + 50 g de blanc) · 1 œuf + 1 jaune · 250 g de farine · 1/2 c. à c. de bicarbonate · 100 g de petits-beurre écrasés · 150 g de chocolat au lait en carrés · 150 g de guimauves sans gélatine de porc (bœuf ou végétales) · 100 g de pépites de chocolat
+
+1. **Pâte.** Beurre fondu tiède, sucres, 1 min ; œuf et jaune : lisse et brillant ; farine, bicarbonate, sel, la moitié des petits-beurre, pépites : pâte souple.
+2. **Monter.** Moitié de la pâte tassée au fond du moule chemisé ; carrés de chocolat, la moitié des guimauves coupées en deux ; reste de pâte en morceaux aplatis par-dessus, sans tout couvrir.
+3. **Cuire.** 25 min à 175 °C : bords dorés, centre encore un peu mou.
+4. **Griller.** Reste des guimauves et des biscuits dessus, 2 à 3 min sous le gril en surveillant : guimauves gonflées et dorées (elles brûlent vite) ; 2 h de repos avant de couper au couteau huilé.
+
+- Guimauves : la plupart contiennent de la gélatine de porc ; lire l'étiquette (gélatine bovine, halal, ou agar-agar).
+
+**Conservation** : 4 jours dans une boîte fermée.
+
+---
+
+### Moelleux au chocolat cuit à la poêle (sans four)
+
+*Gâteau à la poêle · France › Cuisine du quotidien · Goûter / dessert*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle antiadhésive de 20 cm avec couvercle.
+
+Le gâteau des studios sans four : une pâte au chocolat très simple cuite à couvert sur feu très doux, qui monte comme au four. Fondant au centre si on l'arrête tôt.
+
+**Ingrédients** : 100 g de chocolat noir · 80 g de beurre · 2 œufs · 80 g de sucre · 50 g de farine · 1/2 c. à c. de levure chimique · 1 pincée de sel
+
+1. **Fondre.** Chocolat et beurre, 1 min au micro-ondes puis remués : lisse.
+2. **Pâte.** Œufs et sucre fouettés 1 min : mousseux ; chocolat ; farine, levure, sel : pâte lisse.
+3. **Cuire.** Poêle beurrée et farinée (ou papier cuisson au fond), pâte versée ; couvercle, feu le plus doux, 20 à 25 min sans ouvrir les 15 premières : dessus pris, centre qui tremble à peine.
+4. **Démouler.** 10 min de repos, retourné sur une assiette.
+
+**Conservation** : 2 jours sous cloche.
+
+---
+
+### Fleurs de pommes feuilletées (roses de pommes)
+
+*Roses de pommes · France › Cuisine du quotidien · Dessert*
+
+Niveau ⭐ · 6 portions · actif 25 min · repos/cuisson 40 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à 6 muffins, casserole, mandoline (facultative).
+
+De fines lamelles de pomme attendries, alignées sur une bande de pâte feuilletée tartinée de confiture, roulées en rose et cuites dans un moule à muffins. Un dessert qui fait de l'effet avec trois fois rien.
+
+**Ingrédients** : 2 pommes rouges · 1 citron (jus) · 1 pâte feuilletée · 2 c. à s. de confiture d'abricot · 10 g de beurre fondu · 1 c. à s. de sucre glace · 1 pincée de cannelle (facultatif) *(facultatif)*
+
+1. **Attendrir.** Pommes épépinées non épluchées, en demi-rondelles de 2 mm ; eau et jus de citron, 3 min au micro-ondes (ou 2 min à frémissement) : souples, elles plient sans casser ; séchées.
+2. **Bandes.** Pâte en 6 bandes de 5 cm ; confiture tiédie étalée, cannelle.
+3. **Rouler.** Lamelles posées en chevauchant sur le bord haut, peau qui dépasse ; bas de la bande replié dessus ; roulé sans serrer ; dans le moule beurré.
+4. **Cuire.** 35 à 40 min à 190 °C (papier aluminium dessus après 20 min si les pétales brunissent) : pâte dorée jusqu'au cœur ; beurre fondu au pinceau, sucre glace.
+
+**Conservation** : Le jour même.
+
+---
+
+### Dampfnudeln (petits pains cuits à la vapeur, dessous caramélisé, sauce vanille)
+
+*Dampfnudeln · France › Grand Est › Alsace · Dessert*
+
+Niveau ⭐⭐ · 8 portions · actif 30 min · repos/cuisson 2 h 00 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse à fond épais avec couvercle bien hermétique.
+
+La spécialité d'Alsace du Nord et du Palatinat : des boules de pâte levée cuites dans une sauteuse couverte, dans un fond de lait, de beurre et de sucre. La vapeur les gonfle, le fond caramélise et leur fait une croûte croustillante. Avec une compote ou une crème anglaise.
+
+**Ingrédients** : 500 g de farine · 20 cl de lait tiède (+ 15 cl pour la cuisson) · 7 g de levure boulangère sèche · 60 g de sucre (+ 1 c. à s.) · 1 œuf · 80 g de beurre (50 g dans la pâte) · 1 pincée de sel · 1 compote de pommes (ou crème anglaise)
+
+1. **Pâte.** Farine, sucre, levure, sel ; lait tiède et œuf ; pétrie 8 min ; 50 g de beurre mou, 3 min : lisse et élastique ; 1 h à couvert : doublée.
+2. **Bouler.** 8 boules bien serrées, 20 min de repos sous un torchon.
+3. **Cuire.** Dans la sauteuse : 15 cl de lait, 30 g de beurre, 1 c. à s. de sucre, une pincée de sel ; boules dedans ; couvercle fermé (un torchon humide autour s'il fuit) ; 20 à 25 min à feu moyen-doux SANS OUVRIR : elles retombent si on soulève.
+4. **Le signal.** Quand le liquide est évaporé, on entend un léger grésillement et ça sent le caramel : le dessous est doré et croustillant ; feu coupé, 2 min ; servies chaudes avec la compote.
+
+- Version salée du Palatinat : avec une soupe de pommes de terre.
+
+**Conservation** : Le jour même (réchauffées, elles perdent leur croûte).
+
+**Techniques** : Pétrir une pâte riche
+
+---
+
+### Buns fourrés fromage-dinde à la moutarde (façon boulangerie industrielle, en mieux)
+
+*Bun's maison · France › Cuisine du quotidien · Pain*
+
+Niveau ⭐⭐ · 10 portions · actif 40 min · repos/cuisson 2 h 35 · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Robot ou saladier, plaque.
+
+Des petits pains briochés moelleux fourrés d'un mélange de fromage râpé, de jambon de dinde, de crème et de moutarde, comme ceux du rayon boulangerie du supermarché, mais sans additifs. Pour le goûter salé, la boîte à déjeuner ou l'apéritif.
+
+**Ingrédients** : 500 g de farine T45 · 25 cl de lait tiède · 8 g de levure boulangère sèche · 20 g de sucre · 1 œuf (+ 1 jaune pour dorer) · 70 g de beurre mou · 200 g de fromage râpé (comté, emmental) · 4 tranches de jambon de dinde · 2 c. à s. de crème fraîche · 1 c. à s. de moutarde
+
+1. **Pâte.** Farine, sucre, 10 g de sel, levure ; lait et œuf ; pétrie 5 min ; beurre mou par morceaux, 10 min : souple, se décolle du bol ; 1 h 30 à couvert : doublée.
+2. **Farce.** Fromage, jambon en petits dés, crème, moutarde, poivre : pâte épaisse.
+3. **Façonner.** 10 pâtons de 85 g étalés en disques ; une cuillerée de farce au centre ; bords ramenés et pincés, soudure dessous ; sur la plaque ; 45 min : bien gonflés.
+4. **Cuire.** Jaune d'œuf au pinceau, 18 à 20 min à 180 °C : dorés, dessous qui sonne creux.
+
+- Version d'origine : jambon blanc de porc. Version végétarienne : champignons poêlés à la place du jambon.
+
+**Conservation** : 2 jours dans un sac ; se congèlent cuits.
+
+**Techniques** : Pétrir une pâte riche
+
+---
+
+### Lait concentré sucré maison (lait réduit au sucre)
+
+*Lait concentré sucré · France › Cuisine du quotidien · Base*
+
+Niveau ⭐ · 1 portions · actif 5 min · repos/cuisson 50 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole à fond épais, spatule.
+
+L'astuce de grand-mère la plus enregistrée de tous les profils lus : du lait entier et du sucre réduits très doucement jusqu'à une crème épaisse et blonde qui remplace le lait concentré en boîte dans les gâteaux, les flans et le café.
+
+**Ingrédients** : 1 l de lait entier · 200 g de sucre · 20 g de beurre (facultatif, pour le brillant) *(facultatif)* · 1/2 gousse de vanille (facultatif) *(facultatif)*
+
+1. **Dissoudre.** Lait et sucre (et la gousse fendue) dans la casserole, à feu moyen en remuant : le sucre fond, ça frémit.
+2. **Réduire.** Feu doux, 45 à 50 min à petits frémissements, en remuant toutes les 5 min et en raclant le fond : il ne doit pas accrocher ; il passe de blanc à ivoire.
+3. **Le signal.** Il reste environ 30 cl et il nappe la cuillère (le doigt laisse une trace nette) ; beurre ; il épaissit encore en refroidissant.
+4. **Conserver.** En bocal ébouillanté, refroidi puis au frigo.
+
+- Prolongé 15 min de plus, il devient une confiture de lait (dulce de leche).
+
+**Conservation** : 10 jours au frigo.
+
+---
+
+### Mayonnaise sans œuf au lait de soja (au mixeur plongeant)
+
+*Mayonnaise sans œuf · France › Cuisine du quotidien · Sauce*
+
+Niveau ⭐ · 6 portions · actif 5 min · repos/cuisson 0 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, soja ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Mixeur plongeant, verre haut et étroit.
+
+Une mayonnaise ferme sans œuf, pour les allergies ou les menus végétaliens : la protéine du lait de soja fait l'émulsion. Tout dans un verre, un coup de mixeur, prête en une minute.
+
+**Ingrédients** : 5 cl de lait de soja nature (non sucré), froid · 15 cl d'huile de tournesol, froide · 1 c. à c. de moutarde · 1 c. à c. de vinaigre de cidre (ou de jus de citron) · 1 pincée de sel
+
+1. **Mettre en verre.** Lait de soja, moutarde, vinaigre, sel au fond ; huile par-dessus ; 1 min d'attente : les couches se séparent.
+2. **Mixer.** Mixeur posé au fond, en marche, sans bouger 10 s : la mayonnaise se forme en dessous ; on remonte lentement : tout prend.
+3. **Ajuster.** Plus ferme : un filet d'huile en mixant ; plus souple : 1 c. à c. d'eau.
+4. **Goûter.** Sel et vinaigre rectifiés ; en pot fermé au frigo, elle raffermit encore en 1 h.
+
+- Avec de l'aquafaba (eau de pois chiches, même quantité) à la place du soja : même méthode.
+- Le lait d'avoine ou d'amande ne prend pas : c'est la protéine du soja qui fait tenir.
+
+**Conservation** : 5 jours au frigo.
+
+---
+
+### Sirop de fraise maison (fraises et sucre, 15 minutes)
+
+*Sirop de fraise · France › Cuisine du quotidien · Boisson*
+
+Niveau ⭐ · 12 portions · actif 15 min · repos/cuisson 15 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : aucun déclaré
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, passoire fine, bouteille.
+
+Un sirop au vrai goût de fraise, sans colorant ni arôme : des fraises bien mûres (même un peu abîmées) cuites quelques minutes avec le sucre, puis filtrées sans écraser. Dans l'eau, le lait, sur un yaourt ou une glace.
+
+**Ingrédients** : 500 g de fraises bien mûres · 350 g de sucre · 25 cl d'eau · 1/2 citron (jus)
+
+1. **Cuire.** Fraises équeutées et coupées, sucre, eau ; à frémissement 10 min : les fraises pâlissent, le liquide devient rouge vif.
+2. **Filtrer.** Passoire fine, 15 min sans presser : le sirop reste limpide (la pulpe sert sur un yaourt).
+3. **Finir.** Jus de citron ; 2 min d'ébullition : sirop qui nappe.
+4. **Conserver.** En bouteille ébouillantée, refroidi, au frigo ; une part pour six d'eau fraîche.
+
+**Conservation** : 3 semaines au frigo. · **Zéro déchet** : **Fraises trop mûres** c'est le meilleur usage ; la pulpe filtrée va sur un yaourt.
+
+---
+
+## 2.46 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les
 
 ### Hauts de cuisse au miel, à l'ail et au citron poivré (au four)
 
@@ -29664,7 +30799,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **2945 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **3077 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 

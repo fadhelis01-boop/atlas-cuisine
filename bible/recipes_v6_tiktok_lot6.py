@@ -1,0 +1,171 @@
+# -*- coding: utf-8 -*-
+"""Vague 8 (suite) · Vidéos les plus enregistrées des auteurs des favoris du 29/10/2026, jamais explorés jusqu'ici (onglet
+« Populaire » de leur profil public : @chesterfoodies, @chez.zakia77, @les.delice.d.ines, @hoplabretz, @chefsquare,
+@lardoise_porto_vecchio…). Aucun n'a de site de recettes. Plats d'abord, avec autant de plats végétariens que nécessaire
+pour garder un tiers du catalogue sans viande ni poisson. Fiches réécrites et créditées. NON TESTÉES (Tome 7 §2)."""
+from recipes_v2_base import *
+from recipes_v6_tiktok_plats import C, VB
+
+DINDE_J = "Jambon de dinde / de poulet"; RACLETTE = "Reblochon / raclette / mont-d'or"; CHEVRE = "Chèvre (frais, bûche)"
+
+# ———————————————————————————————— France, régions (@chesterfoodies, @hoplabretz)
+K("ficelle_picarde_dinde", "Ficelle picarde (crêpes roulées aux champignons, gratinées ; version jambon de dinde)", "Ficelle picarde", "France › Hauts-de-France", "P", 2, 4, 40, 20, "€€", "Poêle à crêpes, poêle, plat à gratin.",
+  "L'entrée chaude des brasseries d'Amiens devenue plat complet : des crêpes garnies d'une tranche de jambon et d'une duxelles de champignons à la crème, roulées, nappées de crème et gratinées. Ici avec du jambon de dinde.",
+  [f"250 g|de farine|{F55}|2", f"4|œufs|{OEUF}|2", f"50 cl|de lait|{LAIT}|2", f"40 g|de beurre (20 g fondu dans la pâte)|{BEURRE}|1", "500 g|de champignons de Paris|Champignon de Paris|3", f"2|échalotes|{ECH}|1", f"25 cl|de crème fraîche|{CF}|2", f"8|tranches de jambon de dinde|{DINDE_J}|2", f"150 g|de fromage râpé|{GRUY}|2", f"1/2|citron|{CIT}|1"],
+  ["**Pâte.** Farine, sel, œufs, lait versé peu à peu en fouettant, beurre fondu : lisse et fluide ; 30 min de repos ; 8 crêpes fines, 1 min par face.",
+   "**Duxelles.** Champignons hachés fin, échalotes, 10 g de beurre, 12 min à feu vif : toute l'eau s'est évaporée, ils grésillent ; jus de citron, 10 cl de crème, 2 min : farce épaisse ; sel, poivre.",
+   "**Rouler.** Chaque crêpe : une tranche de jambon, 2 c. à s. de duxelles, roulée serrée ; dans le plat beurré, côte à côte.",
+   "**Gratiner.** Reste de crème salé et poivré dessus, fromage ; 20 min à 200 °C : bouillonnant et doré ; salade verte vinaigrée à côté."],
+  tips=["Version d'origine : jambon blanc de porc."], keep="2 jours au frigo.", age=3, cats=["enfants"], profil=["gras"], tech=["Cuire une crêpe"],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7641610161060252951")))
+K("potee_chou_version", "Potée au chou (version bœuf fumé et saucisses de volaille)", "Potée", "France › Bourgogne-Franche-Comté", "P", 1, 6, 30, 150, "€€", "Très grande marmite.",
+  "Le plat d'hiver des campagnes de l'Est : un chou frisé blanchi, des carottes, des navets et des pommes de terre cuits doucement dans le bouillon des viandes fumées. Le porc fumé de la recette d'origine est remplacé par un jarret de bœuf, de la poitrine de dinde fumée et des saucisses de volaille ; moutarde et cornichons à table.",
+  ["1|chou vert frisé|Chou vert / frisé / kale|3", "1|jarret de bœuf (1 kg)|Jarret de bœuf|3", "300 g|de poitrine de dinde fumée (en morceau)|Poitrine de dinde fumée|2", "4|saucisses de volaille fumées|Saucisse de bœuf / de veau / de volaille|2", f"6|carottes|{CAROTTE}|2", "3|navets|Navet / navet boule d'or|1", f"6|pommes de terre|{PDT}|2", f"1|oignon piqué de 4 clous de girofle|{OIG}|1", f"1|bouquet garni (thym, laurier)|{LAURIER}|1", "1|bocal de cornichons, moutarde forte|Cornichon|1"],
+  ["**Bouillon.** Jarret et dinde fumée dans 4 l d'eau froide, porté à frémir, écume retirée ; oignon piqué, bouquet garni, poivre (pas de sel : le fumé sale) ; 1 h 30 à petit frémissement.",
+   "**Chou.** Coupé en 6, plongé 5 min dans l'eau bouillante : il perd son amertume ; égoutté.",
+   "**Légumes.** Chou, carottes, navets dans la marmite, 30 min ; pommes de terre et saucisses, 25 min : couteau qui entre sans forcer dans les pommes de terre, viande qui se détache de l'os.",
+   "**Servir.** Viandes tranchées sur les légumes, une louche de bouillon ; moutarde et cornichons à table pour l'acidité. Le bouillon en trop fait une soupe le lendemain."],
+  tips=["Version d'origine : jarret de porc fumé, lard, saucisses de Montbéliard."], keep="3 jours au frigo.", age=3, cats=[], fetes=["Repas de famille"], profil=["gras", "acide"], tech=["Mijoter"],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7429023486397484321")))
+K("hackbraten_alsacien", "Hackbraten, le pain de viande alsacien (bœuf et veau, sauce aux oignons)", "Hackbraten", "France › Grand Est › Alsace", "P", 1, 6, 25, 60, "€", "Plat à four, poêle.",
+  "Les Fleischkiechle (galettes de viande alsaciennes) en un seul bloc au four : même farce de viande, pain trempé, oignon et persil, moulée en pain et rôtie, avec une sauce aux oignons déglacée au vinaigre. Moins de travail, autant de goût ; avec une salade de pommes de terre.",
+  [f"500 g|de bœuf haché|{HACHE}|3", "300 g|de veau haché (épaule)|Épaule / tendron de veau|2", f"2|tranches de pain rassis|Pain rassis (réservé)|1", f"10 cl|de lait|{LAIT}|1", f"1|œuf|{OEUF}|1", f"2|oignons|{OIG}|2", f"1/2|botte de persil|{PERSIL}|1", f"1 c. à s.|de moutarde|{DIJON}|1", "1 c. à s.|de vinaigre de vin|Vinaigre de vin rouge / blanc|1", f"20 cl|de bouillon|{BOUILLON}|1"],
+  ["**Farce.** Pain trempé dans le lait, essoré ; 1 oignon haché fondu 5 min ; viandes, pain, oignon, œuf, persil, moutarde, sel (10 g), poivre, mélangés à la main 2 min : farce qui se tient.",
+   "**Mouler.** Pain ovale de 6 cm de haut dans le plat huilé, surface lissée à la main mouillée.",
+   "**Cuire.** 50 à 60 min à 180 °C : dessus bruni, jus clair quand on pique au centre (70 °C à cœur) ; 10 min de repos sous une feuille.",
+   "**Sauce.** 2e oignon émincé dans le jus du plat, 8 min à la poêle : doré ; vinaigre, bouillon, 3 min : sauce courte ; sur les tranches."],
+  tips=["Version Fleischkiechle : même farce en galettes de 2 cm, 5 min par face à la poêle.", "Recette d'origine : moitié porc, moitié bœuf."],
+  keep="3 jours au frigo ; excellent froid en sandwich.", age=1, cats=["enfants"], profil=["gras", "acide"], side="kartoffelsalat",
+  credit=C(("@hoplabretz", "https://www.tiktok.com/@hoplabretz/video/7663838601590918422"), ("@hoplabretz", "https://www.tiktok.com/@hoplabretz/video/7663839465638661399"), ("@hoplabretz", "https://www.tiktok.com/@hoplabretz/video/7636700792761863427")))
+K("salade_boeuf_feta_avocat", "Salade de bœuf grillé, feta, avocat et roquette (vinaigrette citron-moutarde)", "Salade de bœuf", "France › Cuisine du quotidien", "P", 1, 4, 20, 8, "€€", "Poêle en fonte ou grill, saladier.",
+  "Une salade-repas d'été : du bœuf saisi saignant et tranché fin, sur roquette, tomate, concombre, oignon rouge, avocat et feta, avec une vinaigrette moutarde-citron.",
+  ["4|tranches de bœuf à griller (bavette, rumsteck)|Rumsteck|3", "1|bloc de feta (200 g)|Feta|2", "1|avocat|Avocat|2", f"1|tomate|{TOM}|1", "1/2|concombre|Concombre|1", "1/2|oignon rouge|Oignon rouge|1", "2|poignées de roquette|Roquette / mâche|2", f"1|citron (jus)|{CIT}|2", f"1 c. à c.|de moutarde|{DIJON}|1", f"4 c. à s.|d'huile d'olive|{HO}|1"],
+  ["**Vinaigrette.** Moutarde, jus de citron, 1 c. à s. de vinaigre, sel ; huile en fouettant : émulsionnée.",
+   "**Bœuf.** Sorti 20 min avant, séché, salé ; poêle fumante, 2 min par face : croûte brune, cœur rose ; 5 min de repos, tranché fin contre les fibres.",
+   "**Légumes.** Tomate et concombre en dés, oignon émincé très fin (5 min dans la vinaigrette pour l'adoucir), avocat en tranches arrosé de citron.",
+   "**Monter.** Roquette, légumes, feta émiettée, bœuf avec son jus de repos, vinaigrette au dernier moment."],
+  keep="Le jour même.", age=3, cats=["salade", "express"], profil=["leger", "acide"],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7653067329017826592")))
+K("medaillons_courgette_farcis", "Médaillons de grosse courgette farcis au bœuf, sauce tomate au basilic, gratinés à la mozzarella", "Courgette farcie en médaillons", "France › Cuisine du quotidien", "P", 1, 4, 25, 40, "€", "Plat à four, poêle, cuillère parisienne ou petite cuillère.",
+  "La solution pour les courgettes géantes du jardin : coupées en tronçons épais et creusées, farcies de bœuf haché aux échalotes, nappées d'une sauce tomate au vin blanc et au basilic, gratinées à la mozzarella.",
+  ["1|grosse courgette (1,2 kg) ou 4 rondes|Courgette|3", f"500 g|de bœuf haché|{HACHE}|3", f"1|échalote et 1 oignon|{ECH}|1", f"1|gousse d'ail|{AIL}|1", f"30 cl|de coulis de tomate|{PELEES}|2", "10 cl|de vin blanc sec|Vin blanc|1", "1|mozzarella|Mozzarella / burrata|2", "1|petit bouquet de basilic|Basilic|1", "1 pincée|de piment d'Espelette|Piment d'Espelette|1", "1 c. à c.|de vinaigre balsamique ou de vin|Vinaigre balsamique|1"],
+  ["**Médaillons.** Courgette en tronçons de 4 cm, chair creusée en laissant un fond de 1 cm ; chair hachée gardée ; 10 min à 200 °C : ils commencent à s'attendrir.",
+   "**Farce.** Échalote, oignon, ail, 5 min ; bœuf, 6 min en émiettant : plus de rose ; chair de courgette, 5 min : l'eau s'évapore ; sel, Espelette.",
+   "**Sauce.** Vin blanc dans la poêle, 1 min ; coulis, vinaigre, basilic, 10 min : épaisse.",
+   "**Cuire.** Sauce au fond du plat, médaillons farcis dessus, mozzarella en tranches ; 25 min à 190 °C : fromage doré, pointe de couteau qui traverse la courgette sans forcer."],
+  keep="2 jours au frigo.", age=3, cats=["enfants"], profil=["acide"], var=[VB],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7666098687273192736")))
+K("rouleaux_brick_reblochon_boeuf", "Rouleaux croustillants de brick au bœuf et au reblochon", "Rouleaux reblochon-bœuf", "France › Food fusion", "E", 1, 15, 30, 15, "€€", "Poêle, plaque, pinceau.",
+  "Le goût d'une tartiflette en cigare croustillant : bœuf haché aux oignons, crème et moutarde à l'ancienne, un bâtonnet de reblochon, roulés dans la brick et dorés au four. Pour l'apéritif, ou en plat avec une grande salade.",
+  [f"700 g|de bœuf haché|{HACHE}|3", f"1|reblochon|{RACLETTE}|3", f"2|oignons|{OIG}|1", f"10 cl|de crème fraîche|{CF}|1", "10 cl|de vin blanc|Vin blanc|1", f"2 c. à s.|de moutarde à l'ancienne|{DIJON}|1", "15|feuilles de brick|Pâte filo / feuilles de brick|3", f"40 g|de beurre fondu|{BEURRE}|1", "1|salade verte et 1 c. à s. de vinaigre de cidre|Vinaigre de cidre|1"],
+  ["**Farce.** Oignons émincés, 8 min : blonds ; bœuf, 6 min : plus de rose ; vin blanc, 2 min ; crème et moutarde, 3 min : farce liée, pas liquide ; sel, poivre ; tiédie.",
+   "**Rouler.** Feuille de brick, 2 c. à s. de farce en boudin, un bâtonnet de reblochon ; côtés rabattus, roulée serrée ; badigeonnée de beurre.",
+   "**Cuire.** 15 min à 200 °C sur papier cuisson : dorés et croustillants, fromage qui perle aux bouts.",
+   "**Servir.** 3 min de repos (le fromage brûle), coupés en biais ; avec la salade à la vinaigrette au vinaigre de cidre."],
+  keep="Le jour même (ils ramollissent).", age=6, cats=["fetes"], fetes=["Apéritif dînatoire"], profil=["gras"], var=[VB],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7663856534018903329")))
+
+# ———————————————————————————————— Côte d'Ivoire (@les.delice.d.ines)
+K("poulet_mayo_ivoirien", "Poulet mayo à l'ivoirienne (poulet mariné, rôti, nappé de sauce mayonnaise aux oignons)", "Poulet mayo", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 25, 50, "€€", "Plat à four, saladier.",
+  "Un des plats de fête les plus demandés d'Abidjan : des morceaux de poulet marinés à l'ail, au gingembre et à la moutarde, rôtis, puis nappés d'une sauce à la mayonnaise, aux oignons, aux poivrons et au citron et repassés au four. Avec de l'attiéké ou des alloco.",
+  [f"1,2 kg|de cuisses de poulet (ou un poulet découpé)|{CUISSE}|3", f"4|gousses d'ail|{AIL}|1", f"3 cm|de gingembre|{GING}|1", f"2 c. à s.|de moutarde|{DIJON}|2", "1|cube de bouillon|Bouillon cube volaille|1", "6 c. à s.|de mayonnaise maison|SUB:mayonnaise|3", f"2|oignons|{OIG}|2", f"1|poivron vert|{POIVRON}|1", f"1|citron vert|{CITV}|2", f"1|piment frais (facultatif)|{PIMENT}|1?"],
+  ["**Mariner.** Ail et gingembre mixés, 1 c. à s. de moutarde, cube écrasé, poivre, un filet d'huile ; sur le poulet incisé, 1 h au frais (une nuit, c'est mieux).",
+   "**Rôtir.** 35 min à 200 °C, retourné à mi-cuisson : peau dorée, jus clair à la piqûre.",
+   "**Sauce.** Oignons et poivron émincés très fin, mayonnaise, reste de moutarde, jus du citron vert, piment haché, 2 c. à s. du jus de cuisson : nappante et acidulée.",
+   "**Napper.** Sauce sur le poulet, 10 min à 220 °C : elle dore par endroits ; avec attiéké ou alloco."],
+  keep="Le jour même.", age=3, cats=["fetes"], fetes=["Repas de famille"], profil=["acide", "gras"],
+  credit=C(("@les.delice.d.ines", "https://www.tiktok.com/@les.delice.d.ines/video/7583102253746113814"), ("@les.delice.d.ines", "https://www.tiktok.com/@les.delice.d.ines/video/7502199787941399830")))
+K("gesiers_sautes_ivoiriens", "Gésiers de poulet sautés à l'ivoirienne (oignons, tomate, poivron, piment)", "Gésiers sautés", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 20, 50, "€", "Cocotte, grande poêle.",
+  "Les gésiers des maquis : cuits d'abord dans un bouillon parfumé pour les attendrir, puis sautés à feu vif avec oignons, tomate, poivron et piment jusqu'à ce qu'ils brillent. Avec des alloco, de l'attiéké ou en brochettes.",
+  ["800 g|de gésiers de poulet nettoyés|Foies / gésiers de volaille|3", f"2|oignons|{OIG}|2", f"2|tomates|{TOM}|2", f"1|poivron|{POIVRON}|1", f"3|gousses d'ail|{AIL}|1", f"3 cm|de gingembre|{GING}|1", f"1|piment frais|{PIMENT}|1", "1|cube de bouillon|Bouillon cube volaille|1", f"1|citron vert|{CITV}|2", f"3 c. à s.|d'huile|{HN}|1"],
+  ["**Attendrir.** Gésiers lavés au citron, dans l'eau avec ail, gingembre, cube, demi-oignon ; 40 min à frémissement : tendres sous la dent ; égouttés, bouillon gardé.",
+   "**Saisir.** Huile très chaude, gésiers bien secs, 5 min sans trop remuer : ils dorent et grésillent.",
+   "**Sauter.** Oignon et poivron en lanières, piment, 4 min ; tomates en dés et 5 cl de bouillon, 5 min : sauce courte qui enrobe et brille.",
+   "**Finir.** Jus du citron vert, sel ; avec alloco ou attiéké."],
+  keep="2 jours au frigo.", age=6, cats=[], profil=["epice", "acide"],
+  credit=C(("@les.delice.d.ines", "https://www.tiktok.com/@les.delice.d.ines/video/7538937713366437142")))
+K("garba", "Garba (attiéké, thon frit, piment et oignon cru)", "Garba", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 20, 15, "€", "Casserole à friture ou grande poêle, cuit-vapeur.",
+  "Le plat populaire d'Abidjan : de l'attiéké chaud arrosé d'huile de friture, du thon (ou du poisson blanc) frit en gros morceaux, piment frais écrasé, oignon et tomate crus, sel cube. Rapide, généreux, très relevé.",
+  ["600 g|d'attiéké|Manioc / attiéké / garri|3", "600 g|de thon frais en tranches (ou poisson blanc ferme)|Thon (frais)|3", f"2|oignons|{OIG}|2", f"2|tomates|{TOM}|1", f"2|piments frais|{PIMENT}|2", "1|cube de bouillon|Bouillon cube volaille|1", f"1|citron vert|{CITV}|1", f"30 cl|d'huile de friture|{HN}|1"],
+  ["**Poisson.** Tranches salées, poivrées, frites 4 à 5 min dans 2 cm d'huile chaude (170 °C) : bien dorées, chair opaque jusqu'au centre ; égouttées, huile gardée.",
+   "**Attiéké.** 10 min à la vapeur (ou 3 min au micro-ondes, couvert, avec 2 c. à s. d'eau), égrené à la fourchette : chaud et léger.",
+   "**Condiments.** Oignons et tomates en dés, piments écrasés avec le cube et un peu de sel.",
+   "**Servir.** Attiéké arrosé de 2 c. à s. de l'huile de friture, poisson, oignon, tomate, piment ; quelques gouttes de citron vert."],
+  keep="Le jour même.", age=6, cats=["express"], profil=["poisson", "epice", "acide"], tech=["Frire en sécurité"],
+  credit=C(("@les.delice.d.ines", "https://www.tiktok.com/@les.delice.d.ines/video/7548221077017677078")))
+
+# ———————————————————————————————— cuisine étudiante (@chez.zakia77)
+K("pates_cremeuses_poulet_croustillant", "Pâtes crémeuses one-pot et poulet croustillant épicé", "Pâtes au poulet frit", "France › Cuisine du quotidien", "P", 1, 3, 20, 20, "€", "Grande poêle, sauteuse.",
+  "La recette étudiante la plus enregistrée de @chez.zakia77 : des pâtes cuites directement dans un mélange de lait, de crème et d'eau (une seule casserole, pas d'égouttage), finies au parmesan, et des aiguillettes de poulet panées à la farine de maïs épicée, frites à la poêle.",
+  [f"2|blancs de poulet|{BLANC_P}|3", "4 c. à s.|de farine de maïs (ou de blé)|Farine de maïs|1", f"1 c. à c.|de curry (+ curcuma, piment de Cayenne)|{CUR}|1", f"250 g|de pâtes courtes|{PATES}|3", f"20 cl|de lait|{LAIT}|1", f"20 cl|de crème liquide|{CL}|2", f"60 g|de parmesan râpé|{PARM}|2", f"1|gousse d'ail|{AIL}|1", f"1/2|citron|{CIT}|1", f"5 c. à s.|d'huile|{HN}|1"],
+  ["**Paner.** Poulet en aiguillettes, sel, poivre ; roulé dans la farine de maïs mélangée au curry, au curcuma et à une pincée de Cayenne.",
+   "**Frire.** 5 c. à s. d'huile bien chaude, 3 min par face : doré et croustillant, plus de rose au centre ; sur papier absorbant.",
+   "**Pâtes.** Ail écrasé, lait, crème, 20 cl d'eau, sel, portés à frémir ; pâtes, 10 à 12 min en remuant souvent : al dente, sauce réduite qui nappe.",
+   "**Finir.** Hors du feu, parmesan, poivre, un trait de citron ; poulet tranché dessus au dernier moment pour qu'il reste croustillant."],
+  keep="Le jour même.", age=3, cats=["enfants", "express"], profil=["gras"],
+  credit=C(("@chez.zakia77", "https://www.tiktok.com/@chez.zakia77/video/7684681383746293024"), ("@dinewithtwo", "https://www.tiktok.com/@dinewithtwo/video/7679132477545319710")))
+K("pommes_terre_hache_poele", "Poêlée de pommes de terre et viande hachée aux épices (10 minutes de préparation)", "Pommes de terre à la viande hachée", "France › Cuisine du quotidien", "P", 1, 4, 10, 30, "€", "Grande poêle avec couvercle.",
+  "Un plat étudiant en une poêle : pommes de terre en petits dés dorées puis cuites à couvert, bœuf haché aux oignons, paprika et cumin, persil et un yaourt citronné à côté.",
+  [f"800 g|de pommes de terre|{PDT}|3", f"400 g|de bœuf haché|{HACHE}|3", f"1|oignon|{OIG}|1", f"1|gousse d'ail|{AIL}|1", f"1 c. à c.|de paprika|{PAPRIKA}|1", f"1/2 c. à c.|de cumin|{CUMIN}|1", f"1/2|botte de persil|{PERSIL}|1", f"150 g|de yaourt nature|{YAO}|1", f"1/2|citron|{CIT}|1", f"3 c. à s.|d'huile|{HN}|1"],
+  ["**Dorer.** Pommes de terre en dés de 1,5 cm, huile chaude, 8 min sans trop remuer : faces dorées.",
+   "**Cuire.** Couvert, feu moyen, 12 min en remuant 2 fois : tendres à la pointe du couteau.",
+   "**Viande.** Poussées sur le côté ; oignon, ail, bœuf, paprika, cumin, sel, 6 min en émiettant : bœuf bruni ; tout mélangé, 2 min à découvert : ça croustille.",
+   "**Servir.** Persil, yaourt salé et citronné à côté."],
+  keep="2 jours au frigo.", age=3, cats=["enfants", "express"], profil=["acide"],
+  credit=C(("@chez.zakia77", "https://www.tiktok.com/@chez.zakia77/video/7680879542939962656")))
+K("gratin_pommes_terre_poulet", "Gratin crémeux de pommes de terre et poulet", "Gratin pommes de terre-poulet", "France › Cuisine du quotidien", "P", 1, 6, 25, 55, "€", "Plat à gratin, poêle, mandoline (facultative).",
+  "Un gratin dauphinois qui devient plat complet : des lamelles de pommes de terre, des morceaux de poulet dorés à l'ail et au paprika, une crème au lait muscadée et du fromage râpé gratiné.",
+  [f"1 kg|de pommes de terre|{PDT}|3", f"3|blancs de poulet (ou 5 hauts de cuisse désossés)|{BLANC_P}|3", f"30 cl|de crème liquide|{CL}|2", f"20 cl|de lait|{LAIT}|1", f"2|gousses d'ail|{AIL}|1", f"1 c. à c.|de paprika|{PAPRIKA}|1", f"120 g|de fromage râpé|{GRUY}|2", f"1 pincée|de muscade|{MUSC}|1", "1|salade verte et sa vinaigrette moutarde|Vinaigre de vin rouge / blanc|1"],
+  ["**Poulet.** En dés, sel, paprika, 1 gousse d'ail, 5 min à la poêle : doré à l'extérieur (il finira de cuire au four).",
+   "**Crème.** Crème, lait, ail écrasé, sel (1 c. à c.), poivre, muscade, portés à frémir 2 min.",
+   "**Monter.** Pommes de terre en lamelles de 3 mm ; plat frotté avec la gousse d'ail coupée : moitié des lamelles, poulet, reste des lamelles ; crème chaude ; fromage.",
+   "**Cuire.** 50 à 55 min à 180 °C : dessus gratiné, couteau qui traverse sans résistance ; 10 min de repos ; salade bien vinaigrée à côté."],
+  keep="2 jours au frigo.", age=1, cats=["enfants"], profil=["gras"],
+  credit=C(("@chez.zakia77", "https://www.tiktok.com/@chez.zakia77/video/7693522584146545952")))
+
+# ———————————————————————————————— plats végétariens (un tiers du catalogue sans viande ni poisson)
+K("gateau_invisible_courgette_chevre", "Gâteau invisible de courgettes au chèvre et au parmesan", "Gâteau invisible courgette", "France › Cuisine du quotidien", "P", 1, 6, 25, 50, "€", "Moule à cake, mandoline.",
+  "Des dizaines de lamelles de courgette prises dans un appareil aux œufs, au parmesan et au chèvre, cuites en cake : à la découpe, on voit les couches. Servi froid avec une salade, c'est le plat d'été idéal à préparer la veille.",
+  ["1 kg|de courgettes|Courgette|3", f"150 g|de chèvre frais|{CHEVRE}|2", f"3|œufs|{OEUF}|2", f"20 cl|de lait|{LAIT}|1", f"10 cl|de crème liquide|{CL}|1", f"80 g|de farine|{F55}|1", f"50 g|de parmesan râpé|{PARM}|2", f"1|gousse d'ail|{AIL}|1", "1|petit bouquet de basilic ou de menthe|Basilic|1", f"1|citron (zeste et jus pour la salade)|{CIT}|1"],
+  ["**Dégorger.** Courgettes en lamelles très fines à la mandoline, salées, 20 min ; pressées et séchées dans un torchon : elles ne rendront pas d'eau à la cuisson.",
+   "**Appareil.** Œufs, lait, crème fouettés ; farine, parmesan, ail râpé, zeste, poivre : lisse.",
+   "**Monter.** Courgettes, chèvre émietté et herbes mélangés délicatement dans l'appareil ; dans le moule chemisé, tassés.",
+   "**Cuire.** 45 à 50 min à 180 °C : doré, lame qui ressort sèche ; refroidi puis 4 h au frigo (une nuit, c'est mieux) pour couper net ; salade au jus de citron à côté."],
+  tips=["Version d'origine : 4 tranches de jambon en dés (jambon de dinde, même quantité)."], keep="3 jours au frigo.", age=1, cats=["vegetarien", "pique_nique"], profil=["leger", "acide"],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7662760543517691169")))
+K("pates_mont_dor_champignons", "Pâtes au Mont d'Or fondu, champignons et vin blanc du Jura", "Pâtes au Mont d'Or", "France › Bourgogne-Franche-Comté", "P", 1, 3, 15, 25, "€€", "Four, sauteuse.",
+  "Le Mont d'Or chaud de l'hiver comtois devient sauce : la boîte rôtie au four avec ail et vin blanc, versée sur des pâtes et des champignons poêlés. Très riche : persil et poivre en quantité, et une salade bien vinaigrée à côté.",
+  [f"250 g|de pâtes|{PATES}|3", f"1|Mont d'Or (ou reblochon)|{RACLETTE}|3", "300 g|de champignons de Paris|Champignon de Paris|2", f"1|oignon|{OIG}|1", f"2|gousses d'ail|{AIL}|1", "15 cl|de vin blanc sec (Jura)|Vin blanc|1", f"2 c. à s.|de crème|{CF}|1", f"1/2|botte de persil|{PERSIL}|1", "1|salade verte, vinaigrette au vinaigre de vin|Vinaigre de vin rouge / blanc|1"],
+  ["**Fromage.** Boîte de Mont d'Or (dans sa boîte, couvercle ôté, bois emballé de papier aluminium), croûte incisée, 1 gousse d'ail en lamelles plantée, 5 cl de vin ; 20 min à 200 °C : coulant et bouillonnant.",
+   "**Champignons.** Émincés, à feu vif, 8 min : l'eau s'évapore, ils dorent ; oignon et ail, 3 min ; reste du vin, 2 min ; crème.",
+   "**Pâtes.** Cuites al dente, mêlées aux champignons avec un peu d'eau de cuisson.",
+   "**Servir.** Mont d'Or versé à la cuillère sur les pâtes, persil, poivre ; salade vinaigrée."],
+  tips=["Version d'origine : 2 saucisses de Montbéliard (porc) en rondelles avec les champignons."], keep="Le jour même.", age=6, cats=["vegetarien"], profil=["gras"], var=[VB],
+  credit=C(("@chesterfoodies", "https://www.tiktok.com/@chesterfoodies/video/7687233833816608033")))
+K("pates_pesto_vert_poireau", "Pâtes au pesto de vert de poireau et de persil (anti-gaspi)", "Pesto de vert de poireau", "France › Anti-gaspi", "P", 1, 4, 20, 12, "€", "Mixeur, casserole.",
+  "Le vert du poireau, qu'on jette souvent, blanchi puis mixé avec du persil, du parmesan, des noix et de l'huile d'olive : un pesto doux et très vert pour des pâtes, avec un zeste de citron.",
+  ["1|beau poireau (le vert ; le blanc garde pour une fondue)|Poireau|3", f"1|bouquet de persil|{PERSIL}|2", f"50 g|de parmesan râpé|{PARM}|2", "40 g|de cerneaux de noix (ou d'amandes)|Noix|1", f"1|gousse d'ail|{AIL}|1", f"10 cl|d'huile d'olive|{HO}|2", f"1|citron (zeste et jus)|{CIT}|2", f"350 g|de pâtes|{PATES}|3"],
+  ["**Blanchir.** Vert de poireau lavé (le sable se cache entre les feuilles), émincé, 3 min dans l'eau bouillante salée ; eau glacée : il garde sa couleur.",
+   "**Mixer.** Poireau bien pressé, persil, noix grillées 3 min à sec, ail, parmesan, zeste, huile, 1 min : pesto épais ; sel, jus de citron.",
+   "**Pâtes.** Al dente ; une louche d'eau de cuisson gardée.",
+   "**Lier.** Hors du feu, pesto et eau de cuisson, en remuant : crémeux et brillant ; parmesan."],
+  keep="Pesto : 4 jours au frigo sous une couche d'huile ; se congèle.", age=3, cats=["vegetarien", "express"], profil=["leger", "acide"], zw=[("Vert de poireau", "qu'on jette d'habitude : c'est lui qui fait la sauce.")],
+  credit=C(("@chefsquare", "https://www.tiktok.com/@chefsquare/video/7467224817830235414")))
+K("tatin_carottes", "Tatin de carottes au miel et au cumin, crème au citron", "Tatin de carottes", "France › Anti-gaspi", "P", 1, 4, 25, 40, "€", "Moule à manqué de 24 cm (pas à fond amovible), poêle.",
+  "Une tarte renversée salée : carottes rôties dans un caramel au beurre, au miel et au cumin, sous une pâte feuilletée. On la retourne, brillante et caramélisée, et on la sert avec une crème fraîche au citron et une salade. Marche aussi avec panais, betteraves ou céleri.",
+  [f"800 g|de carottes (fanes gardées)|{CAROTTE}|3", "1|pâte feuilletée|Pâte feuilletée (prête)|3", f"30 g|de beurre|{BEURRE}|1", f"2 c. à s.|de miel|{MIEL}|1", f"1 c. à c.|de cumin|{CUMIN}|1", f"2|brins de thym|{THYM}|1", f"150 g|de crème fraîche épaisse|{CF}|2", f"1|citron (zeste et jus)|{CIT}|2", "60 g|de feta ou de chèvre (facultatif)|Feta|1?"],
+  ["**Précuire.** Carottes en tronçons de 4 cm (coupés en deux si grosses), 8 min dans l'eau bouillante salée : encore fermes.",
+   "**Caraméliser.** Beurre, miel, cumin, thym dans le moule sur le feu, 2 min : ça mousse et blondit ; carottes serrées debout ou couchées, 5 min : elles brillent.",
+   "**Couvrir.** Pâte posée dessus, bords rentrés contre les carottes, piquée ; 30 min à 200 °C : pâte gonflée et dorée.",
+   "**Retourner.** 5 min de repos, plat posé dessus, retourné d'un coup ; feta émiettée ; crème mélangée au zeste, au jus de citron et au sel, à côté."],
+  keep="Le jour même.", age=3, cats=["vegetarien"], profil=["sucre", "acide"], zw=[("Fanes de carottes", "en pesto (même méthode que le vert de poireau).")],
+  credit=C(("@chefsquare", "https://www.tiktok.com/@chefsquare/video/7094295651227372806")))
+K("salade_westaf", "Salade « westaf » (salade composée d'Afrique de l'Ouest, version œufs)", "Salade westaf", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 30, 15, "€", "Casserole, grand plat de service.",
+  "La salade composée des fêtes ivoiriennes et sénégalaises, montée en rangées sur un grand plat : laitue, tomates, concombre, carottes râpées, betterave, maïs, haricots verts, avocat, œufs durs, et une sauce à la mayonnaise et à la moutarde bien citronnée. Souvent avec des sardines ou du thon : ici en version végétarienne.",
+  ["1|laitue|Salade (laitue, batavia)|2", f"4|œufs|{OEUF}|3", f"2|tomates|{TOM}|1", "1|concombre|Concombre|1", f"2|carottes|{CAROTTE}|1", "1|betterave cuite|Betterave (crue/cuite)|1", "140 g|de maïs doux|Maïs doux|1", "200 g|de haricots verts|Haricots verts|2", "1|avocat|Avocat|2", "4 c. à s.|de mayonnaise maison|SUB:mayonnaise|2", f"1 c. à s.|de moutarde|{DIJON}|1", f"1|citron vert|{CITV}|2"],
+  ["**Cuire.** Œufs 10 min, eau glacée ; haricots verts 7 min dans l'eau salée : croquants, eau glacée.",
+   "**Préparer.** Laitue émincée, tomates en quartiers, concombre en rondelles, carottes râpées, betterave en dés, maïs égoutté, avocat en tranches arrosé de citron vert.",
+   "**Monter.** Laitue au fond du plat ; chaque légume en rangée bien séparée ; œufs en quartiers au centre.",
+   "**Sauce.** Mayonnaise, moutarde, jus de citron vert, 2 c. à s. d'eau, sel : fluide et acidulée ; à table, chacun mélange."],
+  tips=["Version d'origine : une boîte de sardines ou de thon en plus."], keep="Le jour même.", age=3, cats=["vegetarien", "salade", "fetes"], fetes=["Repas de famille"], profil=["leger", "acide"],
+  credit=C(("@les.delice.d.ines", "https://www.tiktok.com/@les.delice.d.ines/video/7696793098105392416")))

@@ -227,7 +227,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
           "Pains, pâtes": "pains", "Sauces": "sauces", "Fait maison sans additifs": "fait_maison", "Desserts": "desserts", "Boissons": "boissons",
           "Techniques": "techniques", "Zéro déchet": "zero_dechet", "À vérifier": "a_verifier", "Hors cuisine": None, "Moyen-Orient": "moyen_orient"}
 imports = []
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""

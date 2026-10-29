@@ -5,11 +5,11 @@ favoris_createurs_2026-10-22_classes.md au format de tiktok_favoris_classes.md, 
 Seuls le lien, l'auteur et un titre court tiré de la légende sont publiés (crédit + lien, rien n'est copié).
 Les favoris hors cuisine n'ont jamais été relevés (ils restent privés)."""
 import json, os, re
-from classement import ALCOHOL, PORK, clean, nrm, section_of
+from classement import ALCOHOL, PORK, clean, nrm, section_from_fiche, section_of
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = json.load(open(os.path.join(HERE, "prive", "legendes_tiktok.json"), encoding="utf-8"))
-ORDER = ["🎉", "🌍 Afrique", "🌍 Maghreb", "🌍 Moyen-Orient", "🌏 Asie", "🌍 Europe : Italie", "🇫🇷 France", "🌎 Amériques", "🍔", "🥖", "🥫", "🍯", "🍰", "🥤", "🔪", "♻️", "❓"]
+ORDER = ["🎉", "🌍 Afrique", "🌍 Maghreb", "🌍 Moyen-Orient", "🌏 Asie", "🌍 Europe : Italie", "🌍 Europe : autres", "🇫🇷 France", "🌎 Amériques", "🍔", "🥖", "🥫", "🍯", "🍰", "🥤", "🔪", "♻️", "❓"]
 
 def title_of(desc):
     t = re.sub(r"#\S+|@\S+", " ", desc or "")
@@ -24,6 +24,7 @@ for url, v in DB.items():
     desc = v.get("desc", "")
     t = title_of(desc)
     sec = section_of(t + " " + desc[:200])
+    if sec and sec.startswith("❓"): sec = section_from_fiche(url) or sec  # vidéo d'une fiche : la rubrique de la fiche
     if sec and sec.startswith("❓"):  # titre trop vague : on lit plus loin dans la légende (sans les rubriques boissons/techniques, trop faciles à déclencher)
         alt = section_of(desc[:700])
         if alt and not alt.startswith(("❓", "🥤", "🔪")): sec = alt

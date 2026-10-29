@@ -180,7 +180,7 @@
 - [japanese potato egg salad 🥗](https://www.tiktok.com/@pjrlss/video/7652324007760514312) · @pjrlss
 - [(sans légende)](https://www.tiktok.com/@carolcarolin82/photo/7646077842291313952) · @carolcarolin82 · carrousel photo
 - [🥩 22 Sautés de Bœuf aux Oignons Caramélisés 🧅✨ 1. Classique : 400 g bœuf, 2 oignons, 20 g beurre, 2 càs…](https://www.tiktok.com/@le.cheveux.sur.la.soupe/photo/7645335684659694880) · @le.cheveux.sur.la.soupe · carrousel photo
-- [Salade de bœuf thaï WhatsApp All clad: 0608374779 c’est super bon et rafraîchissant, il y a plein de…](https://www.tiktok.com/@assia_cuisine_facile/video/7643932207110704417) · @assia_cuisine_facile
+- [Salade de bœuf thaï](https://www.tiktok.com/@assia_cuisine_facile/video/7643932207110704417) · @assia_cuisine_facile
 - [今回使った材料です🧑‍🍳 ↓↓↓ じゃがいも 2個 チーズ 適量 塩胡椒 適量 片栗粉 大さじ2 コンソメ 小さじ1 ケチャップ 適量 塩 適量 これで何か作って！【カリもちポテト】](https://www.tiktok.com/@kuni_kitchen92/video/7632647118133480720) · @kuni_kitchen92
 - [Et vous ? vous aimez bien ce genre de plat ?](https://www.tiktok.com/@vi_cuisine/video/7624200619481386262) · @vi_cuisine
 - [Sticky Garlic Herb Lamb Chops Recipe by Cook with Nabeela](https://www.tiktok.com/@cookwithnabeela/video/7641982420526402838) · @cookwithnabeela

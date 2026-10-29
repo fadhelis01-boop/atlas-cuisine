@@ -20,16 +20,16 @@ def urls():
         if m and m.group(1) not in seen and not section.startswith(("Lire", "Synthèse")):
             seen.add(m.group(1)); out.append({"url": m.group(1), "from": "favoris", "section": section})
     # relevé du 22/10/2026 (compte connecté) : les favoris ajoutés depuis le 14/10, et ceux qui manquaient
-    fav = os.path.join(HERE, "prive", "favoris_2026-10-22.txt")
-    if os.path.exists(fav):
-        for p in open(fav, encoding="utf-8").read().split():
-            u = "https://www.tiktok.com/" + p
-            if u not in seen: seen.add(u); out.append({"url": u, "from": "favoris", "section": "relevé 22/10"})
-    extra = os.path.join(HERE, "prive", "createurs_2026-10-22.txt")  # vidéos choisies sur les profils des créateurs
-    if os.path.exists(extra):
-        for p in open(extra, encoding="utf-8").read().split():
-            u = "https://www.tiktok.com/" + p
-            if u not in seen: seen.add(u); out.append({"url": u, "from": "createurs", "section": "profil créateur"})
+    # relevés datés (compte connecté) : prive/favoris_AAAA-MM-JJ.txt, et les vidéos choisies sur les profils des créateurs
+    # prive/createurs_AAAA-MM-JJ.txt (22/10/2026, 29/10/2026…)
+    import glob
+    for kind, frm in (("favoris", "favoris"), ("createurs", "createurs")):
+        for f in sorted(glob.glob(os.path.join(HERE, "prive", f"{kind}_*.txt"))):
+            day = os.path.basename(f)[len(kind) + 1:-4]
+            label = f"relevé {day[8:10]}/{day[5:7]}" if kind == "favoris" else f"profil créateur {day[8:10]}/{day[5:7]}"
+            for p in open(f, encoding="utf-8").read().split():
+                u = "https://www.tiktok.com/" + p
+                if u not in seen: seen.add(u); out.append({"url": u, "from": frm, "section": label})
     brut = json.load(open(os.path.join(HERE, "createurs_tiktok_brut.json"), encoding="utf-8"))
     for _, vids in brut.items():
         for v in vids:

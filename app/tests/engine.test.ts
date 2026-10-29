@@ -9,5 +9,6 @@ import "./e5-audit-dev-ux";
 import "./e6-variete-idees";
 import "./e7-favoris-tiktok";
 import "./e8-frigo";
+import "./e9-favoris-2026-10-29";
 
 console.log(`\n${passedCount()} contrôles OK`);
