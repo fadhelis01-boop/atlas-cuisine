@@ -227,6 +227,8 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
           "Pains, pâtes": "pains", "Sauces": "sauces", "Fait maison sans additifs": "fait_maison", "Desserts": "desserts", "Boissons": "boissons",
           "Techniques": "techniques", "Zéro déchet": "zero_dechet", "À vérifier": "a_verifier", "Hors cuisine": None, "Moyen-Orient": "moyen_orient"}
 imports = []
+sys.path.insert(0, IMP)
+from hors_cuisine import is_hors_cuisine as _hors_cuisine  # liste privée (recettes-classees/prive), vide si absente
 for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
@@ -239,6 +241,7 @@ for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tikto
             continue
         m = re.match(r"^- \[(.*)\]\((https://[^)]+)\)(.*)$", line.strip())
         if not m or sec in (None, "skip"): continue
+        if _hors_cuisine(m.group(2)): continue  # favori hors cuisine (liste privée) : jamais publié
         rest = m.group(3)
         if "rangée aussi" in rest: continue
         author = (re.search(r"@([\w.]+)", rest) or [None, ""])[1] if source == "TikTok" else                  ((re.search(r"▶ ([^·]+)", rest) or [None, ""])[1].strip() if source in ("YouTube", "Ajouts") else "Cooking with Morgane")

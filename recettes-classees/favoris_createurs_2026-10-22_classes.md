@@ -1,7 +1,7 @@
 # 📲 Favoris TikTok du 22/10/2026 et vidéos populaires des créateurs suivis, classés pour ATLAS
 
 > Relevé le 22/10/2026 : les favoris ajoutés depuis le 14/10 (compte connecté par le propriétaire) et, pour les créateurs suivis, les vidéos les plus populaires de leur profil public. Une page à la fois, sans contourner la protection de TikTok.
-> **242 vidéos de cuisine classées**, 41 écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.
+> **222 vidéos de cuisine classées**, 38 écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.
 > Liens crédités uniquement : les vidéos se lisent dans ATLAS par l'intégration officielle de TikTok ; rien n'est copié.
 > Triées par nombre d'enregistrements dans chaque rubrique.
 
@@ -38,7 +38,7 @@
 - [NEMS AU POULET 🥢 Salut la famille, aujourd’hui je vous partage ma recette des nems au poulet maison !](https://www.tiktok.com/@jerome.cuisine/video/7464552519591578902) · @jerome.cuisine
 - [Recette détaillée : Les amis, aujourd’hui on s’attaque à un incontournable que vous êtes nombreux à adorer…](https://www.tiktok.com/@olivier.lin1/video/7695431670148680982) · @olivier.lin1 · 🐖 porc probable
 
-## 🌏 Asie : Chine & Taïwan (9)
+## 🌏 Asie : Chine & Taïwan (8)
 
 - [Recette détaillée : les amis, aujourd’hui une recette délicieuse de nouilles, hyper rapide et surtout…](https://www.tiktok.com/@olivier.lin1/video/7626423384427007254) · @olivier.lin1
 - [BOEUF AUX OIGNONS](https://www.tiktok.com/@jerome.cuisine/video/7328868354935000352) · @jerome.cuisine
@@ -48,7 +48,6 @@
 - [LE SECRET CHINOIS du POULET 🍗 JUTEUX (Même le BLANC !) 🤯 Stop au poulet sec ! Regarde la fin pour le…](https://www.tiktok.com/@wokundgluck/video/7578490268094057750) · @wokundgluck
 - [Recette détaillée : aujourd’hui les amis, une recette que énormément de personnes adorent : le poulet Kung…](https://www.tiktok.com/@olivier.lin1/video/7644616858217319702) · @olivier.lin1 · 🍷 alcool
 - [Ton prochain plat : des cuisses de poulet désossées à la citronnelle et au citron 🍋. Tu fais une marinade…](https://www.tiktok.com/@cooking.with.morgane/video/7684186507468459296) · @cooking.with.morgane
-- [Tu veux connaître les plateformes que les consommateurs chinois utilisent tous les jours ? Dans cette…](https://www.tiktok.com/@lacadmie.des.entre/video/7663832755456806176) · @lacadmie.des.entre
 
 ## 🌏 Asie : Japon (1)
 
@@ -198,7 +197,7 @@
 - [On parle souvent de technique en pâtisserie. Mais pour une tarte au citron, avant la technique, il y a le…](https://www.tiktok.com/@nicolaslepatissier/video/7613447096233938198) · @nicolaslepatissier
 - [Au programme : Pourquoi l'eau bouillante est l'ennemie de votre viande. La technique du trempage à l'eau…](https://www.tiktok.com/@wokundgluck/video/7593865197199052054) · @wokundgluck
 
-## ❓ À vérifier (titre trop vague) (101)
+## ❓ À vérifier (titre trop vague) (82)
 
 - [Receta pan de ajo](https://www.tiktok.com/@marcpizza_/video/7617912424817102102) · @marcpizza_
 - [Pan de ajo en molde](https://www.tiktok.com/@marcpizza_/video/7594535052608883990) · @marcpizza_
@@ -238,20 +237,16 @@
 - [Vous avez été nombreux à me demander une recette “secrète”, et aujourd’hui je fais plaisir à plusieurs…](https://www.tiktok.com/@olivier.lin1/video/7629026897850125590) · @olivier.lin1 · 🐖 porc probable · 🍷 alcool
 - [On cuisine ensemble le fameux](https://www.tiktok.com/@jerome.cuisine/video/7607818290538335510) · @jerome.cuisine
 - [Ma dose de collagène à 0 €](https://www.tiktok.com/@lesgourmandisesdeloubna/video/7561509196538137878) · @lesgourmandisesdeloubna
-- [Voici la traduction complète : Enregistre ce post. Reviens-y. Utilise-le. Ça peut vraiment changer ta…](https://www.tiktok.com/@stphaniedavid6/video/7668299091465620769) · @stphaniedavid6
 - [Cette recette d’escargot est incroyable 🤤](https://www.tiktok.com/@yaoraissa/video/7637099293903490326) · @yaoraissa
 - [Chicken Cheese Handi Recipe. Please Subscribe to my YouTube Channel.](https://www.tiktok.com/@cookwithnabeela/video/7533932694422572310) · @cookwithnabeela
 - [🍉Salade fraîcheur de l’été Pour une dizaine de personnes: ½ grosse pastèque 1 melon jaune 3 concombres 2…](https://www.tiktok.com/@lesgourmandisesdeloubna/video/7656061477777886496) · @lesgourmandisesdeloubna
 - [Egg Potato Curry Recipe](https://www.tiktok.com/@cookwithnabeela/video/7496842620350713110) · @cookwithnabeela
 - [On prépare ensemble un punch maracuja 😍 C’est un incontournable pour les fêtes de fin d’année et comme on…](https://www.tiktok.com/@jerome.cuisine/video/7698427477764345120) · @jerome.cuisine · 🍷 alcool
-- [Tu tires un fil jusqu'à ta chambre… et tout se complique ⚡🔥 On bricole pièce par pièce : devine ce que tu…](https://www.tiktok.com/@sciencesdecouvert4/video/7698745801610366241) · @sciencesdecouvert4
 - [🇮🇹Ciabatta et burrata di bufala tout simplement🥖🫶 . Et vous vous avez déjà testé ?](https://www.tiktok.com/@feenixchef/video/7410477377479888160) · @feenixchef
 - [SALADE DE POULPE Cuire le poulpe dans l’eau bouillante salée avec deux feuilles de laurier , 3 gousses…](https://www.tiktok.com/@lesgourmandisesdeloubna/video/7660477760950799649) · @lesgourmandisesdeloubna
 - [Recette détaillée : avec la canicule, j’essaie de vous proposer des recettes simples, faciles, hyper…](https://www.tiktok.com/@olivier.lin1/video/7654999195543145750) · @olivier.lin1
 - [Tartare de fuet 🇪🇸✨️ 1/2 saucisson (fuet de préférence) 1/2 échalote 1 Cas de capre 1 gros cornichon aigre…](https://www.tiktok.com/@comment_cuisiner/video/7602306413917981974) · @comment_cuisiner · 🐖 porc probable
 - [Koué , le village c’est tellement bon 🤤](https://www.tiktok.com/@yaoraissa/video/7629633105459940630) · @yaoraissa
-- [🧼 Le planning ménage ultime pour garder une maison propre toute l’année ! ✨ Pas besoin de passer des…](https://www.tiktok.com/@inner_glowup/video/7683928952636738848) · @inner_glowup
-- [Tableau de bord, second cerveau, bilan du soir, agent de contenu, équipe d'IA : 5 projets à construire…](https://www.tiktok.com/@benjamin.ai26/video/7696548847593671968) · @benjamin.ai26
 - [Murgh Kali Mirch Curry](https://www.tiktok.com/@cookwithnabeela/video/7507979904017878294) · @cookwithnabeela
 - [Mange d’abord !😉](https://www.tiktok.com/@dadyeats/video/7652824116268944673) · @dadyeats
 - [Recette détaillée : avec les températures qu'on a en ce moment, difficile de trouver mieux qu'un bon…](https://www.tiktok.com/@olivier.lin1/video/7653843411379997955) · @olivier.lin1
@@ -275,29 +270,14 @@
 - [🍚 Riz au chorizo mijoté à l’ancienne 👨‍👩‍👧‍👦 Nombre de personnes 4 personnes ⏱️ Temps Préparation : 15…](https://www.tiktok.com/@cheffehelene/video/7598681806593903902) · @cheffehelene · 🐖 porc probable
 - [. 🍓 Le Riz Rose aux Fraises Préparation du riz : Placez du riz blanc cru dans un récipient et ajoutez des…](https://www.tiktok.com/@wokundgluck/video/7594461495484812566) · @wokundgluck
 - [Envie de réussir tes macarons à tous les coups? 🌈 Suis mes conseils pour des macarons parfaits !](https://www.tiktok.com/@lessecretsdegeoffrey/video/7336157621738605856) · @lessecretsdegeoffrey
-- [Annule ton abonnement Higgsfield higgsfield.ai](https://www.tiktok.com/@bariqrifki/video/7687367606830894356) · @bariqrifki
 - [Faites cette délicieuse recette chez vous](https://www.tiktok.com/@worldsmile__8/video/7682521825326271777) · @worldsmile__8
 - [Cédric Grolet risque de me tuer mais je te révèle sa célèbre recette de pistache en trompe l’œil 😋🌰…](https://www.tiktok.com/@lessecretsdegeoffrey/video/7401819230909304096) · @lessecretsdegeoffrey
-- [comment fonctionne un moteur de voiture, de façon simple.](https://www.tiktok.com/@inge.autodidacte/video/7698325810553359648) · @inge.autodidacte
-- [stral](https://www.tiktok.com/@laurentvoanh_2025/video/7631238893387582722) · @laurentvoanh_2025
-- [Profite de l'opportunité si toi aussi tu veux arriver ici au Canada.](https://www.tiktok.com/@jb.service.dimmig/video/7696043195657882900) · @jb.service.dimmig
 - [Comment garnir une poche à douille proprement (sans en mettre partout) C’est joli hein ! Tu veux que je te…](https://www.tiktok.com/@nicolaslepatissier/video/7610850896326544662) · @nicolaslepatissier
 - [Poêlée de pommes de terre, oignons & lardons croustillants 👥 Pour deux personnes ⏱️ Temps de préparation :…](https://www.tiktok.com/@cheffehelene/video/7598536322395032863) · @cheffehelene · 🐖 porc probable
-- [Si je devais lancer un nouveau business en Afrique aujourd’hui, je regarderais en priorité les secteurs…](https://www.tiktok.com/@lacadmie.des.entre/video/7672466857810545953) · @lacadmie.des.entre
 - [Ton placard cache un plat à 2,80€](https://www.tiktok.com/@lardoise_porto_vecchio/video/7696440651596008736) · @lardoise_porto_vecchio
 - [Suprême de volaille, mon secret pour une cuisson juteuse et goûteuse ! . .](https://www.tiktok.com/@user1297426109528/video/7695838978791984406) · @user1297426109528
 - [Jambon de poulet aux herbes - 2 blancs de poulet (environs](https://www.tiktok.com/@chefyena23/video/7698017136358214944) · @chefyena23 · 🐖 porc probable
-- [tutoriel d'intelligence artificielle pour passer de consommateur débutant à start-up confirmé](https://www.tiktok.com/@laurentvoanh_2025/video/7644140427112713504) · @laurentvoanh_2025
 - [🎂👨‍🍳 Tu rêves de devenir un chef pâtissier ? Ne rate pas mes vidéos où je te dévoile les secrets des pros…](https://www.tiktok.com/@lessecretsdegeoffrey/video/7313516873222606112) · @lessecretsdegeoffrey
-- [Il fait 35 °C 🥵 Le ventilateur ne suffit pas, les glaçons fondent… alors on bricole, pièce par pièce.…](https://www.tiktok.com/@sciencesdecouvert4/video/7698623701637516577) · @sciencesdecouvert4
 - [🍖🍺 Carbonnade Flamande Traditionnelle Un plat mijoté ultra fondant, riche en saveurs et parfait pour les…](https://www.tiktok.com/@cheffehelene/video/7602252635596475678) · @cheffehelene · 🍷 alcool
-- [Comment construire une cheminée ?](https://www.tiktok.com/@feymus_stories/video/7697208829703949601) · @feymus_stories
 - [Ep. 2 : Bouillon de volaille 🍗](https://www.tiktok.com/@benjaminfurno/video/7698057477283269921) · @benjaminfurno
-- [Arrêter de collectionner les outils IA et commencer à pratiquer concrètement en un week-end, c’est le…](https://www.tiktok.com/@rhinowpia/video/7670108101034495254) · @rhinowpia
-- [Réponse à Rijsel Tu savais ? Quel format tu veut voir demain, dis moi en comm 👇](https://www.tiktok.com/@klongb3/video/7698764706189724961) · @klongb3
-- [🏭 Tu n’as pas besoin d’investir des centaines de milliers d’euros pour créer une usine. Aujourd’hui,…](https://www.tiktok.com/@lacadmie.des.entre/video/7661909932060544289) · @lacadmie.des.entre
 - [Ta béarnaise à 0,3% d'estragon, fais-la toi-même](https://www.tiktok.com/@lardoise_porto_vecchio/video/7699144508428012833) · @lardoise_porto_vecchio
-- [l'entreprise](https://www.tiktok.com/@lazare4608/video/7685824752514108705) · @lazare4608
-- [Mes conseils pour réussir une épreuve de note de synthèse : mémoriser un plan type (disponible…](https://www.tiktok.com/@plusdoptions/video/7697918531811282208) · @plusdoptions
-- [Ne viens pas me dire que je ne t’ai pas informé. Tout y est! Les plus intelligents iront vers le bundle.…](https://www.tiktok.com/@bariqrifki/video/7678665126265752833) · @bariqrifki
-- [Lien dans ma bio - collaboration commerciale](https://www.tiktok.com/@antoine.candidature/video/7698711506065706273) · @antoine.candidature

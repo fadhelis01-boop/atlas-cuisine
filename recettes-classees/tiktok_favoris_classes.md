@@ -167,7 +167,7 @@
 - [Arayes croustillants bœuf & feta ✨ Cette recette, c’est une pure merveille ! 🫠 Avec une viande bien…](https://www.tiktok.com/@_lindoush_/video/7606767447613656323) · @_lindoush_
 - [עוף ופתיתים בסיר אחד🤍 כל מה שצריך: 8 חתיכות עוף (כרעיים / שוקיים) 3 בצלים חבילת פטריות פורטובלו 2 תפוחי…](https://www.tiktok.com/@a.bake.and.cake/video/7604891958099774741) · @a.bake.and.cake
 
-## 🌏 Asie (40)
+## 🌏 Asie (39)
 
 - [Full Recipe↓ Day 58/100   TANINDON](https://www.tiktok.com/@aisletotokyo/video/7680330025085750550) · @aisletotokyo · 🐖 porc probable · 🍷 alcool
 - [Full Recipe↓ Day 52/100   KATSUDON](https://www.tiktok.com/@aisletotokyo/video/7678103036622916886) · @aisletotokyo · 🐖 porc probable · 🍷 alcool
@@ -178,7 +178,6 @@
 - [Achari Gosht Recipe by Cook with Nabeela](https://www.tiktok.com/@cookwithnabeela/video/7670206739781913878) · @cookwithnabeela
 - [Recette de Salade Japonaise 🇯🇵](https://www.tiktok.com/@ammey.food/video/7654611484663762209) · @ammey.food
 - [japanese potato egg salad 🥗](https://www.tiktok.com/@pjrlss/video/7652324007760514312) · @pjrlss
-- [(sans légende)](https://www.tiktok.com/@carolcarolin82/photo/7646077842291313952) · @carolcarolin82 · carrousel photo
 - [🥩 22 Sautés de Bœuf aux Oignons Caramélisés 🧅✨ 1. Classique : 400 g bœuf, 2 oignons, 20 g beurre, 2 càs…](https://www.tiktok.com/@le.cheveux.sur.la.soupe/photo/7645335684659694880) · @le.cheveux.sur.la.soupe · carrousel photo
 - [Salade de bœuf thaï](https://www.tiktok.com/@assia_cuisine_facile/video/7643932207110704417) · @assia_cuisine_facile
 - [今回使った材料です🧑‍🍳 ↓↓↓ じゃがいも 2個 チーズ 適量 塩胡椒 適量 片栗粉 大さじ2 コンソメ 小さじ1 ケチャップ 適量 塩 適量 これで何か作って！【カリもちポテト】](https://www.tiktok.com/@kuni_kitchen92/video/7632647118133480720) · @kuni_kitchen92
@@ -380,7 +379,7 @@
 - [Feuilleté Burger ! 🤤🍔](https://www.tiktok.com/@seizemay/video/7594918858197077270) · @seizemay
 - [Si t’as un airfryer, tu dois tester ces brochettes boeuf et fromage. Merci @Nonofoodies 🥞🌮 pour la recette✨](https://www.tiktok.com/@martincuisto/video/7593041170754817302) · @martincuisto
 
-## 🥖 Pains, pâtes & bases (pizza, naan, crêpes, baguettes, brioches…) (89)
+## 🥖 Pains, pâtes & bases (pizza, naan, crêpes, baguettes, brioches…) (88)
 
 - [Dinner Rolls 🇺🇸🌭 Des petits pains ultra moelleux et ultra polyvalents, parfaits aussi bien pour…](https://www.tiktok.com/@auborddelassiette/video/7694351395364883745) · @auborddelassiette
 - [Les ingrédients pour 2 gros pains : 350gr farine (t45 ou t55), 4gr de levure boulangère, 10gr d’huile…](https://www.tiktok.com/@armandhasanpapaj/video/7567800252653210902) · @armandhasanpapaj
@@ -409,7 +408,6 @@
 - [Focaccia 4 quesos](https://www.tiktok.com/@marcpizza_/video/7653893128172096790) · @marcpizza_
 - [Mortadella Burrata Pizza Sandwich Full Recipe via 𝐋𝐢𝐧𝐤 𝐢𝐧 𝐦𝐲 𝐁𝐢𝐨](https://www.tiktok.com/@essen_paradies/video/7649786091934879009) · @essen_paradies · 🐖 porc probable
 - [pizza napoletana contemporanea](https://www.tiktok.com/@pizzaficho/video/7635616811173694742) · @pizzaficho
-- [(sans légende)](https://www.tiktok.com/@carolcarolin82/photo/7648526968467492128) · @carolcarolin82 · carrousel photo
 - [*BRIOCHE ULTRA MOELLEUSE 🤯* *Avec sa crème au fromage frais* *35 min au four et c’est tout !* *](https://www.tiktok.com/@recettesdemari/video/7646011120582462753) · @recettesdemari
 - [ÉPISODE 4 – « Tout le monde devrait savoir faire son pain à la maison » Bienvenue dans ma nouvelle série…](https://www.tiktok.com/@cuisineavec_parvaflos/video/7631986733156027670) · @cuisineavec_parvaflos
 - [EPISODE 2 - « Tout le monde devrait savoir faire son pain à la maison. » Je vous propose aujourd’hui ma…](https://www.tiktok.com/@cuisineavec_parvaflos/video/7629418620703051030) · @cuisineavec_parvaflos
@@ -637,16 +635,13 @@
 
 - [♻️ Ne jetez plus les restes de votre poulet rôti ! 🍗 Un poulet rôti de la veille peut facilement se…](https://www.tiktok.com/@madeinkatia/video/7693188212092603681) · @madeinkatia
 
-## ❓ À vérifier (légende vide ou insuffisante) (43)
+## ❓ À vérifier (légende vide ou insuffisante) (36)
 
 - [(sans légende)](https://www.tiktok.com/@les.delice.d.ines/video/7693851541626817825) · @les.delice.d.ines
 - [(sans légende)](https://www.tiktok.com/@tuto.plat/video/7681559319313206561) · @tuto.plat
 - [2,50€ pour du remplissage, fais-la toi-même](https://www.tiktok.com/@lardoise_porto_vecchio/video/7695703999713987872) · @lardoise_porto_vecchio
-- [(sans légende)](https://www.tiktok.com/@victorlorafire/video/7694956719406894368) · @victorlorafire
 - [(sans légende)](https://www.tiktok.com/@mar2amma/video/7693837830107254049) · @mar2amma
 - [(sans légende)](https://www.tiktok.com/@hdcoook/photo/7692815561943731489) · @hdcoook · carrousel photo
-- [(sans légende)](https://www.tiktok.com/@tonylesarthois/photo/7689478952716602656) · @tonylesarthois · carrousel photo
-- [(sans légende)](https://www.tiktok.com/@b.anana_lover/video/7687636008346651936) · @b.anana_lover
 - [(sans légende)](https://www.tiktok.com/@mar2amma/video/7683855031845588257) · @mar2amma
 - [#](https://www.tiktok.com/@mar2amma/video/7685406480354331937) · @mar2amma
 - [(sans légende)](https://www.tiktok.com/@bakko.asmr.tv/video/7682488275583454496) · @bakko.asmr.tv
@@ -659,12 +654,8 @@
 - [(sans légende)](https://www.tiktok.com/@schmackhaft10/video/7661521212085947681) · @schmackhaft10
 - [So if I actually put this on the menu this week… y’all gonna buy it orrrr? 😭 Because when I first posted…](https://www.tiktok.com/@kh414ni/video/7641376029734489357) · @kh414ni
 - [Zucchini is tastier than meat! No one believes I cook it so easily and deliciously.](https://www.tiktok.com/@food_nelli/video/7636792167490391317) · @food_nelli
-- [(sans légende)](https://www.tiktok.com/@warran13/video/7654930220138499360) · @warran13
-- [(sans légende)](https://www.tiktok.com/@carolcarolin82/photo/7641946944603999521) · @carolcarolin82 · carrousel photo
 - [Oula je t’adore toi🫵🏼](https://www.tiktok.com/@louloukitchen_/video/7619395557760552214) · @louloukitchen_
 - [N’OUBLIEZ JAMAIS ÇA](https://www.tiktok.com/@louloukitchen_/video/7634851501604637974) · @louloukitchen_
-- [(sans légende)](https://www.tiktok.com/@imam6681/photo/7639090878702734625) · @imam6681 · carrousel photo
-- [(sans légende)](https://www.tiktok.com/@dymy6q1i91fl/video/7634166951694126358) · @dymy6q1i91fl
 - [(sans légende)](https://www.tiktok.com/@easycuisine_5/video/7632524790821162262) · @easycuisine_5
 - [Recette détaillée : OK les amis ! Aujourd’hui une recette incroyablement bonne que vous pouvez réaliser à…](https://www.tiktok.com/@olivier.lin1/video/7633087147062529282) · @olivier.lin1
 - [Recette détaillée : Alerte ! Aujourd’hui je vous propose une recette hyper gourmande que vous pouvez…](https://www.tiktok.com/@olivier.lin1/video/7617479757881511190) · @olivier.lin1

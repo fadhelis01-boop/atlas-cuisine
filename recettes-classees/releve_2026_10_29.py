@@ -6,6 +6,7 @@ Seuls le lien, l'auteur et un titre court tiré de la légende sont publiés (cr
 Les favoris hors cuisine n'ont jamais été relevés (ils restent privés)."""
 import json, os, re
 from classement import ALCOHOL, PORK, clean, nrm, section_from_fiche, section_of
+from hors_cuisine import is_hors_cuisine
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = json.load(open(os.path.join(HERE, "prive", "legendes_tiktok.json"), encoding="utf-8"))
@@ -21,6 +22,7 @@ def title_of(desc):
 groups, kept, skipped = {}, 0, 0
 for url, v in DB.items():
     if v.get("missing") or v.get("section") not in ("relevé 29/10", "profil créateur 29/10"): continue
+    if is_hors_cuisine(url): continue  # favori hors cuisine : jamais publié
     desc = v.get("desc", "")
     t = title_of(desc)
     sec = section_of(t + " " + desc[:200])
