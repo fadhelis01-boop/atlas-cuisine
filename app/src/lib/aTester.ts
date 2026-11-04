@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "bar_croute_sel", "curry_legumes_coco", "goan_fish_curry", "ramen_miso_legumes_tofu", "fiskesuppe", "arayes_boeuf_feta", "poulet_citronnelle_express",
-  "moules_marinieres", "curry_fidjien_legumes", "pyttipanna_boeuf", "bunny_chow_haricots", "ca_kho_to", "spaghetti_vongole", "parippu", "cassolettes_crevettes_poireaux",
-  "choucroute_mer", "thiou_poulet", "tortilla_espanola", "nasi_goreng", "aji_de_gallina", "falafels", "nikujaga", "atakilt_wat",
-  "moqueca", "curry_pois_chiches_express", "fiskefrikadeller", "islak_burger", "chilaquiles_verts", "laxpudding",
+  "moules_frites", "gratin_chou_fleur_lentilles", "bar_croute_sel", "curry_legumes_coco", "tacos_poisson_express", "massaman_poulet", "ayam_masak_merah", "spaghetti_vongole",
+  "saumon_teriyaki", "bacalhau_bras", "nikujaga", "fiskesuppe", "moules_normande", "cassolettes_crevettes_poireaux", "waterzooi_poulet", "ful_medames",
+  "pyttipanna_boeuf", "poulet_cajou_thai", "falafels", "anda_curry", "lieu_croute_herbes", "locro_vegetarien", "raclette_maison", "thiou_poulet",
+  "fiskefrikadeller", "dal_tadka", "boeuf_oignons_saute", "salade_haricots_blancs_thon", "moqueca", "spaetzle_fromage",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

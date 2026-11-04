@@ -13,6 +13,10 @@ def accounts():
 
 def is_hors_cuisine(url_or_author, _cache=[]):
     if not _cache: _cache.append(accounts())
+    # la liste contient des comptes (« pseudo ») et, depuis le 04/11/2026, des vidéos isolées hors recette d'un compte de
+    # cuisine (« @pseudo/video/123 » : piscine, dégustation au restaurant, conseils santé…)
+    v = re.search(r"(@[^/]+/(?:video|photo)/\d+)", url_or_author)
+    if v and v.group(1) in _cache[0]: return True
     m = re.search(r"/@([^/]+)/", url_or_author)
     return (m.group(1) if m else url_or_author.lstrip("@")) in _cache[0]
 

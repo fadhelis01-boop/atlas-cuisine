@@ -18,10 +18,20 @@
 
 Toutes ces fiches sont **non testées en cuisine**.
 
+## Suite le même jour : les 14 autres auteurs, et l'index allégé
+
+- **Index de démarrage allégé d'abord** : les références d'ingrédients de l'index sont des numéros au lieu de leurs noms (400 → 385 Ko compressés, sans rien changer à l'affichage ; contrôle ajouté au test 92). Après cet import : 390 Ko, il reste donc de la place pour environ 60 fiches.
+- **Auteurs** : quelques heures plus tard, TikTok a de nouveau affiché les profils. Les 14 auteurs restants ont été lus (onglet « Populaire », 15 vidéos chacun, un profil à la fois avec des pauses), sans aucun refus. Liste privée des auteurs à explorer : vide.
+- **30 nouvelles fiches créditées** (1 232 recettes, 661 plats) : pâtes au poulet sauce fromage ail et fines herbes, tenders sauce poivrée, foutou sauce graine, macaronis au bœuf et cheddar, salade de sardines, ramen tom yum (version sans porc), pain chargé camerounais, pepper soup d'agneau, poulet farci épinards-mozzarella, couscous tfaya, pâtes Alfredo au poulet, bœuf Wellington (sans jambon) ; 8 plats végétariens crédités (karantika, omelette aux frites, vermicelles de riz sautés, lo mein, udon ail-champignons, ramen coréen aux champignons, pâtes à la butternut, beignets-haricots-bouillie) ; felfla, bricks poulet-curry, beignets de crevettes, corn dogs coréens (saucisses de volaille) ; gâteau qui pleure, cheesecakes spéculoos, sfenj, beignets de banane ; sauces façon « Giant » et « Big Tasty ».
+- **Doublons** : 60 vidéos rejoignent 47 fiches existantes (plov, tajine aux olives, yassa, mafé, thiéboudienne, brioche, fataya, attiéké poisson, couscous, tangia, méchoui, steak frites…). Les vidéos au porc (porc laqué, porc braisé) vont aux fiches « version » sans porc, marquées 🐖 dans la bibliothèque.
+- **Vidéos hors recette** de ces comptes de cuisine (piscine, buffet, dégustation au restaurant, conseils santé, « meilleure cuisine de… ») : ajoutées une par une à la liste privée, jamais publiées (le filtre accepte maintenant une vidéo isolée, pas seulement un compte).
+- **Bibliothèque du 04/11** : 224 vidéos classées, 32 « À vérifier » (titres trop vagues, recettes sans fiche ATLAS correspondante).
+- **Contrôles** : tests 110 (30 fiches créditées, 8 plats végétariens, vidéos d'origine rangées) et 111 (vidéos hors recette absentes) ; la part de plats végétariens reste à 33 % ; la liste des 30 plats à tester en priorité a été régénérée.
+
 ## Angles morts
 
-1. **Auteurs non lus** : 15 profils restent à explorer, liste privée tenue à jour.
+1. **Auteurs non lus** : plus aucun (les 14 restants ont été lus plus tard le même jour).
 2. **Filtre hors cuisine** : 4 comptes de plus ; la bibliothèque du 04/11 n'en contient aucun.
 3. **Bibliothèque** : 54 vidéos classées, 6 « À vérifier » seulement. Les vidéos d'origine des fiches sont toutes rangées avec leur fiche.
 4. **Contrôles** : tests 108 (19 fiches créditées, 5 jumeaux végétariens sans viande ni poisson) et 109 (vidéos d'origine présentes et bien rangées). Les 30 plats « à tester en priorité » ont été régénérés.
-5. **Budget de démarrage** : l'index atteint 400 Ko compressés, soit le plafond. Avant le prochain ajout de recettes, il faudra alléger l'index (par exemple sortir les textes courts du démarrage), sinon la construction refusera.
+5. **Budget de démarrage** : 390 Ko sur 400 après l'allègement et ce second import ; prochaine piste si besoin : sortir de l'index les textes de variantes et d'accords (lus seulement sur la fiche).

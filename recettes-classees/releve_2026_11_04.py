@@ -38,8 +38,9 @@ for url, v in DB.items():
     kept += 1
 
 o = ["# 📲 Favoris TikTok du 04/11/2026 et vidéos de leurs auteurs, classés pour ATLAS\n",
-     "> Relevé le 04/11/2026 : les favoris ajoutés depuis le 29/10 (compte connecté par le propriétaire) et les vidéos récentes de 2 de leurs auteurs "
-     "(TikTok refusait ce jour-là d'afficher les autres profils ; on n'a pas insisté). Une page à la fois, sans contourner la protection de TikTok.",
+     "> Relevé le 04/11/2026 : les favoris ajoutés depuis le 29/10 (compte connecté par le propriétaire) et les vidéos de leurs 16 auteurs "
+     "(récentes pour 2 d'entre eux, les plus populaires pour les 14 autres, lus plus tard dans la journée quand TikTok a de nouveau affiché les profils). "
+     "Une page à la fois, sans contourner la protection de TikTok.",
      f"> **{kept} vidéos de cuisine classées**, {skipped} écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.",
      "> Liens crédités uniquement : les vidéos se lisent dans ATLAS par l'intégration officielle de TikTok ; rien n'est copié.",
      "> Triées par nombre d'enregistrements dans chaque rubrique.\n"]

@@ -31,3 +31,24 @@ const absent = origin.filter((u) => !byUrl.has(u));
 const vague = origin.filter((u) => byUrl.get(u) === "a_verifier");
 console.log("   bibliothèque 04/11 : vidéos d'origine", origin.length, "· absentes", absent.length, "· « À vérifier »", vague.length);
 check("109 bibliothèque : les vidéos d'origine des fiches du 04/11 y sont toutes, aucune dans « À vérifier »", absent.length === 0 && vague.length === 0);
+
+// —— 110 : vidéos populaires des 14 autres auteurs (lus plus tard le 04/11) : fiches créditées, vidéos rangées avec leur fiche
+const AUTEURS = ["pates_poulet_boursin", "tenders_poulet_sauce_canes", "foutou_sauce_graine", "hamburger_helper_maison", "salade_sardines_avocat_herbes",
+  "ramen_tom_yum_cremeux_poulet", "pain_charge_cameroun", "pepper_soup_agneau", "poulet_farci_epinards_mozzarella", "couscous_tfaya_boeuf", "pasta_alfredo_poulet",
+  "boeuf_wellington_sans_porc", "karantika", "omelette_frites_algerienne", "vermicelles_riz_sautes_legumes", "lo_mein_chou_legumes", "udon_champignons_ail_croustillant",
+  "ramen_coreen_champignons_cremeux", "pates_butternut_rotie_ail", "beignets_haricots_bouillie", "felfla", "bricks_poulet_curry_olives", "beignets_crevettes_panes",
+  "corn_dog_coreen_pain_mie", "gateau_qui_pleure", "cheesecake_speculoos_verrines", "sfenj", "beignets_banane_cameroun", "sauce_facon_giant", "sauce_facon_big_tasty"];
+const VEG_AUTEURS = ["karantika", "omelette_frites_algerienne", "vermicelles_riz_sautes_legumes", "lo_mein_chou_legumes", "udon_champignons_ail_croustillant",
+  "ramen_coreen_champignons_cremeux", "pates_butternut_rotie_ail", "beignets_haricots_bouillie"];
+const manque = AUTEURS.filter((id) => !RECIPE_BY_ID[id] || !detail[id]?.credit?.length);
+const pasVeg = VEG_AUTEURS.filter((id) => RECIPE_BY_ID[id]?.role !== "plat" || evaluate(RECIPE_BY_ID[id]).flesh.length > 0);
+const orig2 = AUTEURS.flatMap((id) => detail[id]?.credit?.map((c) => c.url) ?? []);
+const mal = orig2.filter((u) => !byUrl.has(u) || byUrl.get(u) === "a_verifier");
+console.log("   auteurs du 04/11 :", AUTEURS.length, "fiches ·", VEG_AUTEURS.length, "plats végétariens · vidéos d'origine", orig2.length, "· mal rangées", mal.length, [...manque, ...pasVeg].join(", "));
+check("110 auteurs du 04/11 : 30 fiches créditées (dont 8 plats végétariens), vidéos d'origine rangées avec leur fiche", manque.length === 0 && pasVeg.length === 0 && mal.length === 0);
+
+// —— 111 : vidéos hors recette de comptes de cuisine (piscine, restaurant, conseils santé…) jamais publiées
+const HORS = ["@lacuisinedes.m.and.ms/video/7506052529042640150", "@lacuisinedes.m.and.ms/video/7488696198107286806", "@totamsachikaroberts/video/7693395788768103693",
+  "@simplylemmons/video/7597883531729112351", "@dishcovery_/video/7506262878631005462", "@mohamedcheikh_/video/7577098829535808791"];
+const publiees = HORS.filter((p) => byUrl.has("https://www.tiktok.com/" + p));
+check("111 vidéos hors recette des comptes de cuisine : absentes de la bibliothèque publiée", publiees.length === 0);
