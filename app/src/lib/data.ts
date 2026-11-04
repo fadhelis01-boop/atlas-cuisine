@@ -13,9 +13,11 @@ export const INGREDIENTS = ingredientsJson as unknown as Record<string, Ingredie
 // deux fois plus rapide qu'un littéral JavaScript ; le détail d'une fiche arrive juste après le premier affichage.
 const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "" };
 // Ingrédients rangés en tableaux [quantité, libellé, réf., poids, facultatif?] dans l'index (plus léger) : remis en objets ici.
-type PackedLine = [string, string, string | null, number, 1?];
+// La réf. est le rang de l'ingrédient dans ingredients.json (même ordre de clés), sauf « SUB:… » et null.
+type PackedLine = [string, string, number | string | null, number, 1?];
+const ING_KEYS = Object.keys(INGREDIENTS);
 export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r,
-  ingredients: r.ingredients.map(([qty, label, ref, weight, opt]) => ({ qty, label, ref, weight, optional: opt === 1 })) }) as unknown as Recipe);
+  ingredients: r.ingredients.map(([qty, label, ref, weight, opt]) => ({ qty, label, ref: typeof ref === "number" ? ING_KEYS[ref] : ref, weight, optional: opt === 1 })) }) as unknown as Recipe);
 setRenames(renamesJson as Record<string, string>);
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];

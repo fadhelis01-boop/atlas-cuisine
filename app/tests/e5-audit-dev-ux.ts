@@ -1,7 +1,7 @@
 // Audit développement et UI/UX du 21/10/2026 (bible/AUDIT_DEV_UX_2026-10-21.md) : sécurité, état local, partage,
 // démarrage léger, navigation, photos publiées. Suite lancée par tests/engine.test.ts (npm test).
 import { readFileSync } from "node:fs";
-import { RECIPES, RECIPE_BY_ID, detailsReady } from "../src/lib/data";
+import { INGREDIENTS, RECIPES, RECIPE_BY_ID, detailsReady } from "../src/lib/data";
 import { safeHref, safeUrl, sanitizeState } from "../src/lib/safe";
 import { SCHEMA, type State, getState, mergeState, migrate, readBackup, setState } from "../src/lib/store";
 import { decodeShare, encodeShare, mergeShopping, mergeWeek, weekToIcs } from "../src/lib/partage";
@@ -74,7 +74,9 @@ const detail = JSON.parse(readFileSync("src/data/recipes_detail.json", "utf8")) 
 const budget = readFileSync("scripts/budget.mjs", "utf8").match(/const BUDGET = (\d+)/)?.[1];
 console.log("   démarrage : index", (indexRaw.length / 1024).toFixed(0), "Ko sans étapes ·", Object.keys(detail).length, "fiches détaillées · plafond", budget, "Ko compressés");
 check("92 démarrage : l'index des recettes n'embarque ni étapes, ni introductions, ni vidéos ; chaque fiche a son détail ; plafond de poids contrôlé au build",
-  !/"steps":|"intro":|"videos":|"tips":/.test(indexRaw) && RECIPES.every((r) => detail[r.id]?.steps?.length > 0) && detailsReady() && Number(budget) <= 400);
+  !/"steps":|"intro":|"videos":|"tips":/.test(indexRaw) && RECIPES.every((r) => detail[r.id]?.steps?.length > 0) && detailsReady() && Number(budget) <= 400
+  // réf. d'ingrédients rangées en numéros dans l'index (04/11/2026) : chacune redonne un ingrédient du référentiel
+  && RECIPES.every((r) => r.ingredients.every((l) => l.ref === null || l.ref.startsWith("SUB:") || l.ref in INGREDIENTS)));
 
 // —— 93 navigation : chaque écran allume le bon onglet, la semaine a le sien, le profil reste atteignable
 const app = readFileSync("src/App.tsx", "utf8");

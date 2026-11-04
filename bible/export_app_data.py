@@ -486,8 +486,11 @@ detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
 index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
 # Ingrédients de l'index en tableaux [quantité, libellé, réf., poids(, 1 si facultatif)] : 13 Ko compressés de moins au
 # démarrage (place pour les fiches TikTok du 22/10/2026) ; data.ts les remet en objets à la lecture.
+# Réf. d'ingrédient remplacée par son rang dans ingredients.json (même ordre de clés) : 15 Ko compressés de moins
+# (04/11/2026, place pour les fiches des auteurs). Les « SUB:… » et les lignes sans réf. restent telles quelles.
+_ING_RANK = {k: i for i, k in enumerate(ingredients)}
 for x in index:
-    x["ingredients"] = [[l["qty"], l["label"], l["ref"], l["weight"]] + ([1] if l["optional"] else []) for l in x["ingredients"]]
+    x["ingredients"] = [[l["qty"], l["label"], _ING_RANK.get(l["ref"], l["ref"]), l["weight"]] + ([1] if l["optional"] else []) for l in x["ingredients"]]
 from renommages import RENAMES
 _ids_all = {r["id"] for r in recipes}
 assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"
