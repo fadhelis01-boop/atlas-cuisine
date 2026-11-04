@@ -81,3 +81,20 @@ EN_PLUS_2026_10_29 = {
 }
 for _k, _v in EN_PLUS_2026_10_29.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# Favoris du 04/11/2026 : doublons d'un plat déjà au catalogue (relu à la main).
+EN_PLUS_2026_11_04 = {
+    "sauce_chien": [T + "@jerome.cuisine/video/7703893892554296609"],
+    "mayonnaise": [T + "@lardoise_porto_vecchio/video/7702846394905759008"],
+    "sauce_curry_mango": [T + "@doscolafries/video/7703128211764301089"],
+    "gigot_sept_heures": [T + "@qistoh/video/7670879439273659681"],
+    "riz_saute_oeuf_express": [T + "@sosoya06/video/7704041039232879904"],
+    "wrap_poulet_croquant": [T + "@zoyacooks7/video/7691391691617553696", T + "@zoyacooks7/video/7695849265750428961", T + "@zoyacooks7/video/7686568572369374497"],
+    "burger_maison": [T + "@zoyacooks7/video/7693986679845063968"],
+    "crevettes_coco_citron_vert": [T + "@zoyacooks7/video/7689542036965297440"],
+    "poulet_frit_coreen": [T + "@sosoya06/video/7693472639456709920"],
+    "steak_frites": [T + "@sosoya06/video/7694389690262228256"],
+    "tartiflette": [T + "@sosoya06/video/7698285917739552032"],
+}
+for _k, _v in EN_PLUS_2026_11_04.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

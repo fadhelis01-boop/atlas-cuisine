@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "thiou_poulet", "moqueca", "curry_legumes_coco", "lok_lak", "moules_marinieres", "huevos_rancheros", "tacos_papa_rajas",
-  "cassolettes_crevettes_poireaux", "falafels", "bacalhau_bras", "garba", "poulet_mayo_ivoirien", "sandwich_merguez_orientale", "lobio", "spaghetti_vongole",
-  "croquettes_poisson", "frijoles_negros_cubanos", "nouilles_sautees_boeuf", "anda_curry", "fiskesuppe", "chili_con_carne", "gratin_chou_fleur_lentilles", "shakshuka",
-  "dorade_four", "locro_vegetarien", "salade_thai_bavette", "goan_fish_curry", "pyttipanna_boeuf", "crevettes_coco_citron_vert",
+  "moules_frites", "bar_croute_sel", "curry_legumes_coco", "goan_fish_curry", "ramen_miso_legumes_tofu", "fiskesuppe", "arayes_boeuf_feta", "poulet_citronnelle_express",
+  "moules_marinieres", "curry_fidjien_legumes", "pyttipanna_boeuf", "bunny_chow_haricots", "ca_kho_to", "spaghetti_vongole", "parippu", "cassolettes_crevettes_poireaux",
+  "choucroute_mer", "thiou_poulet", "tortilla_espanola", "nasi_goreng", "aji_de_gallina", "falafels", "nikujaga", "atakilt_wat",
+  "moqueca", "curry_pois_chiches_express", "fiskefrikadeller", "islak_burger", "chilaquiles_verts", "laxpudding",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

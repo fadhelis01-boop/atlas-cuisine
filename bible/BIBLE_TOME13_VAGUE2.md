@@ -1,7 +1,7 @@
-# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (1108 fiches), techniques de chef, pâtissier, boulanger et chocolatier
+# 📘 BIBLE ATLAS : TOME 13 : Vague 2 (1132 fiches), techniques de chef, pâtissier, boulanger et chocolatier
 
 > Ce tome **intègre à la bible** la livraison du 15/10/2026 :
-> 1. **1108 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1178 recettes complètes** ;
+> 1. **1132 nouvelles fiches** au format du Tome 11 (France par région, Europe, Maghreb, Afrique, Moyen-Orient, Asie, Amériques, Océanie, food fusion, pâtisserie française, chocolats d'occasion, condiments et marinades maison, sauces à frites, boulangerie, cuisine des enfants, quotidien, anti-gaspi, boissons sans alcool, desserts simples, cahier du chef). Le catalogue rédigé compte désormais **1202 recettes complètes** ;
 > 2. **41 nouvelles fiches techniques** dans l'application (pâtisserie, chocolat, boulangerie-viennoiserie, poissons et fruits de mer, viandes et volailles, maîtrise des cuissons, œufs, condiments et marinades), avec tableaux de températures et de proportions ;
 > 3. un **nouvel habillage graphique** de l'application (§6).
 >
@@ -1217,6 +1217,15 @@
 | Fonkie (fondant au chocolat sur une base de cookie) | Pâtisserie | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 3 |
 | Perles de tapioca au lait de coco et à la mangue | Sénégal | LA | ✅ | ✅ | ✅ | ✅ | 3 |
 
+### Vague 9 (fin) · Auteurs des favoris du 04/11/2026 qu'on a pu lire (@zoyacooks7, @sosoya06 ; TikTok a bloqué les (4)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Burger de poulet croustillant au « hot honey » (miel pimenté), mayo à l'ail | États-Unis | GL, LA, MO, OE, SE | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Frites chargées au poulet, fromage fondu et sauce burger épicée | Royaume-Uni | LA, MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Frites chargées végétariennes (haricots rouges épicés, cheddar, avocat) | Royaume-Uni | LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Carrot cake aux noix, glaçage mascarpone (façon coffee-shop) | États-Unis | FC, GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 1 |
+
 ### Vague 7 (suite) · Favoris TikTok du 22/10/2026 et vidéos les plus populaires des créateurs suivis (onglet « Populaire » de (24)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -1314,6 +1323,36 @@
 | Mayonnaise sans œuf au lait de soja (au mixeur plongeant) | Cuisine du quotidien | MO, SO | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
 | Sirop de fraise maison (fraises et sucre, 15 minutes) | Cuisine du quotidien | – | ✅ | ✅ | ✅ | ✅ | 1 |
 
+### Vague 9 · Favoris TikTok ajoutés entre le 29/10 et le 04/11/2026 (compte connecté par le propriétaire). Fiches (16)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Kebab de poulet maison (pain fait maison, poulet mariné au yaourt, sauce blanche) | Food fusion | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Riz sauté au bœuf façon asiatique (sauce huître, poivrons, gingembre) | Chine | GL, MM, SE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Orzo crémeux au poulet cajun, en une seule poêle | États-Unis | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+| Widjila (pains cuits à la vapeur, sauce d'agneau épicée, Tombouctou) | Mali | GL, OE | ✅ | ✅ | ✅ | ✅ | 3 |
+| Burger de poulet croustillant, salade César et parmesan | Royaume-Uni | GL, LA, MO, OE, SE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Ramen crémeux miso-curry au lait de coco et bœuf haché (version sans porc) | Japon | GL, OE, PO, SO | ✅ | 🟡 traces | ✅ | ⛔ | 6 |
+| Rougag dajaj (poulet aux légumes sur feuilles de pâte fine, Algérie) | Algérie | GL | ✅ | ✅ | ✅ | ✅ | 3 |
+| Tartine de sardines aux œufs mollets, câpres et herbes | États-Unis | GL, MO, OE, PO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Hauts de cuisse croustillants à la friteuse sans huile, sauce mayo aigre-douce | Food fusion | GL, MO, OE, SO | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Cheese naan (naan fourré au fromage fondant, à la poêle) | Inde | GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Mayonnaise aux œufs durs, au mixeur (sans œuf cru) | Cuisine du quotidien | MO, OE | ✅ | 🟡 traces | ✅ | 🔄 | 1 |
+| Sauce verte au beurre et aux herbes pour l'entrecôte (persil, estragon, anchois) | Cuisine du quotidien | LA, MO, PO | ✅ | 🟡 traces | ✅ | 🔄 | 6 |
+| Piment camerounais (piments, djansang, « 4 côtés », à l'huile) | Cameroun | CE | 🟡 | ✅ | 🔄 | ✅ | – |
+| Rillettes de poulet sans graisse ajoutée (au fromage frais et aux herbes) | Cuisine du quotidien | CE, LA, MO | 🟡 | 🟡 traces | 🔄 | 🔄 | 1 |
+| Tiramisu crème brûlée (fond biscuité, croûte de sucre caramélisé) | Food fusion | GL, LA, OE | ✅ | ✅ | ✅ | ✅ | 6 |
+| Chocolat chaud à l'italienne (épais, à la petite cuillère) | Italie | LA | ✅ | ✅ | ✅ | ✅ | 1 |
+
+### Vague 9 (suite) · Plats végétariens ATLAS, jumeaux des favoris carnés du 04/11/2026 (orzo cajun, burger César, (4)
+
+| Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
+|---|---|---|---|---|---|---|---|
+| Orzo en une casserole aux tomates cerises, feta et basilic | Grèce | CE, GL, LA | ✅ | ✅ | ✅ | ✅ | 1 |
+| Burger au halloumi croustillant, salade César végétarienne | Chypre | GL, LA, MO, OE, SE | ✅ | 🟡 traces | ✅ | 🔄 | 3 |
+| Ramen miso au tofu grillé, champignons et pak-choï | Japon | CE, GL, OE, SO | ✅ | 🟡 traces | ✅ | ⛔ | 3 |
+| Kebab de chou-fleur rôti aux épices, sauce blanche et pickles d'oignon | Food fusion | GL, LA | ✅ | ✅ | ✅ | ✅ | 3 |
+
 ### Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les (40)
 
 | Recette | Région | Allergènes (sûrs) | Porc | Alcool | Sans porc Strict | Sans alcool Strict | Enfants dès |
@@ -1359,7 +1398,7 @@
 | Ablo (petits pains vapeur au riz et au maïs, Togo et Bénin) | Togo | – | ✅ | ✅ | ✅ | ✅ | 1 |
 | Mille-feuille de pommes de terre au beurre clarifié et au parmesan | Suisse | LA | ✅ | ✅ | ✅ | ✅ | 1 |
 
-**Rubriques couvertes par la vague 2** : enfants : 556 · vegetarien : 182 · express : 105 · zero_dechet : 88 · sauces : 62 · fetes : 57 · brunch : 38 · pique_nique : 28 · salade : 26 · pains : 25 · boissons : 23 · fusion : 15.
+**Rubriques couvertes par la vague 2** : enfants : 569 · vegetarien : 189 · express : 109 · zero_dechet : 88 · sauces : 62 · fetes : 60 · brunch : 38 · pique_nique : 29 · salade : 26 · pains : 25 · boissons : 23 · fusion : 15.
 
 ---
 
@@ -27658,7 +27697,118 @@ Un dessert frais servi au Sénégal comme en Asie : des perles de tapioca cuites
 
 ---
 
-## 2.41 Vague 7 (suite) · Favoris TikTok du 22/10/2026 et vidéos les plus populaires des créateurs suivis (onglet « Populaire » de
+## 2.41 Vague 9 (fin) · Auteurs des favoris du 04/11/2026 qu'on a pu lire (@zoyacooks7, @sosoya06 ; TikTok a bloqué les
+
+### Burger de poulet croustillant au « hot honey » (miel pimenté), mayo à l'ail
+
+*Hot honey chicken burger · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Cornichon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs, sésame ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole à friture, thermomètre, petite casserole.
+
+Une des vidéos les plus enregistrées de @zoyacooks7 : du poulet mariné au lait ribot pimenté, pané deux fois (farine et fécule) pour une croûte très craquante, frit puis enrobé d'un glaçage beurre-miel-sauce piquante, avec une mayonnaise à l'ail et des pickles.
+
+**Ingrédients** : 500 g de blancs de poulet en 4 escalopes · 4 pains burger · 30 cl de lait (+ 1 c. à s. de vinaigre blanc : lait ribot) · 1 œuf · 150 g de farine · 150 g de fécule de maïs · 1 c. à s. de paprika (+ ail et oignon en poudre) · 4 c. à s. de sauce piquante (type sriracha) · 3 c. à s. de miel · 60 g de beurre · 6 c. à s. de mayonnaise à l'ail (mayonnaise + 1 gousse râpée + citron) · 8 rondelles de cornichon · 1 l d'huile de friture
+
+1. **Mariner.** Lait, vinaigre, 2 c. à s. de sauce piquante, œuf, épices, sel ; poulet dedans, 30 à 40 min.
+2. **Paner deux fois.** Farine, fécule et épices mélangées ; poulet dans la panure, retrempé dans la marinade, de nouveau dans la panure en pressant : croûte épaisse et écailleuse.
+3. **Frire.** 6 à 7 min à 170 °C : doré foncé, 74 °C à cœur ; sur une grille.
+4. **Glacer.** Beurre fondu, miel, reste de sauce piquante, 1 min à frémir : sirop brillant ; poulet enrobé au pinceau, un peu gardé pour les pains.
+5. **Monter.** Pain toasté, mayo à l'ail, poulet, cornichons ; dessus du pain badigeonné de glaçage.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Frites chargées au poulet, fromage fondu et sauce burger épicée
+
+*Loaded fries · Europe du Nord › Royaume-Uni · Plat*
+
+Niveau ⭐ · 3 portions · actif 25 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, œufs ; **possibles selon marque** : céleri, sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Plaque, poêle, bol.
+
+Le plat qu'on commande d'habitude au snack, à la maison : des frites au four, des tranches de fromage fondues dessus, des aiguillettes de poulet dorées, oignon et cébette, et une sauce mayonnaise-ketchup-chili-moutarde bien relevée et citronnée.
+
+**Ingrédients** : 800 g de pommes de terre · 4 aiguillettes de poulet · 4 tranches de cheddar · 6 c. à s. de mayonnaise · 1 c. à s. de ketchup · 1 c. à s. de sriracha (+ 1 c. à s. de sauce chili douce) · 1 c. à s. de moutarde · 1/2 citron · 1 petit oignon et 1 cébette · 1/2 bouquet de coriandre ou de persil · 3 c. à s. d'huile
+
+1. **Frites.** Pommes de terre en bâtonnets, rincées et séchées, 2 c. à s. d'huile, sel ; 30 à 35 min à 220 °C, retournées à mi-cuisson : dorées et croustillantes.
+2. **Poulet.** Salé, paprika, 3 min par face à la poêle chaude : doré, 74 °C à cœur ; en morceaux.
+3. **Sauce.** Mayonnaise, ketchup, sriracha, chili doux, moutarde, jus de citron, sel, poivre : rose et relevée.
+4. **Charger.** Fromage sur les frites chaudes, 2 min au four : fondu ; poulet, oignon haché fin, cébette, sauce en filets, herbes.
+
+**Conservation** : Le jour même.
+
+---
+
+### Frites chargées végétariennes (haricots rouges épicés, cheddar, avocat)
+
+*Loaded fries végétariennes · Europe du Nord › Royaume-Uni · Plat*
+
+Niveau ⭐ · 3 portions · actif 20 min · repos/cuisson 35 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque, casserole.
+
+Le jumeau végétarien des frites chargées : des frites au four couvertes de cheddar fondu, de haricots rouges mijotés au cumin et au paprika fumé, d'un avocat écrasé au citron vert et d'oignon rouge mariné.
+
+**Ingrédients** : 800 g de pommes de terre · 1 boîte de haricots rouges (400 g) · 100 g de cheddar râpé · 1 avocat · 1 citron vert · 1/2 oignon rouge · 1 c. à c. de cumin et de paprika fumé · 3 c. à s. de coulis de tomate · 1/2 bouquet de coriandre · 3 c. à s. d'huile
+
+1. **Frites.** Bâtonnets rincés et séchés, huile, sel ; 30 à 35 min à 220 °C, retournés à mi-cuisson : dorés.
+2. **Haricots.** Égouttés, 1 c. à s. d'huile, épices 30 s, coulis, 8 min à petit feu : ils épaississent et s'écrasent un peu.
+3. **Garnitures.** Avocat écrasé avec la moitié du citron vert et du sel ; oignon rouge émincé dans le reste du jus, 10 min.
+4. **Charger.** Cheddar sur les frites, 2 min au four : fondu ; haricots, avocat, oignon, coriandre.
+
+**Conservation** : Le jour même.
+
+---
+
+### Carrot cake aux noix, glaçage mascarpone (façon coffee-shop)
+
+*Carrot cake · Amérique du Nord › États-Unis · Goûter / dessert* · Fêtes : Anniversaire
+
+Niveau ⭐ · 10 portions · actif 25 min · repos/cuisson 45 min · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : fruits à coque, gluten, lait, œufs
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Moule à cake ou carré de 22 cm, râpe, batteur.
+
+Le carrot cake des coffee-shops : moelleux, épicé à la cannelle, plein de carottes râpées, de poudre d'amande et de noix, et couvert d'un glaçage au mascarpone et à la vanille.
+
+**Ingrédients** : 250 g de carottes râpées fin · 3 œufs · 120 g de sucre roux · 15 cl d'huile de tournesol · 150 g de farine · 50 g de poudre d'amande · 1 sachet de levure chimique · 2 c. à c. de cannelle · 100 g de cerneaux de noix (ou de pécan) · 250 g de mascarpone · 50 g de sucre glace · 1/2 c. à c. de vanille en poudre · 1/2 citron (zeste)
+
+1. **Pâte.** Œufs et sucre fouettés 2 min : mousseux ; huile en filet ; farine, amande, levure, cannelle, pincée de sel ; carottes et noix concassées.
+2. **Cuire.** Moule chemisé, 40 à 50 min à 180 °C : brun doré, lame qui ressort sèche ; refroidi complètement sur une grille (sinon le glaçage coule).
+3. **Glaçage.** Mascarpone froid, sucre glace, vanille, zeste, 1 min au batteur : ferme et lisse ; 15 min au frais.
+4. **Finir.** Étalé en vagues sur le gâteau, noix dessus ; au frais.
+
+- L'arôme de vanille liquide contient de l'alcool : vanille en poudre ou sucre vanillé à la place.
+
+**Conservation** : 4 jours au frigo.
+
+---
+
+## 2.42 Vague 7 (suite) · Favoris TikTok du 22/10/2026 et vidéos les plus populaires des créateurs suivis (onglet « Populaire » de
 
 ### Tajine de bœuf aux olives, citron confit et pommes de terre
 
@@ -28313,7 +28463,7 @@ Le cake au citron du pâtissier : le zeste infuse dans le jus pendant qu'on pré
 
 ---
 
-## 2.42 Vague 7 (fin) · Vidéos les plus enregistrées lues en dernier (22/10/2026) : cheesecakes de @on_est_gourmands (les vidéos
+## 2.43 Vague 7 (fin) · Vidéos les plus enregistrées lues en dernier (22/10/2026) : cheesecakes de @on_est_gourmands (les vidéos
 
 ### Cheesecake sans cuisson chocolat-noisette (crème au fromage frais et ganache)
 
@@ -28562,7 +28712,7 @@ L'omelette des petits déjeuners indiens et pakistanais : œufs battus avec oign
 
 ---
 
-## 2.43 Vague 8 · Favoris TikTok ajoutés entre le 22/10 et le 29/10/2026 (compte connecté par le propriétaire). Fiches réécrites
+## 2.44 Vague 8 · Favoris TikTok ajoutés entre le 22/10 et le 29/10/2026 (compte connecté par le propriétaire). Fiches réécrites
 
 ### Cookies Rocher au cœur coulant noisette, enrobage chocolat au lait et noisettes
 
@@ -28843,7 +28993,7 @@ Les épluchures et trognons de pommes d'une tarte deviennent du vinaigre : un pe
 
 ---
 
-## 2.44 Vague 8 (suite) · Vidéos les plus enregistrées des auteurs des favoris du 29/10/2026, jamais explorés jusqu'ici (onglet
+## 2.45 Vague 8 (suite) · Vidéos les plus enregistrées des auteurs des favoris du 29/10/2026, jamais explorés jusqu'ici (onglet
 
 ### Ficelle picarde (crêpes roulées aux champignons, gratinées ; version jambon de dinde)
 
@@ -29312,7 +29462,7 @@ La salade composée des fêtes ivoiriennes et sénégalaises, montée en rangée
 
 ---
 
-## 2.45 Vague 8 (fin) · Auteurs des favoris du 29/10/2026 : goûters, entrées, bases et deux plats végétariens tirés de leurs
+## 2.46 Vague 8 (fin) · Auteurs des favoris du 29/10/2026 : goûters, entrées, bases et deux plats végétariens tirés de leurs
 
 ### Petit fromage pané croustillant et pommes de terre rôties au paprika fumé
 
@@ -29643,7 +29793,556 @@ Un sirop au vrai goût de fraise, sans colorant ni arôme : des fraises bien mû
 
 ---
 
-## 2.46 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les
+## 2.47 Vague 9 · Favoris TikTok ajoutés entre le 29/10 et le 04/11/2026 (compte connecté par le propriétaire). Fiches
+
+### Kebab de poulet maison (pain fait maison, poulet mariné au yaourt, sauce blanche)
+
+*Kebab maison · France › Food fusion · Plat*
+
+Niveau ⭐⭐ · 6 portions · actif 45 min · repos/cuisson 1 h 30 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Saladier, poêle en fonte ou plaque, rouleau.
+
+Le kebab des snacks, en entier à la maison : des pains moelleux cuits à la poêle, du blanc de poulet mariné au yaourt grec, au concentré de tomate et aux épices puis saisi et émincé, crudités et sauce blanche. Bien meilleur et moins gras.
+
+**Ingrédients** : 500 g de farine · 8 g de levure boulangère sèche (+ 1 c. à c. de sucre) · 800 g de blancs de poulet · 150 g de yaourt grec · 35 g de concentré de tomate · 1 c. à c. de paprika, de cumin et d'origan · 3 gousses d'ail · 1/2 citron (jus) · 4 c. à s. d'huile d'olive · 1 salade, tomates, oignon rouge · 6 c. à s. de sauce blanche
+
+1. **Pâte.** Farine, sel, levure, sucre ; 27,5 cl d'eau tiède, 2 c. à s. d'huile ; pétrie 8 min : souple et lisse ; 1 h à couvert : doublée.
+2. **Mariner.** Poulet en lanières épaisses, yaourt, concentré, épices, ail râpé, jus de citron, sel, poivre, 2 c. à s. d'huile : au moins 1 h au frais (une nuit, c'est mieux).
+3. **Pains.** 6 boules aplaties à 1 cm ; poêle sèche bien chaude, 2 à 3 min par face : ils gonflent et prennent des taches dorées ; sous un torchon.
+4. **Poulet.** Poêle fumante, en 2 fois, 4 min par face sans bouger : bords grillés, 74 °C à cœur ; 5 min de repos, émincé fin comme à la broche.
+5. **Monter.** Pain ouvert, sauce blanche, poulet, salade, tomate, oignon ; un trait de citron.
+
+**Conservation** : Poulet cuit : 2 jours au frigo ; pains : se congèlent.
+
+**Techniques** : Pétrir une pâte riche
+
+---
+
+### Riz sauté au bœuf façon asiatique (sauce huître, poivrons, gingembre)
+
+*Riz sauté au bœuf · Asie de l'Est › Chine · Plat*
+
+Niveau ⭐ · 3 portions · actif 20 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire
+- ⚠️ **Allergènes** : gluten, mollusques, sésame, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Wok ou grande poêle.
+
+Le riz sauté des traiteurs, au bœuf : des lamelles marinées à la fécule (elles restent tendres), saisies d'un coup, puis du riz froid sauté avec poivrons, oignon, ail et gingembre, et une sauce soja-huître. Un plat complet en 10 minutes de cuisson.
+
+**Ingrédients** : 300 g de bœuf tendre (rumsteck) · 350 g de riz cuit la veille, froid · 1 oignon · 1 poivron (½ rouge, ½ vert) · 2 gousses d'ail · 1 c. à c. de gingembre râpé · 3 c. à s. de sauce soja (dont 1 foncée) · 2 c. à s. de sauce d'huître · 1 c. à c. de fécule de maïs · 1 c. à s. d'huile de sésame · 1/2 citron vert
+
+1. **Mariner.** Bœuf en lamelles fines contre les fibres, 1 c. à s. de soja, fécule, poivre, quelques gouttes de sésame : 10 min.
+2. **Saisir.** Wok fumant, 1 c. à s. d'huile, bœuf étalé, 2 min sans remuer puis 30 s : doré dehors, encore rosé ; réservé.
+3. **Légumes.** Oignon et poivron en dés, ail, gingembre, 3 min à feu vif : croquants et parfumés.
+4. **Sauter.** Riz froid égrené, 3 min en faisant sauter : il grésille, les grains se détachent ; sauces, bœuf, 1 min : tout est enrobé et brillant ; sésame, citron vert à table.
+
+- Le riz doit être froid (cuit la veille) : chaud, il colle et fait de la purée.
+
+**Conservation** : 1 jour au frigo ; se réchauffe au wok.
+
+**Techniques** : Sauter au wok
+
+---
+
+### Orzo crémeux au poulet cajun, en une seule poêle
+
+*Cajun chicken orzo · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 4 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait ; **possibles selon marque** : céleri
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Sauteuse avec couvercle.
+
+Le dîner en une poêle qui tourne partout aux États-Unis : du poulet frotté d'épices cajun et doré, puis des pâtes langues d'oiseau (orzo) cuites directement dans le bouillon avec la tomate, finies à la crème, au parmesan et aux épinards.
+
+**Ingrédients** : 3 blancs de poulet · 2 c. à c. d'épices cajun · 250 g d'orzo (langues d'oiseau) · 60 cl de bouillon de volaille · 200 g de coulis de tomate · 10 cl de crème · 40 g de parmesan · 2 poignées d'épinards · 1 oignon et 2 gousses d'ail · 1/2 citron
+
+1. **Poulet.** Coupé en deux dans l'épaisseur, frotté d'épices cajun et de sel ; 4 min par face à la poêle huilée : croûte foncée, presque cuit ; réservé.
+2. **Base.** Oignon et ail, 3 min ; orzo, 1 min : nacré ; bouillon et coulis, porté à frémir.
+3. **Cuire.** Couvert, 10 min à feu doux en remuant 2 fois : orzo tendre, liquide presque absorbé ; poulet posé dessus, 5 min : 74 °C à cœur.
+4. **Finir.** Poulet retiré et tranché ; crème, parmesan, épinards, 1 min : crémeux, épinards tombés ; jus de citron, poulet dessus.
+
+**Conservation** : 2 jours au frigo.
+
+---
+
+### Widjila (pains cuits à la vapeur, sauce d'agneau épicée, Tombouctou)
+
+*Widjila / woudjila · Afrique subsaharienne › Mali · Plat* · Fêtes : Repas de famille
+
+Niveau ⭐⭐ · 6 portions · actif 40 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Couscoussier, cocotte, saladier.
+
+Le plat songhaï de Tombouctou : de grosses boules de pâte levée cuites à la vapeur dans le couscoussier, au-dessus de la sauce, puis servies déchirées et arrosées d'une sauce d'agneau mijotée à la tomate et aux épices. Parfois avec des dattes.
+
+**Ingrédients** : 500 g de farine · 7 g de levure boulangère sèche · 1 œuf · 1 kg d'épaule d'agneau en morceaux · 3 oignons · 3 tomates (+ 1 c. à s. de concentré) · 3 gousses d'ail · 1 c. à c. de poivre et de piment doux · 1 piment frais · 4 dattes (facultatif) *(facultatif)* · 1 citron
+
+1. **Pâte.** Farine, levure, sel, œuf ; eau tiède peu à peu (30 cl environ), pétrie 10 min : pâte molle et élastique ; 1 h à couvert.
+2. **Sauce.** Agneau saisi dans la cocotte du couscoussier, 8 min : bien doré ; oignons, 5 min ; ail, tomates mixées, concentré, épices, piment entier, sel, 1 l d'eau ; à frémissement.
+3. **Vapeur.** Pâte en 6 boules ; dans le panier huilé, au-dessus de la sauce, couvercle ; 40 min sans ouvrir les 30 premières : gonflées, sèches au toucher. La sauce mijote dessous en même temps (1 h 30 en tout) : agneau fondant.
+4. **Servir.** Dattes dans la sauce les 15 dernières minutes ; boules déchirées dans les assiettes, sauce et viande par-dessus, citron à table.
+
+**Conservation** : Sauce : 3 jours au frigo ; pains : le jour même.
+
+**Techniques** : Mijoter
+
+---
+
+### Burger de poulet croustillant, salade César et parmesan
+
+*Crispy chicken Caesar burger · Europe du Nord › Royaume-Uni · Plat*
+
+Niveau ⭐ · 4 portions · actif 30 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs, sésame ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole à friture, 3 assiettes creuses.
+
+La vidéo la plus enregistrée de la semaine : du poulet épicé pané au panko et frit, dans un pain burger avec une salade romaine enrobée de sauce César (mayonnaise, moutarde, ail, parmesan), et encore du parmesan râpé dessus.
+
+**Ingrédients** : 500 g de blancs de poulet en 4 escalopes · 4 pains burger · 1 c. à c. de paprika (+ ail et oignon en poudre) · 60 g de farine · 2 œufs · 100 g de panko · 6 c. à s. de mayonnaise · 1 c. à s. de moutarde · 60 g de parmesan · 1 cœur de laitue romaine · 1/2 citron · 50 cl d'huile de friture
+
+1. **Mariner.** Escalopes aplaties à 1,5 cm, paprika, ail et oignon en poudre, sel, poivre, 1 c. à s. d'huile : 30 min.
+2. **Paner.** Farine épicée, œufs battus, panko bien pressé.
+3. **Frire.** 7 à 8 min à 165 °C, retournés à mi-cuisson : dorés, 74 °C à cœur ; égouttés sur une grille.
+4. **Sauce.** Mayonnaise, moutarde, ail râpé, 3 c. à s. de parmesan, jus de citron, eau pour la détendre : nappante ; romaine émincée enrobée d'une partie.
+5. **Monter.** Pain toasté, sauce, poulet, salade César, parmesan râpé, encore un trait de sauce.
+
+**Conservation** : Le jour même.
+
+**Techniques** : Frire en sécurité
+
+---
+
+### Ramen crémeux miso-curry au lait de coco et bœuf haché (version sans porc)
+
+*Creamy miso curry ramen · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐⭐ · 2 portions · actif 20 min · repos/cuisson 20 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Miso
+- ⚠️ **Allergènes** : gluten, œufs, poissons, soja ; **possibles selon marque** : céleri, crustacés
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Casserole, poêle, petite casserole pour les œufs.
+
+Un bol réconfortant : un bouillon soyeux au lait de coco, au miso et à la pâte de curry, parfumé à la citronnelle et au combava, des nouilles ramen, de la viande hachée caramélisée et salée-sucrée, et un œuf mollet. La recette d'origine est au porc ; ici au bœuf (ou au poulet) haché.
+
+**Ingrédients** : 2 portions de nouilles ramen · 250 g de bœuf haché (ou poulet haché) · 2 c. à s. de miso blanc · 1 c. à s. de pâte de curry rouge · 20 cl de lait de coco · 50 cl de bouillon de volaille · 1 tige de citronnelle et 2 feuilles de combava · 2 gousses d'ail et 2 cm de gingembre · 1 c. à c. de sauce de poisson (nuoc-mâm) · 2 œufs · 1 citron vert
+
+1. **Œufs.** 6 min 30 dans l'eau bouillante, eau glacée : blanc pris, jaune coulant ; écalés.
+2. **Viande.** Poêle chaude, haché étalé, 5 min sans trop remuer : bien grillé ; 1 c. à s. de soja, 1 min : laqué et brillant.
+3. **Bouillon.** Ail et gingembre râpés, citronnelle écrasée, 1 min dans un peu d'huile ; pâte de curry, 1 min : elle sent fort ; bouillon, lait de coco, combava, 10 min à frémissement ; hors du feu, miso délayé dans une louche, sauce de poisson, jus de citron vert.
+4. **Servir.** Nouilles cuites à part (3 à 4 min), égouttées, dans les bols ; bouillon brûlant filtré, viande, œuf coupé en deux, quelques gouttes de citron vert.
+
+- Le miso ne doit pas bouillir : il perd son parfum.
+- Version d'origine : porc haché.
+
+**Conservation** : Bouillon : 2 jours au frigo, nouilles à cuire au moment.
+
+---
+
+### Rougag dajaj (poulet aux légumes sur feuilles de pâte fine, Algérie)
+
+*Rougag / rougague dajaj · Afrique du Nord › Algérie · Plat* · Fêtes : Repas de famille, Ramadan / Aïd
+
+Niveau ⭐⭐ · 6 portions · actif 50 min · repos/cuisson 2 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Tajine ou cocotte, grande poêle, saladier.
+
+Le plat de fête de l'Oranie : du poulet mijoté avec carottes, navets, courgette et pois chiches dans une sauce rouge au ras el-hanout, servi sur de fines galettes de semoule et de farine qui boivent tout le jus.
+
+**Ingrédients** : 1,2 kg de poulet en 6 morceaux · 6 carottes · 3 navets · 1 courgette · 200 g de pois chiches cuits · 1 oignon · 1 c. à s. de concentré de tomate · 1 c. à c. de ras el-hanout (+ curcuma, paprika, ½ c. à c. de cannelle) · 300 g de semoule fine (+ 300 g de farine) · 2 c. à s. d'huile d'olive · 1 citron
+
+1. **Saisir.** Huile, poulet, 6 min : doré ; oignon, épices, concentré, 2 min : ça sent les épices grillées.
+2. **Mijoter.** Carottes coupées en deux, navets en quartiers, 75 cl d'eau, sel ; couvert, 1 h 30 à feu doux : sauce rouge et parfumée ; courgette et pois chiches, 20 min : légumes fondants.
+3. **Pâte.** Semoule, farine, sel ; 38 cl d'eau tiède peu à peu, pétrie 15 min : souple, ne colle plus ; en boules de la taille d'une mandarine, 20 min sous un film huilé.
+4. **Cuire les feuilles.** Chaque boule étalée très fin à la main huilée (on voit à travers) ; poêle légèrement huilée, 1 min par face : souple, quelques taches dorées.
+5. **Servir.** Feuilles déchirées dans un grand plat, arrosées de sauce, poulet et légumes dessus ; citron à table.
+
+**Conservation** : Sauce : 3 jours au frigo ; feuilles : le jour même.
+
+**Techniques** : Mijoter
+
+---
+
+### Tartine de sardines aux œufs mollets, câpres et herbes
+
+*Sardine egg sandwich · Amérique du Nord › États-Unis · Plat*
+
+Niveau ⭐ · 2 portions · actif 15 min · repos/cuisson 7 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, moutarde, œufs, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, petite casserole.
+
+Un déjeuner rapide avec une boîte de sardines : écrasées avec des œufs mollets, un peu de mayonnaise et de moutarde, relevées de câpres, d'oignon rouge, d'herbes et de citron, sur un pain au levain doré à l'huile d'olive.
+
+**Ingrédients** : 1 boîte de sardines à l'huile d'olive · 2 œufs · 1 c. à s. de mayonnaise · 1 c. à c. de moutarde · 1 c. à s. de câpres · 1/4 oignon rouge · 1 c. à s. de persil et de ciboulette · 1/2 citron (zeste et jus) · 2 grandes tranches de pain au levain · 2 c. à s. d'huile d'olive
+
+1. **Œufs.** 7 min dans l'eau bouillante, eau glacée : jaune encore crémeux au centre ; écalés.
+2. **Écraser.** Sardines égouttées et œufs à la fourchette avec mayonnaise et moutarde : grossier, pas en purée.
+3. **Relever.** Câpres hachées, oignon rouge en lamelles fines, herbes, zeste et jus de citron, poivre.
+4. **Toaster.** Pain dans l'huile d'olive, 2 min par face à feu moyen : doré et croustillant ; garniture dessus, un filet d'huile pimentée si tu veux.
+
+**Conservation** : Garniture : 1 jour au frigo.
+
+---
+
+### Hauts de cuisse croustillants à la friteuse sans huile, sauce mayo aigre-douce
+
+*Poulet frit sans friture · France › Food fusion · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Sauce soja claire, Moutarde de Dijon, Vinaigre de riz
+- ⚠️ **Allergènes** : gluten, moutarde, œufs, soja ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Friteuse à air (ou four à chaleur tournante), 2 bols.
+
+Le poulet frit sans bain d'huile : des hauts de cuisse marinés au soja et aux cinq-épices, panés deux fois dans un mélange farine-fécule, cuits à la friteuse à air jusqu'à ce que la panure croustille. Une sauce mayonnaise aigre-douce à côté.
+
+**Ingrédients** : 5 hauts de cuisse de poulet · 1 c. à s. de sauce soja claire · 1 c. à c. de cinq-épices (+ cumin, paprika, ail en poudre) · 1/2 c. à c. de gingembre en poudre · 40 g de farine · 40 g de fécule de pomme de terre · 2 œufs · 2 c. à s. de mayonnaise · 1 c. à s. de sauce aigre-douce (ou ketchup + vinaigre de riz) · 1 c. à s. d'huile en spray
+
+1. **Mariner.** Poulet, soja, épices, gingembre : 30 min (ou une nuit).
+2. **Paner deux fois.** Farine et fécule mélangées ; œuf battu, panure, œuf, panure : couche épaisse et irrégulière (c'est elle qui croustille).
+3. **Cuire.** Côté peau en dessous, vaporisé d'huile, 10 min à 190 °C ; retourné, vaporisé, 10 min : doré, croustillant, 74 °C à cœur près de l'os. (Four : 35 min à 220 °C sur une grille.)
+4. **Sauce.** Mayonnaise, aigre-douce, 1 c. à s. d'eau, poivre : à côté, avec une salade de chou au vinaigre de riz.
+
+**Conservation** : Le jour même.
+
+---
+
+### Cheese naan (naan fourré au fromage fondant, à la poêle)
+
+*Cheese naan · Asie du Sud › Inde · Pain*
+
+Niveau ⭐ · 6 portions · actif 30 min · repos/cuisson 1 h 10 · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Poêle en fonte avec couvercle, saladier.
+
+Le naan fourré qui a fait le tour des restaurants indiens de France : une pâte souple au yaourt refermée sur du fromage fondu, étalée et cuite à la poêle couverte. Il gonfle, le fromage file. Version gourmande de la même vidéaste : bœuf effiloché et raclette.
+
+**Ingrédients** : 400 g de farine · 150 g de yaourt nature · 10 cl de lait tiède · 5 g de levure boulangère sèche (+ 1 c. à c. de sucre) · 6 portions de fromage fondu (ou 200 g de fromage à tartiner) · 100 g de mozzarella râpée · 40 g de beurre fondu (+ 1 gousse d'ail) · 1 c. à s. de coriandre ou de persil
+
+1. **Pâte.** Farine, sel, levure, sucre ; yaourt, lait, 1 c. à s. de beurre ; pétrie 5 min : souple, un peu collante ; 1 h à couvert : doublée.
+2. **Fourrer.** 6 boules ; chacune étalée en disque, fromage fondu et mozzarella au centre, bords ramenés et pincés ; soudure dessous, aplatie au rouleau à 5 mm sans percer.
+3. **Cuire.** Poêle très chaude, sans matière grasse, 2 min : grosses bulles ; retourné, couvert, 2 min : taches brunes, fromage fondu.
+4. **Finir.** Beurre fondu à l'ail et herbes au pinceau, servi aussitôt.
+
+- Version bœuf-raclette : 200 g de bœuf mijoté effiloché et une tranche de raclette dans chaque naan, avec le fromage fondu.
+
+**Conservation** : Le jour même ; se réchauffe 1 min à la poêle couverte.
+
+---
+
+### Mayonnaise aux œufs durs, au mixeur (sans œuf cru)
+
+*Mayonnaise aux œufs durs · France › Cuisine du quotidien · Sauce*
+
+Niveau ⭐ · 8 portions · actif 10 min · repos/cuisson 10 min · coût €
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : moutarde, œufs ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, mixeur ou blender.
+
+Une mayonnaise qui ne tranche jamais et sans œuf cru (pour les femmes enceintes, les petits, les pique-niques au frais) : des œufs durs mixés avec un peu d'eau, d'huile d'olive et de vinaigre. Plus légère, très crémeuse.
+
+**Ingrédients** : 4 œufs · 6 cl d'huile d'olive (ou moitié tournesol) · 1 c. à s. de vinaigre de cidre · 1 c. à c. de moutarde (facultatif) · 1/2 c. à c. de sel · 1 pincée de poivre
+
+1. **Cuire.** Œufs 10 min dans l'eau bouillante ; eau glacée 5 min : jaune pris, sans cerne verte ; écalés.
+2. **Mixer.** Œufs coupés, 3 c. à s. d'eau, huile, vinaigre, moutarde, sel, poivre ; 40 à 60 s : lisse et crémeux.
+3. **Ajuster.** Trop épaisse : une cuillerée d'eau à la fois en mixant ; goûter, sel et vinaigre.
+4. **Reposer.** 15 min au frais : elle se raffermit.
+
+**Conservation** : 3 jours au frigo, bocal fermé.
+
+---
+
+### Sauce verte au beurre et aux herbes pour l'entrecôte (persil, estragon, anchois)
+
+*Sauce verte de bistrot · France › Cuisine du quotidien · Sauce*
+
+Niveau ⭐⭐ · 4 portions · actif 15 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : lait, moutarde, poissons ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : Petite casserole, mixeur plongeant.
+
+La sauce des brasseries à entrecôte-frites, version chef : une réduction échalote-crème-moutarde avec anchois et câpres, mixée avec persil et estragon, puis montée au beurre froid pour la rendre brillante. Sur une viande saisie et des frites.
+
+**Ingrédients** : 150 g de beurre doux froid en dés · 1 échalote · 10 cl de crème liquide entière · 1 c. à s. de moutarde de Dijon · 3 filets d'anchois · 1 c. à c. de câpres · 1 petite gousse d'ail · 1 grosse poignée de persil plat · 1 petite poignée d'estragon · 1 c. à c. de jus de citron
+
+1. **Suer.** Échalote ciselée, une noix de beurre, 3 min à feu doux : translucide, sans couleur.
+2. **Réduire.** Crème, moutarde, anchois, câpres, ail, 4 min à frémissement : un peu épaissie, les anchois ont fondu.
+3. **Mixer.** Persil et estragon (feuilles), 30 s au mixeur plongeant : vert vif et lisse.
+4. **Monter.** Feu très doux, beurre froid ajouté morceau par morceau en fouettant : sauce brillante et nappante, jamais bouillante (elle tranche) ; citron, poivre (peu de sel : les anchois salent).
+
+**Conservation** : Le jour même ; se réchauffe au bain-marie en fouettant.
+
+---
+
+### Piment camerounais (piments, djansang, « 4 côtés », à l'huile)
+
+*Piment du Cameroun · Afrique subsaharienne › Cameroun · Sauce*
+
+Niveau ⭐ · 20 portions · actif 20 min · repos/cuisson 25 min · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri ; **possibles selon marque** : gluten, œufs, soja
+- 👶 **Enfants** : Trop fort pour les enfants.
+
+**Équipement** : Mixeur, casserole, bocaux.
+
+La pâte de piment qui accompagne tout au Cameroun : piments rouges et jaunes mixés avec oignon, ail, poivron, épices locales (djansang, « 4 côtés ») et confits doucement dans l'huile. Très fort : une pointe de couteau suffit.
+
+**Ingrédients** : 250 g de piments (rouges et jaunes) · 2 poivrons rouges (la chair) · 2 oignons · 6 gousses d'ail · 2 c. à s. de djansang moulu (épicerie africaine, facultatif) *(facultatif)* · 1 c. à c. de « 4 côtés » ou de poivre blanc · 1 cube de bouillon · 25 cl d'huile de tournesol · 1 citron (jus)
+
+1. **Protéger.** Gants pour couper les piments, cuisine aérée ; on ne se touche pas les yeux.
+2. **Mixer.** Piments équeutés (garder quelques graines selon la force voulue), poivrons, oignons, ail, épices, cube écrasé, sel, un trait d'huile : purée grossière.
+3. **Confire.** Dans l'huile chaude, 20 à 25 min à feu doux en remuant : l'eau s'évapore, la pâte fonce et l'huile remonte, rouge, en surface ; jus de citron à la fin.
+4. **Conserver.** En bocaux ébouillantés, couvert d'huile ; une pointe de couteau par assiette.
+
+**Conservation** : 1 mois au frigo, toujours couvert d'huile, cuillère propre.
+
+---
+
+### Rillettes de poulet sans graisse ajoutée (au fromage frais et aux herbes)
+
+*Rillettes de poulet légères · France › Cuisine du quotidien · Entrée*
+
+Niveau ⭐ · 6 portions · actif 15 min · repos/cuisson 25 min · coût €
+
+- 🟡 Porc possible : Bouillon cube volaille
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon
+- ⚠️ **Allergènes** : céleri, lait, moutarde ; **possibles selon marque** : gluten, œufs, soja, sulfites
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Casserole, fourchette ou robot.
+
+Des rillettes à tartiner sans saindoux ni beurre : du blanc de poulet poché dans un bouillon parfumé, effiloché et lié au fromage frais, à la moutarde et aux herbes. Pour l'apéritif, les sandwichs, les tartines du soir.
+
+**Ingrédients** : 3 blancs de poulet · 150 g de fromage frais (type carré frais ou faisselle) · 1 c. à c. de moutarde à l'ancienne · 1 échalote · 1/2 botte de ciboulette · 1 citron (zeste et 1 c. à s. de jus) · 1 cube de bouillon et 1 feuille de laurier · 1 pincée de piment d'Espelette
+
+1. **Pocher.** Bouillon (1 l d'eau, cube, laurier, poivre) à frémissement ; poulet, 15 min sans bouillir : blanc à cœur, 74 °C ; refroidi 10 min dans le bouillon (il reste juteux).
+2. **Effilocher.** À deux fourchettes, très fin ; 4 c. à s. de bouillon pour l'humidité.
+3. **Lier.** Fromage frais, moutarde, échalote ciselée très fin, ciboulette, zeste et jus de citron, Espelette, sel : texture de rillettes.
+4. **Reposer.** En pots, 2 h au frais : elles se raffermissent ; avec du pain grillé et des cornichons.
+
+**Conservation** : 3 jours au frigo.
+
+---
+
+### Tiramisu crème brûlée (fond biscuité, croûte de sucre caramélisé)
+
+*Crème brûlée tiramisu · France › Food fusion · Dessert* · Fêtes : Repas de famille, Anniversaire
+
+Niveau ⭐⭐ · 3 portions · actif 30 min · repos/cuisson 5 h 00 · coût €€
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait, œufs ; **possibles selon marque** : fruits à coque
+- 👶 **Enfants** : ✓ dès 6 ans.
+
+**Équipement** : 3 cercles individuels de 8 cm, batteur, chalumeau (ou gril du four).
+
+Le dessert le plus enregistré de la semaine, par la vidéaste déjà la plus enregistrée des favoris : un fond de biscuits au beurre comme un cheesecake, des boudoirs au café entre deux couches de crème mascarpone, et une fine croûte de sucre caramélisée au chalumeau qui craque sous la cuillère.
+
+**Ingrédients** : 150 g de biscuits (petits-beurre ou spéculoos) · 50 g de beurre fondu · 500 g de mascarpone · 2 jaunes d'œufs très frais · 70 g de sucre (40 g + 30 g pour la croûte) · 20 cl de crème liquide entière froide · 9 boudoirs · 1 tasse de café fort refroidi · 1 c. à s. de cacao (facultatif) *(facultatif)*
+
+1. **Fond.** Biscuits mixés, beurre fondu : sable humide ; tassé au fond des cercles ; 20 min au frais.
+2. **Crème.** Jaunes et 40 g de sucre fouettés 3 min : blanchis ; mascarpone, lissé ; crème montée en chantilly ferme, incorporée à la maryse : légère et tenue.
+3. **Monter.** Une couche de crème sur le fond ; boudoirs trempés 1 s dans le café ; reste de crème, lissée.
+4. **Reposer.** 4 à 6 h au frais : il se tient au démoulage.
+5. **Brûler.** Juste avant de servir : fine couche de sucre, chalumeau en mouvement 30 à 40 s : croûte ambrée et lisse ; 2 min pour qu'elle durcisse.
+
+- Jaunes crus : pour les femmes enceintes et les petits, les retirer (la chantilly suffit à tenir la crème).
+
+**Conservation** : 2 jours au frigo, sans la croûte (elle fond).
+
+---
+
+### Chocolat chaud à l'italienne (épais, à la petite cuillère)
+
+*Cioccolata calda · Europe du Sud › Italie · Boisson*
+
+Niveau ⭐ · 3 portions · actif 5 min · repos/cuisson 8 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : lait ; **possibles selon marque** : soja
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Petite casserole, fouet.
+
+La cioccolata calda des cafés italiens : si épaisse qu'elle nappe la cuillère, presque un dessert. Du cacao, du chocolat noir fondu et une pointe de maïzena pour la texture. Avec de la chantilly pour les gourmands.
+
+**Ingrédients** : 50 cl de lait entier · 60 g de chocolat noir (50 à 60 %) · 4 c. à s. de cacao non sucré · 2 c. à s. de sucre · 5 à 10 g de maïzena · 1 pincée de cannelle (facultatif) *(facultatif)*
+
+1. **Délayer.** Cacao, sucre, maïzena dans 10 cl de lait froid, au fouet : sans grumeau.
+2. **Chauffer.** Reste du lait à frémissement ; mélange versé en fouettant.
+3. **Épaissir.** Feu doux, 3 à 4 min en fouettant sans arrêt : ça nappe la cuillère ; hors du feu, chocolat haché, 1 min : fondu, brillant.
+4. **Servir.** Bien chaud, en petites tasses ; plus de maïzena pour une texture de crème.
+
+**Conservation** : Le jour même ; se réchauffe en fouettant.
+
+---
+
+## 2.48 Vague 9 (suite) · Plats végétariens ATLAS, jumeaux des favoris carnés du 04/11/2026 (orzo cajun, burger César,
+
+### Orzo en une casserole aux tomates cerises, feta et basilic
+
+*Orzo one pot · Europe du Sud › Grèce · Plat*
+
+Niveau ⭐ · 4 portions · actif 10 min · repos/cuisson 20 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : céleri, gluten, lait
+- 👶 **Enfants** : ✓ dès 1 an.
+
+**Équipement** : Sauteuse avec couvercle.
+
+Le pendant végétarien de l'orzo au poulet : des pâtes langues d'oiseau cuites dans le bouillon avec des tomates cerises qui éclatent, finies avec de la feta qui fond à moitié, du citron et du basilic. Un dîner en 30 minutes, une seule casserole.
+
+**Ingrédients** : 300 g d'orzo (langues d'oiseau) · 300 g de tomates cerises · 150 g de feta · 75 cl de bouillon de légumes · 1 oignon et 2 gousses d'ail · 2 poignées d'épinards · 1 citron (zeste et jus) · 1 petit bouquet de basilic · 2 c. à s. d'huile d'olive · 1 pincée de flocons de piment *(facultatif)*
+
+1. **Base.** Huile, oignon émincé, 4 min : fondu ; ail, piment, 30 s ; orzo, 1 min : nacré.
+2. **Cuire.** Tomates cerises entières, bouillon chaud, sel ; couvert, 12 min à feu doux en remuant 2 fois : orzo tendre, tomates éclatées, presque plus de liquide.
+3. **Finir.** Épinards, 1 min : tombés ; zeste et jus de citron ; la moitié de la feta émiettée, mélangée : crémeux.
+4. **Servir.** Reste de feta, basilic, un filet d'huile d'olive.
+
+**Conservation** : 2 jours au frigo ; bon froid en salade.
+
+---
+
+### Burger au halloumi croustillant, salade César végétarienne
+
+*Halloumi burger · Europe du Sud › Chypre · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 10 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Moutarde de Dijon, Moutarde de Dijon
+- ⚠️ **Allergènes** : gluten, lait, moutarde, œufs, sésame ; **possibles selon marque** : sulfites
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Poêle, 3 assiettes creuses.
+
+Le jumeau végétarien du burger César au poulet : d'épaisses tranches de halloumi panées au panko et dorées à la poêle (il ne fond pas, il croustille), une romaine à la sauce César sans anchois, parmesan et citron.
+
+**Ingrédients** : 2 blocs de halloumi (2 × 250 g) · 4 pains burger · 40 g de farine · 1 œuf · 80 g de panko · 4 c. à s. de mayonnaise · 1 c. à c. de moutarde · 40 g de parmesan (ou pecorino végétarien) · 1 cœur de romaine · 1/2 citron · 4 c. à s. d'huile
+
+1. **Couper.** Halloumi en 4 tranches de 1,5 cm, séchées au papier absorbant.
+2. **Paner.** Farine, œuf battu, panko pressé.
+3. **Dorer.** 4 c. à s. d'huile, feu moyen, 2 min par face : panure dorée, cœur chaud et souple.
+4. **Sauce et monter.** Mayonnaise, moutarde, parmesan, jus de citron, 1 c. à s. d'eau ; romaine émincée enrobée ; pain toasté, sauce, halloumi, salade, poivre.
+
+- Le parmesan est fait avec de la présure animale : pour un repas strictement végétarien, prendre un fromage à pâte dure à présure végétale.
+
+**Conservation** : Le jour même.
+
+---
+
+### Ramen miso au tofu grillé, champignons et pak-choï
+
+*Miso ramen végétarien · Asie de l'Est › Japon · Plat*
+
+Niveau ⭐ · 2 portions · actif 20 min · repos/cuisson 15 min · coût €€
+
+- ✅ Sans porc (calculé)
+- 🟡 **Traces d'alcool possibles** : Miso, Sauce soja claire, Vinaigre de riz
+- ⚠️ **Allergènes** : céleri, gluten, œufs, soja
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Casserole, poêle.
+
+Un bol de ramen végétarien : un bouillon de légumes au miso, à l'ail et au gingembre, des nouilles, du tofu ferme grillé et laqué au soja, des champignons poêlés, du pak-choï et un œuf mollet.
+
+**Ingrédients** : 2 portions de nouilles ramen · 200 g de tofu ferme · 2 c. à s. de miso blanc · 60 cl de bouillon de légumes · 150 g de champignons (shiitake ou de Paris) · 2 pak-choï · 2 œufs · 2 gousses d'ail et 2 cm de gingembre · 2 c. à s. de sauce soja · 1 c. à c. de vinaigre de riz · 1 cébette et 1 c. à c. d'huile de sésame
+
+1. **Œufs.** 6 min 30 dans l'eau bouillante, eau glacée ; écalés.
+2. **Tofu.** Pressé 10 min, en tranches ; poêle chaude huilée, 3 min par face : doré ; 1 c. à s. de soja, 30 s : laqué.
+3. **Bouillon.** Ail et gingembre râpés, 1 min ; champignons, 4 min : dorés ; bouillon, pak-choï coupé en deux, 3 min ; hors du feu, miso délayé, soja, vinaigre de riz.
+4. **Servir.** Nouilles cuites 3 à 4 min, égouttées, dans les bols ; bouillon, légumes, tofu, œuf, cébette, sésame.
+
+**Conservation** : Bouillon : 2 jours au frigo, nouilles à cuire au moment.
+
+---
+
+### Kebab de chou-fleur rôti aux épices, sauce blanche et pickles d'oignon
+
+*Kebab végétarien · France › Food fusion · Plat*
+
+Niveau ⭐ · 4 portions · actif 20 min · repos/cuisson 30 min · coût €
+
+- ✅ Sans porc (calculé)
+- ✅ Sans alcool (calculé)
+- ⚠️ **Allergènes** : gluten, lait
+- 👶 **Enfants** : ✓ dès 3 ans.
+
+**Équipement** : Plaque, papier cuisson.
+
+Le kebab sans viande : un chou-fleur en fines tranches rôti à four très chaud avec la marinade du kebab au poulet (yaourt, concentré de tomate, paprika, cumin), dans un pain pita avec sauce blanche, crudités et oignons rouges marinés.
+
+**Ingrédients** : 1 chou-fleur · 4 pains pita (ou pains kebab maison) · 100 g de yaourt grec · 1 c. à s. de concentré de tomate · 1 c. à c. de paprika et de cumin · 3 c. à s. d'huile d'olive · 4 c. à s. de sauce blanche · 1 oignon rouge · 2 c. à s. de vinaigre de cidre · 1 salade et 2 tomates
+
+1. **Pickles.** Oignon rouge en lamelles, vinaigre, pincée de sel : 20 min, il devient rose.
+2. **Mariner.** Chou-fleur en tranches de 1 cm et fleurettes, enrobé de yaourt, concentré, épices, huile, sel.
+3. **Rôtir.** Étalé sans se chevaucher, 25 à 30 min à 230 °C, retourné à mi-cuisson : bords noircis, cœur tendre à la pointe du couteau.
+4. **Monter.** Pita réchauffée, sauce blanche, chou-fleur, salade, tomate, pickles d'oignon.
+
+**Conservation** : Chou-fleur rôti : 2 jours au frigo.
+
+---
+
+## 2.49 Vague 7 · Favoris TikTok du propriétaire (relevé du 22/10/2026) : plats salés absents du catalogue, choisis parmi les
 
 ### Hauts de cuisse au miel, à l'ail et au citron poivré (au four)
 
@@ -30799,7 +31498,7 @@ Bouillon « cube » en pâte (légumes + 15 % de sel, 6 mois au frigo) et en pou
 
 ## 5. Zéro déchet de la vague 2
 
-Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **3077 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
+Le calcul du Tome 12 §6 s'applique aux nouvelles fiches : **3160 ingrédients entamés** repérés dans la vague 2, chacun avec ses solutions (entrée, accompagnement, autre plat, conservation, usage hors cuisine).
 
 ---
 

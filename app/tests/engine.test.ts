@@ -10,5 +10,6 @@ import "./e6-variete-idees";
 import "./e7-favoris-tiktok";
 import "./e8-frigo";
 import "./e9-favoris-2026-10-29";
+import "./e10-favoris-2026-11-04";
 
 console.log(`\n${passedCount()} contrôles OK`);
