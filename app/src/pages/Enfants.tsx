@@ -5,7 +5,7 @@ import { useProfile } from "../lib/store";
 import { PETIT_CHEF, SECURITE_ENFANTS } from "../lib/content";
 import { Chip, Empty, MoreGrid, Page, RecipeCard, Section } from "../components/ui";
 import { href } from "../lib/router";
-import { kidFriendly } from "../lib/famille";
+import { kidFriendly, tonightMin } from "../lib/famille";
 import { Icon } from "../components/icons";
 
 const AGES = [[1, "Dès 1 an"], [3, "3-5 ans"], [6, "6-8 ans"], [9, "9-12 ans"]] as const;
@@ -28,7 +28,7 @@ export default function Enfants() {
       || (a.r.active + a.r.rest) - (b.r.active + b.r.rest));
   // rubriques famille (audit famille) : le soir de semaine, la cuisine d'avance
   const fam = RECIPES.filter((r) => r.role === "plat" && kidFriendly(r, { ...p, kidsAge: Math.max(age, p.kidsAge ?? age) }) && verdict(r, kidProfile).availability !== "hidden");
-  const soirs = fam.filter((r) => r.active + r.rest <= 30 && !r.profile.includes("epice")).sort((a, b) => Number(b.cats.includes("enfants")) - Number(a.cats.includes("enfants")) || a.active - b.active).slice(0, 10);
+  const soirs = fam.filter((r) => tonightMin(r) <= 30 && !r.profile.includes("epice")).sort((a, b) => Number(b.cats.includes("enfants")) - Number(a.cats.includes("enfants")) || a.active - b.active).slice(0, 10);
   const dimanche = fam.filter((r) => /cong[eé]l/i.test(r.storage)).slice(0, 10);
   return (
     <Page photo="rubrique/enfants" title="Recettes pour enfants" sub="Par âge, toujours sans alcool, avec ou sans porc, et les règles de sécurité qui comptent." back="/explorer">

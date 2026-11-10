@@ -1,3 +1,4 @@
+import { tonightMin } from "../lib/famille";
 import { Icon } from "../components/icons";
 import { ImportRow } from "../components/video";
 import { useState } from "react";
@@ -31,7 +32,7 @@ export default function Search({ q }: { q: string }) {
   const relaxed = !recipesAll.length && !!rest && intents.length > 0 && base.length > 0;
   if (relaxed) recipesAll = base;
   const tq = rest || q;
-  const recipes = recipesAll.filter((r) => (!kind || KINDS.find((k) => k[0] === kind)![1](r)) && (!fast || r.active + r.rest <= 30) && (!easy || r.level === 1));
+  const recipes = recipesAll.filter((r) => (!kind || KINDS.find((k) => k[0] === kind)![1](r)) && (!fast || tonightMin(r) <= 30) && (!easy || r.level === 1));
   const nFilters = +!!kind + +fast + +easy;
   const macros = search(MACROS, tq, (m) => [m.name, m.blurb]);
   const ings = search(INGREDIENT_NAMES.filter((n, i, a) => a.findIndex((m) => INGREDIENTS[m].slug === INGREDIENTS[n].slug) === i), tq, (n) => [n], 10);

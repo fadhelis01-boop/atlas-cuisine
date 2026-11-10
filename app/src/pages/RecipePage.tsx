@@ -3,7 +3,7 @@ import { Icon } from "../components/icons";
 import { toast } from "../lib/toast";
 import { substitutOf } from "../lib/substituts";
 import { restesOfRecipe } from "../lib/restes";
-import { defaultPortions } from "../lib/famille";
+import { defaultPortions, kidsOf } from "../lib/famille";
 import { equipmentNotes } from "../lib/equipement";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
@@ -52,6 +52,14 @@ function SeasonBadge({ r }: { r: Recipe }) {
   return null;
 }
 
+const FRYING = /bain de friture|huile de friture|huile (?:à|a) (?:1[5-9]\d) ?°C|frire|friture/i;
+/** Audit chef + famille : ce qui se prépare la veille ou avant, dit dès l'en-tête de la fiche. */
+export function AheadLine({ r }: { r: Recipe }) {
+  if (r.veille) return <p className="meta ahead"><Icon name="timer" size={16} className="ic-inline" /> À lancer la veille : {r.veille}</p>;
+  if (r.avance) return <p className="meta ahead"><Icon name="timer" size={16} className="ic-inline" /> + {minutes(r.avance)} à prévoir avant (marinade ou repos)</p>;
+  return null;
+}
+
 /** Ce qu'un débutant doit savoir avant d'allumer le feu : matériel, préchauffage, ingrédients à sortir à l'avance. */
 function BeforeYouStart({ r }: { r: Recipe }) {
   const p = useProfile();
@@ -60,16 +68,23 @@ function BeforeYouStart({ r }: { r: Recipe }) {
   const oven = ovenPlan(r.steps);
   const soft = /pommade|beurre mou|température ambiante|sors .{0,40}avant/i.test(all + " " + r.ingredients.map((l) => l.label).join(" "));
   const longRest = r.rest >= 240;
+  // audit chef + famille : bain de friture → consignes de sécurité ; œuf cru → publics fragiles
+  const fry = FRYING.test(all);
+  const youngKid = kidsOf(p).some((a) => a < 6);
   return (
     <div className="card pad before">
       <strong>Avant de commencer</strong>
       <ul className="small">
+        {r.veille && <li className="ahead"><strong>À lancer la veille</strong> : {r.veille}.</li>}
+        {!r.veille && r.avance ? <li className="ahead"><strong>À prévoir avant</strong> : {minutes(r.avance)} de marinade ou de repos au frais, en plus du temps annoncé.</li> : null}
         <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
         {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
         {eqNotes.map((t) => <li key={t} className="eq-note">{t}</li>)}
         {oven && <li>Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
         {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
         {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
+        {fry && <li className="safety"><strong>Friture</strong> : casserole sur un feu arrière, queue tournée vers l'intérieur, enfants loin de la cuisinière. Ne quitte jamais l'huile chaude ; garde un couvercle à portée pour étouffer une flamme, jamais d'eau.</li>}
+        {r.rawEgg && <li className="safety"><strong>Œuf cru</strong> : déconseillé aux enfants de moins de 6 ans, aux femmes enceintes et aux personnes âgées{youngKid ? " (tu as un enfant de moins de 6 ans)" : ""}. Prends une mayonnaise du commerce ou des œufs pasteurisés ; 24 h au frigo au plus.</li>}
       </ul>
     </div>
   );
@@ -232,6 +247,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
           {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}><Icon name="fusion" size={16} className="ic-inline" /> Food fusion</a> : {r.fusionNote}</p>}
           {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}><Icon name="play" size={16} className="ic-inline" /> Voir la vidéo</button>}
           <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}</p>
+          <AheadLine r={r} />
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
           <SeasonBadge r={r} />
           {/* recette non testée : dit d'emblée, en un badge relié au carnet (audit dév/UX 2026-10-21 §2.2) */}

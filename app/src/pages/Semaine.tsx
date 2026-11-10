@@ -58,14 +58,14 @@ export default function Semaine({ add }: { add: string | null }) {
   const setPrefs = (p: Partial<typeof prefs>) => setState((s) => { s.weekPrefs = { ...prefs, ...p }; });
   const fill = (base: WeekPlan, onlyDays = days) => {
     if (!left) return;
-    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent, sundayMenu: prefs.slots.includes("midi"), kidsVerdict }));
+    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent, sundayMenu: prefs.slots.includes("midi"), kidsVerdict, today: weekDays(0)[0] }));
   };
   const clearWeek = () => { const next = { ...plan }; for (const d of days) delete next[d]; return next; };
   const reroll = (day: string, slot: Slot) => {
     const cur = plan[day]?.[slot];
     const next: WeekPlan = { ...plan, [day]: { ...plan[day], [slot]: undefined } };
     if (!left) return;
-    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent: new Set([...recent, ...(cur ? [cur] : [])]) });
+    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent: new Set([...recent, ...(cur ? [cur] : [])]), today: weekDays(0)[0] });
     // ne remplir que la case demandée, et pas avec le même plat
     const pick = filled[day]?.[slot];
     save({ ...plan, [day]: { ...plan[day], [slot]: pick && pick !== cur ? pick : undefined } });
@@ -99,6 +99,11 @@ export default function Semaine({ add }: { add: string | null }) {
     toast("Agenda téléchargé : ouvre le fichier pour ajouter les repas à ton calendrier");
   };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
+  const prevIso = (d: string) => { const x = new Date(`${d}T12:00:00`); x.setDate(x.getDate() - 1); return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`; };
+  // audit chef + famille : la veille au soir, ce qu'il faut lancer pour le lendemain (trempage, marinade, riz à cuire)
+  const veilles = days.flatMap((d, i) => (["midi", "soir"] as const).map((s) => RECIPE_BY_ID[plan[d]?.[s] ?? ""]).filter((r) => r?.veille).map((r) => ({
+    day: d, id: r!.id, title: r!.title.split(" (")[0], task: r!.veille!, when: i === 0 && offset === 0 ? "Pour aujourd'hui, c'est trop tard (à lancer la veille la prochaine fois)" : `${dayName(prevIso(d)).replace(/^./, (c) => c.toUpperCase())} soir`,
+  })));
   // boisson maison de la semaine (audit gourmet) : sans alcool, de saison, change chaque semaine
   const drink = useMemo(() => {
     const zone = zoneOf(zoneSetting);
@@ -214,10 +219,11 @@ export default function Semaine({ add }: { add: string | null }) {
             <p>{balance.fish} repas de poisson · {balance.legumes} de légumineuses · {balance.vege} végétarien{balance.vege > 1 ? "s" : ""}{balance.rich ? ` · ${balance.rich} plat${balance.rich > 1 ? "s" : ""} très riche${balance.rich > 1 ? "s" : ""}` : ""}.</p>
             {balance.tips.length ? <ul>{balance.tips.map((t) => <li key={t}>{t}</li>)}</ul> : balance.meals >= 5 && <p className="small">Semaine équilibrée selon les repères simples du PNNS. Ajoute des légumes ou un fruit à chaque repas.</p>}
           </section>
-          {(prep.tasks.length > 0 || prep.veg.length > 0) && (
+          {(prep.tasks.length > 0 || prep.veg.length > 0 || veilles.length > 0) && (
             <section className="section">
               <h2 className="h3"><Icon name="knife" size={22} className="ic-inline" /> À préparer à l'avance (le dimanche ou la veille)</h2>
-              {prep.veg.length > 0 && <p>Lave et coupe d'un coup : {prep.veg.join(", ").toLowerCase()}. Range-les dans des boîtes fermées au frigo (3 jours au plus).</p>}
+              {veilles.length > 0 && <ul className="ahead">{veilles.map((v) => <li key={v.day + v.id}><strong>{v.when}</strong>, pour {v.title} : {v.task}.</li>)}</ul>}
+              {prep.veg.length > 0 && <p>Lave et coupe d'un coup : {prep.veg.join(", ").toLowerCase()}. Range-les dans des boîtes fermées au frigo (2 jours au plus ; pommes de terre, tomates et avocats se coupent au dernier moment).</p>}
               <ul>{prep.tasks.map((t, k) => <li key={k}><strong>{t.recipe} :</strong> {t.task}</li>)}</ul>
             </section>
           )}

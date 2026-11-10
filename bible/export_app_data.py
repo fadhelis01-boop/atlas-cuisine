@@ -179,6 +179,53 @@ for d in RECIPES:
         **({"credit": d["credit"]} if d.get("credit") else {}),
     })
 
+# ---------------------------------------------------------------- audit chef + famille (10/11/2026) : règles calculées
+import securite_famille as _SF
+print(f"lignes composées séparées : {_SF.split_composites(recipes, set(REF))}")
+_BYID = {r["id"]: r for r in recipes}
+def _subs(r, depth=0):
+    out = []
+    for ln in r["ingredients"]:
+        s = (ln["ref"] or "")[4:] if (ln["ref"] or "").startswith("SUB:") else None
+        if s and s in _BYID:
+            out.append(s)
+            if depth < 2: out += _subs(_BYID[s], depth + 1)
+    return out
+# âge : une sous-recette qu'on ne peut pas manger avant N ans relève l'âge du plat (« ✓✓ dès N ans : sabler » est l'âge pour
+# AIDER, pas pour manger : il ne compte pas) ; la mayonnaise maison (œuf cru) donne une consigne, la mayonnaise du commerce
+RAW_EGG = {"mayonnaise"}
+for _ in range(3):
+    for r in recipes:
+        if r["age"] is None: continue
+        for s in _subs(r):
+            sr = _BYID[s]
+            if sr["age"] is not None and sr["age"] > r["age"] and not (sr["kids"] or "").startswith("✓✓"):
+                r["kids"] = f"{r['kids'].rstrip('.')}. Dès {sr['age']} ans à cause de : {sr['title'].split(' (')[0].lower()}."
+                r["age"] = sr["age"]
+for r in recipes:
+    subs = set(_subs(r))
+    raw = r["id"] in RAW_EGG or bool(subs & RAW_EGG) or _SF.raw_egg_text(r)
+    if raw:
+        r["rawEgg"] = True
+        if subs & RAW_EGG and "commerce" not in (r["kids"] or ""):
+            r["kids"] = f"{(r['kids'] or '').rstrip('.')}. Moins de 6 ans, femme enceinte : mayonnaise du commerce (œufs pasteurisés) à la place de la maison."
+# conservation : poisson, fruits de mer, riz cuit, mayonnaise maison, œufs coulants ; jamais plus que ses sous-recettes
+_SECT = {n: re.sub(r"^## \d+\.\s*", "", v["section"]) for n, v in REF.items()}
+_KEEP = {}
+def _keep(rid, stack=()):
+    if rid in _KEEP: return _KEEP[rid]
+    r = _BYID[rid]
+    subk = [(s, _keep(s, stack + (rid,))) for s in {x for x in _subs(r) if x not in stack}]
+    _KEEP[rid] = _SF.keep_rule(r, _SECT, [(s, k) for s, k in subk if k])
+    return _KEEP[rid]
+_nk = sum(_SF.apply_keep(r, _keep(r["id"])) for r in recipes)
+# à lancer la veille (trempage, marinade longue, riz cuit la veille…) : affiché sur la fiche, écarté de « ce soir »
+for r in recipes:
+    v = _SF.veille_of(r)
+    if v: r["veille"] = v
+    elif _SF.avance_of(r): r["avance"] = _SF.avance_of(r)
+print(f"conservation ajustée : {_nk} fiches · à lancer la veille : {sum(1 for r in recipes if r.get('veille'))} · à prévoir avant : {sum(1 for r in recipes if r.get('avance'))} · œuf cru : {sum(1 for r in recipes if r.get('rawEgg'))}")
+
 # ---------------------------------------------------------------- zéro déchet ingrédient par ingrédient (Tome 12 §6)
 import unicodedata as _ud
 from zero_dechet_data import LEFTOVERS
@@ -490,7 +537,17 @@ index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
 # (04/11/2026, place pour les fiches des auteurs). Les « SUB:… » et les lignes sans réf. restent telles quelles.
 _ING_RANK = {k: i for i, k in enumerate(ingredients)}
 for x in index:
-    x["ingredients"] = [[l["qty"], l["label"], _ING_RANK.get(l["ref"], l["ref"]), l["weight"]] + ([1] if l["optional"] else []) for l in x["ingredients"]]
+    packed = []
+    for l in x["ingredients"]:
+        p = [l["qty"], l["label"], _ING_RANK.get(l["ref"], l["ref"]), l["weight"]]
+        # allergènes nommés dans le libellé et absents de la référence (audit chef + famille) : « AR,?FC » (? = peut contenir)
+        ra = set(ingredients[l["ref"]]["allergens"]) | set(ingredients[l["ref"]]["maybe"]) if l["ref"] in ingredients else set()
+        sure, maybe = _SF.label_allergens(l["label"], ra) if not (l["ref"] or "").startswith("SUB:") else ([], [])
+        extra = ",".join(sure + ["?" + m for m in maybe])
+        if l["optional"] or extra: p.append(1 if l["optional"] else 0)
+        if extra: p.append(extra)
+        packed.append(p)
+    x["ingredients"] = packed
 from renommages import RENAMES
 _ids_all = {r["id"] for r in recipes}
 assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"

@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "gratin_chou_fleur_lentilles", "bar_croute_sel", "curry_legumes_coco", "tacos_poisson_express", "massaman_poulet", "ayam_masak_merah", "spaghetti_vongole",
-  "saumon_teriyaki", "bacalhau_bras", "nikujaga", "fiskesuppe", "moules_normande", "cassolettes_crevettes_poireaux", "waterzooi_poulet", "ful_medames",
-  "pyttipanna_boeuf", "poulet_cajou_thai", "falafels", "anda_curry", "lieu_croute_herbes", "locro_vegetarien", "raclette_maison", "thiou_poulet",
-  "fiskefrikadeller", "dal_tadka", "boeuf_oignons_saute", "salade_haricots_blancs_thon", "moqueca", "spaetzle_fromage",
+  "moules_frites", "white_chicken_chili", "fiskefrikadeller", "curry_legumes_coco", "nouilles_sautees_boeuf", "locro_vegetarien", "goan_fish_curry", "bacalhau_bras",
+  "gratin_celeri_noix", "salade_haricots_blancs_thon", "pancit_bihon", "fiskesuppe", "berkoukes_legumes", "bunny_chow_haricots", "cassolettes_crevettes_poireaux", "curry_fidjien_legumes",
+  "falafels", "pyttipanna_boeuf", "pasta_genovese", "spaetzle_fromage", "nikujaga", "vermicelles_riz_sautes_legumes", "atakilt_wat", "moules_marinieres",
+  "arayes_boeuf_feta", "shiro_wat", "bar_croute_sel", "choucroute_mer", "kottu_roti", "raclette_maison",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

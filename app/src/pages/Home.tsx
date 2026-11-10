@@ -18,7 +18,7 @@ import { sectionLook } from "./Dictionnaire";
 import { type Proposal, momentOf, propose } from "../lib/propose";
 import { dailyPick, freshSeed, shuffled } from "../lib/variete";
 import { PARCOURS } from "../lib/parcours";
-import { kidFriendly } from "../lib/famille";
+import { kidFriendly, tonightMin } from "../lib/famille";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
 const ENTRIES = [
@@ -41,7 +41,7 @@ const has = (r: Recipe, re: RegExp) => re.test(norm(r.title)) || r.ingredients.s
 let ZONE: Zone = "nord"; // zone courante, fixée au rendu (les tests d'envies en ont besoin)
 const CRAVINGS: { id: string; icon: string; label: string; test: (r: Recipe) => boolean }[] = [
   { id: "saison", icon: "sprout", label: "De saison", test: (r) => r.role !== "autre" && seasonFit(r, ZONE).score >= 2 },
-  { id: "rapide", icon: "timer", label: "Express 20 min", test: (r) => r.role === "plat" && r.active + r.rest <= 20 },
+  { id: "rapide", icon: "timer", label: "Express 20 min", test: (r) => r.role === "plat" && tonightMin(r) <= 20 },
   { id: "brunch", icon: "cup", label: "Brunch", test: (r) => r.cats.includes("brunch") },
   { id: "salade", icon: "leaf", label: "Salades repas", test: (r) => r.cats.includes("salade") },
   { id: "chocolat", icon: "chocolate", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
@@ -167,7 +167,7 @@ export default function Home() {
   const weekday = [1, 2, 3, 4, 5].includes(new Date().getDay());
   const maxTotal: Record<string, number> = weekday ? { entree: 30, plat: 60, dessert: 45 } : { entree: 90, plat: 999, dessert: 999 };
   const seasonal = (role: string, salt: number) => {
-    const ranked = visible.filter((r) => r.role === role && r.active + (role === "dessert" ? 0 : r.rest) <= maxTotal[role] && kidFriendly(r, p)).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
+    const ranked = visible.filter((r) => r.role === role && (role === "dessert" ? r.active : tonightMin(r)) <= maxTotal[role] && kidFriendly(r, p)).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
     const top = ranked.slice(0, Math.max(12, Math.round(ranked.length * 0.3))).map(([r]) => r);
     return daily(top, 1, salt)[0] ?? null;
   };

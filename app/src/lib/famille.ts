@@ -24,6 +24,11 @@ export function kidFriendly(r: Recipe, p: Profile): boolean {
   return true;
 }
 
+/** Temps réel avant de passer à table (audit chef + famille) : marinade ou repos non comptés inclus. */
+export const totalMin = (r: Recipe) => r.active + r.rest + (r.avance ?? 0);
+/** Pour les filtres « rapide », « ce soir », « 20 min » : un plat à lancer la veille n'est jamais rapide ce soir. */
+export const tonightMin = (r: Recipe) => (r.veille ? Number.POSITIVE_INFINITY : totalMin(r));
+
 /** Parts à cuisiner pour le foyer : un adulte = 1 ; un enfant de moins de 3 ans ≈ ⅓, de 3 à 10 ans ≈ ½, dès 11 ans = 1. */
 export function householdPortions(p: Profile): number | null {
   const h = p.household;

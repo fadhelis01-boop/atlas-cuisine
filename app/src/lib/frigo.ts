@@ -1,6 +1,7 @@
 // « Que cuisiner avec mon frigo ? » (retour d'usage du 22/10/2026 : pas de bouton, des idées sans rapport, rien d'autre à
 // proposer si les premières ne plaisent pas). On choisit ce qu'on veut (un plat, une entrée, un dessert ou un menu
 // complet), on lance, et chaque appui sur « D'autres idées » en propose de nouvelles sans revenir sur les précédentes.
+import { tonightMin } from "./famille";
 import { INGREDIENTS } from "./data";
 import { refsOf, suggest, type Suggestion } from "./engine";
 import { pickVaried } from "./variete";
@@ -42,7 +43,7 @@ export function rankFor(recipes: Recipe[], course: Exclude<Course, "menu">, o: F
   const have = new Set(o.have);
   // ce qu'on tire de ce qu'on a : des œufs donnent des jaunes et des blancs, un poulet entier des cuisses et des blancs
   for (const h of o.have) for (const d of DERIVED[h] ?? []) have.add(d);
-  const pool = recipes.filter((r) => r.role === ROLE[course] && (!o.maxMinutes || r.active + r.rest <= o.maxMinutes));
+  const pool = recipes.filter((r) => r.role === ROLE[course] && (!o.maxMinutes || tonightMin(r) <= o.maxMinutes));
   const byId = new Map(pool.map((r) => [r.id, r]));
   return suggest(pool, have, o.expiring ?? new Set(), 0.8, o.pantry).flatMap((s) => {
     const r = byId.get(s.id)!;

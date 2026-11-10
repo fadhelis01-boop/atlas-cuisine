@@ -20,6 +20,9 @@ export interface RecipeLine {
   weight: number; // 0 optionnel/assaisonnement … 3 structurant
   optional: boolean;
   replaces?: string; // version adaptée : ligne d'origine remplacée (« 750 ml de vin rouge »)
+  /** allergènes nommés dans le libellé mais absents de la référence (« coriandre et cacahuètes ») ; maybeExtra : en alternative */
+  extra?: string[];
+  maybeExtra?: string[];
 }
 
 export interface Variant {
@@ -78,6 +81,12 @@ export interface Recipe {
   /** pourquoi ce plat se passe d'acidité (tradition), audit gourmet */
   sansAcide?: string | null;
   /** référence de l'acide ajouté (citron, vinaigre de cidre…), audit gourmet */
+  /** audit chef + famille : ce qu'il faut lancer la veille (trempage, marinade, riz cuit la veille…) */
+  veille?: string;
+  /** minutes à prévoir avant de cuisiner (marinade, repos au frais) que le temps annoncé ne compte pas */
+  avance?: number;
+  /** contient de l'œuf cru (mayonnaise maison, tiramisu…) */
+  rawEgg?: boolean;
   acideAjoute?: string | null; // accompagnement relié : id de fiche, ou « achat:<réf. Tome 3> » (audit gourmet)
   fusionNote?: string; // « Food fusion » : de quelles traditions la recette est le mélange
 }

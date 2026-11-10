@@ -24,7 +24,7 @@ export interface Evaluation {
   rennet: string[]; // fromages à présure animale (avertissement végétarien)
 }
 
-type Line = Pick<RecipeLine, "ref" | "weight" | "optional">;
+type Line = Pick<RecipeLine, "ref" | "weight" | "optional"> & Partial<Pick<RecipeLine, "extra" | "maybeExtra">>;
 type Lookup = (name: string) => IngredientRef | undefined;
 
 const FLESH_SECTIONS = ["Viandes & volailles", "Porc, charcuterie", "Poissons, crustacés"];
@@ -67,6 +67,9 @@ export function evaluateLines(lines: Line[], opts: { imported?: boolean; lookup?
     if (st !== "ok" && !res.offenders[kind].includes(id)) res.offenders[kind].push(id);
   };
   for (const ln of walk(lines)) {
+    // allergènes écrits dans le libellé (« coriandre et cacahuètes ») : audit chef + famille
+    ln.extra?.forEach((a) => res.allergens.add(a));
+    ln.maybeExtra?.forEach((a) => res.maybeAllergens.add(a));
     if (ln.ref === null) continue; // eau, café… : implicite (rapport d'écarts du Tome 11)
     const ing = lookup(ln.ref);
     if (!ing) {

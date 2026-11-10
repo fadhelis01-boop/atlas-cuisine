@@ -1,3 +1,4 @@
+import { tonightMin } from "../lib/famille";
 import { Icon } from "../components/icons";
 import { useMemo, useState } from "react";
 import { MACROS, RECIPES } from "../lib/data";
@@ -11,7 +12,7 @@ import type { Recipe } from "../lib/types";
 // Toutes les recettes, avec les filtres qu'attend un cuisinier amateur (audit UX, Tome 13 §11) :
 // quoi (type de plat), combien de temps, quelle difficulté, quel budget, pour quelle occasion, et des tris utiles.
 const TYPES: [string, string, (r: Recipe) => boolean][] = [
-  ["entree", "Entrées", (r) => r.role === "entree"], ["plat", "Plats", (r) => r.role === "plat"], ["express", "Express 20 min", (r) => r.role === "plat" && r.active + r.rest <= 20],
+  ["entree", "Entrées", (r) => r.role === "entree"], ["plat", "Plats", (r) => r.role === "plat"], ["express", "Express 20 min", (r) => r.role === "plat" && tonightMin(r) <= 20],
   ["brunch", "Petit-déj & brunch", (r) => r.cats.includes("brunch")], ["salade", "Salades repas", (r) => r.cats.includes("salade")], ["dessert", "Desserts & goûters", (r) => r.role === "dessert"],
   ["boisson", "Boissons", (r) => r.role === "boisson"], ["sauce", "Sauces & condiments", (r) => r.kind === "Sauce" || r.kind === "Base"],
   ["pain", "Pains & viennoiseries", (r) => r.kind === "Pain"], ["accomp", "Accompagnements", (r) => r.kind === "Accompagnement"],
@@ -36,7 +37,7 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
   const zone = zoneOf(useStore((s) => s.settings.zone));
   const visible = useVisible(RECIPES);
   const list = useMemo(() => {
-    let l = visible.filter((r) => (!type || TYPES.find((t) => t[0] === type)![2](r)) && (!time || r.active + r.rest <= time) && (!level || r.level <= level)
+    let l = visible.filter((r) => (!type || TYPES.find((t) => t[0] === type)![2](r)) && (!time || tonightMin(r) <= time) && (!level || r.level <= level)
       && (!cheap || r.cost === "€") && (!occ || r.fetes.includes(occ)) && (!macro || r.macro === macro) && (!veg || evaluate(r).flesh.length === 0)
       && (!video || (r.videoCount ?? r.videos.length) > 0) && (!kids || (r.age !== null && r.age <= 3)));
     if (q.trim()) l = search(l, q, (r) => [r.title, r.origin, r.regionPath.join(" "), r.ingredients.map((i) => i.label).join(" ")], 600);

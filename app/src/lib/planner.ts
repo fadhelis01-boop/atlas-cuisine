@@ -5,7 +5,7 @@ import { flatten, verdict } from "./engine";
 import { seasonFit, type Zone } from "./season";
 import { norm, scaleQty } from "./text";
 import type { Leftover, Profile, Recipe } from "./types";
-import { isFish, isRich, kidFriendly, starchOf } from "./famille";
+import { isFish, isRich, kidFriendly, kidsOf, starchOf, totalMin } from "./famille";
 import { composeMenus } from "./menu";
 
 export type Slot = "midi" | "soir";
@@ -37,7 +37,7 @@ export function proteinOf(r: Recipe): string {
 }
 
 // un reste qui vaut la peine d'être signalé : pas un demi-oignon ni une pincée d'épice
-const TRIVIAL = /^(Ail|Oignon|Échalote|Sel|Poivre|Huile|Sucre|Beurre|Persil|Coriandre|Thym|Laurier|Ciboulette|Menthe|Basilic)/;
+const TRIVIAL = /^(Ail|Oignon|Échalote|Sel|Poivre|Huile|Sucre|Beurre|Persil|Coriandre|Thym|Laurier|Ciboulette|Menthe|Basilic|Citron|Gingembre|Crème fraîche)/;
 const useful = (l: Leftover[]) => l.filter((x) => !TRIVIAL.test(x.ref) && !/^(Épices|Herbes|Huiles)/.test(INGREDIENTS[x.ref]?.section ?? ""));
 
 export interface AutoOptions {
@@ -45,6 +45,7 @@ export interface AutoOptions {
   recent?: Set<string>;   // plats proposés ces 6 dernières semaines (audit gourmet) : ils ne reviennent pas
   sundayMenu?: boolean;   // dimanche midi : entrée et dessert ajoutés au grand plat
   kidsVerdict?: Record<string, "oui" | "non">; // carnet : « les enfants ont aimé » (bonus) ou non (écarté)
+  today?: string;         // date du jour (AAAA-MM-JJ) : pas de plat « à lancer la veille » pour ce soir (audit chef + famille)
 }
 
 /** Un « grand plat » : long ou de fête. Un seul par jour de week-end (audit gourmet). */
@@ -71,6 +72,14 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
     starch: new Map<string, number>(), macro: new Map<string, number>() };
   for (const r of placed) { const st = starchOf(r); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1); count.macro.set(r.macro, (count.macro.get(r.macro) ?? 0) + 1); }
   const totalSlots = days.length * o.slots.length;
+  // audit chef + famille : avec des enfants, un soir de semaine se compte en temps total (à table vers 19 h 15) ;
+  // le même produit principal ne revient pas dans la semaine (moules deux jours de suite) ; peu de produits d'épicerie du monde
+  const kidsHome = kidsOf(o.profile).some((a) => a < 11);
+  const mainOf = (r: Recipe) => r.ingredients.filter((l) => l.weight >= 3 && l.ref && /^(Viandes|Poissons|Porc)/.test(INGREDIENTS[l.ref]?.section ?? "")).map((l) => l.ref!);
+  const specialOf = (r: Recipe) => r.ingredients.filter((l) => l.ref && !l.optional && l.weight >= 1 && (/Produits du monde/.test(INGREDIENTS[l.ref]?.section ?? "") || /🟠|🔴/.test(INGREDIENTS[l.ref]?.dispo ?? ""))
+    && !/^(Épices|Herbes)/.test(INGREDIENTS[l.ref]?.section ?? "")).map((l) => l.ref!);
+  const mains = new Set(placed.flatMap(mainOf));
+  const specials = new Set(placed.flatMap(specialOf));
   let filled = 0;
   for (const day of days) {
     const dow = new Date(`${day}T12:00:00`).getDay();
@@ -83,10 +92,12 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
       const leftRefs = new Set(prev && o.leftovers ? useful(o.leftovers[prev.id] ?? []).map((l) => l.ref) : []);
       const fits = (r: Recipe) => {
         if (used.has(r.id)) return false;
-        if (!weekend) return r.active + r.rest <= o.weekdayMax || (slot === "soir" && r.active <= 25 && r.rest <= 60);
-        if (bigToday) return r.active + r.rest <= 45 && !isBigDish(r);  // un seul grand plat par jour
-        if (dow === 6 && slot === "midi") return r.cats.includes("brunch") || r.active + r.rest <= 30; // samedi midi : brunch ou rapide
-        if (dow === 0 && slot === "soir") return r.active + r.rest <= 40;  // dimanche soir : léger, on a cuisiné à midi
+        if (o.today && day <= o.today && r.veille) return false;          // trempage, marinade d'une nuit : trop tard pour ce soir
+        const t = totalMin(r);
+        if (!weekend) return t <= o.weekdayMax || (!kidsHome && slot === "soir" && r.active <= 25 && r.rest + (r.avance ?? 0) <= 60);
+        if (bigToday) return t <= 45 && !isBigDish(r);  // un seul grand plat par jour
+        if (dow === 6 && slot === "midi") return r.cats.includes("brunch") || t <= 30; // samedi midi : brunch ou rapide
+        if (dow === 0 && slot === "soir") return t <= 40;  // dimanche soir : léger, on a cuisiné à midi
         return true;
       };
       let cands = pool.filter((r) => fits(r) && !recent.has(r.id) && o.kidsVerdict?.[r.id] !== "non");
@@ -104,7 +115,9 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
           + (isFish(r) && count.fish < 2 ? 2 + 3 * progress : 0)
           + (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0)
           + (dow === 0 && slot === "midi" && isBigDish(r) ? 3 : 0)           // le dimanche midi, le grand plat de la semaine
-          + (o.kidsVerdict?.[r.id] === "oui" ? 2 : 0);                       // plébiscité par les enfants
+          + (o.kidsVerdict?.[r.id] === "oui" ? 2 : 0)                         // plébiscité par les enfants
+          + (mainOf(r).some((m) => mains.has(m)) ? -8 : 0)                     // même produit principal déjà dans la semaine
+          + -2.5 * Math.max(0, specials.size + specialOf(r).filter((x) => !specials.has(x)).length - 3) * (specialOf(r).some((x) => !specials.has(x)) ? 1 : 0);
       };
       // tirage pondéré parmi les 24 meilleurs : varié d'une semaine à l'autre, sans sacrifier la cohérence
       const top = cands.map((r) => [r, score(r)] as const).sort((a, b) => b[1] - a[1]).slice(0, 24);
@@ -114,6 +127,7 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
       for (let i = 0; i < top.length; i++) { pick -= weights[i]; if (pick <= 0) { best = top[i][0]; break; } }
       out[day] = { ...out[day], [slot]: best.id };
       used.add(best.id); prev = best; filled++;
+      mainOf(best).forEach((m) => mains.add(m)); specialOf(best).forEach((x) => specials.add(x));
       const st = starchOf(best); if (st) count.starch.set(st, (count.starch.get(st) ?? 0) + 1);
       count.macro.set(best.macro, (count.macro.get(best.macro) ?? 0) + 1);
       if (isFish(best)) count.fish++; if (st === "légumineuses") count.legumes++; if (isRich(best)) count.rich++;
@@ -197,6 +211,8 @@ export function consolidate(items: { id: string; factor: number }[]): ShopLine[]
 
 // ---------------------------------------------------------------- préparation à l'avance (cuisine en lot)
 const AHEAD = /marin|pate (a pain|a pizza|brisee|sucree)|petri|bouillon|fumet|sauce|pesto|vinaigrette|chermoula|nokoss|creme patissiere|repos une nuit|la veille|une nuit|tremper|trempe/;
+const LAST_MINUTE = /frire|friture|frits?|servir|dresser|au dernier moment|aussitot|tout de suite/;
+const NOT_AHEAD = /Ail|Oignon|Échalote|Pomme de terre|Tomate|Avocat|Salade|Champignon|Aubergine|Concombre|Roquette|Endive|Épinard|Cresson|Patate douce|Céleri-rave|Artichaut/;
 export interface PrepTask { recipe: string; task: string }
 /** Ce qui peut se préparer le dimanche (ou la veille) pour les repas de la semaine, et les légumes à laver et couper d'un coup. */
 export function prepAhead(ids: string[]): { tasks: PrepTask[]; veg: string[] } {
@@ -204,8 +220,11 @@ export function prepAhead(ids: string[]): { tasks: PrepTask[]; veg: string[] } {
   const veg = new Map<string, number>();
   for (const id of ids) {
     const r = RECIPE_BY_ID[id]; if (!r) continue;
-    for (const s of r.steps) if (AHEAD.test(norm(s))) { tasks.push({ recipe: r.title.split(" (")[0], task: s.replace(/\*\*/g, "") }); break; }
-    for (const l of flatten(r.ingredients)) if (l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "") && !/Ail|Oignon|Échalote/.test(l.ref)) veg.set(l.ref.split(" / ")[0].split(" (")[0], (veg.get(l.ref) ?? 0) + 1);
+    // audit chef + famille : ce qui DOIT se faire la veille passe d'abord ; on ne frit ni ne dresse à l'avance
+    if (r.veille) tasks.push({ recipe: r.title.split(" (")[0], task: `À lancer la veille : ${r.veille}.` });
+    else for (const s of r.steps) if (AHEAD.test(norm(s)) && !LAST_MINUTE.test(norm(s))) { tasks.push({ recipe: r.title.split(" (")[0], task: s.replace(/\*\*/g, "") }); break; }
+    // seuls les légumes fermes se coupent à l'avance : pas la pomme de terre (elle noircit), ni la tomate (elle rend son eau)
+    for (const l of flatten(r.ingredients)) if (l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "") && !NOT_AHEAD.test(l.ref)) veg.set(l.ref.split(" / ")[0].split(" (")[0], (veg.get(l.ref) ?? 0) + 1);
   }
   return { tasks, veg: [...veg.keys()] };
 }
