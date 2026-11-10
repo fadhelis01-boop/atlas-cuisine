@@ -187,3 +187,39 @@ Rédigées plus longuement que le reste du catalogue (4,1 étapes et 90 mots en 
 | P2 | Rôle des enfants en cuisine, desserts légers du quotidien, placard de secours, photos des fiches TikTok, arrondis des pincées, boutons nommés | au fil de l'eau |
 
 Toutes les fiches restent **non testées en cuisine** ; la première semaine réellement cuisinée devrait passer avant les nouveaux ajouts.
+
+## 10. Mise en œuvre (10 novembre 2026, même jour)
+
+Les règles sont calculées à l'export (`bible/securite_famille.py`), pour que les fiches anciennes et futures y passent toutes. Contrôles ajoutés : tests 112 à 118 (`app/tests/e11-audit-chef-famille.ts`).
+
+**Points urgents**
+- **Allergènes** : 65 lignes composées séparées en vraies lignes (« 40 g de beurre » et « 40 g de farine »), et les allergènes nommés dans un libellé s'ajoutent à la fiche (« ou de cacahuètes » compte comme « peut contenir »). Blanquette et moussaka affichent le gluten, le bao l'arachide. Test 112 : plus aucun mot d'allergène sans son allergène.
+- **Conservation** : poisson 2 jours, fruits de mer, riz cuit, œuf cru et œufs coulants 24 h (178 fiches ajustées) ; jamais plus long que les sous-recettes. La mayonnaise maison passe à 24 h.
+- **Âge** : une sous-recette qu'on ne mange pas avant N ans relève l'âge du plat (l'âge « pour aider », comme sabler une pâte brisée, ne compte pas). Les 44 fiches à mayonnaise maison disent : « moins de 6 ans, femme enceinte : mayonnaise du commerce ». Encadré « œuf cru » sur 53 fiches.
+- **À lancer la veille** : 67 fiches repérées (trempage, marinade longue, riz ou tortilla de la veille, dessalage, décongélation), 54 avec un temps à prévoir avant (marinade d'une heure, repos au frais). Badge en tête de fiche ; jamais proposé pour ce soir (« Propose-moi », Express, recherche, frigo, accueil, rubrique Enfants) ; « Ma semaine » ne le met pas le jour même et rappelle la veille au soir ce qu'il faut lancer.
+- **Soirs de semaine** : avec des enfants de moins de 11 ans, le temps compté est le temps total. Sur 8 semaines simulées : plus aucun dîner de semaine au-delà de 45 minutes.
+
+**Points importants et détails**
+- Même produit principal une seule fois par semaine ; au plus 3 produits d'épicerie du monde par semaine.
+- Liste de courses : gousses et têtes d'ail, bouquets et bottes, pavés, boîtes additionnés ; pièces et grammes de légumes en un seul poids ; « 1/2 » compris ; en hiver, note « tomates pelées » sur la tomate fraîche.
+- Saisons : épinard et cresson de septembre à mai, orange de novembre à avril, citron au placard toute l'année.
+- Moins de 6 ans : café et alcool peu cuit (moins de 45 min) écartés ; un vin mijoté 2 h reste permis. Le gâteau d'anniversaire se mouille à l'eau (le café devient l'option des grands).
+- Consigne de sécurité friture sur chaque fiche qui fait frire.
+- Congélation dite sur 207 plats (148 ajoutés), bouton « doubler pour en congeler la moitié ».
+- « + gamelles » dans Ma semaine : les dîners du lundi au jeudi cuisinent aussi le déjeuner du lendemain (courses et portions).
+- 419 fiches disent ce que les enfants peuvent faire, avec l'âge (dans le détail de la fiche, pour garder le démarrage léger).
+- Lait cru signalé aux femmes enceintes (9 fiches).
+- Rubrique Enfants : desserts de tous les jours, « un légume refusé ? », repères avant 1 an (avec le lien officiel mangerbouger.fr).
+- « Placard de secours » dans Avec ce que j'ai.
+- Accueil du soir : plat en 45 min au total, dessert léger ou de 20 min, rangée enfants faisable ce soir.
+- Pincées entières et cuillères à la demie quand on change le nombre de parts.
+- Préparation à l'avance : ce qui doit se faire la veille en premier, jamais une friture, une cuisson minute ou une marinade de poisson ; pommes de terre, tomates et avocats ne se coupent plus trois jours avant.
+- Menus de fête : desserts variés d'un menu à l'autre, un vrai dessert hors menu léger ; le pizza scroll salé n'est plus classé en dessert.
+- Icônes : jamais d'icône sucrée sur un plat salé ; boutons de la première page nommés pour les lecteurs d'écran ; « reste de citron » n'est plus signalé ; la boisson de la semaine n'est plus un chocolat chaud.
+- Budget de démarrage : 393 Ko sur 400.
+
+**Pas fait**
+- Photos des 169 fiches TikTok : il faut chercher des photos sous licence libre fiche par fiche, sans images générées ; à faire en lot séparé.
+- Prix réels : le budget reste un ordre de grandeur tiré des €.
+- Recettes avant 1 an : seulement des repères, pas de fiches (contenu à valider par un professionnel de santé).
+- La semaine réellement cuisinée en famille, qui reste le meilleur test.
