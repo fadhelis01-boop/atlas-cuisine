@@ -242,6 +242,14 @@ export function consolidate(items: { id: string; factor: number }[], month = new
 const AHEAD = /marin|pate (a pain|a pizza|brisee|sucree)|petri|bouillon|fumet|sauce|pesto|vinaigrette|chermoula|nokoss|creme patissiere|repos une nuit|la veille|une nuit|tremper|trempe/;
 const LAST_MINUTE = /\bfrire\b|friture|frits?\b|servir|dresser|au dernier moment|aussitot|tout de suite/;
 const NOT_AHEAD = /Ail|Oignon|Échalote|Pomme de terre|Tomate|Avocat|Salade|Champignon|Aubergine|Concombre|Roquette|Endive|Épinard|Cresson|Patate douce|Céleri-rave|Artichaut/;
+/** Une étape qui se fait vraiment à l'avance : nommée (« Sauce. », « Mariner. »…) par un geste d'avance, jamais une cuisson
+ *  minute ni une marinade de moins d'une heure (un poisson au citron vert ne se marine pas la veille). */
+function aheadStep(step: string, headOnly = false): boolean {
+  const t = norm(step); const head = norm(step.replace(/\*\*/g, "").split(/[.:]/)[0]);
+  if (!(AHEAD.test(head) || (!headOnly && AHEAD.test(t))) || LAST_MINUTE.test(t) || /rosiss|saisi|a la minute/.test(t)) return false;
+  if (/marin/.test(head)) { const m = t.match(/(\d+) ?(h|min)\b/); if (!m || (m[2] === "min" && +m[1] < 60)) return false; }
+  return true;
+}
 export interface PrepTask { recipe: string; task: string }
 /** Ce qui peut se préparer le dimanche (ou la veille) pour les repas de la semaine, et les légumes à laver et couper d'un coup. */
 export function prepAhead(ids: string[]): { tasks: PrepTask[]; veg: string[] } {
@@ -251,7 +259,11 @@ export function prepAhead(ids: string[]): { tasks: PrepTask[]; veg: string[] } {
     const r = RECIPE_BY_ID[id]; if (!r) continue;
     // audit chef + famille : ce qui DOIT se faire la veille passe d'abord ; on ne frit ni ne dresse à l'avance
     if (r.veille) tasks.push({ recipe: r.title.split(" (")[0], task: `À lancer la veille : ${r.veille}.` });
-    else for (const s of r.steps) if (AHEAD.test(norm(s)) && !LAST_MINUTE.test(norm(s))) { tasks.push({ recipe: r.title.split(" (")[0], task: s.replace(/\*\*/g, "") }); break; }
+    else {
+      // d'abord une étape dont le titre est un geste d'avance (« Sauce. », « Bouillon. »), sinon une étape qui en contient un
+      const s = r.steps.find((x) => aheadStep(x, true)) ?? r.steps.find((x) => aheadStep(x));
+      if (s) tasks.push({ recipe: r.title.split(" (")[0], task: s.replace(/\*\*/g, "") });
+    }
     // seuls les légumes fermes se coupent à l'avance : pas la pomme de terre (elle noircit), ni la tomate (elle rend son eau)
     for (const l of flatten(r.ingredients)) if (l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "") && !NOT_AHEAD.test(l.ref))
         veg.set(l.ref.split(" / ")[0].split(" (")[0], (veg.get(l.ref) ?? 0) + 1);
