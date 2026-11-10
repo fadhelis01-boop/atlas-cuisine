@@ -35,7 +35,7 @@ const BYPRODUCTS: { from: string; leftover: string; to: string }[] = [
 ];
 /** Produits vendus en botte ou en entier : les partager entre plats évite d'en jeter la moitié. */
 const PERISHABLE_SHARE = new Set([
-  "Persil plat / frisé", "Coriandre fraîche", "Menthe", "Basilic", "Ciboulette", "Aneth", "Citron", "Citron vert", "Orange",
+  "Persil plat / frisé", "Coriandre fraîche", "Menthe", "Basilic", "Ciboulette", "Aneth", "Orange", // citron : presque chaque plat en a un (acidité), le partager ne dit rien
   "Yaourt grec", "Yaourt nature", "Crème fraîche", "Crème fleurette (liquide)", "Lait entier / demi-écrémé / écrémé", "Oignon nouveau / cébette",
   "Poivron (rouge/jaune/vert)", "Concombre", "Tomate", "Gingembre frais", "Mozzarella / burrata",
 ]);
@@ -83,16 +83,22 @@ export function composeMenus(anchorId: string, p: Profile): MenuProposal[] {
     for (const role of roles) {
       const used = new Set(out.flatMap((m) => m.courses.filter((c) => c.role === role).map((c) => c.recipe.id)));
       let best: { r: Recipe; adapted: boolean; s: number; why: string[]; zw: string[] } | null = null;
+      const near: { r: Recipe; adapted: boolean; s: number; why: string[]; zw: string[] }[] = [];
       for (const c of pool(role)) {
         let s = 0; const why: string[] = []; const zw: string[] = [];
         for (const ch of chosen) { const ps = pairScore(ch.recipe, c.r, mode); s += ps.s; why.push(...ps.why); zw.push(...ps.zw); }
-        if (isRich(anchor) && isLight(c.r)) { s += 3; why.push("léger après un plat riche"); }
-        if (mode === "Léger") s += isLight(c.r) ? 4 : isRich(c.r) ? -4 : 0;
+        // un dessert acidulé (tarte au citron meringuée, tiramisu au citron) n'est pas « léger » : seul le profil léger compte
+        const light = role === "dessert" ? c.r.profile.includes("leger") : isLight(c.r);
+        if (isRich(anchor) && light) { s += 3; why.push("léger après un plat riche"); }
+        if (mode === "Léger") s += light ? 4 : isRich(c.r) ? -4 : 0;
         if (c.adapted) s -= 1; // une version adaptée « à tester » passe après une recette d'origine conforme
         if (used.has(c.r.id)) s -= 6; // varier les trois propositions
+        if (role === "dessert" && out.some((m) => { const d = m.courses.find((x) => x.role === "dessert")?.recipe; return d && [...dominant(d)].some((x) => dominant(c.r).has(x)); })) s -= 3;
         if (role === "dessert") {
           if (isBreakfast(c.r)) continue;                                  // un bircher n'est pas un dessert de fête
-          const f = seasonFit(c.r, zone).score; s += f > 0 ? 1.5 : f < 0 ? -3 : 0;
+          // un menu classique ou audacieux mérite un vrai dessert ; le fruit tout simple reste pour le menu léger (audit chef + famille)
+          if (mode !== "Léger" && c.r.level === 1 && c.r.active <= 15 && light) s -= 2.5;
+          const f = seasonFit(c.r, zone).score; s += f > 0 ? 0.6 : f < 0 ? -3 : 0; // de saison : un petit plus, pas le même dessert partout
         }
         const plat = role === "plat" ? c.r : chosen.find((x) => x.role === "plat")?.recipe;
         const entree = role === "entree" ? c.r : chosen.find((x) => x.role === "entree")?.recipe;
@@ -103,6 +109,13 @@ export function composeMenus(anchorId: string, p: Profile): MenuProposal[] {
         s += jitter(anchor.id, c.r.id);
         s -= Math.max(0, c.r.active - 40) / 20;
         if (!best || s > best.s) best = { ...c, s, why, zw };
+        if (role === "dessert") near.push({ ...c, s, why, zw });
+      }
+      // desserts (audit chef + famille) : parmi ceux presque aussi bons que le meilleur, le choix tourne selon le plat et le menu,
+      // pour ne pas servir le même dessert à toutes les fêtes
+      if (best && role === "dessert") {
+        const top = near.filter((x) => x.s >= best!.s - 2).sort((a, b) => b.s - a.s).slice(0, 5);
+        best = top[Math.floor(jitter(anchor.id, mode) * 40) % top.length] ?? best;
       }
       if (best) {
         chosen.push({ role, recipe: best.r, adapted: best.adapted });

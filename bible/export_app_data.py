@@ -224,6 +224,20 @@ for r in recipes:
     v = _SF.veille_of(r)
     if v: r["veille"] = v
     elif _SF.avance_of(r): r["avance"] = _SF.avance_of(r)
+_nf = 0
+for r in recipes:
+    fz = _SF.freeze_note(r)
+    if fz: r["storage"] = (r["storage"] or _SF.DEFAULT_KEEP).rstrip() + " " + fz; _nf += 1
+print(f"congélation ajoutée : {_nf} fiches")
+_nm = _nh = _nl = 0
+for r in recipes:
+    t = _SF.raw_milk_tip(r)
+    if t: r["tips"] = list(r["tips"]) + [t]; _nm += 1
+    h = _SF.kid_help(r)
+    # dans le détail de la fiche (chargé après l'affichage) : l'index de démarrage reste léger
+    if h and "particip" not in (r["kids"] or ""): r["kidHelp"] = h; _nh += 1
+    if _SF.light_dessert(r, _SECT) and "leger" not in r["profile"]: r["profile"] = list(r["profile"]) + ["leger"]; _nl += 1
+print(f"lait cru (grossesse) : {_nm} · aide des enfants : {_nh} · desserts légers : +{_nl}")
 print(f"conservation ajustée : {_nk} fiches · à lancer la veille : {sum(1 for r in recipes if r.get('veille'))} · à prévoir avant : {sum(1 for r in recipes if r.get('avance'))} · œuf cru : {sum(1 for r in recipes if r.get('rawEgg'))}")
 
 # ---------------------------------------------------------------- zéro déchet ingrédient par ingrédient (Tome 12 §6)
@@ -528,7 +542,7 @@ dump("recipe_videos.json", VIDS)
 # Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index garde ce qu'il faut aux cartes, à la recherche, au moteur et au
 # planificateur ; le détail d'une fiche (étapes, introduction, vidéos, conseils, matériel, conservation) part dans un second
 # fichier, lu juste après le premier affichage (et tout de suite par les écrans qui en ont besoin).
-DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit")
+DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp")
 detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
 index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
 # Ingrédients de l'index en tableaux [quantité, libellé, réf., poids(, 1 si facultatif)] : 13 Ko compressés de moins au

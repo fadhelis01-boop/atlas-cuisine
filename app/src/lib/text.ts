@@ -128,6 +128,9 @@ function scaleQtyRaw(qty: string, factor: number): string {
     const after = all.slice(off + m.length);
     const piece = !MEASURE.test(after) && !FR[m]; // « 3 », « 3 œufs », « 2 gousses »…
     if (piece) return String(Math.max(1, Math.round(v)));
+    // audit chef + famille : on ne mesure pas « ¾ pincée » ni « 2 ¼ c. à s. » : pincées entières, cuillères à la demie
+    if (/^\s*pinc/i.test(after)) return String(Math.max(1, Math.round(v)));
+    if (/^\s*(c\.|cuill)/i.test(after)) return fmtFrac(Math.max(0.5, Math.round(v * 2) / 2));
     return fmtFrac(v);
   });
 }
@@ -164,7 +167,7 @@ export function gestureLabel(step: string, n: number): string {
 export function ovenPlan(steps: string[]): { at: number; temp: string } | null {
   // four nommé, ou une température de four (≥ 120 °C) qui n'est ni un bain de friture, ni un sucre cuit, ni une température à cœur
   const isOven = (s: string) => /enfourn|au four|four (chaud|à|préchauffé)|gratine/i.test(s)
-    || (/(1[2-9]\d|2[0-7]\d) ?°C/.test(s) && !/huile|friture|frit|cœur|coeur|sucre|sirop|caramel|thermomètre/i.test(s));
+    || (/\b(1[2-9]\d|2[0-7]\d) ?°C/.test(s) && !/huile|friture|frit|cœur|coeur|sucre|sirop|caramel|thermomètre/i.test(s));
   const at = steps.findIndex(isOven);
   if (at < 0) return null;
   const t = steps[at].match(/(\d{2,3}) ?°C/) ?? steps.slice(0, at).join(" ").match(/(\d{3}) ?°C/);

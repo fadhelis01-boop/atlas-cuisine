@@ -53,3 +53,31 @@ for (let s = 1; s <= 12; s++) {
 console.log("   la veille :", RECIPES.filter((r) => r.veille).length, "fiches · non repérées", flagged.join(", ") || "aucune", "· proposées ce soir", tonightBad.length, "· planifiées le jour même", todayBad, "· soirs > 45 min (enfants)", longWeekday, "· coquillages répétés", sameMain);
 check("115 à lancer la veille : repéré, ni proposé ce soir, ni planifié le jour même ; soirs de semaine ≤ 45 min en tout avec des enfants",
   flagged.length === 0 && tonightBad.length === 0 && todayBad === 0 && longWeekday === 0 && sameMain === 0);
+
+// —— 116 : liste de courses : gousses, bouquets, pièces et grammes additionnés (plus de « 2 gousses + 1 ½ gousses + … »)
+import { consolidate } from "../src/lib/planner";
+import { kidFriendly, youngAdultOnly } from "../src/lib/famille";
+import { INGREDIENTS } from "../src/lib/data";
+const WEEK = ["nikujaga", "thiou_poulet", "maharagwe", "white_chicken_chili", "pancit_bihon", "chou_braise_saucisses", "moules_frites", "chilaquiles_verts", "pasta_genovese", "saumon_teriyaki"];
+const shopW = consolidate(WEEK.map((id) => ({ id, factor: 3 / RECIPE_BY_ID[id].portions })), 11);
+const garlic = shopW.find((l) => l.ref === "Ail")?.label ?? "";
+const messy = shopW.filter((l) => /^(Ail|Persil|Coriandre|Oignon jaune|Pomme de terre)/.test(l.ref) && / \+ /.test(l.label)).map((l) => l.label);
+console.log("   courses :", shopW.length, "lignes ·", garlic, "· lignes encore composées :", messy.length, messy.slice(0, 2).join(" | "));
+check("116 courses : l'ail en gousses (et têtes), les herbes en bouquets, oignons et pommes de terre en un seul poids", messy.length === 0 && /gousses/.test(garlic));
+
+// —— 117 : saisons justes (épinard et cresson l'hiver, citron au placard) ; café et alcool peu cuit écartés pour les moins de 6 ans
+const four: Profile = { ...fam, household: { adults: 2, kids: [4] }, kidsAge: 4 } as Profile;
+const seasonOk = INGREDIENTS["Épinard"].season.includes(11) && INGREDIENTS["Cresson"].season.includes(1) && INGREDIENTS["Citron"].season.length === 0;
+const kidsOk = youngAdultOnly(RECIPE_BY_ID.moules_marinieres) && !kidFriendly(RECIPE_BY_ID.moules_marinieres, four) && !youngAdultOnly(RECIPE_BY_ID.boeuf_bourguignon)
+  && !youngAdultOnly(RECIPE_BY_ID.gateau_anniversaire_choco);
+console.log("   saisons :", seasonOk ? "épinard, cresson, citron justes" : "À CORRIGER", "· moins de 6 ans : moules marinières écartées, bourguignon gardé, gâteau d'anniversaire à l'eau :", kidsOk);
+check("117 saisons corrigées ; café et alcool peu cuit écartés pour un enfant de moins de 6 ans, vin mijoté 2 h permis", seasonOk && kidsOk);
+
+// —— 118 : la famille au quotidien : congélation dite, enfants qui aident, lait cru signalé, dessert de semaine léger
+const plats = RECIPES.filter((r) => r.role === "plat");
+const freeze = plats.filter((r) => /cong[eèé]l/i.test(r.storage)).length;
+const help = RECIPES.filter((r) => r.kidHelp || /particip/.test(r.kids)).length;
+const rawMilk = RECIPE_BY_ID.tartiflette.tips.some((t) => /enceinte/.test(t));
+const light = RECIPES.filter((r) => r.role === "dessert" && r.profile.includes("leger")).length;
+console.log("   famille : congélation", freeze, "plats · enfants qui aident", help, "fiches · lait cru signalé", rawMilk, "· desserts légers", light);
+check("118 famille : ≥ 150 plats disent s'ils se congèlent, ≥ 300 fiches disent ce que les enfants font, lait cru signalé, ≥ 15 desserts légers", freeze >= 150 && help >= 300 && rawMilk && light >= 15);

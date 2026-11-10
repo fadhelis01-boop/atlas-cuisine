@@ -10,6 +10,22 @@ import { Icon } from "../components/icons";
 
 const AGES = [[1, "Dès 1 an"], [3, "3-5 ans"], [6, "6-8 ans"], [9, "9-12 ans"]] as const;
 
+// audit chef + famille (10/11/2026)
+const LEGUME_REFUSE = [
+  "Le proposer à nouveau, sans forcer : il faut souvent 8 à 10 présentations avant qu'un enfant accepte un aliment.",
+  "Changer la texture : en purée ou en velouté, en galette ou en beignet au four, râpé cru, rôti jusqu'à être doré (le goût devient plus doux).",
+  "Le mélanger à un plat qu'il aime : dans la sauce tomate des pâtes, dans un gratin, dans une omelette ou un cake salé.",
+  "Le faire préparer : un enfant goûte plus volontiers ce qu'il a lavé, épluché ou mélangé lui-même.",
+  "Le servir en premier, à l'entrée, quand la faim est là ; une petite portion, et l'adulte en mange aussi.",
+];
+const AVANT_1_AN = [
+  "Diversification entre 4 et 6 mois révolus, un aliment nouveau à la fois ; le lait reste l'aliment principal.",
+  "Pas de sel ni de sucre ajoutés ; pas de miel avant 1 an (botulisme infantile).",
+  "Ni lait cru, ni fromage au lait cru, ni œuf, viande ou poisson crus ou peu cuits.",
+  "Les allergènes (œuf, arachide en poudre, gluten…) s'introduisent tôt, en petite quantité, sauf avis médical contraire.",
+  "Textures : lisses d'abord, puis écrasées, puis petits morceaux fondants ; jamais d'aliment rond et dur entier (noix, raisin, tomate cerise).",
+];
+
 export default function Enfants() {
   const p = useProfile();
   // la tranche d'âge du plus jeune enfant du profil est présélectionnée (audit famille)
@@ -28,8 +44,11 @@ export default function Enfants() {
       || (a.r.active + a.r.rest) - (b.r.active + b.r.rest));
   // rubriques famille (audit famille) : le soir de semaine, la cuisine d'avance
   const fam = RECIPES.filter((r) => r.role === "plat" && kidFriendly(r, { ...p, kidsAge: Math.max(age, p.kidsAge ?? age) }) && verdict(r, kidProfile).availability !== "hidden");
-  const soirs = fam.filter((r) => tonightMin(r) <= 30 && !r.profile.includes("epice")).sort((a, b) => Number(b.cats.includes("enfants")) - Number(a.cats.includes("enfants")) || a.active - b.active).slice(0, 10);
+  const soirs = fam.filter((r) => tonightMin(r) <= 30 && !r.profile.includes("epice"))
+      .sort((a, b) => Number(b.cats.includes("enfants")) - Number(a.cats.includes("enfants")) || a.active - b.active).slice(0, 10);
   const dimanche = fam.filter((r) => /cong[eé]l/i.test(r.storage)).slice(0, 10);
+  const desserts = RECIPES.filter((r) => r.role === "dessert" && r.profile.includes("leger") && r.age !== null && r.age <= Math.max(age, 1)
+      && verdict(r, kidProfile).availability !== "hidden").slice(0, 10);
   return (
     <Page photo="rubrique/enfants" title="Recettes pour enfants" sub="Par âge, toujours sans alcool, avec ou sans porc, et les règles de sécurité qui comptent." back="/explorer">
       <nav className="links fam-links" aria-label="Rubriques famille">
@@ -51,6 +70,17 @@ export default function Enfants() {
         {([[null, "Tout"], ["plat", "Plats"], ["entree", "Entrées"], ["dessert", "Desserts & goûters"], ["boisson", "Boissons"]] as const).map(([k, l]) => <Chip key={l} on={role === k} onClick={() => setRole(k)}>{l}</Chip>)}
       </div>
       {list.length ? <MoreGrid key={`${age}|${role}|${quick}|${noPork}`} items={list.map((x) => x.r)} note={(r) => { const v = list.find((x) => x.r === r)!.v; return v.availability === "adaptable" ? <p className="small"><Icon name="swap" size={14} className="ic-inline" /> À faire en {v.adapted?.variantName.toLowerCase()}.</p> : <p className="small"><Icon name="kid" size={14} className="ic-inline" /> {r.kids.replace(/\*\*/g, "")}</p>; }} /> : <Empty>Aucune recette pour ces critères.</Empty>}
+      {desserts.length > 0 && <Section title="Desserts de tous les jours : fruit, yaourt, compote">
+        <p className="small">En semaine, un fruit ou un laitage suffit ; les gâteaux restent pour le week-end.</p>
+          <div className="rail">{desserts.map((r) => <RecipeCard key={r.id} r={r} />)}</div></Section>}
+      <Section title="Un légume refusé ? Le présenter autrement">
+        <ul>{LEGUME_REFUSE.map((s) => <li key={s}>{s}</li>)}</ul>
+      </Section>
+      <Section title="Avant 1 an : la diversification">
+        <p className="small">Les fiches d'ATLAS commencent à 1 an. Avant, quelques repères des recommandations françaises (à adapter avec ton médecin ou ta PMI) :</p>
+        <ul>{AVANT_1_AN.map((s) => <li key={s}>{s}</li>)}</ul>
+        <p className="small">Le détail, mois par mois : <a href="https://www.mangerbouger.fr/" target="_blank" rel="noopener noreferrer">mangerbouger.fr</a> (Santé publique France).</p>
+      </Section>
       <Section title="Sécurité : ce qu'il faut savoir">
         <ul>{SECURITE_ENFANTS.map((s) => <li key={s}>{s}</li>)}</ul>
       </Section>

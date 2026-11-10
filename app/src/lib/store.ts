@@ -43,7 +43,7 @@ export interface State {
   journal?: Record<string, { rating: number; note: string; date: string; kids?: "oui" | "non" }>; // kids : les enfants ont aimé (audit gourmet) // mon carnet : note et remarques après avoir cuisiné
   week?: Record<string, { midi?: string; soir?: string; entree?: string; dessert?: string }>; // planificateur : date ISO → plats du midi et du soir
   pantry?: string[]; // placard supposé toujours présent (frigo), modifiable
-  weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number };
+  weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number; gamelles?: number };
   restes?: { id: string; cooked: string }[]; // mes restes cuits : type de reste (lib/restes.ts) + date de cuisson, pour l'alerte de conservation
   weekHistory?: Record<string, string>; // plat → dernière date où il a été planifié (mémoire de 8 semaines du planificateur)
   usage?: Record<string, number>; // écrans ouverts (compteur local, jamais envoyé ; joint à l'export du carnet si la personne le veut)

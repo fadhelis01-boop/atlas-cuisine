@@ -3,7 +3,7 @@ import { Icon } from "../components/icons";
 import { toast } from "../lib/toast";
 import { substitutOf } from "../lib/substituts";
 import { restesOfRecipe } from "../lib/restes";
-import { defaultPortions, kidsOf } from "../lib/famille";
+import { defaultPortions, kidsOf, youngAdultOnly } from "../lib/famille";
 import { equipmentNotes } from "../lib/equipement";
 import { balanceOf, finishFor } from "../lib/dressage";
 import { cuesIn, saltDose } from "../lib/cues";
@@ -52,6 +52,9 @@ function SeasonBadge({ r }: { r: Recipe }) {
   return null;
 }
 
+const FRY_TXT = "casserole sur un feu arrière, queue tournée vers l'intérieur, enfants loin de la cuisinière. Ne quitte jamais l'huile chaude ; garde un couvercle à portée pour étouffer une flamme, jamais d'eau.";
+const YOUNG_TXT = "cette fiche contient du café ou de l'alcool peu cuit. Prends la version sans alcool (bouillon, jus de raisin) ou sers-lui un autre plat.";
+const EGG_TXT = "Prends une mayonnaise du commerce ou des œufs pasteurisés ; 24 h au frigo au plus.";
 const FRYING = /bain de friture|huile de friture|huile (?:à|a) (?:1[5-9]\d) ?°C|frire|friture/i;
 /** Audit chef + famille : ce qui se prépare la veille ou avant, dit dès l'en-tête de la fiche. */
 export function AheadLine({ r }: { r: Recipe }) {
@@ -83,8 +86,9 @@ function BeforeYouStart({ r }: { r: Recipe }) {
         {oven && <li>Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
         {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
         {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
-        {fry && <li className="safety"><strong>Friture</strong> : casserole sur un feu arrière, queue tournée vers l'intérieur, enfants loin de la cuisinière. Ne quitte jamais l'huile chaude ; garde un couvercle à portée pour étouffer une flamme, jamais d'eau.</li>}
-        {r.rawEgg && <li className="safety"><strong>Œuf cru</strong> : déconseillé aux enfants de moins de 6 ans, aux femmes enceintes et aux personnes âgées{youngKid ? " (tu as un enfant de moins de 6 ans)" : ""}. Prends une mayonnaise du commerce ou des œufs pasteurisés ; 24 h au frigo au plus.</li>}
+        {fry && <li className="safety"><strong>Friture</strong> : {FRY_TXT}</li>}
+        {youngKid && youngAdultOnly(r) && <li className="safety"><strong>Enfant de moins de 6 ans</strong> : {YOUNG_TXT}</li>}
+        {r.rawEgg && <li className="safety"><strong>Œuf cru</strong> : déconseillé aux enfants de moins de 6 ans, aux femmes enceintes et aux personnes âgées{youngKid ? " (tu as un enfant de moins de 6 ans)" : ""}. {EGG_TXT}</li>}
       </ul>
     </div>
   );
@@ -361,9 +365,12 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       )}
       <details className="more-info card pad">
       <summary><h2 className="h3">Bon à savoir : conservation, enfants, boissons</h2></summary>
-      <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>} {plain(r.storage)}</p></Section>
+      <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>}
+        {/cong[eé]l/i.test(r.storage) && <button type="button" className="btn small ghost" onClick={() => { setPortions(portions * 2); document.getElementById("r-ingredients")?.scrollIntoView({ behavior: "smooth" }); }}>Doubler pour en congeler la moitié ({portions * 2} parts)</button>}
+        {" "}{plain(r.storage)}</p></Section>
       <Section title="Enfants">
         <p>{plain(r.kids)}</p>
+        {r.kidHelp && <p><Icon name="kid" size={16} className="ic-inline" /> {r.kidHelp}</p>}
         {p.kidsAge !== null && p.kidsAge < 4 && <ul className="small">{SECURITE_ENFANTS.slice(0, 4).map((x) => <li key={x}>{x}</li>)}</ul>}
       </Section>
       <Section title="Boissons d'accompagnement">

@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "white_chicken_chili", "fiskefrikadeller", "curry_legumes_coco", "nouilles_sautees_boeuf", "locro_vegetarien", "goan_fish_curry", "bacalhau_bras",
-  "gratin_celeri_noix", "salade_haricots_blancs_thon", "pancit_bihon", "fiskesuppe", "berkoukes_legumes", "bunny_chow_haricots", "cassolettes_crevettes_poireaux", "curry_fidjien_legumes",
-  "falafels", "pyttipanna_boeuf", "pasta_genovese", "spaetzle_fromage", "nikujaga", "vermicelles_riz_sautes_legumes", "atakilt_wat", "moules_marinieres",
-  "arayes_boeuf_feta", "shiro_wat", "bar_croute_sel", "choucroute_mer", "kottu_roti", "raclette_maison",
+  "moules_frites", "gratin_celeri_noix", "boeuf_oignons_saute", "spaetzle_fromage", "pollo_al_ajillo", "dhal_epinards_coco", "sundubu_jjigae", "shiro_wat",
+  "curry_legumes_coco", "bacalhau_bras", "ful_medames", "cassolettes_crevettes_poireaux", "curry_pois_chiches_express", "raclette_maison", "moqueca", "bamia_gombo",
+  "chou_oeufs_saute", "moules_normande", "matoke", "dakgalbi", "fiskesuppe", "kottu_roti", "shakshuka_verte_feta", "ramen_coreen_champignons_cremeux",
+  "lo_mein_chou_legumes", "pates_pesto_vert_poireau", "pyttipanna_boeuf", "bunny_chow_haricots", "vermicelles_riz_sautes_legumes", "anda_curry",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

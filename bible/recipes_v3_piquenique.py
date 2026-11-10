@@ -81,7 +81,7 @@ K("pinwheels_tortilla", "Roulés de tortilla (pinwheels)", "Pinwheels", "Amériq
   ["**Tartiner.** Fromage frais jusqu'aux bords (c'est la colle).", "**Garnir et rouler.** Épinards, carotte, dinde ; roulé serré, filmé, 30 min au frais.", "**Couper.** Tranches de 2 cm au couteau-scie : spirales nettes."],
   tips=[FROID], keep="Le jour même.", age=1, cats=PN + ["enfants"], fetes=FETE + ["Anniversaire"])
 
-K("pizza_scrolls", "Pizza scrolls (roulés à la pizza, Australie)", "Pizza scrolls", "Océanie › Australie", "G", 1, 12, 20, 20, "€", "Plaque, four.",
+K("pizza_scrolls", "Pizza scrolls (roulés à la pizza, Australie)", "Pizza scrolls", "Océanie › Australie", "E", 1, 12, 20, 20, "€", "Plaque, four.",
   "La pâte à pizza tartinée de sauce tomate et de fromage, roulée et coupée en escargots : les « scrolls » des boîtes à goûter australiennes, bons froids.",
   ["1|pâte à pizza|Pâte à pizza (prête)|3", f"150 g|de sauce tomate|Sauce tomate (bocal)|2", f"150 g|de fromage râpé|{GRUY}|2", "100 g|de légumes en petits dés (poivron, maïs, épinards)|Maïs doux|1?", f"1 c. à c.|d'origan|Origan frais / sec|1"],
   ["**Tartiner.** Pâte étalée en rectangle, sauce (pas trop : elle coule), fromage, légumes, origan.", "**Rouler et couper.** Roulé par le grand côté, tranches de 3 cm, posées à plat sur la plaque.", "**Cuire.** 200 °C, 18-20 min : dorés. Refroidis sur grille avant la boîte."],

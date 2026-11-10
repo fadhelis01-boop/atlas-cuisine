@@ -13,7 +13,7 @@ export default function Onboarding() {
   const toggle = (fn: (s: typeof p) => void) => setState((s) => { fn(s.profile); });
   const done = () => { setState((s) => { s.profile.onboarded = true; }); toTop(); };
   const Choice = ({ on, label, sub, icon, onClick }: { on: boolean; label: string; sub: string; icon: string; onClick: () => void }) => (
-    <button type="button" className={`ob-choice ${on ? "on" : ""}`} aria-pressed={on} onClick={onClick}>
+    <button type="button" className={`ob-choice ${on ? "on" : ""}`} aria-pressed={on} aria-label={`${label} : ${sub}`} onClick={onClick}>
       <Icon name={icon} size={28} /><span><strong>{label}</strong><br /><span className="small">{sub}</span></span>
       <span className="ob-check" aria-hidden="true">{on ? <Icon name="check" size={22} /> : null}</span>
     </button>

@@ -20,6 +20,7 @@ import { downloadText, sendLink } from "../lib/sendLink";
 const SLOT_LABEL: Record<Slot, string> = { midi: "Midi", soir: "Soir" };
 /** Libellé d'un accompagnement : fiche reliée ou produit à acheter. */
 export const sideLabel = (side: string) => side.startsWith("achat:") ? side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase() : (RECIPE_BY_ID[side]?.title.split(" (")[0].toLowerCase() ?? side);
+const CUT_NOTE = "(2 jours au plus ; pommes de terre, tomates et avocats se coupent au dernier moment).";
 const DEFAULT_PREFS = { people: 2, slots: ["soir"] as Slot[], weekdayMax: 45 };
 const shortDate = (iso: string) => new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
 
@@ -58,14 +59,16 @@ export default function Semaine({ add }: { add: string | null }) {
   const setPrefs = (p: Partial<typeof prefs>) => setState((s) => { s.weekPrefs = { ...prefs, ...p }; });
   const fill = (base: WeekPlan, onlyDays = days) => {
     if (!left) return;
-    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent, sundayMenu: prefs.slots.includes("midi"), kidsVerdict, today: weekDays(0)[0] }));
+    save(autoPlan(onlyDays, base, { slots: prefs.slots, weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile,
+        leftovers: left, seed: Date.now(), recent, sundayMenu: prefs.slots.includes("midi"), kidsVerdict, today: weekDays(0)[0] }));
   };
   const clearWeek = () => { const next = { ...plan }; for (const d of days) delete next[d]; return next; };
   const reroll = (day: string, slot: Slot) => {
     const cur = plan[day]?.[slot];
     const next: WeekPlan = { ...plan, [day]: { ...plan[day], [slot]: undefined } };
     if (!left) return;
-    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax, zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent: new Set([...recent, ...(cur ? [cur] : [])]), today: weekDays(0)[0] });
+    const filled = autoPlan(days, next, { slots: prefs.slots.includes(slot) ? prefs.slots : [...prefs.slots, slot], weekdayMax: prefs.weekdayMax,
+        zone: zoneOf(zoneSetting), profile, leftovers: left, seed: Date.now(), recent: new Set([...recent, ...(cur ? [cur] : [])]), today: weekDays(0)[0] });
     // ne remplir que la case demandée, et pas avec le même plat
     const pick = filled[day]?.[slot];
     save({ ...plan, [day]: { ...plan[day], [slot]: pick && pick !== cur ? pick : undefined } });
@@ -76,12 +79,15 @@ export default function Semaine({ add }: { add: string | null }) {
   const planned = days.flatMap((d) => (["midi", "soir"] as Slot[]).map((s) => plan[d]?.[s]).filter(Boolean) as string[]);
   const extras = days.flatMap((d) => [plan[d]?.entree, plan[d]?.dessert]).filter(Boolean) as string[];
   const shop = () => {
-    const lines = consolidate([...planned, ...extras].map((id) => ({ id, factor: prefs.people / (RECIPE_BY_ID[id]?.portions || prefs.people) })));
+    // gamelles (audit chef + famille) : les dîners du lundi au jeudi cuisinent aussi le déjeuner du lendemain
+    const gam = prefs.gamelles ?? 0;
+    const dinnerIds = new Set(days.filter((d) => [1, 2, 3, 4].includes(new Date(`${d}T12:00:00`).getDay())).map((d) => plan[d]?.soir).filter(Boolean) as string[]);
+    const lines = consolidate([...planned, ...extras].map((id) => ({ id, factor: (prefs.people + (dinnerIds.has(id) ? gam : 0)) / (RECIPE_BY_ID[id]?.portions || prefs.people) })));
     setState((s) => {
       s.shopping = s.shopping.filter((i) => i.from !== "Ma semaine");
       for (const l of lines) s.shopping.push({ id: uid(), ref: l.ref, label: l.label, from: "Ma semaine", done: false, section: l.section });
     });
-    setMsg(`${lines.length} articles dans la liste de courses, quantités additionnées pour ${prefs.people} personne${prefs.people > 1 ? "s" : ""}.`);
+    setMsg(`${lines.length} articles dans la liste de courses, quantités additionnées pour ${prefs.people} personne${prefs.people > 1 ? "s" : ""}${gam ? ` (+ ${gam} gamelle${gam > 1 ? "s" : ""} du lundi au jeudi)` : ""}.`);
   };
   // pour la personne qui fait les courses ou qui cuisine aussi : le planning en texte, à envoyer
   const shareWeek = async () => {
@@ -99,15 +105,18 @@ export default function Semaine({ add }: { add: string | null }) {
     toast("Agenda téléchargé : ouvre le fichier pour ajouter les repas à ton calendrier");
   };
   const prep = useMemo(() => prepAhead(planned), [planned.join()]);
-  const prevIso = (d: string) => { const x = new Date(`${d}T12:00:00`); x.setDate(x.getDate() - 1); return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`; };
+  const prevIso = (d: string) => { const x = new Date(`${d}T12:00:00`);
+    x.setDate(x.getDate() - 1); return `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, "0")}-${String(x.getDate()).padStart(2, "0")}`; };
   // audit chef + famille : la veille au soir, ce qu'il faut lancer pour le lendemain (trempage, marinade, riz à cuire)
   const veilles = days.flatMap((d, i) => (["midi", "soir"] as const).map((s) => RECIPE_BY_ID[plan[d]?.[s] ?? ""]).filter((r) => r?.veille).map((r) => ({
-    day: d, id: r!.id, title: r!.title.split(" (")[0], task: r!.veille!, when: i === 0 && offset === 0 ? "Pour aujourd'hui, c'est trop tard (à lancer la veille la prochaine fois)" : `${dayName(prevIso(d)).replace(/^./, (c) => c.toUpperCase())} soir`,
+    day: d, id: r!.id, title: r!.title.split(" (")[0], task: r!.veille!,
+    when: i === 0 && offset === 0 ? "Pour aujourd'hui, c'est trop tard (à lancer la veille la prochaine fois)" : `${dayName(prevIso(d)).replace(/^./, (c) => c.toUpperCase())} soir`,
   })));
   // boisson maison de la semaine (audit gourmet) : sans alcool, de saison, change chaque semaine
   const drink = useMemo(() => {
     const zone = zoneOf(zoneSetting);
-    const list = RECIPES.filter((r) => r.role === "boisson" && verdict(r, { ...profile, alcohol: "standard" }).availability === "ok" && r.active <= 20).sort((a, b) => seasonFit(b, zone).score - seasonFit(a, zone).score).slice(0, 12);
+    const list = RECIPES.filter((r) => r.role === "boisson" && verdict(r, { ...profile, alcohol: "standard" }).availability === "ok" && r.active <= 20 && !/chocolat|lait|milk|smoothie|sirop|frappe|shake/i.test(r.title))
+        .sort((a, b) => seasonFit(b, zone).score - seasonFit(a, zone).score).slice(0, 12);
     return list.length ? list[Math.floor(new Date(`${days[0]}T12:00:00`).getTime() / (7 * 86400000)) % list.length] : null;
   }, [days, zoneSetting, profile]);
   const balance = useMemo(() => weekBalance(planned.map((id) => RECIPE_BY_ID[id]).filter(Boolean)), [planned.join()]);
@@ -134,6 +143,8 @@ export default function Semaine({ add }: { add: string | null }) {
 
       <div className="week-prefs card pad">
         <label className="field inline">Personnes <input type="number" min={1} max={20} value={prefs.people} onChange={(e) => setPrefs({ people: Math.max(1, +e.target.value || 1) })} /></label>
+        <label className="field inline" title="Le dîner du lundi au jeudi cuisine aussi le déjeuner du lendemain">+ gamelles
+          <input type="number" min={0} max={10} value={prefs.gamelles ?? 0} onChange={(e) => setPrefs({ gamelles: Math.max(0, Math.min(10, +e.target.value || 0)) })} /></label>
         <span className="chips" role="group" aria-label="Repas à prévoir">
           {(["midi", "soir"] as Slot[]).map((s) => (
             <Chip key={s} on={prefs.slots.includes(s)} onClick={() => { const n = prefs.slots.includes(s) ? prefs.slots.filter((x) => x !== s) : [...prefs.slots, s]; if (n.length) setPrefs({ slots: (["midi", "soir"] as Slot[]).filter((x) => n.includes(x)) }); }}>{SLOT_LABEL[s]}</Chip>
@@ -168,7 +179,7 @@ export default function Semaine({ add }: { add: string | null }) {
                   <span className="week-slot-lb">{SLOT_LABEL[s]}</span>
                   {r ? (
                     <>
-                      <a className="week-meal" href={href(`/recette/${r.id}?portions=${prefs.people}`)}>
+                      <a className="week-meal" href={href(`/recette/${r.id}?portions=${prefs.people + (s === "soir" && [1, 2, 3, 4].includes(new Date(`${d}T12:00:00`).getDay()) ? prefs.gamelles ?? 0 : 0)}`)}>
                         <Cover r={r} />
                         <span><strong>{r.title.split(" (")[0]}</strong><br /><span className="meta">{minutes(r.active)}{r.rest > 0 ? ` + ${minutes(r.rest)} sans rien faire` : ""}</span>
                           {link && <><br /><span className="small week-left"><Icon name="recycle" size={15} className="ic-inline" /> utilise le reste de {link} de la veille</span></>}
@@ -198,7 +209,8 @@ export default function Semaine({ add }: { add: string | null }) {
           </li>
         ))}
       </ol>
-      {drink && <p className="small"><Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine : <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer en carafe pour les repas.</p>}
+      {drink && <p className="small"><Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine :
+        <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer en carafe ; l'eau reste la boisson des repas.</p>}
       <p className="small">Pour placer une recette précise : sur sa fiche, touche « Planifier ». Les plats proposés respectent ton profil (porc, alcool, allergies) et la saison de l'endroit où tu es.</p>
 
       {planned.length > 0 && (
@@ -223,7 +235,7 @@ export default function Semaine({ add }: { add: string | null }) {
             <section className="section">
               <h2 className="h3"><Icon name="knife" size={22} className="ic-inline" /> À préparer à l'avance (le dimanche ou la veille)</h2>
               {veilles.length > 0 && <ul className="ahead">{veilles.map((v) => <li key={v.day + v.id}><strong>{v.when}</strong>, pour {v.title} : {v.task}.</li>)}</ul>}
-              {prep.veg.length > 0 && <p>Lave et coupe d'un coup : {prep.veg.join(", ").toLowerCase()}. Range-les dans des boîtes fermées au frigo (2 jours au plus ; pommes de terre, tomates et avocats se coupent au dernier moment).</p>}
+              {prep.veg.length > 0 && <p>Lave et coupe d'un coup : {prep.veg.join(", ").toLowerCase()}. Range-les dans des boîtes fermées au frigo {CUT_NOTE}</p>}
               <ul>{prep.tasks.map((t, k) => <li key={k}><strong>{t.recipe} :</strong> {t.task}</li>)}</ul>
             </section>
           )}

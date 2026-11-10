@@ -37,7 +37,7 @@ export function useImportLibrary(): ImportEntry[] {
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
-type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit">>;
+type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp">>;
 let DETAILS = false;
 let detP: Promise<void> | null = null;
 const detLs = new Set<() => void>();

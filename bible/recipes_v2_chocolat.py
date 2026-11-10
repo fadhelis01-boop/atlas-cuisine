@@ -109,8 +109,8 @@ K("fondue_chocolat", "Fondue au chocolat et fruits", "Fondue au chocolat", CH, "
 K("gateau_anniversaire_choco", "Gâteau d'anniversaire au chocolat (layer cake)", "Gâteau d'anniversaire", CH, "D", 2, 12, 50, 240, "€€", "2 moules 20 cm, batteur, spatule coudée.",
   "Deux génoises chocolat moelleuses, ganache montée au chocolat au lait : se décore facilement et tient bien.",
   [f"250 g|de farine|{F55}|2", f"60 g|de cacao|{CACAO}|2", f"250 g|de sucre|{SUCRE}|2", f"3|œufs|{OEUF}|2", "25 cl|de babeurre ou lait + citron|Babeurre|2", f"12 cl|d'huile neutre|{HN}|1", "1 c. à c.|de bicarbonate + 1 de levure|Bicarbonate de soude|1",
-   f"25 cl|de café chaud ou d'eau chaude|-|0", f"300 g|de chocolat au lait|{LAITCH}|3", f"50 cl|de crème entière|{CL}|3"],
-  ["**J-1, ganache montée.** Crème chaude sur chocolat au lait, une nuit au frigo.", "**Gâteaux.** Secs ensemble ; humides ensemble ; mélange, puis café chaud (pâte liquide). 35 min à 170 °C dans 2 moules.",
+   f"25 cl|d'eau chaude (ou de café, pour un gâteau d'adultes)|-|0", f"300 g|de chocolat au lait|{LAITCH}|3", f"50 cl|de crème entière|{CL}|3"],
+  ["**J-1, ganache montée.** Crème chaude sur chocolat au lait, une nuit au frigo.", "**Gâteaux.** Secs ensemble ; humides ensemble ; mélange, puis eau (ou café) chaude (pâte liquide). 35 min à 170 °C dans 2 moules.",
    "**Monter.** Fouette la ganache comme une chantilly ; gâteau, ganache, gâteau ; fine couche sur tout le tour, 30 min au frais, 2e couche lisse.", "**Décor.** Fruits, copeaux, bougies."],
   age=1, cats=["enfants"], fetes=["Anniversaire"], profil=["sucre", "gras"], tech=["Ganache montée"])
 

@@ -40,10 +40,13 @@ const BY_WORD: [RegExp, string][] = [
 ];
 const BY_KIND: Record<string, string> = { Pain: "🍞", Sauce: "🥫", Boisson: "🍹", Dessert: "🍰", "Goûter / dessert": "🧁", Entrée: "🥗", Base: "🍯", Accompagnement: "🥔", Plat: "🍲" };
 
+const SWEET = new Set(["🍫", "🍮", "🍬", "🍩", "🍪", "🍨", "🍥"]);
 export function dishEmoji(r: Pick<Recipe, "title" | "kind">, special?: string) {
   if (special) return special;
   const t = norm(r.title).replace(/['’]/g, " ");
-  for (const [re, e] of BY_WORD) if (re.test(t)) return e;
+  // un plat salé ne prend jamais une icône sucrée (la karantika n'est pas un flan au caramel) : audit chef + famille
+  const savory = r.kind === "Plat" || r.kind === "Entrée" || r.kind === "Accompagnement";
+  for (const [re, e] of BY_WORD) if (re.test(t) && !(savory && SWEET.has(e))) return e;
   return BY_KIND[r.kind] ?? "🍽️";
 }
 

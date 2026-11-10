@@ -165,3 +165,54 @@ def avance_of(r):
         n, u = (m.group(2), m.group(3)) if m.group(2) else (m.group(4), m.group(5))
         need = max(need, _mins(n, u))
     return need if need >= 30 and need > r["rest"] else 0
+
+
+# ———————————————————————————————— 5. congélation (cuisine en lot)
+def freeze_note(r):
+    """Les plats mijotés en sauce se congèlent : la mention manque sur la plupart des fiches (audit chef + famille)."""
+    st = nrm(r["storage"] or "")
+    if r["role"] not in ("plat", "entree") or re.search(r"congel", st) or r.get("rawEgg"): return None
+    title, steps = nrm(r["title"]), nrm(" ".join(r["steps"]))
+    labs = nrm(" ".join(ln["label"] for ln in r["ingredients"]))
+    if not re.search(r"mijot|fremiss|brais|a couvert|couvercle|cocotte|feu doux|petit feu|compote|reduit|\d ?h\b", steps) or r["rest"] < 30: return None
+    if re.search(r"salade|frit|friture|pane|croustillant|tempura|beignet|sushi|tartare|carpaccio|gratin|risotto|omelette|\boeufs?\b|souffle|quiche|tarte|roti|wellington|laque|farci", title): return None
+    if re.search(r"\bfrire\b|friture|creme fouettee|mayonnaise", steps + " " + labs): return None
+    if any((ln["ref"] or "").startswith(("Crevettes", "Moules", "Calamar", "Poulpe")) for ln in r["ingredients"]): return None
+    side = " (sans les pommes de terre, les pâtes ni le riz, à cuire au moment)" if re.search(r"pomme de terre|pates|riz|nouilles|semoule", labs) else ""
+    return f"Se congèle 3 mois{side} : à décongeler une nuit au frigo, à réchauffer à feu doux jusqu'à frémissement."
+
+
+# ———————————————————————————————— 6. lait cru (grossesse), participation des enfants, desserts légers
+RAW_MILK = {"Camembert / brie", "Roquefort / bleu", "Reblochon / raclette / mont-d'or"}
+def raw_milk_tip(r):
+    if not any(ln["ref"] in RAW_MILK for ln in r["ingredients"]): return None
+    if any("enceinte" in nrm(t) for t in r["tips"]): return None
+    cooked = re.search(r"four|gratin|fondu|fond|200 ?°c|180 ?°c|bouillant", nrm(" ".join(r["steps"])))
+    return ("Femme enceinte : ces fromages sont souvent au lait cru ; le plat doit être brûlant à cœur (listeria), ou prends une version au lait pasteurisé."
+            if cooked else "Femme enceinte : fromage souvent au lait cru, à remplacer par une version au lait pasteurisé (listeria).")
+
+# ce qu'un enfant peut faire, avec l'âge (repères des ateliers cuisine pour enfants) ; jamais le feu, le four ni le couteau pointu
+KID_TASKS = [
+    (r"\blave|rince|egoutte les (salades|feuilles)", 3, "laver les légumes"), (r"effeuill|cisel\w* (le |les )?(persil|coriandre|basilic|menthe|ciboulette)", 3, "effeuiller les herbes"),
+    (r"melang|remu\w+ (la pate|le tout)|fouett", 3, "mélanger, fouetter"), (r"casse[rz]? (les |\d+ )?oeufs|oeufs? battus?", 4, "casser les œufs"),
+    (r"boulettes?|facon\w+|roule[rz]? (en|des) boules?|former? des boules", 4, "façonner les boulettes ou les boules"),
+    (r"etale[rz]? la pate|abaiss|garni[rs]? (les|la) (pate|pizza|tarte)", 5, "étaler la pâte, garnir"), (r"pese[rz]?|mesure[rz]?", 6, "peser et mesurer"),
+    (r"rape[rz]? (le |du )?(fromage|parmesan|carotte|courgette)", 7, "râper (râpe à main, doigts loin)"), (r"presse[rz]? (le |les )?(citron|agrume)", 4, "presser les citrons"),
+]
+def kid_help(r):
+    if r["role"] in ("boisson",): return None
+    t = nrm(" ".join(r["steps"]))
+    tasks = [(a, x) for rx, a, x in KID_TASKS if re.search(rx, t)]
+    if not tasks: return None
+    tasks.sort()
+    return "Les enfants peuvent aider : " + ", ".join(f"{x} (dès {a} ans)" for a, x in tasks[:4]) + "."
+
+FRUIT_SECTIONS = ("Fruits",)
+def light_dessert(r, sections):
+    """Dessert du quotidien : fruit en vedette, peu de sucre, sans pâte ni crème riche."""
+    # un dessert de fête marqué « léger » sortirait dans tous les menus de fête (test 79) : on ne touche qu'aux desserts du quotidien
+    if r["role"] != "dessert" or "fetes" in r.get("cats", []): return False
+    main = [ln for ln in r["ingredients"] if ln["weight"] >= 3]
+    fruit = any(sections.get(ln["ref"] or "", "").startswith(FRUIT_SECTIONS) or re.search(r"yaourt|fromage blanc|compote", nrm(ln["label"])) for ln in main)
+    heavy = any(re.search(r"^(Beurre|Crème|Mascarpone|Chocolat|Farine|Pâte|Lait concentré)", ln["ref"] or "") and ln["weight"] >= 2 for ln in r["ingredients"])
+    return fruit and not heavy and r["actif"] + r["repos"] <= 45 if "actif" in r else fruit and not heavy and r["active"] + r["rest"] <= 45

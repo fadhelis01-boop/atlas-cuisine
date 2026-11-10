@@ -1,6 +1,7 @@
 // La famille au centre (audit famille du 16/10/2026) : ce qui convient aux enfants du foyer, combien de parts cuisiner
 // quand il y a des enfants, et l'équilibre d'une semaine de repas. Utilisé par l'accueil, la semaine, la recherche et les fiches.
-import { evaluate } from "./engine";
+import { INGREDIENTS } from "./data";
+import { evaluate, flatten } from "./engine";
 import { norm } from "./text";
 import type { Profile, Recipe } from "./types";
 
@@ -13,6 +14,14 @@ export function kidsOf(p: Profile): number[] {
 // une fiche épicée reste possible pour les petits si elle dit comment l'adoucir (piment à part, version douce…)
 export const ADOUCI = /sans (le )?piment|piment a part|a part pour les adultes|version douce|doux pour les enfants|sans epices fortes|sans garam/;
 
+const COFFEE = /\bcafe\b(?! (de|au) )|espresso|expresso/;
+/** Café, ou alcool à peine cuit (moins de 45 min : il en reste beaucoup), obligatoires dans la fiche ou ses sous-recettes.
+ *  Un vin mijoté 2 h (bourguignon) reste permis : il n'en reste presque plus. */
+export function youngAdultOnly(r: Recipe): boolean {
+  return flatten(r.ingredients).some((l) => !l.optional && ((l.ref && INGREDIENTS[l.ref]?.derivs.alcohol === "certain" && r.rest < 45)
+      || (COFFEE.test(norm(l.label).split(/\(?\bou\b/)[0]) && !/c\. a cafe/.test(norm(l.qty + " " + l.label)))));
+}
+
 /** Un plat que le plus jeune enfant du foyer peut manger (âge de la fiche, piment, plats d'adultes). */
 export function kidFriendly(r: Recipe, p: Profile): boolean {
   const kids = kidsOf(p);
@@ -21,6 +30,8 @@ export function kidFriendly(r: Recipe, p: Profile): boolean {
   if (youngest >= 12) return true;
   if (r.age === null || r.age > Math.max(youngest, 1)) return false;
   if (youngest < 6 && r.profile.includes("epice") && !ADOUCI.test(norm(r.kids ?? ""))) return false;
+  // audit chef + famille : ni café ni alcool (même cuit, il ne s'évapore pas tout) obligatoires pour un enfant de moins de 6 ans
+  if (youngest < 6 && youngAdultOnly(r)) return false;
   return true;
 }
 

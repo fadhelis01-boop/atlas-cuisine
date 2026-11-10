@@ -76,7 +76,8 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
   // le même produit principal ne revient pas dans la semaine (moules deux jours de suite) ; peu de produits d'épicerie du monde
   const kidsHome = kidsOf(o.profile).some((a) => a < 11);
   const mainOf = (r: Recipe) => r.ingredients.filter((l) => l.weight >= 3 && l.ref && /^(Viandes|Poissons|Porc)/.test(INGREDIENTS[l.ref]?.section ?? "")).map((l) => l.ref!);
-  const specialOf = (r: Recipe) => r.ingredients.filter((l) => l.ref && !l.optional && l.weight >= 1 && (/Produits du monde/.test(INGREDIENTS[l.ref]?.section ?? "") || /🟠|🔴/.test(INGREDIENTS[l.ref]?.dispo ?? ""))
+  const specialOf = (r: Recipe) => r.ingredients.filter((l) => l.ref && !l.optional && l.weight >= 1
+      && (/Produits du monde/.test(INGREDIENTS[l.ref]?.section ?? "") || /🟠|🔴/.test(INGREDIENTS[l.ref]?.dispo ?? ""))
     && !/^(Épices|Herbes)/.test(INGREDIENTS[l.ref]?.section ?? "")).map((l) => l.ref!);
   const mains = new Set(placed.flatMap(mainOf));
   const specials = new Set(placed.flatMap(specialOf));
@@ -154,8 +155,17 @@ export function leftoverLink(prevId: string | undefined, id: string | undefined,
 const FRAC: Record<string, number> = { "½": 0.5, "¼": 0.25, "¾": 0.75, "⅓": 1 / 3, "⅔": 2 / 3 };
 const UNIT: [RegExp, string, number][] = [[/^kg\b/, "g", 1000], [/^g\b/, "g", 1], [/^l\b/i, "cl", 100], [/^dl\b/, "cl", 10], [/^cl\b/, "cl", 1], [/^ml\b/, "cl", 0.1],
   [/^c\. à s\./, "c. à s.", 1], [/^c\. à c\./, "c. à c.", 1]];
+// audit chef + famille : ce qu'on compte au supermarché (gousses, bouquets, pavés…) s'additionne aussi
+const NOUNS: [RegExp, string][] = [[/^gousses?\b/, "gousse"], [/^t[eê]tes?\b/, "tête"], [/^bouquets?\b/, "bouquet"], [/^bottes?\b/, "botte"], [/^branches?\b/, "branche"],
+  [/^tiges?\b/, "tige"], [/^brins?\b/, "brin"], [/^(bo[iî]tes?|bocal|bocaux)\b/, "boîte"], [/^tranches?\b/, "tranche"], [/^pav[ée]s?\b/, "pavé"], [/^filets?\b/, "filet"],
+  [/^sachets?\b/, "sachet"], [/^morceaux?\b/, "morceau"], [/^feuilles?\b/, "feuille"], [/^poign[ée]es?\b/, "poignée"], [/^pinc[ée]es?\b/, "pincée"]];
+const nounOf = (s: string) => { const t = s.trim().replace(/^(de |d'|d’)/, ""); for (const [rx, u] of NOUNS) if (rx.test(t)) return u; return null; };
+// poids moyen d'une pièce (g) : « 8 oignons + 800 g » devient un seul poids
+const PIECE_G: [RegExp, number][] = [[/^Oignon/, 150], [/^Pomme de terre/, 180], [/^Carotte/, 120], [/^Tomate$/, 120], [/^Courgette/, 250], [/^Poivron/, 180],
+  [/^Aubergine/, 300], [/^Échalote/, 30], [/^Pomme$/, 180], [/^Poireau/, 200], [/^Navet/, 150], [/^Patate douce/, 300], [/^Concombre/, 350]];
 function parseQty(q: string): { n: number; unit: string } | null {
-  const m = q.trim().replace(",", ".").match(/^(\d+(?:\.\d+)?)?\s*([½¼¾⅓⅔])?\s*(.*)$/);
+  const m = q.trim().replace(",", ".").replace(/^(\d+ )?1\/2\b/, "$1½").replace(/^(\d+ )?1\/4\b/, "$1¼")
+      .replace(/^(\d+ )?3\/4\b/, "$1¾").replace(/^(\d+ )?1\/3\b/, "$1⅓").match(/^(\d+(?:\.\d+)?)?\s*([½¼¾⅓⅔])?\s*(.*)$/);
   if (!m || (!m[1] && !m[2])) return null;
   const n = (m[1] ? parseFloat(m[1]) : 0) + (m[2] ? FRAC[m[2]] : 0);
   const rest = m[3].trim();
@@ -168,6 +178,10 @@ const fmt = (n: number, unit: string) => {
   if (unit === "cl" && n >= 100) return `${(n / 100).toLocaleString("fr-FR", { maximumFractionDigits: 2 })} L`;
   if (unit === "g") return `${n >= 100 ? Math.ceil(n / 50) * 50 : Math.ceil(n / 10) * 10} g`; // on achète au poids rond
   if (unit === "") return String(Math.ceil(n - 0.15)); // à la pièce : 4,8 oignons → 5 ; 1,1 → 1
+  if (unit === "gousse") { const k = Math.ceil(n - 0.15); return k >= 8 ? `${k} gousses (≈ ${Math.ceil(k / 10)} tête${k > 10 ? "s" : ""})` : `${k} gousse${k > 1 ? "s" : ""}`; }
+  if (unit === "pincée") return "quelques pincées";
+  if (["bouquet", "botte", "tête", "boîte", "pavé", "filet", "sachet", "tranche", "branche", "tige", "brin", "feuille", "morceau", "poignée"].includes(unit)) {
+    const k = Math.max(1, Math.ceil(n - 0.15)); return `${k} ${unit}${k > 1 ? (unit === "morceau" ? "x" : "s") : ""}`; }
   if (unit.startsWith("c. à")) { const h = Math.max(0.5, Math.round(n * 2) / 2); return `${h === 0.5 ? "½" : String(h).replace(".5", " ½")} ${unit}`; }
   return `${n.toLocaleString("fr-FR", { maximumFractionDigits: 1 })}${unit ? " " + unit : ""}`;
 };
@@ -177,7 +191,7 @@ const PANTRY_KEEP = /palme|arachide|coco|tahini|miso|gochujang|pâte de curry|ha
 
 export interface ShopLine { ref: string; label: string; section: string; from: string[] }
 /** Liste de courses d'un ensemble de recettes (avec facteur de portions) : un article par produit, quantités additionnées quand c'est possible. */
-export function consolidate(items: { id: string; factor: number }[]): ShopLine[] {
+export function consolidate(items: { id: string; factor: number }[], month = new Date().getMonth() + 1): ShopLine[] {
   const by = new Map<string, { sums: Map<string, number>; other: string[]; from: Set<string> }>();
   // accompagnement relié (audit gourmet) : sa fiche s'ajoute aux courses avec le même nombre de parts
   const withSides = items.flatMap((it) => {
@@ -192,7 +206,12 @@ export function consolidate(items: { id: string; factor: number }[]): ShopLine[]
     for (const l of flatten(r.ingredients)) {
       if (!l.ref || l.optional) continue;
       const e = by.get(l.ref) ?? { sums: new Map<string, number>(), other: [] as string[], from: new Set<string>() };
-      const q = parseQty(scaleQty(l.qty, factor));
+      const sq = scaleQty(l.qty, factor);
+      let q = parseQty(sq);
+      if (!q) { const m = sq.replace(",", ".").replace(/^1\/2\b/, "½").replace(/^1\/4\b/, "¼").replace(/^3\/4\b/, "¾").match(/^(\d+(?:\.\d+)?)?\s*([½¼¾⅓⅔])?\s*(.+)$/);
+            const u = m && (m[1] || m[2]) ? nounOf(m[3]) : null;
+        if (m && u) q = { n: (m[1] ? parseFloat(m[1]) : 0) + (m[2] ? FRAC[m[2]] : 0), unit: u }; }
+      else if (q.unit === "") { const u = nounOf(l.label); if (u) q = { n: q.n, unit: u }; }
       if (q) e.sums.set(q.unit, (e.sums.get(q.unit) ?? 0) + q.n);
       else e.other.push(`${scaleQty(l.qty, factor)} ${l.label}`.trim());
       e.from.add(r.title.split(" (")[0]);
@@ -203,15 +222,25 @@ export function consolidate(items: { id: string; factor: number }[]): ShopLine[]
   return [...by].map(([ref, e]) => {
     const name = ref.split(" (")[0];
     const section = INGREDIENTS[ref]?.section ?? "Autres";
+    // pièces + grammes d'un légume courant : un seul poids, et le nombre de pièces en repère
+    if (e.sums.has("tête") && e.sums.has("gousse")) { e.sums.set("gousse", e.sums.get("gousse")! + 10 * e.sums.get("tête")!); e.sums.delete("tête"); }
+    if (e.sums.has("botte") && e.sums.has("bouquet")) { e.sums.set("bouquet", e.sums.get("bouquet")! + e.sums.get("botte")!); e.sums.delete("botte"); }
+    e.other = [...new Set(e.other)];
+    const pg = PIECE_G.find(([rx]) => rx.test(ref))?.[1];
+    if (pg && e.sums.has("g") && e.sums.has("")) { e.sums.set("g", e.sums.get("g")! + e.sums.get("")! * pg); e.sums.delete(""); }
     const sums = [...e.sums].filter(([u]) => !(u.startsWith("c. à") && e.sums.size > 1 && [...e.sums.keys()].some((x) => !x.startsWith("c. à")))).map(([u, n]) => fmt(n, u));
     if (PANTRY.test(section) && !PANTRY_KEEP.test(ref) && ![...e.sums.keys()].some((u) => u === "cl" || u === "g")) return { ref, section, from: [...e.from], label: `${name} (vérifie ton placard)` };
-    return { ref, section, from: [...e.from], label: `${name}${sums.length ? " : " + sums.join(" + ") : ""}${e.other.length ? (sums.length ? " + " : " : ") + e.other.join(" + ") : ""}` };
+    // audit chef + famille : en hiver, la tomate fraîche n'a pas de goût ; en boîte, elle fait mieux dans un plat cuit
+    const winterTomato = /^Tomate/.test(ref) && (INGREDIENTS[ref]?.season?.length ?? 0) > 0 && !INGREDIENTS[ref]!.season!.includes(month)
+        ? " (hors saison : pour les plats cuits, des tomates pelées en boîte sont meilleures)" : "";
+    return { ref, section, from: [...e.from],
+        label: `${name}${sums.length ? " : " + sums.join(" + ") : ""}${e.other.length ? (sums.length ? " + " : " : ") + e.other.join(" + ") : ""}${winterTomato}` };
   }).sort((a, b) => a.section.localeCompare(b.section) || a.label.localeCompare(b.label));
 }
 
 // ---------------------------------------------------------------- préparation à l'avance (cuisine en lot)
 const AHEAD = /marin|pate (a pain|a pizza|brisee|sucree)|petri|bouillon|fumet|sauce|pesto|vinaigrette|chermoula|nokoss|creme patissiere|repos une nuit|la veille|une nuit|tremper|trempe/;
-const LAST_MINUTE = /frire|friture|frits?|servir|dresser|au dernier moment|aussitot|tout de suite/;
+const LAST_MINUTE = /\bfrire\b|friture|frits?\b|servir|dresser|au dernier moment|aussitot|tout de suite/;
 const NOT_AHEAD = /Ail|Oignon|Échalote|Pomme de terre|Tomate|Avocat|Salade|Champignon|Aubergine|Concombre|Roquette|Endive|Épinard|Cresson|Patate douce|Céleri-rave|Artichaut/;
 export interface PrepTask { recipe: string; task: string }
 /** Ce qui peut se préparer le dimanche (ou la veille) pour les repas de la semaine, et les légumes à laver et couper d'un coup. */
@@ -224,7 +253,8 @@ export function prepAhead(ids: string[]): { tasks: PrepTask[]; veg: string[] } {
     if (r.veille) tasks.push({ recipe: r.title.split(" (")[0], task: `À lancer la veille : ${r.veille}.` });
     else for (const s of r.steps) if (AHEAD.test(norm(s)) && !LAST_MINUTE.test(norm(s))) { tasks.push({ recipe: r.title.split(" (")[0], task: s.replace(/\*\*/g, "") }); break; }
     // seuls les légumes fermes se coupent à l'avance : pas la pomme de terre (elle noircit), ni la tomate (elle rend son eau)
-    for (const l of flatten(r.ingredients)) if (l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "") && !NOT_AHEAD.test(l.ref)) veg.set(l.ref.split(" / ")[0].split(" (")[0], (veg.get(l.ref) ?? 0) + 1);
+    for (const l of flatten(r.ingredients)) if (l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "") && !NOT_AHEAD.test(l.ref))
+        veg.set(l.ref.split(" / ")[0].split(" (")[0], (veg.get(l.ref) ?? 0) + 1);
   }
   return { tasks, veg: [...veg.keys()] };
 }

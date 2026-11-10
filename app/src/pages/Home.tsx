@@ -165,9 +165,12 @@ export default function Home() {
   // Menu du jour : parmi les recettes les mieux accordées à la saison du lieu (produits de saison, plat chaud ou frais selon le climat)
   // En semaine, un menu qui tient dans une soirée (audit famille 2026-10-16) ; avec de jeunes enfants, ni piment ni plat d'adulte
   const weekday = [1, 2, 3, 4, 5].includes(new Date().getDay());
-  const maxTotal: Record<string, number> = weekday ? { entree: 30, plat: 60, dessert: 45 } : { entree: 90, plat: 999, dessert: 999 };
+  // audit chef + famille : un soir de semaine, dessert léger ou rapide (pas une apple pie de 1 h 40), plat en temps total
+  const maxTotal: Record<string, number> = weekday ? { entree: 30, plat: 45, dessert: 30 } : { entree: 90, plat: 999, dessert: 999 };
   const seasonal = (role: string, salt: number) => {
-    const ranked = visible.filter((r) => r.role === role && (role === "dessert" ? r.active : tonightMin(r)) <= maxTotal[role] && kidFriendly(r, p)).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
+    const ranked = visible.filter((r) => r.role === role && (role === "dessert" ? (weekday ? r.active + r.rest : r.active) : tonightMin(r)) <= maxTotal[role]
+        && (role !== "dessert" || !weekday || r.profile.includes("leger") || r.active + r.rest <= 20) && kidFriendly(r, p)
+            ).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
     const top = ranked.slice(0, Math.max(12, Math.round(ranked.length * 0.3))).map(([r]) => r);
     return daily(top, 1, salt)[0] ?? null;
   };
@@ -195,7 +198,9 @@ export default function Home() {
     const week = Math.floor((Date.now() / 86400000 + 3) / 7);
     return pool.length ? pool[(week * 7919) % pool.length] : null;
   }, [cookedN, visible, zone, cookedMap]);
-  const kidsPick = p.kidsAge !== null ? daily(visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat"), 4, 11) : [];
+  // le soir de semaine, la rangée enfants propose ce qu'on peut faire ce soir (45 min en tout)
+  const kidsPick = p.kidsAge !== null ? daily(visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat"
+      && kidFriendly(r, p) && (!weekday || tonightMin(r) <= 45)), 4, 11) : [];
 
   return (
     <main className="page home" id="contenu" tabIndex={-1}>

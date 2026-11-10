@@ -49,6 +49,11 @@ function IngredientPicker({ onPick, exclude }: { onPick: (n: string) => void; ex
 const FRIGO_SUB = "1. Ajoute ce que tu as : tape-le dans la barre ou touche-le plus bas. 2. Choisis un plat, une entrée, un dessert ou un menu. "
   + "3. Lance : ATLAS utilise d'abord ce qui arrive à sa date limite.";
 
+// audit chef + famille : le soir sans courses, ce qu'une famille a presque toujours au placard
+const PLACARD_SECOURS = ["Pâtes sèches (spaghetti, penne…)", "Riz long / basmati / thaï", "Œuf entier (frais)", "Oignon jaune", "Ail", "Thon en conserve",
+  "Coulis / passata / tomates pelées", "Concentré de tomate", "Pois chiches (secs / bocal)", "Lentilles corail", "Gruyère / comté / emmental / beaufort", "Pomme de terre",
+  "Lait entier / demi-écrémé / écrémé", "Beurre doux / demi-sel", "Semoule de couscous", "Sardine (fraîche / conserve)"];
+
 export default function Frigo() {
   const [tab, setTab] = useState<"cuisiner" | "frigo">("cuisiner");
   return (
@@ -158,6 +163,8 @@ function Cuisiner() {
   return (
     <>
       <IngredientPicker onPick={(n) => setHave((h) => [...h, n])} exclude={have} />
+      <p className="small"><button type="button" className="btn small ghost" onClick={() => setHave((h) => [...new Set([...h, ...PLACARD_SECOURS])])}>
+        <Icon name="lifebuoy" size={16} className="ic-inline" /> Placard de secours</button> pas de courses ce soir ? Pâtes, riz, œufs, conserves : on part de ce qu'on a presque toujours.</p>
       {have.length > 0 && <div className="chips" aria-label="Ingrédients sélectionnés">
         {have.map((h) => <Chip key={h} on onClick={() => toggle(h)}>{short(h)} <Icon name="close" size={16} /></Chip>)}
       </div>}
