@@ -8,13 +8,16 @@ import imagesJson from "../data/images.json";
 // à la première photo affichée avec son crédit (audit dév 🟠 8 : démarrage plus léger avec 1 000+ photos).
 export interface PhotoMeta { path: string; sizes: number[]; color: string; kind?: "photo" | "ia"; avif?: 1; v?: string } // v : version d'une photo remplacée
 export interface PhotoCredit { author: string; license: string; licenseUrl: string; page: string; source: string; title: string }
-const CORE = imagesJson as unknown as Record<string, PhotoMeta>;
+// manifeste compact : chemin « img/<clé> » et tailles 400-800-1200 quand ils manquent
+const expand = (raw: Record<string, Partial<PhotoMeta>>): Record<string, PhotoMeta> =>
+  Object.fromEntries(Object.entries(raw).map(([k, v]) => [k, { path: `img/${k}`, sizes: [400, 800, 1200], ...v } as PhotoMeta]));
+const CORE = expand(imagesJson as unknown as Record<string, Partial<PhotoMeta>>);
 // ingrédients, gestes et étapes : chargés à la demande (audit UX 2026-10-16 §2.10)
 let MORE: Record<string, PhotoMeta> | null = null;
 let moreP: Promise<void> | null = null;
 const moreLs = new Set<() => void>();
 export function loadMoreImages() {
-  moreP ??= import("../data/images_more.json").then((m) => { MORE = m.default as unknown as Record<string, PhotoMeta>; Object.assign(IMAGES, MORE); moreLs.forEach((l) => l()); });
+  moreP ??= import("../data/images_more.json").then((m) => { MORE = expand(m.default as unknown as Record<string, Partial<PhotoMeta>>); Object.assign(IMAGES, MORE); moreLs.forEach((l) => l()); });
   return moreP;
 }
 /** À appeler dans un écran qui affiche des photos d'ingrédients, de gestes ou d'étapes : il se redessine quand elles arrivent. */

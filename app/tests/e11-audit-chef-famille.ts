@@ -81,3 +81,11 @@ const rawMilk = RECIPE_BY_ID.tartiflette.tips.some((t) => /enceinte/.test(t));
 const light = RECIPES.filter((r) => r.role === "dessert" && r.profile.includes("leger")).length;
 console.log("   famille : congélation", freeze, "plats · enfants qui aident", help, "fiches · lait cru signalé", rawMilk, "· desserts légers", light);
 check("118 famille : ≥ 150 plats disent s'ils se congèlent, ≥ 300 fiches disent ce que les enfants font, lait cru signalé, ≥ 15 desserts légers", freeze >= 150 && help >= 300 && rawMilk && light >= 15);
+
+// —— 119 : photos des fiches écrites d'après TikTok (10/11/2026) : sous licence libre, créditées, manifeste compact relu
+import { IMAGES } from "../src/components/photo";
+const credited = RECIPES.filter((r) => r.credit?.length);
+const withPhoto = credited.filter((r) => IMAGES[`recette/${r.id}`]);
+const okMeta = withPhoto.every((r) => { const m = IMAGES[`recette/${r.id}`]; return m.path === `img/recette/${r.id}` && m.sizes.length > 0 && /^#/.test(m.color); });
+console.log("   photos des fiches TikTok :", withPhoto.length, "sur", credited.length, "· manifeste relu :", okMeta);
+check("119 photos : au moins 110 fiches TikTok illustrées par une photo libre, chemins et tailles relus depuis le manifeste compact", withPhoto.length >= 110 && okMeta);

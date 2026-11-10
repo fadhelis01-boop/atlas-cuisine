@@ -290,7 +290,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
 imports = []
 sys.path.insert(0, IMP)
 from hors_cuisine import is_hors_cuisine as _hors_cuisine  # liste privée (recettes-classees/prive), vide si absente
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("favoris_createurs_2026-11-04_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("favoris_createurs_2026-11-04_classes.md", "TikTok"), ("favoris_createurs_2026-11-10_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""

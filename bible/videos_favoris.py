@@ -136,7 +136,7 @@ EN_PLUS_2026_11_04 = {
     "crispy_chicken_caesar_burger": [T + "@qistoh/video/7259787910214372635"],
     "oeufs_cocotte": [T + "@qistoh/video/7241974201509350682"],
     "steak_frites": [T + "@sosoya06/video/7694389690262228256", T + "@qistoh/video/7213783224646946054"],
-    "attieke_poisson": [T + "@latelierdekhady/video/7672700182030519584", T + "@tiaghohilson/video/7680237158719933728", T + "@tiaghohilson/video/7680593591164521760"],
+    "attieke_poisson": [T + "@latelierdekhady/video/7672700182030519584", T + "@tiaghohilson/video/7680237158719933728"],
     "ca_kho_to": [T + "@totamsachikaroberts/video/7627260892115111182"],
     "char_siu_poulet": [T + "@sandencuisine/video/7572145508911828246", T + "@sandencuisine/video/7700922284093017377"],
     "dumplings_vapeur_legumes": [T + "@sandencuisine/video/7604435176562674966", T + "@sandencuisine/video/7575121207201107202"],
@@ -148,4 +148,15 @@ EN_PLUS_2026_11_04 = {
     "riz_saute_restes": [T + "@totamsachikaroberts/video/7657006717674212622"],
 }
 for _k, _v in EN_PLUS_2026_11_04.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# favoris ajoutés entre le 04/11 et le 10/11/2026 : plats déjà dans ATLAS
+EN_PLUS_2026_11_10 = {
+    "croque_monsieur": [T + "@homerafaim/video/7706264703768612129"],
+    "kebab_poulet_pain_maison": [T + "@ammey.food/video/7704370056569867553"],
+    "croissants": [T + "@leo_hokfelt/video/7701991524896165142"],
+    "poulet_roti": [T + "@lacuisinedemarina/video/7705078336464211232"],
+    "sauce_tartare": [T + "@doscolafries/video/7674587766176664865", T + "@doscolafries/video/7697668755345739041"],
+}
+for _k, _v in EN_PLUS_2026_11_10.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

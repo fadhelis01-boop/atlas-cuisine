@@ -1907,5 +1907,501 @@
  "recette/coings_rotis_miel": {
   "i": 2,
   "from": "v7b/recette/coings_rotis_miel"
+ },
+ "recette/poulet_miel_ail_citron": {
+  "i": 2,
+  "from": "v8/recette/poulet_miel_ail_citron"
+ },
+ "recette/polpette_poulet_citron": {
+  "i": 5,
+  "from": "v8/recette/polpette_poulet_citron"
+ },
+ "recette/tsukune": {
+  "i": 3,
+  "from": "v8/recette/tsukune"
+ },
+ "recette/poulet_gaston_gerard": {
+  "i": 1,
+  "from": "v8/recette/poulet_gaston_gerard"
+ },
+ "recette/soso_ya_mwamba": {
+  "i": 0,
+  "from": "v8/recette/soso_ya_mwamba"
+ },
+ "recette/tangia_marrakchia": {
+  "i": 6,
+  "from": "v8/recette/tangia_marrakchia"
+ },
+ "recette/marka_jelbana": {
+  "i": 0,
+  "from": "v8/recette/marka_jelbana"
+ },
+ "recette/mloukhiya": {
+  "i": 4,
+  "from": "v8/recette/mloukhiya"
+ },
+ "recette/arayes_boeuf_feta": {
+  "i": 0,
+  "from": "v8/recette/arayes_boeuf_feta"
+ },
+ "recette/tombik_doner": {
+  "i": 0,
+  "from": "v8/recette/tombik_doner"
+ },
+ "recette/islak_burger": {
+  "i": 0,
+  "from": "v8/recette/islak_burger"
+ },
+ "recette/loco_moco": {
+  "i": 7,
+  "from": "v8/recette/loco_moco"
+ },
+ "recette/brochettes_boeuf_comte": {
+  "i": 3,
+  "from": "v8/recette/brochettes_boeuf_comte"
+ },
+ "recette/salade_thai_bavette": {
+  "i": 3,
+  "from": "v8/recette/salade_thai_bavette"
+ },
+ "recette/ndambe": {
+  "i": 0,
+  "from": "v8/recette/ndambe"
+ },
+ "recette/pates_crevettes_toscanes": {
+  "i": 2,
+  "from": "v8/recette/pates_crevettes_toscanes"
+ },
+ "recette/crevettes_beurre_chimichurri": {
+  "i": 6,
+  "from": "v8/recette/crevettes_beurre_chimichurri"
+ },
+ "recette/pates_sardines_citron": {
+  "i": 0,
+  "from": "v8/recette/pates_sardines_citron"
+ },
+ "recette/orecchiette_thon_tomates_cerises": {
+  "i": 1,
+  "from": "v8/recette/orecchiette_thon_tomates_cerises"
+ },
+ "recette/poulpe_four_pommes_de_terre": {
+  "i": 0,
+  "from": "v8/recette/poulpe_four_pommes_de_terre"
+ },
+ "recette/spaghetti_assassina": {
+  "i": 0,
+  "from": "v8/recette/spaghetti_assassina"
+ },
+ "recette/pasta_crema_peperoni": {
+  "i": 0,
+  "from": "v8/recette/pasta_crema_peperoni"
+ },
+ "recette/carbonara_asperges": {
+  "i": 1,
+  "from": "v8/recette/carbonara_asperges"
+ },
+ "recette/salade_japonaise_pommes_de_terre": {
+  "i": 0,
+  "from": "v8/recette/salade_japonaise_pommes_de_terre"
+ },
+ "recette/terrine_poisson_froide": {
+  "i": 0,
+  "from": "v8/recette/terrine_poisson_froide"
+ },
+ "recette/tamago_sando": {
+  "i": 2,
+  "from": "v8/recette/tamago_sando"
+ },
+ "recette/pfannkuchen_four_dinde_fromage": {
+  "i": 2,
+  "from": "v8/recette/pfannkuchen_four_dinde_fromage"
+ },
+ "recette/ablo": {
+  "i": 0,
+  "from": "v8/recette/ablo"
+ },
+ "recette/brioches_roulees_pate_tartiner": {
+  "i": 4,
+  "from": "v8/recette/brioches_roulees_pate_tartiner"
+ },
+ "recette/moelleux_coco": {
+  "i": 6,
+  "from": "v8/recette/moelleux_coco"
+ },
+ "recette/crepe_cake_chocolat": {
+  "i": 3,
+  "from": "v8/recette/crepe_cake_chocolat"
+ },
+ "recette/lemon_crinkles": {
+  "i": 2,
+  "from": "v8/recette/lemon_crinkles"
+ },
+ "recette/lemonies": {
+  "i": 2,
+  "from": "v8/recette/lemonies"
+ },
+ "recette/fonkie": {
+  "i": 2,
+  "from": "v8/recette/fonkie"
+ },
+ "recette/tapioca_mangue_coco": {
+  "i": 2,
+  "from": "v8/recette/tapioca_mangue_coco"
+ },
+ "recette/hot_honey_chicken_burger": {
+  "i": 3,
+  "from": "v8/recette/hot_honey_chicken_burger"
+ },
+ "recette/frites_chargees_poulet": {
+  "i": 5,
+  "from": "v8/recette/frites_chargees_poulet"
+ },
+ "recette/carrot_cake_mascarpone": {
+  "i": 4,
+  "from": "v8/recette/carrot_cake_mascarpone"
+ },
+ "recette/pates_poulet_boursin": {
+  "i": 1,
+  "from": "v8/recette/pates_poulet_boursin"
+ },
+ "recette/tenders_poulet_sauce_canes": {
+  "i": 0,
+  "from": "v8/recette/tenders_poulet_sauce_canes"
+ },
+ "recette/foutou_sauce_graine": {
+  "i": 6,
+  "from": "v8/recette/foutou_sauce_graine"
+ },
+ "recette/hamburger_helper_maison": {
+  "i": 0,
+  "from": "v8/recette/hamburger_helper_maison"
+ },
+ "recette/salade_sardines_avocat_herbes": {
+  "i": 0,
+  "from": "v8/recette/salade_sardines_avocat_herbes"
+ },
+ "recette/ramen_tom_yum_cremeux_poulet": {
+  "i": 7,
+  "from": "v8/recette/ramen_tom_yum_cremeux_poulet"
+ },
+ "recette/pepper_soup_agneau": {
+  "i": 4,
+  "from": "v8/recette/pepper_soup_agneau"
+ },
+ "recette/poulet_farci_epinards_mozzarella": {
+  "i": 7,
+  "from": "v8/recette/poulet_farci_epinards_mozzarella"
+ },
+ "recette/couscous_tfaya_boeuf": {
+  "i": 1,
+  "from": "v8/recette/couscous_tfaya_boeuf"
+ },
+ "recette/pasta_alfredo_poulet": {
+  "i": 0,
+  "from": "v8/recette/pasta_alfredo_poulet"
+ },
+ "recette/boeuf_wellington_sans_porc": {
+  "i": 1,
+  "from": "v8/recette/boeuf_wellington_sans_porc"
+ },
+ "recette/vermicelles_riz_sautes_legumes": {
+  "i": 0,
+  "from": "v8/recette/vermicelles_riz_sautes_legumes"
+ },
+ "recette/lo_mein_chou_legumes": {
+  "i": 1,
+  "from": "v8/recette/lo_mein_chou_legumes"
+ },
+ "recette/udon_champignons_ail_croustillant": {
+  "i": 2,
+  "from": "v8/recette/udon_champignons_ail_croustillant"
+ },
+ "recette/ramen_coreen_champignons_cremeux": {
+  "i": 0,
+  "from": "v8/recette/ramen_coreen_champignons_cremeux"
+ },
+ "recette/beignets_haricots_bouillie": {
+  "i": 5,
+  "from": "v8/recette/beignets_haricots_bouillie"
+ },
+ "recette/bricks_poulet_curry_olives": {
+  "i": 2,
+  "from": "v8/recette/bricks_poulet_curry_olives"
+ },
+ "recette/beignets_crevettes_panes": {
+  "i": 0,
+  "from": "v8/recette/beignets_crevettes_panes"
+ },
+ "recette/corn_dog_coreen_pain_mie": {
+  "i": 7,
+  "from": "v8/recette/corn_dog_coreen_pain_mie"
+ },
+ "recette/cheesecake_speculoos_verrines": {
+  "i": 0,
+  "from": "v8/recette/cheesecake_speculoos_verrines"
+ },
+ "recette/sfenj": {
+  "i": 6,
+  "from": "v8/recette/sfenj"
+ },
+ "recette/sauce_facon_giant": {
+  "i": 6,
+  "from": "v8/recette/sauce_facon_giant"
+ },
+ "recette/tajine_boeuf_olives_citron": {
+  "i": 0,
+  "from": "v8/recette/tajine_boeuf_olives_citron"
+ },
+ "recette/boeuf_oignons_saute": {
+  "i": 0,
+  "from": "v8/recette/boeuf_oignons_saute"
+ },
+ "recette/poulet_citronnelle_citron": {
+  "i": 3,
+  "from": "v8/recette/poulet_citronnelle_citron"
+ },
+ "recette/karaage": {
+  "i": 0,
+  "from": "v8/recette/karaage"
+ },
+ "recette/nuggets_poisson_polenta": {
+  "i": 4,
+  "from": "v8/recette/nuggets_poisson_polenta"
+ },
+ "recette/maakouda": {
+  "i": 2,
+  "from": "v8/recette/maakouda"
+ },
+ "recette/avazine_epinards_kabyle": {
+  "i": 4,
+  "from": "v8/recette/avazine_epinards_kabyle"
+ },
+ "recette/melanzana_pullastiello": {
+  "i": 6,
+  "from": "v8/recette/melanzana_pullastiello"
+ },
+ "recette/salade_smashed_potatoes": {
+  "i": 6,
+  "from": "v8/recette/salade_smashed_potatoes"
+ },
+ "recette/croustillants_chou_fleur": {
+  "i": 3,
+  "from": "v8/recette/croustillants_chou_fleur"
+ },
+ "recette/riz_ail": {
+  "i": 0,
+  "from": "v8/recette/riz_ail"
+ },
+ "recette/pains_kebab_poele": {
+  "i": 6,
+  "from": "v8/recette/pains_kebab_poele"
+ },
+ "recette/feuilles_brick_maison": {
+  "i": 0,
+  "from": "v8/recette/feuilles_brick_maison"
+ },
+ "recette/pate_tartiner_mordjene": {
+  "i": 1,
+  "from": "v8/recette/pate_tartiner_mordjene"
+ },
+ "recette/tiramisu_citron": {
+  "i": 1,
+  "from": "v8/recette/tiramisu_citron"
+ },
+ "recette/crema_caffe": {
+  "i": 0,
+  "from": "v8/recette/crema_caffe"
+ },
+ "recette/biscuits_cuillere": {
+  "i": 3,
+  "from": "v8/recette/biscuits_cuillere"
+ },
+ "recette/cake_citron": {
+  "i": 3,
+  "from": "v8/recette/cake_citron"
+ },
+ "recette/risotto_cacio_e_pepe": {
+  "i": 0,
+  "from": "v8/recette/risotto_cacio_e_pepe"
+ },
+ "recette/poulet_general_tao": {
+  "i": 0,
+  "from": "v8/recette/poulet_general_tao"
+ },
+ "recette/salade_poulet_traiteur_chinois": {
+  "i": 7,
+  "from": "v8/recette/salade_poulet_traiteur_chinois"
+ },
+ "recette/borek_feuilles_riz": {
+  "i": 1,
+  "from": "v8/recette/borek_feuilles_riz"
+ },
+ "recette/galettes_pommes_de_terre_fromage": {
+  "i": 1,
+  "from": "v8/recette/galettes_pommes_de_terre_fromage"
+ },
+ "recette/lobia_curry": {
+  "i": 0,
+  "from": "v8/recette/lobia_curry"
+ },
+ "recette/masala_omelette": {
+  "i": 3,
+  "from": "v8/recette/masala_omelette"
+ },
+ "recette/cookies_rocher_coeur_noisette": {
+  "i": 3,
+  "from": "v8/recette/cookies_rocher_coeur_noisette"
+ },
+ "recette/muffins_double_chocolat_noisette": {
+  "i": 0,
+  "from": "v8/recette/muffins_double_chocolat_noisette"
+ },
+ "recette/lasagnes_montagnardes_raclette": {
+  "i": 0,
+  "from": "v8/recette/lasagnes_montagnardes_raclette"
+ },
+ "recette/sauce_gombo_ivoirienne": {
+  "i": 0,
+  "from": "v8/recette/sauce_gombo_ivoirienne"
+ },
+ "recette/sandwich_merguez_orientale": {
+  "i": 2,
+  "from": "v8/recette/sandwich_merguez_orientale"
+ },
+ "recette/eiersalat": {
+  "i": 0,
+  "from": "v8/recette/eiersalat"
+ },
+ "recette/sauce_bourguignonne_fondue": {
+  "i": 0,
+  "from": "v8/recette/sauce_bourguignonne_fondue"
+ },
+ "recette/ficelle_picarde_dinde": {
+  "i": 0,
+  "from": "v8/recette/ficelle_picarde_dinde"
+ },
+ "recette/potee_chou_version": {
+  "i": 0,
+  "from": "v8/recette/potee_chou_version"
+ },
+ "recette/hackbraten_alsacien": {
+  "i": 5,
+  "from": "v8/recette/hackbraten_alsacien"
+ },
+ "recette/salade_boeuf_feta_avocat": {
+  "i": 0,
+  "from": "v8/recette/salade_boeuf_feta_avocat"
+ },
+ "recette/medaillons_courgette_farcis": {
+  "i": 7,
+  "from": "v8/recette/medaillons_courgette_farcis"
+ },
+ "recette/poulet_mayo_ivoirien": {
+  "i": 4,
+  "from": "v8/recette/poulet_mayo_ivoirien"
+ },
+ "recette/gesiers_sautes_ivoiriens": {
+  "i": 0,
+  "from": "v8/recette/gesiers_sautes_ivoiriens"
+ },
+ "recette/garba": {
+  "i": 4,
+  "from": "v8/recette/garba"
+ },
+ "recette/gratin_pommes_terre_poulet": {
+  "i": 0,
+  "from": "v8/recette/gratin_pommes_terre_poulet"
+ },
+ "recette/gateau_invisible_courgette_chevre": {
+  "i": 0,
+  "from": "v8/recette/gateau_invisible_courgette_chevre"
+ },
+ "recette/pates_mont_dor_champignons": {
+  "i": 2,
+  "from": "v8/recette/pates_mont_dor_champignons"
+ },
+ "recette/pates_pesto_vert_poireau": {
+  "i": 1,
+  "from": "v8/recette/pates_pesto_vert_poireau"
+ },
+ "recette/fromage_pane_pommes_terre_paprika": {
+  "i": 0,
+  "from": "v8/recette/fromage_pane_pommes_terre_paprika"
+ },
+ "recette/soupe_froide_concombre_zaatar": {
+  "i": 4,
+  "from": "v8/recette/soupe_froide_concombre_zaatar"
+ },
+ "recette/veloute_epluchures_asperges": {
+  "i": 3,
+  "from": "v8/recette/veloute_epluchures_asperges"
+ },
+ "recette/fleurs_pommes_feuilletees": {
+  "i": 1,
+  "from": "v8/recette/fleurs_pommes_feuilletees"
+ },
+ "recette/dampfnudeln": {
+  "i": 7,
+  "from": "v8/recette/dampfnudeln"
+ },
+ "recette/buns_fromage_dinde": {
+  "i": 1,
+  "from": "v8/recette/buns_fromage_dinde"
+ },
+ "recette/mayonnaise_sans_oeuf": {
+  "i": 3,
+  "from": "v8/recette/mayonnaise_sans_oeuf"
+ },
+ "recette/kebab_poulet_pain_maison": {
+  "i": 2,
+  "from": "v8/recette/kebab_poulet_pain_maison"
+ },
+ "recette/riz_saute_boeuf_asiatique": {
+  "i": 7,
+  "from": "v8/recette/riz_saute_boeuf_asiatique"
+ },
+ "recette/ramen_miso_curry_coco_boeuf": {
+  "i": 5,
+  "from": "v8/recette/ramen_miso_curry_coco_boeuf"
+ },
+ "recette/tartine_sardines_oeufs_mollets": {
+  "i": 0,
+  "from": "v8/recette/tartine_sardines_oeufs_mollets"
+ },
+ "recette/cheese_naan": {
+  "i": 1,
+  "from": "v8/recette/cheese_naan"
+ },
+ "recette/mayonnaise_oeufs_durs": {
+  "i": 0,
+  "from": "v8/recette/mayonnaise_oeufs_durs"
+ },
+ "recette/sauce_verte_entrecote": {
+  "i": 6,
+  "from": "v8/recette/sauce_verte_entrecote"
+ },
+ "recette/piment_camerounais": {
+  "i": 1,
+  "from": "v8/recette/piment_camerounais"
+ },
+ "recette/tiramisu_creme_brulee": {
+  "i": 2,
+  "from": "v8/recette/tiramisu_creme_brulee"
+ },
+ "recette/chocolat_chaud_italien": {
+  "i": 2,
+  "from": "v8/recette/chocolat_chaud_italien"
+ },
+ "recette/sauce_cesar": {
+  "i": 2,
+  "from": "v8b/recette/sauce_cesar"
+ },
+ "recette/ballotine_poulet_camembert": {
+  "i": 3,
+  "from": "v8b/recette/ballotine_poulet_camembert"
+ },
+ "recette/poisson_braise_camerounais": {
+  "i": 5,
+  "from": "v8b/recette/poisson_braise_camerounais"
  }
 }

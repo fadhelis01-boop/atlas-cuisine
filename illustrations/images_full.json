@@ -11256,6 +11256,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/ablo": {
+  "path": "img/recette/ablo",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a29267",
+  "author": "Rayman3640",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ablo.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Ablo.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/accras_morue": {
   "path": "img/recette/accras_morue",
   "sizes": [
@@ -11543,6 +11560,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/arayes_boeuf_feta": {
+  "path": "img/recette/arayes_boeuf_feta",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#92887b",
+  "author": "Laliv g",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Arayes_(3).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Arayes (3).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/arepas": {
   "path": "img/recette/arepas",
   "sizes": [
@@ -11608,6 +11642,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Parmigiana_di_melanzane.jpg",
   "source": "Wikimedia Commons",
   "title": "Parmigiana di melanzane.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/avazine_epinards_kabyle": {
+  "path": "img/recette/avazine_epinards_kabyle",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8c8058",
+  "author": "HaJunkiyada",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Shakshuka_with_tomatoes_and_spinach.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Liat Portal for Foodie Disorder - Shakshuka with tomatoes and spinach.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -11815,6 +11866,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/ballotine_poulet_camembert": {
+  "path": "img/recette/ballotine_poulet_camembert",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa5b3b",
+  "author": "Abdellah zou",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stuffed_Chicken_3.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Stuffed Chicken 3.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/banana_bread": {
   "path": "img/recette/banana_bread",
   "sizes": [
@@ -12002,6 +12070,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/beignets_crevettes_panes": {
+  "path": "img/recette/beignets_crevettes_panes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9c654b",
+  "author": "Ziko van Dijk",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:20231018_133452_shrimp_paste_croquette.jpg",
+  "source": "Wikimedia Commons",
+  "title": "20231018 133452 shrimp paste croquette.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/beignets_haricots_bouillie": {
+  "path": "img/recette/beignets_haricots_bouillie",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#967340",
+  "author": "Minette Lontsie",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beignets_haricot_bouillie.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beignets haricot bouillie.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/berbere_maison": {
   "path": "img/recette/berbere_maison",
   "sizes": [
@@ -12168,6 +12270,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Biryani_Home.jpg",
   "source": "Wikimedia Commons",
   "title": "Biryani Home.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/biscuits_cuillere": {
+  "path": "img/recette/biscuits_cuillere",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#896a4e",
+  "author": "Papouten",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bizcochos_de_soletilla.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bizcochos de soletilla.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12375,6 +12494,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/boeuf_oignons_saute": {
+  "path": "img/recette/boeuf_oignons_saute",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#94826f",
+  "author": "Limsd Parrk Yuewai",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HK_%E6%B2%99%E7%94%B0%E5%8C%97_Shatin_North_%E7%9F%B3%E9%96%80_Shek_Mun_%E5%AE%89%E7%BE%A4%E8%A1%97_On_Kwan_Street_%E4%BA%AC%E7%91%9E%E5%BB%A3%E5%A0%B4_Kings_Wing_Plaza_shop_%E5%8D%97%E4%BA%AC%E9%87%91%E9%99%B5%E6%B9%AF%E5%8C%85_Nanjing_Jinling_Dumpling_Restaurant_Feb_2019_SSG_09.jpg",
+  "source": "Wikimedia Commons",
+  "title": "HK 沙田北 Shatin North 石門 Shek Mun 安群街 On Kwan Street 京瑞廣場 Kings Wing Plaza shop 南京金陵湯包 Nanjing Jinling Dumpling Restaurant Feb 2019 SSG 09.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/boeuf_stroganov": {
   "path": "img/recette/boeuf_stroganov",
   "sizes": [
@@ -12389,6 +12525,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Beef_Stroganoff-02_cropped.jpg",
   "source": "Wikimedia Commons",
   "title": "Beef Stroganoff-02 cropped.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/boeuf_wellington_sans_porc": {
+  "path": "img/recette/boeuf_wellington_sans_porc",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ddb485",
+  "author": "Parkerman & Christie from San Diego, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beef_Wellington_-_Crosscut.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beef Wellington - Crosscut.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12423,6 +12576,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Valentine%27s_chocolates_in_Japan_2.jpg",
   "source": "Wikimedia Commons",
   "title": "Valentine's chocolates in Japan 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/borek_feuilles_riz": {
+  "path": "img/recette/borek_feuilles_riz",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a97a56",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Cheese_borek_-_Lily%27s_Cafe,_Brighton_2024-02-03.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Cheese borek - Lily's Cafe, Brighton 2024-02-03.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12732,6 +12902,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/bricks_poulet_curry_olives": {
+  "path": "img/recette/bricks_poulet_curry_olives",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa906c",
+  "author": "NAWARAH ALI FARAJ",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bourek_in_Libya.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bourek in Libya.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/brigadeiros": {
   "path": "img/recette/brigadeiros",
   "sizes": [
@@ -12783,6 +12970,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/brioches_roulees_pate_tartiner": {
+  "path": "img/recette/brioches_roulees_pate_tartiner",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c2a384",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Chocolate_Babka_Bun_-_GAIL%27s_2025-12-02.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chocolate Babka Bun - GAIL's 2025-12-02.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/briouates_kefta": {
   "path": "img/recette/briouates_kefta",
   "sizes": [
@@ -12797,6 +13001,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Moroccan_food-02.jpg",
   "source": "Wikimedia Commons",
   "title": "Moroccan food-02.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/brochettes_boeuf_comte": {
+  "path": "img/recette/brochettes_boeuf_comte",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8d7959",
+  "author": "Guilhem Vellut from Paris, France",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beef_and_cheese_skewers,_Yakitori,_Madama_restaurant,_Paris_002.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beef and cheese skewers, Yakitori, Madama restaurant, Paris 002.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12916,6 +13137,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Chicken_Curry_Bunny_Chow.JPG",
   "source": "Wikimedia Commons",
   "title": "Chicken Curry Bunny Chow.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/buns_fromage_dinde": {
+  "path": "img/recette/buns_fromage_dinde",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c4b29e",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Edamame_Cheese_-_Jazz_Kissa_Lazy_Bird_2025-04-19.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Edamame Cheese - Jazz Kissa Lazy Bird 2025-04-19.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13069,6 +13307,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Frapp%C3%A9.jpg",
   "source": "Wikimedia Commons",
   "title": "Frappé.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/cake_citron": {
+  "path": "img/recette/cake_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a3856a",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Lemon_Cake_-_Olea_2025-08-17.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lemon Cake - Olea 2025-08-17.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13259,6 +13514,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/carbonara_asperges": {
+  "path": "img/recette/carbonara_asperges",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#946f29",
+  "author": "Albarubescens",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Carbonara_di_fettuccine_con_asparagi.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Carbonara di fettuccine con asparagi.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/carbonnade_flamande": {
   "path": "img/recette/carbonnade_flamande",
   "sizes": [
@@ -13324,6 +13596,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Carpaccio_de_b%C5%93uf,_restaurant_Danieli_(Vienne,_Autriche).jpg",
   "source": "Wikimedia Commons",
   "title": "Carpaccio de bœuf, restaurant Danieli (Vienne, Autriche).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/carrot_cake_mascarpone": {
+  "path": "img/recette/carrot_cake_mascarpone",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c7b8ab",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Carrot_cake_-_Milfey_Patisserie_2026-09-07.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Carrot cake - Milfey Patisserie 2026-09-07.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13514,6 +13803,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/cheese_naan": {
+  "path": "img/recette/cheese_naan",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#707163",
+  "author": "Wiki Asmah",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cheese_naan_20260427_-_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Cheese naan 20260427 - 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/cheesecake_ny": {
   "path": "img/recette/cheesecake_ny",
   "sizes": [
@@ -13528,6 +13834,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Baked_cheesecake_with_raspberries_and_blueberries.jpg",
   "source": "Wikimedia Commons",
   "title": "Baked cheesecake with raspberries and blueberries.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/cheesecake_speculoos_verrines": {
+  "path": "img/recette/cheesecake_speculoos_verrines",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a89378",
+  "author": "Isabelle Palatin",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cheesecake_sp%C3%A9culooscaf%C3%A9_SpeculoosCoffee_cheesecake.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Cheesecake spéculooscafé SpeculoosCoffee cheesecake.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13647,6 +13970,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:DFC_0306_Crisp_curled_slices_of_dried_citrus_peel_piled_in_a_small_clear_bowl_showcasing_their_warm_orange_and_brown_hues.jpg",
   "source": "Wikimedia Commons",
   "title": "DFC 0306 Crisp curled slices of dried citrus peel piled in a small clear bowl showcasing their warm orange and brown hues.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/chocolat_chaud_italien": {
+  "path": "img/recette/chocolat_chaud_italien",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e6a4b",
+  "author": "Emna Mizouni",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hot_Chocolate_in_December.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Hot Chocolate in December.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14041,6 +14381,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/cookies_rocher_coeur_noisette": {
+  "path": "img/recette/cookies_rocher_coeur_noisette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c0853e",
+  "author": "Kathy",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:More_chocolate_chip_cookies_with_swirls.jpg",
+  "source": "Wikimedia Commons",
+  "title": "More chocolate chip cookies with swirls.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/coq_au_vin": {
   "path": "img/recette/coq_au_vin",
   "sizes": [
@@ -14072,6 +14429,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Cordon_Bleu_Mit_Kroketten.jpg",
   "source": "Wikimedia Commons",
   "title": "Cordon Bleu Mit Kroketten.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/corn_dog_coreen_pain_mie": {
+  "path": "img/recette/corn_dog_coreen_pain_mie",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a87b47",
+  "author": "Aerous",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Korean_corn_dog_on_stick.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Korean corn dog on stick.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14211,6 +14585,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/couscous_tfaya_boeuf": {
+  "path": "img/recette/couscous_tfaya_boeuf",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#743615",
+  "author": "Samarrows",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Moroccan_couscous_of_tfaya.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Moroccan couscous of tfaya.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/crema_caffe": {
+  "path": "img/recette/crema_caffe",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bab197",
+  "author": "Raimond Spekking",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Buttercreme_in_einer_Glassch%C3%BCssel-8493.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Buttercreme in einer Glasschüssel-8493.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/crema_catalana": {
   "path": "img/recette/crema_catalana",
   "sizes": [
@@ -14279,6 +14687,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/crepe_cake_chocolat": {
+  "path": "img/recette/crepe_cake_chocolat",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7c6a61",
+  "author": "Neil Conway from Oakland, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chocolate_hazelnut_crepe_cake_(9476210730).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chocolate hazelnut crepe cake (9476210730).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/crepes_bretonnes": {
   "path": "img/recette/crepes_bretonnes",
   "sizes": [
@@ -14327,6 +14752,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Cr%C3%A9pe_Suzette_001.jpg",
   "source": "Wikimedia Commons",
   "title": "Crépe Suzette 001.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/crevettes_beurre_chimichurri": {
+  "path": "img/recette/crevettes_beurre_chimichurri",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c98d3b",
+  "author": "LadyPinayForever",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Buttered_Garlic_Shrimp_Viand_at_Night.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Buttered Garlic Shrimp Viand at Night.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14446,6 +14888,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tourti%C3%A8re_g%C3%A2teau_2.JPG",
   "source": "Wikimedia Commons",
   "title": "Tourtière gâteau 2.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/croustillants_chou_fleur": {
+  "path": "img/recette/croustillants_chou_fleur",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#6c635b",
+  "author": "Wheeler Cowperthwaite",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Plated_roasted_cauliflower_10.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Plated roasted cauliflower 10.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14667,6 +15126,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Wattleseed_Damper_(cropped).jpg",
   "source": "Wikimedia Commons",
   "title": "Wattleseed Damper (cropped).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/dampfnudeln": {
+  "path": "img/recette/dampfnudeln",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8b7c58",
+  "author": "Oliver s. at German Wikipedia",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:CDampfnudelnWP6.jpg",
+  "source": "Wikimedia Commons",
+  "title": "CDampfnudelnWP6.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14904,6 +15380,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pot_of_Egusi_soup.jpg",
   "source": "Wikimedia Commons",
   "title": "Pot of Egusi soup.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/eiersalat": {
+  "path": "img/recette/eiersalat",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d9d3a8",
+  "author": "Mushki Brichta",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Egg_salad_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Egg salad 01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15213,6 +15706,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/feuilles_brick_maison": {
+  "path": "img/recette/feuilles_brick_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#635e5a",
+  "author": "Adem Durdu",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Yufka_ekmek.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Yufka ekmek.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/fiadone": {
   "path": "img/recette/fiadone",
   "sizes": [
@@ -15227,6 +15737,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Corsican_fiadone.jpg",
   "source": "Wikimedia Commons",
   "title": "Corsican fiadone.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/ficelle_picarde_dinde": {
+  "path": "img/recette/ficelle_picarde_dinde",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c46a1f",
+  "author": "Bycro",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ficelle_picarde_1.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Ficelle picarde 1.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15332,6 +15859,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/fleurs_pommes_feuilletees": {
+  "path": "img/recette/fleurs_pommes_feuilletees",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ac7b58",
+  "author": "Meg Zimbeck",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tarte_aux_pommes_Bouquet_de_Rose_at_L%27Arp%C3%A8ge_(Paris).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tarte aux pommes Bouquet de Rose at L'Arpège (Paris).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/focaccia": {
   "path": "img/recette/focaccia",
   "sizes": [
@@ -15400,6 +15944,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/fonkie": {
+  "path": "img/recette/fonkie",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ab9480",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Oreo_brownie_-_Cafe_Coho_2025-10-30.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Oreo brownie - Cafe Coho 2025-10-30.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/fougasse_olives": {
   "path": "img/recette/fougasse_olives",
   "sizes": [
@@ -15414,6 +15975,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Fougasse_1.jpg",
   "source": "Wikimedia Commons",
   "title": "Fougasse 1.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/foutou_sauce_graine": {
+  "path": "img/recette/foutou_sauce_graine",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8e6228",
+  "author": "SebEsteban",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fufu_(Lom%C3%A9,_Togo).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fufu (Lomé, Togo).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15451,6 +16029,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/frites_chargees_poulet": {
+  "path": "img/recette/frites_chargees_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#847859",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Gochujang_Shrimp_Fries_-_Oowee,_Brighton_2026-09-29.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Gochujang Shrimp Fries - Oowee, Brighton 2026-09-29.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/frites_maison": {
   "path": "img/recette/frites_maison",
   "sizes": [
@@ -15482,6 +16077,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Frittata_di_patate.jpg",
   "source": "Wikimedia Commons",
   "title": "Frittata di patate.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/fromage_pane_pommes_terre_paprika": {
+  "path": "img/recette/fromage_pane_pommes_terre_paprika",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b19c7c",
+  "author": "Ladislav Boháč",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sma%C5%BEen%C3%BD_s%C3%BDr_s_dvojitou_porc%C3%AD_tatarky_v_restauraci_Metuje.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Smažený sýr s dvojitou porcí tatarky v restauraci Metuje.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15621,6 +16233,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/galettes_pommes_de_terre_fromage": {
+  "path": "img/recette/galettes_pommes_de_terre_fromage",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8e5927",
+  "author": "Photo made by Daniel Spils and uploaded to flickr.com",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Potato_pancakes.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Potato pancakes.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/gallo_pinto": {
   "path": "img/recette/gallo_pinto",
   "sizes": [
@@ -15668,6 +16297,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Garam_Masala_new_2008-1.jpg",
   "source": "Wikimedia Commons",
   "title": "Garam Masala new 2008-1.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/garba": {
+  "path": "img/recette/garba",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c2a669",
+  "author": "Mognissan",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Atti%C3%A9k%C3%A9_poisson_thon_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Attiéké poisson thon 01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15753,6 +16399,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Chocolate_Cake_with_a_Decadent_Ganache.jpg",
   "source": "Wikimedia Commons",
   "title": "Chocolate Cake with a Decadent Ganache.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/gateau_invisible_courgette_chevre": {
+  "path": "img/recette/gateau_invisible_courgette_chevre",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bb803b",
+  "author": "WhatamIdoing",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A2teau_invisible_aux_pommes_2020.png",
+  "source": "Wikimedia Commons",
+  "title": "Gâteau invisible aux pommes 2020.png",
   "kind": "photo",
   "avif": true
  },
@@ -15872,6 +16535,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Gemista.jpg",
   "source": "Wikimedia Commons",
   "title": "Gemista.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/gesiers_sautes_ivoiriens": {
+  "path": "img/recette/gesiers_sautes_ivoiriens",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#906146",
+  "author": "Chun Yip So",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dak-ttongjip.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dak-ttongjip.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -16181,6 +16861,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/gratin_pommes_terre_poulet": {
+  "path": "img/recette/gratin_pommes_terre_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bb6b33",
+  "author": "pelican from Tokyo, Japan",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_potato_gratin_(5022340365).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken potato gratin (5022340365).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/gratin_ravioles": {
   "path": "img/recette/gratin_ravioles",
   "sizes": [
@@ -16368,6 +17065,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/hackbraten_alsacien": {
+  "path": "img/recette/hackbraten_alsacien",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bd9869",
+  "author": "Benreis",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hackbraten_G%C3%BCrtler_Friedrichroda.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Hackbraten Gürtler Friedrichroda.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/haleem": {
   "path": "img/recette/haleem",
   "sizes": [
@@ -16399,6 +17113,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Halloumi-2.jpg",
   "source": "Wikimedia Commons",
   "title": "Halloumi-2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/hamburger_helper_maison": {
+  "path": "img/recette/hamburger_helper_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c07d22",
+  "author": "Jengod",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sydney_Adamu_beef_bowl_-_Cheeseburger_Macaroni_Hamburger_Helper.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sydney Adamu beef bowl - Cheeseburger Macaroni Hamburger Helper.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -16484,6 +17215,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Horchata_(24414538074).jpg",
   "source": "Wikimedia Commons",
   "title": "Horchata (24414538074).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/hot_honey_chicken_burger": {
+  "path": "img/recette/hot_honey_chicken_burger",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c4a466",
+  "author": "Pava",
+  "license": "CC BY-SA 3.0 it",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/it/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Fried_chicken_Burger_in_Milan,_Italy.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fried chicken Burger in Milan, Italy.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -16620,6 +17368,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Irish_Beef_Stew_(34046928633).jpg",
   "source": "Wikimedia Commons",
   "title": "Irish Beef Stew (34046928633).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/islak_burger": {
+  "path": "img/recette/islak_burger",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c56d3d",
+  "author": "Kurmanbek",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Wet_burger.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Wet burger.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -16793,6 +17558,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/karaage": {
+  "path": "img/recette/karaage",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a58153",
+  "author": "Ocdp",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_karaage_003.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken karaage 003.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/kartoffelsalat": {
   "path": "img/recette/kartoffelsalat",
   "sizes": [
@@ -16824,6 +17606,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:%D0%93%D1%80%D0%B5%D1%87%D0%BD%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BA%D0%B0%D1%88%D0%B0.jpg",
   "source": "Wikimedia Commons",
   "title": "Гречневая каша.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/kebab_poulet_pain_maison": {
+  "path": "img/recette/kebab_poulet_pain_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d68448",
+  "author": "jeffreyw",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mmm...pita_fajita_(4604200399).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mmm...pita fajita (4604200399).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -17388,6 +18187,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/lasagnes_montagnardes_raclette": {
+  "path": "img/recette/lasagnes_montagnardes_raclette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a97543",
+  "author": "Magalia",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tort_warzywny.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Tort warzywny.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/lassi_mangue": {
   "path": "img/recette/lassi_mangue",
   "sizes": [
@@ -17418,6 +18234,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Chilli_Garlic_Chuntney_and_Namkeen_Lassi.JPG",
   "source": "Wikimedia Commons",
   "title": "Chilli Garlic Chuntney and Namkeen Lassi.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/lemon_crinkles": {
+  "path": "img/recette/lemon_crinkles",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9b9386",
+  "author": "Vegan Feast Catering",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vegan_Lemon_Wedding_Cookies_(4950566416).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Vegan Lemon Wedding Cookies (4950566416).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/lemonies": {
+  "path": "img/recette/lemonies",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9a836a",
+  "author": "Tim Sackton from Somerville, MA",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lemon_Bars_(23-366)_(24565872035).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lemon Bars (23-366) (24565872035).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -17489,6 +18339,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/lo_mein_chou_legumes": {
+  "path": "img/recette/lo_mein_chou_legumes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#90755b",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Ginger_%26_Spring_Onion_Lo_Mein_with_Soup_%26_Sauce_(V)_-_CK_Bistro_2024-03-17.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Ginger & Spring Onion Lo Mein with Soup & Sauce (V) - CK Bistro 2024-03-17.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/lobia_curry": {
+  "path": "img/recette/lobia_curry",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e3c21",
+  "author": "Miansari66",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Lobia_Curry.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Lobia Curry.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/lobio": {
   "path": "img/recette/lobio",
   "sizes": [
@@ -17503,6 +18387,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lobio_with_green_onion.jpg",
   "source": "Wikimedia Commons",
   "title": "Lobio with green onion.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/loco_moco": {
+  "path": "img/recette/loco_moco",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b49778",
+  "author": "Andrew Semansco",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fish_loco_moco.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fish loco moco.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -17605,6 +18506,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lumpiang_Shanghai_sa_Bilao.jpg",
   "source": "Wikimedia Commons",
   "title": "Lumpiang Shanghai sa Bilao.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/maakouda": {
+  "path": "img/recette/maakouda",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#976d0c",
+  "author": "Bhavana Homecook",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Potato_fritters.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Potato fritters.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18033,6 +18951,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/marka_jelbana": {
+  "path": "img/recette/marka_jelbana",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa805c",
+  "author": "IssamBarhoumi",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Market_Jelbana.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Market Jelbana.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/masala_omelette": {
+  "path": "img/recette/masala_omelette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ae906a",
+  "author": "SwingingUvula",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Masala_omelette.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Masala omelette.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/massaman_poulet": {
   "path": "img/recette/massaman_poulet",
   "sizes": [
@@ -18135,6 +19087,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/mayonnaise_oeufs_durs": {
+  "path": "img/recette/mayonnaise_oeufs_durs",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d9d3a8",
+  "author": "Mushki Brichta",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Egg_salad_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Egg salad 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/mayonnaise_sans_oeuf": {
+  "path": "img/recette/mayonnaise_sans_oeuf",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a49575",
+  "author": "jules",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mayonnaise_(1).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mayonnaise (1).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/meat_pie_australien": {
   "path": "img/recette/meat_pie_australien",
   "sizes": [
@@ -18186,6 +19172,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/medaillons_courgette_farcis": {
+  "path": "img/recette/medaillons_courgette_farcis",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#90825f",
+  "author": "Luca Nebuloni from Milan, Italy",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stuffed_zucchini_(12854173545).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Stuffed zucchini (12854173545).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/mee_goreng": {
   "path": "img/recette/mee_goreng",
   "sizes": [
@@ -18200,6 +19203,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Mi_Goreng_GM.jpg",
   "source": "Wikimedia Commons",
   "title": "Mi Goreng GM.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/melanzana_pullastiello": {
+  "path": "img/recette/melanzana_pullastiello",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bd997b",
+  "author": "gran",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fried_sliced_eggplant.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fried sliced eggplant.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18407,6 +19427,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/mloukhiya": {
+  "path": "img/recette/mloukhiya",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#615648",
+  "author": "Habib M'henni",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%D8%B5%D8%AD%D9%86%D8%8C_%D9%85%D9%84%D9%88%D8%AE%D9%8A%D8%A9_%D8%AA%D9%88%D9%86%D8%B3%D9%8A%D8%A9%D8%8C_%D8%AC%D9%88%D8%A7%D9%86_2021.jpg",
+  "source": "Wikimedia Commons",
+  "title": "صحن، ملوخية تونسية، جوان 2021.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/moambe": {
   "path": "img/recette/moambe",
   "sizes": [
@@ -18438,6 +19475,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Daifuku_002.jpg",
   "source": "Wikimedia Commons",
   "title": "Daifuku 002.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/moelleux_coco": {
+  "path": "img/recette/moelleux_coco",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a47257",
+  "author": "Katrin Gilger",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Coconut-Cake_(4492957588).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Coconut-Cake (4492957588).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18679,6 +19733,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/muffins_double_chocolat_noisette": {
+  "path": "img/recette/muffins_double_chocolat_noisette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#92715c",
+  "author": "Roozitaa",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Making_chocolate_muffins_no_butter_no_oil.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Making chocolate muffins no butter no oil.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/muffins_myrtilles": {
   "path": "img/recette/muffins_myrtilles",
   "sizes": [
@@ -18798,6 +19869,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/ndambe": {
+  "path": "img/recette/ndambe",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9f8069",
+  "author": "MoussaGaye87",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ndamb%C3%A9_Casamance.png",
+  "source": "Wikimedia Commons",
+  "title": "Ndambé Casamance.png",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ndole": {
   "path": "img/recette/ndole",
   "sizes": [
@@ -18914,6 +20002,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Papas_fritas_caseras_y_nuggets_de_pollo_en_platos_con_papel_madera.jpg",
   "source": "Wikimedia Commons",
   "title": "Papas fritas caseras y nuggets de pollo en platos con papel madera.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/nuggets_poisson_polenta": {
+  "path": "img/recette/nuggets_poisson_polenta",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#796e58",
+  "author": "Viveka Ravichandran V",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Nuggets.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Nuggets.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19254,6 +20359,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lyon_7e_-_Restaurant_Veronatuti_-_Orecchiette_con_le_cime_di_rapa_(plat_originaire_des_Pouilles).jpg",
   "source": "Wikimedia Commons",
   "title": "Lyon 7e - Restaurant Veronatuti - Orecchiette con le cime di rapa (plat originaire des Pouilles).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/orecchiette_thon_tomates_cerises": {
+  "path": "img/recette/orecchiette_thon_tomates_cerises",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bda085",
+  "author": "https://www.flickr.com/people/turos/, Retouched by AM",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Orecchiette_al_Pomodoro.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Orecchiette al Pomodoro.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19629,6 +20751,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pains_kebab_poele": {
+  "path": "img/recette/pains_kebab_poele",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#978173",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pide_and_butter_(Turkey).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pide and butter (Turkey).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pakoras": {
   "path": "img/recette/pakoras",
   "sizes": [
@@ -19884,6 +21023,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pasta_alfredo_poulet": {
+  "path": "img/recette/pasta_alfredo_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#908e76",
+  "author": "Dllu",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_fettuccine_alfredo.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Chicken fettuccine alfredo.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pasta_crema_peperoni": {
+  "path": "img/recette/pasta_crema_peperoni",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#775b51",
+  "author": "YKanchan07",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_sauce_pasta.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Red sauce pasta.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pasta_e_ceci": {
   "path": "img/recette/pasta_e_ceci",
   "sizes": [
@@ -20053,6 +21226,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pate_tartiner_mordjene": {
+  "path": "img/recette/pate_tartiner_mordjene",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b98d60",
+  "author": "Cornischong at Luxembourgish Wikipedia",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Schockelasbotterschmir.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Schockelasbotterschmir.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pates_alla_norma": {
   "path": "img/recette/pates_alla_norma",
   "sizes": [
@@ -20083,6 +21273,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lemon_Spaghetti_(14179778117).jpg",
   "source": "Wikimedia Commons",
   "title": "Lemon Spaghetti (14179778117).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_crevettes_toscanes": {
+  "path": "img/recette/pates_crevettes_toscanes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d29b63",
+  "author": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:DFC_4054_Garlic_chili_spaghetti_tossed_with_shrimp_fresh_parsley_and_vibrant_veggies_-_a_simple_savory_seafood_pasta_delight.jpg",
+  "source": "Wikimedia Commons",
+  "title": "DFC 4054 Garlic chili spaghetti tossed with shrimp fresh parsley and vibrant veggies - a simple savory seafood pasta delight.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_mont_dor_champignons": {
+  "path": "img/recette/pates_mont_dor_champignons",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9d6848",
+  "author": "Хрюша",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vacherin_Mont_d%27Or_02_10.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Vacherin Mont d'Or 02 10.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20120,6 +21344,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pates_pesto_vert_poireau": {
+  "path": "img/recette/pates_pesto_vert_poireau",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#56523b",
+  "author": "M&A",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pasta_al_pesto_con_fagiolini_e_patate.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pasta al pesto con fagiolini e patate.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_poulet_boursin": {
+  "path": "img/recette/pates_poulet_boursin",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#adb3a7",
+  "author": "Glen Edelson from ATLANTA, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pasta_chicken_with_cream_sauce_(2382791628).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pasta chicken with cream sauce (2382791628).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pates_puttanesca": {
   "path": "img/recette/pates_puttanesca",
   "sizes": [
@@ -20134,6 +21392,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pasta_Puttanesca.jpg",
   "source": "Wikimedia Commons",
   "title": "Pasta Puttanesca.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_sardines_citron": {
+  "path": "img/recette/pates_sardines_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a18653",
+  "author": "Adriao",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pasta_con_le_sarde_(Palermo).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pasta con le sarde (Palermo).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20205,6 +21480,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pepper_soup_agneau": {
+  "path": "img/recette/pepper_soup_agneau",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b38363",
+  "author": "Nancy Nwachukwu",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Goat_meat_pepper_soup_served_with_bread.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Goat meat pepper soup served with bread.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pesto": {
   "path": "img/recette/pesto",
   "sizes": [
@@ -20236,6 +21528,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Petit_sal%C3%A9_01.jpg",
   "source": "Wikimedia Commons",
   "title": "Petit salé 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pfannkuchen_four_dinde_fromage": {
+  "path": "img/recette/pfannkuchen_four_dinde_fromage",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c29575",
+  "author": "Syced",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Dutch_baby,_rosemary.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dutch baby, rosemary.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20338,6 +21647,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Polu.jpg",
   "source": "Wikimedia Commons",
   "title": "Polu.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/piment_camerounais": {
+  "path": "img/recette/piment_camerounais",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c06943",
+  "author": "Minette Lontsie",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Piment_en_tas_Cameroon.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Piment en tas Cameroon.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20578,6 +21904,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/poisson_braise_camerounais": {
+  "path": "img/recette/poisson_braise_camerounais",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#907a56",
+  "author": "Gra2mb",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Poisson_brais%C3%A9_%C3%A0_Kinkole.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Poisson braisé à Kinkole.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/poisson_cru_coco": {
   "path": "img/recette/poisson_cru_coco",
   "sizes": [
@@ -20730,6 +22073,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/polpette_poulet_citron": {
+  "path": "img/recette/polpette_poulet_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c4b18e",
+  "author": "Mack Male from Edmonton, AB, Canada",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_Meatballs_(8365914251).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken Meatballs (8365914251).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/polpette_sugo": {
   "path": "img/recette/polpette_sugo",
   "sizes": [
@@ -20849,6 +22209,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/potee_chou_version": {
+  "path": "img/recette/potee_chou_version",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#958764",
+  "author": "Agathe",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pot%C3%A9e.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Potée.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/potimarron_farci_quinoa": {
   "path": "img/recette/potimarron_farci_quinoa",
   "sizes": [
@@ -20951,6 +22328,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/poulet_citronnelle_citron": {
+  "path": "img/recette/poulet_citronnelle_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#947e60",
+  "author": "Brian Bilek",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lemongrass_chicken_at_Quan_Nem_Ninh_Hoa,_Sacramento.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lemongrass chicken at Quan Nem Ninh Hoa, Sacramento.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/poulet_citronnelle_express": {
   "path": "img/recette/poulet_citronnelle_express",
   "sizes": [
@@ -20985,6 +22379,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/poulet_farci_epinards_mozzarella": {
+  "path": "img/recette/poulet_farci_epinards_mozzarella",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c59b68",
+  "author": "Kgbo",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stuffed_Chicken_Breast_at_The_Brick_Hotel,_Quilpie,_Queensland,_2024.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Stuffed Chicken Breast at The Brick Hotel, Quilpie, Queensland, 2024.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/poulet_frit_coreen": {
   "path": "img/recette/poulet_frit_coreen",
   "sizes": [
@@ -20999,6 +22410,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Yangnyeom-chikin_1.jpg",
   "source": "Wikimedia Commons",
   "title": "Yangnyeom-chikin 1.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poulet_gaston_gerard": {
+  "path": "img/recette/poulet_gaston_gerard",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a4774c",
+  "author": "Arnaud 25",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Poulet_Gaston_G%C3%A9rard_01.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Poulet Gaston Gérard 01.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poulet_general_tao": {
+  "path": "img/recette/poulet_general_tao",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ab6940",
+  "author": "Willis Lam",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Panda_Express_General_Tso_Chicken_(30850707784).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Panda Express General Tso Chicken (30850707784).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21067,6 +22512,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Kung_Pao_Chicken_at_Yujiayan_Restaurant_(20230510123120).jpg",
   "source": "Wikimedia Commons",
   "title": "Kung Pao Chicken at Yujiayan Restaurant (20230510123120).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poulet_mayo_ivoirien": {
+  "path": "img/recette/poulet_mayo_ivoirien",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a08780",
+  "author": "Maryleine",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Coxa_de_Frango_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Coxa de Frango 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poulet_miel_ail_citron": {
+  "path": "img/recette/poulet_miel_ail_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a55f3f",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pollastre_al_forn.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pollastre al forn.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21202,6 +22681,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Poulet_yassa_03.jpg",
   "source": "Wikimedia Commons",
   "title": "Poulet yassa 03.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/poulpe_four_pommes_de_terre": {
+  "path": "img/recette/poulpe_four_pommes_de_terre",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b6986e",
+  "author": "Exilexi",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Polvo_a_lagareiro.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Polvo a lagareiro.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21561,6 +23057,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/ramen_coreen_champignons_cremeux": {
+  "path": "img/recette/ramen_coreen_champignons_cremeux",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e6347",
+  "author": "Daderot",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Mushroom_ramen_-_London,_UK.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mushroom ramen - London, UK.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/ramen_miso_curry_coco_boeuf": {
+  "path": "img/recette/ramen_miso_curry_coco_boeuf",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c68037",
+  "author": "Daderot",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Miso_ramen_with_fried_tofu,_corn,_wakame_seaweed,_chili_strings,_and_scallions_-_Massachusetts.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Miso ramen with fried tofu, corn, wakame seaweed, chili strings, and scallions - Massachusetts.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ramen_shoyu": {
   "path": "img/recette/ramen_shoyu",
   "sizes": [
@@ -21575,6 +23105,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Shoyu_Ramen.jpg",
   "source": "Wikimedia Commons",
   "title": "Shoyu Ramen.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/ramen_tom_yum_cremeux_poulet": {
+  "path": "img/recette/ramen_tom_yum_cremeux_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c36712",
+  "author": "P1898",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cuisine_2026-09-09_Thailand_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Cuisine 2026-09-09 Thailand 01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21697,6 +23244,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/risotto_cacio_e_pepe": {
+  "path": "img/recette/risotto_cacio_e_pepe",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b3a47e",
+  "author": "Luca Nebuloni from Milan, Italy",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Risotto_cacio_e_pepe_(9390325233).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Risotto cacio e pepe (9390325233).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/risotto_courge_sauge": {
   "path": "img/recette/risotto_courge_sauge",
   "sizes": [
@@ -21728,6 +23292,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Risotto_alla_Milanese.JPG",
   "source": "Wikimedia Commons",
   "title": "Risotto alla Milanese.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/riz_ail": {
+  "path": "img/recette/riz_ail",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#f4a942",
+  "author": "Lombroso",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Garlic_rice,_at_Steak_Miya_(2018-11-25).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Garlic rice, at Steak Miya (2018-11-25).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21847,6 +23428,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Thai-style_Fried_Rice_in_Pineapple.jpg",
   "source": "Wikimedia Commons",
   "title": "Thai-style Fried Rice in Pineapple.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/riz_saute_boeuf_asiatique": {
+  "path": "img/recette/riz_saute_boeuf_asiatique",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c8b199",
+  "author": "Peachyeung316",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beef_fried_rice_in_itamomo.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beef fried rice in itamomo.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22019,6 +23617,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/salade_boeuf_feta_avocat": {
+  "path": "img/recette/salade_boeuf_feta_avocat",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#73805d",
+  "author": "Daderot",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Steak_salad_-_Massachusetts.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Steak salad - Massachusetts.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/salade_caprese": {
   "path": "img/recette/salade_caprese",
   "sizes": [
@@ -22155,6 +23770,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/salade_japonaise_pommes_de_terre": {
+  "path": "img/recette/salade_japonaise_pommes_de_terre",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c9b596",
+  "author": "Ocdp",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Potato_salad_001.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Potato salad 001.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/salade_kale_parmesan": {
   "path": "img/recette/salade_kale_parmesan",
   "sizes": [
@@ -22274,6 +23906,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/salade_poulet_traiteur_chinois": {
+  "path": "img/recette/salade_poulet_traiteur_chinois",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bc825e",
+  "author": "Yumi Kimura",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bon_bon_chicken_1.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bon bon chicken 1.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/salade_quinoa_feta_grenade": {
   "path": "img/recette/salade_quinoa_feta_grenade",
   "sizes": [
@@ -22307,6 +23956,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/salade_sardines_avocat_herbes": {
+  "path": "img/recette/salade_sardines_avocat_herbes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8f6d4b",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Salad_with_sardines.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Salad with sardines.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/salade_smashed_potatoes": {
+  "path": "img/recette/salade_smashed_potatoes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ae704d",
+  "author": "ParentingPatch",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Baked_Smashed_Potatoes.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Baked Smashed Potatoes.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/salade_soba_sesame": {
   "path": "img/recette/salade_soba_sesame",
   "sizes": [
@@ -22320,6 +24003,23 @@
   "page": "https://www.flickr.com/photos/99247795@N00/3801282323",
   "source": "Openverse (flickr)",
   "title": "Soba salad",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/salade_thai_bavette": {
+  "path": "img/recette/salade_thai_bavette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ac8d80",
+  "author": "T.Tseng",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:YUM_NUAH_(Thai_Beef_Salad)_Red_onions,_green_onions,_tomato,_cucumbers,_cilantro,_fresh_chilies_mixed_with_homemade_sauce,_served_on_bed_of_greens.jpg",
+  "source": "Wikimedia Commons",
+  "title": "YUM NUAH (Thai Beef Salad) Red onions, green onions, tomato, cucumbers, cilantro, fresh chilies mixed with homemade sauce, served on bed of greens.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22405,6 +24105,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Sancocho_cruzado_de_Gallina,_Rabo_y_Costilla_con_arepa.jpg",
   "source": "Wikimedia Commons",
   "title": "Sancocho cruzado de Gallina, Rabo y Costilla con arepa.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sandwich_merguez_orientale": {
+  "path": "img/recette/sandwich_merguez_orientale",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a78f5f",
+  "author": "Ewan Munro from London, UK",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Charles_Lamb,_Islington,_London_(7794380038).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Charles Lamb, Islington, London (7794380038).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22612,6 +24329,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sauce_bourguignonne_fondue": {
+  "path": "img/recette/sauce_bourguignonne_fondue",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#6e4e2e",
+  "author": "Deni Williams from São Paulo, Brasil",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Restaurante_Santa_Truta_(Santo_Antonio_do_Pinhal)_-_Molhos_para_fondue_-_Fondue_sauces_(8903453147).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Restaurante Santa Truta (Santo Antonio do Pinhal) - Molhos para fondue - Fondue sauces (8903453147).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sauce_burger": {
   "path": "img/recette/sauce_burger",
   "sizes": [
@@ -22626,6 +24360,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Hamburger_with_special_sauce.jpg",
   "source": "Wikimedia Commons",
   "title": "Hamburger with special sauce.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sauce_cesar": {
+  "path": "img/recette/sauce_cesar",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9a844f",
+  "author": "Banej",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Caesar_Salad_from_Tony_Roma_Restaurant-_March_2024_02.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Caesar Salad from Tony Roma Restaurant- March 2024 02.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22677,6 +24428,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Frysauce.JPG",
   "source": "Wikimedia Commons",
   "title": "Frysauce.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sauce_facon_giant": {
+  "path": "img/recette/sauce_facon_giant",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#cea88f",
+  "author": "Authalic",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Frysauce.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Frysauce.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sauce_gombo_ivoirienne": {
+  "path": "img/recette/sauce_gombo_ivoirienne",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7b4d1c",
+  "author": "Akouete",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sauce_gombo_(F%C3%A9trid%C3%A9ssi)_02.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sauce gombo (Fétridéssi) 02.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22815,6 +24600,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sauce_verte_entrecote": {
+  "path": "img/recette/sauce_verte_entrecote",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#936b42",
+  "author": "PattayaPatrol",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:DFC_3512_Juicy_grilled_steak_topped_with_herb_butter_served_with_mashed_potatoes_fresh_greens_and_a_side_of_gravy.jpg",
+  "source": "Wikimedia Commons",
+  "title": "DFC 3512 Juicy grilled steak topped with herb butter served with mashed potatoes fresh greens and a side of gravy.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sauce_vierge": {
   "path": "img/recette/sauce_vierge",
   "sizes": [
@@ -22931,6 +24733,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Couscous_(Prepared).jpg",
   "source": "Wikimedia Commons",
   "title": "Liat Portal for Foodie Disorder - Couscous (Prepared).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sfenj": {
+  "path": "img/recette/sfenj",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#af6844",
+  "author": "Waran18",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sfendj_algerie.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sfendj algerie.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23206,6 +25025,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/soso_ya_mwamba": {
+  "path": "img/recette/soso_ya_mwamba",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9b694b",
+  "author": "Fan Majie 範瑪姐",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_moambe_with_French_fries_(14792587921).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken moambe with French fries (14792587921).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/soto_ayam": {
   "path": "img/recette/soto_ayam",
   "sizes": [
@@ -23271,6 +25107,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Sorrel_soup_with_egg_(Zupa_szczawiowa_z_jajkiem).jpg",
   "source": "Wikimedia Commons",
   "title": "Sorrel soup with egg (Zupa szczawiowa z jajkiem).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/soupe_froide_concombre_zaatar": {
+  "path": "img/recette/soupe_froide_concombre_zaatar",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8b7377",
+  "author": "Kritzolina",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bulgarian_dish_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bulgarian dish 01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23458,6 +25311,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Spaghetti_aglio_e_olio_KB.jpg",
   "source": "Wikimedia Commons",
   "title": "Spaghetti aglio e olio KB.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/spaghetti_assassina": {
+  "path": "img/recette/spaghetti_assassina",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a47a53",
+  "author": "ScotInPuglia",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Spaghetti_all%E2%80%99assassina,_Bari.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Spaghetti all’assassina, Bari.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23886,6 +25756,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tajine_boeuf_olives_citron": {
+  "path": "img/recette/tajine_boeuf_olives_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9a572f",
+  "author": "AmelGhouila",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Beef_Tajine.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Beef Tajine.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tajine_kefta_oeufs": {
   "path": "img/recette/tajine_kefta_oeufs",
   "sizes": [
@@ -23934,6 +25821,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tajine_de_poulet_et_olives.jpg",
   "source": "Wikimedia Commons",
   "title": "Tajine de poulet et olives.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tamago_sando": {
+  "path": "img/recette/tamago_sando",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#cc9973",
+  "author": "Ocdp",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Egg_Sandwich_001.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Egg Sandwich 001.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23988,6 +25892,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tangia_marrakchia": {
+  "path": "img/recette/tangia_marrakchia",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7f5e4f",
+  "author": "Anass Sedrati",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inside_the_Tangia.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Inside the Tangia.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tapenade": {
   "path": "img/recette/tapenade",
   "sizes": [
@@ -24002,6 +25923,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tapenade_ramequin.jpg",
   "source": "Wikimedia Commons",
   "title": "Tapenade ramequin.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tapioca_mangue_coco": {
+  "path": "img/recette/tapioca_mangue_coco",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#e18e60",
+  "author": "Obsidian Soul",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bilo-Bilo_Dessert_(Philippines).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bilo-Bilo Dessert (Philippines).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24208,6 +26146,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tartine_sardines_oeufs_mollets": {
+  "path": "img/recette/tartine_sardines_oeufs_mollets",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#684a3a",
+  "author": "Arnaud 25",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sardines_et_pain_grill%C3%A9_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sardines et pain grillé 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tartines_avocat_oeuf": {
   "path": "img/recette/tartines_avocat_oeuf",
   "sizes": [
@@ -24242,6 +26197,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tenders_poulet_sauce_canes": {
+  "path": "img/recette/tenders_poulet_sauce_canes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8c6d49",
+  "author": "Missvain",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chicken_tenders_and_french_fries_-_June_2023_-_Sarah_Stierch.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Chicken tenders and french fries - June 2023 - Sarah Stierch.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/terrine_legumes": {
   "path": "img/recette/terrine_legumes",
   "sizes": [
@@ -24256,6 +26228,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:ChickenLiverGaramMasalaRedCabbageTamarind_(8319923540).jpg",
   "source": "Wikimedia Commons",
   "title": "ChickenLiverGaramMasalaRedCabbageTamarind (8319923540).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/terrine_poisson_froide": {
+  "path": "img/recette/terrine_poisson_froide",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#80705b",
+  "author": "Benoît Prieur",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Terrine_aux_deux_poissons_sauce_curry_au_restaurant_La_Cocagne_(Lyon).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Terrine aux deux poissons sauce curry au restaurant La Cocagne (Lyon).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24394,6 +26383,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tiramisu_citron": {
+  "path": "img/recette/tiramisu_citron",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b59c70",
+  "author": "Fujimon76",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E3%83%AC%E3%83%A2%E3%83%B3%E5%95%86%E5%93%812015-10.jpg",
+  "source": "Wikimedia Commons",
+  "title": "レモン商品2015-10.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tiramisu_creme_brulee": {
+  "path": "img/recette/tiramisu_creme_brulee",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#967a68",
+  "author": "Syced",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Cr%C3%A8me_br%C3%BBl%C3%A9e_at_restaurant_in_Zushi.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Crème brûlée at restaurant in Zushi.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/toasts_champignons_oeuf": {
   "path": "img/recette/toasts_champignons_oeuf",
   "sizes": [
@@ -24459,6 +26482,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tomates_farcies_v%C3%A9g%C3%A9tariennes.jpg",
   "source": "Wikimedia Commons",
   "title": "Tomates farcies végétariennes.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tombik_doner": {
+  "path": "img/recette/tombik_doner",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#726251",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:D%C3%B6ner_Kebab_Wrap_-_What_The_Pitta.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Döner Kebab Wrap - What The Pitta.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24683,6 +26723,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tsukune": {
+  "path": "img/recette/tsukune",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#977352",
+  "author": "経済特区",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%82%AD%E7%81%AB%E7%84%BC%E3%81%8D%E9%B3%A5_%E4%B8%B2%E3%81%8B%E3%81%A9_%E6%96%B0%E5%AE%BF%E6%9C%AC%E5%BA%97_IMG_20220502_14.jpg",
+  "source": "Wikimedia Commons",
+  "title": "炭火焼き鳥 串かど 新宿本店 IMG 20220502 14.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tteokbokki": {
   "path": "img/recette/tteokbokki",
   "sizes": [
@@ -24731,6 +26788,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tzatiki_(3656301454).jpg",
   "source": "Wikimedia Commons",
   "title": "Tzatiki (3656301454).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/udon_champignons_ail_croustillant": {
+  "path": "img/recette/udon_champignons_ail_croustillant",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c67d1d",
+  "author": "jeffreyw",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Udon_(4680697819).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Udon (4680697819).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24819,6 +26893,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/veloute_epluchures_asperges": {
+  "path": "img/recette/veloute_epluchures_asperges",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e8360",
+  "author": "Liana Green",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Asparagus_Soup.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Asparagus Soup.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/veloute_petits_pois_menthe": {
   "path": "img/recette/veloute_petits_pois_menthe",
   "sizes": [
@@ -24867,6 +26958,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Jordskokkesuppe_med_ristede_kapers.jpg",
   "source": "Wikimedia Commons",
   "title": "Flickr - cyclonebill - Jordskokkesuppe med ristede kapers.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/vermicelles_riz_sautes_legumes": {
+  "path": "img/recette/vermicelles_riz_sautes_legumes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d3872f",
+  "author": "naotakem",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stir_fried_rice_vermicelli_with_pork_and_vegetables_%E8%B1%9A%E8%82%89%E3%81%A8%E9%87%8E%E8%8F%9C%E3%81%9F%E3%81%A3%E3%81%B7%E3%82%8A%E7%84%BC%E3%81%8D%E3%83%93%E3%83%BC%E3%83%95%E3%83%B3.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Stir fried rice vermicelli with pork and vegetables 豚肉と野菜たっぷり焼きビーフン.jpg",
   "kind": "photo",
   "avif": true
  },

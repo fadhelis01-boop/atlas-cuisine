@@ -50,7 +50,8 @@ def write_manifests(man, full_path, man_path):
     """Trois fichiers : le complet (ici), l'essentiel pour l'appli (chargé au démarrage : chemin, tailles, couleur)
     et les crédits (chargés seulement quand on les affiche), pour ne pas alourdir le démarrage de l'application."""
     json.dump(man, open(full_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    lite = {k: {"path": v["path"], "sizes": v["sizes"], "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {}), **({"v": v["v"]} if v.get("v") else {})} for k, v in man.items()}
+    # manifeste compact (10/11/2026) : chemin « img/<clé> » et tailles 400-800-1200 sous-entendus (photo.tsx les remet)
+    lite = {k: {**({} if v["path"] == "img/" + k else {"path": v["path"]}), **({} if list(v["sizes"]) == [400, 800, 1200] else {"sizes": v["sizes"]}), "color": v["color"], **({"kind": "ia"} if v.get("kind") == "ia" else {}), **({"avif": 1} if v.get("avif") else {}), **({"v": v["v"]} if v.get("v") else {})} for k, v in man.items()}
     # au démarrage : les plats, rubriques, régions ; à la demande : ingrédients, gestes et étapes (audit UX 2026-10-16 §2.10)
     LAZY = ("ingredient/", "geste/", "etape/")
     core = {k: v for k, v in lite.items() if not k.startswith(LAZY)}
