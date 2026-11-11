@@ -18,6 +18,7 @@ const COFFEE = /\bcafe\b(?! (de|au) )|espresso|expresso/;
 /** Café, ou alcool à peine cuit (moins de 45 min : il en reste beaucoup), obligatoires dans la fiche ou ses sous-recettes.
  *  Un vin mijoté 2 h (bourguignon) reste permis : il n'en reste presque plus. */
 export function youngAdultOnly(r: Recipe): boolean {
+  if (r.cafe) return true; // café obligatoire repéré à l'export (le libellé n'est pas encore chargé au démarrage)
   return flatten(r.ingredients).some((l) => !l.optional && ((l.ref && INGREDIENTS[l.ref]?.derivs.alcohol === "certain" && r.rest < 45)
       || (COFFEE.test(norm(l.label).split(/\(?\bou\b/)[0]) && !/c\. a cafe/.test(norm(l.qty + " " + l.label)))));
 }

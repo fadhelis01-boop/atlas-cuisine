@@ -545,7 +545,8 @@ dump("recipe_videos.json", VIDS)
 DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp")
 detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
 index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
-# Ingrédients de l'index en tableaux [quantité, libellé, réf., poids(, 1 si facultatif)] : 13 Ko compressés de moins au
+# Ingrédients de l'index en tableaux [réf., poids(, 1 si facultatif)(, allergènes du libellé)] ; quantité et libellé dans le détail.
+# Historique : tableaux [quantité, libellé, réf., poids] : 13 Ko compressés de moins au
 # démarrage (place pour les fiches TikTok du 22/10/2026) ; data.ts les remet en objets à la lecture.
 # Réf. d'ingrédient remplacée par son rang dans ingredients.json (même ordre de clés) : 15 Ko compressés de moins
 # (04/11/2026, place pour les fiches des auteurs). Les « SUB:… » et les lignes sans réf. restent telles quelles.
@@ -553,7 +554,7 @@ _ING_RANK = {k: i for i, k in enumerate(ingredients)}
 for x in index:
     packed = []
     for l in x["ingredients"]:
-        p = [l["qty"], l["label"], _ING_RANK.get(l["ref"], l["ref"]), l["weight"]]
+        p = [_ING_RANK.get(l["ref"], l["ref"]), l["weight"]]
         # allergènes nommés dans le libellé et absents de la référence (audit chef + famille) : « AR,?FC » (? = peut contenir)
         ra = set(ingredients[l["ref"]]["allergens"]) | set(ingredients[l["ref"]]["maybe"]) if l["ref"] in ingredients else set()
         sure, maybe = _SF.label_allergens(l["label"], ra) if not (l["ref"] or "").startswith("SUB:") else ([], [])
@@ -562,6 +563,11 @@ for x in index:
         if extra: p.append(extra)
         packed.append(p)
     x["ingredients"] = packed
+    # quantités et libellés : dans le détail (lu juste après l'affichage, et attendu par la fiche, le mode cuisine et la semaine) ;
+    # 50 Ko compressés de moins au démarrage (11/11/2026). Un drapeau garde ce que le démarrage doit savoir : café obligatoire.
+    detail[x["id"]]["lines"] = [[l["qty"], l["label"]] for l in _BYID[x["id"]]["ingredients"]]
+    if any(not l["optional"] and re.search(r"\bcafe\b(?! (de|au) )|espresso|expresso", _SF.nrm(l["label"]).split(" ou ")[0].split("(ou")[0]) and not re.search(r"c\. a cafe", _SF.nrm(l["qty"] + " " + l["label"])) for l in _BYID[x["id"]]["ingredients"]):
+        x["cafe"] = 1
 from renommages import RENAMES
 _ids_all = {r["id"] for r in recipes}
 assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"

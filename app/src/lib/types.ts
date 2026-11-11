@@ -87,6 +87,8 @@ export interface Recipe {
   avance?: number;
   /** contient de l'œuf cru (mayonnaise maison, tiramisu…) */
   rawEgg?: boolean;
+  /** café obligatoire dans la recette (repéré à l'export) */
+  cafe?: 1;
   /** ce que les enfants peuvent faire dans cette recette, avec l'âge (détail de la fiche) */
   kidHelp?: string;
   acideAjoute?: string | null; // accompagnement relié : id de fiche, ou « achat:<réf. Tome 3> » (audit gourmet)

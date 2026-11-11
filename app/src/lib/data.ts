@@ -12,13 +12,15 @@ export const INGREDIENTS = ingredientsJson as unknown as Record<string, Ingredie
 // Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index (cartes, recherche, moteur, planificateur) est lu en JSON.parse,
 // deux fois plus rapide qu'un littéral JavaScript ; le détail d'une fiche arrive juste après le premier affichage.
 const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "" };
-// Ingrédients rangés en tableaux [quantité, libellé, réf., poids, facultatif?] dans l'index (plus léger) : remis en objets ici.
-// La réf. est le rang de l'ingrédient dans ingredients.json (même ordre de clés), sauf « SUB:… » et null.
-type PackedLine = [string, string, number | string | null, number, (0 | 1)?, string?];
+// Ingrédients de l'index en tableaux [réf., poids, facultatif?, allergènes du libellé?] : la réf. est le rang de l'ingrédient dans
+// ingredients.json (même ordre de clés), sauf « SUB:… » et null. Quantité et libellé arrivent avec le détail (mergeDetails) ;
+// en attendant, le libellé est le nom de l'ingrédient (assez pour les rangées de l'accueil et les filtres).
+type PackedLine = [number | string | null, number, (0 | 1)?, string?];
 const ING_KEYS = Object.keys(INGREDIENTS);
+const shortName = (ref: string | null) => (ref ? (ref.startsWith("SUB:") ? ref.slice(4).replace(/_/g, " ") : ref.split(" (")[0].split(" / ")[0]).toLowerCase() : "");
 export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r,
-  ingredients: r.ingredients.map(([qty, label, ref, weight, opt, al]) => ({ qty, label, ref: typeof ref === "number" ? ING_KEYS[ref] : ref, weight, optional: opt === 1,
-    ...(al ? { extra: al.split(",").filter((a) => !a.startsWith("?")), maybeExtra: al.split(",").filter((a) => a.startsWith("?")).map((a) => a.slice(1)) } : {}) })) }) as unknown as Recipe);
+  ingredients: r.ingredients.map(([rf, weight, opt, al]) => { const ref = typeof rf === "number" ? ING_KEYS[rf] : rf; return { qty: "", label: shortName(ref), ref, weight, optional: opt === 1,
+    ...(al ? { extra: al.split(",").filter((a) => !a.startsWith("?")), maybeExtra: al.split(",").filter((a) => a.startsWith("?")).map((a) => a.slice(1)) } : {}) }; }) }) as unknown as Recipe);
 setRenames(renamesJson as Record<string, string>);
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];
@@ -37,13 +39,17 @@ export function useImportLibrary(): ImportEntry[] {
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
-type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp">>;
+type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp">> & { lines?: [string, string][] };
 let DETAILS = false;
 let detP: Promise<void> | null = null;
 const detLs = new Set<() => void>();
 /** Complète les fiches avec leur détail (étapes, introduction, vidéos, conseils, matériel, conservation). */
 export function mergeDetails(d: Record<string, Detail>) {
-  for (const [id, x] of Object.entries(d)) if (RECIPE_BY_ID[id]) Object.assign(RECIPE_BY_ID[id], x);
+  for (const [id, { lines, ...x }] of Object.entries(d)) {
+    const r = RECIPE_BY_ID[id]; if (!r) continue;
+    Object.assign(r, x);
+    lines?.forEach(([qty, label], i) => { const l = r.ingredients[i]; if (l) { l.qty = qty; l.label = label; } }); // quantités et libellés
+  }
   DETAILS = true; markDetails(); detLs.forEach((l) => l());
 }
 export function loadDetails(): Promise<void> {

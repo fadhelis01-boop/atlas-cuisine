@@ -101,3 +101,12 @@ const miss1110 = A1110.filter((id) => !RECIPE_BY_ID[id]?.credit?.length || !RECI
 const twinBad = T1110.filter((id) => !RECIPE_BY_ID[id] || evaluate(RECIPE_BY_ID[id]).flesh.length > 0);
 console.log("   auteurs du 10/11 :", A1110.length, "fiches créditées · jumeaux végétariens", T1110.length, "· à revoir :", [...miss1110, ...twinBad].join(", ") || "aucune");
 check("120 auteurs du 10/11 : 16 fiches créditées avec leurs vidéos dans la bibliothèque, 2 plats végétariens jumeaux", miss1110.length === 0 && twinBad.length === 0);
+
+// —— 121 : index allégé (11/11/2026) : quantités et libellés seulement dans le détail, remis à leur place après chargement
+import { readFileSync as rf121 } from "node:fs";
+const idx121 = JSON.parse(rf121("src/data/recipes.json", "utf8")) as { id: string; ingredients: unknown[][] }[];
+const noLabels = idx121.every((r) => r.ingredients.every((l) => typeof l[1] === "number"));
+const blanq = RECIPE_BY_ID.blanquette_veau.ingredients;
+const merged = blanq.some((l) => /farine/.test(l.label) && /\d/.test(l.qty)) && RECIPES.every((r) => r.ingredients.every((l) => l.label.length > 0));
+console.log("   index sans libellés :", noLabels, "· libellés remis après le détail :", merged, "· café repéré :", RECIPES.filter((r) => r.cafe).map((r) => r.id).slice(0, 4).join(", "));
+check("121 index allégé : quantités et libellés dans le détail, remis à leur place ; café obligatoire repéré dès le démarrage", noLabels && merged && !!RECIPE_BY_ID.tiramisu.cafe);
