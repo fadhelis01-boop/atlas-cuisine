@@ -28,4 +28,4 @@ Aucune des 169 fiches TikTok n'avait de photo. Recherche sur Wikimedia Commons e
 - **Une vingtaine de vidéos** rattachées à des fiches existantes (`EN_PLUS_2026_11_10_AUTEURS`) : nuggets, poulet frit coréen, tenders, frites, magret, nems, focaccia, puff-puff, gratin dauphinois, croissants, kebab…
 - **Sans fiche** : la charcuterie maison (lardons de veau, salaisons : séchage à la maison trop risqué sans matériel), le boudin blanc, les vidéos sans légende de @williitzmcv et les légendes génériques de @piposmcde4 (dans la bibliothèque, « À vérifier »), le porc effiloché (rattaché à l'effiloché de poulet).
 - **Photos** : 17 des 18 nouvelles fiches ont une photo libre (la persillade n'en a pas trouvé de juste). 139 fiches TikTok sur 188 sont illustrées.
-- 1 253 recettes, 669 plats, 188 fiches créditées ; test 120 ; démarrage 394 Ko sur 400. Fiches non testées en cuisine.
+- 1 253 recettes, 670 plats, 188 fiches créditées ; test 120 ; démarrage 394 Ko sur 400. Fiches non testées en cuisine.
