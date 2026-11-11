@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { INGREDIENTS, RECIPES } from "../lib/data";
 import { findIngredients } from "../lib/ingredientSearch";
 import { STAPLES, verdict } from "../lib/engine";
-import { buildMenu, COURSES, pickIdeas, rankFor, type Course, type FridgeIdea, type FridgeMenu } from "../lib/frigo";
+import { buildMenu, COURSES, pickIdeas, rankElsewhere, rankFor, ROLE_LABEL, type Course, type FridgeIdea, type FridgeMenu } from "../lib/frigo";
 import { freshSeed } from "../lib/variete";
 import { toast } from "../lib/toast";
 import { href } from "../lib/router";
@@ -54,7 +54,7 @@ const PLACARD_SECOURS = ["Pâtes sèches (spaghetti, penne…)", "Riz long / bas
   "Coulis / passata / tomates pelées", "Concentré de tomate", "Pois chiches (secs / bocal)", "Lentilles corail", "Gruyère / comté / emmental / beaufort", "Pomme de terre",
   "Lait entier / demi-écrémé / écrémé", "Beurre doux / demi-sel", "Semoule de couscous", "Sardine (fraîche / conserve)"];
 
-export default function Frigo() {
+export default function Frigo({ avec = "" }: { avec?: string }) {
   const [tab, setTab] = useState<"cuisiner" | "frigo">("cuisiner");
   return (
     <Page photo="rubrique/frigo" title="Avec ce que j'ai" sub={FRIGO_SUB}>
@@ -65,7 +65,7 @@ export default function Frigo() {
         </div>
         <a className="btn small ghost" href={href("/courses")}><Icon name="cart" size={18} /> Liste de courses</a>
       </div>
-      {tab === "cuisiner" ? <Cuisiner /> : <MonFrigo />}
+      {tab === "cuisiner" ? <Cuisiner avec={avec} /> : <MonFrigo />}
     </Page>
   );
 }
@@ -112,13 +112,14 @@ function IdeaNote({ x }: { x: FridgeIdea }) {
   );
 }
 
-interface Launch { course: Course; seed: number; key: string; seen: string[]; menu?: FridgeMenu }
+interface Launch { course: Course; seed: number; key: string; seen: string[]; menu?: FridgeMenu; elseSeed: number; elseSeen: string[] }
 
-function Cuisiner() {
+/** `avec` : un ingrédient venu de la recherche (« pâte brisée » → « Avec ce que j'ai » déjà rempli). */
+function Cuisiner({ avec = "" }: { avec?: string }) {
   const fridge = useStore((s) => s.fridge);
   const pantryList = useStore((s) => s.pantry) ?? [...STAPLES];
   const p = useProfile();
-  const [have, setHave] = useState<string[]>(() => fridge.map((f) => f.ref));
+  const [have, setHave] = useState<string[]>(() => [...new Set([...fridge.map((f) => f.ref), ...(INGREDIENTS[avec] ? [avec] : [])])]);
   const [allUse, setAllUse] = useState(false);
   const [editPantry, setEditPantry] = useState(false);
   const [allCommon, setAllCommon] = useState(false);
@@ -137,10 +138,19 @@ function Cuisiner() {
   const ranked = useMemo(() => (launch && launch.course !== "menu" ? rankFor(allowed, launch.course, opts) : []),
     [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = launch && launch.course !== "menu" ? pickIdeas(ranked, IDEAS, launch.seed, new Set(launch.seen)) : [];
+  // retour d'usage 12/11/2026 : « D'autres idées » ne tombe plus à vide. Quand le service choisi a peu d'idées ou qu'on les a
+  // toutes vues, les mêmes ingrédients ailleurs dans ATLAS (autres services, accompagnements, sauces, pains, goûters).
+  const elsewhere = useMemo(() => (launch && launch.course !== "menu" ? rankElsewhere(allowed, launch.course, opts) : []),
+    [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
+  const exhausted = !!launch && launch.course !== "menu" && ranked.length > 0 && !shown.length;
+  const left = ranked.filter((x) => !(launch?.seen ?? []).includes(x.r.id) && !shown.some((y) => y.r.id === x.r.id)).length;
+  const widen = !!launch && launch.course !== "menu" && (exhausted || ranked.length < 2 * IDEAS) && elsewhere.length > 0;
+  const elseShown = widen && launch ? pickIdeas(elsewhere, IDEAS, launch.elseSeed, new Set(launch.elseSeen)) : [];
+  const elseLeft = elsewhere.length - (launch?.elseSeen.length ?? 0) - elseShown.length;
   const go = () => {
     const seed = freshSeed();
     setShowAll(false);
-    setLaunch({ course, seed, key, seen: [], menu: course === "menu" ? buildMenu(allowed, opts, seed) : undefined });
+    setLaunch({ course, seed, key, seen: [], menu: course === "menu" ? buildMenu(allowed, opts, seed) : undefined, elseSeed: seed + 7, elseSeen: [] });
     requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
   };
   const more = () => {
@@ -151,6 +161,9 @@ function Cuisiner() {
       setLaunch({ ...launch, seed, seen, menu: buildMenu(allowed, opts, seed, new Set(seen)) });
     } else setLaunch({ ...launch, seed, seen: [...launch.seen, ...shown.map((x) => x.r.id)] });
   };
+  const restart = () => launch && setLaunch({ ...launch, seed: freshSeed(), seen: [] });
+  const moreElse = () => launch && setLaunch({ ...launch, elseSeed: freshSeed(),
+    elseSeen: elseLeft > 0 ? [...launch.elseSeen, ...elseShown.map((x) => x.r.id)] : [] });
   const swap = (slot: "entree" | "plat" | "dessert") => {
     if (!launch?.menu) return;
     const cur = launch.menu[slot]; const seen = new Set([...launch.seen, ...(cur ? [cur.r.id] : [])]);
@@ -202,15 +215,30 @@ function Cuisiner() {
       <div ref={resultsRef} aria-live="polite">
         {stale && <p className="notice">Ta sélection a changé. <button type="button" className="btn small" onClick={go}>Relancer</button></p>}
         {launch?.course === "menu" && launch.menu && <MenuResult m={launch.menu} onSwap={swap} onMore={more} />}
-        {launch && launch.course !== "menu" && (shown.length ? (
+        {launch && launch.course !== "menu" && (shown.length || (showAll && ranked.length) ? (
           <Section title={<>{COURSES.find((c) => c.id === launch.course)!.label} avec ce que tu as <span className="meta">({ranked.length} possibles)</span></>}>
-            <Grid>{(showAll ? ranked.slice(0, 48) : shown).map((x) => <RecipeCard key={x.r.id} r={x.r} note={<IdeaNote x={x} />} />)}</Grid>
+            <Grid>{(showAll ? ranked.slice(0, 60) : shown).map((x) => <RecipeCard key={x.r.id} r={x.r} note={<IdeaNote x={x} />} />)}</Grid>
             <div className="row">
-              {!showAll && <button type="button" className="btn" onClick={more}><Icon name="refresh" size={18} className="ic-inline" /> D'autres idées</button>}
-              {ranked.length > IDEAS && <button type="button" className="btn ghost" onClick={() => setShowAll(!showAll)}>{showAll ? "Revenir aux idées" : `Tout voir, du plus adapté au moins adapté (${Math.min(ranked.length, 48)})`}</button>}
+              {!showAll && <button type="button" className="btn" onClick={more}><Icon name="refresh" size={18} className="ic-inline" />
+                {left > 0 ? ` D'autres idées (${left} de plus)` : " D'autres idées"}</button>}
+              {ranked.length > IDEAS && <button type="button" className="btn ghost" onClick={() => setShowAll(!showAll)}>
+                {showAll ? "Revenir aux idées" : `Tout voir, du plus adapté au moins adapté (${Math.min(ranked.length, 60)})`}</button>}
             </div>
           </Section>
+        ) : exhausted ? (
+          <p className="notice">Tu as vu les {ranked.length} idée{ranked.length > 1 ? "s" : ""} « {COURSES.find((c) => c.id === launch.course)!.label.toLowerCase()} » avec ces ingrédients.{" "}
+            <button type="button" className="btn small" onClick={restart}>Les revoir</button>{" "}
+            {maxMinutes > 0 && <>Enlève la limite de temps, </>}ajoute un ingrédient ou regarde plus bas : les mêmes ingrédients ailleurs dans ATLAS.</p>
         ) : <NoIdea course={launch.course} maxMinutes={maxMinutes} />)}
+        {widen && elseShown.length > 0 && (
+          <Section title={<>Avec les mêmes ingrédients, ailleurs dans ATLAS <span className="meta">({elsewhere.length} possibles)</span></>}>
+            <Grid>{elseShown.map((x) => <RecipeCard key={x.r.id} r={x.r}
+              note={<><p className="small strong-label">{ROLE_LABEL[x.r.role]}</p><IdeaNote x={x} /></>} />)}</Grid>
+            {elsewhere.length > IDEAS && <div className="row">
+              <button type="button" className="btn" onClick={moreElse}><Icon name="refresh" size={18} className="ic-inline" />
+                {elseLeft > 0 ? ` D'autres idées (${elseLeft} de plus)` : " Revoir depuis le début"}</button></div>}
+          </Section>
+        )}
       </div>
     </>
   );

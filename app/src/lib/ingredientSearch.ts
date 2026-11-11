@@ -29,12 +29,22 @@ const SYNONYMS: [RegExp, string[]][] = [
   [/^(tomates? en boite|tomates? pelees?|coulis|passata)$/, ["Coulis / passata / tomates pelées", "Concentré de tomate"]],
   [/^(haricots?)$/, ["Haricots verts", "Haricots rouges / noirs", "Haricots blancs / lingots"]],
   [/^(chocolat)$/, ["Chocolat noir", "Chocolat au lait", "Chocolat blanc"]],
+  [/^nouilles?$/, ["Nouilles chinoises aux œufs", "Nouilles de riz / vermicelles", "Nouilles udon", "Nouilles ramen", "Nouilles soba", "Vermicelles de haricots mungo"]],
+  [/^(pate a tarte|pates? a tarte|pate brisee|pate sablee|pate sucree)$/, ["Pâte brisée / sablée (prête)", "Pâte feuilletée (prête)"]],
+  [/^(pate feuilletee|feuilletage)$/, ["Pâte feuilletée (prête)"]],
+  [/^(pate a pizza|pate pizza)$/, ["Pâte à pizza (prête)"]],
+  [/^(brick|bricks?|feuilles? de brick|filo|phyllo)$/, ["Pâte filo / feuilles de brick", "Pâte de brick / ouarka"]],
+  [/^(lait de coco|creme de coco|coco)$/, ["Lait de coco / crème de coco", "Noix de coco râpée"]],
+  [/^saumons?$/, ["Saumon (frais, pavé)", "Saumon fumé"]],
+  [/^crevettes?$/, ["Crevettes (cuites/crues)", "Crevettes séchées"]],
 ];
 
 const words = (s: string) => norm(s).split(/[^a-z0-9]+/).filter(Boolean);
 const sing = (w: string) => (w.length > 3 ? w.replace(/[sx]$/, "") : w);
 const INDEX = INGREDIENT_NAMES.map((n) => ({ n, w: words(n).map(sing), first: sing(words(n)[0] ?? "") }));
 const pork = (n: string) => INGREDIENTS[n]?.derivs?.pork === "certain";
+/** Formes transformées d'un produit, proposées après le produit lui-même sauf si on les tape. */
+const PROCESSED = /\b(seche|sechee|seches|sechees|fume|fumee|fumes|fumees|en poudre|deshydrate|marine|confit|rillettes|pate de|oeufs de)\b/;
 
 /** Ingrédients du référentiel pour ce que la personne tape (8 au plus), les plus probables d'abord. */
 export function findIngredients(q: string, exclude: readonly string[] = [], common: readonly string[] = [], max = 8): string[] {
@@ -50,6 +60,10 @@ export function findIngredients(q: string, exclude: readonly string[] = [], comm
     if (!qw.every((x) => w.some((y) => y.startsWith(x)))) continue;
     let s = 100 + (first.startsWith(qw[0]) ? 40 : 0) + (w.includes(qw[0]) ? 20 : 0) + (common.includes(n) || STAPLES.has(n) ? 30 : 0) - n.length / 10;
     if (pork(n)) s -= 80; // le porc passe après (ATLAS est d'abord sans porc)
+    // « crevettes » → les crevettes, pas d'abord les crevettes séchées ; « saumon » → le pavé, pas le fumé (12/11/2026)
+    const nn = norm(n);
+    if (PROCESSED.test(nn) && !PROCESSED.test(nq)) s -= 30;
+    if (words(n.split(" (")[0].split(" / ")[0]).map(sing).join(" ") === qw.join(" ")) s += 25; // le nom exact
     add(n, s);
   }
   return [...scores].sort((a, b) => b[1] - a[1]).slice(0, max).map(([n]) => n);

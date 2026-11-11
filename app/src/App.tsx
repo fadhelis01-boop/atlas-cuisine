@@ -93,7 +93,7 @@ export default function App() {
     case "explorer": page = <Explore />; break;
     case "region": page = <Region id={p1} />; break;
     case "recherche": page = <Search q={route.query.get("q") ?? ""} />; break;
-    case "frigo": page = <Frigo />; break;
+    case "frigo": page = <Frigo key={route.query.get("avec") ?? ""} avec={route.query.get("avec") ?? ""} />; break;
     case "courses": page = <Courses />; break;
     case "recette": page = <RecipePage id={p1} q={route.query} />; break;
     case "techniques": page = <TechniquesPage />; break;

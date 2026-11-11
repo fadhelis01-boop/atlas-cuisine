@@ -3,7 +3,7 @@
 // complet), on lance, et chaque appui sur « D'autres idées » en propose de nouvelles sans revenir sur les précédentes.
 import { tonightMin } from "./famille";
 import { INGREDIENTS } from "./data";
-import { refsOf, suggest, type Suggestion } from "./engine";
+import { linesFor, suggest, withAliases, type Suggestion } from "./engine";
 import { pickVaried } from "./variete";
 import type { Recipe } from "./types";
 
@@ -36,37 +36,57 @@ const DERIVED: Record<string, string[]> = {
 };
 
 const ROLE: Record<Exclude<Course, "menu">, Recipe["role"]> = { plat: "plat", entree: "entree", dessert: "dessert" };
+/** Où une recette d'un autre rôle se range, pour l'élargissement (« aussi possible… »). */
+export const ROLE_LABEL: Record<Recipe["role"], string> = { plat: "En plat", entree: "En entrée", dessert: "En dessert ou goûter",
+  autre: "En accompagnement, sauce, pain ou base", boisson: "En boisson" };
+/** Au-delà, la liste de courses devient un vrai repas à acheter : on ne propose plus (retour d'usage 12/11/2026 : la limite
+ *  à 4 laissait 1 plat sur 51 au bœuf haché). Les recettes à plus de courses restent, plus bas dans la liste. */
+const MAX_MISSING = 10;
 
-/** Toutes les recettes d'un service qui utilisent au moins un ingrédient choisi, notées. */
-export function rankFor(recipes: Recipe[], course: Exclude<Course, "menu">, o: FridgeOptions): FridgeIdea[] {
+/** Recettes d'un ou plusieurs rôles qui utilisent au moins un ingrédient choisi, notées. */
+function rankRoles(recipes: Recipe[], roles: ReadonlySet<Recipe["role"]>, o: FridgeOptions): FridgeIdea[] {
   if (!o.have.length) return [];
-  const have = new Set(o.have);
-  // ce qu'on tire de ce qu'on a : des œufs donnent des jaunes et des blancs, un poulet entier des cuisses et des blancs
-  for (const h of o.have) for (const d of DERIVED[h] ?? []) have.add(d);
-  const pool = recipes.filter((r) => r.role === ROLE[course] && (!o.maxMinutes || tonightMin(r) <= o.maxMinutes));
+  // ce qu'on tire de ce qu'on a : des œufs donnent des jaunes et des blancs, un poulet entier des cuisses et des blancs ;
+  // et les autres noms du même produit au référentiel (« Gombo » / « Gombo (okra) »)
+  const variants = (h: string) => [...withAliases([h, ...(DERIVED[h] ?? [])])];
+  const have = withAliases(o.have.flatMap(variants));
+  const pool = recipes.filter((r) => roles.has(r.role) && (!o.maxMinutes || tonightMin(r) <= o.maxMinutes));
   const byId = new Map(pool.map((r) => [r.id, r]));
-  return suggest(pool, have, o.expiring ?? new Set(), 0.8, o.pantry).flatMap((s) => {
+  return suggest(pool, have, o.expiring ?? new Set(), 0.8, o.pantry, MAX_MISSING).flatMap((s) => {
     const r = byId.get(s.id)!;
-    const refs = new Set(refsOf(r));
+    const lines = linesFor(r, have); // une pâte brisée achetée remplace la pâte brisée maison de la fiche
+    const refs = new Set(lines.filter((l) => l.ref).map((l) => l.ref!));
     const subs = new Set(Object.values(s.substitutes).flat());
-    const used = o.have.filter((h) => refs.has(h) || subs.has(h) || (DERIVED[h] ?? []).some((d) => refs.has(d)));
+    const used = o.have.filter((h) => variants(h).some((v) => refs.has(v) || subs.has(v)));
     if (!used.length) return [];
     // ce qui compte : utiliser ce qu'on a (et d'abord ce qui presse), avoir peu à acheter
     const share = used.length / o.have.length;
     // un ingrédient choisi qui est la base du plat (poulet d'un poulet rôti) compte plus qu'un œuf de liaison
-    const weightOf = (h: string) => Math.max(0, ...r.ingredients.filter((l) => l.ref === h || (s.substitutes[l.ref ?? ""] ?? []).includes(h)).map((l) => l.weight));
+    const weightOf = (h: string) => Math.max(0, ...lines.filter((l) => variants(h).some((v) => l.ref === v || (s.substitutes[l.ref ?? ""] ?? []).includes(v))).map((l) => l.weight));
     const main = used.reduce((t, h) => t + weightOf(h), 0);
     const score = s.score * 0.5 + (o.useMost ? 70 : 40) * share + 8 * Math.min(used.length, 4) + 4 * main - 9 * s.missing.length + 8 * s.usesExpiring.length;
-    if (s.missing.length > 4) return [];
     return [{ r, s, used, score }];
   }).sort((a, b) => b.score - a.score);
 }
 
-/** Quelques idées variées parmi les meilleures ; `seen` écarte celles déjà montrées (bouton « D'autres idées »). */
+/** Toutes les recettes d'un service qui utilisent au moins un ingrédient choisi, notées. */
+export function rankFor(recipes: Recipe[], course: Exclude<Course, "menu">, o: FridgeOptions): FridgeIdea[] {
+  return rankRoles(recipes, new Set([ROLE[course]]), o);
+}
+
+/** Les mêmes ingrédients ailleurs dans ATLAS : les autres services, les accompagnements, sauces, pains et bases. Sert
+ *  quand le service choisi a peu d'idées ou qu'on les a toutes vues (« D'autres idées » ne doit jamais tomber à vide). */
+export function rankElsewhere(recipes: Recipe[], course: Exclude<Course, "menu">, o: FridgeOptions): FridgeIdea[] {
+  const roles = new Set<Recipe["role"]>((["plat", "entree", "dessert", "autre"] as const).filter((x) => x !== ROLE[course]));
+  return rankRoles(recipes, roles, o);
+}
+
+/** Quelques idées variées parmi les meilleures ; `seen` écarte celles déjà montrées (bouton « D'autres idées »). Quand
+ *  tout a été vu, la liste est vide : c'est à l'écran d'élargir (autres services) ou de recommencer. */
 export function pickIdeas(ranked: FridgeIdea[], n: number, seed: number, seen: ReadonlySet<string> = new Set()): FridgeIdea[] {
   const fresh = ranked.filter((x) => !seen.has(x.r.id));
-  const pool = (fresh.length >= n ? fresh : ranked).slice(0, Math.max(n * 5, 24));
-  return pickVaried(pool, n, { seed, score: (x) => x.score / 10, temperature: 1.4, id: (x) => x.r.id, recent: seen, distinct: (x) => x.r.id });
+  const pool = fresh.slice(0, Math.max(n * 5, 24));
+  return pickVaried(pool, Math.min(n, pool.length), { seed, score: (x) => x.score / 10, temperature: 1.4, id: (x) => x.r.id, distinct: (x) => x.r.id });
 }
 
 export interface FridgeMenu { entree?: FridgeIdea; plat?: FridgeIdea; dessert?: FridgeIdea; leftover: string[] }
@@ -80,7 +100,9 @@ export function buildMenu(recipes: Recipe[], o: FridgeOptions, seed: number, see
   const flesh = o.have.filter(isFlesh);
   const plats = rankFor(recipes, "plat", { ...o, useMost: true })
     .map((x) => ({ ...x, score: x.score + (flesh.length && x.used.some(isFlesh) ? 35 : 0) })).sort((a, b) => b.score - a.score);
-  const plat = pickIdeas(plats, 1, seed, seen)[0];
+  // un menu ne tombe jamais à vide : quand tout a été vu, on repart de toutes les idées
+  const pick1 = (list: FridgeIdea[], sd: number) => pickIdeas(list, 1, sd, seen)[0] ?? pickIdeas(list, 1, sd)[0];
+  const plat = pick1(plats, seed);
   const taken = new Set(plat?.used ?? []);
   const dominant = new Set(plat ? plat.r.ingredients.filter((l) => l.weight === 3 && l.ref).map((l) => l.ref!) : []);
   const side = (course: "entree" | "dessert", salt: number) => {
@@ -91,7 +113,7 @@ export function buildMenu(recipes: Recipe[], o: FridgeOptions, seed: number, see
       .map((x) => ({ ...x, score: x.score + 30 * x.used.filter((h) => !taken.has(h)).length - 25 * x.used.filter((h) => taken.has(h)).length
         + (course === "dessert" && x.r.kind === "Dessert" ? 15 : 0) })) // en fin de repas, un vrai dessert plutôt qu'un biscuit de goûter
       .sort((a, b) => b.score - a.score);
-    const pick = pickIdeas(ranked, 1, seed + salt, seen)[0];
+    const pick = pick1(ranked, seed + salt);
     pick?.used.forEach((h) => taken.add(h));
     return pick;
   };

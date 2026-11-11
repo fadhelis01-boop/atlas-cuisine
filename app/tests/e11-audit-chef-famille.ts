@@ -110,3 +110,25 @@ const blanq = RECIPE_BY_ID.blanquette_veau.ingredients;
 const merged = blanq.some((l) => /farine/.test(l.label) && /\d/.test(l.qty)) && RECIPES.every((r) => r.ingredients.every((l) => l.label.length > 0));
 console.log("   index sans libellés :", noLabels, "· libellés remis après le détail :", merged, "· café repéré :", RECIPES.filter((r) => r.cafe).map((r) => r.id).slice(0, 4).join(", "));
 check("121 index allégé : quantités et libellés dans le détail, remis à leur place ; café obligatoire repéré dès le démarrage", noLabels && merged && !!RECIPE_BY_ID.tiramisu.cafe);
+
+// 122 retour d'usage 12/11/2026 : « pâte brisée » donnait deux idées, puis plus rien. Le frigo propose maintenant les
+// recettes à plus de 4 courses (plus bas), le produit tout prêt vaut la sous-recette maison, les doublons du référentiel
+// se reconnaissent, et les mêmes ingrédients ailleurs dans ATLAS prennent le relais quand le service est épuisé.
+import { rankFor as rf122, rankElsewhere as re122, pickIdeas as pi122 } from "../src/lib/frigo";
+import { findIngredients as fi122 } from "../src/lib/ingredientSearch";
+import { STAPLES as st122 } from "../src/lib/engine";
+const o122 = (have: string[]) => ({ have, pantry: new Set(st122), maxMinutes: 0 });
+const pb = o122(["Pâte brisée / sablée (prête)"]);
+const nPb = rf122(RECIPES, "plat", pb).length + rf122(RECIPES, "dessert", pb).length;
+const quiche = rf122(RECIPES, "plat", pb).some((x) => x.r.ingredients.some((l) => l.ref === "SUB:pate_brisee"));
+const nBoeuf = rf122(RECIPES, "plat", o122(["Bœuf haché"])).length;
+const gombo = rf122(RECIPES, "plat", o122(["Gombo"])).length >= rf122(RECIPES, "plat", o122(["Gombo (okra)"])).length - 1;
+// tout voir puis « D'autres idées » : la liste du service s'épuise, l'élargissement a encore des idées
+const rk = rf122(RECIPES, "plat", pb);
+const allSeen = new Set(rk.map((x) => x.r.id));
+const exhaustedEmpty = pi122(rk, 6, 1, allSeen).length === 0 && re122(RECIPES, "plat", pb).length >= 6;
+const search122 = fi122("crevettes")[0] === "Crevettes (cuites/crues)" && fi122("saumon")[0] === "Saumon (frais, pavé)" && fi122("pâte brisée")[0] === "Pâte brisée / sablée (prête)";
+console.log("   frigo : pâte brisée", nPb, "idées (plat + dessert) · bœuf haché", nBoeuf, "plats · ailleurs", re122(RECIPES, "plat", pb).length, "· recherche", fi122("crevettes")[0]);
+check("122 frigo : ≥ 15 idées avec une pâte brisée toute prête (dont les fiches à pâte maison), ≥ 30 plats au bœuf haché, "
+  + "doublons du référentiel reconnus, élargissement quand le service est épuisé, produit frais avant le transformé",
+  nPb >= 15 && quiche && nBoeuf >= 30 && gombo && exhaustedEmpty && search122);

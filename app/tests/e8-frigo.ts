@@ -15,7 +15,7 @@ console.log("   frigo (œufs, tomate, courgette, poulet) : plats", plats.length,
   "· en tête :", top10.slice(0, 4).map((x) => x.r.id).join(", "), "· 2e série :", next.slice(0, 3).map((x) => x.r.id).join(", "));
 check("101 frigo : chaque idée utilise au moins un ingrédient choisi et reste du bon service ; les premières en utilisent plusieurs ; « D'autres idées » n'en répète aucune ; rien sans ingrédient",
   plats.length >= 20 && entrees.length >= 5 && desserts.length >= 5
-  && [...plats, ...entrees, ...desserts].every((x) => x.used.length >= 1 && x.s.missing.length <= 4)
+  && [...plats, ...entrees, ...desserts].every((x) => x.used.length >= 1 && x.s.missing.length <= 10) // 12/11/2026 : jusqu'à 10 courses, plus bas dans la liste
   && plats.every((x) => x.r.role === "plat") && desserts.every((x) => x.r.role === "dessert")
   && top10.filter((x) => x.used.length >= 2).length >= 7
   && first.length === 6 && next.length === 6 && !next.some((x) => first.some((y) => y.r.id === x.r.id))

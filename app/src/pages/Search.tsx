@@ -66,6 +66,10 @@ export default function Search({ q }: { q: string }) {
       )}
       {recipesAll.length > 0 && !recipes.length && <p className="small">Aucune recette avec ces filtres : retire-en un.</p>}
       {recipes.length > 0 && <Section title={`Recettes (${recipes.length})`} more={<a href={href(`/recettes?q=${encodeURIComponent(q)}`)}>Plus de filtres →</a>}><MoreGrid key={`${q}|${kind}|${fast}|${easy}`} items={recipes} /></Section>}
+      {ings.length > 0 && <p className="card pad restes-link"><Icon name="fridge" size={20} className="ic-inline" />
+        {` Tu as ${ings.length > 1 ? "un de ces ingrédients" : "cet ingrédient"} ? Toutes les idées pour l'utiliser`}
+        {" (plats, entrées, desserts, et ce qu'il faut acheter en plus) : "}
+        {ings.slice(0, 4).map((n, i) => <span key={n}>{i > 0 && " · "}<a href={href(`/frigo?avec=${encodeURIComponent(n)}`)}>{n.split(" (")[0].split(" / ")[0]}</a></span>)}</p>}
       {ings.length > 0 && <Section title="Dictionnaire des ingrédients"><div className="links">{ings.map((n) => <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}><Icon name="dictionary" size={18} className="ic-inline" /> {n}</a>)}</div></Section>}
       {techs.length > 0 && <Section title="Techniques"><div className="links">{techs.map((t) => <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}><Icon name="knife" size={18} className="ic-inline" /> {t.name}</a>)}</div></Section>}
       {myImps.length > 0 && <Section title="Mes imports"><ul className="links-list">{myImps.map((i) => <li key={i.id}><a href={i.url || "#/imports"} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul></Section>}

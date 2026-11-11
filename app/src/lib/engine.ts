@@ -260,6 +260,51 @@ const FAMILIES: string[][] = [
 const FAMILY_OF = new Map<string, string[]>();
 FAMILIES.forEach((f) => f.forEach((x) => FAMILY_OF.set(x, [...new Set([...(FAMILY_OF.get(x) ?? []), ...f])])));
 
+// Retour d'usage du 12/11/2026 (« pâte brisée » : deux idées, puis plus rien). Deux angles morts de la recherche par
+// ingrédients : le produit tout prêt ne comptait pas pour la sous-recette maison, et le référentiel garde quelques
+// doublons (« Gombo » / « Gombo (okra) ») qui ne se reconnaissaient pas entre eux.
+/** Produits du commerce qui remplacent une sous-recette maison : une pâte brisée achetée vaut la pâte brisée de la fiche. */
+const READY_FOR_RAW: Record<string, string[]> = {
+  pate_brisee: ["Pâte brisée / sablée (prête)"], pate_sucree: ["Pâte brisée / sablée (prête)"], pate_pizza: ["Pâte à pizza (prête)"],
+  mayonnaise: ["Mayonnaise industrielle"], mayo_safran: ["Mayonnaise industrielle"], ketchup: ["Ketchup"], kimchi_maison: ["Kimchi"],
+  harissa: ["Harissa (tube/pâte)", "Harissa"], sauce_tomate: ["Coulis / passata / tomates pelées"], pesto: ["Pesto (bocal)"],
+  bouillon_cube_maison: ["Bouillon cube volaille", "Bouillon cube bœuf", "Bouillon cube légumes"], bouillon_legumes: ["Bouillon cube légumes"],
+  pate_curry_vert: ["Pâte de curry rouge/verte/jaune", "Pâte de curry thaï (rouge, verte)"], huile_pimentee: ["Huile pimentée chinoise", "Huile pimentée maison"],
+  feuilles_brick_maison: ["Pâte filo / feuilles de brick", "Pâte de brick / ouarka"], tortillas_ble: ["Tortillas de blé"],
+  pate_tartiner_maison: ["Pâte à tartiner chocolat-noisette"], ghee_maison: ["Ghee", "Beurre clarifié / ghee"], paneer_maison: ["Paneer"],
+  garam_masala_maison: ["Garam masala"], curry_poudre_maison: ["Curry (mélange)"],
+};
+export const READY_FOR: Record<string, string[]> = Object.fromEntries(Object.entries(READY_FOR_RAW)
+  .filter(([id]) => RECIPE_BY_ID[id]).map(([id, refs]) => [id, refs.filter((x) => INGREDIENTS[x])]).filter(([, refs]) => refs.length));
+/** Doublons du référentiel : deux noms pour le même produit. */
+const ALIAS_GROUPS = [["Lait de coco", "Lait de coco / crème de coco"], ["Gombo", "Gombo (okra)"], ["Plantain", "Plantain (banane à cuire)"],
+  ["Igname", "Igname / taro"], ["Tofu (ferme / soyeux)", "Tofu soyeux / ferme / frit"], ["Harissa", "Harissa (tube/pâte)"],
+  ["Piment scotch bonnet", "Piment antillais / scotch bonnet"], ["Lentilles corail", "Lentilles corail (masoor)"], ["Haricots noirs", "Haricots rouges / noirs"],
+  ["Pâte de curry thaï (rouge, verte)", "Pâte de curry rouge/verte/jaune"], ["Vinaigre noir de Chine", "Vinaigre noir chinois (Chinkiang)"],
+  ["Huile pimentée chinoise", "Huile pimentée maison"], ["Curry leaves", "Feuille de curry"], ["Piments chipotle / ancho / guajillo", "Piments ancho / chipotle / guajillo / pasilla"],
+  ["Pâte de haricots jaunes/noirs", "Pâte de haricots noirs fermentés"], ["Eau de fleur d'oranger", "Eau de fleur d'oranger / de rose"],
+  ["Pâte de brick / ouarka", "Pâte filo / feuilles de brick"], ["Kéfir de fruits / de lait", "Kéfir de lait"], ["Ghee", "Beurre clarifié / ghee"]];
+const ALIAS_OF = new Map<string, string[]>();
+ALIAS_GROUPS.map((g) => g.filter((x) => INGREDIENTS[x])).filter((g) => g.length > 1)
+  .forEach((g) => g.forEach((x) => ALIAS_OF.set(x, [...new Set([...(ALIAS_OF.get(x) ?? []), ...g])])));
+/** Le produit et ses autres noms au référentiel. */
+export const aliasesOf = (ref: string): string[] => ALIAS_OF.get(ref) ?? [ref];
+/** Ce qu'on a, avec les autres noms des mêmes produits. */
+export const withAliases = (have: Iterable<string>): Set<string> => new Set([...have].flatMap(aliasesOf));
+
+/** Comme `flatten`, mais une sous-recette dont on a l'équivalent tout prêt reste une seule ligne (ce produit). */
+function flattenWith(lines: RecipeLine[], have?: ReadonlySet<string>): RecipeLine[] {
+  return lines.flatMap((ln) => {
+    if (!ln.ref?.startsWith("SUB:")) return [ln];
+    const id = ln.ref.slice(4);
+    const ready = have && (READY_FOR[id] ?? []).find((x) => have.has(x));
+    return ready ? [{ ...ln, ref: ready }] : flattenWith(RECIPE_BY_ID[id].ingredients, have);
+  });
+}
+/** Ingrédients référencés d'une recette pour quelqu'un qui a `have` (les produits tout prêts remplacent leur sous-recette). */
+export const refsFor = (r: Recipe, have?: ReadonlySet<string>) => [...new Set(flattenWith(r.ingredients, have).filter((l) => l.ref).map((l) => l.ref!))];
+export const linesFor = (r: Recipe, have?: ReadonlySet<string>) => flattenWith(r.ingredients, have);
+
 export interface Suggestion {
   id: string;
   score: number;
@@ -270,10 +315,11 @@ export interface Suggestion {
   coverage: number; // part des ingrédients saisis utilisés (mode « je veux tout utiliser »)
 }
 
-export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<string> = new Set(), subCredit = 0.8, staples: Set<string> = STAPLES): Suggestion[] {
+export function suggest(recipes: Recipe[], haveIn: Set<string>, expiring: Set<string> = new Set(), subCredit = 0.8, staples: Set<string> = STAPLES, maxMissing = 6): Suggestion[] {
   const out: Suggestion[] = [];
+  const have = withAliases(haveIn);
   for (const r of recipes) {
-    const req = flatten(r.ingredients).filter((l) => l.weight > 0 && !l.optional && l.ref);
+    const req = flattenWith(r.ingredients, have).filter((l) => l.weight > 0 && !l.optional && l.ref);
     if (!req.length) continue;
     const tot = req.reduce((s, l) => s + l.weight, 0);
     let got = 0;
@@ -293,11 +339,12 @@ export function suggest(recipes: Recipe[], have: Set<string>, expiring: Set<stri
     const refs = new Set(req.map((l) => l.ref!));
     const usesExpiring = [...expiring].filter((e) => refs.has(e));
     score += 4 * usesExpiring.length;
-    const usedHave = [...have].filter((h) => refs.has(h) || [...refs].some((x) => FAMILY_OF.get(x)?.includes(h))).length;
-    const coverage = have.size ? usedHave / have.size : 0;
-    if (have.size && !usedHave) continue; // ne propose pas une recette qui n'utilise aucun des ingrédients saisis
+    // ce qui a été saisi (pas ses autres noms) : « tout utiliser » compte les produits choisis
+    const usedHave = [...haveIn].filter((h) => aliasesOf(h).some((a) => refs.has(a) || [...refs].some((x) => FAMILY_OF.get(x)?.includes(a)))).length;
+    const coverage = haveIn.size ? usedHave / haveIn.size : 0;
+    if (haveIn.size && !usedHave) continue; // ne propose pas une recette qui n'utilise aucun des ingrédients saisis
     // « start » (audit UX 2026-10-16) : dès un seul ingrédient, les recettes qui l'utilisent et ce qu'il faut acheter en plus
-    const bucket = !missing.length ? "all" : missing.length <= 2 && !missing.some((l) => l.weight === 3) ? "almost" : score >= 60 ? "ideas" : missing.length <= 6 ? "start" : null;
+    const bucket = !missing.length ? "all" : missing.length <= 2 && !missing.some((l) => l.weight === 3) ? "almost" : score >= 60 ? "ideas" : missing.length <= maxMissing ? "start" : null;
     if (bucket) out.push({ id: r.id, score: Math.round(score * 10) / 10, bucket, missing: [...new Set(missing.map((l) => l.ref!))], substitutes, usesExpiring, coverage });
   }
   return out.sort((a, b) => (a.bucket === "start" && b.bucket === "start" ? a.missing.length - b.missing.length : 0) || b.score - a.score || a.id.localeCompare(b.id));
