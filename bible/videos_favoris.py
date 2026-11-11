@@ -184,3 +184,10 @@ EN_PLUS_2026_11_10_AUTEURS = {
 }
 for _k, _v in EN_PLUS_2026_11_10_AUTEURS.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# 11/11/2026 : vidéos de recettes d'@erynshow déjà dans ATLAS
+EN_PLUS_2026_11_11 = {
+    "brochettes_boeuf_comte": [T + "@erynshow/video/7597169119452089622"],
+}
+for _k, _v in EN_PLUS_2026_11_11.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
