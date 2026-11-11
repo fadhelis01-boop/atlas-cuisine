@@ -29,3 +29,11 @@ Aucune des 169 fiches TikTok n'avait de photo. Recherche sur Wikimedia Commons e
 - **Sans fiche** : la charcuterie maison (lardons de veau, salaisons : séchage à la maison trop risqué sans matériel), le boudin blanc, les vidéos sans légende de @williitzmcv et les légendes génériques de @piposmcde4 (dans la bibliothèque, « À vérifier »), le porc effiloché (rattaché à l'effiloché de poulet).
 - **Photos** : 17 des 18 nouvelles fiches ont une photo libre (la persillade n'en a pas trouvé de juste). 139 fiches TikTok sur 188 sont illustrées.
 - 1 253 recettes, 670 plats, 188 fiches créditées ; test 120 ; démarrage 394 Ko sur 400. Fiches non testées en cuisine.
+
+## Suite le 11/11 : nouveau favori, profil d'Eryn, photos manquantes
+
+- **Nouveau favori** : l'ajvar (@alonimhotep), fiche créditée.
+- **@erynshow** (profil ouvert par le propriétaire) : 5 fiches créditées d'après ses vidéos de recettes (sandwich chaud à la raclette, pâtes au chorizo de bœuf ou de volaille, tataki de bœuf, enoki sautés, avocats au saumon fumé) ; ses brochettes bœuf-comté rattachées à la fiche existante. Ses vidéos de voyage et de restaurant restent dans la liste privée hors cuisine. Ses légendes donnent rarement la recette : les fiches suivent la recette de référence du plat montré.
+- **Photos** : 304 fiches sans photo cherchées sous licence libre, 163 photos retenues après relecture des planches (seulement quand la photo montre bien le plat). 1 120 fiches sur 1 259 sont illustrées ; 146 fiches TikTok sur 194.
+- Restent sans photo : les fiches dont aucune candidate ne montrait le plat (karantika, felfla, widjila, enoki, sandwich raclette…).
+- 1 259 recettes, 672 plats, 194 fiches créditées ; démarrage 342 Ko sur 400. Fiches non testées en cuisine.
