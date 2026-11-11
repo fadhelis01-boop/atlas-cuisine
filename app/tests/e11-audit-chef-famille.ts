@@ -89,3 +89,15 @@ const withPhoto = credited.filter((r) => IMAGES[`recette/${r.id}`]);
 const okMeta = withPhoto.every((r) => { const m = IMAGES[`recette/${r.id}`]; return m.path === `img/recette/${r.id}` && m.sizes.length > 0 && /^#/.test(m.color); });
 console.log("   photos des fiches TikTok :", withPhoto.length, "sur", credited.length, "· manifeste relu :", okMeta);
 check("119 photos : au moins 110 fiches TikTok illustrées par une photo libre, chemins et tailles relus depuis le manifeste compact", withPhoto.length >= 110 && okMeta);
+
+// —— 120 : auteurs des favoris du 10/11 : 16 fiches créditées, 2 jumeaux végétariens, vidéos d'origine dans la bibliothèque
+import { IMPORT_LIBRARY } from "./helpers";
+const A1110 = ["creme_balsamique_maison", "stracciatella_maison", "beurre_cacahuete_maison", "tuiles_parmesan", "persillade_frigo", "sucre_glace_maison",
+  "beignets_fourres_pate_tartiner", "boules_fromage_croustillantes", "poulet_crousty_riz", "onion_rings", "pate_foie_volaille", "boulettes_viande_pommes_de_terre",
+  "riz_viande_hachee", "spaghetti_boulettes_poisson", "spaghetti_sautes_crevettes", "boisson_mangue_ananas"];
+const T1110 = ["riz_haricots_rouges_legumes", "spaghetti_sautes_legumes_oeufs"];
+const libUrls = new Set(IMPORT_LIBRARY.map((i) => i.url));
+const miss1110 = A1110.filter((id) => !RECIPE_BY_ID[id]?.credit?.length || !RECIPE_BY_ID[id].credit!.every((c) => libUrls.has(c.url)));
+const twinBad = T1110.filter((id) => !RECIPE_BY_ID[id] || evaluate(RECIPE_BY_ID[id]).flesh.length > 0);
+console.log("   auteurs du 10/11 :", A1110.length, "fiches créditées · jumeaux végétariens", T1110.length, "· à revoir :", [...miss1110, ...twinBad].join(", ") || "aucune");
+check("120 auteurs du 10/11 : 16 fiches créditées avec leurs vidéos dans la bibliothèque, 2 plats végétariens jumeaux", miss1110.length === 0 && twinBad.length === 0);

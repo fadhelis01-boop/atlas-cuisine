@@ -1,0 +1,181 @@
+# -*- coding: utf-8 -*-
+"""Vague 9 (suite) · Vidéos populaires des auteurs des favoris du 10/11/2026 (onglet « Populaire » de leur profil, lu le
+10/11). Fiches réécrites (repères et durées ATLAS) et créditées ; les légendes donnent souvent seulement le nom du plat :
+la fiche suit alors la recette de référence et la vidéo est créditée comme source d'idée. Deux plats végétariens ATLAS
+sans vidéo gardent un tiers de plats sans viande ni poisson. NON TESTÉES (Tome 7 §2)."""
+from recipes_v2_base import *
+from recipes_v6_tiktok_plats import C
+
+TT = "https://www.tiktok.com/"
+def V(author, vid):
+    return (f"@{author}", f"{TT}@{author}/video/{vid}")
+
+# ———————————————————————————————— bases et sauces (@amscooking)
+K("creme_balsamique_maison", "Crème de balsamique maison (vinaigre balsamique réduit)", "Crème de balsamique", "Europe du Sud › Italie", "S", 1, 10, 5, 20, "€", "Petite casserole à fond épais.",
+  "Le filet brillant et sirupeux qui finit une salade, une burrata ou des fraises : un vinaigre balsamique réduit doucement avec un peu de sucre jusqu'à napper la cuillère. Trois fois moins cher que la crème du commerce, sans épaississant.",
+  ["25 cl|de vinaigre balsamique|Vinaigre balsamique|3", f"40 g|de sucre roux|{SUCRE}|2"],
+  ["**Chauffer.** Vinaigre et sucre dans la casserole, feu moyen, en remuant : le sucre fond.",
+   "**Réduire.** Frémissement très doux, 15 à 20 min sans couvercle : il perd de moitié, les bulles deviennent plus grosses et plus lentes.",
+   "**Tester.** Une goutte sur une assiette froide : elle doit couler lentement. Elle épaissit encore en refroidissant.",
+   "**Conserver.** Refroidie, en flacon ; si elle a trop épaissi, 30 s au micro-ondes avec une cuillère d'eau."],
+  tips=["Hotte allumée ou fenêtre ouverte : la réduction du vinaigre pique les yeux.", "Trop réduite, elle devient du caramel cassant : on arrête dès qu'elle nappe."],
+  keep="2 mois au frigo, en flacon fermé.", age=3, cats=["sauces"], profil=["acide", "sucre"],
+  credit=C(V("amscooking", "7661596355835612448")))
+K("stracciatella_maison", "Stracciatella maison (mozzarella effilochée dans la crème)", "Stracciatella di bufala", "Europe du Sud › Italie", "E", 1, 4, 10, 30, "€€", "Saladier.",
+  "Le cœur crémeux de la burrata, à faire soi-même : de la mozzarella (de bufflonne si possible) effilochée à la main en fins lambeaux, mêlée à de la crème fraîche liquide, salée. À servir avec des tomates, du pain grillé, un filet d'huile d'olive.",
+  ["2|boules de mozzarella de bufflonne (2 × 125 g)|Mozzarella / burrata|3", f"13 cl|de crème liquide entière|{CL}|2", f"1 c. à s.|d'huile d'olive|{HO}|1", "300 g|de tomates cerises|Tomate cerise|2", "1|branche de basilic|Basilic|1", f"4|tranches de pain de campagne grillé|Pain de campagne / complet|1"],
+  ["**Égoutter.** Mozzarella sortie du sachet, égouttée 10 min sur un papier absorbant.",
+   "**Effilocher.** À la main, en lambeaux fins comme des fils : pas au couteau, la texture fait tout.",
+   "**Mélanger.** Crème froide, pincée de sel, mélangée délicatement : crémeux, les fils restent visibles ; 20 min au frais.",
+   "**Servir.** En assiette creuse, huile d'olive, poivre, basilic ; tomates cerises coupées et pain grillé à côté."],
+  tips=["Une mozzarella de vache marche aussi, mais elle est plus élastique : l'effilocher plus fin."], keep="Le jour même.", age=1, cats=["vegetarien", "express"], fetes=["Apéritif dînatoire"], profil=["gras", "leger"],
+  credit=C(V("amscooking", "7689193086055894305")))
+K("beurre_cacahuete_maison", "Beurre de cacahuète maison (nature ou chocolat)", "Peanut butter", "Amérique du Nord › États-Unis", "Ba", 1, 20, 15, 15, "€", "Plaque, robot puissant (lame en S).",
+  "Des cacahuètes grillées, mixées longtemps jusqu'à devenir une pâte lisse et coulante, sans huile ni sucre ajoutés. En variante, une pâte à tartiner cacahuète-chocolat en ajoutant du chocolat fondu.",
+  ["500 g|de cacahuètes décortiquées non salées|Cacahuète / arachide|3", "1 pincée|de sel|-|0", f"200 g|de chocolat noir ou au lait (variante)|{CHOCO}|1?"],
+  ["**Griller.** Cacahuètes étalées, 10 à 12 min à 170 °C en remuant une fois : dorées, elles sentent fort la cacahuète grillée ; tiédies 10 min.",
+   "**Mixer.** Robot, par séquences de 1 min avec des pauses (le moteur chauffe) : d'abord une poudre, puis une pâte épaisse, enfin, vers 8 à 10 min, une crème lisse et brillante.",
+   "**Saler.** Pincée de sel, 10 s de plus.",
+   "**Variante chocolat.** Chocolat fondu au bain-marie ajouté à la fin, 30 s de mixage : pâte à tartiner."],
+  tips=["⚠️ Allergie à l'arachide : à tenir à l'écart des enfants allergiques ; pas de cacahuètes entières avant 4 ans (étouffement), mais le beurre lisse convient."],
+  keep="1 mois dans un bocal fermé, à l'abri de la chaleur ; l'huile remonte, on remue.", age=1, cats=["vegetarien", "sauces"], profil=["gras"],
+  credit=C(V("amscooking", "7491622428897070358"), V("amscooking", "7690677379634711840")))
+K("tuiles_parmesan", "Tuiles de parmesan croustillantes", "Tuiles au parmesan", "Europe du Sud › Italie", "E", 1, 4, 5, 8, "€€", "Plaque, papier cuisson.",
+  "Un seul ingrédient : des petits tas de parmesan râpé fondus au four jusqu'à devenir des dentelles dorées et croustillantes. Pour l'apéritif, une soupe, une salade, ou décorer une assiette.",
+  [f"100 g|de parmesan fraîchement râpé|{PARM}|3", "1 pincée|de poivre ou de piment d'Espelette|Piment d'Espelette|1?"],
+  ["**Former.** Petits tas de 1 c. à s. de parmesan sur le papier cuisson, étalés en disques fins de 7 cm, espacés de 3 cm.",
+   "**Cuire.** 6 à 8 min à 180 °C : ils bullent puis deviennent blonds sur les bords. Pas plus foncés : ils deviendraient amers.",
+   "**Refroidir.** 2 min sur la plaque : ils durcissent. Pour des tuiles courbes, posés encore souples sur un rouleau.",
+   "**Servir.** Le jour même, bien sèches."],
+  tips=["Le parmesan contient de la présure animale : pour un repas strictement végétarien, un fromage à présure végétale."], keep="2 jours dans une boîte en métal.", age=3, cats=["express"], fetes=["Apéritif dînatoire"], profil=["gras"],
+  credit=C(V("amscooking", "7688803463274302753")))
+K("persillade_frigo", "Persillade à garder au frigo (persil, ail, huile d'olive)", "Persillade", "France › Cuisine du quotidien", "S", 1, 10, 10, 0, "€", "Planche, couteau ou petit hachoir, bocal.",
+  "Un bocal à toujours avoir au frigo : du persil et de l'ail hachés fin, couverts d'huile d'olive. Une cuillère en fin de cuisson réveille des pommes de terre, des haricots verts, un poisson, une poêlée de champignons.",
+  ["2|bouquets de persil plat|Persil plat / frisé|3", f"4|gousses d'ail|{AIL}|2", f"10 cl|d'huile d'olive|{HO}|2", f"1/2|citron (zeste)|{CIT}|1"],
+  ["**Sécher.** Persil lavé, séché à fond (essoreuse puis torchon) : humide, il noircit et se garde mal.",
+   "**Hacher.** Feuilles et fines tiges hachées fin ; ail dégermé, haché fin ; zeste de citron.",
+   "**Mettre en bocal.** Tassé, couvert d'huile d'olive, sel : l'huile protège de l'air.",
+   "**Utiliser.** Une cuillère en fin de cuisson, hors du feu : l'ail cru brûlé devient amer."],
+  tips=["Ail cru dans l'huile : toujours au frigo et 5 jours au plus (risque de botulisme à température ambiante). Pour plus longtemps, en bac à glaçons au congélateur."],
+  keep="5 jours au frigo au plus ; 3 mois au congélateur en bac à glaçons.", age=1, cats=["vegetarien", "sauces", "zero_dechet"], profil=["acide"],
+  credit=C(V("amscooking", "7696613891983379745")))
+K("sucre_glace_maison", "Sucre glace maison (au blender)", "Sucre glace", "France › Pâtisserie", "Ba", 1, 10, 3, 5, "€", "Blender ou moulin à café propre, tamis.",
+  "Du sucre en poudre réduit en poussière en une minute : c'est tout le sucre glace. Avec une cuillère de fécule, il ne fait pas de grumeaux. Pour les glaçages, les biscuits, saupoudrer un gâteau.",
+  [f"200 g|de sucre blanc|{SUCRE}|3", "1 c. à c.|de fécule de maïs (pour le garder)|Fécule de maïs (maïzena)|1?"],
+  ["**Mixer.** Sucre (et fécule) dans le blender, 1 min par impulsions : poudre très fine.",
+   "**Reposer.** 1 min couvercle fermé : la poussière retombe (sinon elle s'envole partout).",
+   "**Tamiser.** Les grains restants remixés 20 s.",
+   "**Conserver.** En bocal bien sec."],
+  tips=["Sans fécule, il reprend l'humidité et durcit : à faire au moment."], keep="3 mois en bocal sec (avec fécule).", age=1, cats=["vegetarien", "zero_dechet"], profil=["sucre"],
+  credit=C(V("amscooking", "7696226907410418977"), V("amscooking", "7487633450783001878")))
+# ———————————————————————————————— fast-food maison (@homerafaim)
+K("beignets_fourres_pate_tartiner", "Beignets moelleux fourrés à la pâte à tartiner", "Beignets au Nutella", "France › Food fusion", "D", 2, 12, 40, 120, "€", "Saladier, casserole à friture, poche à douille.",
+  "Les boules de la fête foraine à la maison : une pâte briochée levée, frite en boules dorées, roulée dans le sucre et garnie à la poche de pâte à tartiner chocolat-noisette.",
+  [f"500 g|de farine|{F55}|3", f"7 g|de levure boulangère sèche|{LEV}|1", f"60 g|de sucre (+ pour rouler)|{SUCRE}|2", f"25 cl|de lait tiède|{LAIT}|2", f"2|œufs|{OEUF}|2", f"60 g|de beurre mou|{BEURRE}|1", "300 g|de pâte à tartiner chocolat-noisette|Pâte à tartiner chocolat-noisette|2", "1 l|d'huile de friture|Huile de tournesol / colza|1"],
+  ["**Pâte.** Farine, levure, sucre, sel, lait, œufs ; pétrie 8 min ; beurre ajouté, 5 min : souple, se décolle du bol ; 1 h 30 à couvert : doublée.",
+   "**Façonner.** 12 boules de 70 g, lisses ; 45 min sous un torchon : gonflées.",
+   "**Frire.** Huile à 165 °C ; 3 boules à la fois, 2 à 3 min par face : dorées, cœur cuit (une boule ouverte au premier essai) ; égouttées.",
+   "**Garnir.** Roulées dans le sucre encore tièdes ; pâte à tartiner à la poche, piquée sur le côté."],
+  tips=["Une huile trop chaude dore le dehors et laisse le cœur cru : 165 °C, thermomètre."], keep="Le jour même.", age=3, cats=["enfants"], fetes=["Anniversaire"], profil=["sucre", "gras", "chocolat"],
+  credit=C(V("homerafaim", "7678739756951342368"), V("homerafaim", "7673936784522284321")))
+K("boules_fromage_croustillantes", "Boules de fromage croustillantes (3 ingrédients)", "Cheese balls", "France › Food fusion", "E", 1, 4, 15, 10, "€", "Saladier, poêle ou friteuse sans huile.",
+  "Du fromage râpé, un œuf et un peu de fécule, roulés en boules et dorés : croustillant dehors, filant dedans. L'apéritif ou le goûter salé des enfants en 25 minutes.",
+  ["300 g|de fromage râpé (emmental, cheddar)|Gruyère / comté / emmental / beaufort|3", f"1|œuf|{OEUF}|2", "2 c. à s.|de fécule de maïs|Fécule de maïs (maïzena)|2", "50 g|de chapelure|Chapelure|1", "1 pincée|de paprika|Paprika doux|1", "50 cl|d'huile de friture|Huile de tournesol / colza|1"],
+  ["**Mélanger.** Fromage, œuf, fécule, paprika : une pâte qui se tient.",
+   "**Former.** Boules de la taille d'une noix, roulées dans la chapelure ; 10 min au congélateur : elles ne s'étalent plus à la cuisson.",
+   "**Cuire.** Huile à 170 °C, 2 à 3 min : dorées. Ou friteuse sans huile, 8 min à 190 °C, vaporisées d'huile.",
+   "**Servir.** Tout de suite, avec une sauce tomate ou du ketchup."],
+  tips=["Le passage au congélateur évite que le fromage coule avant que la croûte ne prenne."], keep="Le jour même.", age=3, cats=["vegetarien", "enfants", "express"], fetes=["Apéritif dînatoire", "Anniversaire"], profil=["gras"],
+  credit=C(V("homerafaim", "7678349237981039904")))
+K("poulet_crousty_riz", "Poulet « crousty », riz et sauce fromagère (bol des snacks)", "Tasty crousty", "France › Food fusion", "P", 2, 4, 30, 20, "€", "Saladier, poêle ou friteuse, casserole.",
+  "Le bol star des snacks : des morceaux de poulet marinés, panés au corn flakes et frits très croustillants, sur un riz blanc, avec une sauce fromagère et une sauce samouraï ou algérienne en zigzag.",
+  [f"600 g|de blancs de poulet|{BLANC_P}|3", f"300 g|de riz|{RIZ}|3", "25 cl|de lait ribot (ou yaourt détendu)|Lait ribot / lait fermenté|2", f"100 g|de farine|{F55}|2", "100 g|de corn flakes nature écrasés|Chapelure|2", f"1 c. à c.|de paprika et d'ail en poudre|{PAPRIKA}|1", "8 c. à s.|de sauce cheddar|SUB:sauce_cheddar|2", "4 c. à s.|de sauce samouraï ou algérienne|SUB:sauce_samourai|1?", "1 l|d'huile de friture|Huile de tournesol / colza|1", "1|cébette|Oignon nouveau / cébette|1", f"1/2|citron|{CIT}|1"],
+  ["**Mariner.** Poulet en bouchées, lait ribot, sel, paprika, ail : 30 min au frais.",
+   "**Riz.** Rincé, cuit 12 min à couvert, 5 min de repos : grains détachés.",
+   "**Paner.** Bouchées égouttées, farinées, retrempées dans la marinade, roulées dans les corn flakes écrasés en pressant.",
+   "**Frire.** Huile à 170 °C, par petites quantités, 4 à 5 min : très dorées, 74 °C à cœur ; égouttées, un trait de citron.",
+   "**Monter.** Riz, poulet, sauce cheddar chaude, sauce piquante en zigzag, cébette."],
+  tips=["Les corn flakes donnent le craquant des snacks ; pris nature, sans sucre ajouté."], keep="Le jour même (riz cuit : 24 h au plus).", age=3, cats=["enfants"], profil=["gras"],
+  credit=C(V("homerafaim", "7673488308957089056")))
+K("onion_rings", "Onion rings (rondelles d'oignon panées croustillantes)", "Onion rings", "Amérique du Nord › États-Unis", "E", 2, 4, 20, 10, "€", "3 assiettes creuses, casserole à friture.",
+  "Les rondelles d'oignon des fast-foods : de grosses rondelles d'oignon doux, farinées, trempées dans une pâte à l'eau gazeuse, panées au panko et frites. Croustillantes, fondantes, à peine sucrées.",
+  [f"2|gros oignons doux|{OIG}|3", f"100 g|de farine|{F55}|2", f"1|œuf|{OEUF}|1", "15 cl|d'eau pétillante très froide|-|0", "100 g|de panko|Panko|2", f"1 c. à c.|de paprika|{PAPRIKA}|1", "1 l|d'huile de friture|Huile de tournesol / colza|1", "2 c. à s.|de ketchup|Ketchup|1"],
+  ["**Couper.** Oignons en rondelles de 1 cm, anneaux séparés (les petits du centre gardés pour une sauce).",
+   "**Pâte.** 60 g de farine, œuf, eau pétillante, paprika, sel : fouettée juste, quelques grumeaux.",
+   "**Paner.** Anneaux farinés, trempés dans la pâte, égouttés, roulés dans le panko.",
+   "**Frire.** Huile à 175 °C, 2 à 3 min : dorés ; égouttés, salés ; ketchup à côté."],
+  tips=["Eau pétillante très froide : la pâte reste légère et croustillante."], keep="Le jour même.", age=3, cats=["vegetarien", "enfants"], fetes=["Apéritif dînatoire"], profil=["gras"],
+  credit=C(V("homerafaim", "7673279976199785760")))
+# ———————————————————————————————— @dbzfaitmaison
+K("pate_foie_volaille", "Pâté de foies de volaille maison (sans porc)", "Pâté de foie", "France › Cuisine du quotidien", "E", 2, 10, 25, 720, "€", "Terrine, mixeur, plat pour bain-marie, thermomètre.",
+  "Un pâté généreux et économique, sans porc : des foies de volaille mixés avec du blanc de poulet, de l'oignon fondu, des œufs, de la crème et des épices, cuits doucement au bain-marie en terrine. À tartiner sur du pain grillé avec des cornichons.",
+  ["500 g|de foies de volaille|Foies / gésiers de volaille|3", f"300 g|de blanc de poulet|{BLANC_P}|2", f"1|oignon|{OIG}|1", f"2|gousses d'ail|{AIL}|1", f"2|œufs|{OEUF}|2", f"15 cl|de crème liquide|{CL}|2", "1 c. à c.|de quatre-épices|Quatre-épices|1", "2|branches de thym|Thym / romarin|1", f"20 g|de beurre|{BEURRE}|1", "1|bocal de cornichons|Cornichon|1"],
+  ["**Fondre.** Beurre, oignon émincé, 8 min à feu doux : fondu, sans couleur ; ail, thym, 1 min.",
+   "**Mixer.** Foies dénervés, poulet en morceaux, oignon, œufs, crème, épices, 12 g de sel, poivre : farce lisse.",
+   "**Cuire.** Terrine beurrée, remplie, couverte ; bain-marie d'eau chaude, 1 h 15 à 160 °C : 70 °C à cœur, le jus qui perle est clair.",
+   "**Reposer.** Refroidi, une nuit au frigo sous un poids léger : il se raffermit et prend son goût."],
+  tips=["Le foie doit être cuit à cœur (70 °C) : un pâté rosé au centre n'est pas sûr."], keep="4 jours au frigo, filmé au contact.", age=3, cats=[], fetes=["Apéritif dînatoire", "Repas de famille"], profil=["gras"],
+  credit=C(V("dbzfaitmaison", "7702825901666372897")))
+# ———————————————————————————————— @lacuisinedemarina
+K("boulettes_viande_pommes_de_terre", "Boulettes de bœuf et pommes de terre mijotées en sauce tomate", "Boulettes aux pommes de terre", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 6, 30, 40, "€", "Saladier, grande sauteuse avec couvercle.",
+  "Le plat familial qui a fait le tour des réseaux : des boulettes de bœuf assaisonnées, dorées, puis mijotées avec des pommes de terre dans une sauce tomate aux poivrons et aux épices, jusqu'à ce que tout soit fondant.",
+  [f"600 g|de bœuf haché|{HACHE}|3", f"800 g|de pommes de terre|{PDT}|3", f"2|oignons|{OIG}|1", f"1|poivron|{POIVRON}|1", f"4|gousses d'ail|{AIL}|1", f"2 c. à s.|de concentré de tomate|{CONC}|1", f"400 g|de tomates pelées|{PELEES}|2", "1|cube de bouillon|Bouillon cube bœuf|1", f"1 c. à c.|de paprika et de thym|{PAPRIKA}|1", f"1|œuf|{OEUF}|1", f"3 c. à s.|d'huile|{HN}|1", "1|petit bouquet de persil|Persil plat / frisé|1"],
+  ["**Boulettes.** Bœuf, œuf, 1 oignon râpé, 2 gousses d'ail, persil, paprika, sel : 24 boulettes ; poêle huilée, 5 min en les roulant : dorées ; réservées.",
+   "**Sauce.** Même poêle, oignon et poivron émincés, 5 min ; ail, concentré, 2 min : il fonce ; tomates écrasées, cube, thym, 30 cl d'eau.",
+   "**Mijoter.** Pommes de terre en cubes de 3 cm, boulettes ; couvert, 30 min à feu doux : couteau qui entre sans résistance dans les pommes de terre.",
+   "**Finir.** 5 min sans couvercle : sauce épaisse ; persil."],
+  tips=["Les boulettes dorées d'abord gardent leur forme et donnent du goût à la sauce."], keep="3 jours au frigo.", age=1, cats=["enfants"], fetes=["Repas de famille"], profil=["viande_rouge", "acide"],
+  credit=C(V("lacuisinedemarina", "7676518408707444000")))
+K("riz_viande_hachee", "Riz à la viande hachée et aux légumes, en une casserole", "Riz à la viande hachée", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 15, 25, "€", "Cocotte avec couvercle.",
+  "Un plat complet du soir : du bœuf haché doré avec oignon, poivron et tomate, puis le riz cuit directement dans la sauce et le bouillon, avec carottes et petits pois. Une casserole, quarante minutes.",
+  [f"400 g|de bœuf haché|{HACHE}|3", f"300 g|de riz long|{RIZ}|3", f"1|oignon|{OIG}|1", f"1|poivron|{POIVRON}|1", f"2|carottes|{CAROTTE}|1", "100 g|de petits pois surgelés|Petits pois / pois gourmands|1", f"2 c. à s.|de concentré de tomate|{CONC}|1", f"2|gousses d'ail|{AIL}|1", "1|cube de bouillon|Bouillon cube bœuf|1", f"2 c. à s.|d'huile|{HN}|1", f"1/2|citron|{CIT}|1"],
+  ["**Dorer.** Huile chaude, bœuf haché émietté, 5 min : coloré ; oignon, poivron, carottes en dés, ail, 5 min.",
+   "**Sauce.** Concentré, 2 min en remuant : il fonce ; riz rincé, 1 min : nacré.",
+   "**Cuire.** 60 cl d'eau bouillante, cube, sel ; couvert, feu doux, 15 min ; petits pois, 5 min : riz tendre, liquide absorbé.",
+   "**Reposer.** 5 min hors du feu, couvert ; égrené à la fourchette, un trait de citron."],
+  tips=["Ne pas soulever le couvercle pendant la cuisson du riz : la vapeur fait le travail."], keep="24 h au frigo (riz cuit), refroidi vite.", age=1, cats=["enfants", "express"], profil=["viande_rouge"],
+  credit=C(V("lacuisinedemarina", "7592244902633671958"), V("lacuisinedemarina", "7411513272605707552")))
+K("spaghetti_boulettes_poisson", "Spaghetti aux boulettes de poisson, sauce tomate épicée", "Spaghetti boulettes de poisson", "Afrique subsaharienne › Côte d'Ivoire", "P", 2, 4, 30, 25, "€", "Mixeur, sauteuse, grande casserole.",
+  "Des boulettes de poisson blanc mixé avec ail, oignon et persil, pochées dans une sauce tomate aux poivrons, servies sur des spaghetti. Une façon de faire aimer le poisson aux enfants.",
+  ["500 g|de filets de poisson blanc (colin, merlu)|Colin, lieu noir, merlu|3", f"350 g|de spaghetti|{PATES}|3", f"1|œuf|{OEUF}|1", "3 c. à s.|de chapelure|Chapelure|1", f"1|oignon|{OIG}|1", f"3|gousses d'ail|{AIL}|1", "1|petit bouquet de persil|Persil plat / frisé|1", f"400 g|de tomates pelées|{PELEES}|2", f"1|poivron|{POIVRON}|1", "1|cube de bouillon|Bouillon cube légumes|1", f"3 c. à s.|d'huile|{HN}|1", "1 pincée|de piment|Cayenne / piment en poudre|1?", f"1/2|citron|{CIT}|1"],
+  ["**Boulettes.** Poisson sans arêtes, œuf, chapelure, la moitié de l'ail, persil, sel : mixés 10 s ; boulettes de 3 cm, mains mouillées ; 15 min au frais.",
+   "**Sauce.** Huile, oignon et poivron émincés, 6 min ; reste d'ail, tomates, cube, piment, 10 cl d'eau, 10 min.",
+   "**Pocher.** Boulettes dans la sauce frémissante, 10 min sans remuer puis retournées : fermes et blanches à cœur.",
+   "**Servir.** Spaghetti al dente, sauce et boulettes dessus, un trait de citron."],
+  tips=["Ne pas remuer les boulettes avant qu'elles soient prises : elles se défont."], keep="24 h au frigo (poisson cuit).", age=3, cats=["enfants"], profil=["poisson", "acide"],
+  credit=C(V("lacuisinedemarina", "7378865153661521184")))
+K("spaghetti_sautes_crevettes", "Spaghetti sautés aux crevettes, légumes et sauce soja", "Spaghetti sautés", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 20, 10, "€€", "Grande poêle ou wok.",
+  "Les pâtes sautées des maquis d'Abidjan : des spaghetti cuits puis sautés au wok avec des crevettes, du chou, des carottes, du poivron, de l'oignon et un assaisonnement soja-ail-gingembre. Comme des nouilles sautées, avec ce qu'on a au placard.",
+  [f"350 g|de spaghetti|{PATES}|3", "300 g|de crevettes décortiquées|Crevettes (cuites/crues)|3", "1/4|de chou blanc|Chou blanc / rouge|2", f"2|carottes|{CAROTTE}|1", f"1|poivron|{POIVRON}|1", f"1|oignon|{OIG}|1", f"3|gousses d'ail|{AIL}|1", f"2 cm|de gingembre|{GING}|1", f"3 c. à s.|de sauce soja|{SOJA}|2", "1|cube de bouillon|Bouillon cube volaille|1", f"3 c. à s.|d'huile|{HN}|1", f"1|citron vert|{CITV}|1"],
+  ["**Pâtes.** Cuites 1 min de moins que le paquet, rincées à l'eau froide, égouttées, 1 c. à s. d'huile.",
+   "**Crevettes.** Poêle très chaude huilée, ail, gingembre, crevettes, 2 min : roses ; réservées.",
+   "**Légumes.** Oignon, carottes en julienne, poivron, chou émincé, cube émietté, 5 min à feu vif : tendres mais croquants.",
+   "**Sauter.** Spaghetti, soja, crevettes, 3 min en soulevant : brillants et chauds ; citron vert à table."],
+  tips=["Pâtes rincées et huilées : elles ne collent pas au moment de sauter."], keep="24 h au frigo (fruits de mer).", age=3, cats=["enfants", "express"], profil=["poisson", "acide"],
+  credit=C(V("lacuisinedemarina", "7659412723419172129"), V("lacuisinedemarina", "7571854668268096790")))
+K("boisson_mangue_ananas", "Boisson crémeuse mangue-ananas (au lait)", "Smoothie mangue-ananas", "Afrique subsaharienne › Côte d'Ivoire", "B", 1, 4, 10, 0, "€", "Blender.",
+  "La boisson épaisse et parfumée des goûters : mangue et ananas bien mûrs mixés avec du lait et un peu de lait concentré, servis très frais. Sans sirop, le fruit suffit souvent.",
+  ["1|mangue bien mûre|Mangue|3", "1/4|d'ananas|Ananas|3", f"50 cl|de lait froid|{LAIT}|2", "2 c. à s.|de lait concentré sucré (facultatif)|Lait concentré sucré / non sucré|1?", f"1/2|citron vert|{CITV}|1"],
+  ["**Couper.** Mangue et ananas pelés, en morceaux ; 30 min au congélateur pour une boisson glacée.",
+   "**Mixer.** Fruits, lait, lait concentré, jus de citron vert, 1 min : lisse et mousseux.",
+   "**Goûter.** Plus de lait s'il est trop épais.",
+   "**Servir.** Tout de suite, bien frais."],
+  tips=["Le citron vert empêche l'ananas de faire tourner le lait et relève le goût."], keep="Le jour même.", age=1, cats=["vegetarien", "enfants", "boissons"], profil=["sucre"],
+  credit=C(V("lacuisinedemarina", "7695822070315371809")))
+# ———————————————————————————————— jumeaux végétariens (ATLAS, sans vidéo)
+K("riz_haricots_rouges_legumes", "Riz aux haricots rouges et aux légumes, en une casserole", "Riz aux haricots", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 15, 25, "€", "Cocotte avec couvercle.",
+  "Le jumeau végétarien du riz à la viande hachée : haricots rouges, oignon, poivron, carottes et tomate, le riz cuit dans la sauce. Complet (céréale et légumineuse), économique, aimé des enfants.",
+  [f"300 g|de riz long|{RIZ}|3", "400 g|de haricots rouges cuits|Haricots rouges / noirs|3", f"1|oignon|{OIG}|1", f"1|poivron|{POIVRON}|1", f"2|carottes|{CAROTTE}|1", f"2 c. à s.|de concentré de tomate|{CONC}|1", f"2|gousses d'ail|{AIL}|1", "1|cube de bouillon de légumes|Bouillon cube légumes|1", f"1 c. à c.|de paprika|{PAPRIKA}|1", f"2 c. à s.|d'huile|{HN}|1", f"1/2|citron|{CIT}|1"],
+  ["**Légumes.** Huile, oignon, poivron, carottes en dés, ail, 6 min : fondants.",
+   "**Sauce.** Concentré, paprika, 2 min : il fonce ; riz rincé, 1 min : nacré.",
+   "**Cuire.** 60 cl d'eau bouillante, cube, haricots égouttés ; couvert, feu doux, 18 min : riz tendre, liquide absorbé.",
+   "**Reposer.** 5 min couvert ; égrené, un trait de citron."],
+  tips=["Les haricots en conserve se rincent : moins de sel et moins de gaz."], keep="24 h au frigo (riz cuit), refroidi vite.", age=1, cats=["vegetarien", "enfants", "express"], profil=["leger"])
+K("spaghetti_sautes_legumes_oeufs", "Spaghetti sautés aux légumes et aux œufs, sauce soja", "Spaghetti sautés végétariens", "Afrique subsaharienne › Côte d'Ivoire", "P", 1, 4, 20, 10, "€", "Grande poêle ou wok.",
+  "Le jumeau végétarien des spaghetti sautés aux crevettes : chou, carottes, poivron et oignon sautés au wok, des œufs brouillés en gros morceaux, des spaghetti et une sauce soja à l'ail et au gingembre.",
+  [f"350 g|de spaghetti|{PATES}|3", f"4|œufs|{OEUF}|3", "1/4|de chou blanc|Chou blanc / rouge|2", f"2|carottes|{CAROTTE}|1", f"1|poivron|{POIVRON}|1", f"1|oignon|{OIG}|1", f"3|gousses d'ail|{AIL}|1", f"2 cm|de gingembre|{GING}|1", f"3 c. à s.|de sauce soja|{SOJA}|2", "1|cube de bouillon de légumes|Bouillon cube légumes|1", f"3 c. à s.|d'huile|{HN}|1", f"1|citron vert|{CITV}|1"],
+  ["**Pâtes.** Cuites 1 min de moins que le paquet, rincées, égouttées, 1 c. à s. d'huile.",
+   "**Œufs.** Poêle chaude huilée, œufs battus, 1 min : brouillés en gros morceaux ; réservés.",
+   "**Légumes.** Ail, gingembre, oignon, carottes en julienne, poivron, chou, cube émietté, 5 min à feu vif : croquants.",
+   "**Sauter.** Spaghetti, soja, œufs, 3 min en soulevant ; citron vert à table."],
+  tips=["Pâtes rincées et huilées : elles ne collent pas au moment de sauter."], keep="1 jour au frigo.", age=1, cats=["vegetarien", "enfants", "express"], profil=["acide"])

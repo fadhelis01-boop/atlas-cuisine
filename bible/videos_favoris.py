@@ -160,3 +160,27 @@ EN_PLUS_2026_11_10 = {
 }
 for _k, _v in EN_PLUS_2026_11_10.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# auteurs des favoris du 10/11 (onglet « Populaire », lu le 10/11) : plats déjà dans ATLAS
+EN_PLUS_2026_11_10_AUTEURS = {
+    "nuggets_maison": [T + "@homerafaim/video/7677972329040858401"],
+    "poulet_frit_coreen": [T + "@homerafaim/video/7677238645341883681"],
+    "brochettes_boeuf_comte": [T + "@homerafaim/video/7679817167528873249"],
+    "tenders_poulet_sauce_canes": [T + "@homerafaim/video/7677601530890997025", T + "@homerafaim/video/7676216816753986849"],
+    "frites_maison": [T + "@homerafaim/video/7679029815994780961", T + "@amscooking/video/7690302572925701408"],
+    "beignets_fourres_pate_tartiner": [T + "@homerafaim/video/7680245103423769889"],
+    "gnocchi_gorgonzola_noix": [T + "@amscooking/video/7695857987784609056"],
+    "pulled_chicken": [T + "@amscooking/video/7697376732860419361"],
+    "magret_cerises": [T + "@amscooking/video/7598253878513093910", T + "@amscooking/video/7670285420260756768"],
+    "nems_poulet": [T + "@dbzfaitmaison/video/7564414039711878422"],
+    "focaccia": [T + "@dbzfaitmaison/video/7615631439471660291"],
+    "puff_puff": [T + "@lacuisinedemarina/video/7593007659444374806"],
+    "crepes_salees_enfants": [T + "@lacuisinedemarina/video/7572219324560198934"],
+    "poisson_braise_camerounais": [T + "@lacuisinedemarina/video/7683930014949281057"],
+    "jus_gingembre": [T + "@lacuisinedemarina/video/7692098813539978528"],
+    "gratin_dauphinois": [T + "@leo_hokfelt/video/7703217604739075350"],
+    "kebab_poulet_pain_maison": [T + "@ammey.food/video/7704370056569867553", T + "@leo_hokfelt/video/7705693803096722710"],
+    "croissants": [T + "@leo_hokfelt/video/7701991524896165142", T + "@leo_hokfelt/video/7701991547415432470"],
+}
+for _k, _v in EN_PLUS_2026_11_10_AUTEURS.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

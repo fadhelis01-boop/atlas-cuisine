@@ -120,3 +120,21 @@ recette/piment_camerounais 1
 recette/tiramisu_creme_brulee 2
 recette/chocolat_chaud_italien 2
 # sans photo juste : les autres fiches TikTok (aucune candidate ne montrait le plat)
+recette/creme_balsamique_maison 1 (v8c)
+recette/stracciatella_maison 0 (v8c)
+recette/beurre_cacahuete_maison 4 (v8c)
+recette/tuiles_parmesan 0 (v8c)
+recette/sucre_glace_maison 0 (v8c)
+recette/beignets_fourres_pate_tartiner 6 (v8c)
+recette/boules_fromage_croustillantes 0 (v8c)
+recette/poulet_crousty_riz 6 (v8c)
+recette/onion_rings 3 (v8c)
+recette/pate_foie_volaille 2 (v8c)
+recette/boulettes_viande_pommes_de_terre 0 (v8c)
+recette/riz_viande_hachee 0 (v8c)
+recette/spaghetti_boulettes_poisson 0 (v8c)
+recette/spaghetti_sautes_crevettes 7 (v8c)
+recette/boisson_mangue_ananas 7 (v8c)
+recette/riz_haricots_rouges_legumes 0 (v8c)
+recette/spaghetti_sautes_legumes_oeufs 5 (v8c)
+# v8c sans photo juste : persillade_frigo

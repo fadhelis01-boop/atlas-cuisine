@@ -12087,6 +12087,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/beignets_fourres_pate_tartiner": {
+  "path": "img/recette/beignets_fourres_pate_tartiner",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b4855f",
+  "author": "avlxyz",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "page": "https://www.flickr.com/photos/10559879@N00/4822767449",
+  "source": "Openverse (flickr)",
+  "title": "Lebanese Jam-Filled Doughnut - insides - Oasis Bakery AUD2",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/beignets_haricots_bouillie": {
   "path": "img/recette/beignets_haricots_bouillie",
   "sizes": [
@@ -12152,6 +12169,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Black_Grouper_(7623700860).jpg",
   "source": "Wikimedia Commons",
   "title": "Black Grouper (7623700860).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/beurre_cacahuete_maison": {
+  "path": "img/recette/beurre_cacahuete_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bf844e",
+  "author": "Shisma",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Peanut_butter_glass_3.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Peanut butter glass 3.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12545,6 +12579,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/boisson_mangue_ananas": {
+  "path": "img/recette/boisson_mangue_ananas",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bd8f67",
+  "author": "EasyHealthySmoothie",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/150788323@N04/33908826224",
+  "source": "Openverse (flickr)",
+  "title": "Orange banana mango smoothie",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/bokit_volaille": {
   "path": "img/recette/bokit_volaille",
   "sizes": [
@@ -12715,6 +12766,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/boules_fromage_croustillantes": {
+  "path": "img/recette/boules_fromage_croustillantes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b06c4f",
+  "author": "Popo le Chien",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Malakoff.jpeg",
+  "source": "Wikimedia Commons",
+  "title": "Malakoff.jpeg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/boulettes_lentilles_tomate": {
   "path": "img/recette/boulettes_lentilles_tomate",
   "sizes": [
@@ -12746,6 +12814,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:K%C3%B6ttbullar_at_IKEA_Beijing_Xihongmen_Store_(20200729181732).jpg",
   "source": "Wikimedia Commons",
   "title": "Köttbullar at IKEA Beijing Xihongmen Store (20200729181732).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/boulettes_viande_pommes_de_terre": {
+  "path": "img/recette/boulettes_viande_pommes_de_terre",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b68f6f",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Jacket_potato_with_meatballs_tomato_sauce_and_cheese_and_butter_-_Potatoast_2026-05-02.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Jacket potato with meatballs tomato sauce and cheese and butter - Potatoast 2026-05-02.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -14633,6 +14718,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Postre._Crema_catalana.jpg",
   "source": "Wikimedia Commons",
   "title": "Postre. Crema catalana.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/creme_balsamique_maison": {
+  "path": "img/recette/creme_balsamique_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ba916c",
+  "author": "Daderot",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Heirloom_tomatoes,_mozzarella,_cantaloupe,_berries,_and_green_pesto,_with_balsamic_glaze_-_Massachusetts.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Heirloom tomatoes, mozzarella, cantaloupe, berries, and green pesto, with balsamic glaze - Massachusetts.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20311,6 +20413,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/onion_rings": {
+  "path": "img/recette/onion_rings",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8d593c",
+  "author": "Jess Sawrey from Los Angeles, California, USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_pancakejess_677476794--Onion_rings.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Flickr pancakejess 677476794--Onion rings.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/oranges_cannelle": {
   "path": "img/recette/oranges_cannelle",
   "sizes": [
@@ -21189,6 +21308,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Thai_green_curry_paste.jpg",
   "source": "Wikimedia Commons",
   "title": "Thai green curry paste.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pate_foie_volaille": {
+  "path": "img/recette/pate_foie_volaille",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#694a2b",
+  "author": "Peachyeung316",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:A_Chicken_Liver_pate_from_The_Grand_Cafe.jpg",
+  "source": "Wikimedia Commons",
+  "title": "A Chicken Liver pate from The Grand Cafe.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -22362,6 +22498,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/poulet_crousty_riz": {
+  "path": "img/recette/poulet_crousty_riz",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7c6138",
+  "author": "avlxyz",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "page": "https://www.flickr.com/photos/10559879@N00/5098441431",
+  "source": "Openverse (flickr)",
+  "title": "Thai-style Hainanese Crispy Fried Chicken Rice, Iced Milk tea - Chilli Cafe AUD11.90",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/poulet_dg": {
   "path": "img/recette/poulet_dg",
   "sizes": [
@@ -23363,6 +23516,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/riz_haricots_rouges_legumes": {
+  "path": "img/recette/riz_haricots_rouges_legumes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8e7466",
+  "author": "rovingI",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Rajma,_kidney_beans,_served_with_chawal,_rice.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Rajma, kidney beans, served with chawal, rice.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/riz_nature": {
   "path": "img/recette/riz_nature",
   "sizes": [
@@ -23462,6 +23632,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Fried_rice_in_home.jpg",
   "source": "Wikimedia Commons",
   "title": "Fried rice in home.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/riz_viande_hachee": {
+  "path": "img/recette/riz_viande_hachee",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bb8953",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Minced_Meat_Rice_Bowl_-_Noodles_Street_2025-11-01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Minced Meat Rice Bowl - Noodles Street 2025-11-01.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -25331,6 +25518,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/spaghetti_boulettes_poisson": {
+  "path": "img/recette/spaghetti_boulettes_poisson",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#996c46",
+  "author": "HaJunkiyada",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Moroccan_style_fish_balls_for_Shabbat.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Liat Portal for Foodie Disorder - Moroccan style fish balls for Shabbat.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/spaghetti_carbonara": {
   "path": "img/recette/spaghetti_carbonara",
   "sizes": [
@@ -25362,6 +25566,40 @@
   "page": "https://www.flickr.com/photos/20912428@N04/2400492179",
   "source": "Openverse (flickr)",
   "title": "Spaghetti al Pomodoro",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/spaghetti_sautes_crevettes": {
+  "path": "img/recette/spaghetti_sautes_crevettes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d79b3b",
+  "author": "jeffreyw",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/7927684@N03/5808517512",
+  "source": "Openverse (flickr)",
+  "title": "Mmm... did I mentioned I loved ramen?",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/spaghetti_sautes_legumes_oeufs": {
+  "path": "img/recette/spaghetti_sautes_legumes_oeufs",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b58644",
+  "author": "avlxyz",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "page": "https://www.flickr.com/photos/10559879@N00/3517178007",
+  "source": "Openverse (flickr)",
+  "title": "Tomyum Vegetarian Fried Noodles - Mint Thai AUD9",
   "kind": "photo",
   "avif": true
  },
@@ -25518,6 +25756,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/stracciatella_maison": {
+  "path": "img/recette/stracciatella_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b2aa9b",
+  "author": "Florixc (original version) ; Off-shell (reprocessed version)",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Stracciatella_formaggio_fresco_2.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Stracciatella formaggio fresco 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sucettes_chocolat": {
   "path": "img/recette/sucettes_chocolat",
   "sizes": [
@@ -25532,6 +25787,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Homemade_lollipops.jpg",
   "source": "Wikimedia Commons",
   "title": "Homemade lollipops.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sucre_glace_maison": {
+  "path": "img/recette/sucre_glace_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a7a08f",
+  "author": "Ɱ",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:PowderedSugar.png",
+  "source": "Wikimedia Commons",
+  "title": "PowderedSugar.png",
   "kind": "photo",
   "avif": true
  },
@@ -26771,6 +27043,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tuiles_aux_amandes_-_Biscuiterie_Astruc_2026-05-11.jpg",
   "source": "Wikimedia Commons",
   "title": "Tuiles aux amandes - Biscuiterie Astruc 2026-05-11.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tuiles_parmesan": {
+  "path": "img/recette/tuiles_parmesan",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#998363",
+  "author": "HeatherMarieKosur",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Parmesan_Cheese_Crisps.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Parmesan Cheese Crisps.jpg",
   "kind": "photo",
   "avif": true
  },

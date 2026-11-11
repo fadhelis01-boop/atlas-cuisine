@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "gratin_chou_fleur_lentilles", "salade_haricots_blancs_thon", "gratin_celeri_noix", "locro_vegetarien", "goan_fish_curry", "poisson_braise_camerounais", "curry_legumes_coco",
-  "moules_marinieres", "curry_pois_chiches_express", "spaetzle_fromage", "bacalhau_bras", "kofta_grillees", "dhal_epinards_coco", "fiskesuppe", "shakshuka_verte_feta",
-  "spanakorizo", "moqueca", "nikujaga", "bar_croute_sel", "bamia_gombo", "udon_sautees_legumes", "pyttipanna_boeuf", "ful_medames",
-  "misir_wat", "chana_masala", "salade_lentilles_saumon_fume", "moules_normande", "bar_croute_macadamia", "atakilt_wat",
+  "moules_frites", "gratin_chou_fleur_lentilles", "nikujaga", "curry_legumes_coco", "parippu", "bacalhau_bras", "dhal_epinards_coco", "cassolettes_crevettes_poireaux",
+  "curry_pois_chiches_express", "fiskefrikadeller", "chou_oeufs_saute", "spaghetti_sautes_legumes_oeufs", "moules_marinieres", "fiskesuppe", "falafels", "moqueca",
+  "shiro_wat", "poke_bowl_saumon", "saumon_cajun_noirci", "shakshuka_verte_feta", "poisson_braise_camerounais", "pancit_bihon", "dal_tadka", "caldou_poisson",
+  "nasi_goreng", "ramen_miso_legumes_tofu", "tortilla_espanola", "spaghetti_aglio_olio", "lu_sipi_agneau_coco", "rougag_dajaj",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

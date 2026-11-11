@@ -21,7 +21,7 @@ def title_of(desc):
 
 groups, kept, skipped = {}, 0, 0
 for url, v in DB.items():
-    if v.get("missing") or v.get("section") not in ("relevé 10/11",): continue
+    if v.get("missing") or v.get("section") not in ("relevé 10/11", "profil créateur 10/11"): continue
     if is_hors_cuisine(url): continue  # favori hors cuisine : jamais publié
     desc = v.get("desc", "")
     t = title_of(desc)
@@ -38,7 +38,7 @@ for url, v in DB.items():
     kept += 1
 
 o = ["# 📲 Favoris TikTok du 10/11/2026, classés pour ATLAS\n",
-     "> Relevé le 10/11/2026 : les favoris ajoutés depuis le 04/11 (compte connecté par le propriétaire). "
+     "> Relevé le 10/11/2026 : les favoris ajoutés depuis le 04/11 (compte connecté par le propriétaire) et les vidéos les plus populaires de 7 de leurs auteurs jamais explorés (onglet « Populaire »). "
      "Une page à la fois, sans contourner la protection de TikTok.",
      f"> **{kept} vidéos de cuisine classées**, {skipped} écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.",
      "> Liens crédités uniquement : les vidéos se lisent dans ATLAS par l'intégration officielle de TikTok ; rien n'est copié.",
