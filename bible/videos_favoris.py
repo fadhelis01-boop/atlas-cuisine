@@ -191,3 +191,23 @@ EN_PLUS_2026_11_11 = {
 }
 for _k, _v in EN_PLUS_2026_11_11.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# 11/11/2026 (suite) : vidéos de @lerizjaune et d'@erynshow rattachées à des fiches existantes ou nouvelles
+EN_PLUS_2026_11_11B = {
+    "gnocchi_gorgonzola_noix": [T + "@erynshow/video/7658739670422949152"],
+    "gratin_ravioles": [T + "@erynshow/video/7608298481429630230"],
+    "camembert_roti": [T + "@erynshow/video/7649013606276762912"],
+    "pad_see_ew": [T + "@lerizjaune/video/7456104504191159574", T + "@erynshow/video/7617734013897280790"],
+    "rouleaux_printemps": [T + "@erynshow/video/7612715880786496790"],
+    "nouilles_beurre_cacahuete": [T + "@erynshow/video/7686369515050896673"],
+    "sandwich_raclette_piquant": [T + "@erynshow/video/7646827372561435936"],
+    "bubble_tea": [T + "@erynshow/video/7600122349500796182"],
+    "chevre_miel_barbecue": [T + "@erynshow/video/7648646487194242337"],
+    "boeuf_oignons_saute": [T + "@lerizjaune/video/7178912652024958214"],
+    "nouilles_sautees_boeuf": [T + "@lerizjaune/video/7409332187104939296"],
+    "vermicelles_soja_sautes": [T + "@lerizjaune/video/7508041440107236630"],
+    "soupe_oeuf_chinoise": [T + "@lerizjaune/video/7305450085322738977"],
+    "soupe_tomate_oeuf_chinoise": [T + "@lerizjaune/video/7702876538647186720"],
+}
+for _k, _v in EN_PLUS_2026_11_11B.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

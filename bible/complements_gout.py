@@ -65,6 +65,20 @@ ACIDE = {
     "couscous_express_legumes": ("½|citron|Citron|1?", "Un filet de citron sur la semoule, pour qui aime."),
     "mechoui_four": ("1|citron (salade méchouia)|Citron|1?", ""),
     "falafels": ("1|citron (sauce tahini)|Citron|1", "La sauce : 3 c. à s. de tahini, le jus du citron, de l'eau froide cuillère par cuillère, sel ; fouettée, elle devient crémeuse et pâle."),
+    # 11/11/2026 : Le Riz Jaune, Eryn (acides neutres : pas de trace d'alcool)
+    "boeuf_sauce_huitre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre en fin de cuisson réveille la sauce d'huître."),
+    "boeuf_gingembre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre au dernier moment fait ressortir le gingembre."),
+    "boeuf_brocoli": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre dans la sauce l'allège."),
+    "chop_suey_boeuf": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre avec la sauce garde les légumes vifs."),
+    "crevettes_sel_poivre": ("1|citron vert, en quartiers|Citron vert|1?", "Un quartier de citron vert pressé dessus à table coupe la friture."),
+    "chou_chinois_farci_volaille": ("1 c. à s.|de vinaigre de cidre (sauce à tremper)|" + CIDRE + "|1?", "À table, une sauce à tremper : soja et vinaigre à parts égales, un peu de gingembre."),
+    "katsudon_poulet": ("1 c. à s.|de gingembre mariné (gari)|Gingembre mariné (gari)|1?", "Un peu de gingembre mariné à côté, comme au Japon : il coupe le gras de la panure."),
+    "vermicelles_soja_sautes": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre au dernier moment réveille les vermicelles."),
+    "baozi_poeles_poulet": ("2 c. à s.|de vinaigre de cidre (sauce à tremper)|" + CIDRE + "|1?", "À table, une sauce à tremper : soja, vinaigre et gingembre en allumettes."),
+    "poulet_concombre_saute": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre en fin de cuisson garde le concombre frais."),
+    "korokke": ("3 c. à s.|de ketchup (sauce tonkatsu rapide : ketchup, sauce soja, miel)|Ketchup|1?", "À table, une sauce tonkatsu rapide : ketchup, un peu de sauce soja et de miel."),
+    "korokke_mais_fromage": ("3 c. à s.|de ketchup (sauce tonkatsu rapide : ketchup, sauce soja, miel)|Ketchup|1?", "À table, une sauce tonkatsu rapide : ketchup, un peu de sauce soja et de miel."),
+    "mont_dor_champignons_epinards": ("2 c. à s.|de vinaigre de cidre (oignons rouges marinés)|" + CIDRE + "|1?", "À côté, un oignon rouge émincé 10 min dans le vinaigre avec une pincée de sel : il coupe le gras du fromage."),
 }
 # les plats français gratinés ou fromagers : salade verte vinaigrée à table
 for _id in ("crepes_salees_enfants", "croque_monsieur", "endives_jambon_dinde", "gratin_macaronis", "galette_complete", "galettes_sarrasin_champignons",

@@ -37,3 +37,13 @@ Aucune des 169 fiches TikTok n'avait de photo. Recherche sur Wikimedia Commons e
 - **Photos** : 304 fiches sans photo cherchées sous licence libre, 163 photos retenues après relecture des planches (seulement quand la photo montre bien le plat). 1 120 fiches sur 1 259 sont illustrées ; 146 fiches TikTok sur 194.
 - Restent sans photo : les fiches dont aucune candidate ne montrait le plat (karantika, felfla, widjila, enoki, sandwich raclette…).
 - 1 259 recettes, 672 plats, 194 fiches créditées ; démarrage 342 Ko sur 400. Fiches non testées en cuisine.
+
+## Suite le 11/11 (soir) : Le Riz Jaune, Eryn, Togo et grillades haoussa
+
+- **Favoris** : aucun nouveau favori depuis l'ajvar (vérifié aussi dans « Collections » et « A aimé »).
+- **@lerizjaune** : 198 vidéos de l'onglet « Populaire » lues ; **41 fiches créditées** de plats absents d'ATLAS (bœuf sauce d'huître, au gingembre, au brocoli, chop suey, tigre qui pleure, poulet au citron, à l'orange, ailes aigre-douce, crevettes sauce piquante et sel-poivre, ha kao, siu mai, raviolis frits, baozi poêlés, chou chinois farci, katsudon et katsu sando au poulet, korokke, soupes pékinoise, à l'œuf, tomate-œuf, maïs, kimchi blanc, yaki onigiri, tteok, udon et feuilles à raviolis maison, sriracha, chips de crevettes, biang biang, bubble tea, mochis glacés, nougat chinois, boules de sésame, perles de coco, taiyaki, kkwabaegi, gâteaux de lune…). Porc remplacé par la volaille ou le bœuf, pas de vin de cuisine. Une dizaine de vidéos rattachées à des fiches existantes.
+- **@erynshow** : 659 vidéos chargées, les recettes les plus vues ouvertes une à une (le titre de la page donne le plat quand la légende dit seulement « simple efficace »). **12 fiches créditées** (pâtes chèvre-miel, burrata-pesto, crevettes-pesto rosso, pâtes de riz aux carottes, gyozas poulet-cheddar, raviolis bœuf-fromage, nam tok, chèvre-miel au barbecue, sandwich champignons-chèvre, mont-d'or garni, burrata pesto rosso, sorbet coco). Sandwichs à la charcuterie de porc, défis de nouilles instantanées et restaurants non repris.
+- **Togo** (demande du propriétaire) : akoumé, gboma dessi, adémé, fétri dessi, azi dessi, koklo mémé, djenkoumé, foufou d'igname, koliko, pinon, klaklou, atchomon, ayimolou, abobo (l'ablo existait).
+- **Haoussa** : yaji (mélange d'épices du suya), suya de poulet, tsire d'agneau, kilishi (séché au four, avec une première chauffe à 120 °C pour la sécurité), balangu, dambun nama, masa, dan wake, miyan taushe (le suya au bœuf existait).
+- **Plats végétariens** ajoutés pour rester au-dessus d'un tiers (34 %).
+- 1 343 recettes, 720 plats, 248 fiches créditées ; démarrage 349 Ko sur 400. Les 84 nouvelles fiches n'ont pas encore de photo. Fiches non testées en cuisine.

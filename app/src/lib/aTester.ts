@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "gratin_chou_fleur_lentilles", "nikujaga", "curry_legumes_coco", "parippu", "bacalhau_bras", "dhal_epinards_coco", "cassolettes_crevettes_poireaux",
-  "curry_pois_chiches_express", "fiskefrikadeller", "chou_oeufs_saute", "spaghetti_sautes_legumes_oeufs", "moules_marinieres", "fiskesuppe", "falafels", "moqueca",
-  "shiro_wat", "poke_bowl_saumon", "saumon_cajun_noirci", "shakshuka_verte_feta", "poisson_braise_camerounais", "pancit_bihon", "dal_tadka", "caldou_poisson",
-  "nasi_goreng", "ramen_miso_legumes_tofu", "tortilla_espanola", "spaghetti_aglio_olio", "lu_sipi_agneau_coco", "rougag_dajaj",
+  "moules_frites", "gratin_chou_fleur_lentilles", "nikujaga", "curry_legumes_coco", "chop_suey_boeuf", "vermicelles_riz_sautes_legumes", "curry_pois_chiches_express", "poisson_braise_camerounais",
+  "bacalhau_bras", "dhal_epinards_coco", "cassolettes_crevettes_poireaux", "raclette_maison", "fiskesuppe", "anda_curry", "pancit_bihon", "chou_oeufs_saute",
+  "moules_normande", "choucroute_mer", "orecchiette_brocoli_ail", "muffins_oeufs_legumes", "falafels", "spaghetti_sautes_crevettes", "moules_marinieres", "red_red",
+  "bamia_gombo", "saumon_cajun_noirci", "bar_croute_sel", "crevettes_sauce_piquante", "white_chicken_chili", "moqueca",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */
