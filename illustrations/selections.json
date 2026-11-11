@@ -3123,5 +3123,365 @@
  "recette/frozen_yogourt_fruits_rouges": {
   "i": 0,
   "from": "v9/recette/frozen_yogourt_fruits_rouges"
+ },
+ "recette/akoume": {
+  "i": 5,
+  "from": "v10/recette/akoume"
+ },
+ "recette/gboma_dessi": {
+  "i": 1,
+  "from": "v10/recette/gboma_dessi"
+ },
+ "recette/ademe_dessi": {
+  "i": 1,
+  "from": "v10/recette/ademe_dessi"
+ },
+ "recette/fetri_dessi": {
+  "i": 3,
+  "from": "v10/recette/fetri_dessi"
+ },
+ "recette/azi_dessi": {
+  "i": 2,
+  "from": "v10/recette/azi_dessi"
+ },
+ "recette/koklo_meme": {
+  "i": 5,
+  "from": "v10/recette/koklo_meme"
+ },
+ "recette/djenkoume": {
+  "i": 0,
+  "from": "v10/recette/djenkoume"
+ },
+ "recette/fufu_igname": {
+  "i": 0,
+  "from": "v10/recette/fufu_igname"
+ },
+ "recette/klaklou": {
+  "i": 7,
+  "from": "v10/recette/klaklou"
+ },
+ "recette/atchomon": {
+  "i": 3,
+  "from": "v10/recette/atchomon"
+ },
+ "recette/yaji": {
+  "i": 1,
+  "from": "v10/recette/yaji"
+ },
+ "recette/suya_poulet": {
+  "i": 4,
+  "from": "v10/recette/suya_poulet"
+ },
+ "recette/tsire_agneau": {
+  "i": 0,
+  "from": "v10/recette/tsire_agneau"
+ },
+ "recette/kilishi": {
+  "i": 2,
+  "from": "v10/recette/kilishi"
+ },
+ "recette/balangu": {
+  "i": 0,
+  "from": "v10/recette/balangu"
+ },
+ "recette/masa_haoussa": {
+  "i": 0,
+  "from": "v10/recette/masa_haoussa"
+ },
+ "recette/dan_wake": {
+  "i": 2,
+  "from": "v10/recette/dan_wake"
+ },
+ "recette/miyan_taushe": {
+  "i": 0,
+  "from": "v10/recette/miyan_taushe"
+ },
+ "recette/ayimolou": {
+  "i": 0,
+  "from": "v10/recette/ayimolou"
+ },
+ "recette/abobo": {
+  "i": 1,
+  "from": "v10/recette/abobo"
+ },
+ "recette/boeuf_sauce_huitre": {
+  "i": 3,
+  "from": "v10/recette/boeuf_sauce_huitre"
+ },
+ "recette/boeuf_gingembre": {
+  "i": 3,
+  "from": "v10/recette/boeuf_gingembre"
+ },
+ "recette/boeuf_brocoli": {
+  "i": 5,
+  "from": "v10/recette/boeuf_brocoli"
+ },
+ "recette/chop_suey_boeuf": {
+  "i": 3,
+  "from": "v10/recette/chop_suey_boeuf"
+ },
+ "recette/tigre_qui_pleure": {
+  "i": 0,
+  "from": "v10/recette/tigre_qui_pleure"
+ },
+ "recette/poulet_citron_chinois": {
+  "i": 1,
+  "from": "v10/recette/poulet_citron_chinois"
+ },
+ "recette/poulet_orange": {
+  "i": 1,
+  "from": "v10/recette/poulet_orange"
+ },
+ "recette/crevettes_sauce_piquante": {
+  "i": 5,
+  "from": "v10/recette/crevettes_sauce_piquante"
+ },
+ "recette/crevettes_sel_poivre": {
+  "i": 2,
+  "from": "v10/recette/crevettes_sel_poivre"
+ },
+ "recette/chou_chinois_farci_volaille": {
+  "i": 0,
+  "from": "v10/recette/chou_chinois_farci_volaille"
+ },
+ "recette/katsudon_poulet": {
+  "i": 0,
+  "from": "v10/recette/katsudon_poulet"
+ },
+ "recette/katsu_sando": {
+  "i": 0,
+  "from": "v10/recette/katsu_sando"
+ },
+ "recette/vermicelles_soja_sautes": {
+  "i": 0,
+  "from": "v10/recette/vermicelles_soja_sautes"
+ },
+ "recette/yum_woon_sen": {
+  "i": 0,
+  "from": "v10/recette/yum_woon_sen"
+ },
+ "recette/ha_kao": {
+  "i": 1,
+  "from": "v10/recette/ha_kao"
+ },
+ "recette/siu_mai": {
+  "i": 4,
+  "from": "v10/recette/siu_mai"
+ },
+ "recette/raviolis_frits_crevettes": {
+  "i": 7,
+  "from": "v10/recette/raviolis_frits_crevettes"
+ },
+ "recette/baozi_poeles_poulet": {
+  "i": 0,
+  "from": "v10/recette/baozi_poeles_poulet"
+ },
+ "recette/soupe_pekinoise": {
+  "i": 0,
+  "from": "v10/recette/soupe_pekinoise"
+ },
+ "recette/soupe_oeuf_chinoise": {
+  "i": 1,
+  "from": "v10/recette/soupe_oeuf_chinoise"
+ },
+ "recette/soupe_tomate_oeuf_chinoise": {
+  "i": 0,
+  "from": "v10/recette/soupe_tomate_oeuf_chinoise"
+ },
+ "recette/soupe_mais_chinoise": {
+  "i": 2,
+  "from": "v10/recette/soupe_mais_chinoise"
+ },
+ "recette/kimchi_blanc": {
+  "i": 3,
+  "from": "v10/recette/kimchi_blanc"
+ },
+ "recette/yaki_onigiri": {
+  "i": 0,
+  "from": "v10/recette/yaki_onigiri"
+ },
+ "recette/tteok_maison": {
+  "i": 4,
+  "from": "v10/recette/tteok_maison"
+ },
+ "recette/udon_maison": {
+  "i": 4,
+  "from": "v10/recette/udon_maison"
+ },
+ "recette/feuilles_raviolis_maison": {
+  "i": 0,
+  "from": "v10/recette/feuilles_raviolis_maison"
+ },
+ "recette/chips_crevettes": {
+  "i": 4,
+  "from": "v10/recette/chips_crevettes"
+ },
+ "recette/nouilles_biang_biang": {
+  "i": 1,
+  "from": "v10/recette/nouilles_biang_biang"
+ },
+ "recette/korokke": {
+  "i": 2,
+  "from": "v10/recette/korokke"
+ },
+ "recette/bubble_tea": {
+  "i": 0,
+  "from": "v10/recette/bubble_tea"
+ },
+ "recette/mochi_glace": {
+  "i": 0,
+  "from": "v10/recette/mochi_glace"
+ },
+ "recette/nougat_chinois": {
+  "i": 7,
+  "from": "v10/recette/nougat_chinois"
+ },
+ "recette/jian_dui": {
+  "i": 0,
+  "from": "v10/recette/jian_dui"
+ },
+ "recette/taiyaki": {
+  "i": 0,
+  "from": "v10/recette/taiyaki"
+ },
+ "recette/kkwabaegi": {
+  "i": 0,
+  "from": "v10/recette/kkwabaegi"
+ },
+ "recette/gateaux_de_lune_coco_matcha": {
+  "i": 0,
+  "from": "v10/recette/gateaux_de_lune_coco_matcha"
+ },
+ "recette/pates_chevre_miel": {
+  "i": 6,
+  "from": "v10/recette/pates_chevre_miel"
+ },
+ "recette/pates_burrata_pesto": {
+  "i": 5,
+  "from": "v10/recette/pates_burrata_pesto"
+ },
+ "recette/burrata_pesto_rosso": {
+  "i": 1,
+  "from": "v10/recette/burrata_pesto_rosso"
+ },
+ "recette/pates_crevettes_pesto_rosso": {
+  "i": 4,
+  "from": "v10/recette/pates_crevettes_pesto_rosso"
+ },
+ "recette/pates_riz_sautees_carottes": {
+  "i": 2,
+  "from": "v10/recette/pates_riz_sautees_carottes"
+ },
+ "recette/gyozas_poulet_cheddar": {
+  "i": 0,
+  "from": "v10/recette/gyozas_poulet_cheddar"
+ },
+ "recette/raviolis_boeuf_fromage": {
+  "i": 0,
+  "from": "v10/recette/raviolis_boeuf_fromage"
+ },
+ "recette/nam_tok_boeuf": {
+  "i": 0,
+  "from": "v10/recette/nam_tok_boeuf"
+ },
+ "recette/mont_dor_champignons_epinards": {
+  "i": 3,
+  "from": "v10/recette/mont_dor_champignons_epinards"
+ },
+ "recette/tofu_sauce_piquante": {
+  "i": 1,
+  "from": "v10/recette/tofu_sauce_piquante"
+ },
+ "recette/nouilles_froides_sesame": {
+  "i": 2,
+  "from": "v10/recette/nouilles_froides_sesame"
+ },
+ "recette/pajeon": {
+  "i": 0,
+  "from": "v10/recette/pajeon"
+ },
+ "recette/korokke_mais_fromage": {
+  "i": 4,
+  "from": "v10/recette/korokke_mais_fromage"
+ },
+ "recette/udon_gochujang_legumes": {
+  "i": 6,
+  "from": "v10/recette/udon_gochujang_legumes"
+ },
+ "recette/nouilles_tomate_oeuf": {
+  "i": 3,
+  "from": "v10/recette/nouilles_tomate_oeuf"
+ },
+ "recette/gricia_version": {
+  "i": 7,
+  "from": "v10/recette/gricia_version"
+ },
+ "recette/pici_aglione": {
+  "i": 0,
+  "from": "v10/recette/pici_aglione"
+ },
+ "recette/fettuccine_burro_asperges": {
+  "i": 4,
+  "from": "v10/recette/fettuccine_burro_asperges"
+ },
+ "recette/pasta_pecorara": {
+  "i": 2,
+  "from": "v10/recette/pasta_pecorara"
+ },
+ "recette/linguine_crabe": {
+  "i": 1,
+  "from": "v10/recette/linguine_crabe"
+ },
+ "recette/penne_arrabbiata": {
+  "i": 3,
+  "from": "v10/recette/penne_arrabbiata"
+ },
+ "recette/linguine_moules_scarole": {
+  "i": 4,
+  "from": "v10/recette/linguine_moules_scarole"
+ },
+ "recette/pasta_burro_alici": {
+  "i": 3,
+  "from": "v10/recette/pasta_burro_alici"
+ },
+ "recette/rigatoni_brocoli_saucisse": {
+  "i": 1,
+  "from": "v10/recette/rigatoni_brocoli_saucisse"
+ },
+ "recette/paccheri_crevettes_tomates_cerises": {
+  "i": 0,
+  "from": "v10/recette/paccheri_crevettes_tomates_cerises"
+ },
+ "recette/ravioli_courge_gorgonzola": {
+  "i": 4,
+  "from": "v10/recette/ravioli_courge_gorgonzola"
+ },
+ "recette/trippa_romana": {
+  "i": 7,
+  "from": "v10/recette/trippa_romana"
+ },
+ "recette/filet_poivre_vert": {
+  "i": 4,
+  "from": "v10/recette/filet_poivre_vert"
+ },
+ "recette/alici_marinate": {
+  "i": 0,
+  "from": "v10/recette/alici_marinate"
+ },
+ "recette/polpo_lesso_salade": {
+  "i": 6,
+  "from": "v10/recette/polpo_lesso_salade"
+ },
+ "recette/impepata_cozze": {
+  "i": 0,
+  "from": "v10/recette/impepata_cozze"
+ },
+ "recette/mozzarella_in_carrozza": {
+  "i": 0,
+  "from": "v10/recette/mozzarella_in_carrozza"
+ },
+ "recette/panzerotti": {
+  "i": 1,
+  "from": "v10/recette/panzerotti"
  }
 }

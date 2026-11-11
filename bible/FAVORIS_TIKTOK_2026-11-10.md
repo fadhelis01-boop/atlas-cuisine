@@ -56,3 +56,8 @@ Aucune des 169 fiches TikTok n'avait de photo. Recherche sur Wikimedia Commons e
 - **Une trentaine de vidéos** très vues rattachées aux fiches déjà là (carbonara, polpette, amatriciana, lasagnes, bolognaise, cacio e pepe, vongole, norma, puttanesca, gnocchi…).
 - Écartés : pizza à la mortadelle, sandwichs au jambon cru (porc), vidéos de GialloZafferano sans nom de plat.
 - 1 364 recettes (109 italiennes), 739 plats, 269 fiches créditées ; végétariens 34 % ; démarrage 351 Ko sur 400. Nouvelles fiches sans photo, non testées en cuisine.
+
+## Suite le 12/11 : photos des nouvelles fiches et frigo sans angle mort
+
+- **Photos** : 105 fiches (Togo, haoussa, Le Riz Jaune, Eryn, végétariens, italien) cherchées sous licence libre (`illustrations/collect_v10.py`) ; 90 photos retenues après relecture des planches (`choix_v10.txt`). 1 210 fiches sur 1 364 sont illustrées. Sans photo juste : koliko, pinon, dambun nama, ailes aigre-douce, concombre sauté, sriracha (que des bouteilles de marque), perles de coco, sorbet coco, pasta e patate, mozzarella et œufs in purgatorio…
+- **Frigo** (retour d'usage : « pâte brisée » donnait deux idées puis plus rien). Corrigé : une pâte brisée, feuilletée ou à pizza toute prête compte pour les fiches à pâte maison (comme la mayonnaise, le ketchup, le kimchi, la harissa…) ; les doublons du référentiel se reconnaissent ; jusqu'à 10 courses (plus bas dans la liste) au lieu de 4 ; « D'autres idées » dit combien il en reste, et quand tout est vu, les mêmes ingrédients ailleurs dans ATLAS (autres services, accompagnements, sauces, pains, goûters) ; la recherche mène au frigo déjà rempli. Pâte brisée : 4 → 20 idées (+ 11 ailleurs) ; bœuf haché : 1 → 45 plats. Test 122.
