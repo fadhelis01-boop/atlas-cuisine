@@ -47,3 +47,12 @@ Aucune des 169 fiches TikTok n'avait de photo. Recherche sur Wikimedia Commons e
 - **Haoussa** : yaji (mélange d'épices du suya), suya de poulet, tsire d'agneau, kilishi (séché au four, avec une première chauffe à 120 °C pour la sécurité), balangu, dambun nama, masa, dan wake, miyan taushe (le suya au bœuf existait).
 - **Plats végétariens** ajoutés pour rester au-dessus d'un tiers (34 %).
 - 1 343 recettes, 720 plats, 248 fiches créditées ; démarrage 349 Ko sur 400. Les 84 nouvelles fiches n'ont pas encore de photo. Fiches non testées en cuisine.
+
+## Suite le 12/11 : la cuisine italienne la plus vue sur TikTok
+
+- La recherche TikTok a demandé une vérification (puzzle), faite par le propriétaire ; la page de résultats ne se faisait pas défiler correctement, alors le relevé s'est fait sur les profils des grands comptes, onglet « Populaire » (vidéos triées par vues).
+- **@chefmaxmariola** (4,3 M d'abonnés, vidéos de 4 à 38 M de vues), **@giallozafferano** (3,1 M), **@charlene_et_francesca** (540 k, en français), et une vidéo de @latavoladigael trouvée par la recherche.
+- **21 fiches créditées** de plats absents d'ATLAS : gricia (version au bacon de bœuf), pasta e patate, pici all'aglione, fettuccine au beurre et parmesan (le vrai Alfredo), pasta alla pecorara, linguine au crabe, penne all'arrabbiata, linguine moules-scarole, pâtes beurre-anchois, rigatoni brocoli-saucisse (volaille), paccheri crevettes-tomates cerises, raviolis courge-gorgonzola, trippa alla romana, filet au poivre vert, alici marinate (anchois congelés 7 jours avant, pour l'anisakis), salade de poulpe, impepata di cozze, mozzarella in carrozza, panzerotti, mozzarella et œufs in purgatorio.
+- **Une trentaine de vidéos** très vues rattachées aux fiches déjà là (carbonara, polpette, amatriciana, lasagnes, bolognaise, cacio e pepe, vongole, norma, puttanesca, gnocchi…).
+- Écartés : pizza à la mortadelle, sandwichs au jambon cru (porc), vidéos de GialloZafferano sans nom de plat.
+- 1 364 recettes (109 italiennes), 739 plats, 269 fiches créditées ; végétariens 34 % ; démarrage 351 Ko sur 400. Nouvelles fiches sans photo, non testées en cuisine.

@@ -211,3 +211,31 @@ EN_PLUS_2026_11_11B = {
 }
 for _k, _v in EN_PLUS_2026_11_11B.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# 11/11/2026 (suite) : cuisine italienne la plus vue (Max Mariola, GialloZafferano, Charlène & Francesca) sur des fiches existantes
+_MM = T + "@chefmaxmariola/video/"; _CF = T + "@charlene_et_francesca/video/"; _GZ = T + "@giallozafferano/video/"
+EN_PLUS_2026_11_11C = {
+    "spaghetti_carbonara": [_MM + "7136878183244205318", _MM + "7172154197243186438", _CF + "7398471628159470880", _CF + "7290144031898635552"],
+    "polpette_sugo": [_MM + "7203406118717115653"],
+    "bucatini_amatriciana": [_MM + "7154780400844426502"],
+    "pasta_alfredo_poulet": [_MM + "7292828979549981984"],
+    "spaghetti_pomodoro_express": [_MM + "7157626384527953157"],
+    "gnocchi_sorrentina": [_MM + "7162455620220718342"],
+    "cacio_e_pepe": [_MM + "7234168952308436250"],
+    "spaghetti_vongole": [_MM + "7149838585842109701"],
+    "spaghetti_aglio_olio": [_MM + "7215996310057438469"],
+    "tagliatelle_ragu": [_MM + "7305833732018064673"],
+    "lasagnes_bolognaise": [_MM + "7323985505081740577", _CF + "7289415126611004705"],
+    "carpaccio_boeuf": [_MM + "7243090200644160795"],
+    "salade_caprese": [_MM + "7130297284088073477"],
+    "pates_alla_norma": [_MM + "7266844307598937376"],
+    "pates_puttanesca": [_MM + "7201826395998162181"],
+    "risotto_champignons": [_MM + "7319176671494442272"],
+    "pates_citron_parmesan": [_MM + "7211915409719676166"],
+    "gnocchi_maison": [_CF + "7322045778455776545"],
+    "bruschetta_tomates": [_CF + "7397382932848971041"],
+    "crema_caffe": [_GZ + "7226305803144236315"],
+    "pasta_e_patate": [_CF + "7602197034715729174"],
+}
+for _k, _v in EN_PLUS_2026_11_11C.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

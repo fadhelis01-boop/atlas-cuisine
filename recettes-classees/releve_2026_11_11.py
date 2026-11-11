@@ -38,7 +38,7 @@ for url, v in DB.items():
     kept += 1
 
 o = ["# 📲 Favoris TikTok du 11/11/2026, classés pour ATLAS\n",
-     "> Relevé le 11/11/2026 : le favori ajouté depuis le 10/11 (compte connecté par le propriétaire) les vidéos d'@erynshow (profil ouvert par le propriétaire : recettes les plus vues ; visites de restaurants, voyages et charcuterie de porc non publiés) et les recettes populaires de @lerizjaune absentes d'ATLAS. "
+     "> Relevé le 11/11/2026 : le favori ajouté depuis le 10/11 (compte connecté par le propriétaire) les vidéos d'@erynshow (profil ouvert par le propriétaire : recettes les plus vues ; visites de restaurants, voyages et charcuterie de porc non publiés) les recettes populaires de @lerizjaune absentes d'ATLAS, et la cuisine italienne la plus vue (@chefmaxmariola, @giallozafferano, @charlene_et_francesca). "
      "Une page à la fois, sans contourner la protection de TikTok.",
      f"> **{kept} vidéos de cuisine classées**, {skipped} écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.",
      "> Liens crédités uniquement : les vidéos se lisent dans ATLAS par l'intégration officielle de TikTok ; rien n'est copié.",

@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "gratin_chou_fleur_lentilles", "nikujaga", "curry_legumes_coco", "chop_suey_boeuf", "vermicelles_riz_sautes_legumes", "curry_pois_chiches_express", "poisson_braise_camerounais",
-  "bacalhau_bras", "dhal_epinards_coco", "cassolettes_crevettes_poireaux", "raclette_maison", "fiskesuppe", "anda_curry", "pancit_bihon", "chou_oeufs_saute",
-  "moules_normande", "choucroute_mer", "orecchiette_brocoli_ail", "muffins_oeufs_legumes", "falafels", "spaghetti_sautes_crevettes", "moules_marinieres", "red_red",
-  "bamia_gombo", "saumon_cajun_noirci", "bar_croute_sel", "crevettes_sauce_piquante", "white_chicken_chili", "moqueca",
+  "moules_frites", "gratin_chou_fleur_lentilles", "nikujaga", "curry_legumes_coco", "chop_suey_boeuf", "vermicelles_riz_sautes_legumes", "curry_pois_chiches_express", "fiskefrikadeller",
+  "bacalhau_bras", "dhal_epinards_coco", "linguine_moules_scarole", "thiou_poulet", "choucroute_mer", "parippu", "boeuf_oignons_saute", "bar_croute_macadamia",
+  "poisson_braise_camerounais", "stamppot_boerenkool", "lo_mein_chou_legumes", "shakshuka_verte_feta", "atakilt_wat", "burger_vegetarien_haricots", "pyttipanna_boeuf", "kottu_roti",
+  "fiskesuppe", "moules_normande", "white_chicken_chili", "ful_medames", "pancit_bihon", "curry_fidjien_legumes",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

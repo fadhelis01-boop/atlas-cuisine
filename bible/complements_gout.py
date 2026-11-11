@@ -65,6 +65,8 @@ ACIDE = {
     "couscous_express_legumes": ("½|citron|Citron|1?", "Un filet de citron sur la semoule, pour qui aime."),
     "mechoui_four": ("1|citron (salade méchouia)|Citron|1?", ""),
     "falafels": ("1|citron (sauce tahini)|Citron|1", "La sauce : 3 c. à s. de tahini, le jus du citron, de l'eau froide cuillère par cuillère, sel ; fouettée, elle devient crémeuse et pâle."),
+    "rigatoni_brocoli_saucisse": ("1|citron (zeste et un trait de jus)|Citron|1?", "Un zeste et un trait de citron à la fin réveillent le brocoli."),
+    "ravioli_courge_gorgonzola": ("1|citron (zeste)|Citron|1?", "Un zeste de citron râpé sur les assiettes allège la sauce au gorgonzola."),
     # 11/11/2026 : Le Riz Jaune, Eryn (acides neutres : pas de trace d'alcool)
     "boeuf_sauce_huitre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre en fin de cuisson réveille la sauce d'huître."),
     "boeuf_gingembre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre au dernier moment fait ressortir le gingembre."),
@@ -91,6 +93,7 @@ EXTRA = {"burger_vegetarien_haricots": ["1 pincée|de sucre (oignon mariné)|Suc
          "dinde_roti_farcie": ["1|orange (jus, sauce aux canneberges)|Orange|1?", "2 c. à s.|de sucre (sauce aux canneberges)|Sucre blanc / roux / cassonade / vergeoise|1?"]}
 
 SANS_ACIDE = {
+    "gricia_version": "Pecorino, poivre et gras fondu : comme la cacio e pepe, un acide trancherait la crème de fromage ; la fraîcheur vient de la salade qui suit.",
     "cacio_e_pepe": "Trois ingrédients : un acide casserait la crème de pecorino. À Rome, la salade qui suit apporte la fraîcheur.",
     "spaghetti_carbonara": "La liaison œuf-pecorino est le plat ; un acide la trancherait. La fraîcheur vient de la salade qui suit.",
     "spaghetti_aglio_olio": "Ail, huile, piment : la recette tient en trois saveurs, la tradition n'y ajoute rien.",

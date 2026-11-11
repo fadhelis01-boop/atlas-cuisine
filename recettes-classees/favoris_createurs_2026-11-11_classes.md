@@ -1,7 +1,7 @@
 # 📲 Favoris TikTok du 11/11/2026, classés pour ATLAS
 
-> Relevé le 11/11/2026 : le favori ajouté depuis le 10/11 (compte connecté par le propriétaire) les vidéos d'@erynshow (profil ouvert par le propriétaire : recettes les plus vues ; visites de restaurants, voyages et charcuterie de porc non publiés) et les recettes populaires de @lerizjaune absentes d'ATLAS. Une page à la fois, sans contourner la protection de TikTok.
-> **82 vidéos de cuisine classées**, 2 écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.
+> Relevé le 11/11/2026 : le favori ajouté depuis le 10/11 (compte connecté par le propriétaire) les vidéos d'@erynshow (profil ouvert par le propriétaire : recettes les plus vues ; visites de restaurants, voyages et charcuterie de porc non publiés) les recettes populaires de @lerizjaune absentes d'ATLAS, et la cuisine italienne la plus vue (@chefmaxmariola, @giallozafferano, @charlene_et_francesca). Une page à la fois, sans contourner la protection de TikTok.
+> **133 vidéos de cuisine classées**, 2 écartées (hors recette ou légende trop vague). Les favoris hors cuisine ne sont pas relevés.
 > Liens crédités uniquement : les vidéos se lisent dans ATLAS par l'intégration officielle de TikTok ; rien n'est copié.
 > Triées par nombre d'enregistrements dans chaque rubrique.
 
@@ -69,10 +69,57 @@
 
 - [Rapide efficace](https://www.tiktok.com/@erynshow/video/7612715880786496790) · @erynshow
 
-## 🌍 Europe : Italie (4)
+## 🌍 Europe : Italie (51)
 
+- [Meatballs in sauce. Polpette al sugo.](https://www.tiktok.com/@chefmaxmariola/video/7203406118717115653) · @chefmaxmariola
+- [Tagliatelle with Lemon.](https://www.tiktok.com/@chefmaxmariola/video/7211915409719676166) · @chefmaxmariola
+- [Carbonara con tartufo bianco.](https://www.tiktok.com/@chefmaxmariola/video/7172154197243186438) · @chefmaxmariola · 🐖 porc probable
+- [Gricia.](https://www.tiktok.com/@chefmaxmariola/video/7253110465616694555) · @chefmaxmariola
+- [Amatriciana](https://www.tiktok.com/@chefmaxmariola/video/7154780400844426502) · @chefmaxmariola
+- [Pasta Alfredo.](https://www.tiktok.com/@chefmaxmariola/video/7292828979549981984) · @chefmaxmariola
+- [Pasta e patate. Pasta with potatoes.](https://www.tiktok.com/@chefmaxmariola/video/7165465284973841669) · @chefmaxmariola
+- [Gnocchi with tomato sauce.](https://www.tiktok.com/@chefmaxmariola/video/7162455620220718342) · @chefmaxmariola
+- [Spaghetti alla bolognese.](https://www.tiktok.com/@chefmaxmariola/video/7305833732018064673) · @chefmaxmariola
+- [Spaghetti with tomato basil sauce.](https://www.tiktok.com/@chefmaxmariola/video/7157626384527953157) · @chefmaxmariola
+- [Aglio, olio e peperoncino.](https://www.tiktok.com/@chefmaxmariola/video/7215996310057438469) · @chefmaxmariola
+- [Fettuccine burro e parmigiano con asparagi.](https://www.tiktok.com/@chefmaxmariola/video/7228238790626790683) · @chefmaxmariola
+- [La CARBONARA.](https://www.tiktok.com/@chefmaxmariola/video/7136878183244205318) · @chefmaxmariola · 🐖 porc probable
+- [Lasagna.](https://www.tiktok.com/@chefmaxmariola/video/7323985505081740577) · @chefmaxmariola
+- [Pici all’aglione.](https://www.tiktok.com/@chefmaxmariola/video/7298043806769843488) · @chefmaxmariola
+- [In cerca della pasta della domenica?💥❤️ ecco a voi non ringraziateci Andrini](https://www.tiktok.com/@giallozafferano/video/7238179917358222618) · @giallozafferano
+- [Cacio e pepe is a very cheap dish but, with black truffle, you feel rich!](https://www.tiktok.com/@chefmaxmariola/video/7234168952308436250) · @chefmaxmariola
+- [Pasta alla norma.](https://www.tiktok.com/@chefmaxmariola/video/7266844307598937376) · @chefmaxmariola
+- [Taste the smell of the sea. Spaghetti with clams | Spaghetti con le vongole.](https://www.tiktok.com/@chefmaxmariola/video/7149838585842109701) · @chefmaxmariola
+- [✨✋LA VRAI CARBONARA COMME EN ITALIE ✋✨](https://www.tiktok.com/@charlene_et_francesca/video/7398471628159470880) · @charlene_et_francesca · 🐖 porc probable
+- [Voilà la recette ⬇️⬇️ 👉 Étape 1 : Préparez tous les](https://www.tiktok.com/@charlene_et_francesca/video/7290144031898635552) · @charlene_et_francesca · 🐖 porc probable
+- [Filetto al pepe verde](https://www.tiktok.com/@chefmaxmariola/video/7221939730575887622) · @chefmaxmariola
+- [Vous l’aviez demandé, la voici… la recette de la LASAGNA 😍🤌🏼 Francesca nous explique comment préparer un…](https://www.tiktok.com/@charlene_et_francesca/video/7289415126611004705) · @charlene_et_francesca
+- [Okay, questa pasta è tutto quello che possiamo desiderare in questo momento🔥🍝 by Giallozafferano](https://www.tiktok.com/@giallozafferano/video/7248569772122606875) · @giallozafferano
+- [Una caprese così…](https://www.tiktok.com/@chefmaxmariola/video/7130297284088073477) · @chefmaxmariola
+- [Pasta alla puttanesca.](https://www.tiktok.com/@chefmaxmariola/video/7201826395998162181) · @chefmaxmariola
+- [Carpaccio di manzo con rucola e pomodorini.](https://www.tiktok.com/@chefmaxmariola/video/7243090200644160795) · @chefmaxmariola
+- [3 parole d’amore: paccheri, gamberi e pomodorini🦐🍅 una pasta buonissima e super cremosa](https://www.tiktok.com/@giallozafferano/video/7171809666366819589) · @giallozafferano
+- [🤌🏼🤌🏼 aujourd’hui c’est gnocchi fait maison 🤌🏼🤌🏼 Franchement, c’est simple !!!!! Vous avez deja testé ? 😍🇮🇹](https://www.tiktok.com/@charlene_et_francesca/video/7322045778455776545) · @charlene_et_francesca
+- [Pasta alla Pecorara.](https://www.tiktok.com/@chefmaxmariola/video/7170336095824104710) · @chefmaxmariola
+- [Many of you asked for it so I decided to try it, 😁 -> "Penne all'arrabbiata" in English. Pasta Queen my "](https://www.tiktok.com/@chefmaxmariola/video/7146265749819067654) · @chefmaxmariola
+- [✨✋LA VRAI BRUSCHETTA ITALIENNE”✨✋ 🍅 Bruschetta Pesto Burrata et Tomates Cerises Confites🌿](https://www.tiktok.com/@charlene_et_francesca/video/7397382932848971041) · @charlene_et_francesca
+- [Super pasta by by Giallozafferano](https://www.tiktok.com/@giallozafferano/video/7346273287737036065) · @giallozafferano
+- [Risotto ai funghi porcini.](https://www.tiktok.com/@chefmaxmariola/video/7319176671494442272) · @chefmaxmariola
+- [🧀une nouvelle recette🤤🤤🤤 dites nous en commentaire ce que vous en pensez 🤌🏼🤌🏼🤌🏼 et quelle recette vous…](https://www.tiktok.com/@charlene_et_francesca/video/7379579768804625696) · @charlene_et_francesca
+- [Rigatoni broccoli e salsiccia.](https://www.tiktok.com/@chefmaxmariola/video/7176597876804570373) · @chefmaxmariola
+- [Linguine al granchio blu.](https://www.tiktok.com/@chefmaxmariola/video/7281315412409634080) · @chefmaxmariola
+- [Pasta burro e alici.](https://www.tiktok.com/@chefmaxmariola/video/7188478738886151430) · @chefmaxmariola
+- [Alici marinate.](https://www.tiktok.com/@chefmaxmariola/video/7179154519396273413) · @chefmaxmariola
+- [Linguine con cozze e scarola.](https://www.tiktok.com/@chefmaxmariola/video/7249708134904663323) · @chefmaxmariola
+- [Polpo bollito | Boiled octopus](https://www.tiktok.com/@chefmaxmariola/video/7153292329690926342) · @chefmaxmariola
+- [Trippa alla romana.](https://www.tiktok.com/@chefmaxmariola/video/7178092823575579909) · @chefmaxmariola
+- [Pour pas jeter les pâtes qui vous restent en Italie on prépare ce plaît INCROYABLE🫠 Pasta, patate è…](https://www.tiktok.com/@charlene_et_francesca/video/7602197034715729174) · @charlene_et_francesca
 - [Dinguerie ces pâtes](https://www.tiktok.com/@erynshow/video/7603832228673555734) · @erynshow
 - [Simple efficace](https://www.tiktok.com/@erynshow/video/7682855665345367328) · @erynshow
+- [Zucca, gorgonzola e noci… 🧀🎃Ravioli o pura poesia? 🤤🧡 by Giallozafferano](https://www.tiktok.com/@giallozafferano/video/7192922317670993158) · @giallozafferano
+- [UOVA IN PURGATORIO - Littéralement, « les oeufs au purgatoire ». En Italie, une recette aux origines…](https://www.tiktok.com/@latavoladigael/video/7426059856005647648) · @latavoladigael
+- [Super panzerotti 😎 Benvenuto ❤️](https://www.tiktok.com/@giallozafferano/video/6917202968811015426) · @giallozafferano
+- [ci prepara la regina degli antipasti della Vigilia: l'impepata di cozze](https://www.tiktok.com/@giallozafferano/video/7180315728069840134) · @giallozafferano
 - [Pasta à la crevette 🦐 : -crevettes ( moi j’ai pris déjà cuite ) -oignon -ail -piment d’espelette -pesto…](https://www.tiktok.com/@erynshow/video/7657627646884384032) · @erynshow
 - [Gnocchi au gorgonzola : 🥰 Échalote Crème Gorgonzola Ail Gnocchi churros: Beurre fondu Sucre vanillé…](https://www.tiktok.com/@erynshow/video/7658739670422949152) · @erynshow
 
@@ -94,8 +141,9 @@
 - [Réponse à snif le camembert](https://www.tiktok.com/@erynshow/video/7649013606276762912) · @erynshow
 - [Omgg hâte de voir c’est quoi vos meilleurs fromages ?](https://www.tiktok.com/@erynshow/video/7648646487194242337) · @erynshow
 
-## 🍔 Street food & fast-food fait maison (2)
+## 🍔 Street food & fast-food fait maison (3)
 
+- [Not a boring sandwich! Try a crispy caprese! 😁](https://www.tiktok.com/@chefmaxmariola/video/7310663590455905569) · @chefmaxmariola
 - [SANDWICH DE NOËL VERSION BROCHETTE BEOUF FROMAGE WHAT](https://www.tiktok.com/@erynshow/video/7597169119452089622) · @erynshow
 - [Aujourd’hui je vous montre comment faire un magnifique sandwich Japonais : le KATSU SANDO ! 😋😍](https://www.tiktok.com/@lerizjaune/video/7259423917947850010) · @lerizjaune · 🐖 porc probable
 
@@ -109,8 +157,9 @@
 - [Si tu veux te régaler, je te propose ce soir ces délicieuses ailes de poulet à la sauce aigre-douce 🔥😋](https://www.tiktok.com/@lerizjaune/video/7458702540335484182) · @lerizjaune
 - [Aujourd’hui je te montre comment faire ta propre sauce sriracha 🌶️🌶️🥵](https://www.tiktok.com/@lerizjaune/video/7374080251342671137) · @lerizjaune
 
-## 🍰 Desserts & pâtisserie (8)
+## 🍰 Desserts & pâtisserie (9)
 
+- [5 minuti e lo spumone al caffè è cosa fatta🌿💥❤️ & Cate](https://www.tiktok.com/@giallozafferano/video/7226305803144236315) · @giallozafferano
 - [Des mochis glacés ça vous tente ?](https://www.tiktok.com/@lerizjaune/video/7398951296541232417) · @lerizjaune
 - [J’adore ce dessert bien frais la omg 3](https://www.tiktok.com/@erynshow/video/7148521657177492741) · @erynshow
 - [Qui a une autre recette sorbet coco ?](https://www.tiktok.com/@erynshow/video/7592699798273182998) · @erynshow
@@ -125,11 +174,13 @@
 - [Vous vous êtes toujours demandé comment faire un BUBBLE TEA maison?? On vous montre comment ce soir!! 🧋😋](https://www.tiktok.com/@lerizjaune/video/7214895878279105798) · @lerizjaune
 - [La meilleure purée](https://www.tiktok.com/@erynshow/video/7600122349500796182) · @erynshow
 
-## ❓ À vérifier (titre trop vague) (8)
+## ❓ À vérifier (titre trop vague) (10)
 
 - [Pour mes FANS de ONE PIECE (et les autres aussi 😉) voici un des plats préférés de LUFFY : L’OS À VIANDE 🤤🤤🤤](https://www.tiktok.com/@lerizjaune/video/7198575552532450566) · @lerizjaune
+- [Se Braccio di Ferro vedesse questapasta, di sicuro non potrebbe più farne a meno! 💪🏻💚 Correte a provarla! 😋🌱](https://www.tiktok.com/@giallozafferano/video/7137244062121250054) · @giallozafferano
 - [Encore une recette super simple pour vous ce soir : du poulet sauté à la sauce soja 😋👌](https://www.tiktok.com/@lerizjaune/video/7463897092830792982) · @lerizjaune
 - [Mamammaa](https://www.tiktok.com/@erynshow/video/7246757643987979546) · @erynshow · 🐖 porc probable
+- [🌰 Profumo di castagne e morbido ripieno…la ricetta più golosa che vedrete oggi🔥🤤 by Giallozafferano](https://www.tiktok.com/@giallozafferano/video/7291614163955092769) · @giallozafferano
 - [Miamm](https://www.tiktok.com/@erynshow/video/7609030859584343318) · @erynshow
 - [Voici une recette super simple et avec peu d’](https://www.tiktok.com/@lerizjaune/video/7696553193961999648) · @lerizjaune
 - [Activité de la night quand même eh t’as des idées ? 😭](https://www.tiktok.com/@erynshow/video/7654334237436366112) · @erynshow
