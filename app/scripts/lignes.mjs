@@ -3,7 +3,7 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
-const PLAFOND = Number(process.argv[2] ?? NaN) || 450; // abaissé le 12/11 après découpage (617 → 428) : marge de 22 lignes
+const PLAFOND = Number(process.argv[2] ?? NaN) || 25; // abaissé le 13/11 après découpage complet (617 → 19) : marge de 6 lignes
 const files = [];
 const walk = (d) => { for (const n of readdirSync(d)) { const p = join(d, n); if (statSync(p).isDirectory()) { if (n !== "data") walk(p); } else if (/\.(ts|tsx)$/.test(n)) files.push(p); } };
 walk("src");
