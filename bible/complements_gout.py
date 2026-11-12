@@ -67,6 +67,8 @@ ACIDE = {
     "falafels": ("1|citron (sauce tahini)|Citron|1", "La sauce : 3 c. à s. de tahini, le jus du citron, de l'eau froide cuillère par cuillère, sel ; fouettée, elle devient crémeuse et pâle."),
     "rigatoni_brocoli_saucisse": ("1|citron (zeste et un trait de jus)|Citron|1?", "Un zeste et un trait de citron à la fin réveillent le brocoli."),
     "ravioli_courge_gorgonzola": ("1|citron (zeste)|Citron|1?", "Un zeste de citron râpé sur les assiettes allège la sauce au gorgonzola."),
+    "pintade_choux": ("1 c. à s.|de vinaigre de cidre (dans le chou)|" + CIDRE + "|1?", "Un trait de vinaigre de cidre dans le chou en fin de cuisson : il réveille le braisé."),
+    "pigeon_petits_pois": ("1/2|citron (quelques gouttes dans le jus)|Citron|1?", "Quelques gouttes de citron dans le jus réduit : il coupe la richesse du pigeon."),
     # 11/11/2026 : Le Riz Jaune, Eryn (acides neutres : pas de trace d'alcool)
     "boeuf_sauce_huitre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre en fin de cuisson réveille la sauce d'huître."),
     "boeuf_gingembre": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre au dernier moment fait ressortir le gingembre."),

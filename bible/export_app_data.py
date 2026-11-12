@@ -17,6 +17,18 @@ for _d in RECIPES:
         if not any((x[2] or "") == _r and x[1] == _l for x in _d["ing"]):
             _d["ing"] = list(_d["ing"]) + [(_q, _l, _r, int(_w.rstrip("?") or 1), _w.endswith("?"))]
 assert set(_ADD_ING) <= {d["id"] for d in RECIPES}, set(_ADD_ING) - {d["id"] for d in RECIPES}
+# audit fin gourmet (12/11/2026) : étapes des classiques régionaux, accords mets-vins régionaux, régions unifiées
+from complements_fin_gourmet import ETAPES as _ETAPES_FG, ASTUCES as _ASTUCES_FG, accords as _accords_fg, region as _region_fg
+_BYF = {d["id"]: d for d in RECIPES}
+assert not (set(_ETAPES_FG) | set(_ASTUCES_FG)) - set(_BYF), (set(_ETAPES_FG) | set(_ASTUCES_FG)) - set(_BYF)
+for _id, _st in _ETAPES_FG.items(): _BYF[_id]["steps"] = list(_st)
+for _id, _ts in _ASTUCES_FG.items(): _BYF[_id]["astuces"] = list(_BYF[_id]["astuces"]) + [t for t in _ts if t not in _BYF[_id]["astuces"]]
+for _d in RECIPES:
+    _d["region"] = _region_fg(_d)
+    _ac = _accords_fg(_d) if not (_d["accords_a"] and _d["accords_sa"]) else None
+    if _ac:
+        if not _d["accords_a"]: _d["accords_a"] = list(_ac[0])
+        if not _d["accords_sa"]: _d["accords_sa"] = list(_ac[1])
 # audit gourmet §4.2 : l'acidité que chaque cuisine donne au plat (dans la recette ou à table), ou la raison de s'en passer
 from complements_gout import ACIDE as _ACIDE, EXTRA as _EXTRA_G, SALADE as _SALADE, SANS_ACIDE as _SANS_ACIDE
 _BYB = {d["id"]: d for d in RECIPES}

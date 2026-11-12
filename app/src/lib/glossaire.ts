@@ -95,6 +95,27 @@ export const GLOSSAIRE: (Term & { rx: RegExp })[] = [
   { term: "Chiffonnade", rx: /chiffonnade/, def: "Feuilles roulées sur elles-mêmes puis taillées en lanières très fines." },
   { term: "Macérer", rx: /macer/, def: "Laisser tremper des fruits dans du sucre, un sirop ou un jus pour qu'ils s'en imprègnent." },
   { term: "En papillote", rx: /papillote/, def: "Cuire dans un paquet fermé de papier cuisson : l'aliment cuit à la vapeur de son propre jus.", tech: "vapeur-papillote" },
+  // audit fin gourmet, cuisine française (12/11/2026) : les gestes de la cuisine classique qui manquaient
+  { term: "Monter au beurre", rx: /monte[rz]? au beurre|beurre froid en (morceaux|tournant)|\*\*monter\.\*\* hors du feu/,
+    def: "Hors du feu, ajouter du beurre froid en petits morceaux en tournant la casserole : la sauce devient brillante, liée et ronde." },
+  { term: "Chinoiser", rx: /au chinois|chinoiser/, def: "Passer une sauce ou un bouillon dans un chinois (passoire conique très fine) pour qu'il soit parfaitement lisse." },
+  { term: "Réduire à glace / à sec", rx: /reduit a sec|reduits? aux trois quarts|a glace\b/,
+    def: "Faire réduire un liquide (vin, vinaigre, fond) presque entièrement : il ne reste qu'un sirop qui concentre tout le goût." },
+  { term: "Brider", rx: /\bbrid(er|e|es|ees|ez)\b/, def: "Ficeler une volaille (cuisses et ailes contre le corps) pour qu'elle garde sa forme et cuise régulièrement." },
+  { term: "Escaloper", rx: /en escalopes|escaloper/, def: "Couper en tranches obliques assez larges (ris de veau, foie gras, champignons)." },
+  { term: "Monter les blancs", rx: /blancs? (montes?|en neige)|bec d.oiseau|montes? serres?/,
+    def: "Fouetter les blancs d'œufs jusqu'à une mousse ferme ; « bec d'oiseau » : la pointe qui reste sur le fouet se courbe sans tomber." },
+  { term: "Beurre clarifié", rx: /beurre clarifie/, def: "Beurre fondu dont on a retiré le petit-lait blanc : il chauffe plus fort sans brûler." },
+  { term: "Fumet", rx: /\bfumet/, def: "Bouillon court de poisson (arêtes, échalote, vin blanc) cuit 20 à 30 min : la base des sauces au poisson." },
+  { term: "Fond", rx: /\bfond (brun|blanc|de veau|de volaille)/,
+    def: "Bouillon d'os et de légumes cuit longuement, sans sel : « brun » si les os sont rôtis, « blanc » sinon. La base des sauces françaises." },
+  { term: "Meunière", rx: /meuniere/, def: "Poisson fariné, cuit au beurre moussant, servi avec ce beurre devenu noisette, du citron et du persil." },
+  { term: "Crème anglaise (à 83 °C)", rx: /creme anglaise|cuit a 83|a 83 .c/,
+    def: "Lait, jaunes et sucre cuits en remuant sans bouillir jusqu'à 83 °C : la crème nappe la cuillère et un doigt y trace un sillon net." },
+  { term: "Luter", rx: /\blut(er|e|es)\b|soude d.un boudin de pate/, def: "Souder le couvercle d'une cocotte avec un boudin de pâte farine-eau : la vapeur reste dedans (baeckeoffe, daubes)." },
+  { term: "Dessécher (une panade)", rx: /desseche/, def: "Remuer sur le feu la pâte farine-liquide pour en chasser l'eau : elle se détache des parois et un film se forme au fond." },
+  { term: "Quadriller", rx: /quadrill|en croisillons serres/, def: "Entailler la peau (magret) ou marquer une viande au gril en croisillons réguliers." },
+  { term: "Dégorger (les ris, les arêtes)", rx: /\*\*degorger/, def: "Faire tremper dans l'eau froide pour retirer le sang et les impuretés (ris de veau, arêtes de poisson)." },
 ];
 
 /** Mots de cuisine employés dans un texte (étapes d'une recette). */

@@ -132,3 +132,26 @@ console.log("   frigo : pâte brisée", nPb, "idées (plat + dessert) · bœuf h
 check("122 frigo : ≥ 15 idées avec une pâte brisée toute prête (dont les fiches à pâte maison), ≥ 30 plats au bœuf haché, "
   + "doublons du référentiel reconnus, élargissement quand le service est épuisé, produit frais avant le transformé",
   nPb >= 15 && quiche && nBoeuf >= 30 && gombo && exhaustedEmpty && search122);
+
+// 123 audit « fin gourmet, cuisine française » (12/11/2026) : les classiques, les fonds et sauces dérivées, le gibier et
+// les abats, la grande pâtisserie ; les classiques régionaux au niveau étalon ; un accord régional pour chaque plat de
+// terroir ; des régions unifiées ; les gestes de la cuisine classique au lexique.
+import detail123 from "../src/data/recipes_detail.json";
+import { mergeDetails as md123 } from "../src/lib/data";
+import { GLOSSAIRE as G123 } from "../src/lib/glossaire";
+md123(detail123 as never);
+const FG_IDS = ["steak_au_poivre", "canard_orange", "tete_de_veau_gribiche", "pate_en_croute", "foie_gras_mi_cuit", "pommes_dauphine", "pommes_anna", "pommes_boulangere",
+  "fond_brun_veau", "fond_blanc_volaille", "fumet_poisson", "court_bouillon", "sauce_mornay", "sauce_bordelaise", "sauce_choron", "sauce_ravigote", "sauce_soubise", "sauce_poivrade",
+  "ris_de_veau_morilles", "rognons_veau_moutarde", "foie_veau_persillade", "civet_chevreuil", "pigeon_petits_pois", "raie_beurre_noisette_capres", "truite_amandes",
+  "maquereaux_vin_blanc", "homard_grille_beurre", "langoustines_mayonnaise", "pate_a_choux", "religieuse_chocolat", "saint_honore", "opera", "peche_melba", "vacherin_glace", "pain_aux_raisins"];
+const missing123 = FG_IDS.filter((id) => !RECIPE_BY_ID[id]);
+const ETALONS_FG = ["moules_marinieres", "sole_normande", "bouchees_reine", "blanquette_poulet", "baeckeoffe_volaille", "pissaladiere", "quenelles_nantua_simple", "croque_monsieur", "saint_jacques_poelees"];
+const shortFG = ETALONS_FG.filter((id) => (RECIPE_BY_ID[id]?.steps.length ?? 0) < 4);
+const terroir = RECIPES.filter((r) => r.macro === "france" && r.role === "plat" && !/enfants|quotidien|Anti-gaspi|Food fusion/.test(r.regionPath.join(" ")));
+const sansAccord = terroir.filter((r) => !r.drinksAlcohol.length || !r.drinksNoAlcohol.length);
+const regionsFR = new Set(RECIPES.filter((r) => r.macro === "france").map((r) => r.regionPath[1] ?? "—"));
+const termsFG = ["Monter au beurre", "Chinoiser", "Fumet", "Meunière", "Luter"].every((t) => G123.some((g) => g.term === t));
+console.log("   fin gourmet : classiques manquants", missing123.length, "· étalons courts", shortFG.join(",") || 0, "· plats de terroir sans accord", sansAccord.length, "/", terroir.length,
+  "· régions FR", regionsFR.size);
+check("123 fin gourmet : classiques, fonds et sauces, gibier et abats, grande pâtisserie présents ; classiques régionaux en ≥ 4 étapes ; accord régional sur chaque plat de terroir ; régions unifiées ; gestes au lexique",
+  !missing123.length && !shortFG.length && !sansAccord.length && !regionsFR.has("Bourgogne") && !regionsFR.has("Franche-Comté") && !regionsFR.has("—") && termsFG);
