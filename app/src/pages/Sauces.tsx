@@ -70,6 +70,7 @@ export default function Sauces() {
       <div className="card pad charte">
         <strong>La charte ATLAS des sauces</strong> : aucun E-numéro, conservateur, exhausteur ou arôme artificiel ; 8 ingrédients maximum, trouvables en supermarché ; une durée de conservation honnête ; une version sans œuf quand c'est possible ; sans porc et sans alcool garantis (vinaigre de cidre plutôt que de vin pour les profils stricts).
       </div>
+      <h2 className="sr">Les sauces</h2>
       <MoreGrid items={list} />
       <Section title="Crée ta sauce (Sauce Builder)"><Builder /></Section>
       {tiktok.length > 0 && (

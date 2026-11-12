@@ -15,6 +15,16 @@ import type { Recipe } from "../lib/types";
 const KINDS: [string, (r: Recipe) => boolean][] = [["Entrées", (r) => r.role === "entree"], ["Plats", (r) => r.role === "plat"], ["Desserts", (r) => r.role === "dessert"], ["Boissons", (r) => r.role === "boisson"], ["Sauces & bases", (r) => r.kind === "Sauce" || r.kind === "Base"]];
 import { useStore } from "../lib/store";
 
+// recherche sans résultat (audit UI/UX 12/11) : des pistes plutôt qu'une impasse
+// le nom d'une rubrique mène à la rubrique (audit UI/UX 12/11 : « street food » ne montrait que des vidéos)
+const RUBRIQUES: [RegExp, string, string, string][] = [
+  [/street|cuisine de rue|food truck/, "/street-food", "taco", "Street food"], [/pique.?nique|gamelle|lunch ?box/, "/pique-nique", "leaf", "Pique-nique et gamelle"],
+  [/zero.?dechet|anti.?gaspi/, "/zero-dechet", "recycle", "Zéro déchet"], [/fetes?|noel|reveillon|anniversaire|ramadan|aid/, "/fetes", "cake", "Fêtes et menus"],
+  [/enfants?|bebe|diversification/, "/enfants", "kid", "Enfants"], [/sauces?/, "/sauces", "sauce", "Sauces maison"], [/pains?|boulang/, "/pains", "bread", "Pains et pâtes"],
+  [/technique|geste|apprendre/, "/techniques", "knife", "Techniques"], [/restes?|de la veille/, "/restes", "plate", "Cuisine des restes"],
+];
+const SUGGESTIONS = ["poulet", "rapide", "végétarien", "pâtes", "soupe", "street food", "gâteau", "sans four"];
+
 export default function Search({ q }: { q: string }) {
   const IMPORT_LIBRARY = useImportLibrary();
   const [v, setV] = useState(q);
@@ -44,12 +54,17 @@ export default function Search({ q }: { q: string }) {
   return (
     <Page title="Recherche" sub="Insensible aux accents et aux petites fautes : « tagine », « boeuf », « pad thai » marchent aussi.">
       <form role="search" className="searchbar" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(v)}`); }}>
-        <input type="search" value={v} onChange={(e) => setV(e.target.value)} autoFocus aria-label="Rechercher" placeholder="tajine, naan, sauce blanche, crêpes…" />
+        <input type="search" enterKeyHint="search" value={v} onChange={(e) => setV(e.target.value)} autoFocus aria-label="Rechercher" placeholder="tajine, naan, sauce blanche, crêpes…" />
         <button className="btn" type="submit">Chercher</button>
       </form>
       {intents.length > 0 && <p className="small understood"><Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}{rest && !relaxed ? ` · « ${rest} »` : ""}</p>}
       {relaxed && <p className="small">Rien pour « {rest} » : voici toutes les recettes {intents.map((it) => it.label).join(", ")}.</p>}
-      {q && !total && <Empty>Rien trouvé pour « {q} ». Essaie un ingrédient dans <a href={href("/frigo")}>Avec ce que j'ai</a>.</Empty>}
+      {q && !total && <Empty>Rien trouvé pour « {q} ». Vérifie l'orthographe, ou essaie :
+        <div className="chips" role="group" aria-label="Recherches suggérées">{SUGGESTIONS.map((x) => <a key={x} className="chip" href={href(`/recherche?q=${encodeURIComponent(x)}`)}>{x}</a>)}</div>
+        <p className="small">Tu as des ingrédients ? <a href={href("/frigo")}>Avec ce que j'ai</a> propose des plats dès un seul.
+          Ou parcours <a href={href("/recettes")}>toutes les recettes</a> avec leurs filtres.</p></Empty>}
+      {RUBRIQUES.filter(([rx]) => rx.test(norm(q))).length > 0 && <div className="links rubrique-hits">{RUBRIQUES.filter(([rx]) => rx.test(norm(q))).map(([, to, icon, label]) =>
+        <a key={to} className="pill" href={href(to)}><Icon name={icon} size={18} className="ic-inline" /> La rubrique {label}</a>)}</div>}
       {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}><Icon name={m.icon} size={18} className="ic-inline" /> {m.name}</a>)}</div></Section>}
       {/\b(restes?|gaspi|anti gaspi|de la veille|rassis)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> Des restes à utiliser ? <a href={href("/restes")}>La cuisine des restes</a> part de ce que tu as déjà cuit.</p>}
       {intents.some((it) => it.id === "emporter") && <p className="card pad restes-link"><Icon name="leaf" size={20} className="ic-inline" /> <a href={href("/pique-nique")}>La rubrique Pique-nique et gamelle</a> : paniers tout faits, sécurité au soleil, sac, zéro déchet.</p>}

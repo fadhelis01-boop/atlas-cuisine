@@ -1,6 +1,6 @@
 import { CardMap } from "./OriginMap";
 import { Icon } from "./icons";
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ALLERGENS, MACRO_BY_ID } from "../lib/data";
 import { evaluate, evaluateLines, verdict, type Verdict } from "../lib/engine";
 import { goBack, href } from "../lib/router";
@@ -76,9 +76,11 @@ export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
 
 export function Grid({ children }: { children: ReactNode }) { return <div className="grid">{children}</div>; }
 
+const slug = (t: string) => "s-" + t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+
 export function Section({ title, children, more, id }: { title: ReactNode; children: ReactNode; more?: ReactNode; id?: string }) {
   return (
-    <section className="section" id={id}>
+    <section className="section" id={id ?? (typeof title === "string" ? slug(title) : undefined)}>
       <div className="section-head"><h2>{title}</h2>{more}</div>
       {children}
     </section>
@@ -99,6 +101,7 @@ export function Page({ title, sub, children, back, photo }: { title: string; sub
         </figure>
       ) : <PatternBand seed={title}><h1>{title}</h1></PatternBand>}
       {sub && <p className="lead">{sub}</p>}
+      <PageToc />
       {children}
     </main>
   );
@@ -135,4 +138,38 @@ export function MoreGrid({ items, step = 12, note }: { items: Recipe[]; step?: n
 export function MoreList<T>({ items, step = 15, render, className = "links-list" }: { items: T[]; step?: number; render: (x: T) => ReactNode; className?: string }) {
   const { shown, more } = useMore(items, step);
   return <><ul className={className}>{shown.map(render)}</ul>{more}</>;
+}
+
+/** Sommaire « Sur cette page » (audit UI/UX 12/11) : les rubriques longues (zéro déchet, pique-nique, enfants…) font 9 à
+ *  11 écrans. Dès 4 sections titrées, une rangée de liens mène à chacune ; rien sur les pages courtes. */
+function PageToc() {
+  const [items, setItems] = useState<[string, string][]>([]);
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const main = ref.current?.closest("main");
+    if (!main) return;
+    const read = () => {
+      const next = [...main.querySelectorAll<HTMLElement>(":scope > section.section[id] > .section-head > h2")]
+        .map((h) => [h.closest("section")!.id, (h.textContent ?? "").replace(/\s*\(\d+\)\s*$/, "").trim()] as [string, string]);
+      setItems((cur) => (JSON.stringify(cur) === JSON.stringify(next) ? cur : next));
+    };
+    read();
+    if (typeof MutationObserver === "undefined") return; // environnements sans observateur (tests jsdom)
+    const mo = new MutationObserver(read);
+    mo.observe(main, { childList: true });
+    return () => mo.disconnect();
+  }, []);
+  return (
+    <nav ref={ref} className={items.length >= 4 ? "page-toc" : "page-toc empty"} aria-label="Sur cette page">
+      {items.length >= 4 && items.map(([id, t]) => (
+        <a key={id} className="chip" href={`#${id}`}
+          onClick={(e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>{t}</a>))}
+    </nav>
+  );
+}
+
+/** Repli paresseux : le contenu n'est construit qu'à la première ouverture (Fêtes : 3 750 éléments repliés à l'ouverture de la page). */
+export function LazyDetails({ className, summary, children }: { className?: string; summary: ReactNode; children: ReactNode }) {
+  const [opened, setOpened] = useState(false);
+  return <details className={className} onToggle={(e) => { if (e.currentTarget.open) setOpened(true); }}><summary>{summary}</summary>{opened && children}</details>;
 }

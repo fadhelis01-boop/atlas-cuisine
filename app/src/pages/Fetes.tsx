@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { FETES, PAR_CONVIVE } from "../lib/content";
 import { go, href } from "../lib/router";
-import { Grid, Page, RecipeCard, Section, useVisible, MoreList } from "../components/ui";
+import { Grid, LazyDetails, Page, RecipeCard, Section, useVisible, MoreList } from "../components/ui";
 import { Credit, Photo, photoOf } from "../components/photo";
 
 const FETE_PHOTO: Record<string, string> = {
@@ -42,12 +42,11 @@ export default function Fetes() {
           const recs = f.ideas.map((id) => RECIPE_BY_ID[id]).filter(Boolean);
           const tagged = RECIPES.filter((r) => r.fetes.includes(f.tag) && !f.ideas.includes(r.id));
           return (
-            <details key={f.name} className="card pad fete">
-              <summary><strong><Icon name="cake" size={20} className="ic-inline" /> {f.name}</strong> <span className="meta">· {f.when}</span></summary>
+            <LazyDetails key={f.name} className="card pad fete" summary={<><strong><Icon name="cake" size={20} className="ic-inline" /> {f.name}</strong> <span className="meta">· {f.when}</span></>}>
               {photoOf(`fete/${FETE_PHOTO[f.name]}`) && <figure className="hero-fig"><div className="photo-band"><Photo k={`fete/${FETE_PHOTO[f.name]}`} alt="" sizes="(min-width: 900px) 1000px, 100vw" /></div><figcaption><Credit k={`fete/${FETE_PHOTO[f.name]}`} note={false} /></figcaption></figure>}
               <p>{f.traditions}</p>
               <Grid>{[...recs, ...tagged].slice(0, 8).map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>
-            </details>
+            </LazyDetails>
           );
         })}
       </Section>

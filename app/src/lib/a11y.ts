@@ -20,6 +20,7 @@ function announce(text: string) {
 export function screenTitle(root: ParentNode = document): string | null {
   const h = root.querySelector("main h1");
   if (!h) return null;
+  if ((h as HTMLElement).dataset.title) return (h as HTMLElement).dataset.title!; // titre d'onglet explicite (accueil : la phrase du moment n'est pas un titre)
   const c = h.cloneNode(true) as HTMLElement;
   c.querySelectorAll(".meta, .sr").forEach((x) => x.remove());
   const t = c.textContent?.replace(/\s+/g, " ").trim();

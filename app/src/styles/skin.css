@@ -467,3 +467,19 @@ body:has(.cook-sticky) .update { bottom: calc(144px + env(safe-area-inset-bottom
 .idea-note p { margin: 2px 0; }
 .menu-slot { margin-bottom: 16px; }
 .menu-slot > .row { justify-content: space-between; align-items: center; }
+
+/* audit UI/UX 12/11 : le bouton Profil fixe (en haut à droite) ne recouvre plus le sommaire collant de la fiche */
+@media (max-width: 899px) { .recipe-toc { padding-right: 56px; } }
+
+/* audit UI/UX 12/11/2026 */
+.page-toc { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 4px 0 10px; }
+.page-toc.empty { display: none; }
+.page-toc::-webkit-scrollbar { display: none; }
+.page-toc .chip { flex: none; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+main .section[id] { scroll-margin-top: 16px; }
+/* gestes et badges touchés avec les mains mouillées : 44 px */
+.steps .geste > summary { min-height: 44px; }
+.untested-line .badge { min-height: 44px; }
+.table th a, .table td a { display: inline-block; padding: 10px 0; }
+/* barre « Cuisiner » plus fine : la fiche garde plus de place pour le texte */
+@media (max-width: 899px) { .cook-sticky { padding: 4px 12px; } .cook-sticky .btn { min-height: 44px; } }

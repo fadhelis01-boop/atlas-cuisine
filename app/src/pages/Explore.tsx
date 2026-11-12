@@ -31,7 +31,7 @@ export default function Explore() {
   return (
     <Page photo="rubrique/explorer" title="Explorer" sub="Les cuisines du monde classées par région, et les rubriques transversales.">
       <form role="search" className="searchbar" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(q)}`); }}>
-        <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Nom de plat, pays, ingrédient" aria-label="Rechercher" />
+        <input type="search" enterKeyHint="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Nom de plat, pays, ingrédient" aria-label="Rechercher" />
         <button className="btn" type="submit">Chercher</button>
       </form>
       <Section title="L'atlas des cuisines" more={<button className="btn small ghost" onClick={() => setList(!list)}>{list ? "Vue cartes" : "Vue liste"}</button>}>

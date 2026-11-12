@@ -53,7 +53,8 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
   const reset = () => { setType(null); setTime(null); setLevel(null); setCheap(false); setOcc(null); setMacro(null); setVeg(false); setVideo(false); setKids(false); setQ(""); };
   return (
     <Page title="Toutes les recettes" sub={`${visible.length} recettes adaptées à ton foyer. Combine les filtres : « plat, 30 min, facile, pas cher » ou « dessert pour Noël ».`} back="/explorer">
-      <div className="searchbar"><input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Nom, ingrédient, région…" aria-label="Chercher dans les recettes" /></div>
+      <div className="searchbar"><input type="search"
+        enterKeyHint="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Nom, ingrédient, région…" aria-label="Chercher dans les recettes" /></div>
       <div className="filters">
         <div className="chips chips-scroll" role="group" aria-label="Type de plat"><Chip on={!type} onClick={() => setType(null)}>Tout</Chip>{TYPES.map(([k, l]) => <Chip key={k} on={type === k} onClick={() => setType(type === k ? null : k)}>{l}</Chip>)}</div>
         <div className="chips chips-scroll" role="group" aria-label="Temps total">{TIMES.map(([k, l, v]) => <Chip key={k} on={time === v} onClick={() => setTime(time === v ? null : v)}><Icon name="timer" size={16} className="ic-inline" /> {l}</Chip>)}
@@ -67,6 +68,7 @@ export default function Catalogue({ q0 = "" }: { q0?: string }) {
           <button className="btn ghost small" onClick={reset}>Tout effacer</button>
         </div>
       </div>
+      <h2 className="sr">Résultats</h2>
       <p className="meta" role="status">{list.length} recette{list.length > 1 ? "s" : ""}</p>
       {list.length ? <Grid>{list.slice(0, limit).map((r) => <RecipeCard key={r.id} r={r} />)}</Grid> : <Empty>Aucune recette avec tous ces filtres : retire-en un.</Empty>}
       {list.length > limit && <button className="btn big" onClick={() => setLimit(limit + 48)}>Voir {Math.min(48, list.length - limit)} recettes de plus</button>}

@@ -82,7 +82,8 @@ export function DictionaryPage({ q0 = "" }: { q0?: string }) {
   if (!dico) return <Page title="Dictionnaire des ingrédients" photo="rubrique/explorer">{<p>Chargement…</p>}</Page>;
   return (
     <Page title="Dictionnaire des ingrédients" sub={`${entries.length} ingrédients expliqués et illustrés : ce que c'est, comment l'utiliser, la saison, où le trouver, par quoi le remplacer, et les recettes qui l'utilisent.`} back="/explorer">
-      <div className="searchbar"><input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Passata, soumbala, galanga, tahini…" aria-label="Chercher un ingrédient" /></div>
+      <div className="searchbar"><input type="search"
+        enterKeyHint="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Passata, soumbala, galanga, tahini…" aria-label="Chercher un ingrédient" /></div>
       <div className="chips chips-scroll" role="group" aria-label="Familles">
         <button className={`chip ${seasonOnly ? "on" : ""}`} aria-pressed={seasonOnly} onClick={() => setSeasonOnly(!seasonOnly)}><Icon name="sprout" size={18} /> De saison ce mois-ci</button>
         <button className={`chip ${!sec ? "on" : ""}`} aria-pressed={!sec} onClick={() => setSec(null)}>Tout</button>

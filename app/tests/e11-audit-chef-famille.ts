@@ -234,3 +234,21 @@ console.log("   street food : fiches", SID127.size, "· absentes", missing127.jo
   "· classiques sans vidéo", sansVideo127.join(",") || 0, "· avec porc", porc127.join(",") || 0, "· carte sur vignettes", cardMap127);
 check("127 street food : rubrique à familles (≥ 130 fiches), classiques du monde présents avec leur vidéo TikTok, sans porc ; mini-carte sur les vignettes",
   SID127.size >= 130 && !missing127.length && !petites127.length && !soirees127.length && !sansVideo127.length && !porc127.length && cardMap127);
+
+// 128 audit UI/UX senior (12/11/2026, bible/AUDIT_UI_UX_2026-11-12.md) : sommaire sur les pages longues, Fêtes allégée
+// (contenu replié construit à l'ouverture), recherche sans impasse (suggestions, rubriques), titre d'onglet de l'accueil,
+// bouton Profil qui ne recouvre plus le sommaire de la fiche, cibles de 44 px pour les gestes.
+const src128 = (f: string) => rf127(f, "utf8");
+const ui128 = src128("src/components/ui.tsx"), search128 = src128("src/pages/Search.tsx"), css128 = src128("src/styles/skin.css");
+const ok128 = {
+  toc: /<PageToc \/>/.test(ui128) && /items\.length >= 4/.test(ui128),
+  fetes: /<LazyDetails/.test(src128("src/pages/Fetes.tsx")) && !/<details key=\{f\.name\}/.test(src128("src/pages/Fetes.tsx")),
+  vide: /SUGGESTIONS/.test(search128) && /RUBRIQUES/.test(search128) && /street/.test(search128),
+  titre: /data-title="Accueil"/.test(src128("src/pages/Home.tsx")) && /dataset\.title/.test(src128("src/lib/a11y.ts")),
+  profil: /\.recipe-toc \{ padding-right: 56px; \}/.test(css128),
+  cibles: /\.steps \.geste > summary \{ min-height: 44px; \}/.test(css128),
+  clavier: ["Home", "Search", "Explore", "Catalogue", "Dictionnaire"].every((p) => /enterKeyHint="search"/.test(src128(`src/pages/${p}.tsx`))),
+};
+console.log("   UI/UX :", JSON.stringify(ok128));
+check("128 UI/UX : sommaire des pages longues, Fêtes allégée, recherche sans impasse, titre d'accueil, sommaire de fiche dégagé, cibles 44 px, clavier « Rechercher »",
+  Object.values(ok128).every(Boolean));

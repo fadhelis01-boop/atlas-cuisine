@@ -208,10 +208,10 @@ export default function Home() {
       <form className="hero hero-skin" role="search" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(q)}`); }}>
         <div className="hero-copy">
           <p className="hero-hi">{g.hi}</p>
-          <h1>{g.line}</h1>
+          <h1 data-title="Accueil">{g.line}</h1>
           <p className="hero-sub">{RECIPES.length} recettes du monde, faites maison : de la sauce frites au fraisier, du thiéboudienne au ramen.</p>
           <div className="searchbar">
-            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Un plat, une envie… (tajine, rapide, végé)" aria-label="Rechercher une recette" />
+            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Plat, envie, ingrédient…" enterKeyHint="search" aria-label="Rechercher une recette" />
             <button className="btn" type="submit">Chercher</button>
           </div>
           {(p.noPork || p.alcohol !== "allowed" || p.allergens.length > 0 || p.vegetarian) && (
