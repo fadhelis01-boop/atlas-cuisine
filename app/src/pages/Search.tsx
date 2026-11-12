@@ -12,16 +12,27 @@ import { fuzzyRecipes, parseIntents } from "../lib/intents";
 import type { Recipe } from "../lib/types";
 
 // filtres repliables (audit UX 3) : une seule recherche, sans changer de page
-const KINDS: [string, (r: Recipe) => boolean][] = [["Entrées", (r) => r.role === "entree"], ["Plats", (r) => r.role === "plat"], ["Desserts", (r) => r.role === "dessert"], ["Boissons", (r) => r.role === "boisson"], ["Sauces & bases", (r) => r.kind === "Sauce" || r.kind === "Base"]];
+const KINDS: [string, (r: Recipe) => boolean][] = [
+  ["Entrées", (r) => r.role === "entree"],
+  ["Plats", (r) => r.role === "plat"],
+  ["Desserts", (r) => r.role === "dessert"],
+  ["Boissons", (r) => r.role === "boisson"],
+  ["Sauces & bases", (r) => r.kind === "Sauce" || r.kind === "Base"],
+];
 import { useStore } from "../lib/store";
 
 // recherche sans résultat (audit UI/UX 12/11) : des pistes plutôt qu'une impasse
 // le nom d'une rubrique mène à la rubrique (audit UI/UX 12/11 : « street food » ne montrait que des vidéos)
 const RUBRIQUES: [RegExp, string, string, string][] = [
-  [/street|cuisine de rue|food truck/, "/street-food", "taco", "Street food"], [/pique.?nique|gamelle|lunch ?box/, "/pique-nique", "leaf", "Pique-nique et gamelle"],
-  [/zero.?dechet|anti.?gaspi/, "/zero-dechet", "recycle", "Zéro déchet"], [/fetes?|noel|reveillon|anniversaire|ramadan|aid/, "/fetes", "cake", "Fêtes et menus"],
-  [/enfants?|bebe|diversification/, "/enfants", "kid", "Enfants"], [/sauces?/, "/sauces", "sauce", "Sauces maison"], [/pains?|boulang/, "/pains", "bread", "Pains et pâtes"],
-  [/technique|geste|apprendre/, "/techniques", "knife", "Techniques"], [/restes?|de la veille/, "/restes", "plate", "Cuisine des restes"],
+  [/street|cuisine de rue|food truck/, "/street-food", "taco", "Street food"],
+  [/pique.?nique|gamelle|lunch ?box/, "/pique-nique", "leaf", "Pique-nique et gamelle"],
+  [/zero.?dechet|anti.?gaspi/, "/zero-dechet", "recycle", "Zéro déchet"],
+  [/fetes?|noel|reveillon|anniversaire|ramadan|aid/, "/fetes", "cake", "Fêtes et menus"],
+  [/enfants?|bebe|diversification/, "/enfants", "kid", "Enfants"],
+  [/sauces?/, "/sauces", "sauce", "Sauces maison"],
+  [/pains?|boulang/, "/pains", "bread", "Pains et pâtes"],
+  [/technique|geste|apprendre/, "/techniques", "knife", "Techniques"],
+  [/restes?|de la veille/, "/restes", "plate", "Cuisine des restes"],
 ];
 const SUGGESTIONS = ["poulet", "rapide", "végétarien", "pâtes", "soupe", "street food", "gâteau", "sans four"];
 
@@ -45,7 +56,12 @@ export default function Search({ q }: { q: string }) {
   const recipes = recipesAll.filter((r) => (!kind || KINDS.find((k) => k[0] === kind)![1](r)) && (!fast || tonightMin(r) <= 30) && (!easy || r.level === 1));
   const nFilters = +!!kind + +fast + +easy;
   const macros = search(MACROS, tq, (m) => [m.name, m.blurb]);
-  const ings = search(INGREDIENT_NAMES.filter((n, i, a) => a.findIndex((m) => INGREDIENTS[m].slug === INGREDIENTS[n].slug) === i), tq, (n) => [n], 10);
+  const ings = search(
+    INGREDIENT_NAMES.filter((n, i, a) => a.findIndex((m) => INGREDIENTS[m].slug === INGREDIENTS[n].slug) === i),
+    tq,
+    (n) => [n],
+    10,
+  );
   const techs = search(TECHNIQUES, tq, (t) => [t.name, t.family, t.keys.join(" ")], 8);
   const cat = search(CATALOGUE, tq, (c) => [c.title, c.region], 20);
   const imps = search(IMPORT_LIBRARY, tq, (i) => [i.title, i.author], 20);
@@ -53,43 +69,179 @@ export default function Search({ q }: { q: string }) {
   const total = ings.length + recipes.length + macros.length + techs.length + cat.length + imps.length + myImps.length;
   return (
     <Page title="Recherche" sub="Insensible aux accents et aux petites fautes : « tagine », « boeuf », « pad thai » marchent aussi.">
-      <form role="search" className="searchbar" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(v)}`); }}>
-        <input type="search" enterKeyHint="search" value={v} onChange={(e) => setV(e.target.value)} autoFocus aria-label="Rechercher" placeholder="tajine, naan, sauce blanche, crêpes…" />
-        <button className="btn" type="submit">Chercher</button>
+      <form
+        role="search"
+        className="searchbar"
+        onSubmit={(e) => {
+          e.preventDefault();
+          go(`/recherche?q=${encodeURIComponent(v)}`);
+        }}
+      >
+        <input
+          type="search"
+          enterKeyHint="search"
+          value={v}
+          onChange={(e) => setV(e.target.value)}
+          autoFocus
+          aria-label="Rechercher"
+          placeholder="tajine, naan, sauce blanche, crêpes…"
+        />
+        <button className="btn" type="submit">
+          Chercher
+        </button>
       </form>
-      {intents.length > 0 && <p className="small understood"><Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}{rest && !relaxed ? ` · « ${rest} »` : ""}</p>}
-      {relaxed && <p className="small">Rien pour « {rest} » : voici toutes les recettes {intents.map((it) => it.label).join(", ")}.</p>}
-      {q && !total && <Empty>Rien trouvé pour « {q} ». Vérifie l'orthographe, ou essaie :
-        <div className="chips" role="group" aria-label="Recherches suggérées">{SUGGESTIONS.map((x) => <a key={x} className="chip" href={href(`/recherche?q=${encodeURIComponent(x)}`)}>{x}</a>)}</div>
-        <p className="small">Tu as des ingrédients ? <a href={href("/frigo")}>Avec ce que j'ai</a> propose des plats dès un seul.
-          Ou parcours <a href={href("/recettes")}>toutes les recettes</a> avec leurs filtres.</p></Empty>}
-      {RUBRIQUES.filter(([rx]) => rx.test(norm(q))).length > 0 && <div className="links rubrique-hits">{RUBRIQUES.filter(([rx]) => rx.test(norm(q))).map(([, to, icon, label]) =>
-        <a key={to} className="pill" href={href(to)}><Icon name={icon} size={18} className="ic-inline" /> La rubrique {label}</a>)}</div>}
-      {macros.length > 0 && <Section title="Régions"><div className="links">{macros.map((m) => <a key={m.id} className="pill" href={href(`/region/${m.id}`)}><Icon name={m.icon} size={18} className="ic-inline" /> {m.name}</a>)}</div></Section>}
-      {/\b(restes?|gaspi|anti gaspi|de la veille|rassis)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> Des restes à utiliser ? <a href={href("/restes")}>La cuisine des restes</a> part de ce que tu as déjà cuit.</p>}
-      {intents.some((it) => it.id === "emporter") && <p className="card pad restes-link"><Icon name="leaf" size={20} className="ic-inline" /> <a href={href("/pique-nique")}>La rubrique Pique-nique et gamelle</a> : paniers tout faits, sécurité au soleil, sac, zéro déchet.</p>}
-      {/\b(choisir|trop mur|trop mure|pas mur|viande dure|fraicheur|bien choisir)\b/.test(norm(q)) && <p className="card pad restes-link"><Icon name="cart" size={20} className="ic-inline" /> <a href={href("/bien-choisir")}>Bien choisir, bien rattraper</a> : maraîcher, boucher, poissonnier, et que faire d'un produit trop mûr ou moins frais.</p>}
+      {intents.length > 0 && (
+        <p className="small understood">
+          <Icon name="check" size={16} className="ic-inline" /> Compris : {intents.map((it) => it.label).join(" · ")}
+          {rest && !relaxed ? ` · « ${rest} »` : ""}
+        </p>
+      )}
+      {relaxed && (
+        <p className="small">
+          Rien pour « {rest} » : voici toutes les recettes {intents.map((it) => it.label).join(", ")}.
+        </p>
+      )}
+      {q && !total && (
+        <Empty>
+          Rien trouvé pour « {q} ». Vérifie l'orthographe, ou essaie :
+          <div className="chips" role="group" aria-label="Recherches suggérées">
+            {SUGGESTIONS.map((x) => (
+              <a key={x} className="chip" href={href(`/recherche?q=${encodeURIComponent(x)}`)}>
+                {x}
+              </a>
+            ))}
+          </div>
+          <p className="small">
+            Tu as des ingrédients ? <a href={href("/frigo")}>Avec ce que j'ai</a> propose des plats dès un seul. Ou parcours <a href={href("/recettes")}>toutes les recettes</a>{" "}
+            avec leurs filtres.
+          </p>
+        </Empty>
+      )}
+      {RUBRIQUES.filter(([rx]) => rx.test(norm(q))).length > 0 && (
+        <div className="links rubrique-hits">
+          {RUBRIQUES.filter(([rx]) => rx.test(norm(q))).map(([, to, icon, label]) => (
+            <a key={to} className="pill" href={href(to)}>
+              <Icon name={icon} size={18} className="ic-inline" /> La rubrique {label}
+            </a>
+          ))}
+        </div>
+      )}
+      {macros.length > 0 && (
+        <Section title="Régions">
+          <div className="links">
+            {macros.map((m) => (
+              <a key={m.id} className="pill" href={href(`/region/${m.id}`)}>
+                <Icon name={m.icon} size={18} className="ic-inline" /> {m.name}
+              </a>
+            ))}
+          </div>
+        </Section>
+      )}
+      {/\b(restes?|gaspi|anti gaspi|de la veille|rassis)\b/.test(norm(q)) && (
+        <p className="card pad restes-link">
+          <Icon name="plate" size={20} className="ic-inline" /> Des restes à utiliser ? <a href={href("/restes")}>La cuisine des restes</a> part de ce que tu as déjà cuit.
+        </p>
+      )}
+      {intents.some((it) => it.id === "emporter") && (
+        <p className="card pad restes-link">
+          <Icon name="leaf" size={20} className="ic-inline" /> <a href={href("/pique-nique")}>La rubrique Pique-nique et gamelle</a> : paniers tout faits, sécurité au soleil, sac,
+          zéro déchet.
+        </p>
+      )}
+      {/\b(choisir|trop mur|trop mure|pas mur|viande dure|fraicheur|bien choisir)\b/.test(norm(q)) && (
+        <p className="card pad restes-link">
+          <Icon name="cart" size={20} className="ic-inline" /> <a href={href("/bien-choisir")}>Bien choisir, bien rattraper</a> : maraîcher, boucher, poissonnier, et que faire d'un
+          produit trop mûr ou moins frais.
+        </p>
+      )}
       {recipesAll.length > 0 && (
         <details className="search-filters" open={nFilters > 0}>
           <summary>Filtrer les recettes{nFilters ? ` (${nFilters})` : ""}</summary>
           <div className="chips">
-            {KINDS.map(([k]) => <Chip key={k} on={kind === k} onClick={() => setKind(kind === k ? null : k)}>{k}</Chip>)}
-            <Chip on={fast} onClick={() => setFast(!fast)}><Icon name="timer" size={16} className="ic-inline" /> ≤ 30 min</Chip>
-            <Chip on={easy} onClick={() => setEasy(!easy)}>Facile</Chip>
+            {KINDS.map(([k]) => (
+              <Chip key={k} on={kind === k} onClick={() => setKind(kind === k ? null : k)}>
+                {k}
+              </Chip>
+            ))}
+            <Chip on={fast} onClick={() => setFast(!fast)}>
+              <Icon name="timer" size={16} className="ic-inline" /> ≤ 30 min
+            </Chip>
+            <Chip on={easy} onClick={() => setEasy(!easy)}>
+              Facile
+            </Chip>
           </div>
         </details>
       )}
       {recipesAll.length > 0 && !recipes.length && <p className="small">Aucune recette avec ces filtres : retire-en un.</p>}
-      {recipes.length > 0 && <Section title={`Recettes (${recipes.length})`} more={<a href={href(`/recettes?q=${encodeURIComponent(q)}`)}>Plus de filtres →</a>}><MoreGrid key={`${q}|${kind}|${fast}|${easy}`} items={recipes} /></Section>}
-      {ings.length > 0 && <p className="card pad restes-link"><Icon name="fridge" size={20} className="ic-inline" />
-        {` Tu as ${ings.length > 1 ? "un de ces ingrédients" : "cet ingrédient"} ? Toutes les idées pour l'utiliser`}
-        {" (plats, entrées, desserts, et ce qu'il faut acheter en plus) : "}
-        {ings.slice(0, 4).map((n, i) => <span key={n}>{i > 0 && " · "}<a href={href(`/frigo?avec=${encodeURIComponent(n)}`)}>{n.split(" (")[0].split(" / ")[0]}</a></span>)}</p>}
-      {ings.length > 0 && <Section title="Dictionnaire des ingrédients"><div className="links">{ings.map((n) => <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}><Icon name="dictionary" size={18} className="ic-inline" /> {n}</a>)}</div></Section>}
-      {techs.length > 0 && <Section title="Techniques"><div className="links">{techs.map((t) => <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}><Icon name="knife" size={18} className="ic-inline" /> {t.name}</a>)}</div></Section>}
-      {myImps.length > 0 && <Section title="Mes imports"><ul className="links-list">{myImps.map((i) => <li key={i.id}><a href={i.url || "#/imports"} target="_blank" rel="noopener noreferrer">{i.title}</a></li>)}</ul></Section>}
-      {imps.length > 0 && <Section title="Favoris TikTok et sites classés"><MoreList items={imps} step={8} render={(i) => <ImportRow key={i.url} i={i} />} /></Section>}
-      {cat.length > 0 && <Section title="Au programme (fiches à venir)"><ul className="cat-list">{cat.map((c) => <li key={c.title + c.region}>{c.title} <span className="meta">· {c.region}</span></li>)}</ul></Section>}
+      {recipes.length > 0 && (
+        <Section title={`Recettes (${recipes.length})`} more={<a href={href(`/recettes?q=${encodeURIComponent(q)}`)}>Plus de filtres →</a>}>
+          <MoreGrid key={`${q}|${kind}|${fast}|${easy}`} items={recipes} />
+        </Section>
+      )}
+      {ings.length > 0 && (
+        <p className="card pad restes-link">
+          <Icon name="fridge" size={20} className="ic-inline" />
+          {` Tu as ${ings.length > 1 ? "un de ces ingrédients" : "cet ingrédient"} ? Toutes les idées pour l'utiliser`}
+          {" (plats, entrées, desserts, et ce qu'il faut acheter en plus) : "}
+          {ings.slice(0, 4).map((n, i) => (
+            <span key={n}>
+              {i > 0 && " · "}
+              <a href={href(`/frigo?avec=${encodeURIComponent(n)}`)}>{n.split(" (")[0].split(" / ")[0]}</a>
+            </span>
+          ))}
+        </p>
+      )}
+      {ings.length > 0 && (
+        <Section title="Dictionnaire des ingrédients">
+          <div className="links">
+            {ings.map((n) => (
+              <a key={n} className="pill" href={href(`/ingredient/${INGREDIENTS[n].slug}`)}>
+                <Icon name="dictionary" size={18} className="ic-inline" /> {n}
+              </a>
+            ))}
+          </div>
+        </Section>
+      )}
+      {techs.length > 0 && (
+        <Section title="Techniques">
+          <div className="links">
+            {techs.map((t) => (
+              <a key={t.id} className="pill" href={href(`/technique/${t.id}`)}>
+                <Icon name="knife" size={18} className="ic-inline" /> {t.name}
+              </a>
+            ))}
+          </div>
+        </Section>
+      )}
+      {myImps.length > 0 && (
+        <Section title="Mes imports">
+          <ul className="links-list">
+            {myImps.map((i) => (
+              <li key={i.id}>
+                <a href={i.url || "#/imports"} target="_blank" rel="noopener noreferrer">
+                  {i.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+      {imps.length > 0 && (
+        <Section title="Favoris TikTok et sites classés">
+          <MoreList items={imps} step={8} render={(i) => <ImportRow key={i.url} i={i} />} />
+        </Section>
+      )}
+      {cat.length > 0 && (
+        <Section title="Au programme (fiches à venir)">
+          <ul className="cat-list">
+            {cat.map((c) => (
+              <li key={c.title + c.region}>
+                {c.title} <span className="meta">· {c.region}</span>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
     </Page>
   );
 }
