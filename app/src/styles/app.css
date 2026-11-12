@@ -282,3 +282,17 @@ details > summary { cursor: pointer; min-height: 32px; }
 .tech-table th { font-weight: 600; width: 42%; }
 .tech-table tr:nth-child(odd) { background: color-mix(in srgb, currentColor 4%, transparent); }
 main:focus { outline: none; } /* cible du focus après un changement d'écran : pas de cadre */
+
+/* pictogramme « carte du monde » : pays d'origine de la fiche (12/11/2026) */
+.region-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 4px 0; }
+.region-line .meta { margin: 0; }
+.origin-map { display: inline-flex; align-items: center; justify-content: center; width: 100px; min-height: var(--touch); padding: 3px; border: 1px solid var(--border); border-radius: var(--r-chip); background: var(--alt); cursor: zoom-in; flex: none; }
+.origin-map svg { width: 100%; height: auto; display: block; }
+.origin-map.placeholder { height: var(--touch); }
+.origin-map.big { flex-direction: column; width: 100%; max-width: 560px; cursor: zoom-out; padding: 8px; gap: 6px; }
+.origin-map .om-label { font-size: .9rem; color: var(--text); }
+.om-land { fill: color-mix(in srgb, var(--border) 45%, var(--alt)); stroke: var(--alt); stroke-width: .3; }
+.om-on { fill: var(--action); stroke: var(--surface); stroke-width: .3; }
+.om-wide { fill: var(--saffron); stroke: var(--surface); stroke-width: .3; }
+.om-dot { fill: var(--action); stroke: var(--surface); stroke-width: .8; }
+.om-halo { fill: var(--action); opacity: .25; }

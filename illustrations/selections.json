@@ -3683,5 +3683,237 @@
  "recette/plateau_fruits_de_mer": {
   "i": 2,
   "from": "v12/recette/plateau_fruits_de_mer"
+ },
+ "recette/xiao_long_bao": {
+  "i": 2,
+  "from": "v13/recette/xiao_long_bao"
+ },
+ "recette/hong_shao_rou": {
+  "i": 0,
+  "from": "v13/recette/hong_shao_rou"
+ },
+ "recette/agneau_cumin_xinjiang": {
+  "i": 0,
+  "from": "v13/recette/agneau_cumin_xinjiang"
+ },
+ "recette/mantou": {
+  "i": 3,
+  "from": "v13/recette/mantou"
+ },
+ "recette/dan_tat": {
+  "i": 0,
+  "from": "v13/recette/dan_tat"
+ },
+ "recette/takoyaki": {
+  "i": 7,
+  "from": "v13/recette/takoyaki"
+ },
+ "recette/sukiyaki": {
+  "i": 0,
+  "from": "v13/recette/sukiyaki"
+ },
+ "recette/yakisoba": {
+  "i": 6,
+  "from": "v13/recette/yakisoba"
+ },
+ "recette/dorayaki": {
+  "i": 1,
+  "from": "v13/recette/dorayaki"
+ },
+ "recette/agedashi_tofu": {
+  "i": 3,
+  "from": "v13/recette/agedashi_tofu"
+ },
+ "recette/samgyetang": {
+  "i": 0,
+  "from": "v13/recette/samgyetang"
+ },
+ "recette/jajangmyeon": {
+  "i": 6,
+  "from": "v13/recette/jajangmyeon"
+ },
+ "recette/doenjang_jjigae": {
+  "i": 6,
+  "from": "v13/recette/doenjang_jjigae"
+ },
+ "recette/hotteok": {
+  "i": 1,
+  "from": "v13/recette/hotteok"
+ },
+ "recette/buuz": {
+  "i": 1,
+  "from": "v13/recette/buuz"
+ },
+ "recette/vindaloo": {
+  "i": 3,
+  "from": "v13/recette/vindaloo"
+ },
+ "recette/khichdi": {
+  "i": 3,
+  "from": "v13/recette/khichdi"
+ },
+ "recette/poha": {
+  "i": 5,
+  "from": "v13/recette/poha"
+ },
+ "recette/rava_idli": {
+  "i": 2,
+  "from": "v13/recette/rava_idli"
+ },
+ "recette/vada_pav": {
+  "i": 4,
+  "from": "v13/recette/vada_pav"
+ },
+ "recette/pani_puri": {
+  "i": 2,
+  "from": "v13/recette/pani_puri"
+ },
+ "recette/rasam": {
+  "i": 2,
+  "from": "v13/recette/rasam"
+ },
+ "recette/kulfi": {
+  "i": 4,
+  "from": "v13/recette/kulfi"
+ },
+ "recette/jalebi": {
+  "i": 6,
+  "from": "v13/recette/jalebi"
+ },
+ "recette/dal_bhat": {
+  "i": 2,
+  "from": "v13/recette/dal_bhat"
+ },
+ "recette/momo_legumes": {
+  "i": 2,
+  "from": "v13/recette/momo_legumes"
+ },
+ "recette/thukpa": {
+  "i": 3,
+  "from": "v13/recette/thukpa"
+ },
+ "recette/shorshe_maach": {
+  "i": 5,
+  "from": "v13/recette/shorshe_maach"
+ },
+ "recette/panang_poulet": {
+  "i": 4,
+  "from": "v13/recette/panang_poulet"
+ },
+ "recette/gai_yang": {
+  "i": 3,
+  "from": "v13/recette/gai_yang"
+ },
+ "recette/com_tam": {
+  "i": 1,
+  "from": "v13/recette/com_tam"
+ },
+ "recette/bun_bo_hue": {
+  "i": 7,
+  "from": "v13/recette/bun_bo_hue"
+ },
+ "recette/cha_ca_hanoi": {
+  "i": 3,
+  "from": "v13/recette/cha_ca_hanoi"
+ },
+ "recette/char_kway_teow": {
+  "i": 5,
+  "from": "v13/recette/char_kway_teow"
+ },
+ "recette/kaya_toast": {
+  "i": 4,
+  "from": "v13/recette/kaya_toast"
+ },
+ "recette/mohinga": {
+  "i": 7,
+  "from": "v13/recette/mohinga"
+ },
+ "recette/lagman": {
+  "i": 1,
+  "from": "v13/recette/lagman"
+ },
+ "recette/nasu_dengaku": {
+  "i": 2,
+  "from": "v13/recette/nasu_dengaku"
+ },
+ "recette/teh_tarik": {
+  "i": 7,
+  "from": "v13/recette/teh_tarik"
+ },
+ "recette/cha_yen": {
+  "i": 1,
+  "from": "v13/recette/cha_yen"
+ },
+ "recette/ca_phe_sua_da": {
+  "i": 0,
+  "from": "v13/recette/ca_phe_sua_da"
+ },
+ "recette/boricha": {
+  "i": 0,
+  "from": "v13/recette/boricha"
+ },
+ "recette/raviolis_sans_pliage_grilles": {
+  "i": 7,
+  "from": "v14/recette/raviolis_sans_pliage_grilles"
+ },
+ "recette/poulet_sel_poivre": {
+  "i": 4,
+  "from": "v14/recette/poulet_sel_poivre"
+ },
+ "recette/niu_rou_bing": {
+  "i": 5,
+  "from": "v14/recette/niu_rou_bing"
+ },
+ "recette/aehobak_jeon": {
+  "i": 1,
+  "from": "v14/recette/aehobak_jeon"
+ },
+ "recette/banh_cuon": {
+  "i": 4,
+  "from": "v14/recette/banh_cuon"
+ },
+ "recette/oeufs_crevettes_cantonais": {
+  "i": 1,
+  "from": "v14/recette/oeufs_crevettes_cantonais"
+ },
+ "recette/poulet_caramel_croustillant": {
+  "i": 0,
+  "from": "v14/recette/poulet_caramel_croustillant"
+ },
+ "recette/tenshindon": {
+  "i": 5,
+  "from": "v14/recette/tenshindon"
+ },
+ "recette/niku_daikon": {
+  "i": 2,
+  "from": "v14/recette/niku_daikon"
+ },
+ "recette/piman_nikuzume": {
+  "i": 0,
+  "from": "v14/recette/piman_nikuzume"
+ },
+ "recette/tanghulu": {
+  "i": 2,
+  "from": "v14/recette/tanghulu"
+ },
+ "recette/blinis_saumon": {
+  "i": 1,
+  "from": "v15/recette/blinis_saumon"
+ },
+ "recette/meatloaf_sauce_tomate": {
+  "i": 3,
+  "from": "v15/recette/meatloaf_sauce_tomate"
+ },
+ "recette/perles_coco": {
+  "i": 7,
+  "from": "v15/recette/perles_coco"
+ },
+ "recette/burger_halloumi_croustillant": {
+  "i": 3,
+  "from": "v15/recette/burger_halloumi_croustillant"
+ },
+ "recette/maquereaux_vin_blanc": {
+  "i": 0,
+  "from": "v15/recette/maquereaux_vin_blanc"
  }
 }

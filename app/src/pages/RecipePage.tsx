@@ -23,6 +23,7 @@ import { techniqueFor, youtubeSearch } from "../lib/techniques";
 import { PlayButton, embedOf, playVideo } from "../components/video";
 import { Credit } from "../components/photo";
 import Leftovers from "../components/Leftovers";
+import OriginMap from "../components/OriginMap";
 import type { Recipe } from "../lib/types";
 import { ACCORDS, EVIN, SECURITE_ENFANTS } from "../lib/content";
 import { Cover, DietBadges, Page, Section } from "../components/ui";
@@ -265,7 +266,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         <div>
           <h1>{r.title}</h1>
           {r.origin && r.origin !== r.title && <p className="origin" lang="und">{r.origin}</p>}
-          <p className="meta">{r.regionPath.join(" › ")} · {r.kind}</p>
+          <div className="region-line"><OriginMap key={r.id} r={r} /><p className="meta">{r.regionPath.join(" › ")} · {r.kind}</p></div>
           {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}><Icon name="fusion" size={16} className="ic-inline" /> Food fusion</a> : {r.fusionNote}</p>}
           {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}><Icon name="play" size={16} className="ic-inline" /> Voir la vidéo</button>}
           <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}</p>

@@ -239,3 +239,51 @@ EN_PLUS_2026_11_11C = {
 }
 for _k, _v in EN_PLUS_2026_11_11C.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# 12/11/2026 : vidéos asiatiques les plus vues de @cooking.with.morgane, @ryuji_tiktok_ et @cookingwithlynja rattachées aux fiches existantes
+_MG = T + "@cooking.with.morgane/video/"; _RY = T + "@ryuji_tiktok_/video/"; _LY = T + "@cookingwithlynja/video/"
+EN_PLUS_2026_11_12 = {
+    "lok_lak": [_MG + "7348830791700434208"],
+    "poulet_general_tao": [_MG + "7338858657053953313", _MG + "7606999825560767766"],
+    "nems_poulet": [_MG + "7351723319235841313", _MG + "7614452329470856471"],
+    "riz_saute_oeuf_express": [_MG + "7415152684530928929"],
+    "riz_cantonais": [_MG + "7372601909863140641", _MG + "7333187090882120993"],
+    "bao_poulet": [_MG + "7580769886985587990"],
+    "chips_crevettes": [_MG + "7355960654211157280"],
+    "ha_kao": [_MG + "7527674093936692502"],
+    "beignets_crevettes_panes": [_MG + "7366654752639241504"],
+    "rouleaux_printemps": [_MG + "7645676890904087840"],
+    "tamago_sando": [_MG + "7604553403720535318"],
+    "nuoc_cham": [_MG + "7354361499839728929", _MG + "7656490594109312288"],
+    "tigre_qui_pleure": [_MG + "7564445925473553686", _MG + "7480985093411048726"],
+    "poulet_frit_coreen": [_MG + "7361486363117571361"],
+    "chop_suey_boeuf": [_MG + "7468594659451817238"],
+    "soupe_wonton_poulet": [_MG + "7358182122323987744"],
+    "feuilles_raviolis_maison": [_MG + "7600083682740702486"],
+    "pad_see_ew": [_MG + "7483909539583200514"],
+    "poulet_citronnelle_citron": [_MG + "7684186507468459296"],
+    "salade_concombre_sesame": [_MG + "7663899389831810337"],
+    "ramen_shoyu": [_MG + "7582931485292891414"],
+    "huile_pimentee": [_MG + "7601573239524969750"],
+    "takoyaki": [_MG + "7414493180265090336"],
+    "momo_legumes": [_MG + "7416735318767930657"],
+    "banh_mi": [_MG + "7424169186265517345"],
+    "char_siu_poulet": [_MG + "7377390029905104160"],
+    "pad_thai": [_MG + "7382980613697064224"],
+    "bo_bun": [_MG + "7395597625979931937"],
+    "ajitama": [_RY + "7601061699965275412", _MG + "7401152307649367328"],
+    "udon_maison": [_MG + "7359964211100880160"],
+    "maki_maison": [_MG + "7364315341683543329"],
+    "tsukune": [_MG + "7637467511058894102"],
+    "chapati": [_MG + "7657823924096388385"],
+    "gyoza": [_MG + "7432347014785994017", _MG + "7643528911640415520"],
+    "nouilles_sautees_boeuf": [_MG + "7635241550796180758", _MG + "7553168364844125462"],
+    "nouilles_sautees_legumes_oeuf": [_MG + "7369249165576031520", _MG + "7440122598249254176", _MG + "7606289975046458646"],
+    "boeuf_oignons_saute": [_MG + "7554416557456100630"],
+    "poulet_citron_chinois": [_MG + "7443400151160343840"],
+    "salade_japonaise_pommes_de_terre": [_MG + "7702761937280535840"],
+    "karaage": [_RY + "7500505952542674183"],
+    "kulfi": [_LY + "7094639677898034475"],
+}
+for _k, _v in EN_PLUS_2026_11_12.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

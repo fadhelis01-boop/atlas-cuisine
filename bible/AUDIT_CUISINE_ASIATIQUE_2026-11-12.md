@@ -56,6 +56,39 @@ Points vérifiés et sains :
 
 ## 3. Reste à faire
 
-- Les 42 nouvelles fiches n'ont pas encore de photo. Elles en ont besoin, sous licence libre (`collect_v13`).
+- ~~Les 42 nouvelles fiches n'ont pas encore de photo~~ : toutes illustrées le 12/11 (`collect_v13`, licences libres).
 - Le sel noir (kala namak), le poha, le chunjang et les puris s'achètent en épicerie asiatique ou indienne. Les fiches le disent.
 - Aucune recette n'est testée en cuisine. Les plus délicates sont à tester d'abord : xiao long bao, lagman (nouilles tirées), jalebi, takoyaki.
+
+## 4. Suite du 12/11 : TikTok, photos, carte d'origine
+
+- **Recettes asiatiques les plus vues sur TikTok** :
+  - **Cooking with Morgane** (@cooking.with.morgane, autrice du livre *Cuisines d'Asie*). Ses 235 vidéos ont été relevées et triées par nombre de vues. 11 fiches nouvelles (`recipes_v7_tiktok_asie.py`) suivent les ingrédients de ses légendes, avec des étapes réécrites et la vidéo créditée :
+    - poulet caramélisé (3,3 M de vues) ;
+    - raviolis grillés sans pliage (1,8 M) ;
+    - bœuf sauté à l'œuf ;
+    - beignets de poulet sel et poivre ;
+    - goong ob woon sen ;
+    - galettes feuilletées au bœuf ;
+    - aehobak jeon ;
+    - bánh cuốn ;
+    - œufs aux crevettes ;
+    - mayonnaise japonaise ;
+    - poulet au caramel croustillant.
+    Le loc lac existait déjà (lok_lak) : sa vidéo y est rattachée.
+  - **Ryuji** (@ryuji_tiktok_, cuisine de maison japonaise) : 3 fiches (tenshindon, niku daikon, poivrons farcis).
+  - **Lynja** (@cookingwithlynja) : 1 fiche (tanghulu, 47,9 M de vues).
+  - 41 fiches existantes reçoivent leurs vidéos (Général Tao, nems, riz cantonais, gyoza, pad thaï, karaage, kulfi…).
+- **Porc** : comme toutes les fiches TikTok (test 100), elles sont faites à la volaille. Quand l'original est au porc, la fiche le signale.
+- **Photos** :
+  - les 42 fiches de l'audit et 12 des 15 fiches TikTok sont illustrées ;
+  - une troisième recherche sur toutes les fiches encore sans photo (nom d'origine, titre, parenthèses) en ajoute 5.
+  - Total : 1 316 fiches illustrées sur 1 486. Les 170 restantes n'ont aucune photo libre fidèle (homonymes : animaux, lieux, personnes).
+- **Pictogramme « carte du monde »** sur chaque fiche :
+  - le pays d'origine est en couleur, avec un point pour la région ou le petit territoire (Bretagne, Sichuan, Singapour, Réunion…) ;
+  - une fiche sans pays (fusion, bases) montre sa grande région en safran ;
+  - un toucher agrandit la carte avec son nom.
+  - Données : Natural Earth 1:110m (domaine public), générées par `app/scripts/worldmap.mjs`, 40 Ko compressés chargés à l'ouverture d'une fiche seulement.
+  - Correspondances : `app/src/lib/origine.ts`.
+  - Toutes les régions « Pays (Région) » deviennent « Pays › Région ».
+- Test 126.

@@ -194,3 +194,23 @@ console.log("   cuisines d'Asie : classiques manquants", missing125.join(",") ||
   "· wok sans repère", wok125.join(",") || 0, "· régions", regions125.join(",") || 0, "· techniques", tech125, "· plats sans boisson", drinks125.length);
 check("125 cuisines d'Asie : classiques présents, aucun faux végétarien, riz rincé ou trempé, wok fumant, régions rangées, fiches techniques d'Asie, une boisson sur chaque plat",
   !missing125.length && !fauxVeg125.length && !curry125.length && !riz125.length && !wok125.length && !regions125.length && tech125 && !drinks125.length);
+
+// 126 (12/11/2026) : recettes asiatiques les plus vues sur TikTok (Cooking with Morgane, Ryuji, Lynja) en fiches créditées
+// ou rattachées ; pictogramme « carte du monde » : chaque fiche a un pays (ou un point) qui existe sur la carte.
+import VIDS126 from "../src/data/recipe_videos.json";
+import WM126 from "../src/data/worldmap.json";
+import { origineOf as orig126 } from "../src/lib/origine";
+const TT126 = ["poulet_caramelise_viet", "raviolis_sans_pliage_grilles", "boeuf_saute_oeuf", "poulet_sel_poivre", "goong_ob_woon_sen", "niu_rou_bing", "aehobak_jeon",
+  "banh_cuon", "oeufs_crevettes_cantonais", "mayonnaise_japonaise", "poulet_caramel_croustillant", "tenshindon", "niku_daikon", "piman_nikuzume", "tanghulu"];
+const V126 = VIDS126 as unknown as Record<string, { url: string }[]>;
+const tiktok126 = TT126.filter((id) => !RECIPE_BY_ID[id] || !(V126[id] ?? RECIPE_BY_ID[id].videos).some((v) => /tiktok\.com\/@(cooking\.with\.morgane|ryuji_tiktok_|cookingwithlynja)\//.test(v.url)));
+const attach126 = ["poulet_general_tao", "nems_poulet", "riz_cantonais", "gyoza", "pad_thai", "karaage", "kulfi"].filter((id) => !(V126[id] ?? []).some((v) => /cooking\.with\.morgane|ryuji_tiktok_|cookingwithlynja/.test(v.url)));
+const W126 = WM126 as unknown as { d: Record<string, string>; pts: Record<string, [number, number]> };
+const sansCarte126 = RECIPES.filter((r) => { const o = orig126(r, W126.pts); return (!o.countries.length && !o.point) || o.countries.some((c) => !W126.d[c]); }).map((r) => r.id);
+const larges126 = RECIPES.filter((r) => orig126(r, W126.pts).wide).length;
+const regParen126 = [...new Set(RECIPES.map((r) => r.regionPath.join(" › ")).filter((p) => /\(/.test(p) && !/\(France, Belgique\)|\(RDC\)/.test(p)))];
+const pt126 = orig126(RECIPE_BY_ID.xiao_long_bao, W126.pts).point === "Shanghai" && orig126(RECIPE_BY_ID.kouign_amann ?? RECIPE_BY_ID.crepes_froment_sucre, W126.pts).countries[0] === "France";
+console.log("   TikTok Asie : fiches sans vidéo créditée", tiktok126.join(",") || 0, "· fiches sans vidéo rattachée", attach126.join(",") || 0,
+  "· carte : sans origine", sansCarte126.length, "· régions entières", larges126, "· régions entre parenthèses", regParen126.join(",") || 0, "· points", pt126);
+check("126 TikTok Asie (Morgane, Ryuji, Lynja) en fiches et vidéos ; carte d'origine pour chaque fiche, régions rangées",
+  !tiktok126.length && !attach126.length && !sansCarte126.length && larges126 <= 10 && !regParen126.length && pt126);

@@ -20,9 +20,11 @@ def region(d):
     r = d["region"]
     if r in _REGION_FIX:
         return _REGION_FIX[r]
-    if r.startswith(ASIE):
-        # « Asie du Sud › Inde (Goa) » → « Asie du Sud › Inde › Goa »
-        r = re.sub(r" › ([^›(]+?) \(([^)]+)\)$", r" › \1 › \2", r)
+    # « Asie du Sud › Inde (Goa) », « Europe du Sud › Italie (Sicile) » → « … › Inde › Goa », « … › Italie › Sicile » : toutes
+    # les régions depuis le 12/11, la carte d'origine lit le pays et la région séparément ; pas les listes ni les sigles
+    m = re.search(r" › ([^›(]+?) \(([^),]+)\)$", r)
+    if m and m.group(2) != "RDC":
+        r = r[:m.start()] + f" › {m.group(1)} › {m.group(2)}"
     return r
 
 # ---------------------------------------------------------------- faux végétariens : (id, libellé) → (quantité, libellé, référence)

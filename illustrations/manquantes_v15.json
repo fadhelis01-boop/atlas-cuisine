@@ -1,0 +1,744 @@
+{
+"petits_pois_carottes": [
+"Petits pois à la française",
+"Petits pois-carottes à la française"
+],
+"champignons_persilles": [
+"Champignons à la persillade",
+"Champignons persillés"
+],
+"filet_lieu_beurre_blanc": [
+"Lieu au beurre blanc",
+"Filet de lieu au beurre blanc, riz"
+],
+"dibi": [
+"Dibi",
+"agneau grillé aux oignons"
+],
+"thiakry": [
+"Thiakry",
+"couscous de mil au lait caillé"
+],
+"maharagwe": [
+"Maharagwe",
+"haricots rouges au coco"
+],
+"poisson_cru_fidji": [
+"Kokoda",
+"poisson mariné des Fidji"
+],
+"sangria_sans_alcool": [
+"Sangría sin alcohol",
+"Sangria sans alcool"
+],
+"mousse_citron": [
+"Mousse au citron",
+"Mousse légère au citron"
+],
+"verrines_speculoos": [
+"Verrines",
+"Verrines spéculoos-mascarpone-pommes caramélisées"
+],
+"croquettes_poisson": [
+"Fish cakes",
+"Croquettes de poisson et pommes de terre"
+],
+"smoothie_banane_fraise": [
+"Smoothie",
+"Smoothie banane-fraise"
+],
+"brochettes_fruits_chocolat": [
+"Brochettes de fruits",
+"Brochettes de fruits, trempette chocolat"
+],
+"muffins_oeufs_legumes": [
+"Egg muffins",
+"Muffins aux œufs, épinards et fromage"
+],
+"tartine_labneh_zaatar": [
+"Labneh w zaatar",
+"Tartines de labneh, zaatar et légumes croquants"
+],
+"poulet_crapaudine": [
+"Poulet en crapaudine",
+"Poulet en crapaudine au citron et à l'ail"
+],
+"bar_croute_sel": [
+"Loup en croûte de sel",
+"Bar en croûte de sel"
+],
+"saint_jacques_poelees": [
+"Noix de Saint-Jacques poêlées",
+"Saint-Jacques poêlées, purée de panais"
+],
+"rochers_praline": [
+"Rocher praliné",
+"Rochers praliné-amandes"
+],
+"pate_tartiner_maison": [
+"Pâte à tartiner",
+"Pâte à tartiner chocolat-noisette maison"
+],
+"caramels_beurre_sale": [
+"Caramel au beurre salé",
+"Caramels mous au beurre salé"
+],
+"bouillon_poudre_maison": [
+"Bouillon en poudre",
+"Bouillon en poudre maison",
+"légumes séchés"
+],
+"nokoss": [
+"Nokoss (roof)",
+"Nokoss sénégalais"
+],
+"sauce_piri_piri": [
+"Piri-piri",
+"Huile et sauce piri-piri"
+],
+"goulash": [
+"Gulyás",
+"Goulash hongrois"
+],
+"blinis_saumon": [
+"Bliny",
+"Blinis maison"
+],
+"crevettes_coco_citron_vert": [
+"Kung phat kati",
+"Crevettes sautées coco-citron vert"
+],
+"pates_epinards_chevre": [
+"Pâtes épinards-chèvre",
+"Pâtes crémeuses aux épinards et au chèvre"
+],
+"tartines_sardines_citron": [
+"Tostas de sardinha",
+"Tartines de sardines, citron et persil"
+],
+"pates_courgettes_feta_citron": [
+"Pâtes d'été",
+"Pâtes aux courgettes, feta et citron"
+],
+"croque_poulet_pesto": [
+"Croque pesto",
+"Croque au poulet, pesto et mozzarella"
+],
+"escargots_bourgogne": [
+"Escargots de Bourgogne",
+"Escargots au beurre persillé"
+],
+"veau_olives_corse": [
+"Vitellu à l'alivi",
+"Veau aux olives",
+"Corse"
+],
+"colombo_poulet": [
+"Colombo",
+"Colombo de poulet"
+],
+"salade_quinoa_patate_douce": [
+"Salade de quinoa",
+"Salade de quinoa, patate douce et feta"
+],
+"crumble_sale_legumes": [
+"Crumble salé",
+"Crumble de légumes au parmesan"
+],
+"sauce_tahini": [
+"Tarator",
+"Sauce tahini citronnée"
+],
+"profiteroles": [
+"Profiteroles",
+"Profiteroles, sauce chocolat chaude"
+],
+"charlotte_fraises": [
+"Charlotte",
+"Charlotte aux fraises"
+],
+"cake_sale": [
+"Cake salé",
+"Cake salé olives-feta-tomates séchées"
+],
+"confiture_peaux_bananes": [
+"Chutney de peaux de banane",
+"Chutney de peaux de bananes"
+],
+"bouillon_parures": [
+"Bouillon de parures",
+"carcasses, arêtes, croûtes"
+],
+"tartinade_fanes_pois": [
+"Houmous de petits pois",
+"Houmous de petits pois et fanes"
+],
+"salade_poulet_mangue_thai": [
+"Yam kai mamuang",
+"Salade thaïe au poulet et à la mangue"
+],
+"mayo_curry": [
+"Sauce curry",
+"Mayonnaise au curry"
+],
+"sauce_brazil": [
+"Sauce brazil",
+"ananas-curry"
+],
+"sauce_roquefort": [
+"Sauce au roquefort"
+],
+"ketchup_betterave": [
+"Ketchup de betterave"
+],
+"sauce_champignons": [
+"Sauce forestière",
+"Sauce crème aux champignons"
+],
+"hachis_lentilles_patate_douce": [
+"Lentil shepherd's pie",
+"Hachis de lentilles à la purée de patate douce"
+],
+"shakshuka_haricots_blancs": [
+"Shakshuka aux haricots",
+"Œufs pochés aux haricots blancs et poivrons"
+],
+"gratin_chou_fleur_lentilles": [
+"Gratin curry",
+"Gratin de chou-fleur et lentilles corail au curry"
+],
+"galettes_sarrasin_champignons": [
+"Galette forestière",
+"Galettes de sarrasin aux champignons, œuf et emmental"
+],
+"sambar": [
+"Sambar",
+"dal aux légumes et tamarin"
+],
+"full_english_volaille": [
+"Full English breakfast",
+"version volaille"
+],
+"poulet_comte_champignons": [
+"Poulet comtois",
+"Poulet comtois au comté et aux champignons"
+],
+"soupe_corse": [
+"Suppa corsa",
+"Soupe corse aux haricots et aux légumes"
+],
+"choucroute_garnie_version": [
+"Choucroute garnie",
+"version bœuf et volaille"
+],
+"bourguignon_champignons": [
+"Bourguignon de champignons"
+],
+"moros_y_cristianos": [
+"Moros y cristianos",
+"riz aux haricots noirs cubain"
+],
+"pastilla_poulet": [
+"Bastila",
+"Pastilla au poulet et amandes"
+],
+"red_red": [
+"Red red",
+"haricots à la tomate et plantains, Ghana"
+],
+"pain_surprise": [
+"Pain surprise",
+"le pain garni à partager"
+],
+"tarte_courgette_chevre": [
+"Tarte fine",
+"Tarte fine courgette-chèvre"
+],
+"muffuletta_vege": [
+"Muffuletta",
+"Muffuletta aux légumes grillés"
+],
+"pinwheels_tortilla": [
+"Pinwheels",
+"Roulés de tortilla",
+"pinwheels"
+],
+"onigirazu": [
+"Onigirazu",
+"sandwich de riz en nori"
+],
+"ajitama": [
+"Ajitsuke tamago",
+"Œufs marinés au soja",
+"ajitama"
+],
+"energy_balls_dattes": [
+"Energy balls",
+"Boules d'énergie dattes-avoine-cacao"
+],
+"crackers_pain_rassis": [
+"Crackers maison",
+"Crackers de pain rassis aux herbes"
+],
+"joues_boeuf_carottes": [
+"Bœuf carottes",
+"Joues de bœuf aux carottes"
+],
+"gratin_celeri_noix": [
+"Gratin de céleri",
+"Gratin de céleri-rave et pommes de terre aux noix"
+],
+"chou_braise_saucisses": [
+"Chou braisé",
+"Chou vert braisé aux saucisses de volaille"
+],
+"curry_fidjien_legumes": [
+"Fiji curry",
+"Curry de légumes fidjien",
+"pommes de terre et pois chiches"
+],
+"lu_sipi_agneau_coco": [
+"Lu sipi",
+"agneau au coco et aux épinards, Tonga"
+],
+"bar_croute_macadamia": [
+"Macadamia-crusted barramundi",
+"Bar en croûte de macadamia et citron",
+"Australie"
+],
+"meatloaf_sauce_tomate": [
+"Meatloaf",
+"pain de viande laqué, États-Unis"
+],
+"white_chicken_chili": [
+"White chicken chili",
+"chili blanc au poulet"
+],
+"pelau_poulet": [
+"Pelau",
+"riz au poulet caramélisé, Trinité-et-Tobago"
+],
+"kai_jeow": [
+"Kai jeow",
+"omelette thaïe soufflée et croustillante"
+],
+"tofu_sauce_tomate_viet": [
+"Đậu phụ sốt cà chua",
+"tofu doré sauce tomate, Vietnam"
+],
+"yu_xiang_qiezi": [
+"Yu xiang qiezi",
+"Aubergines parfumées à la sichuanaise",
+"yu xiang qiezi"
+],
+"laxpudding": [
+"Laxpudding",
+"gratin de saumon et pommes de terre à l'aneth, Suède"
+],
+"mug_cake_chocolat": [
+"Mug cake",
+"Mug cake au chocolat",
+"2 minutes au micro-ondes"
+],
+"banane_rotie_cannelle": [
+"Bananes rôties",
+"Bananes rôties à la cannelle, yaourt et noix"
+],
+"pommes_poelees_miel": [
+"Pommes poêlées",
+"Pommes poêlées au miel et au beurre, fromage blanc"
+],
+"adas_polo": [
+"Adas polo",
+"riz aux lentilles, dattes et raisins, Iran"
+],
+"tajine_boulettes_sardines": [
+"Tajine kefta dyal sardin",
+"Tajine de boulettes de sardines à la tomate",
+"Maroc"
+],
+"pap_chakalaka": [
+"Pap and chakalaka",
+"Pap et chakalaka",
+"polenta blanche et ragoût de légumes épicé, Afrique du Sud"
+],
+"atakilt_wat": [
+"Atakilt wat",
+"chou, carottes et pommes de terre au curcuma, Éthiopie"
+],
+"caldou_poisson": [
+"Caldou",
+"poisson poché au citron, oignon et gombo, Sénégal"
+],
+"poulet_marry_me": [
+"Marry me chicken",
+"Poulet « Marry me »",
+"crème, tomates séchées, parmesan"
+],
+"roule_pommes_de_terre_poulet": [
+"Roulé de pommes de terre",
+"Roulé de pommes de terre au poulet et fromage frais ail-fines herbes"
+],
+"curry_poulet_suriname": [
+"Kip kerrie",
+"Curry de poulet du Suriname",
+"pommes de terre, massalé"
+],
+"asun_jollof": [
+"Asun jollof rice",
+"Asun jollof",
+"riz jollof au chevreau grillé pimenté, Nigeria"
+],
+"coquillettes_boeuf_effiloche": [
+"Bœuf effiloché & coquillettes",
+"Coquillettes au bœuf effiloché, sauce tomate-soja",
+"one pot"
+],
+"nouilles_pommes_de_terre": [
+"Tǔdòu fěn (nouilles de pomme de terre)",
+"Nouilles de pommes de terre maison, sauce ail-piment-vinaigre noir"
+],
+"fouti_guineen": [
+"Fouti / lafidi",
+"Fouti",
+"riz aux aubergines africaines et gombos, Guinée"
+],
+"cheeseburger_bombs": [
+"Cheeseburger bombs",
+"petits pains briochés farcis bœuf et cheddar"
+],
+"millefeuille_pommes_de_terre": [
+"Kartoffel-Mille-Feuille",
+"Mille-feuille de pommes de terre au beurre clarifié et au parmesan"
+],
+"tarte_trois_chocolats": [
+"Tarte 3 chocolats",
+"Tarte aux trois chocolats sans cuisson"
+],
+"frites_chargees_haricots": [
+"Loaded fries végétariennes",
+"Frites chargées végétariennes",
+"haricots rouges épicés, cheddar, avocat"
+],
+"pain_charge_cameroun": [
+"Pain chargé",
+"Pain chargé à la viande",
+"sandwich de rue camerounais, haricots et sauce pimentée"
+],
+"karantika": [
+"Garantita",
+"Karantika",
+"flan de pois chiche au four, Oran et Alger"
+],
+"omelette_frites_algerienne": [
+"Frites omelette",
+"Omelette aux frites et au persil",
+"Algérie"
+],
+"pates_butternut_rotie_ail": [
+"Pâtes butternut",
+"Pâtes à la crème de butternut rôtie, ail confit et sauge"
+],
+"felfla": [
+"Felfla",
+"poivrons et tomates grillés, mijotés à l'ail, Algérie"
+],
+"gateau_qui_pleure": [
+"Gâteau qui pleure",
+"génoise au cacao imbibée de lait, crème mascarpone et ganache"
+],
+"sauce_facon_big_tasty": [
+"Sauce Big Tasty",
+"Sauce burger fumée façon « Big Tasty »"
+],
+"persillade_frigo": [
+"Persillade",
+"Persillade à garder au frigo",
+"persil, ail, huile d'olive"
+],
+"sandwich_raclette_piquant": [
+"Sandwich raclette",
+"Sandwich chaud à la raclette, oignons confits et piment"
+],
+"pates_chorizo_creme": [
+"Pasta chorizo",
+"Pâtes au chorizo et à la tomate crémeuse",
+"chorizo de bœuf ou de volaille"
+],
+"enoki_ail_soja": [
+"Enoki sautés",
+"Champignons enoki sautés à l'ail, au soja et au beurre"
+],
+"avocats_saumon_fume_fromage_frais": [
+"Avocat saumon-Philadelphia",
+"Avocats garnis au saumon fumé et au fromage frais"
+],
+"ailes_poulet_aigre_douce": [
+"Ailes aigre-douce",
+"Ailes de poulet croustillantes à la sauce aigre-douce"
+],
+"poulet_concombre_saute": [
+"Concombre sauté",
+"Concombre sauté au poulet",
+"sauté chinois"
+],
+"sauce_sriracha_maison": [
+"Sriracha",
+"Sauce sriracha maison",
+"piment, ail, vinaigre"
+],
+"perles_coco": [
+"Perles de coco",
+"boules vapeur de riz gluant à la noix de coco"
+],
+"chevre_miel_barbecue": [
+"Chèvre-miel BBQ",
+"Chèvre au miel en papillote au barbecue"
+],
+"sandwich_champignons_chevre": [
+"Sandwich champi-chèvre",
+"Sandwich chaud aux champignons et au chèvre"
+],
+"sorbet_coco_antillais": [
+"Sorbet coco",
+"Sorbet coco à l'antillaise",
+"sans sorbetière"
+],
+"pasta_e_patate": [
+"Pasta e patate",
+"Pasta e patate à la napolitaine",
+"pâtes et pommes de terre, provola fondante"
+],
+"mozzarella_in_purgatorio": [
+"Mozzarella in purgatorio",
+"mozzarella fondue dans la sauce tomate"
+],
+"uova_in_purgatorio": [
+"Uova in purgatorio",
+"œufs pochés dans la sauce tomate"
+],
+"cassolettes_crevettes_poireaux": [
+"Cassolettes de crevettes",
+"Cassolettes crémeuses de crevettes aux poireaux, gratinées"
+],
+"lasagnes_fruits_de_mer": [
+"Lasagnes de la mer",
+"Lasagnes aux crevettes et au crabe, béchamel citronnée"
+],
+"pates_oignons_creme": [
+"Pâtes aux oignons",
+"Pâtes crémeuses aux oignons fondus et au parmesan"
+],
+"chou_oeufs_saute": [
+"Chou aux œufs à la chinoise",
+"Chou vert et œufs poêlés, sauce soja-ail-piment",
+"Chine"
+],
+"cachir_poulet": [
+"Cachir",
+"Cachir maison au poulet et aux olives",
+"mortadelle algérienne sans porc"
+],
+"sbriciolata_citron": [
+"Sbriciolata al limone",
+"Sbriciolata au citron",
+"tarte crumble à la crème au citron"
+],
+"cheesecake_sans_cuisson_chocolat_noisette": [
+"No-bake cheesecake",
+"Cheesecake sans cuisson chocolat-noisette",
+"crème au fromage frais et ganache"
+],
+"cheesecake_yaourt": [
+"Cheesecake au yaourt",
+"Cheesecake au yaourt, cuisson courte sans bain-marie"
+],
+"sauce_curry_mango": [
+"Sauce curry mango",
+"Sauce curry-mangue façon fast-food",
+"sans additifs"
+],
+"sirop_citron_maison": [
+"Sirop de citron",
+"Sirop de citron maison",
+"zestes infusés une nuit"
+],
+"vinaigre_epluchures_pommes": [
+"Vinaigre d'épluchures",
+"Vinaigre de pommes maison avec les épluchures",
+"anti-gaspi"
+],
+"rouleaux_brick_reblochon_boeuf": [
+"Rouleaux reblochon-bœuf",
+"Rouleaux croustillants de brick au bœuf et au reblochon"
+],
+"pates_cremeuses_poulet_croustillant": [
+"Pâtes au poulet frit",
+"Pâtes crémeuses one-pot et poulet croustillant épicé"
+],
+"pommes_terre_hache_poele": [
+"Pommes de terre à la viande hachée",
+"Poêlée de pommes de terre et viande hachée aux épices",
+"10 minutes de préparation"
+],
+"tatin_carottes": [
+"Tatin de carottes",
+"Tatin de carottes au miel et au cumin, crème au citron"
+],
+"boules_pomme_terre_mozzarella": [
+"Boules de purée à la mozzarella",
+"Boules de pommes de terre croustillantes au cœur de mozzarella"
+],
+"smores_cookie_bars": [
+"S'mores cookie bars",
+"Barres cookie s'mores",
+"biscuit, chocolat, guimauve grillée"
+],
+"moelleux_chocolat_poele": [
+"Gâteau à la poêle",
+"Moelleux au chocolat cuit à la poêle",
+"sans four"
+],
+"lait_concentre_sucre_maison": [
+"Lait concentré sucré",
+"Lait concentré sucré maison",
+"lait réduit au sucre"
+],
+"sirop_fraise_maison": [
+"Sirop de fraise",
+"Sirop de fraise maison",
+"fraises et sucre, 15 minutes"
+],
+"orzo_poulet_cajun": [
+"Cajun chicken orzo",
+"Orzo crémeux au poulet cajun, en une seule poêle"
+],
+"widjila": [
+"Widjila / woudjila",
+"Widjila",
+"pains cuits à la vapeur, sauce d'agneau épicée, Tombouctou"
+],
+"crispy_chicken_caesar_burger": [
+"Crispy chicken Caesar burger",
+"Burger de poulet croustillant, salade César et parmesan"
+],
+"rougag_dajaj": [
+"Rougag / rougague dajaj",
+"Rougag dajaj",
+"poulet aux légumes sur feuilles de pâte fine, Algérie"
+],
+"poulet_croustillant_airfryer": [
+"Poulet frit sans friture",
+"Hauts de cuisse croustillants à la friteuse sans huile, sauce mayo aigre-douce"
+],
+"rillettes_poulet_legeres": [
+"Rillettes de poulet légères",
+"Rillettes de poulet sans graisse ajoutée",
+"au fromage frais et aux herbes"
+],
+"burger_halloumi_croustillant": [
+"Halloumi burger",
+"Burger au halloumi croustillant, salade César végétarienne"
+],
+"koliko": [
+"Koliko",
+"frites d'igname, sauce piment"
+],
+"pinon": [
+"Pinon / piron",
+"Pinon",
+"pâte de gari à la sauce tomate"
+],
+"dambun_nama": [
+"Dambun nama",
+"effiloché de bœuf frit et sec, au yaji"
+],
+"tofu_aigre_doux": [
+"Tofu aigre-doux",
+"Tofu croustillant à la sauce aigre-douce, poivrons et ananas"
+],
+"tofu_chou_chinois_saute": [
+"Chou chinois au tofu",
+"Chou chinois sauté au tofu et au vinaigre noir"
+],
+"pommes_anna": [
+"Pommes Anna",
+"gâteau de pommes de terre au beurre"
+],
+"pigeon_petits_pois": [
+"Pigeon aux petits pois",
+"Pigeon rôti aux petits pois à la française"
+],
+"faisan_chou_cocotte": [
+"Faisan en cocotte",
+"Faisan en cocotte aux raisins et au chou"
+],
+"sauce_diable": [
+"Sauce diable",
+"échalote, vinaigre, poivre"
+],
+"sauce_charcutiere": [
+"Sauce charcutière",
+"moutarde et cornichons"
+],
+"fond_brun_veau": [
+"Fond brun",
+"Fond brun de veau",
+"la base des sauces brunes"
+],
+"court_bouillon": [
+"Court-bouillon",
+"Court-bouillon pour pocher poissons et crustacés"
+],
+"sauce_choron": [
+"Sauce Choron",
+"béarnaise à la tomate"
+],
+"sauce_poivrade": [
+"Sauce poivrade",
+"pour le gibier"
+],
+"raie_beurre_noisette_capres": [
+"Raie aux câpres",
+"Aile de raie au beurre noisette et aux câpres"
+],
+"maquereaux_vin_blanc": [
+"Maquereaux au vin blanc"
+],
+"bulots_aioli": [
+"Bulots mayo",
+"Bulots, aïoli"
+],
+"bavarois_framboise": [
+"Bavarois",
+"Bavarois aux framboises"
+],
+"vacherin_glace": [
+"Vacherin glacé",
+"meringue, sorbet, chantilly"
+],
+"puits_amour": [
+"Puits d'amour",
+"feuilletage, crème pâtissière caramélisée"
+],
+"porc_caramelise_viet": [
+"Thịt rim",
+"Porc caramélisé à la vietnamienne",
+"version de Morgane, 3,3 M de vues"
+],
+"boeuf_saute_oeuf": [
+"Huá dàn niúròu",
+"Bœuf sauté à l'œuf",
+"huá dàn niúròu, version de Morgane"
+],
+"goong_ob_woon_sen": [
+"Kung op wun sen",
+"Goong ob woon sen",
+"vermicelles aux crevettes en cocotte, Thaïlande"
+],
+"mayonnaise_japonaise": [
+"Mayonēzu",
+"Mayonnaise japonaise maison",
+"façon Kewpie"
+]
+}

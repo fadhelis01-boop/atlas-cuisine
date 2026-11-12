@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "curry_pois_chiches_express", "fiskefrikadeller", "curry_legumes_coco", "spaghetti_sautes_crevettes", "shakshuka_verte_feta", "muffins_oeufs_legumes", "bacalhau_bras",
-  "dhal_epinards_coco", "linguine_moules_scarole", "thiou_poulet", "yasai_kare", "fiskesuppe", "chana_masala", "chop_suey_boeuf", "salade_haricots_blancs_thon",
-  "anda_curry", "choucroute_mer", "thukpa", "crevettes_coco_citron_vert", "nouilles_sautees_legumes_oeuf", "gratin_chou_fleur_lentilles", "nikujaga", "falafels",
-  "goan_fish_curry", "pad_see_ew", "moules_normande", "pyttipanna_boeuf", "encornets_persillade", "dal_tadka",
+  "moules_frites", "curry_pois_chiches_express", "fiskefrikadeller", "curry_legumes_coco", "spaghetti_sautes_crevettes", "bacalhau_bras", "dhal_epinards_coco", "linguine_moules_scarole",
+  "shiro_wat", "fiskesuppe", "anda_curry", "falafels", "shakshuka_verte_feta", "sukiyaki", "pad_kra_pao_poulet", "merlu_beurre_blanc_poireaux",
+  "bunny_chow_haricots", "thukpa", "pyttipanna_boeuf", "bamia_gombo", "saumon_cajun_noirci", "ful_medames", "garbanzos_espinacas", "spaghetti_sautes_legumes_oeufs",
+  "chop_suey_boeuf", "riz_viande_hachee", "sandwich_raclette_piquant", "chou_oeufs_saute", "gratin_chou_fleur_lentilles", "rigatoni_brocoli_saucisse",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

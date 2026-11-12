@@ -1,0 +1,5 @@
+blinis_saumon 1
+meatloaf_sauce_tomate 3
+perles_coco 7
+burger_halloumi_croustillant 3
+maquereaux_vin_blanc 0
