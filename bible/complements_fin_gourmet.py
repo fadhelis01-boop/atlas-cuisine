@@ -133,6 +133,15 @@ ASTUCES = {
  "pissaladiere_": [],
 }
 ASTUCES.pop("pissaladiere_")
+# les 64 plats français du quotidien réécrits au niveau étalon (complements_etapes_fr*.py)
+from complements_etapes_fr import ETAPES as _E1, ASTUCES as _A1
+from complements_etapes_fr2 import ETAPES as _E2, ASTUCES as _A2
+for _e in (_E1, _E2): ETAPES.update(_e)
+for _a in (_A1, _A2): ASTUCES.update(_a)
+# une astuce pour chaque fiche française qui n'en avait aucune
+from complements_astuces_fr import ASTUCES as _A3
+for _k, _v in _A3.items(): ASTUCES[_k] = ASTUCES.get(_k, []) + [x for x in _v if x not in ASTUCES.get(_k, [])]
+
 
 # ---------------------------------------------------------------- accords mets-vins régionaux
 # (vin rouge, vin blanc ou rosé) par région, et un accord sans alcool du terroir

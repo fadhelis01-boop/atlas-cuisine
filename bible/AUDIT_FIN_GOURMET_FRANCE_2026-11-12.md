@@ -32,10 +32,16 @@ mesuré sur les données exportées (`app/src/data/recipes.json`), puis corrigé
 - **Régions unifiées** : Bourgogne-Franche-Comté ; les bases sans région vont en « Cuisine de base ».
 - **Lexique** : 15 gestes ajoutés.
 
-## 3. Reste à faire
+## 3. Suite du 12/11 (deuxième passe)
 
-- 64 fiches françaises du quotidien ou des enfants ont encore moins de 4 étapes. Elles sont lisibles, mais pas au niveau étalon. Il faut les reprendre par lots, en commençant par les plats les plus proposés.
-- La plupart des fiches sans astuce restent sans astuce.
-- Le lièvre à la royale et le plateau de fruits de mer (un assemblage plus qu'une recette) ne sont pas en fiche.
-- Photos libres : 47 des 63 nouvelles fiches illustrées (`illustrations/collect_v11.py`, `choix_v11.txt`). Restent sans photo juste : pommes Anna, artichauts, pigeon, fond brun, court-bouillon, Choron, poivrade, raie, maquereaux au vin blanc, bulots, bavarois, vacherin, puits d'amour, faisan, sauces diable et charcutière.
+- **Les 64 plats français du quotidien** encore en 2 ou 3 étapes réécrits au niveau étalon (`complements_etapes_fr.py`, `complements_etapes_fr2.py`, mêmes ingrédients) : plus aucun plat français sous 4 étapes.
+- **Une astuce de cuisinier pour chaque fiche française** qui n'en avait aucune (226 fiches, `complements_astuces_fr.py`) : plus aucune fiche française sans astuce.
+- **Lièvre à la royale** (version accessible en deux jours, roulé farci au foie gras) et **plateau de fruits de mer** en fiches.
+- **Photos** : seconde recherche (`collect_v12.py`) ; artichauts, lièvre à la royale et plateau illustrés. 1 260 fiches illustrées.
+- Test 123 renforcé : tous les plats français en ≥ 4 étapes, une astuce sur chaque fiche française.
+
+## 4. Reste à faire
+
+- 15 classiques sans photo juste (les banques libres n'en ont pas) : pommes Anna, pigeon, fond brun, court-bouillon, Choron, poivrade, raie, maquereaux au vin blanc, bulots, bavarois, vacherin, puits d'amour, faisan, sauces diable et charcutière. À photographier soi-même lors des tests.
+- 65 entrées et desserts français ont encore moins de 4 étapes (souvent des préparations courtes : salades, mousses, compotes).
 - Toutes ces fiches restent à tester en cuisine.

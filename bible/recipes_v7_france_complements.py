@@ -60,3 +60,25 @@ K("sauce_charcutiere", "Sauce charcutière (moutarde et cornichons)", "Sauce cha
    "**Mouiller.** Fond brun, 10 min : nappant.",
    "**Finir.** Hors du feu (la moutarde ne doit pas bouillir) : moutarde, cornichons en julienne."],
   var=[VB], keep="3 jours au frigo.", age=3, cats=["sauces"], profil=["acide"], tech=["Réduire"])
+
+K("lievre_royale", "Lièvre à la royale (version accessible, roulé farci au foie gras)", "Lièvre à la royale", "France › Cuisine de chef", "P", 3, 8, 90, 2880, "€€€", "Grande cocotte, ficelle de cuisine, thermomètre, mixeur.",
+  "Le monument de la cuisine de chasse, attribué au sénateur Couteaux : un lièvre désossé, farci de ses abats, de foie gras et de veau, roulé, braisé longuement au vin rouge, et servi avec une sauce liée au foie, sombre et brillante. Cette version garde le principe en deux jours, sans le sang.",
+  ["1|lièvre (2,5 kg), désossé par le volailler, avec le cœur, le foie et les rognons|-|3", "150 g|de foie gras cru|-|2", "300 g|d'épaule de veau hachée|Épaule / tendron de veau|2", f"2|échalotes|{ECHA}|1", "1,5 L|de vin rouge corsé|Vin rouge|3", "4 cl|de cognac (facultatif)|Cognac / armagnac / brandy|1?", f"2|carottes|{CAROTTE}|1", f"2|oignons|{OIG}|1", "1|bouquet garni|Laurier|1", f"30 g|de chocolat noir|{CHOCO}|1", f"30 g|de beurre froid|{BEURRE}|1"],
+  ["**Mariner (J-1).** Chair désossée étalée, vin, cognac, carottes, oignons, bouquet ; 24 h au frais ; foie du lièvre gardé à part.",
+   "**Farce.** Veau, cœur et rognons hachés, échalotes, sel (14 g/kg), poivre, foie gras en dés : bien liée.",
+   "**Rouler.** Chair épongée, à plat, farce au centre, roulée serré et ficelée tous les 3 cm ; saisie dans le beurre sur toutes les faces : brune.",
+   "**Braiser.** Marinade bouillie et écumée versée à hauteur ; couvert, four 150 °C 4 à 5 h : une pique entre sans résistance ; refroidi dans la cocotte une nuit (il se tranche net).",
+   "**Sauce et service.** Jus dégraissé, réduit de moitié ; foie du lièvre mixé avec une louche de sauce, ajouté hors du feu, chocolat, beurre froid : sauce sombre, nappante ; roulé tranché épais, réchauffé dans la sauce, avec des pâtes fraîches ou une purée de céleri."],
+  tips=["Le volailler-gibier désosse le lièvre si on le lui demande à l'avance ; la vraie recette lie la sauce au sang.", "Femme enceinte : foie gras cuit à cœur ici, mais gibier et foies à éviter par prudence."],
+  var=[VR, ("Sans alcool", ["alcohol"], {"Cognac / armagnac / brandy": [("Bouillon d'os maison (bœuf/volaille)", 1.0)]}, "Cognac → **un peu de fond**. **À tester**.")],
+  keep="4 jours au frigo dans sa sauce ; se congèle.", age=None, kids="✓ dès 6 ans en version sans alcool.", fetes=["Noël", "Repas de famille"], profil=["viande_rouge", "gras"], tech=["Mariner", "Mijoter", "Monter au beurre"])
+K("plateau_fruits_de_mer", "Plateau de fruits de mer maison", "Plateau de fruits de mer", "France › Bretagne", "E", 2, 6, 60, 30, "€€€", "Grande marmite, plateau ou grand plat, glace pilée, couteau à huîtres, gant.",
+  "Le plateau des fêtes à la maison : des huîtres ouvertes au dernier moment, des crevettes et langoustines cuites minute, un tourteau, des bulots et des bigorneaux, sur un lit de glace et d'algues, avec mayonnaise, sauce à l'échalote, citron et pain de seigle beurré.",
+  ["24|huîtres|Huîtres|3", "1|tourteau (1 kg) cuit (fiche Tourteau)|Crabe / tourteau|2", "500 g|de langoustines|Langoustines|2", "500 g|de crevettes roses cuites|Crevettes (cuites/crues)|2", "500 g|de bulots cuits (fiche Bulots)|Bulots / bigorneaux|2", "1|bol de mayonnaise (fiche Mayonnaise)|SUB:mayonnaise|2", f"3|échalotes|{ECHA}|1", f"10 cl|de vinaigre de vin rouge|Vinaigre de vin rouge / blanc|1", f"3|citrons|{CIT}|1", "1|pain de seigle|Pain de campagne / complet|1", f"60 g|de beurre demi-sel|{BEURRE}|1"],
+  ["**La veille.** Tourteau et bulots cuits (fiches), refroidis, au frais ; plateau, glace et algues (chez le poissonnier) commandés.",
+   "**Sauce à l'échalote.** Échalotes ciselées très fin, vinaigre, poivre : 1 h au frais.",
+   "**Langoustines.** 2 à 3 min dans l'eau très salée bouillante : la queue se recourbe ; refroidies sur la glace.",
+   "**Huîtres.** Ouvertes au dernier moment (gant, couteau glissé côté charnière, muscle tranché), première eau jetée ; elles en refont.",
+   "**Dresser.** Glace pilée, algues, huîtres au centre, crustacés et coquillages autour ; citron, sauces, pain de seigle beurré ; aussitôt."],
+  tips=["Crustacés et mollusques : allergènes majeurs.", "Huîtres crues : déconseillées à la femme enceinte, aux jeunes enfants et aux personnes fragiles.", "Une huître vivante se referme quand on la touche ; ouverte et inerte, on la jette."],
+  keep="À manger tout de suite, tout reste au frais jusqu'au service.", age=None, kids="Pour les enfants : crevettes et langoustines cuites seulement.", cats=[], fetes=["Noël", "Nouvel An"], profil=["poisson", "acide"])

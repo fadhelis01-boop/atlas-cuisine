@@ -3671,5 +3671,17 @@
  "recette/pithiviers_amandes": {
   "i": 3,
   "from": "v11/recette/pithiviers_amandes"
+ },
+ "recette/artichauts_vinaigrette": {
+  "i": 6,
+  "from": "v12/recette/artichauts_vinaigrette"
+ },
+ "recette/lievre_royale": {
+  "i": 0,
+  "from": "v12/recette/lievre_royale"
+ },
+ "recette/plateau_fruits_de_mer": {
+  "i": 2,
+  "from": "v12/recette/plateau_fruits_de_mer"
  }
 }

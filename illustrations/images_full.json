@@ -11781,6 +11781,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/artichauts_vinaigrette": {
+  "path": "img/recette/artichauts_vinaigrette",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c59c69",
+  "author": "theCSSdiv",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/92146798@N00/5729604972",
+  "source": "Openverse (flickr)",
+  "title": "Globe artichoke",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ash_reshteh": {
   "path": "img/recette/ash_reshteh",
   "sizes": [
@@ -20529,6 +20546,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/lievre_royale": {
+  "path": "img/recette/lievre_royale",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b7a197",
+  "author": "Madroune",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Li%C3%A8vre_%C3%A0_la_royale,_restaurant_Les_Grands_Buffets.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lièvre à la royale, restaurant Les Grands Buffets.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/limonade_maison": {
   "path": "img/recette/limonade_maison",
   "sizes": [
@@ -25026,6 +25060,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:A_Cheese_platter_from_The_Astor_in_The_Eaton_HK.jpg",
   "source": "Wikimedia Commons",
   "title": "A Cheese platter from The Astor in The Eaton HK.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/plateau_fruits_de_mer": {
+  "path": "img/recette/plateau_fruits_de_mer",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9f7d63",
+  "author": "Arnaud 25",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Plateau_de_fruits_de_mer_001.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Plateau de fruits de mer 001.jpg",
   "kind": "photo",
   "avif": true
  },
