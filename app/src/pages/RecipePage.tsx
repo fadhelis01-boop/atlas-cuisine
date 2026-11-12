@@ -48,19 +48,41 @@ function SeasonBadge({ r }: { r: Recipe }) {
   const zone = zoneOf(useStore((st) => st.settings.zone));
   const f = seasonFit(r, zone);
   const s = seasonOf(zone);
-  if (f.inSeason.length && f.score > 0) return <p className="meta season-ok"><Icon name="sprout" size={16} className="ic-inline" /> De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}</p>;
-  if (f.outSeason.length) return <p className="meta season-out"><Icon name="timer" size={16} className="ic-inline" /> Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité conviennent souvent).</p>;
+  if (f.inSeason.length && f.score > 0)
+    return (
+      <p className="meta season-ok">
+        <Icon name="sprout" size={16} className="ic-inline" /> De saison ({SEASON_LABEL[s]}) : {f.inSeason.slice(0, 4).join(", ").toLowerCase()}
+      </p>
+    );
+  if (f.outSeason.length)
+    return (
+      <p className="meta season-out">
+        <Icon name="timer" size={16} className="ic-inline" /> Hors saison ici en ce moment : {f.outSeason.slice(0, 3).join(", ").toLowerCase()} (surgelés ou conserves de qualité
+        conviennent souvent).
+      </p>
+    );
   return null;
 }
 
-const FRY_TXT = "casserole sur un feu arrière, queue tournée vers l'intérieur, enfants loin de la cuisinière. Ne quitte jamais l'huile chaude ; garde un couvercle à portée pour étouffer une flamme, jamais d'eau.";
+const FRY_TXT =
+  "casserole sur un feu arrière, queue tournée vers l'intérieur, enfants loin de la cuisinière. Ne quitte jamais l'huile chaude ; garde un couvercle à portée pour étouffer une flamme, jamais d'eau.";
 const YOUNG_TXT = "cette fiche contient du café ou de l'alcool peu cuit. Prends la version sans alcool (bouillon, jus de raisin) ou sers-lui un autre plat.";
 const EGG_TXT = "Prends une mayonnaise du commerce ou des œufs pasteurisés ; 24 h au frigo au plus.";
 const FRYING = /bain de friture|huile de friture|huile (?:à|a) (?:1[5-9]\d) ?°C|frire|friture/i;
 /** Audit chef + famille : ce qui se prépare la veille ou avant, dit dès l'en-tête de la fiche. */
 export function AheadLine({ r }: { r: Recipe }) {
-  if (r.veille) return <p className="meta ahead"><Icon name="timer" size={16} className="ic-inline" /> À lancer la veille : {r.veille}</p>;
-  if (r.avance) return <p className="meta ahead"><Icon name="timer" size={16} className="ic-inline" /> + {minutes(r.avance)} à prévoir avant (marinade ou repos)</p>;
+  if (r.veille)
+    return (
+      <p className="meta ahead">
+        <Icon name="timer" size={16} className="ic-inline" /> À lancer la veille : {r.veille}
+      </p>
+    );
+  if (r.avance)
+    return (
+      <p className="meta ahead">
+        <Icon name="timer" size={16} className="ic-inline" /> + {minutes(r.avance)} à prévoir avant (marinade ou repos)
+      </p>
+    );
   return null;
 }
 
@@ -79,17 +101,46 @@ function BeforeYouStart({ r }: { r: Recipe }) {
     <div className="card pad before">
       <strong>Avant de commencer</strong>
       <ul className="small">
-        {r.veille && <li className="ahead"><strong>À lancer la veille</strong> : {r.veille}.</li>}
-        {!r.veille && r.avance ? <li className="ahead"><strong>À prévoir avant</strong> : {minutes(r.avance)} de marinade ou de repos au frais, en plus du temps annoncé.</li> : null}
+        {r.veille && (
+          <li className="ahead">
+            <strong>À lancer la veille</strong> : {r.veille}.
+          </li>
+        )}
+        {!r.veille && r.avance ? (
+          <li className="ahead">
+            <strong>À prévoir avant</strong> : {minutes(r.avance)} de marinade ou de repos au frais, en plus du temps annoncé.
+          </li>
+        ) : null}
         <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
         {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
-        {eqNotes.map((t) => <li key={t} className="eq-note">{t}</li>)}
-        {oven && <li>Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).</li>}
+        {eqNotes.map((t) => (
+          <li key={t} className="eq-note">
+            {t}
+          </li>
+        ))}
+        {oven && (
+          <li>
+            Préchauffe le four à <strong>{oven.temp}</strong> au moins 15 min avant d'enfourner (chaque four est différent : surveille les premières fois).
+          </li>
+        )}
         {soft && <li>Sors le beurre (et les œufs) du frigo 1 h avant.</li>}
         {longRest && <li>Prévois à l'avance : {minutes(r.rest)} de repos, de pousse ou de cuisson.</li>}
-        {fry && <li className="safety"><strong>Friture</strong> : {FRY_TXT}</li>}
-        {youngKid && youngAdultOnly(r) && <li className="safety"><strong>Enfant de moins de 6 ans</strong> : {YOUNG_TXT}</li>}
-        {r.rawEgg && <li className="safety"><strong>Œuf cru</strong> : déconseillé aux enfants de moins de 6 ans, aux femmes enceintes et aux personnes âgées{youngKid ? " (tu as un enfant de moins de 6 ans)" : ""}. {EGG_TXT}</li>}
+        {fry && (
+          <li className="safety">
+            <strong>Friture</strong> : {FRY_TXT}
+          </li>
+        )}
+        {youngKid && youngAdultOnly(r) && (
+          <li className="safety">
+            <strong>Enfant de moins de 6 ans</strong> : {YOUNG_TXT}
+          </li>
+        )}
+        {r.rawEgg && (
+          <li className="safety">
+            <strong>Œuf cru</strong> : déconseillé aux enfants de moins de 6 ans, aux femmes enceintes et aux personnes âgées
+            {youngKid ? " (tu as un enfant de moins de 6 ans)" : ""}. {EGG_TXT}
+          </li>
+        )}
       </ul>
     </div>
   );
@@ -100,22 +151,38 @@ function Lexique({ text }: { text: string }) {
   if (!terms.length) return null;
   return (
     <details className="card pad lexique">
-      <summary><strong><Icon name="dictionary" size={18} className="ic-inline" /> Les mots de cuisine de cette recette ({terms.length})</strong></summary>
-      <dl>{terms.map((t) => <div key={t.term}><dt>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</dt><dd>{t.def}</dd></div>)}</dl>
+      <summary>
+        <strong>
+          <Icon name="dictionary" size={18} className="ic-inline" /> Les mots de cuisine de cette recette ({terms.length})
+        </strong>
+      </summary>
+      <dl>
+        {terms.map((t) => (
+          <div key={t.term}>
+            <dt>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</dt>
+            <dd>{t.def}</dd>
+          </div>
+        ))}
+      </dl>
     </details>
   );
 }
 
 // audit chef professionnel (12/11/2026) : la convention du four, ce que change le nombre de portions, la règle du froid
-const OVEN_NOTE = "Températures données pour un four en chaleur statique (sauf mention « chaleur tournante ») ; en chaleur tournante, "
-  + "compte 15 à 20 °C de moins et surveille quelques minutes plus tôt. Chaque four chauffe différemment : fie-toi aux repères de chaque étape.";
-const COLD_RULE = "Au frais moins de 2 h après la cuisson, dans une boîte fermée peu profonde (il refroidit vite) ; "
-  + "réchauffé une seule fois, jusqu'à être fumant à cœur (63 °C au moins).";
+const OVEN_NOTE =
+  "Températures données pour un four en chaleur statique (sauf mention « chaleur tournante ») ; en chaleur tournante, " +
+  "compte 15 à 20 °C de moins et surveille quelques minutes plus tôt. Chaque four chauffe différemment : fie-toi aux repères de chaque étape.";
+const COLD_RULE =
+  "Au frais moins de 2 h après la cuisson, dans une boîte fermée peu profonde (il refroidit vite) ; " + "réchauffé une seule fois, jusqu'à être fumant à cœur (63 °C au moins).";
 function scaleNote(r: Recipe, factor: number): string {
   const t = norm(`${r.title} ${r.equipment} ${r.steps.join(" ")}`);
   const parts = ["Quantités adaptées."];
   if (/moule|cercle|cake|gateau|tarte|terrine|plat a gratin/.test(t))
-    parts.push(factor > 1 ? "Garde la même épaisseur : un moule plus grand (ou deux moules) ; le temps reste proche, vérifie la cuisson à la lame." : "Prends un moule plus petit pour garder la même épaisseur ; vérifie la cuisson quelques minutes plus tôt.");
+    parts.push(
+      factor > 1
+        ? "Garde la même épaisseur : un moule plus grand (ou deux moules) ; le temps reste proche, vérifie la cuisson à la lame."
+        : "Prends un moule plus petit pour garder la même épaisseur ; vérifie la cuisson quelques minutes plus tôt.",
+    );
   if (/roti|gigot|poulet entier|volaille entiere|cote de boeuf|canard entier|pintade/.test(t))
     parts.push("Une pièce plus grosse ou plus petite change le temps de cuisson : fie-toi au thermomètre, pas à la minuterie.");
   if (r.role === "dessert" && /levure|levain|blancs? (montes?|en neige)|meringue|genoise|biscuit/.test(t) && factor > 2)
@@ -124,12 +191,21 @@ function scaleNote(r: Recipe, factor: number): string {
   return parts.join(" ");
 }
 
-const TOC: [string, string][] = [["r-ingredients", "Ingrédients"], ["r-etapes", "Étapes"], ["r-finition", "Finition"], ["r-aide", "Si ça rate"]];
+const TOC: [string, string][] = [
+  ["r-ingredients", "Ingrédients"],
+  ["r-etapes", "Étapes"],
+  ["r-finition", "Finition"],
+  ["r-aide", "Si ça rate"],
+];
 /** Sommaire collant (audit UX 5) : sur téléphone, sauter d'un bloc à l'autre d'une fiche longue. Boutons et non ancres : le routeur utilise le #. */
 function RecipeToc() {
   return (
     <nav className="recipe-toc" aria-label="Sommaire de la recette">
-      {TOC.map(([id, l]) => <button key={id} type="button" className="chip" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}>{l}</button>)}
+      {TOC.map(([id, l]) => (
+        <button key={id} type="button" className="chip" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })}>
+          {l}
+        </button>
+      ))}
     </nav>
   );
 }
@@ -138,12 +214,24 @@ function FinishBlock({ r }: { r: Recipe }) {
   const f = finishFor(r);
   return (
     <div className="finish card pad" id="r-finition">
-      <h3 className="h4"><Icon name="plate" size={22} className="ic-inline" /> Finition et dressage</h3>
-      {f.taste && <p><strong>Goûte et rectifie.</strong> {f.taste}</p>}
+      <h3 className="h4">
+        <Icon name="plate" size={22} className="ic-inline" /> Finition et dressage
+      </h3>
+      {f.taste && (
+        <p>
+          <strong>Goûte et rectifie.</strong> {f.taste}
+        </p>
+      )}
       <p>{f.plate}</p>
       {f.green && <p className="small">{f.green}</p>}
-      {balanceOf(r) && <p className="small"><Icon name="broccoli" size={16} className="ic-inline" /> {balanceOf(r)}</p>}
-      <p className="small"><a href={href("/technique/presenter-une-assiette")}>Les gestes pour présenter une assiette →</a></p>
+      {balanceOf(r) && (
+        <p className="small">
+          <Icon name="broccoli" size={16} className="ic-inline" /> {balanceOf(r)}
+        </p>
+      )}
+      <p className="small">
+        <a href={href("/technique/presenter-une-assiette")}>Les gestes pour présenter une assiette →</a>
+      </p>
     </div>
   );
 }
@@ -152,18 +240,33 @@ function RescueBlock({ r }: { r: Recipe }) {
   const list = rescueFor(r);
   if (!list.length) return null;
   return (
-    <Section title={<><Icon name="lifebuoy" size={24} className="ic-inline" /> Si ça ne se passe pas comme prévu</>} id="r-aide">
+    <Section
+      title={
+        <>
+          <Icon name="lifebuoy" size={24} className="ic-inline" /> Si ça ne se passe pas comme prévu
+        </>
+      }
+      id="r-aide"
+    >
       <details className="rescue-all">
-      <summary>{list.length} problème{list.length > 1 ? "s" : ""} fréquent{list.length > 1 ? "s" : ""} et leur solution</summary>
-      <div className="rescue">
-        {list.map((x) => (
-          <details key={x.problem} className="card pad">
-            <summary><strong>{x.problem}</strong></summary>
-            <p>{x.fix}</p>
-            {x.tech && <p className="small"><a href={href(`/technique/${x.tech}`)}>Voir la technique pas à pas →</a></p>}
-          </details>
-        ))}
-      </div>
+        <summary>
+          {list.length} problème{list.length > 1 ? "s" : ""} fréquent{list.length > 1 ? "s" : ""} et leur solution
+        </summary>
+        <div className="rescue">
+          {list.map((x) => (
+            <details key={x.problem} className="card pad">
+              <summary>
+                <strong>{x.problem}</strong>
+              </summary>
+              <p>{x.fix}</p>
+              {x.tech && (
+                <p className="small">
+                  <a href={href(`/technique/${x.tech}`)}>Voir la technique pas à pas →</a>
+                </p>
+              )}
+            </details>
+          ))}
+        </div>
       </details>
     </Section>
   );
@@ -172,13 +275,15 @@ function RescueBlock({ r }: { r: Recipe }) {
 /** Sur téléphone, masque la barre d'onglets quand on descend (plus de place pour lire et cuisiner), la remontre dès qu'on
  *  remonte, près du haut de la page, ou quand le clavier y place le focus (CSS). Rend la fonction de nettoyage. */
 function hideNavOnScroll() {
-  let last = window.scrollY, ticking = false;
+  let last = window.scrollY,
+    ticking = false;
   const body = document.body;
   const onScroll = () => {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(() => {
-      const y = window.scrollY, dy = y - last;
+      const y = window.scrollY,
+        dy = y - last;
       if (y < 120 || dy < -8) body.classList.remove("nav-hidden");
       else if (dy > 8) body.classList.add("nav-hidden");
       if (Math.abs(dy) > 8 || y < 120) last = y;
@@ -186,7 +291,10 @@ function hideNavOnScroll() {
     });
   };
   window.addEventListener("scroll", onScroll, { passive: true });
-  return () => { window.removeEventListener("scroll", onScroll); body.classList.remove("nav-hidden"); };
+  return () => {
+    window.removeEventListener("scroll", onScroll);
+    body.classList.remove("nav-hidden");
+  };
 }
 
 export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }) {
@@ -202,28 +310,63 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const [showAnyway, setShowAnyway] = useState(q.get("voir") === "1");
   // barre d'onglets masquée en descendant dans la fiche, réaffichée en remontant (audit UI/UX 12/11 : 138 px de barres en bas)
   useEffect(() => hideNavOnScroll(), []);
-  useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || defaultPortions(r, getState().profile)); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (r) {
+      pushRecent(r.id);
+      setPortions(asked || defaultPortions(r, getState().profile));
+    }
+    return () => {
+      stopSpeaking();
+    };
+  }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const v = useMemo(() => (r ? verdict(r, p) : null), [r, p]);
-  if (!r || !v) return <Page title="Recette introuvable" back="/explorer">{null}</Page>;
+  if (!r || !v)
+    return (
+      <Page title="Recette introuvable" back="/explorer">
+        {null}
+      </Page>
+    );
 
   const adapted = v.availability === "adaptable" && useAdapted ? v.adapted : null;
   const lines: RecipeLine[] = adapted ? adapted.lines : r.ingredients;
   const factor = portions / r.portions;
   const salt = saltDose(r, portions);
   // repères visuels : chacun n'apparaît qu'à sa première étape, pour ne pas répéter
-  const cues = (() => { const seen = new Set<string>(); return r.steps.map((st) => cuesIn(st).filter((c) => !seen.has(c) && (seen.add(c), true))); })();
+  const cues = (() => {
+    const seen = new Set<string>();
+    return r.steps.map((st) => cuesIn(st).filter((c) => !seen.has(c) && (seen.add(c), true)));
+  })();
   // audit gourmet §3 : le mot du métier est expliqué là où on en a besoin, à sa première apparition
-  const gestes = (() => { const seen = new Set<string>(); return r.steps.map((st) => termsIn(st).filter((t) => !seen.has(t.term) && (seen.add(t.term), true))); })();
+  const gestes = (() => {
+    const seen = new Set<string>();
+    return r.steps.map((st) => termsIn(st).filter((t) => !seen.has(t.term) && (seen.add(t.term), true)));
+  })();
   const ev = evaluateLines(lines);
   const kidsAlert = p.kidsAge !== null && r.age !== null && p.kidsAge < r.age;
   const showAlcoholDrinks = p.adult && p.alcohol === "allowed";
   const prof = r.profile.find((x) => ACCORDS[x]);
 
   const read = (mode: "tout" | "resume") => {
-    if (reading !== null) { stopSpeaking(); setReading(null); return; }
-    const parts = mode === "resume"
-      ? [`${r.title}. ${plain(r.intro)}`, `Pour ${portions} personnes, ${minutes(r.active)} de préparation${r.rest ? ` et ${minutes(r.rest)} de cuisson ou de repos` : ""}.`, `Matériel : ${r.equipment}`]
-      : [r.title, plain(r.intro), `Ingrédients pour ${portions} personnes.`, ...lines.map((l) => `${scaleQty(l.qty, factor)} ${l.label}`), "Étapes.", ...r.steps.map((s, i) => `Étape ${i + 1}. ${s}`)];
+    if (reading !== null) {
+      stopSpeaking();
+      setReading(null);
+      return;
+    }
+    const parts =
+      mode === "resume"
+        ? [
+            `${r.title}. ${plain(r.intro)}`,
+            `Pour ${portions} personnes, ${minutes(r.active)} de préparation${r.rest ? ` et ${minutes(r.rest)} de cuisson ou de repos` : ""}.`,
+            `Matériel : ${r.equipment}`,
+          ]
+        : [
+            r.title,
+            plain(r.intro),
+            `Ingrédients pour ${portions} personnes.`,
+            ...lines.map((l) => `${scaleQty(l.qty, factor)} ${l.label}`),
+            "Étapes.",
+            ...r.steps.map((s, i) => `Étape ${i + 1}. ${s}`),
+          ];
     setReading(0);
     speak(parts, { onIndex: (i) => setReading(i), onEnd: () => setReading(null) });
   };
@@ -237,7 +380,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         return sub && depth < 2 ? expand(sub.ingredients, f, from, depth + 1) : l.ref && !l.ref.startsWith("SUB:") && !l.optional ? [{ l, f, from }] : [];
       });
     const sideR = r.side && !r.side.startsWith("achat:") ? RECIPE_BY_ID[r.side] : undefined;
-    const all = [...expand(lines, factor, r.title), ...(sideR ? expand(sideR.ingredients, (portions / sideR.portions), r.title) : [])];
+    const all = [...expand(lines, factor, r.title), ...(sideR ? expand(sideR.ingredients, portions / sideR.portions, r.title) : [])];
     setState((s) => {
       for (const { l, f, from } of all) {
         if (s.shopping.some((x) => x.ref === l.ref && !x.done && x.from === from)) continue;
@@ -245,20 +388,39 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       }
       if (r.side?.startsWith("achat:") && !s.shopping.some((x) => x.ref === r.side!.slice(6) && !x.done)) {
         const ref = r.side.slice(6);
-        s.shopping.push({ id: uid(), ref, label: `${ref.split(" (")[0].split(" / ")[0]} (pour accompagner)`, from: r.title, done: false, section: INGREDIENTS[ref]?.section ?? "Autres" });
+        s.shopping.push({
+          id: uid(),
+          ref,
+          label: `${ref.split(" (")[0].split(" / ")[0]} (pour accompagner)`,
+          from: r.title,
+          done: false,
+          section: INGREDIENTS[ref]?.section ?? "Autres",
+        });
       }
     });
     const added = getState().shopping.length - before;
-    toast(added ? `${added} ingrédient${added > 1 ? "s" : ""} ajouté${added > 1 ? "s" : ""} aux courses` : "Déjà dans ta liste de courses",
-      { undo: added ? () => setState((s) => { s.shopping = s.shopping.slice(0, before); }) : undefined, link: { label: "Voir", to: "/courses" } });
+    toast(added ? `${added} ingrédient${added > 1 ? "s" : ""} ajouté${added > 1 ? "s" : ""} aux courses` : "Déjà dans ta liste de courses", {
+      undo: added
+        ? () =>
+            setState((s) => {
+              s.shopping = s.shopping.slice(0, before);
+            })
+        : undefined,
+      link: { label: "Voir", to: "/courses" },
+    });
   };
 
   const share = async () => {
     const url = `${location.origin}${location.pathname}#/recette/${r.id}`;
     try {
       if (navigator.share) await navigator.share({ title: r.title, text: `${r.title} : une recette ATLAS`, url });
-      else { await navigator.clipboard.writeText(url); toast("Lien copié : colle-le dans un message"); }
-    } catch { /* partage annulé */ }
+      else {
+        await navigator.clipboard.writeText(url);
+        toast("Lien copié : colle-le dans un message");
+      }
+    } catch {
+      /* partage annulé */
+    }
   };
   if (v.availability === "hidden" && !showAnyway) {
     return (
@@ -266,8 +428,12 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
         <div className="banner bad" role="alert">
           <strong>Cette recette ne convient pas à ton foyer</strong> : {v.reasons.join(", ")}. Aucune substitution fiable n'existe encore pour cette fiche.
         </div>
-        <button className="btn ghost" onClick={() => setShowAnyway(true)}>Voir la recette quand même</button>
-        <a className="btn" href={href(`/region/${r.macro}`)}>Voir des plats proches de la même région</a>
+        <button className="btn ghost" onClick={() => setShowAnyway(true)}>
+          Voir la recette quand même
+        </button>
+        <a className="btn" href={href(`/region/${r.macro}`)}>
+          Voir des plats proches de la même région
+        </a>
       </Page>
     );
   }
@@ -276,94 +442,282 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
     <main className="page recipe" id="contenu" tabIndex={-1}>
       <div className="cook-sticky" role="group" aria-label="Cuisiner cette recette">
         <div className="portions mini" role="group" aria-label="Nombre de portions">
-          <button type="button" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
-          <span><strong>{portions}</strong> pers.</span>
-          <button type="button" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
+          <button type="button" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">
+            −
+          </button>
+          <span>
+            <strong>{portions}</strong> pers.
+          </span>
+          <button type="button" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">
+            +
+          </button>
         </div>
-        <a className="btn" href={href(cookHref(r.id, portions, !!adapted))}><Icon name="play" size={20} /> Cuisiner</a>
+        <a className="btn" href={href(cookHref(r.id, portions, !!adapted))}>
+          <Icon name="play" size={20} /> Cuisiner
+        </a>
       </div>
-      <button type="button" className="back" onClick={() => goBack(`/region/${r.macro}`)}><Icon name="back" size={20} /> Retour</button>
+      <button type="button" className="back" onClick={() => goBack(`/region/${r.macro}`)}>
+        <Icon name="back" size={20} /> Retour
+      </button>
       <div className="recipe-head">
-        <figure className="hero-fig"><Cover r={r} big /><figcaption><details className="credit-mini"><summary aria-label="Crédit et licence de la photo">i</summary><Credit k={`recette/${r.id}`} /></details></figcaption></figure>
+        <figure className="hero-fig">
+          <Cover r={r} big />
+          <figcaption>
+            <details className="credit-mini">
+              <summary aria-label="Crédit et licence de la photo">i</summary>
+              <Credit k={`recette/${r.id}`} />
+            </details>
+          </figcaption>
+        </figure>
         <div>
           <h1>{r.title}</h1>
-          {r.origin && r.origin !== r.title && <p className="origin" lang="und">{r.origin}</p>}
-          <div className="region-line"><OriginMap key={r.id} r={r} /><p className="meta">{r.regionPath.join(" › ")} · {r.kind}</p></div>
-          {r.fusionNote && <p className="meta"><a href={href("/region/fusion")}><Icon name="fusion" size={16} className="ic-inline" /> Food fusion</a> : {r.fusionNote}</p>}
-          {r.videos.some((x) => x.embed) && <button className="btn ghost small" onClick={() => { const x = r.videos.find((y) => y.embed)!; playVideo(x); }}><Icon name="play" size={16} className="ic-inline" /> Voir la vidéo</button>}
-          <p className="meta"><Icon name="timer" size={16} className="ic-inline" />{minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}</p>
+          {r.origin && r.origin !== r.title && (
+            <p className="origin" lang="und">
+              {r.origin}
+            </p>
+          )}
+          <div className="region-line">
+            <OriginMap key={r.id} r={r} />
+            <p className="meta">
+              {r.regionPath.join(" › ")} · {r.kind}
+            </p>
+          </div>
+          {r.fusionNote && (
+            <p className="meta">
+              <a href={href("/region/fusion")}>
+                <Icon name="fusion" size={16} className="ic-inline" /> Food fusion
+              </a>{" "}
+              : {r.fusionNote}
+            </p>
+          )}
+          {r.videos.some((x) => x.embed) && (
+            <button
+              className="btn ghost small"
+              onClick={() => {
+                const x = r.videos.find((y) => y.embed)!;
+                playVideo(x);
+              }}
+            >
+              <Icon name="play" size={16} className="ic-inline" /> Voir la vidéo
+            </button>
+          )}
+          <p className="meta">
+            <Icon name="timer" size={16} className="ic-inline" />
+            {minutes(r.active)} de préparation{r.rest ? ` + ${minutes(r.rest)} (cuisson / repos)` : ""} · {levelLabel(r.level)} · {costLabel(r.cost)}
+          </p>
           <AheadLine r={r} />
           <DietBadges r={r} v={v} lines={adapted ? lines : undefined} />
           <SeasonBadge r={r} />
           {/* recette non testée : dit d'emblée, en un badge relié au carnet (audit dév/UX 2026-10-21 §2.2) */}
-          <p className="untested-line"><a className="badge info" href={href("/biblio")} title="Ton avis dans le carnet sert à corriger la fiche"><Icon name="alert" size={14} className="ic-inline" /> Pas encore testée en cuisine</a></p>
-          <a className="btn big cook-cta" href={href(cookHref(r.id, portions, !!adapted))}><Icon name="play" size={22} /> Cuisiner pas à pas</a>
+          <p className="untested-line">
+            <a className="badge info" href={href("/biblio")} title="Ton avis dans le carnet sert à corriger la fiche">
+              <Icon name="alert" size={14} className="ic-inline" /> Pas encore testée en cuisine
+            </a>
+          </p>
+          <a className="btn big cook-cta" href={href(cookHref(r.id, portions, !!adapted))}>
+            <Icon name="play" size={22} /> Cuisiner pas à pas
+          </a>
           {/* actions secondaires : icônes légendées de même taille (audit UX 2026-10-16 §2.4) */}
           <div className="quick-actions" role="group" aria-label="Actions">
-            <button type="button" onClick={() => toggleFavorite(r.id)} aria-pressed={fav}><Icon name="heart" size={24} className={fav ? "ic-on" : ""} /><span>{fav ? "Favori" : "Garder"}</span></button>
-            <button type="button" onClick={addToShopping}><Icon name="cart" size={24} /><span>Courses</span></button>
-            {r.role === "plat" && <a href={href(`/semaine?ajout=${r.id}`)}><Icon name="calendar" size={24} /><span>Planifier</span></a>}
-            {ttsAvailable() && <button type="button" onClick={() => read("tout")} aria-pressed={reading !== null}><Icon name={reading !== null ? "close" : "speaker"} size={24} /><span>{reading !== null ? "Arrêter" : "Écouter"}</span></button>}
-            <button type="button" onClick={() => void share()}><Icon name="share" size={24} /><span>Partager</span></button>
+            <button type="button" onClick={() => toggleFavorite(r.id)} aria-pressed={fav}>
+              <Icon name="heart" size={24} className={fav ? "ic-on" : ""} />
+              <span>{fav ? "Favori" : "Garder"}</span>
+            </button>
+            <button type="button" onClick={addToShopping}>
+              <Icon name="cart" size={24} />
+              <span>Courses</span>
+            </button>
+            {r.role === "plat" && (
+              <a href={href(`/semaine?ajout=${r.id}`)}>
+                <Icon name="calendar" size={24} />
+                <span>Planifier</span>
+              </a>
+            )}
+            {ttsAvailable() && (
+              <button type="button" onClick={() => read("tout")} aria-pressed={reading !== null}>
+                <Icon name={reading !== null ? "close" : "speaker"} size={24} />
+                <span>{reading !== null ? "Arrêter" : "Écouter"}</span>
+              </button>
+            )}
+            <button type="button" onClick={() => void share()}>
+              <Icon name="share" size={24} />
+              <span>Partager</span>
+            </button>
           </div>
         </div>
       </div>
 
       {v.availability === "adaptable" && v.adapted && (
         <div className="banner info" role="region" aria-label="Version adaptée">
-          <p><strong>La recette d'origine {v.reasons.join(", ")}.</strong> {useAdapted ? `Tu vois la version adaptée : ${v.adapted.variantName.toLowerCase()}.` : "Tu vois la recette d'origine."}</p>
+          <p>
+            <strong>La recette d'origine {v.reasons.join(", ")}.</strong>{" "}
+            {useAdapted ? `Tu vois la version adaptée : ${v.adapted.variantName.toLowerCase()}.` : "Tu vois la recette d'origine."}
+          </p>
           <div className="seg" role="group" aria-label="Choisir la version">
-            <button className={useAdapted ? "on" : ""} aria-pressed={useAdapted} onClick={() => setUseAdapted(true)}>Version adaptée</button>
-            <button className={!useAdapted ? "on" : ""} aria-pressed={!useAdapted} onClick={() => setUseAdapted(false)}>Recette d'origine</button>
+            <button className={useAdapted ? "on" : ""} aria-pressed={useAdapted} onClick={() => setUseAdapted(true)}>
+              Version adaptée
+            </button>
+            <button className={!useAdapted ? "on" : ""} aria-pressed={!useAdapted} onClick={() => setUseAdapted(false)}>
+              Recette d'origine
+            </button>
           </div>
-          {useAdapted && <ul>{v.adapted.notes.map((n, i) => <li key={i}><Rich text={n} /></li>)}</ul>}
-          <p className="small"><Icon name="alert" size={16} className="ic-inline" /> <strong>Substitution à tester</strong> : elle n'a pas encore passé la dégustation à l'aveugle (Tome 7 §3). Elle est vérifiée pour ton régime, pas encore pour le goût.</p>
-          {v.adapted.newAllergens.length > 0 && <p className="warn-text"><Icon name="alert" size={16} className="ic-inline" /> Nouvel allergène dans la version adaptée : {v.adapted.newAllergens.map((a) => ALLERGENS[a]).join(", ")}.</p>}
+          {useAdapted && (
+            <ul>
+              {v.adapted.notes.map((n, i) => (
+                <li key={i}>
+                  <Rich text={n} />
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="small">
+            <Icon name="alert" size={16} className="ic-inline" /> <strong>Substitution à tester</strong> : elle n'a pas encore passé la dégustation à l'aveugle (Tome 7 §3). Elle
+            est vérifiée pour ton régime, pas encore pour le goût.
+          </p>
+          {v.adapted.newAllergens.length > 0 && (
+            <p className="warn-text">
+              <Icon name="alert" size={16} className="ic-inline" /> Nouvel allergène dans la version adaptée : {v.adapted.newAllergens.map((a) => ALLERGENS[a]).join(", ")}.
+            </p>
+          )}
         </div>
       )}
-      {v.warnings.length > 0 && <div className="banner warn"><strong>À vérifier :</strong> {v.warnings.join(" · ")}. Lis les étiquettes.</div>}
-      {kidsAlert && <div className="banner warn"><Icon name="kid" size={16} className="ic-inline" /> Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}</div>}
+      {v.warnings.length > 0 && (
+        <div className="banner warn">
+          <strong>À vérifier :</strong> {v.warnings.join(" · ")}. Lis les étiquettes.
+        </div>
+      )}
+      {kidsAlert && (
+        <div className="banner warn">
+          <Icon name="kid" size={16} className="ic-inline" /> Recette conseillée à partir de {r.age} ans ; ton plus jeune a {p.kidsAge} an(s). {plain(r.kids)}
+        </div>
+      )}
 
       <Intro text={r.intro} />
       {r.credit?.length ? (
         <p className="small meta recipe-credit">
-          D'après {creditGroups(r.credit).map(([author, urls], i, all) => (
-            <span key={author}>{i ? (i === all.length - 1 ? " et " : ", ") : ""}{urls.length > 1 ? "les vidéos" : "la vidéo"} de{" "}
-              <a href={safeHref(urls[0])} target="_blank" rel="noopener noreferrer">{author}</a>
-              {urls.length > 1 && <> ({urls.map((u, k) => <span key={u}>{k ? ", " : ""}<a href={safeHref(u)} target="_blank" rel="noopener noreferrer">{k + 1}</a></span>)})</>}
+          D'après{" "}
+          {creditGroups(r.credit).map(([author, urls], i, all) => (
+            <span key={author}>
+              {i ? (i === all.length - 1 ? " et " : ", ") : ""}
+              {urls.length > 1 ? "les vidéos" : "la vidéo"} de{" "}
+              <a href={safeHref(urls[0])} target="_blank" rel="noopener noreferrer">
+                {author}
+              </a>
+              {urls.length > 1 && (
+                <>
+                  {" "}
+                  (
+                  {urls.map((u, k) => (
+                    <span key={u}>
+                      {k ? ", " : ""}
+                      <a href={safeHref(u)} target="_blank" rel="noopener noreferrer">
+                        {k + 1}
+                      </a>
+                    </span>
+                  ))}
+                  )
+                </>
+              )}
             </span>
-          ))} (TikTok). Fiche réécrite par ATLAS, quantités et étapes à confirmer en cuisine.
+          ))}{" "}
+          (TikTok). Fiche réécrite par ATLAS, quantités et étapes à confirmer en cuisine.
         </p>
       ) : null}
 
       <RecipeToc />
       <div className="two-col">
         <Section title="Ingrédients" id="r-ingredients">
-          {r.side && <p className="side-note"><Icon name="plate" size={18} className="ic-inline" /> <strong>Accompagnement :</strong>{" "}
-            {r.side.startsWith("achat:") ? r.side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase() : <a href={href(`/recette/${r.side}?portions=${portions}`)}>{RECIPE_BY_ID[r.side]?.title.split(" (")[0].toLowerCase()}</a>}
-            <span className="small"> · ajouté aux courses avec la recette</span></p>}
+          {r.side && (
+            <p className="side-note">
+              <Icon name="plate" size={18} className="ic-inline" /> <strong>Accompagnement :</strong>{" "}
+              {r.side.startsWith("achat:") ? (
+                r.side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase()
+              ) : (
+                <a href={href(`/recette/${r.side}?portions=${portions}`)}>{RECIPE_BY_ID[r.side]?.title.split(" (")[0].toLowerCase()}</a>
+              )}
+              <span className="small"> · ajouté aux courses avec la recette</span>
+            </p>
+          )}
           <div className="portions" role="group" aria-label="Nombre de portions">
-            <button className="btn small ghost" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">−</button>
-            <span><strong>{portions}</strong> {r.role === "boisson" || r.kind === "Sauce" ? "portions" : "personnes"}</span>
-            <button className="btn small ghost" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
+            <button className="btn small ghost" onClick={() => setPortions(Math.max(1, portions - 1))} aria-label="Moins de portions">
+              −
+            </button>
+            <span>
+              <strong>{portions}</strong> {r.role === "boisson" || r.kind === "Sauce" ? "portions" : "personnes"}
+            </span>
+            <button className="btn small ghost" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">
+              +
+            </button>
           </div>
-          {Math.abs(factor - 1) > 0.01 && <p className="small scale-note"><Icon name="alert" size={16} className="ic-inline" /> {scaleNote(r, factor)}</p>}
+          {Math.abs(factor - 1) > 0.01 && (
+            <p className="small scale-note">
+              <Icon name="alert" size={16} className="ic-inline" /> {scaleNote(r, factor)}
+            </p>
+          )}
           <ul className="ingredients">
             {lines.map((l, i) => (
               <li key={i} className={l.optional ? "opt" : ""}>
                 <span className="qty">{scaleQty(l.qty, factor)}</span>{" "}
-                {l.ref?.startsWith("SUB:") ? <a href={href(`/recette/${l.ref.slice(4)}`)}>{l.label}</a> : l.ref && INGREDIENTS[l.ref]?.slug ? <a className="ing-link" href={href(`/ingredient/${INGREDIENTS[l.ref].slug}`)} title={`${l.ref} : voir le dictionnaire`}>{l.label}</a> : l.label}
+                {l.ref?.startsWith("SUB:") ? (
+                  <a href={href(`/recette/${l.ref.slice(4)}`)}>{l.label}</a>
+                ) : l.ref && INGREDIENTS[l.ref]?.slug ? (
+                  <a className="ing-link" href={href(`/ingredient/${INGREDIENTS[l.ref].slug}`)} title={`${l.ref} : voir le dictionnaire`}>
+                    {l.label}
+                  </a>
+                ) : (
+                  l.label
+                )}
                 {l.optional && <span className="meta"> (facultatif)</span>}
                 {l.replaces && <span className="meta repl"> · remplace {l.replaces}</span>}
-                {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && <span className="meta" title="Disponibilité en France"> · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}{substitutOf(l.ref) && <span className="subst"> · sinon : {substitutOf(l.ref)}</span>}</span>}
+                {l.ref && INGREDIENTS[l.ref] && "🟠🔴".includes(INGREDIENTS[l.ref].dispo) && (
+                  <span className="meta" title="Disponibilité en France">
+                    {" "}
+                    · {INGREDIENTS[l.ref].dispo === "🟠" ? "épicerie spécialisée" : "difficile à trouver"}
+                    {substitutOf(l.ref) && <span className="subst"> · sinon : {substitutOf(l.ref)}</span>}
+                  </span>
+                )}
               </li>
             ))}
-            {salt && <li className="salt-line"><span className="qty">Sel</span> {salt.text}{salt.water && <span className="meta"> · Eau de cuisson des pâtes ou des légumes : 10 g de sel par litre (2 c. à c. rases).</span>}</li>}
+            {salt && (
+              <li className="salt-line">
+                <span className="qty">Sel</span> {salt.text}
+                {salt.water && <span className="meta"> · Eau de cuisson des pâtes ou des légumes : 10 g de sel par litre (2 c. à c. rases).</span>}
+              </li>
+            )}
           </ul>
-          {lines.some((l) => /c\. à [sc]\.|pincée/.test(l.qty)) && <p className="small abbr">c. à s. = cuillère à soupe (15 ml) · c. à c. = cuillère à café (5 ml) · pincée = ce qu'on prend entre 2 doigts</p>}
-          {ev.allergens.size > 0 && <p className="small"><strong>Allergènes :</strong> {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}{ev.maybeAllergens.size > ev.allergens.size ? ` ; possibles selon la marque : ${[...ev.maybeAllergens].filter((a) => !ev.allergens.has(a)).map((a) => ALLERGENS[a]).join(", ")}` : ""}.</p>}
+          {lines.some((l) => /c\. à [sc]\.|pincée/.test(l.qty)) && (
+            <p className="small abbr">c. à s. = cuillère à soupe (15 ml) · c. à c. = cuillère à café (5 ml) · pincée = ce qu'on prend entre 2 doigts</p>
+          )}
+          {ev.allergens.size > 0 && (
+            <p className="small">
+              <strong>Allergènes :</strong> {[...ev.allergens].map((a) => ALLERGENS[a]).join(", ")}
+              {ev.maybeAllergens.size > ev.allergens.size
+                ? ` ; possibles selon la marque : ${[...ev.maybeAllergens]
+                    .filter((a) => !ev.allergens.has(a))
+                    .map((a) => ALLERGENS[a])
+                    .join(", ")}`
+                : ""}
+              .
+            </p>
+          )}
           <Leftovers r={r} />
-          {restesOfRecipe(r).length > 0 && <p className="card pad restes-link"><Icon name="plate" size={20} className="ic-inline" /> <strong>Il en reste ?</strong> Idées pour le lendemain : <a href={href(`/restes?r=${restesOfRecipe(r).map((x) => x.id).join(",")}`)}>{restesOfRecipe(r).map((x) => x.name.split(" (")[0].split(",")[0].toLowerCase()).join(", ")}</a>.</p>}
+          {restesOfRecipe(r).length > 0 && (
+            <p className="card pad restes-link">
+              <Icon name="plate" size={20} className="ic-inline" /> <strong>Il en reste ?</strong> Idées pour le lendemain :{" "}
+              <a
+                href={href(
+                  `/restes?r=${restesOfRecipe(r)
+                    .map((x) => x.id)
+                    .join(",")}`,
+                )}
+              >
+                {restesOfRecipe(r)
+                  .map((x) => x.name.split(" (")[0].split(",")[0].toLowerCase())
+                  .join(", ")}
+              </a>
+              .
+            </p>
+          )}
         </Section>
 
         <Section title="Étapes" id="r-etapes">
@@ -375,20 +729,58 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
                 <Rich text={scaleStep(s, factor)} />
                 {gestes[i].map((t) => (
                   <details key={t.term} className="geste">
-                    <summary><Icon name="dictionary" size={15} className="ic-inline" /> Le geste : <strong>{t.term}</strong></summary>
-                    <p>{t.def}{t.tech && <> <a href={href(`/technique/${t.tech}`)}>Voir la technique pas à pas →</a></>}</p>
+                    <summary>
+                      <Icon name="dictionary" size={15} className="ic-inline" /> Le geste : <strong>{t.term}</strong>
+                    </summary>
+                    <p>
+                      {t.def}
+                      {t.tech && (
+                        <>
+                          {" "}
+                          <a href={href(`/technique/${t.tech}`)}>Voir la technique pas à pas →</a>
+                        </>
+                      )}
+                    </p>
                   </details>
                 ))}
-                {cues[i].length > 0 && <p className="cue">{cues[i].map((c) => <span key={c}><Icon name="eye" size={16} className="ic-inline" /> {c} </span>)}</p>}
+                {cues[i].length > 0 && (
+                  <p className="cue">
+                    {cues[i].map((c) => (
+                      <span key={c}>
+                        <Icon name="eye" size={16} className="ic-inline" /> {c}{" "}
+                      </span>
+                    ))}
+                  </p>
+                )}
                 {durationsIn(s).length > 0 && (
                   <div className="timers-inline">
-                    {durationsIn(s).filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j).map((d, j) => <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}><Icon name="timer" size={15} className="ic-inline" />{d.label}</button>)}
+                    {durationsIn(s)
+                      .filter((d, j, a) => a.findIndex((x) => x.label === d.label) === j)
+                      .map((d, j) => (
+                        <button key={j} className="chip" onClick={() => startTimer(`${r.title.split(" (")[0]} · ${gestureLabel(s, i + 1)}`, d.seconds, r.id)}>
+                          <Icon name="timer" size={15} className="ic-inline" />
+                          {d.label}
+                        </button>
+                      ))}
                   </div>
                 )}
               </li>
             ))}
           </ol>
-          {r.tips.length > 0 && <div className="tips card pad"><h3><Icon name="chef" size={20} className="ic-inline" /> Astuces du chef</h3><ul>{r.tips.map((t, i) => <li key={i}><Rich text={t} /></li>)}</ul></div>}
+          {r.tips.length > 0 && (
+            <div className="tips card pad">
+              <h3>
+                <Icon name="chef" size={20} className="ic-inline" /> Astuces du chef
+              </h3>
+              <ul>
+                {r.tips.map((t, i) => (
+                  <li key={i}>
+                    <Rich text={t} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <Lexique text={r.steps.join(" ")} />
           <FinishBlock r={r} />
         </Section>
@@ -396,45 +788,137 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
 
       <StepPhotos subject={`recette/${r.id}`} title="Pas à pas en photos" />
       <RescueBlock r={r} />
-      {((cookedN ?? 0) > 0 || journalEntry) && <Section title="Mon carnet"><Journal id={r.id} /></Section>}
-      <Section title={<><Icon name="plate" size={24} className="ic-inline" /> Pour recevoir</>}>
+      {((cookedN ?? 0) > 0 || journalEntry) && (
+        <Section title="Mon carnet">
+          <Journal id={r.id} />
+        </Section>
+      )}
+      <Section
+        title={
+          <>
+            <Icon name="plate" size={24} className="ic-inline" /> Pour recevoir
+          </>
+        }
+      >
         <p>Entrée, dessert et boissons qui vont avec, quantités calculées pour tes invités et ce qui se prépare la veille.</p>
-        <a className="btn ghost" href={href(`/menu/${r.id}`)}>Compléter le menu autour de ce plat</a>
+        <a className="btn ghost" href={href(`/menu/${r.id}`)}>
+          Compléter le menu autour de ce plat
+        </a>
       </Section>
       {r.variants.length > 0 && (
         <Section title="Variantes et substitutions">
-          {r.variants.map((x) => <div key={x.name} className="card pad"><h3>{x.name} {!x.tested && <span className="badge info">à tester</span>}</h3><p><Rich text={x.note} /></p></div>)}
+          {r.variants.map((x) => (
+            <div key={x.name} className="card pad">
+              <h3>
+                {x.name} {!x.tested && <span className="badge info">à tester</span>}
+              </h3>
+              <p>
+                <Rich text={x.note} />
+              </p>
+            </div>
+          ))}
         </Section>
       )}
       <details className="more-info card pad">
-      <summary><h2 className="h3">Bon à savoir : conservation, enfants, boissons</h2></summary>
-      <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>}
-        {/cong[eé]l/i.test(r.storage) && <button type="button" className="btn small ghost" onClick={() => { setPortions(portions * 2); document.getElementById("r-ingredients")?.scrollIntoView({ behavior: "smooth" }); }}>Doubler pour en congeler la moitié ({portions * 2} parts)</button>}
-        {" "}{plain(r.storage)}</p>
-        {/frigo/i.test(r.storage) && r.role !== "boisson" && <p className="small">{r.role === "dessert" ? COLD_RULE.split(" ; ")[0] + "." : COLD_RULE}</p>}</Section>
-      <Section title="Enfants">
-        <p>{plain(r.kids)}</p>
-        {r.kidHelp && <p><Icon name="kid" size={16} className="ic-inline" /> {r.kidHelp}</p>}
-        {p.kidsAge !== null && p.kidsAge < 4 && <ul className="small">{SECURITE_ENFANTS.slice(0, 4).map((x) => <li key={x}>{x}</li>)}</ul>}
-      </Section>
-      <Section title="Boissons d'accompagnement">
-        <div className="two-col">
-          <div className="card pad"><h3>Sans alcool</h3><ul>{[...new Set([...r.drinksNoAlcohol, ...(prof ? ACCORDS[prof].sa : [])])].slice(0, 5).map((d) => <li key={d}>{d}</li>)}</ul></div>
-          {showAlcoholDrinks && (r.drinksAlcohol.length > 0 || prof) && <div className="card pad"><h3>Avec alcool</h3><ul>{[...new Set([...r.drinksAlcohol, ...(prof ? ACCORDS[prof].a : [])])].slice(0, 3).map((d) => <li key={d}>{d}</li>)}</ul><p className="small">{EVIN}</p></div>}
-        </div>
-        {prof && <p className="small">{ACCORDS[prof].why}</p>}
-      </Section>
+        <summary>
+          <h2 className="h3">Bon à savoir : conservation, enfants, boissons</h2>
+        </summary>
+        <Section title="Conservation">
+          <p>
+            {/cong[eé]l/i.test(r.storage) && (
+              <span className="pill freeze">
+                <Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé
+              </span>
+            )}
+            {/cong[eé]l/i.test(r.storage) && (
+              <button
+                type="button"
+                className="btn small ghost"
+                onClick={() => {
+                  setPortions(portions * 2);
+                  document.getElementById("r-ingredients")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Doubler pour en congeler la moitié ({portions * 2} parts)
+              </button>
+            )}{" "}
+            {plain(r.storage)}
+          </p>
+          {/frigo/i.test(r.storage) && r.role !== "boisson" && <p className="small">{r.role === "dessert" ? COLD_RULE.split(" ; ")[0] + "." : COLD_RULE}</p>}
+        </Section>
+        <Section title="Enfants">
+          <p>{plain(r.kids)}</p>
+          {r.kidHelp && (
+            <p>
+              <Icon name="kid" size={16} className="ic-inline" /> {r.kidHelp}
+            </p>
+          )}
+          {p.kidsAge !== null && p.kidsAge < 4 && (
+            <ul className="small">
+              {SECURITE_ENFANTS.slice(0, 4).map((x) => (
+                <li key={x}>{x}</li>
+              ))}
+            </ul>
+          )}
+        </Section>
+        <Section title="Boissons d'accompagnement">
+          <div className="two-col">
+            <div className="card pad">
+              <h3>Sans alcool</h3>
+              <ul>
+                {[...new Set([...r.drinksNoAlcohol, ...(prof ? ACCORDS[prof].sa : [])])].slice(0, 5).map((d) => (
+                  <li key={d}>{d}</li>
+                ))}
+              </ul>
+            </div>
+            {showAlcoholDrinks && (r.drinksAlcohol.length > 0 || prof) && (
+              <div className="card pad">
+                <h3>Avec alcool</h3>
+                <ul>
+                  {[...new Set([...r.drinksAlcohol, ...(prof ? ACCORDS[prof].a : [])])].slice(0, 3).map((d) => (
+                    <li key={d}>{d}</li>
+                  ))}
+                </ul>
+                <p className="small">{EVIN}</p>
+              </div>
+            )}
+          </div>
+          {prof && <p className="small">{ACCORDS[prof].why}</p>}
+        </Section>
       </details>
       {r.techniques.length > 0 && (
         <Section title="Techniques utilisées">
-          <div className="links">{r.techniques.map((t) => { const tf = techniqueFor(t); return tf ? <a key={t} className="pill" href={href(`/technique/${tf.id}`)}>🔪 {t}</a> : <span key={t} className="pill">{t}</span>; })}</div>
+          <div className="links">
+            {r.techniques.map((t) => {
+              const tf = techniqueFor(t);
+              return tf ? (
+                <a key={t} className="pill" href={href(`/technique/${tf.id}`)}>
+                  🔪 {t}
+                </a>
+              ) : (
+                <span key={t} className="pill">
+                  {t}
+                </span>
+              );
+            })}
+          </div>
         </Section>
       )}
       <RecipeVideos r={r} />
-      <p className="no-print"><button type="button" className="btn ghost small" onClick={() => window.print()}>Imprimer la fiche</button></p>
+      <p className="no-print">
+        <button type="button" className="btn ghost small" onClick={() => window.print()}>
+          Imprimer la fiche
+        </button>
+      </p>
       <p className="small source">
-        Source : bible ATLAS, {r.source}{r.credit?.length ? `, d'après ${creditGroups(r.credit).map(([a]) => a).join(", ")}` : ""}.
-        {" "}Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).</p>
+        Source : bible ATLAS, {r.source}
+        {r.credit?.length
+          ? `, d'après ${creditGroups(r.credit)
+              .map(([a]) => a)
+              .join(", ")}`
+          : ""}
+        . Fiche <strong>non testée en cuisine</strong> (Tome 7 §2) ; référentiel d'ingrédients niveau C. À valider au test : quantités, temps et rendu (Tome 7 §2).
+      </p>
     </main>
   );
 }
@@ -447,8 +931,14 @@ function Intro({ text }: { text: string }) {
   const long = text.length > 140;
   return (
     <div className="intro-wrap">
-      <p className={`intro ${long && !open ? "clamp" : ""}`}><Rich text={text} /></p>
-      {long && <button type="button" className="link-btn" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? "Réduire" : "Lire la suite"}</button>}
+      <p className={`intro ${long && !open ? "clamp" : ""}`}>
+        <Rich text={text} />
+      </p>
+      {long && (
+        <button type="button" className="link-btn" aria-expanded={open} onClick={() => setOpen(!open)}>
+          {open ? "Réduire" : "Lire la suite"}
+        </button>
+      )}
     </div>
   );
 }
@@ -461,39 +951,87 @@ function RecipeVideos({ r }: { r: Recipe }) {
   const [err, setErr] = useState("");
   const add = () => {
     const u = safeUrl(link);
-    if (!u) { setErr("Colle un lien qui commence par https://"); return; }
-    setState((s) => { s.recipeVideos[r.id] = [...new Set([...(s.recipeVideos[r.id] ?? []), u])]; });
-    setLink(""); setErr("");
+    if (!u) {
+      setErr("Colle un lien qui commence par https://");
+      return;
+    }
+    setState((s) => {
+      s.recipeVideos[r.id] = [...new Set([...(s.recipeVideos[r.id] ?? []), u])];
+    });
+    setLink("");
+    setErr("");
   };
   return (
     <details className="more-info card pad">
-    <summary><h2 className="h3">En vidéo{videos.length + mine.length ? ` (${videos.length + mine.length})` : ""}</h2></summary>
+      <summary>
+        <h2 className="h3">En vidéo{videos.length + mine.length ? ` (${videos.length + mine.length})` : ""}</h2>
+      </summary>
       {videos.length > 0 ? (
         <ul className="links-list">
           {videos.map((x) => (
             <li key={x.url} className="import-row">
               <PlayButton v={x} />
-              <span><a href={safeHref(x.url)} target="_blank" rel="noopener noreferrer">{x.title.slice(0, 90)}</a> <span className="meta">· {x.source === "TikTok" ? `@${x.author}` : x.source}{x.pork ? " · version avec porc" : ""}{x.alcohol ? " · avec alcool" : ""}</span></span>
+              <span>
+                <a href={safeHref(x.url)} target="_blank" rel="noopener noreferrer">
+                  {x.title.slice(0, 90)}
+                </a>{" "}
+                <span className="meta">
+                  · {x.source === "TikTok" ? `@${x.author}` : x.source}
+                  {x.pork ? " · version avec porc" : ""}
+                  {x.alcohol ? " · avec alcool" : ""}
+                </span>
+              </span>
             </li>
           ))}
         </ul>
-      ) : <p className="small">Pas encore de vidéo liée à cette fiche dans tes favoris.</p>}
+      ) : (
+        <p className="small">Pas encore de vidéo liée à cette fiche dans tes favoris.</p>
+      )}
       {mine.length > 0 && (
         <ul className="links-list">
           {mine.map((u) => (
             <li key={u} className="import-row">
               <PlayButton v={{ title: "Ma vidéo", url: u, embed: embedOf(u), source: "Mon lien" }} />
-              <span><a href={safeHref(u)} target="_blank" rel="noopener noreferrer">{u.replace(/^https?:\/\/(www\.)?/, "").slice(0, 60)}</a> <button className="btn small ghost danger" onClick={() => setState((s) => { s.recipeVideos[r.id] = (s.recipeVideos[r.id] ?? []).filter((x) => x !== u); })}>Retirer</button></span>
+              <span>
+                <a href={safeHref(u)} target="_blank" rel="noopener noreferrer">
+                  {u.replace(/^https?:\/\/(www\.)?/, "").slice(0, 60)}
+                </a>{" "}
+                <button
+                  className="btn small ghost danger"
+                  onClick={() =>
+                    setState((s) => {
+                      s.recipeVideos[r.id] = (s.recipeVideos[r.id] ?? []).filter((x) => x !== u);
+                    })
+                  }
+                >
+                  Retirer
+                </button>
+              </span>
             </li>
           ))}
         </ul>
       )}
       <div className="row">
-        <input type="url" inputMode="url" value={link} onChange={(e) => setLink(e.target.value)} placeholder="Ajouter une vidéo (lien TikTok, YouTube…)" aria-label="Lien d'une vidéo pour cette recette" />
-        <button className="btn ghost" onClick={add}>Ajouter</button>
+        <input
+          type="url"
+          inputMode="url"
+          value={link}
+          onChange={(e) => setLink(e.target.value)}
+          placeholder="Ajouter une vidéo (lien TikTok, YouTube…)"
+          aria-label="Lien d'une vidéo pour cette recette"
+        />
+        <button className="btn ghost" onClick={add}>
+          Ajouter
+        </button>
       </div>
       {err && <p className="warn-text">{err}</p>}
-      <p className="small">Les vidéos sont celles de leurs auteur·e·s, lues depuis TikTok ou YouTube. Les vidéos ATLAS ne sont pas encore tournées. <a href={youtubeSearch(`${r.title.split(" (")[0]} recette`)} target="_blank" rel="noopener noreferrer">Chercher d'autres tutos sur YouTube</a>.</p>
+      <p className="small">
+        Les vidéos sont celles de leurs auteur·e·s, lues depuis TikTok ou YouTube. Les vidéos ATLAS ne sont pas encore tournées.{" "}
+        <a href={youtubeSearch(`${r.title.split(" (")[0]} recette`)} target="_blank" rel="noopener noreferrer">
+          Chercher d'autres tutos sur YouTube
+        </a>
+        .
+      </p>
     </details>
   );
 }
