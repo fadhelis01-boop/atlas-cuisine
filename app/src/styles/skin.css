@@ -483,3 +483,11 @@ main .section[id] { scroll-margin-top: 16px; }
 .table th a, .table td a { display: inline-block; padding: 10px 0; }
 /* barre « Cuisiner » plus fine : la fiche garde plus de place pour le texte */
 @media (max-width: 899px) { .cook-sticky { padding: 4px 12px; } .cook-sticky .btn { min-height: 44px; } }
+
+/* fiche : barre d'onglets masquée en descendant (téléphone) ; la barre « Cuisiner » descend à sa place */
+@media (max-width: 899px) {
+  .nav { transition: transform 200ms var(--ease); }
+  .cook-sticky { transition: bottom 200ms var(--ease); }
+  body.nav-hidden .nav:not(:focus-within) { transform: translateY(110%); }
+  body.nav-hidden:not(:has(.nav:focus-within)) .cook-sticky { bottom: env(safe-area-inset-bottom); }
+}

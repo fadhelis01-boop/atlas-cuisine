@@ -44,7 +44,7 @@ L'accessibilité est vérifiée avec axe-core 4.10 (WCAG 2.0 à 2.2 AA et bonnes
 
 ## 4. Reste à faire (proposé)
 
-- Masquer la barre d'onglets en défilant vers le bas sur la fiche, pour gagner encore 57 px. C'est un changement de comportement : à valider sur un vrai téléphone.
+- ~~Masquer la barre d'onglets en défilant vers le bas sur la fiche~~ : fait le 12/11 (`hideNavOnScroll`). Sur téléphone, elle sort de l'écran quand on descend, et la barre « Cuisiner » prend sa place. Elle revient dès qu'on remonte, près du haut de la page, ou quand le focus clavier y arrive. Le comportement reste à essayer sur un vrai téléphone.
 - Pages encore longues : Zéro déchet (11,5 écrans) et Pique-nique (10,2). Le sommaire aide ; il faudrait aussi replier les listes secondaires.
 - Il reste peu de marge sur le budget de démarrage (389 Ko pour 400) : toute nouvelle fonction de l'accueil doit être chargée à la demande.
 - Rien ne remplace un test avec de vraies personnes : 5 foyers, 3 tâches (trouver un plat ce soir, préparer la semaine, cuisiner une fiche).

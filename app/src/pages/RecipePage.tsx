@@ -169,6 +169,26 @@ function RescueBlock({ r }: { r: Recipe }) {
   );
 }
 
+/** Sur téléphone, masque la barre d'onglets quand on descend (plus de place pour lire et cuisiner), la remontre dès qu'on
+ *  remonte, près du haut de la page, ou quand le clavier y place le focus (CSS). Rend la fonction de nettoyage. */
+function hideNavOnScroll() {
+  let last = window.scrollY, ticking = false;
+  const body = document.body;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY, dy = y - last;
+      if (y < 120 || dy < -8) body.classList.remove("nav-hidden");
+      else if (dy > 8) body.classList.add("nav-hidden");
+      if (Math.abs(dy) > 8 || y < 120) last = y;
+      ticking = false;
+    });
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => { window.removeEventListener("scroll", onScroll); body.classList.remove("nav-hidden"); };
+}
+
 export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }) {
   const r = RECIPE_BY_ID[id];
   const p = useProfile();
@@ -180,6 +200,8 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
   const [useAdapted, setUseAdapted] = useState(true);
   const [reading, setReading] = useState<number | null>(null);
   const [showAnyway, setShowAnyway] = useState(q.get("voir") === "1");
+  // barre d'onglets masquée en descendant dans la fiche, réaffichée en remontant (audit UI/UX 12/11 : 138 px de barres en bas)
+  useEffect(() => hideNavOnScroll(), []);
   useEffect(() => { if (r) { pushRecent(r.id); setPortions(asked || defaultPortions(r, getState().profile)); } return () => { stopSpeaking(); }; }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const v = useMemo(() => (r ? verdict(r, p) : null), [r, p]);
   if (!r || !v) return <Page title="Recette introuvable" back="/explorer">{null}</Page>;

@@ -247,6 +247,7 @@ const ok128 = {
   titre: /data-title="Accueil"/.test(src128("src/pages/Home.tsx")) && /dataset\.title/.test(src128("src/lib/a11y.ts")),
   profil: /\.recipe-toc \{ padding-right: 56px; \}/.test(css128),
   cibles: /\.steps \.geste > summary \{ min-height: 44px; \}/.test(css128),
+  navMasquee: /hideNavOnScroll/.test(src128("src/pages/RecipePage.tsx")) && /body\.nav-hidden \.nav:not\(:focus-within\)/.test(css128),
   clavier: ["Home", "Search", "Explore", "Catalogue", "Dictionnaire"].every((p) => /enterKeyHint="search"/.test(src128(`src/pages/${p}.tsx`))),
 };
 console.log("   UI/UX :", JSON.stringify(ok128));
