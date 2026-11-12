@@ -13,46 +13,119 @@ import { Chip, Empty, Grid, Page, RecipeCard, Section } from "../components/ui";
 import { Icon } from "../components/icons";
 
 /** Raccourcis : les ingrédients les plus courants, à toucher plutôt qu'à taper. */
-const COMMON = ["Œuf entier (frais)", "Oignon jaune", "Ail", "Tomate", "Pomme de terre", "Riz long / basmati / thaï", "Pâtes sèches (spaghetti, penne…)",
-  "Cuisse / pilon de poulet", "Bœuf haché", "Carotte", "Courgette", "Poivron (rouge/jaune/vert)", "Lait entier / demi-écrémé / écrémé", "Beurre doux / demi-sel",
-  "Yaourt nature", "Citron", "Gruyère / comté / emmental / beaufort", "Coulis / passata / tomates pelées", "Pois chiches (secs / bocal)", "Banane", "Pain rassis (réservé)", "Persil plat / frisé"];
+const COMMON = [
+  "Œuf entier (frais)",
+  "Oignon jaune",
+  "Ail",
+  "Tomate",
+  "Pomme de terre",
+  "Riz long / basmati / thaï",
+  "Pâtes sèches (spaghetti, penne…)",
+  "Cuisse / pilon de poulet",
+  "Bœuf haché",
+  "Carotte",
+  "Courgette",
+  "Poivron (rouge/jaune/vert)",
+  "Lait entier / demi-écrémé / écrémé",
+  "Beurre doux / demi-sel",
+  "Yaourt nature",
+  "Citron",
+  "Gruyère / comté / emmental / beaufort",
+  "Coulis / passata / tomates pelées",
+  "Pois chiches (secs / bocal)",
+  "Banane",
+  "Pain rassis (réservé)",
+  "Persil plat / frisé",
+];
 // nom court lisible ; quelques noms du référentiel perdent leur sens une fois coupés (« Cuisse / pilon de poulet »)
-const SHORT: Record<string, string> = { "Cuisse / pilon de poulet": "Poulet (cuisses)", "Œuf entier (frais)": "Œufs", "Pain rassis (réservé)": "Pain rassis",
-  "Lait entier / demi-écrémé / écrémé": "Lait", "Riz long / basmati / thaï": "Riz", "Pâtes sèches (spaghetti, penne…)": "Pâtes", "Coulis / passata / tomates pelées": "Tomates en boîte" };
+const SHORT: Record<string, string> = {
+  "Cuisse / pilon de poulet": "Poulet (cuisses)",
+  "Œuf entier (frais)": "Œufs",
+  "Pain rassis (réservé)": "Pain rassis",
+  "Lait entier / demi-écrémé / écrémé": "Lait",
+  "Riz long / basmati / thaï": "Riz",
+  "Pâtes sèches (spaghetti, penne…)": "Pâtes",
+  "Coulis / passata / tomates pelées": "Tomates en boîte",
+};
 const short = (n: string) => SHORT[n] ?? n.split(" (")[0].split(" / ")[0];
 const daysLeft = (d: string | null) => (d ? Math.ceil((new Date(d).getTime() - Date.now()) / 86400000) : null);
 
 function IngredientPicker({ onPick, exclude }: { onPick: (n: string) => void; exclude: string[] }) {
   const [q, setQ] = useState("");
   const hits = findIngredients(q, exclude, COMMON);
-  const pick = (h: string) => { onPick(h); setQ(""); toast(`${short(h)} ajouté`); };
+  const pick = (h: string) => {
+    onPick(h);
+    setQ("");
+    toast(`${short(h)} ajouté`);
+  };
   // un nom de plat tapé ici (« lasagnes ») : on propose d'aller le chercher dans les recettes
   const dish = q.trim().length >= 3 && !hits.length ? RECIPES.find((r) => norm(r.title).includes(norm(q.trim()))) : undefined;
   return (
     <div className="picker">
-      <input type="search" value={q} onChange={(e) => setQ(e.target.value)} enterKeyHint="done"
-        onKeyDown={(e) => { if (e.key === "Enter" && hits[0]) { e.preventDefault(); pick(hits[0]); } }}
-        placeholder="Tape un ingrédient que tu as (ex. fromage, poulet, pdt…)" aria-label="Ajouter un ingrédient que tu as" />
+      <input
+        type="search"
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        enterKeyHint="done"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && hits[0]) {
+            e.preventDefault();
+            pick(hits[0]);
+          }
+        }}
+        placeholder="Tape un ingrédient que tu as (ex. fromage, poulet, pdt…)"
+        aria-label="Ajouter un ingrédient que tu as"
+      />
       {hits.length > 0 && (
         <ul className="picker-list" role="listbox" aria-label="Touche un ingrédient pour l'ajouter">
-          {hits.map((h, i) => <li key={h}><button type="button" onClick={() => pick(h)}>+ {h}{i === 0 && <span className="meta"> · Entrée</span>}</button></li>)}
+          {hits.map((h, i) => (
+            <li key={h}>
+              <button type="button" onClick={() => pick(h)}>
+                + {h}
+                {i === 0 && <span className="meta"> · Entrée</span>}
+              </button>
+            </li>
+          ))}
         </ul>
       )}
       {q.trim().length >= 2 && !hits.length && (
-        <p className="small picker-empty">Aucun ingrédient ne s'appelle « {q.trim()} ». Essaie un mot plus simple (« poulet », « fromage », « crème »)
-          {dish && <>, ou cherche la recette : <a href={href(`/recherche?q=${encodeURIComponent(q.trim())}`)}>« {q.trim()} » dans les recettes</a></>}.</p>
+        <p className="small picker-empty">
+          Aucun ingrédient ne s'appelle « {q.trim()} ». Essaie un mot plus simple (« poulet », « fromage », « crème »)
+          {dish && (
+            <>
+              , ou cherche la recette : <a href={href(`/recherche?q=${encodeURIComponent(q.trim())}`)}>« {q.trim()} » dans les recettes</a>
+            </>
+          )}
+          .
+        </p>
       )}
     </div>
   );
 }
 
-const FRIGO_SUB = "1. Ajoute ce que tu as : tape-le dans la barre ou touche-le plus bas. 2. Choisis un plat, une entrée, un dessert ou un menu. "
-  + "3. Lance : ATLAS utilise d'abord ce qui arrive à sa date limite.";
+const FRIGO_SUB =
+  "1. Ajoute ce que tu as : tape-le dans la barre ou touche-le plus bas. 2. Choisis un plat, une entrée, un dessert ou un menu. " +
+  "3. Lance : ATLAS utilise d'abord ce qui arrive à sa date limite.";
 
 // audit chef + famille : le soir sans courses, ce qu'une famille a presque toujours au placard
-const PLACARD_SECOURS = ["Pâtes sèches (spaghetti, penne…)", "Riz long / basmati / thaï", "Œuf entier (frais)", "Oignon jaune", "Ail", "Thon en conserve",
-  "Coulis / passata / tomates pelées", "Concentré de tomate", "Pois chiches (secs / bocal)", "Lentilles corail", "Gruyère / comté / emmental / beaufort", "Pomme de terre",
-  "Lait entier / demi-écrémé / écrémé", "Beurre doux / demi-sel", "Semoule de couscous", "Sardine (fraîche / conserve)"];
+const PLACARD_SECOURS = [
+  "Pâtes sèches (spaghetti, penne…)",
+  "Riz long / basmati / thaï",
+  "Œuf entier (frais)",
+  "Oignon jaune",
+  "Ail",
+  "Thon en conserve",
+  "Coulis / passata / tomates pelées",
+  "Concentré de tomate",
+  "Pois chiches (secs / bocal)",
+  "Lentilles corail",
+  "Gruyère / comté / emmental / beaufort",
+  "Pomme de terre",
+  "Lait entier / demi-écrémé / écrémé",
+  "Beurre doux / demi-sel",
+  "Semoule de couscous",
+  "Sardine (fraîche / conserve)",
+];
 
 export default function Frigo({ avec = "" }: { avec?: string }) {
   const [tab, setTab] = useState<"cuisiner" | "frigo">("cuisiner");
@@ -60,10 +133,16 @@ export default function Frigo({ avec = "" }: { avec?: string }) {
     <Page photo="rubrique/frigo" title="Avec ce que j'ai" sub={FRIGO_SUB}>
       <div className="row frigo-head">
         <div className="seg" role="tablist" aria-label="Frigo">
-          <button role="tab" aria-selected={tab === "cuisiner"} className={tab === "cuisiner" ? "on" : ""} onClick={() => setTab("cuisiner")}>Que cuisiner ?</button>
-          <button role="tab" aria-selected={tab === "frigo"} className={tab === "frigo" ? "on" : ""} onClick={() => setTab("frigo")}>Mon frigo</button>
+          <button role="tab" aria-selected={tab === "cuisiner"} className={tab === "cuisiner" ? "on" : ""} onClick={() => setTab("cuisiner")}>
+            Que cuisiner ?
+          </button>
+          <button role="tab" aria-selected={tab === "frigo"} className={tab === "frigo" ? "on" : ""} onClick={() => setTab("frigo")}>
+            Mon frigo
+          </button>
         </div>
-        <a className="btn small ghost" href={href("/courses")}><Icon name="cart" size={18} /> Liste de courses</a>
+        <a className="btn small ghost" href={href("/courses")}>
+          <Icon name="cart" size={18} /> Liste de courses
+        </a>
       </div>
       {tab === "cuisiner" ? <Cuisiner avec={avec} /> : <MonFrigo />}
     </Page>
@@ -72,17 +151,40 @@ export default function Frigo({ avec = "" }: { avec?: string }) {
 
 // Placard : ce qu'on suppose toujours présent, en mots simples, modifiable (audit UX 2026-10-16 §2.6)
 const PANTRY_LABEL: Record<string, string> = {
-  "Sel fin / gros sel / fleur de sel": "sel", "Poivre noir / blanc / vert": "poivre", "Huile de tournesol / colza": "huile neutre",
-  "Huile d'olive vierge extra": "huile d'olive", "Sucre blanc / roux / cassonade / vergeoise": "sucre", "Farine de blé T55": "farine",
-  "Farine de blé T45": "farine fine (gâteaux)", "Vinaigre de cidre": "vinaigre", "Moutarde de Dijon": "moutarde",
-  "Ail": "ail", "Oignon jaune": "oignons", "Concentré de tomate": "concentré de tomate", "Bouillon cube volaille": "bouillon cube",
-  "Cumin (graines / moulu)": "cumin", "Paprika doux": "paprika", "Herbes de Provence": "herbes de Provence", "Laurier": "laurier",
-  "Thym / romarin": "thym", "Sauce soja claire": "sauce soja", "Levure chimique": "levure chimique", "Fécule de maïs (maïzena)": "maïzena",
-  "Curry (mélange)": "curry", "Riz long / basmati / thaï": "riz", "Pâtes sèches (spaghetti, penne…)": "pâtes",
+  "Sel fin / gros sel / fleur de sel": "sel",
+  "Poivre noir / blanc / vert": "poivre",
+  "Huile de tournesol / colza": "huile neutre",
+  "Huile d'olive vierge extra": "huile d'olive",
+  "Sucre blanc / roux / cassonade / vergeoise": "sucre",
+  "Farine de blé T55": "farine",
+  "Farine de blé T45": "farine fine (gâteaux)",
+  "Vinaigre de cidre": "vinaigre",
+  "Moutarde de Dijon": "moutarde",
+  Ail: "ail",
+  "Oignon jaune": "oignons",
+  "Concentré de tomate": "concentré de tomate",
+  "Bouillon cube volaille": "bouillon cube",
+  "Cumin (graines / moulu)": "cumin",
+  "Paprika doux": "paprika",
+  "Herbes de Provence": "herbes de Provence",
+  Laurier: "laurier",
+  "Thym / romarin": "thym",
+  "Sauce soja claire": "sauce soja",
+  "Levure chimique": "levure chimique",
+  "Fécule de maïs (maïzena)": "maïzena",
+  "Curry (mélange)": "curry",
+  "Riz long / basmati / thaï": "riz",
+  "Pâtes sèches (spaghetti, penne…)": "pâtes",
 };
 const PANTRY_OPTIONS = Object.keys(PANTRY_LABEL);
 const IDEAS = 6;
-const TIMES = [[0, "Pas de limite"], [20, "20 min"], [30, "30 min"], [45, "45 min"], [60, "1 h"]] as const;
+const TIMES = [
+  [0, "Pas de limite"],
+  [20, "20 min"],
+  [30, "30 min"],
+  [45, "45 min"],
+  [60, "1 h"],
+] as const;
 
 /** Ajoute à la liste de courses ce qui manque ; renvoie le nombre de lignes ajoutées. */
 function addMissing(refs: string[], from: string): number {
@@ -90,7 +192,8 @@ function addMissing(refs: string[], from: string): number {
   setState((s) => {
     for (const ref of refs) {
       if (s.shopping.some((x) => x.ref === ref && !x.done)) continue;
-      s.shopping.push({ id: uid(), ref, label: short(ref), from, done: false, section: INGREDIENTS[ref]?.section ?? "Autres" }); added++;
+      s.shopping.push({ id: uid(), ref, label: short(ref), from, done: false, section: INGREDIENTS[ref]?.section ?? "Autres" });
+      added++;
     }
   });
   return added;
@@ -101,18 +204,37 @@ const notifyAdded = (n: number) => toast(n ? `${n} ajouté${n > 1 ? "s" : ""} au
 function IdeaNote({ x }: { x: FridgeIdea }) {
   return (
     <div className="small idea-note">
-      <p><strong>Utilise :</strong> {x.used.map(short).join(", ")}.{x.s.usesExpiring.length > 0 && <strong> Dont {x.s.usesExpiring.map(short).join(", ")} (date proche).</strong>}</p>
-      {Object.entries(x.s.substitutes).map(([a, sub]) => <p key={a}>{short(a)} → {sub.map(short).join(", ")}.</p>)}
+      <p>
+        <strong>Utilise :</strong> {x.used.map(short).join(", ")}.{x.s.usesExpiring.length > 0 && <strong> Dont {x.s.usesExpiring.map(short).join(", ")} (date proche).</strong>}
+      </p>
+      {Object.entries(x.s.substitutes).map(([a, sub]) => (
+        <p key={a}>
+          {short(a)} → {sub.map(short).join(", ")}.
+        </p>
+      ))}
       {x.s.missing.length ? (
-        <p>À acheter : {x.s.missing.map(short).join(", ")}.{" "}
+        <p>
+          À acheter : {x.s.missing.map(short).join(", ")}.{" "}
           <button type="button" className="linkish" onClick={() => notifyAdded(addMissing(x.s.missing, x.r.title))}>
-            Ajouter aux courses</button></p>
-      ) : <p className="ok-text">Tu as tout (avec ton placard).</p>}
+            Ajouter aux courses
+          </button>
+        </p>
+      ) : (
+        <p className="ok-text">Tu as tout (avec ton placard).</p>
+      )}
     </div>
   );
 }
 
-interface Launch { course: Course; seed: number; key: string; seen: string[]; menu?: FridgeMenu; elseSeed: number; elseSeen: string[] }
+interface Launch {
+  course: Course;
+  seed: number;
+  key: string;
+  seen: string[];
+  menu?: FridgeMenu;
+  elseSeed: number;
+  elseSeen: string[];
+}
 
 /** `avec` : un ingrédient venu de la recherche (« pâte brisée » → « Avec ce que j'ai » déjà rempli). */
 function Cuisiner({ avec = "" }: { avec?: string }) {
@@ -129,19 +251,28 @@ function Cuisiner({ avec = "" }: { avec?: string }) {
   const [showAll, setShowAll] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const pantry = useMemo(() => new Set(pantryList), [pantryList.join("|")]); // eslint-disable-line react-hooks/exhaustive-deps
-  const expiring = useMemo(() => new Set(fridge.filter((f) => { const d = daysLeft(f.dlc); return d !== null && d <= 2; }).map((f) => f.ref)), [fridge]);
+  const expiring = useMemo(
+    () =>
+      new Set(
+        fridge
+          .filter((f) => {
+            const d = daysLeft(f.dlc);
+            return d !== null && d <= 2;
+          })
+          .map((f) => f.ref),
+      ),
+    [fridge],
+  );
   const toggle = (n: string) => setHave((h) => (h.includes(n) ? h.filter((x) => x !== n) : [...h, n]));
   const allowed = useMemo(() => RECIPES.filter((r) => verdict(r, p).availability !== "hidden"), [p]);
   const opts = { have, pantry, expiring, maxMinutes, useMost: allUse };
   const key = JSON.stringify([have, course, maxMinutes, allUse, pantryList]);
   const stale = !!launch && launch.key !== key;
-  const ranked = useMemo(() => (launch && launch.course !== "menu" ? rankFor(allowed, launch.course, opts) : []),
-    [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
+  const ranked = useMemo(() => (launch && launch.course !== "menu" ? rankFor(allowed, launch.course, opts) : []), [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = launch && launch.course !== "menu" ? pickIdeas(ranked, IDEAS, launch.seed, new Set(launch.seen)) : [];
   // retour d'usage 12/11/2026 : « D'autres idées » ne tombe plus à vide. Quand le service choisi a peu d'idées ou qu'on les a
   // toutes vues, les mêmes ingrédients ailleurs dans ATLAS (autres services, accompagnements, sauces, pains, goûters).
-  const elsewhere = useMemo(() => (launch && launch.course !== "menu" ? rankElsewhere(allowed, launch.course, opts) : []),
-    [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
+  const elsewhere = useMemo(() => (launch && launch.course !== "menu" ? rankElsewhere(allowed, launch.course, opts) : []), [launch?.key, launch?.course, allowed]); // eslint-disable-line react-hooks/exhaustive-deps
   const exhausted = !!launch && launch.course !== "menu" && ranked.length > 0 && !shown.length;
   const left = ranked.filter((x) => !(launch?.seen ?? []).includes(x.r.id) && !shown.some((y) => y.r.id === x.r.id)).length;
   const widen = !!launch && launch.course !== "menu" && (exhausted || ranked.length < 2 * IDEAS) && elsewhere.length > 0;
@@ -157,18 +288,27 @@ function Cuisiner({ avec = "" }: { avec?: string }) {
     if (!launch) return;
     const seed = freshSeed();
     if (launch.course === "menu") {
-      const m = launch.menu!; const seen = [...launch.seen, ...[m.entree, m.plat, m.dessert].flatMap((x) => (x ? [x.r.id] : []))];
+      const m = launch.menu!;
+      const seen = [...launch.seen, ...[m.entree, m.plat, m.dessert].flatMap((x) => (x ? [x.r.id] : []))];
       setLaunch({ ...launch, seed, seen, menu: buildMenu(allowed, opts, seed, new Set(seen)) });
     } else setLaunch({ ...launch, seed, seen: [...launch.seen, ...shown.map((x) => x.r.id)] });
   };
   const restart = () => launch && setLaunch({ ...launch, seed: freshSeed(), seen: [] });
-  const moreElse = () => launch && setLaunch({ ...launch, elseSeed: freshSeed(),
-    elseSeen: elseLeft > 0 ? [...launch.elseSeen, ...elseShown.map((x) => x.r.id)] : [] });
+  const moreElse = () => launch && setLaunch({ ...launch, elseSeed: freshSeed(), elseSeen: elseLeft > 0 ? [...launch.elseSeen, ...elseShown.map((x) => x.r.id)] : [] });
   const swap = (slot: "entree" | "plat" | "dessert") => {
     if (!launch?.menu) return;
-    const cur = launch.menu[slot]; const seen = new Set([...launch.seen, ...(cur ? [cur.r.id] : [])]);
-    const next = pickIdeas(rankFor(allowed, slot, opts).filter((x) => !seen.has(x.r.id)), 1, freshSeed(), seen)[0];
-    if (!next) { toast("Pas d'autre idée avec ces ingrédients : ajoute-en un ou enlève la limite de temps"); return; }
+    const cur = launch.menu[slot];
+    const seen = new Set([...launch.seen, ...(cur ? [cur.r.id] : [])]);
+    const next = pickIdeas(
+      rankFor(allowed, slot, opts).filter((x) => !seen.has(x.r.id)),
+      1,
+      freshSeed(),
+      seen,
+    )[0];
+    if (!next) {
+      toast("Pas d'autre idée avec ces ingrédients : ajoute-en un ou enlève la limite de temps");
+      return;
+    }
     setLaunch({ ...launch, seen: [...seen], menu: { ...launch.menu, [slot]: next } });
   };
   const commons = COMMON.filter((c) => !have.includes(c));
@@ -176,67 +316,182 @@ function Cuisiner({ avec = "" }: { avec?: string }) {
   return (
     <>
       <IngredientPicker onPick={(n) => setHave((h) => [...h, n])} exclude={have} />
-      <p className="small"><button type="button" className="btn small ghost" onClick={() => setHave((h) => [...new Set([...h, ...PLACARD_SECOURS])])}>
-        <Icon name="lifebuoy" size={16} className="ic-inline" /> Placard de secours</button> pas de courses ce soir ? Pâtes, riz, œufs, conserves : on part de ce qu'on a presque toujours.</p>
-      {have.length > 0 && <div className="chips" aria-label="Ingrédients sélectionnés">
-        {have.map((h) => <Chip key={h} on onClick={() => toggle(h)}>{short(h)} <Icon name="close" size={16} /></Chip>)}
-      </div>}
+      <p className="small">
+        <button type="button" className="btn small ghost" onClick={() => setHave((h) => [...new Set([...h, ...PLACARD_SECOURS])])}>
+          <Icon name="lifebuoy" size={16} className="ic-inline" /> Placard de secours
+        </button>{" "}
+        pas de courses ce soir ? Pâtes, riz, œufs, conserves : on part de ce qu'on a presque toujours.
+      </p>
+      {have.length > 0 && (
+        <div className="chips" aria-label="Ingrédients sélectionnés">
+          {have.map((h) => (
+            <Chip key={h} on onClick={() => toggle(h)}>
+              {short(h)} <Icon name="close" size={16} />
+            </Chip>
+          ))}
+        </div>
+      )}
       {have.some((h) => !fridge.some((f) => f.ref === h)) && (
-        <p className="small"><button type="button" className="linkish" onClick={() => {
-          setState((s) => { for (const h of have) if (!s.fridge.some((f) => f.ref === h)) s.fridge.push({ ref: h, dlc: null, zone: "frigo", added: new Date().toISOString() }); });
-          toast("Gardé dans Mon frigo : tu retrouveras cette sélection la prochaine fois");
-        }}>Garder ces ingrédients dans Mon frigo</button> (sinon la sélection s'efface en quittant l'écran)</p>
+        <p className="small">
+          <button
+            type="button"
+            className="linkish"
+            onClick={() => {
+              setState((s) => {
+                for (const h of have) if (!s.fridge.some((f) => f.ref === h)) s.fridge.push({ ref: h, dlc: null, zone: "frigo", added: new Date().toISOString() });
+              });
+              toast("Gardé dans Mon frigo : tu retrouveras cette sélection la prochaine fois");
+            }}
+          >
+            Garder ces ingrédients dans Mon frigo
+          </button>{" "}
+          (sinon la sélection s'efface en quittant l'écran)
+        </p>
       )}
       <p className="small strong-label">Touche ce que tu as :</p>
-      <div className="chips">{(allCommon ? commons : commons.slice(0, 12)).map((c) => <Chip key={c} onClick={() => toggle(c)}>+ {short(c)}</Chip>)}
-        {!allCommon && commons.length > 12 && <button type="button" className="chip" onClick={() => setAllCommon(true)}>Plus…</button>}</div>
+      <div className="chips">
+        {(allCommon ? commons : commons.slice(0, 12)).map((c) => (
+          <Chip key={c} onClick={() => toggle(c)}>
+            + {short(c)}
+          </Chip>
+        ))}
+        {!allCommon && commons.length > 12 && (
+          <button type="button" className="chip" onClick={() => setAllCommon(true)}>
+            Plus…
+          </button>
+        )}
+      </div>
       <p className="small pantry-line">
         <strong>Dans ton placard :</strong> {[...new Set(pantryList.map((x) => PANTRY_LABEL[x] ?? short(x).toLowerCase()))].join(", ")}.{" "}
-        <button type="button" className="linkish" onClick={() => setEditPantry(!editPantry)}>{editPantry ? "Fermer" : "Modifier"}</button>
+        <button type="button" className="linkish" onClick={() => setEditPantry(!editPantry)}>
+          {editPantry ? "Fermer" : "Modifier"}
+        </button>
       </p>
       {editPantry && (
         <div className="chips" role="group" aria-label="Mon placard">
-          {PANTRY_OPTIONS.map((x) => <Chip key={x} on={pantry.has(x)} onClick={() => setState((s) => { const cur = s.pantry ?? [...STAPLES]; s.pantry = cur.includes(x) ? cur.filter((y) => y !== x) : [...cur, x]; })}>{PANTRY_LABEL[x]}</Chip>)}
+          {PANTRY_OPTIONS.map((x) => (
+            <Chip
+              key={x}
+              on={pantry.has(x)}
+              onClick={() =>
+                setState((s) => {
+                  const cur = s.pantry ?? [...STAPLES];
+                  s.pantry = cur.includes(x) ? cur.filter((y) => y !== x) : [...cur, x];
+                })
+              }
+            >
+              {PANTRY_LABEL[x]}
+            </Chip>
+          ))}
         </div>
       )}
       <p className="small strong-label">Ce que tu veux cuisiner :</p>
       <div className="seg seg-wrap" role="radiogroup" aria-label="Ce que tu veux cuisiner">
-        {COURSES.map((c) => <button key={c.id} type="button" role="radio" aria-checked={course === c.id} className={course === c.id ? "on" : ""} onClick={() => setCourse(c.id)}>{c.label}</button>)}
+        {COURSES.map((c) => (
+          <button key={c.id} type="button" role="radio" aria-checked={course === c.id} className={course === c.id ? "on" : ""} onClick={() => setCourse(c.id)}>
+            {c.label}
+          </button>
+        ))}
       </div>
       <div className="row frigo-options">
-        <label className="field inline">Temps
-          <select value={maxMinutes} onChange={(e) => setMaxMinutes(Number(e.target.value))}>{TIMES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select>
+        <label className="field inline">
+          Temps
+          <select value={maxMinutes} onChange={(e) => setMaxMinutes(Number(e.target.value))}>
+            {TIMES.map(([v, l]) => (
+              <option key={v} value={v}>
+                {l}
+              </option>
+            ))}
+          </select>
         </label>
-        <label className="switch"><input type="checkbox" checked={allUse} onChange={(e) => setAllUse(e.target.checked)} /> Utiliser un maximum de ces ingrédients (anti-gaspi)</label>
+        <label className="switch">
+          <input type="checkbox" checked={allUse} onChange={(e) => setAllUse(e.target.checked)} /> Utiliser un maximum de ces ingrédients (anti-gaspi)
+        </label>
       </div>
       <button type="button" className="btn big frigo-go" disabled={!have.length} onClick={go}>
-        <Icon name="search" size={20} className="ic-inline" /> {have.length ? (course === "menu" ? "Composer mon menu" : "Trouver des idées") : "Choisis d'abord au moins un ingrédient"}
+        <Icon name="search" size={20} className="ic-inline" />{" "}
+        {have.length ? (course === "menu" ? "Composer mon menu" : "Trouver des idées") : "Choisis d'abord au moins un ingrédient"}
       </button>
       <div ref={resultsRef} aria-live="polite">
-        {stale && <p className="notice">Ta sélection a changé. <button type="button" className="btn small" onClick={go}>Relancer</button></p>}
+        {stale && (
+          <p className="notice">
+            Ta sélection a changé.{" "}
+            <button type="button" className="btn small" onClick={go}>
+              Relancer
+            </button>
+          </p>
+        )}
         {launch?.course === "menu" && launch.menu && <MenuResult m={launch.menu} onSwap={swap} onMore={more} />}
-        {launch && launch.course !== "menu" && (shown.length || (showAll && ranked.length) ? (
-          <Section title={<>{COURSES.find((c) => c.id === launch.course)!.label} avec ce que tu as <span className="meta">({ranked.length} possibles)</span></>}>
-            <Grid>{(showAll ? ranked.slice(0, 60) : shown).map((x) => <RecipeCard key={x.r.id} r={x.r} note={<IdeaNote x={x} />} />)}</Grid>
-            <div className="row">
-              {!showAll && <button type="button" className="btn" onClick={more}><Icon name="refresh" size={18} className="ic-inline" />
-                {left > 0 ? ` D'autres idées (${left} de plus)` : " D'autres idées"}</button>}
-              {ranked.length > IDEAS && <button type="button" className="btn ghost" onClick={() => setShowAll(!showAll)}>
-                {showAll ? "Revenir aux idées" : `Tout voir, du plus adapté au moins adapté (${Math.min(ranked.length, 60)})`}</button>}
-            </div>
-          </Section>
-        ) : exhausted ? (
-          <p className="notice">Tu as vu les {ranked.length} idée{ranked.length > 1 ? "s" : ""} « {COURSES.find((c) => c.id === launch.course)!.label.toLowerCase()} » avec ces ingrédients.{" "}
-            <button type="button" className="btn small" onClick={restart}>Les revoir</button>{" "}
-            {maxMinutes > 0 && <>Enlève la limite de temps, </>}ajoute un ingrédient ou regarde plus bas : les mêmes ingrédients ailleurs dans ATLAS.</p>
-        ) : <NoIdea course={launch.course} maxMinutes={maxMinutes} />)}
+        {launch &&
+          launch.course !== "menu" &&
+          (shown.length || (showAll && ranked.length) ? (
+            <Section
+              title={
+                <>
+                  {COURSES.find((c) => c.id === launch.course)!.label} avec ce que tu as <span className="meta">({ranked.length} possibles)</span>
+                </>
+              }
+            >
+              <Grid>
+                {(showAll ? ranked.slice(0, 60) : shown).map((x) => (
+                  <RecipeCard key={x.r.id} r={x.r} note={<IdeaNote x={x} />} />
+                ))}
+              </Grid>
+              <div className="row">
+                {!showAll && (
+                  <button type="button" className="btn" onClick={more}>
+                    <Icon name="refresh" size={18} className="ic-inline" />
+                    {left > 0 ? ` D'autres idées (${left} de plus)` : " D'autres idées"}
+                  </button>
+                )}
+                {ranked.length > IDEAS && (
+                  <button type="button" className="btn ghost" onClick={() => setShowAll(!showAll)}>
+                    {showAll ? "Revenir aux idées" : `Tout voir, du plus adapté au moins adapté (${Math.min(ranked.length, 60)})`}
+                  </button>
+                )}
+              </div>
+            </Section>
+          ) : exhausted ? (
+            <p className="notice">
+              Tu as vu les {ranked.length} idée{ranked.length > 1 ? "s" : ""} « {COURSES.find((c) => c.id === launch.course)!.label.toLowerCase()} » avec ces ingrédients.{" "}
+              <button type="button" className="btn small" onClick={restart}>
+                Les revoir
+              </button>{" "}
+              {maxMinutes > 0 && <>Enlève la limite de temps, </>}ajoute un ingrédient ou regarde plus bas : les mêmes ingrédients ailleurs dans ATLAS.
+            </p>
+          ) : (
+            <NoIdea course={launch.course} maxMinutes={maxMinutes} />
+          ))}
         {widen && elseShown.length > 0 && (
-          <Section title={<>Avec les mêmes ingrédients, ailleurs dans ATLAS <span className="meta">({elsewhere.length} possibles)</span></>}>
-            <Grid>{elseShown.map((x) => <RecipeCard key={x.r.id} r={x.r}
-              note={<><p className="small strong-label">{ROLE_LABEL[x.r.role]}</p><IdeaNote x={x} /></>} />)}</Grid>
-            {elsewhere.length > IDEAS && <div className="row">
-              <button type="button" className="btn" onClick={moreElse}><Icon name="refresh" size={18} className="ic-inline" />
-                {elseLeft > 0 ? ` D'autres idées (${elseLeft} de plus)` : " Revoir depuis le début"}</button></div>}
+          <Section
+            title={
+              <>
+                Avec les mêmes ingrédients, ailleurs dans ATLAS <span className="meta">({elsewhere.length} possibles)</span>
+              </>
+            }
+          >
+            <Grid>
+              {elseShown.map((x) => (
+                <RecipeCard
+                  key={x.r.id}
+                  r={x.r}
+                  note={
+                    <>
+                      <p className="small strong-label">{ROLE_LABEL[x.r.role]}</p>
+                      <IdeaNote x={x} />
+                    </>
+                  }
+                />
+              ))}
+            </Grid>
+            {elsewhere.length > IDEAS && (
+              <div className="row">
+                <button type="button" className="btn" onClick={moreElse}>
+                  <Icon name="refresh" size={18} className="ic-inline" />
+                  {elseLeft > 0 ? ` D'autres idées (${elseLeft} de plus)` : " Revoir depuis le début"}
+                </button>
+              </div>
+            )}
           </Section>
         )}
       </div>
@@ -254,22 +509,39 @@ function NoIdea({ course, maxMinutes }: { course: Course; maxMinutes: number }) 
 }
 
 function MenuResult({ m, onSwap, onMore }: { m: FridgeMenu; onSwap: (s: "entree" | "plat" | "dessert") => void; onMore: () => void }) {
-  const slots = [["entree", "Entrée"], ["plat", "Plat"], ["dessert", "Dessert"]] as const;
+  const slots = [
+    ["entree", "Entrée"],
+    ["plat", "Plat"],
+    ["dessert", "Dessert"],
+  ] as const;
   const missing = [...new Set(slots.flatMap(([k]) => m[k]?.s.missing ?? []))];
   return (
     <Section title="Ton menu avec ce que tu as">
       {slots.map(([k, label]) => (
         <div key={k} className="menu-slot">
-          <div className="row"><h3 className="h4">{label}</h3>
-            <button type="button" className="btn small ghost" onClick={() => onSwap(k)}><Icon name="refresh" size={16} className="ic-inline" /> Changer</button></div>
-          {m[k] ? <RecipeCard r={m[k]!.r} note={<IdeaNote x={m[k]!} />} /> : <p className="small">Rien ne va avec tes ingrédients pour ce service : touche « Changer » après avoir ajouté un ingrédient.</p>}
+          <div className="row">
+            <h3 className="h4">{label}</h3>
+            <button type="button" className="btn small ghost" onClick={() => onSwap(k)}>
+              <Icon name="refresh" size={16} className="ic-inline" /> Changer
+            </button>
+          </div>
+          {m[k] ? (
+            <RecipeCard r={m[k]!.r} note={<IdeaNote x={m[k]!} />} />
+          ) : (
+            <p className="small">Rien ne va avec tes ingrédients pour ce service : touche « Changer » après avoir ajouté un ingrédient.</p>
+          )}
         </div>
       ))}
       {m.leftover.length > 0 && <p className="small">Pas utilisé dans ce menu : {m.leftover.map(short).join(", ")}. Un autre menu les prendra peut-être.</p>}
       <div className="row">
-        <button type="button" className="btn" onClick={onMore}><Icon name="refresh" size={18} className="ic-inline" /> Un autre menu</button>
-        {missing.length > 0 && <button type="button" className="btn ghost" onClick={() => notifyAdded(addMissing(missing, "Menu du frigo"))}>
-          <Icon name="cart" size={18} className="ic-inline" /> Ajouter ce qui manque aux courses ({missing.length})</button>}
+        <button type="button" className="btn" onClick={onMore}>
+          <Icon name="refresh" size={18} className="ic-inline" /> Un autre menu
+        </button>
+        {missing.length > 0 && (
+          <button type="button" className="btn ghost" onClick={() => notifyAdded(addMissing(missing, "Menu du frigo"))}>
+            <Icon name="cart" size={18} className="ic-inline" /> Ajouter ce qui manque aux courses ({missing.length})
+          </button>
+        )}
       </div>
     </Section>
   );
@@ -278,31 +550,65 @@ function MenuResult({ m, onSwap, onMore }: { m: FridgeMenu; onSwap: (s: "entree"
 function MonFrigo() {
   const fridge = useStore((s) => s.fridge);
   const [zone, setZone] = useState<FridgeItem["zone"]>("frigo");
-  const add = (ref: string) => setState((s) => { s.fridge.push({ ref, dlc: null, zone, added: new Date().toISOString() }); });
+  const add = (ref: string) =>
+    setState((s) => {
+      s.fridge.push({ ref, dlc: null, zone, added: new Date().toISOString() });
+    });
   const sorted = [...fridge].sort((a, b) => (daysLeft(a.dlc) ?? 999) - (daysLeft(b.dlc) ?? 999));
   return (
     <>
       <div className="row">
-        <label className="field inline">Zone
+        <label className="field inline">
+          Zone
           <select value={zone} onChange={(e) => setZone(e.target.value as FridgeItem["zone"])}>
-            <option value="frigo">Frigo</option><option value="congelateur">Congélateur</option><option value="placard">Placard</option>
+            <option value="frigo">Frigo</option>
+            <option value="congelateur">Congélateur</option>
+            <option value="placard">Placard</option>
           </select>
         </label>
         <IngredientPicker onPick={add} exclude={fridge.map((f) => f.ref)} />
       </div>
-      {!fridge.length ? <Empty>Ton frigo virtuel est vide. Ajoute ce que tu as, avec la date limite : ATLAS te dira quoi cuisiner en premier.</Empty> : (
+      {!fridge.length ? (
+        <Empty>Ton frigo virtuel est vide. Ajoute ce que tu as, avec la date limite : ATLAS te dira quoi cuisiner en premier.</Empty>
+      ) : (
         <ul className="fridge">
           {sorted.map((f) => {
             const d = daysLeft(f.dlc);
             const cls = d === null ? "" : d < 0 ? "bad" : d <= 2 ? "warn" : "ok";
             return (
               <li key={f.ref} className={`card pad fitem ${cls}`}>
-                <span className="fname">{short(f.ref)} <span className="meta">· {f.zone}{INGREDIENTS[f.ref] ? ` · ${INGREDIENTS[f.ref].section.split(" (")[0].split(",")[0]}` : ""}</span></span>
-                <label className="field inline small">Date limite
-                  <input type="date" value={f.dlc ?? ""} onChange={(e) => setState((s) => { const x = s.fridge.find((y) => y.ref === f.ref); if (x) x.dlc = e.target.value || null; })} />
+                <span className="fname">
+                  {short(f.ref)}{" "}
+                  <span className="meta">
+                    · {f.zone}
+                    {INGREDIENTS[f.ref] ? ` · ${INGREDIENTS[f.ref].section.split(" (")[0].split(",")[0]}` : ""}
+                  </span>
+                </span>
+                <label className="field inline small">
+                  Date limite
+                  <input
+                    type="date"
+                    value={f.dlc ?? ""}
+                    onChange={(e) =>
+                      setState((s) => {
+                        const x = s.fridge.find((y) => y.ref === f.ref);
+                        if (x) x.dlc = e.target.value || null;
+                      })
+                    }
+                  />
                 </label>
                 {d !== null && <span className={`badge ${cls === "bad" ? "bad" : cls === "warn" ? "warn" : "ok"}`}>{d < 0 ? "Dépassée" : d === 0 ? "Aujourd'hui" : `J-${d}`}</span>}
-                <button className="btn small ghost" onClick={() => setState((s) => { s.fridge = s.fridge.filter((y) => y.ref !== f.ref); })} aria-label={`Retirer ${short(f.ref)}`}>Utilisé ✓</button>
+                <button
+                  className="btn small ghost"
+                  onClick={() =>
+                    setState((s) => {
+                      s.fridge = s.fridge.filter((y) => y.ref !== f.ref);
+                    })
+                  }
+                  aria-label={`Retirer ${short(f.ref)}`}
+                >
+                  Utilisé ✓
+                </button>
               </li>
             );
           })}
@@ -310,7 +616,11 @@ function MonFrigo() {
       )}
       <p className="small">{DLC_DDM}</p>
       <p className="small">Une date dépassée sur un produit frais (viande, poisson, laitages) : ne pas consommer. Sur une DDM : regarde, sens, goûte.</p>
-      {fridge.some((f) => norm(f.ref).includes("pain")) && <p><Icon name="recycle" size={16} className="ic-inline" /> Du pain rassis ? <a href={href("/recette/pain_perdu")}>Pain perdu</a>.</p>}
+      {fridge.some((f) => norm(f.ref).includes("pain")) && (
+        <p>
+          <Icon name="recycle" size={16} className="ic-inline" /> Du pain rassis ? <a href={href("/recette/pain_perdu")}>Pain perdu</a>.
+        </p>
+      )}
     </>
   );
 }

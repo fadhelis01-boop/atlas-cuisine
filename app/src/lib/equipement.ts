@@ -4,9 +4,19 @@ import { norm } from "./text";
 import type { Profile, Recipe } from "./types";
 
 export const EQUIPEMENTS: [string, string][] = [
-  ["four", "Four"], ["plaques", "Plaques (gaz, induction, vitro)"], ["poele", "Poêle"], ["casserole", "Casseroles"], ["cocotte", "Cocotte en fonte"],
-  ["autocuiseur", "Autocuiseur (Cocotte-Minute)"], ["mijoteuse", "Mijoteuse"], ["microondes", "Micro-ondes"],
-  ["mixeur", "Mixeur plongeur"], ["robot", "Robot pétrisseur"], ["airfryer", "Airfryer"], ["wok", "Wok"], ["thermometre", "Thermomètre de cuisson"],
+  ["four", "Four"],
+  ["plaques", "Plaques (gaz, induction, vitro)"],
+  ["poele", "Poêle"],
+  ["casserole", "Casseroles"],
+  ["cocotte", "Cocotte en fonte"],
+  ["autocuiseur", "Autocuiseur (Cocotte-Minute)"],
+  ["mijoteuse", "Mijoteuse"],
+  ["microondes", "Micro-ondes"],
+  ["mixeur", "Mixeur plongeur"],
+  ["robot", "Robot pétrisseur"],
+  ["airfryer", "Airfryer"],
+  ["wok", "Wok"],
+  ["thermometre", "Thermomètre de cuisson"],
 ];
 
 const SANS: [string, RegExp, string][] = [
@@ -26,6 +36,7 @@ export function equipmentNotes(r: Recipe, p: Profile): string[] {
     const tip = r.tips.find((t) => /autocuiseur/i.test(t));
     if (tip) out.unshift(`Avec ton autocuiseur : ${tip.replace(/\*\*Autocuiseur\*\*\s*:\s*/i, "").replace(/\*\*/g, "")}`);
   }
-  if (p.equipment.includes("mijoteuse") && r.active + r.rest >= 120 && /mijot|frem|feu (tres )?doux/.test(eq)) out.push("Avec ta mijoteuse : après l'étape où l'on saisit, tout dans la cuve, position basse 8 h ou haute 4 h ; réduis la sauce à la casserole si elle est trop liquide.");
+  if (p.equipment.includes("mijoteuse") && r.active + r.rest >= 120 && /mijot|frem|feu (tres )?doux/.test(eq))
+    out.push("Avec ta mijoteuse : après l'étape où l'on saisit, tout dans la cuve, position basse 8 h ou haute 4 h ; réduis la sauce à la casserole si elle est trop liquide.");
   return out;
 }

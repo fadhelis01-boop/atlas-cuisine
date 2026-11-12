@@ -30,8 +30,17 @@ const ENTRIES = [
   { to: "/fetes", icon: "cake", label: "Fêtes & menus", sub: "recevoir", tone: "berry" },
   { to: "/enfants", icon: "kid", label: "Enfants", sub: "par âge", tone: "pistachio" },
 ];
-const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "/frigo": "rubrique/frigo", "/enfants": "rubrique/enfants", "/pains": "rubrique/pains",
-  "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports" };
+const TILE_PHOTO: Record<string, string> = {
+  "/explorer": "rubrique/explorer",
+  "/frigo": "rubrique/frigo",
+  "/enfants": "rubrique/enfants",
+  "/pains": "rubrique/pains",
+  "/sauces": "rubrique/sauces",
+  "/techniques": "rubrique/techniques",
+  "/fetes": "rubrique/fetes",
+  "/zero-dechet": "rubrique/zero_dechet",
+  "/imports": "rubrique/imports",
+};
 
 const cravingById = (id: string) => CRAVINGS.find((c) => c.id === id)!; // jamais par position : la liste évolue
 
@@ -46,7 +55,12 @@ const CRAVINGS: { id: string; icon: string; label: string; test: (r: Recipe) => 
   { id: "brunch", icon: "cup", label: "Brunch", test: (r) => r.cats.includes("brunch") },
   { id: "salade", icon: "leaf", label: "Salades repas", test: (r) => r.cats.includes("salade") },
   { id: "chocolat", icon: "chocolate", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
-  { id: "patisserie", icon: "cupcake", label: "Pâtisserie", test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")) },
+  {
+    id: "patisserie",
+    icon: "cupcake",
+    label: "Pâtisserie",
+    test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")),
+  },
   { id: "street", icon: "taco", label: "Street-food", test: (r) => STREET_IDS.has(r.id) }, // rubrique choisie à la main (12/11) : un mot du titre ne suffit pas
   { id: "vege", icon: "broccoli", label: "Végétarien", test: (r) => r.role === "plat" && evaluate(r).flesh.length === 0 },
   { id: "mer", icon: "fish", label: "Poissons & mer", test: (r) => r.role !== "dessert" && r.profile.includes("poisson") },
@@ -69,10 +83,35 @@ const daily = <T,>(list: T[], n: number, salt: number) => dailyPick(list, n, sal
 
 function SeasonNote({ r, zone, label }: { r: Recipe; zone: Zone; label: string }) {
   const f = seasonFit(r, zone);
-  return <p className="tag-wrap"><span className="tag-day">{label}</span>{f.inSeason.length > 0 && <span className="meta"> <Icon name="sprout" size={14} className="ic-inline" />{f.inSeason.slice(0, 3).map((x) => x.split(/ \/ | \(/)[0].toLowerCase()).join(", ")}</span>}{!f.inSeason.length && f.mood && <span className="meta"> <Icon name={f.mood === "chaud" ? "flame" : "snowflake"} size={14} className="ic-inline" />{f.mood === "chaud" ? "plat réconfortant" : "plat frais"}</span>}</p>;
+  return (
+    <p className="tag-wrap">
+      <span className="tag-day">{label}</span>
+      {f.inSeason.length > 0 && (
+        <span className="meta">
+          {" "}
+          <Icon name="sprout" size={14} className="ic-inline" />
+          {f.inSeason
+            .slice(0, 3)
+            .map((x) => x.split(/ \/ | \(/)[0].toLowerCase())
+            .join(", ")}
+        </span>
+      )}
+      {!f.inSeason.length && f.mood && (
+        <span className="meta">
+          {" "}
+          <Icon name={f.mood === "chaud" ? "flame" : "snowflake"} size={14} className="ic-inline" />
+          {f.mood === "chaud" ? "plat réconfortant" : "plat frais"}
+        </span>
+      )}
+    </p>
+  );
 }
 
-const TIMES: [number, string][] = [[20, "20 min"], [45, "45 min"], [999, "J'ai le temps"]];
+const TIMES: [number, string][] = [
+  [20, "20 min"],
+  [45, "45 min"],
+  [999, "J'ai le temps"],
+];
 
 /** « Pas d'idée ? » : trois suggestions en un geste (heure, saison, temps disponible, frigo). */
 function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
@@ -84,22 +123,65 @@ function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
   const run = (t = time) => {
     const res = propose(visible, { hour, zone, maxMinutes: t, fridge: fridge.map((f) => f.ref), seed: freshSeed(), recent: new Set(getState().proposed ?? []) });
     setProps(res);
-    setState((s) => { s.proposed = [...res.map((x) => x.r.id), ...(s.proposed ?? [])].slice(0, 45); });
+    setState((s) => {
+      s.proposed = [...res.map((x) => x.r.id), ...(s.proposed ?? [])].slice(0, 45);
+    });
   };
   const seed = props ? 1 : 0;
   return (
     <section className="section propose card pad" aria-label="Propose-moi">
       <div className="propose-head">
-        <h2 className="h3"><Icon name="dice" size={22} /> Pas d'idée ? <span className="meta">{momentOf(hour).label}</span></h2>
+        <h2 className="h3">
+          <Icon name="dice" size={22} /> Pas d'idée ? <span className="meta">{momentOf(hour).label}</span>
+        </h2>
         <span className="chips" role="group" aria-label="Temps disponible">
-          {TIMES.map(([m, l]) => <button key={m} type="button" className={`chip ${time === m ? "on" : ""}`} aria-pressed={time === m} onClick={() => { setTime(m); if (props) run(m); }}>{l}</button>)}
+          {TIMES.map(([m, l]) => (
+            <button
+              key={m}
+              type="button"
+              className={`chip ${time === m ? "on" : ""}`}
+              aria-pressed={time === m}
+              onClick={() => {
+                setTime(m);
+                if (props) run(m);
+              }}
+            >
+              {l}
+            </button>
+          ))}
         </span>
-        <button type="button" className="btn" onClick={() => run()}>{seed ? "Autres idées" : "Propose-moi"}</button>
+        <button type="button" className="btn" onClick={() => run()}>
+          {seed ? "Autres idées" : "Propose-moi"}
+        </button>
       </div>
-      {props && (props.length
-        ? <Grid>{props.map((x) => <RecipeCard key={x.r.id} r={x.r} note={<span className="meta why">{x.why.map(([ic, t]) => <span key={t}><Icon name={ic} size={14} className="ic-inline" />{t}</span>)}</span>} />)}</Grid>
-        : <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>)}
-      {seed > 0 && !fridge.length && <p className="small">Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.</p>}
+      {props &&
+        (props.length ? (
+          <Grid>
+            {props.map((x) => (
+              <RecipeCard
+                key={x.r.id}
+                r={x.r}
+                note={
+                  <span className="meta why">
+                    {x.why.map(([ic, t]) => (
+                      <span key={t}>
+                        <Icon name={ic} size={14} className="ic-inline" />
+                        {t}
+                      </span>
+                    ))}
+                  </span>
+                }
+              />
+            ))}
+          </Grid>
+        ) : (
+          <p className="small">Rien dans ce temps-là avec les réglages de ton foyer : essaie « J'ai le temps ».</p>
+        ))}
+      {seed > 0 && !fridge.length && (
+        <p className="small">
+          Astuce : renseigne <a href={href("/frigo")}>ton frigo</a> et les idées utiliseront d'abord ce que tu as.
+        </p>
+      )}
     </section>
   );
 }
@@ -109,12 +191,24 @@ function ProposeMoi({ visible, zone }: { visible: Recipe[]; zone: Zone }) {
 function BackupNudge() {
   const due = useStore((s) => backupDue(s));
   if (!due) return null;
-  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window.matchMedia?.("(display-mode: standalone)").matches);
+  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.matchMedia?.("(display-mode: standalone)").matches;
   return (
     <div className="card pad backup-nudge" role="note">
-      <p><Icon name="alert" size={18} className="ic-inline" /> <strong>Tes favoris, ton carnet et ta semaine ne sont enregistrés que sur ce téléphone.</strong> Garde-en une copie : <a href={href("/profil")}>Profil › Mes données › Exporter</a>.
-        {ios && <> Sur iPhone, installe ATLAS (Partager › Sur l'écran d'accueil) : Safari efface les données des sites non ouverts depuis 7 jours.</>}</p>
-      <button className="btn small ghost" onClick={() => setState((s) => { s.settings.backupNudge = new Date().toISOString(); })}>Plus tard</button>
+      <p>
+        <Icon name="alert" size={18} className="ic-inline" /> <strong>Tes favoris, ton carnet et ta semaine ne sont enregistrés que sur ce téléphone.</strong> Garde-en une copie :{" "}
+        <a href={href("/profil")}>Profil › Mes données › Exporter</a>.
+        {ios && <> Sur iPhone, installe ATLAS (Partager › Sur l'écran d'accueil) : Safari efface les données des sites non ouverts depuis 7 jours.</>}
+      </p>
+      <button
+        className="btn small ghost"
+        onClick={() =>
+          setState((s) => {
+            s.settings.backupNudge = new Date().toISOString();
+          })
+        }
+      >
+        Plus tard
+      </button>
     </div>
   );
 }
@@ -124,13 +218,29 @@ function InstallNudge() {
   if (!due) return null;
   return (
     <div className="card pad install-nudge" role="note">
-      <p><strong>Installe ATLAS sur ton iPhone pour ne pas perdre tes favoris, ton carnet et ta semaine.</strong> Dans Safari, un site non ouvert pendant 7 jours voit ses données effacées ; une fois installé, ATLAS les garde.</p>
+      <p>
+        <strong>Installe ATLAS sur ton iPhone pour ne pas perdre tes favoris, ton carnet et ta semaine.</strong> Dans Safari, un site non ouvert pendant 7 jours voit ses données
+        effacées ; une fois installé, ATLAS les garde.
+      </p>
       <ol className="small">
-        <li>Touche le bouton <strong>Partager</strong> de Safari (le carré avec une flèche vers le haut).</li>
-        <li>Choisis <strong>Sur l'écran d'accueil</strong>, puis <strong>Ajouter</strong>.</li>
+        <li>
+          Touche le bouton <strong>Partager</strong> de Safari (le carré avec une flèche vers le haut).
+        </li>
+        <li>
+          Choisis <strong>Sur l'écran d'accueil</strong>, puis <strong>Ajouter</strong>.
+        </li>
         <li>Ouvre ATLAS depuis sa nouvelle icône : tes données y sont déjà.</li>
       </ol>
-      <button className="btn small ghost" onClick={() => setState((s) => { s.installNudge = new Date().toISOString(); })}>Plus tard</button>
+      <button
+        className="btn small ghost"
+        onClick={() =>
+          setState((s) => {
+            s.installNudge = new Date().toISOString();
+          })
+        }
+      >
+        Plus tard
+      </button>
     </div>
   );
 }
@@ -143,9 +253,14 @@ function Beginner() {
   const next = PARCOURS[learned];
   return (
     <a className="card pad beginner" href={href("/apprendre")}>
-      <span className="beginner-ic" aria-hidden="true"><Icon name="cap" size={34} /></span>
-      <span><strong>{learned ? `J'apprends à cuisiner : étape ${learned + 1} sur ${PARCOURS.length}` : "Tu débutes ? Apprends pas à pas"}</strong><br />
-        <span className="small">{learned ? `Prochaine étape : ${next.title}.` : "15 étapes courtes, du couteau aux sauces, avec une recette facile à chaque fois."}</span></span>
+      <span className="beginner-ic" aria-hidden="true">
+        <Icon name="cap" size={34} />
+      </span>
+      <span>
+        <strong>{learned ? `J'apprends à cuisiner : étape ${learned + 1} sur ${PARCOURS.length}` : "Tu débutes ? Apprends pas à pas"}</strong>
+        <br />
+        <span className="small">{learned ? `Prochaine étape : ${next.title}.` : "15 étapes courtes, du couteau aux sauces, avec une recette facile à chaque fois."}</span>
+      </span>
     </a>
   );
 }
@@ -155,7 +270,9 @@ export default function Home() {
   const [q, setQ] = useState("");
   const [craving, setCraving] = useState<string | null>(null);
   const p = useProfile();
-  const recent = useStore((s) => s.recent).map((id) => RECIPE_BY_ID[id]).filter(Boolean);
+  const recent = useStore((s) => s.recent)
+    .map((id) => RECIPE_BY_ID[id])
+    .filter(Boolean);
   const month = new Date().getMonth() + 1;
   const nextFetes = FETES.filter((f) => f.month && (f.month === month || f.month === (month % 12) + 1));
   const visible = useVisible(RECIPES);
@@ -169,9 +286,16 @@ export default function Home() {
   // audit chef + famille : un soir de semaine, dessert léger ou rapide (pas une apple pie de 1 h 40), plat en temps total
   const maxTotal: Record<string, number> = weekday ? { entree: 30, plat: 45, dessert: 30 } : { entree: 90, plat: 999, dessert: 999 };
   const seasonal = (role: string, salt: number) => {
-    const ranked = visible.filter((r) => r.role === role && (role === "dessert" ? (weekday ? r.active + r.rest : r.active) : tonightMin(r)) <= maxTotal[role]
-        && (role !== "dessert" || !weekday || r.profile.includes("leger") || r.active + r.rest <= 20) && kidFriendly(r, p)
-            ).map((r) => [r, seasonFit(r, zone).score] as const).sort((a, b) => b[1] - a[1]);
+    const ranked = visible
+      .filter(
+        (r) =>
+          r.role === role &&
+          (role === "dessert" ? (weekday ? r.active + r.rest : r.active) : tonightMin(r)) <= maxTotal[role] &&
+          (role !== "dessert" || !weekday || r.profile.includes("leger") || r.active + r.rest <= 20) &&
+          kidFriendly(r, p),
+      )
+      .map((r) => [r, seasonFit(r, zone).score] as const)
+      .sort((a, b) => b[1] - a[1]);
     const top = ranked.slice(0, Math.max(12, Math.round(ranked.length * 0.3))).map(([r]) => r);
     return daily(top, 1, salt)[0] ?? null;
   };
@@ -180,8 +304,24 @@ export default function Home() {
   const dessert = seasonal("dessert", 3);
   const market = useMemo(() => marketOfMonth(zone).filter((n) => INGREDIENTS[n]?.slug), [zone]);
   const monthName = MONTHS_FULL[new Date().getMonth()];
-  const news = useMemo(() => daily(visible.filter((r) => r.source.includes("vague 2") && r.role !== "autre"), 8, 1), [visible]);
-  const pastry = useMemo(() => daily(visible.filter((r) => cravingById("patisserie").test(r) || cravingById("chocolat").test(r)), 8, 2), [visible]);
+  const news = useMemo(
+    () =>
+      daily(
+        visible.filter((r) => r.source.includes("vague 2") && r.role !== "autre"),
+        8,
+        1,
+      ),
+    [visible],
+  );
+  const pastry = useMemo(
+    () =>
+      daily(
+        visible.filter((r) => cravingById("patisserie").test(r) || cravingById("chocolat").test(r)),
+        8,
+        2,
+      ),
+    [visible],
+  );
   const picked = craving ? CRAVINGS.find((c) => c.id === craving) : null;
   const [cravingSeed, setCravingSeed] = useState(0);
   const cravingList = useMemo(() => {
@@ -200,22 +340,56 @@ export default function Home() {
     return pool.length ? pool[(week * 7919) % pool.length] : null;
   }, [cookedN, visible, zone, cookedMap]);
   // le soir de semaine, la rangée enfants propose ce qu'on peut faire ce soir (45 min en tout)
-  const kidsPick = p.kidsAge !== null ? daily(visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat"
-      && kidFriendly(r, p) && (!weekday || tonightMin(r) <= 45)), 4, 11) : [];
+  const kidsPick =
+    p.kidsAge !== null
+      ? daily(
+          visible.filter((r) => r.age !== null && r.age <= Math.max(p.kidsAge ?? 1, 1) && r.role === "plat" && kidFriendly(r, p) && (!weekday || tonightMin(r) <= 45)),
+          4,
+          11,
+        )
+      : [];
 
   return (
     <main className="page home" id="contenu" tabIndex={-1}>
-      <form className="hero hero-skin" role="search" onSubmit={(e) => { e.preventDefault(); go(`/recherche?q=${encodeURIComponent(q)}`); }}>
+      <form
+        className="hero hero-skin"
+        role="search"
+        onSubmit={(e) => {
+          e.preventDefault();
+          go(`/recherche?q=${encodeURIComponent(q)}`);
+        }}
+      >
         <div className="hero-copy">
           <p className="hero-hi">{g.hi}</p>
           <h1 data-title="Accueil">{g.line}</h1>
           <p className="hero-sub">{RECIPES.length} recettes du monde, faites maison : de la sauce frites au fraisier, du thiéboudienne au ramen.</p>
           <div className="searchbar">
-            <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Plat, envie, ingrédient…" enterKeyHint="search" aria-label="Rechercher une recette" />
-            <button className="btn" type="submit">Chercher</button>
+            <input
+              type="search"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Plat, envie, ingrédient…"
+              enterKeyHint="search"
+              aria-label="Rechercher une recette"
+            />
+            <button className="btn" type="submit">
+              Chercher
+            </button>
           </div>
           {(p.noPork || p.alcohol !== "allowed" || p.allergens.length > 0 || p.vegetarian) && (
-            <p className="hero-filters">Filtres du foyer : {[p.noPork && "sans porc", p.alcohol === "standard" && "sans alcool", p.alcohol === "strict" && "sans alcool strict", p.vegetarian && "végétarien", p.allergens.length && `${p.allergens.length} allergène(s) exclu(s)`].filter(Boolean).join(" · ")} · <a href={href("/profil")}>modifier</a></p>
+            <p className="hero-filters">
+              Filtres du foyer :{" "}
+              {[
+                p.noPork && "sans porc",
+                p.alcohol === "standard" && "sans alcool",
+                p.alcohol === "strict" && "sans alcool strict",
+                p.vegetarian && "végétarien",
+                p.allergens.length && `${p.allergens.length} allergène(s) exclu(s)`,
+              ]
+                .filter(Boolean)
+                .join(" · ")}{" "}
+              · <a href={href("/profil")}>modifier</a>
+            </p>
           )}
         </div>
         <HeroArt />
@@ -224,15 +398,40 @@ export default function Home() {
       <ProposeMoi visible={visible} zone={zone} />
       <div className="cravings" role="group" aria-label="Envies du moment">
         {CRAVINGS.map((c) => (
-          <button key={c.id} type="button" className={`craving ${craving === c.id ? "on" : ""}`} aria-pressed={craving === c.id} onClick={() => setCraving(craving === c.id ? null : c.id)}>
+          <button
+            key={c.id}
+            type="button"
+            className={`craving ${craving === c.id ? "on" : ""}`}
+            aria-pressed={craving === c.id}
+            onClick={() => setCraving(craving === c.id ? null : c.id)}
+          >
             <Icon name={c.icon} size={20} /> {c.label}
           </button>
         ))}
       </div>
       {picked && (
-        <Section title={picked.label} more={<button type="button" className="btn ghost small" onClick={() => setCraving(null)}>Fermer</button>}>
-          {cravingList.length ? <div className="rail">{cravingList.map((r) => <RecipeCard key={r.id} r={r} />)}</div> : <p className="small">Rien pour ce filtre avec les réglages de ton foyer.</p>}
-          {cravingList.length >= 12 && <button type="button" className="btn ghost small" onClick={() => setCravingSeed(freshSeed())}><Icon name="refresh" size={18} /> D'autres idées</button>}
+        <Section
+          title={picked.label}
+          more={
+            <button type="button" className="btn ghost small" onClick={() => setCraving(null)}>
+              Fermer
+            </button>
+          }
+        >
+          {cravingList.length ? (
+            <div className="rail">
+              {cravingList.map((r) => (
+                <RecipeCard key={r.id} r={r} />
+              ))}
+            </div>
+          ) : (
+            <p className="small">Rien pour ce filtre avec les réglages de ton foyer.</p>
+          )}
+          {cravingList.length >= 12 && (
+            <button type="button" className="btn ghost small" onClick={() => setCravingSeed(freshSeed())}>
+              <Icon name="refresh" size={18} /> D'autres idées
+            </button>
+          )}
         </Section>
       )}
 
@@ -250,31 +449,61 @@ export default function Home() {
         </Section>
       )}
       {challenge && (
-        <Section title={<><Icon name="star" size={24} className="ic-inline" /> Le défi de la semaine</>}>
-          <Grid><RecipeCard r={challenge} note={<p className="small">Un cran au-dessus de ce que tu as déjà cuisiné, de saison, jamais essayé. Lance-toi, « Si ça rate » est là.</p>} /></Grid>
+        <Section
+          title={
+            <>
+              <Icon name="star" size={24} className="ic-inline" /> Le défi de la semaine
+            </>
+          }
+        >
+          <Grid>
+            <RecipeCard r={challenge} note={<p className="small">Un cran au-dessus de ce que tu as déjà cuisiné, de saison, jamais essayé. Lance-toi, « Si ça rate » est là.</p>} />
+          </Grid>
         </Section>
       )}
       <nav className="entries" aria-label="Rubriques">
         {ENTRIES.map((e) => {
-          const pk = TILE_PHOTO[e.to]; const ph = pk && photoOf(pk);
+          const pk = TILE_PHOTO[e.to];
+          const ph = pk && photoOf(pk);
           return (
             <a key={e.to} href={href(e.to)} className={`entry tone-${e.tone} ${ph ? "has-photo" : ""}`}>
               {ph && <Photo k={pk} alt="" sizes="(min-width: 700px) 200px, 33vw" />}
-              <span className="entry-ic" aria-hidden="true"><Icon name={e.icon} size={34} /></span><span className="entry-lb">{e.label}</span><span className="entry-sub">{e.sub}</span>
+              <span className="entry-ic" aria-hidden="true">
+                <Icon name={e.icon} size={34} />
+              </span>
+              <span className="entry-lb">{e.label}</span>
+              <span className="entry-sub">{e.sub}</span>
             </a>
           );
         })}
       </nav>
-      <p className="all-rubriques"><a className="btn ghost" href={href("/explorer")}>Toutes les rubriques : pains, sauces, zéro déchet, dictionnaire…</a></p>
+      <p className="all-rubriques">
+        <a className="btn ghost" href={href("/explorer")}>
+          Toutes les rubriques : pains, sauces, zéro déchet, dictionnaire…
+        </a>
+      </p>
 
       {market.length > 0 && (
-        <Section title={zone === "tropical" ? "Le marché des tropiques" : `Le marché ${/^[aeiou]/.test(monthName) ? "d'" : "de "}${monthName}`} more={<a href={href("/dictionnaire")}>Dictionnaire →</a>}>
+        <Section
+          title={zone === "tropical" ? "Le marché des tropiques" : `Le marché ${/^[aeiou]/.test(monthName) ? "d'" : "de "}${monthName}`}
+          more={<a href={href("/dictionnaire")}>Dictionnaire →</a>}
+        >
           <div className="market">
             {market.slice(0, 24).map((n) => {
-              const ing = INGREDIENTS[n]; const k = `ingredient/${ing.slug}`; const [, icon, tone] = sectionLook(ing.section);
+              const ing = INGREDIENTS[n];
+              const k = `ingredient/${ing.slug}`;
+              const [, icon, tone] = sectionLook(ing.section);
               return (
                 <a key={n} href={href(`/ingredient/${ing.slug}`)} className="market-item">
-                  <span className={`dico-thumb round tone-${tone}`}>{photoOf(k) ? <Photo k={k} alt="" sizes="96px" /> : <span aria-hidden="true"><Icon name={icon} size={34} /></span>}</span>
+                  <span className={`dico-thumb round tone-${tone}`}>
+                    {photoOf(k) ? (
+                      <Photo k={k} alt="" sizes="96px" />
+                    ) : (
+                      <span aria-hidden="true">
+                        <Icon name={icon} size={34} />
+                      </span>
+                    )}
+                  </span>
                   <span className="market-name">{n.split(/ \/ | \(/)[0]}</span>
                 </a>
               );
@@ -284,33 +513,60 @@ export default function Home() {
       )}
       {news.length > 0 && (
         <Section title="Nouveautés gourmandes" more={<a href={href("/explorer")}>Tout l'atlas →</a>}>
-          <div className="rail">{news.map((r) => <RecipeCard key={r.id} r={r} />)}</div>
+          <div className="rail">
+            {news.map((r) => (
+              <RecipeCard key={r.id} r={r} />
+            ))}
+          </div>
         </Section>
       )}
       {pastry.length > 0 && (
         <Section title="Pâtisserie & chocolat" more={<a href={href("/techniques")}>Les gestes du pâtissier →</a>}>
-          <div className="rail">{pastry.map((r) => <RecipeCard key={r.id} r={r} />)}</div>
+          <div className="rail">
+            {pastry.map((r) => (
+              <RecipeCard key={r.id} r={r} />
+            ))}
+          </div>
         </Section>
       )}
       {nextFetes.length > 0 && (
         <Section title="Fêtes à venir" more={<a href={href("/fetes")}>Toutes les fêtes →</a>}>
           {nextFetes.map((f) => (
             <div key={f.name} className="card pad fete-card">
-              <h3><Icon name="cake" size={20} className="ic-inline" /> {f.name} <span className="meta">· {f.when}</span></h3>
+              <h3>
+                <Icon name="cake" size={20} className="ic-inline" /> {f.name} <span className="meta">· {f.when}</span>
+              </h3>
               <p>{f.traditions}</p>
-              <div className="links">{f.ideas.map((id) => RECIPE_BY_ID[id] && <a key={id} className="pill" href={href(`/recette/${id}`)}>{RECIPE_BY_ID[id].title}</a>)}</div>
+              <div className="links">
+                {f.ideas.map(
+                  (id) =>
+                    RECIPE_BY_ID[id] && (
+                      <a key={id} className="pill" href={href(`/recette/${id}`)}>
+                        {RECIPE_BY_ID[id].title}
+                      </a>
+                    ),
+                )}
+              </div>
             </div>
           ))}
         </Section>
       )}
       {kidsPick.length > 0 && (
         <Section title={`Pour les enfants (dès ${p.kidsAge} an${(p.kidsAge ?? 0) > 1 ? "s" : ""})`} more={<a href={href("/enfants")}>Rubrique enfants →</a>}>
-          <Grid>{kidsPick.map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>
+          <Grid>
+            {kidsPick.map((r) => (
+              <RecipeCard key={r.id} r={r} />
+            ))}
+          </Grid>
         </Section>
       )}
       {recent.length > 0 && (
         <Section title="Reprendre">
-          <Grid>{recent.slice(0, 4).map((r) => <RecipeCard key={r.id} r={r} />)}</Grid>
+          <Grid>
+            {recent.slice(0, 4).map((r) => (
+              <RecipeCard key={r.id} r={r} />
+            ))}
+          </Grid>
         </Section>
       )}
     </main>

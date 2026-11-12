@@ -408,8 +408,7 @@ export default function Semaine({ add }: { add: string | null }) {
       </ol>
       {drink && (
         <p className="small">
-          <Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine :{" "}
-          <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer
+          <Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine : <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer
           en carafe ; l'eau reste la boisson des repas.
         </p>
       )}

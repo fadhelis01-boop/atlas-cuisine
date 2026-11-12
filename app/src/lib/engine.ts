@@ -29,11 +29,29 @@ type Lookup = (name: string) => IngredientRef | undefined;
 
 const FLESH_SECTIONS = ["Viandes & volailles", "Porc, charcuterie", "Poissons, crustacés"];
 const FLESH_EXTRA = new Set([
-  "Gélatine alimentaire", "Graisse de canard", "Graisse de canard / beurre clarifié", "Graisse de bœuf / suif", "Bouillon cube volaille",
-  "Bouillon cube bœuf", "Bouillon liquide (type fond)", "Fond de veau / de volaille (poudre)", "Bouillon d'os maison (bœuf/volaille)",
-  "Fumet de poisson maison", "Sauce de poisson (nuoc-mâm, nam pla)", "Sauce d'huître", "Sauce Worcestershire", "Pâte de crevettes",
-  "Dashi (instantané)", "Dashi maison (kombu + katsuobushi)", "Bonite séchée (katsuobushi)", "Poisson fumé / séché", "Crevettes séchées",
-  "Morue salée", "Sauce XO", "Merguez", "Chorizo mexicain",
+  "Gélatine alimentaire",
+  "Graisse de canard",
+  "Graisse de canard / beurre clarifié",
+  "Graisse de bœuf / suif",
+  "Bouillon cube volaille",
+  "Bouillon cube bœuf",
+  "Bouillon liquide (type fond)",
+  "Fond de veau / de volaille (poudre)",
+  "Bouillon d'os maison (bœuf/volaille)",
+  "Fumet de poisson maison",
+  "Sauce de poisson (nuoc-mâm, nam pla)",
+  "Sauce d'huître",
+  "Sauce Worcestershire",
+  "Pâte de crevettes",
+  "Dashi (instantané)",
+  "Dashi maison (kombu + katsuobushi)",
+  "Bonite séchée (katsuobushi)",
+  "Poisson fumé / séché",
+  "Crevettes séchées",
+  "Morue salée",
+  "Sauce XO",
+  "Merguez",
+  "Chorizo mexicain",
 ]);
 const VEGGIE_IN_MEAT_SECTION = new Set(["Champignons fumés / tempeh fumé", "Paprika fumé + huile", "Gélatine de bœuf / poisson, agar-agar, pectine"]);
 const RENNET = new Set(["Parmesan / Parmigiano", "Pecorino"]);
@@ -59,8 +77,15 @@ export function* walk(lines: Line[], stack: string[] = []): Generator<Line> {
 export function evaluateLines(lines: Line[], opts: { imported?: boolean; lookup?: Lookup } = {}): Evaluation {
   const lookup: Lookup = opts.lookup ?? ((n) => INGREDIENTS[n]);
   const res: Evaluation = {
-    pork: "ok", alcohol: "ok", allergens: new Set(), maybeAllergens: new Set(), unknown: [],
-    offenders: { pork: [], alcohol: [] }, confidence: "A", flesh: [], rennet: [],
+    pork: "ok",
+    alcohol: "ok",
+    allergens: new Set(),
+    maybeAllergens: new Set(),
+    unknown: [],
+    offenders: { pork: [], alcohol: [] },
+    confidence: "A",
+    flesh: [],
+    rennet: [],
   };
   const bump = (kind: "pork" | "alcohol", st: Status, id: string) => {
     if (ORDER[st] > ORDER[res[kind]]) res[kind] = st;
@@ -141,7 +166,8 @@ function check(ev: Evaluation, p: Profile) {
   for (const a of p.allergens) if (ev.allergens.has(a)) reasons.push(`allergène : ${a}`);
   for (const a of p.allergens) if (!ev.allergens.has(a) && ev.maybeAllergens.has(a)) warnings.push(`allergène possible selon la marque : ${a}`);
   // allergie d'un seul membre du foyer (audit famille) : la recette reste proposée, avec une alerte pour lui préparer une part à part
-  for (const a of p.allergensWarn ?? []) if (!p.allergens.includes(a) && (ev.allergens.has(a) || ev.maybeAllergens.has(a))) warnings.push(`contient ${a} : prévois une part sans pour la personne allergique`);
+  for (const a of p.allergensWarn ?? [])
+    if (!p.allergens.includes(a) && (ev.allergens.has(a) || ev.maybeAllergens.has(a))) warnings.push(`contient ${a} : prévois une part sans pour la personne allergique`);
   if (p.vegetarian && ev.flesh.length) reasons.push("contient de la viande ou du poisson");
   if (p.vegetarian && ev.rennet.length) warnings.push("fromage à présure animale");
   if (ev.unknown.length) warnings.push("ingrédient non référencé");
@@ -188,15 +214,26 @@ export function verdict(r: Recipe, p: Profile, rules: Rule[] = RULES): Verdict {
     return parts.length ? parts : [v.note];
   };
   const combos: { name: string; replace: Record<string, [string, number][]>; notes: string[]; tested: boolean }[] = vs.map((v) => ({
-    name: v.name, replace: v.replace, notes: notesOf(v), tested: v.tested,
+    name: v.name,
+    replace: v.replace,
+    notes: notesOf(v),
+    tested: v.tested,
   }));
-  if (vs.length > 1) combos.push({ name: vs.map((v) => v.name).join(" + "), replace: Object.assign({}, ...vs.map((v) => v.replace)), notes: vs.map((v) => v.note), tested: vs.every((v) => v.tested) });
+  if (vs.length > 1)
+    combos.push({
+      name: vs.map((v) => v.name).join(" + "),
+      replace: Object.assign({}, ...vs.map((v) => v.replace)),
+      notes: vs.map((v) => v.note),
+      tested: vs.every((v) => v.tested),
+    });
   for (const c of combos) {
     const lines = rewrite(r.ingredients, c.replace);
     const ok = tryLines(lines);
     if (ok) {
       return {
-        availability: "adaptable", reasons, warnings: ok.warnings,
+        availability: "adaptable",
+        reasons,
+        warnings: ok.warnings,
         adapted: { lines, source: "curated", variantName: c.name, notes: c.notes, tested: c.tested, newAllergens: [...ok.ev2.allergens].filter((a) => !ev.allergens.has(a)) },
       };
     }
@@ -218,15 +255,27 @@ export function verdict(r: Recipe, p: Profile, rules: Rule[] = RULES): Verdict {
   for (const id of offenders) {
     if (replace[id]) continue;
     const line = flat.find((l) => l.ref === id);
-    if (line?.optional) { replace[id] = []; notes.push(`${id} (facultatif) → à supprimer`); }
+    if (line?.optional) {
+      replace[id] = [];
+      notes.push(`${id} (facultatif) → à supprimer`);
+    }
   }
   if (Object.keys(replace).length) {
     const lines = rewrite(flat, replace);
     const ok = tryLines(lines);
     if (ok) {
       return {
-        availability: "adaptable", reasons, warnings: ok.warnings,
-        adapted: { lines, source: "generic", variantName: "Version adaptée automatiquement", notes, tested: rules.every((x) => x.status === "validated"), newAllergens: [...ok.ev2.allergens].filter((a) => !ev.allergens.has(a)) },
+        availability: "adaptable",
+        reasons,
+        warnings: ok.warnings,
+        adapted: {
+          lines,
+          source: "generic",
+          variantName: "Version adaptée automatiquement",
+          notes,
+          tested: rules.every((x) => x.status === "validated"),
+          newAllergens: [...ok.ev2.allergens].filter((a) => !ev.allergens.has(a)),
+        },
       };
     }
   }
@@ -236,8 +285,15 @@ export function verdict(r: Recipe, p: Profile, rules: Rule[] = RULES): Verdict {
 // ---------------------------------------------------------------- suggestion par ingrédients (Tome 1 §6.3)
 /** Placard de base : ne comptent jamais comme « manquants ». */
 export const STAPLES = new Set([
-  "Sel fin / gros sel / fleur de sel", "Poivre noir / blanc / vert", "Huile de tournesol / colza", "Huile d'olive vierge extra",
-  "Sucre blanc / roux / cassonade / vergeoise", "Farine de blé T55", "Farine de blé T45", "Vinaigre de cidre", "Moutarde de Dijon",
+  "Sel fin / gros sel / fleur de sel",
+  "Poivre noir / blanc / vert",
+  "Huile de tournesol / colza",
+  "Huile d'olive vierge extra",
+  "Sucre blanc / roux / cassonade / vergeoise",
+  "Farine de blé T55",
+  "Farine de blé T45",
+  "Vinaigre de cidre",
+  "Moutarde de Dijon",
 ]);
 
 /** Familles interchangeables pour la suggestion (substitution « crédit 0,8 »). */
@@ -265,27 +321,59 @@ FAMILIES.forEach((f) => f.forEach((x) => FAMILY_OF.set(x, [...new Set([...(FAMIL
 // doublons (« Gombo » / « Gombo (okra) ») qui ne se reconnaissaient pas entre eux.
 /** Produits du commerce qui remplacent une sous-recette maison : une pâte brisée achetée vaut la pâte brisée de la fiche. */
 const READY_FOR_RAW: Record<string, string[]> = {
-  pate_brisee: ["Pâte brisée / sablée (prête)"], pate_sucree: ["Pâte brisée / sablée (prête)"], pate_pizza: ["Pâte à pizza (prête)"],
-  mayonnaise: ["Mayonnaise industrielle"], mayo_safran: ["Mayonnaise industrielle"], ketchup: ["Ketchup"], kimchi_maison: ["Kimchi"],
-  harissa: ["Harissa (tube/pâte)", "Harissa"], sauce_tomate: ["Coulis / passata / tomates pelées"], pesto: ["Pesto (bocal)"],
-  bouillon_cube_maison: ["Bouillon cube volaille", "Bouillon cube bœuf", "Bouillon cube légumes"], bouillon_legumes: ["Bouillon cube légumes"],
-  pate_curry_vert: ["Pâte de curry rouge/verte/jaune", "Pâte de curry thaï (rouge, verte)"], huile_pimentee: ["Huile pimentée chinoise", "Huile pimentée maison"],
-  feuilles_brick_maison: ["Pâte filo / feuilles de brick", "Pâte de brick / ouarka"], tortillas_ble: ["Tortillas de blé"],
-  pate_tartiner_maison: ["Pâte à tartiner chocolat-noisette"], ghee_maison: ["Ghee", "Beurre clarifié / ghee"], paneer_maison: ["Paneer"],
-  garam_masala_maison: ["Garam masala"], curry_poudre_maison: ["Curry (mélange)"],
+  pate_brisee: ["Pâte brisée / sablée (prête)"],
+  pate_sucree: ["Pâte brisée / sablée (prête)"],
+  pate_pizza: ["Pâte à pizza (prête)"],
+  mayonnaise: ["Mayonnaise industrielle"],
+  mayo_safran: ["Mayonnaise industrielle"],
+  ketchup: ["Ketchup"],
+  kimchi_maison: ["Kimchi"],
+  harissa: ["Harissa (tube/pâte)", "Harissa"],
+  sauce_tomate: ["Coulis / passata / tomates pelées"],
+  pesto: ["Pesto (bocal)"],
+  bouillon_cube_maison: ["Bouillon cube volaille", "Bouillon cube bœuf", "Bouillon cube légumes"],
+  bouillon_legumes: ["Bouillon cube légumes"],
+  pate_curry_vert: ["Pâte de curry rouge/verte/jaune", "Pâte de curry thaï (rouge, verte)"],
+  huile_pimentee: ["Huile pimentée chinoise", "Huile pimentée maison"],
+  feuilles_brick_maison: ["Pâte filo / feuilles de brick", "Pâte de brick / ouarka"],
+  tortillas_ble: ["Tortillas de blé"],
+  pate_tartiner_maison: ["Pâte à tartiner chocolat-noisette"],
+  ghee_maison: ["Ghee", "Beurre clarifié / ghee"],
+  paneer_maison: ["Paneer"],
+  garam_masala_maison: ["Garam masala"],
+  curry_poudre_maison: ["Curry (mélange)"],
 };
-export const READY_FOR: Record<string, string[]> = Object.fromEntries(Object.entries(READY_FOR_RAW)
-  .filter(([id]) => RECIPE_BY_ID[id]).map(([id, refs]) => [id, refs.filter((x) => INGREDIENTS[x])]).filter(([, refs]) => refs.length));
+export const READY_FOR: Record<string, string[]> = Object.fromEntries(
+  Object.entries(READY_FOR_RAW)
+    .filter(([id]) => RECIPE_BY_ID[id])
+    .map(([id, refs]) => [id, refs.filter((x) => INGREDIENTS[x])])
+    .filter(([, refs]) => refs.length),
+);
 /** Doublons du référentiel : deux noms pour le même produit. */
-const ALIAS_GROUPS = [["Lait de coco", "Lait de coco / crème de coco"], ["Gombo", "Gombo (okra)"], ["Plantain", "Plantain (banane à cuire)"],
-  ["Igname", "Igname / taro"], ["Tofu (ferme / soyeux)", "Tofu soyeux / ferme / frit"], ["Harissa", "Harissa (tube/pâte)"],
-  ["Piment scotch bonnet", "Piment antillais / scotch bonnet"], ["Lentilles corail", "Lentilles corail (masoor)"], ["Haricots noirs", "Haricots rouges / noirs"],
-  ["Pâte de curry thaï (rouge, verte)", "Pâte de curry rouge/verte/jaune"], ["Vinaigre noir de Chine", "Vinaigre noir chinois (Chinkiang)"],
-  ["Huile pimentée chinoise", "Huile pimentée maison"], ["Curry leaves", "Feuille de curry"], ["Piments chipotle / ancho / guajillo", "Piments ancho / chipotle / guajillo / pasilla"],
-  ["Pâte de haricots jaunes/noirs", "Pâte de haricots noirs fermentés"], ["Eau de fleur d'oranger", "Eau de fleur d'oranger / de rose"],
-  ["Pâte de brick / ouarka", "Pâte filo / feuilles de brick"], ["Kéfir de fruits / de lait", "Kéfir de lait"], ["Ghee", "Beurre clarifié / ghee"]];
+const ALIAS_GROUPS = [
+  ["Lait de coco", "Lait de coco / crème de coco"],
+  ["Gombo", "Gombo (okra)"],
+  ["Plantain", "Plantain (banane à cuire)"],
+  ["Igname", "Igname / taro"],
+  ["Tofu (ferme / soyeux)", "Tofu soyeux / ferme / frit"],
+  ["Harissa", "Harissa (tube/pâte)"],
+  ["Piment scotch bonnet", "Piment antillais / scotch bonnet"],
+  ["Lentilles corail", "Lentilles corail (masoor)"],
+  ["Haricots noirs", "Haricots rouges / noirs"],
+  ["Pâte de curry thaï (rouge, verte)", "Pâte de curry rouge/verte/jaune"],
+  ["Vinaigre noir de Chine", "Vinaigre noir chinois (Chinkiang)"],
+  ["Huile pimentée chinoise", "Huile pimentée maison"],
+  ["Curry leaves", "Feuille de curry"],
+  ["Piments chipotle / ancho / guajillo", "Piments ancho / chipotle / guajillo / pasilla"],
+  ["Pâte de haricots jaunes/noirs", "Pâte de haricots noirs fermentés"],
+  ["Eau de fleur d'oranger", "Eau de fleur d'oranger / de rose"],
+  ["Pâte de brick / ouarka", "Pâte filo / feuilles de brick"],
+  ["Kéfir de fruits / de lait", "Kéfir de lait"],
+  ["Ghee", "Beurre clarifié / ghee"],
+];
 const ALIAS_OF = new Map<string, string[]>();
-ALIAS_GROUPS.map((g) => g.filter((x) => INGREDIENTS[x])).filter((g) => g.length > 1)
+ALIAS_GROUPS.map((g) => g.filter((x) => INGREDIENTS[x]))
+  .filter((g) => g.length > 1)
   .forEach((g) => g.forEach((x) => ALIAS_OF.set(x, [...new Set([...(ALIAS_OF.get(x) ?? []), ...g])])));
 /** Le produit et ses autres noms au référentiel. */
 export const aliasesOf = (ref: string): string[] => ALIAS_OF.get(ref) ?? [ref];
@@ -302,7 +390,13 @@ function flattenWith(lines: RecipeLine[], have?: ReadonlySet<string>): RecipeLin
   });
 }
 /** Ingrédients référencés d'une recette pour quelqu'un qui a `have` (les produits tout prêts remplacent leur sous-recette). */
-export const refsFor = (r: Recipe, have?: ReadonlySet<string>) => [...new Set(flattenWith(r.ingredients, have).filter((l) => l.ref).map((l) => l.ref!))];
+export const refsFor = (r: Recipe, have?: ReadonlySet<string>) => [
+  ...new Set(
+    flattenWith(r.ingredients, have)
+      .filter((l) => l.ref)
+      .map((l) => l.ref!),
+  ),
+];
 export const linesFor = (r: Recipe, have?: ReadonlySet<string>) => flattenWith(r.ingredients, have);
 
 export interface Suggestion {
@@ -330,8 +424,10 @@ export function suggest(recipes: Recipe[], haveIn: Set<string>, expiring: Set<st
       if (have.has(ref) || staples.has(ref)) got += l.weight;
       else {
         const alt = (FAMILY_OF.get(ref) ?? []).filter((x) => have.has(x));
-        if (alt.length) { got += l.weight * subCredit; substitutes[ref] = alt; }
-        else missing.push(l);
+        if (alt.length) {
+          got += l.weight * subCredit;
+          substitutes[ref] = alt;
+        } else missing.push(l);
       }
     }
     let score = (100 * got) / tot;
@@ -344,12 +440,26 @@ export function suggest(recipes: Recipe[], haveIn: Set<string>, expiring: Set<st
     const coverage = haveIn.size ? usedHave / haveIn.size : 0;
     if (haveIn.size && !usedHave) continue; // ne propose pas une recette qui n'utilise aucun des ingrédients saisis
     // « start » (audit UX 2026-10-16) : dès un seul ingrédient, les recettes qui l'utilisent et ce qu'il faut acheter en plus
-    const bucket = !missing.length ? "all" : missing.length <= 2 && !missing.some((l) => l.weight === 3) ? "almost" : score >= 60 ? "ideas" : missing.length <= maxMissing ? "start" : null;
+    const bucket = !missing.length
+      ? "all"
+      : missing.length <= 2 && !missing.some((l) => l.weight === 3)
+        ? "almost"
+        : score >= 60
+          ? "ideas"
+          : missing.length <= maxMissing
+            ? "start"
+            : null;
     if (bucket) out.push({ id: r.id, score: Math.round(score * 10) / 10, bucket, missing: [...new Set(missing.map((l) => l.ref!))], substitutes, usesExpiring, coverage });
   }
   return out.sort((a, b) => (a.bucket === "start" && b.bucket === "start" ? a.missing.length - b.missing.length : 0) || b.score - a.score || a.id.localeCompare(b.id));
 }
 
 /** Liste plate des ingrédients référencés d'une recette (sous-recettes incluses). */
-export const refsOf = (r: Recipe) => [...new Set(flatten(r.ingredients).filter((l) => l.ref).map((l) => l.ref!))];
+export const refsOf = (r: Recipe) => [
+  ...new Set(
+    flatten(r.ingredients)
+      .filter((l) => l.ref)
+      .map((l) => l.ref!),
+  ),
+];
 export { flatten };

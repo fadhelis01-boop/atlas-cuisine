@@ -19,8 +19,12 @@ const COFFEE = /\bcafe\b(?! (de|au) )|espresso|expresso/;
  *  Un vin mijoté 2 h (bourguignon) reste permis : il n'en reste presque plus. */
 export function youngAdultOnly(r: Recipe): boolean {
   if (r.cafe) return true; // café obligatoire repéré à l'export (le libellé n'est pas encore chargé au démarrage)
-  return flatten(r.ingredients).some((l) => !l.optional && ((l.ref && INGREDIENTS[l.ref]?.derivs.alcohol === "certain" && r.rest < 45)
-      || (COFFEE.test(norm(l.label).split(/\(?\bou\b/)[0]) && !/c\. a cafe/.test(norm(l.qty + " " + l.label)))));
+  return flatten(r.ingredients).some(
+    (l) =>
+      !l.optional &&
+      ((l.ref && INGREDIENTS[l.ref]?.derivs.alcohol === "certain" && r.rest < 45) ||
+        (COFFEE.test(norm(l.label).split(/\(?\bou\b/)[0]) && !/c\. a cafe/.test(norm(l.qty + " " + l.label)))),
+  );
 }
 
 /** Un plat que le plus jeune enfant du foyer peut manger (âge de la fiche, piment, plats d'adultes). */
@@ -49,7 +53,8 @@ export function householdPortions(p: Profile): number | null {
   return Math.max(1, Math.ceil(h.adults + kid - 0.01));
 }
 export const householdLabel = (p: Profile) => {
-  const h = p.household; if (!h) return "";
+  const h = p.household;
+  if (!h) return "";
   const k = h.kids.length;
   const ages = h.kids.length > 1 ? `${h.kids.slice(0, -1).join(", ")} et ${h.kids[h.kids.length - 1]}` : `${h.kids[0]}`;
   return `${h.adults} adulte${h.adults > 1 ? "s" : ""}${k ? ` et ${k} enfant${k > 1 ? "s" : ""} de ${ages} ans` : ""}`;
@@ -58,7 +63,12 @@ export const householdLabel = (p: Profile) => {
 // ---------------------------------------------------------------- équilibre de la semaine
 export type Starch = "pomme de terre" | "pâtes" | "riz" | "pain" | "semoule" | "légumineuses" | null;
 export function starchOf(r: Recipe): Starch {
-  const t = norm(`${r.title} ${r.ingredients.filter((l) => l.weight >= 2).map((l) => l.ref ?? "").join(" ")}`);
+  const t = norm(
+    `${r.title} ${r.ingredients
+      .filter((l) => l.weight >= 2)
+      .map((l) => l.ref ?? "")
+      .join(" ")}`,
+  );
   if (/lentille|pois chiche|haricots (rouges|blancs|noirs)|feves|dal\b|pois casses/.test(t)) return "légumineuses";
   if (/pomme de terre|patate|frites|puree|gnocchi|tartiflette|raclette|parmentier|rosti/.test(t)) return "pomme de terre";
   if (/pates|spaghetti|nouilles|tagliatelle|penne|lasagne|macaroni|udon|ramen|ravioli/.test(t)) return "pâtes";
@@ -68,16 +78,36 @@ export function starchOf(r: Recipe): Starch {
   return null;
 }
 /** Plats riches en fromage fondu ou en crème : une fois par semaine suffit. */
-export const isRich = (r: Recipe) => /raclette|tartiflette|fondue|aligot|croziflette|reblochon|camembert roti|mont d.or|gratin dauphinois|carbonara|cordon bleu/.test(norm(r.title));
+export const isRich = (r: Recipe) =>
+  /raclette|tartiflette|fondue|aligot|croziflette|reblochon|camembert roti|mont d.or|gratin dauphinois|carbonara|cordon bleu/.test(norm(r.title));
 export const isFish = (r: Recipe) => r.profile.includes("poisson");
 export const isVegetarian = (r: Recipe) => evaluate(r).flesh.length === 0;
 
-export interface WeekBalance { meals: number; fish: number; legumes: number; vege: number; rich: number; starches: Record<string, number>; tips: string[] }
+export interface WeekBalance {
+  meals: number;
+  fish: number;
+  legumes: number;
+  vege: number;
+  rich: number;
+  starches: Record<string, number>;
+  tips: string[];
+}
 /** Bilan nutritionnel simple d'une semaine (repères du PNNS : poisson 2 fois, légumineuses 2 fois, peu de plats très riches). */
 export function weekBalance(list: Recipe[]): WeekBalance {
   const starches: Record<string, number> = {};
-  for (const r of list) { const s = starchOf(r); if (s) starches[s] = (starches[s] ?? 0) + 1; }
-  const b = { meals: list.length, fish: list.filter(isFish).length, legumes: starches["légumineuses"] ?? 0, vege: list.filter(isVegetarian).length, rich: list.filter(isRich).length, starches, tips: [] as string[] };
+  for (const r of list) {
+    const s = starchOf(r);
+    if (s) starches[s] = (starches[s] ?? 0) + 1;
+  }
+  const b = {
+    meals: list.length,
+    fish: list.filter(isFish).length,
+    legumes: starches["légumineuses"] ?? 0,
+    vege: list.filter(isVegetarian).length,
+    rich: list.filter(isRich).length,
+    starches,
+    tips: [] as string[],
+  };
   if (b.meals >= 5) {
     if (b.fish < 2) b.tips.push("Poisson : vise 2 repas par semaine, dont un poisson gras (saumon, maquereau, sardine).");
     if (b.legumes < 2) b.tips.push("Légumineuses : 2 repas par semaine (lentilles, pois chiches, haricots), bon marché et rassasiants.");

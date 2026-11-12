@@ -18,9 +18,32 @@ const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["v
 type PackedLine = [number | string | null, number, (0 | 1)?, string?];
 const ING_KEYS = Object.keys(INGREDIENTS);
 const shortName = (ref: string | null) => (ref ? (ref.startsWith("SUB:") ? ref.slice(4).replace(/_/g, " ") : ref.split(" (")[0].split(" / ")[0]).toLowerCase() : "");
-export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map((r) => Object.assign(r, { ...DETAIL_EMPTY, ...r,
-  ingredients: r.ingredients.map(([rf, weight, opt, al]) => { const ref = typeof rf === "number" ? ING_KEYS[rf] : rf; return { qty: "", label: shortName(ref), ref, weight, optional: opt === 1,
-    ...(al ? { extra: al.split(",").filter((a) => !a.startsWith("?")), maybeExtra: al.split(",").filter((a) => a.startsWith("?")).map((a) => a.slice(1)) } : {}) }; }) }) as unknown as Recipe);
+export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map(
+  (r) =>
+    Object.assign(r, {
+      ...DETAIL_EMPTY,
+      ...r,
+      ingredients: r.ingredients.map(([rf, weight, opt, al]) => {
+        const ref = typeof rf === "number" ? ING_KEYS[rf] : rf;
+        return {
+          qty: "",
+          label: shortName(ref),
+          ref,
+          weight,
+          optional: opt === 1,
+          ...(al
+            ? {
+                extra: al.split(",").filter((a) => !a.startsWith("?")),
+                maybeExtra: al
+                  .split(",")
+                  .filter((a) => a.startsWith("?"))
+                  .map((a) => a.slice(1)),
+              }
+            : {}),
+        };
+      }),
+    }) as unknown as Recipe,
+);
 setRenames(renamesJson as Record<string, string>);
 export const RULES = rulesJson as unknown as Rule[];
 export const CATALOGUE = catalogueJson as unknown as CatalogueEntry[];
@@ -29,12 +52,25 @@ let IMP: ImportEntry[] | null = null;
 let impP: Promise<ImportEntry[]> | null = null;
 const impListeners = new Set<() => void>();
 export function loadImports(): Promise<ImportEntry[]> {
-  impP ??= import("../data/imports.json").then((m) => { IMP = m.default as unknown as ImportEntry[]; impListeners.forEach((l) => l()); return IMP; });
+  impP ??= import("../data/imports.json").then((m) => {
+    IMP = m.default as unknown as ImportEntry[];
+    impListeners.forEach((l) => l());
+    return IMP;
+  });
   return impP;
 }
 const NO_IMPORTS: ImportEntry[] = [];
 export function useImportLibrary(): ImportEntry[] {
-  return useSyncExternalStore((cb) => { impListeners.add(cb); void loadImports(); return () => { impListeners.delete(cb); }; }, () => IMP ?? NO_IMPORTS);
+  return useSyncExternalStore(
+    (cb) => {
+      impListeners.add(cb);
+      void loadImports();
+      return () => {
+        impListeners.delete(cb);
+      };
+    },
+    () => IMP ?? NO_IMPORTS,
+  );
 }
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
@@ -46,11 +82,20 @@ const detLs = new Set<() => void>();
 /** Complète les fiches avec leur détail (étapes, introduction, vidéos, conseils, matériel, conservation). */
 export function mergeDetails(d: Record<string, Detail>) {
   for (const [id, { lines, ...x }] of Object.entries(d)) {
-    const r = RECIPE_BY_ID[id]; if (!r) continue;
+    const r = RECIPE_BY_ID[id];
+    if (!r) continue;
     Object.assign(r, x);
-    lines?.forEach(([qty, label], i) => { const l = r.ingredients[i]; if (l) { l.qty = qty; l.label = label; } }); // quantités et libellés
+    lines?.forEach(([qty, label], i) => {
+      const l = r.ingredients[i];
+      if (l) {
+        l.qty = qty;
+        l.label = label;
+      }
+    }); // quantités et libellés
   }
-  DETAILS = true; markDetails(); detLs.forEach((l) => l());
+  DETAILS = true;
+  markDetails();
+  detLs.forEach((l) => l());
 }
 export function loadDetails(): Promise<void> {
   detP ??= import("../data/recipes_detail.json?raw").then((m) => mergeDetails(JSON.parse(m.default) as Record<string, Detail>));
@@ -59,14 +104,29 @@ export function loadDetails(): Promise<void> {
 export const detailsReady = () => DETAILS;
 /** Pour un écran qui lit les étapes ou les conseils : vrai quand le détail est là (il se redessine à son arrivée). */
 export function useDetails(): boolean {
-  return useSyncExternalStore((cb) => { detLs.add(cb); void loadDetails(); return () => { detLs.delete(cb); }; }, () => DETAILS);
+  return useSyncExternalStore(
+    (cb) => {
+      detLs.add(cb);
+      void loadDetails();
+      return () => {
+        detLs.delete(cb);
+      };
+    },
+    () => DETAILS,
+  );
 }
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);
 
 export const MACROS: { id: MacroId; name: string; emoji: string; icon: string; blurb: string }[] = [
   { id: "france", name: "France", emoji: "🥖", icon: "bread", blurb: "Régions, terroirs et Outre-mer : de la galette bretonne aux accras antillais." },
   { id: "europe_sud", name: "Europe du Sud", emoji: "🍅", icon: "tomato", blurb: "Italie, Espagne, Portugal, Grèce : huile d'olive, tomates, herbes." },
-  { id: "europe_nord", name: "Europe du Nord, Centrale & de l'Est", emoji: "🥨", icon: "pretzel", blurb: "Belgique, Allemagne, Scandinavie, Europe de l'Est : pains, choux, fumaisons." },
+  {
+    id: "europe_nord",
+    name: "Europe du Nord, Centrale & de l'Est",
+    emoji: "🥨",
+    icon: "pretzel",
+    blurb: "Belgique, Allemagne, Scandinavie, Europe de l'Est : pains, choux, fumaisons.",
+  },
   { id: "maghreb", name: "Maghreb & Égypte", emoji: "🍵", icon: "teapot", blurb: "Algérie, Maroc, Tunisie, Égypte : épices douces, semoule, tajines et thé à la menthe." },
   { id: "afrique", name: "Afrique subsaharienne", emoji: "🌶️", icon: "pot", blurb: "Sénégal, Mali, Côte d'Ivoire, Nigeria, Éthiopie : mafés, yassa, jollof, bissap." },
   { id: "moyen_orient", name: "Moyen-Orient & Caucase", emoji: "🧆", icon: "pomegranate", blurb: "Liban, Turquie, Iran, Syrie : mezzés, herbes fraîches, grenade et sésame." },
@@ -76,33 +136,85 @@ export const MACROS: { id: MacroId; name: string; emoji: string; icon: string; b
   { id: "amerique_nord", name: "Amérique du Nord", emoji: "🍔", icon: "burger", blurb: "États-Unis, Canada, cuisine cajun : barbecue, pancakes, comfort food." },
   { id: "amerique_latine", name: "Amérique latine & Caraïbes", emoji: "🌮", icon: "taco", blurb: "Mexique, Brésil, Pérou, Antilles : maïs, haricots, piments, agrumes." },
   { id: "oceanie", name: "Océanie", emoji: "🥝", icon: "kiwi", blurb: "Australie, Nouvelle-Zélande, Pacifique." },
-  { id: "fusion", name: "Food fusion", emoji: "🌐", icon: "fusion", blurb: "Les recettes qui mélangent plusieurs traditions ou dont l'origine ne tient pas dans un seul pays : tex-mex, pizza au butter chicken, fish & chips en feuille de riz, couscous-tiep…" },
+  {
+    id: "fusion",
+    name: "Food fusion",
+    emoji: "🌐",
+    icon: "fusion",
+    blurb:
+      "Les recettes qui mélangent plusieurs traditions ou dont l'origine ne tient pas dans un seul pays : tex-mex, pizza au butter chicken, fish & chips en feuille de riz, couscous-tiep…",
+  },
 ];
 export const MACRO_BY_ID = Object.fromEntries(MACROS.map((m) => [m.id, m])) as Record<MacroId, (typeof MACROS)[number]>;
 
 /** Rubriques des imports classés (TikTok, sites) → libellé. */
 export const IMPORT_CATS: Record<string, string> = {
-  afrique: "Afrique de l'Ouest & centrale", maghreb: "Maghreb", moyen_orient: "Moyen-Orient, Turquie & Balkans", asie: "Asie",
-  italie: "Italie", france: "France", europe: "Europe (autres)", ameriques: "Amériques & Caraïbes", street_food: "Street food maison",
-  pains: "Pains, pâtes & bases", sauces: "Sauces & marinades", fait_maison: "Fait maison sans additifs", desserts: "Desserts & pâtisserie",
-  boissons: "Boissons", techniques: "Techniques & astuces", zero_dechet: "Zéro déchet", fetes: "Fêtes", fusion: "Food fusion", a_verifier: "À vérifier", autre: "Autre",
+  afrique: "Afrique de l'Ouest & centrale",
+  maghreb: "Maghreb",
+  moyen_orient: "Moyen-Orient, Turquie & Balkans",
+  asie: "Asie",
+  italie: "Italie",
+  france: "France",
+  europe: "Europe (autres)",
+  ameriques: "Amériques & Caraïbes",
+  street_food: "Street food maison",
+  pains: "Pains, pâtes & bases",
+  sauces: "Sauces & marinades",
+  fait_maison: "Fait maison sans additifs",
+  desserts: "Desserts & pâtisserie",
+  boissons: "Boissons",
+  techniques: "Techniques & astuces",
+  zero_dechet: "Zéro déchet",
+  fetes: "Fêtes",
+  fusion: "Food fusion",
+  a_verifier: "À vérifier",
+  autre: "Autre",
 };
 
 /** Correspondance rubrique d'import → macro-région de l'atlas (pour « Dans tes imports »). */
 export const IMPORT_CAT_TO_MACRO: Record<string, MacroId[]> = {
-  afrique: ["afrique"], maghreb: ["maghreb"], moyen_orient: ["moyen_orient"], asie: ["asie_est", "asie_sud", "asie_sud_est"],
-  italie: ["europe_sud"], france: ["france"], europe: ["europe_nord", "europe_sud"], ameriques: ["amerique_nord", "amerique_latine"], fusion: ["fusion"],
+  afrique: ["afrique"],
+  maghreb: ["maghreb"],
+  moyen_orient: ["moyen_orient"],
+  asie: ["asie_est", "asie_sud", "asie_sud_est"],
+  italie: ["europe_sud"],
+  france: ["france"],
+  europe: ["europe_nord", "europe_sud"],
+  ameriques: ["amerique_nord", "amerique_latine"],
+  fusion: ["fusion"],
 };
 
 export const ALLERGENS: Record<string, string> = {
-  GL: "Gluten", CR: "Crustacés", OE: "Œufs", PO: "Poissons", AR: "Arachide", SO: "Soja", LA: "Lait", FC: "Fruits à coque",
-  CE: "Céleri", MO: "Moutarde", SE: "Sésame", SU: "Sulfites", LU: "Lupin", MM: "Mollusques",
+  GL: "Gluten",
+  CR: "Crustacés",
+  OE: "Œufs",
+  PO: "Poissons",
+  AR: "Arachide",
+  SO: "Soja",
+  LA: "Lait",
+  FC: "Fruits à coque",
+  CE: "Céleri",
+  MO: "Moutarde",
+  SE: "Sésame",
+  SU: "Sulfites",
+  LU: "Lupin",
+  MM: "Mollusques",
 };
 
 export const CATEGORY_LABEL: Record<string, string> = {
-  pains: "Pains, pâtes & bases", sauces: "Sauces maison", fetes: "Fêtes", enfants: "Enfants", zero_dechet: "Zéro déchet",
-  boissons: "Boissons", techniques: "Techniques", fusion: "Food fusion", express: "Express (20 min)", brunch: "Petit-déjeuner & brunch",
-  salade: "Salades complètes", vegetarien: "Végétarien", pique_nique: "Pique-nique",
+  pains: "Pains, pâtes & bases",
+  sauces: "Sauces maison",
+  fetes: "Fêtes",
+  enfants: "Enfants",
+  zero_dechet: "Zéro déchet",
+  boissons: "Boissons",
+  techniques: "Techniques",
+  fusion: "Food fusion",
+  express: "Express (20 min)",
+  brunch: "Petit-déjeuner & brunch",
+  salade: "Salades complètes",
+  vegetarien: "Végétarien",
+  pique_nique: "Pique-nique",
 };
 
 /** Recettes d'une entrée de l'atlas (la « Food fusion » est une rubrique transversale, pas une macro-région). */
@@ -113,7 +225,11 @@ let LEFT: Record<string, Leftover[]> | null = null;
 let leftP: Promise<Record<string, Leftover[]>> | null = null;
 const leftListeners = new Set<() => void>();
 export function loadLeftovers(): Promise<Record<string, Leftover[]>> {
-  leftP ??= import("../data/leftovers.json").then((m) => { LEFT = m.default as unknown as Record<string, Leftover[]>; leftListeners.forEach((l) => l()); return LEFT; });
+  leftP ??= import("../data/leftovers.json").then((m) => {
+    LEFT = m.default as unknown as Record<string, Leftover[]>;
+    leftListeners.forEach((l) => l());
+    return LEFT;
+  });
   return leftP;
 }
 const NO_LEFT: Leftover[] = [];
@@ -122,12 +238,34 @@ let VIDS: Record<string, Recipe["videos"]> | null = null;
 let vidP: Promise<Record<string, Recipe["videos"]>> | null = null;
 const vidListeners = new Set<() => void>();
 export function loadRecipeVideos() {
-  vidP ??= import("../data/recipe_videos.json").then((m) => { VIDS = m.default as unknown as Record<string, Recipe["videos"]>; vidListeners.forEach((l) => l()); return VIDS; });
+  vidP ??= import("../data/recipe_videos.json").then((m) => {
+    VIDS = m.default as unknown as Record<string, Recipe["videos"]>;
+    vidListeners.forEach((l) => l());
+    return VIDS;
+  });
   return vidP;
 }
 export function useRecipeVideos(r: Recipe): Recipe["videos"] {
-  return useSyncExternalStore((cb) => { vidListeners.add(cb); void loadRecipeVideos(); return () => { vidListeners.delete(cb); }; }, () => (VIDS?.[r.id] ?? r.videos));
+  return useSyncExternalStore(
+    (cb) => {
+      vidListeners.add(cb);
+      void loadRecipeVideos();
+      return () => {
+        vidListeners.delete(cb);
+      };
+    },
+    () => VIDS?.[r.id] ?? r.videos,
+  );
 }
 export function useLeftovers(id: string): Leftover[] | null {
-  return useSyncExternalStore((cb) => { leftListeners.add(cb); void loadLeftovers(); return () => { leftListeners.delete(cb); }; }, () => (LEFT ? LEFT[id] ?? NO_LEFT : null));
+  return useSyncExternalStore(
+    (cb) => {
+      leftListeners.add(cb);
+      void loadLeftovers();
+      return () => {
+        leftListeners.delete(cb);
+      };
+    },
+    () => (LEFT ? (LEFT[id] ?? NO_LEFT) : null),
+  );
 }

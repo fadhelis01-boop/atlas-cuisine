@@ -23,25 +23,55 @@ export default function Region({ id }: { id: string }) {
   const hiddenCount = all.filter((r) => verdict(r, p).availability === "hidden").length;
   const cat = CATALOGUE.filter((c) => c.macro === id);
   const regions = [...new Set(cat.map((c) => c.region))];
-  const importCats = Object.entries(IMPORT_CAT_TO_MACRO).filter(([, ms]) => ms.includes(m.id)).map(([k]) => k);
+  const importCats = Object.entries(IMPORT_CAT_TO_MACRO)
+    .filter(([, ms]) => ms.includes(m.id))
+    .map(([k]) => k);
   const imports = IMPORT_LIBRARY.filter((i) => importCats.includes(i.cat)).slice(0, id === "fusion" ? 60 : 12);
 
   return (
     <Page photo={`region/${m.id}`} title={m.name} sub={m.blurb} back="/explorer">
       <div className="chips" role="group" aria-label="Type de plat">
-        <Chip on={!role} onClick={() => setRole(null)}>Tout</Chip>
-        {Object.entries(ROLE_LABEL).filter(([k]) => all.some((r) => r.role === k)).map(([k, l]) => <Chip key={k} on={role === k} onClick={() => setRole(k)}>{l}</Chip>)}
+        <Chip on={!role} onClick={() => setRole(null)}>
+          Tout
+        </Chip>
+        {Object.entries(ROLE_LABEL)
+          .filter(([k]) => all.some((r) => r.role === k))
+          .map(([k, l]) => (
+            <Chip key={k} on={role === k} onClick={() => setRole(k)}>
+              {l}
+            </Chip>
+          ))}
       </div>
       {subs.length > 2 && (
         <div className="chips chips-scroll" role="group" aria-label="Pays ou région">
-          <Chip on={!sub} onClick={() => setSub(null)}>Partout</Chip>
-          {subs.map(([k, n]) => <Chip key={k} on={sub === k} onClick={() => setSub(sub === k ? null : k)}>{k} <span className="meta">{n}</span></Chip>)}
+          <Chip on={!sub} onClick={() => setSub(null)}>
+            Partout
+          </Chip>
+          {subs.map(([k, n]) => (
+            <Chip key={k} on={sub === k} onClick={() => setSub(sub === k ? null : k)}>
+              {k} <span className="meta">{n}</span>
+            </Chip>
+          ))}
         </div>
       )}
-      {id === "fusion" && <div className="card pad"><strong>Qu'est-ce que la food fusion ?</strong> Des plats qui marient plusieurs traditions (pizza au butter chicken, fish & chips en feuille de riz, tex-mex, sauces de snack franco-belges aux saveurs maghrébines…) ou dont l'origine ne se rattache pas à un seul pays. Chaque recette garde aussi sa cuisine principale pour la recherche par région.</div>}
+      {id === "fusion" && (
+        <div className="card pad">
+          <strong>Qu'est-ce que la food fusion ?</strong> Des plats qui marient plusieurs traditions (pizza au butter chicken, fish & chips en feuille de riz, tex-mex, sauces de
+          snack franco-belges aux saveurs maghrébines…) ou dont l'origine ne se rattache pas à un seul pays. Chaque recette garde aussi sa cuisine principale pour la recherche par
+          région.
+        </div>
+      )}
       <Section title={`Recettes (${recipes.length})`}>
-        {recipes.length ? <MoreGrid key={`${role}|${sub}|${showHidden}`} items={recipes} /> : <Empty>Aucune recette complète ne correspond encore pour cette région. Regarde le programme ci-dessous.</Empty>}
-        {hiddenCount > 0 && <button className="btn small ghost" onClick={() => setShowHidden(!showHidden)}>{showHidden ? "Masquer" : "Afficher"} les {hiddenCount} recette(s) qui ne conviennent pas à ton foyer</button>}
+        {recipes.length ? (
+          <MoreGrid key={`${role}|${sub}|${showHidden}`} items={recipes} />
+        ) : (
+          <Empty>Aucune recette complète ne correspond encore pour cette région. Regarde le programme ci-dessous.</Empty>
+        )}
+        {hiddenCount > 0 && (
+          <button className="btn small ghost" onClick={() => setShowHidden(!showHidden)}>
+            {showHidden ? "Masquer" : "Afficher"} les {hiddenCount} recette(s) qui ne conviennent pas à ton foyer
+          </button>
+        )}
       </Section>
       {imports.length > 0 && (
         <Section title="Dans tes imports" more={<a href={`#/imports?cat=${importCats[0]}`}>Tout voir →</a>}>
@@ -49,23 +79,34 @@ export default function Region({ id }: { id: string }) {
         </Section>
       )}
       {cat.length > 0 && (
-      <details className="section"><summary className="h3">Au programme : {cat.length} plats en préparation</summary>
-        <p className="small">Le catalogue du Tome 4 : fiches en cours de rédaction et de test. Les pastilles porc/alcool sont des pré-évaluations ; le moteur recalculera sur la fiche complète.</p>
-        {regions.map((rg) => (
-          <details key={rg} className="card pad">
-            <summary><strong>{rg}</strong> <span className="meta">({cat.filter((c) => c.region === rg).length})</span></summary>
-            <ul className="cat-list">
-              {cat.filter((c) => c.region === rg).map((c) => (
-                <li key={c.title}>
-                  <span>{c.title}</span>
-                  <span className="meta"> · porc {c.pork} · alcool {c.alcohol} · enfants {c.kids || "—"}{c.notes ? ` · ${c.notes}` : ""}</span>
-                </li>
-              ))}
-            </ul>
-          </details>
-        ))}
-        <p className="small">Légende : ✅ sans · 🔄 adaptable · ❌ indissociable · ~ traces ; enfants ✓✓ très adapté, ✓ adaptable.</p>
-      </details>
+        <details className="section">
+          <summary className="h3">Au programme : {cat.length} plats en préparation</summary>
+          <p className="small">
+            Le catalogue du Tome 4 : fiches en cours de rédaction et de test. Les pastilles porc/alcool sont des pré-évaluations ; le moteur recalculera sur la fiche complète.
+          </p>
+          {regions.map((rg) => (
+            <details key={rg} className="card pad">
+              <summary>
+                <strong>{rg}</strong> <span className="meta">({cat.filter((c) => c.region === rg).length})</span>
+              </summary>
+              <ul className="cat-list">
+                {cat
+                  .filter((c) => c.region === rg)
+                  .map((c) => (
+                    <li key={c.title}>
+                      <span>{c.title}</span>
+                      <span className="meta">
+                        {" "}
+                        · porc {c.pork} · alcool {c.alcohol} · enfants {c.kids || "—"}
+                        {c.notes ? ` · ${c.notes}` : ""}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
+            </details>
+          ))}
+          <p className="small">Légende : ✅ sans · 🔄 adaptable · ❌ indissociable · ~ traces ; enfants ✓✓ très adapté, ✓ adaptable.</p>
+        </details>
       )}
     </Page>
   );

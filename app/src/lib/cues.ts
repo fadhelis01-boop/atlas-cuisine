@@ -5,9 +5,14 @@ import { flatten } from "./engine";
 import { norm } from "./text";
 import type { Recipe } from "./types";
 
-const SALTY = /sauce soja|soja|nuoc|nam pla|poisson \(sauce|anchois|lardons|jambon|bacon|chorizo|pancetta|feta|parmesan|pecorino|roquefort|olive|capre|bouillon cube|cube|morue salee|halloumi|miso|kimchi|fromage|saucisse|merguez|pastrami|cornichon|citron confit/;
+const SALTY =
+  /sauce soja|soja|nuoc|nam pla|poisson \(sauce|anchois|lardons|jambon|bacon|chorizo|pancetta|feta|parmesan|pecorino|roquefort|olive|capre|bouillon cube|cube|morue salee|halloumi|miso|kimchi|fromage|saucisse|merguez|pastrami|cornichon|citron confit/;
 
-export interface SaltDose { text: string; grams: number; water: boolean }
+export interface SaltDose {
+  text: string;
+  grams: number;
+  water: boolean;
+}
 
 /** Dose de sel indicative pour une fiche salée qui n'en indique pas (null si la fiche dose déjà, ou n'est pas salée). */
 export function saltDose(r: Recipe, portions = r.portions): SaltDose | null {
@@ -19,15 +24,28 @@ export function saltDose(r: Recipe, portions = r.portions): SaltDose | null {
   const grams = Math.max(0.5, Math.round(per * portions * 2) / 2);
   const steps = norm(r.steps.join(" "));
   const water = /eau (bouillante )?salee|pates|spaghetti|nouilles|blanchi|eau bouillante/.test(steps);
-  const spoon = grams >= 4.5 ? `${Math.round(grams / 5 * 2) / 2} c. à c. rase`.replace(".5", " ½").replace(/^0 ½/, "½") : grams >= 2 ? "½ c. à c. rase" : grams >= 1 ? "2 pincées" : "1 pincée";
+  const spoon =
+    grams >= 4.5
+      ? `${Math.round((grams / 5) * 2) / 2} c. à c. rase`.replace(".5", " ½").replace(/^0 ½/, "½")
+      : grams >= 2
+        ? "½ c. à c. rase"
+        : grams >= 1
+          ? "2 pincées"
+          : "1 pincée";
   const text = `${spoon} (≈ ${String(grams).replace(".", ",")} g)${salty ? " : la recette contient déjà des ingrédients salés, goûte avant d'en ajouter" : ""}. Un tiers en début de cuisson, le reste à la fin en goûtant.`;
   return { text, grams, water };
 }
 
 // Repères visuels : ce qu'on doit voir, sentir ou entendre pour savoir que le geste est réussi.
 const CUES: [RegExp, string][] = [
-  [/fais (suer|fondre) (l |les |un |une )?(oignon|echalote|poireau)|oignons? (fondu|translucide)|fais revenir l oignon/, "Oignon prêt : translucide et souple, sans coloration (5 à 8 min à feu moyen)."],
-  [/caramelis(e|er) (les |l )?oignon|oignons? (bien )?(dore|caramelise|confit)/, "Oignons caramélisés : brun doré, fondants, 20 à 30 min à feu doux ; ajoute un fond d'eau s'ils attachent."],
+  [
+    /fais (suer|fondre) (l |les |un |une )?(oignon|echalote|poireau)|oignons? (fondu|translucide)|fais revenir l oignon/,
+    "Oignon prêt : translucide et souple, sans coloration (5 à 8 min à feu moyen).",
+  ],
+  [
+    /caramelis(e|er) (les |l )?oignon|oignons? (bien )?(dore|caramelise|confit)/,
+    "Oignons caramélisés : brun doré, fondants, 20 à 30 min à feu doux ; ajoute un fond d'eau s'ils attachent.",
+  ],
   [/fremi|fremissement/, "Frémissement : de petites bulles éclatent doucement à la surface, sans gros bouillons."],
   [/ebullition|porte a ebullition|bouillir/, "Ébullition : de grosses bulles qui continuent même quand tu remues."],
   [/reduis|reduire|reduction|nappe/, "Sauce assez réduite : elle nappe le dos d'une cuillère et ton doigt y laisse une trace nette."],
@@ -46,6 +64,10 @@ const CUES: [RegExp, string][] = [
 export function cuesIn(step: string, max = 2): string[] {
   const s = norm(step);
   const out: string[] = [];
-  for (const [rx, cue] of CUES) if (rx.test(s) && !out.includes(cue)) { out.push(cue); if (out.length >= max) break; }
+  for (const [rx, cue] of CUES)
+    if (rx.test(s) && !out.includes(cue)) {
+      out.push(cue);
+      if (out.length >= max) break;
+    }
   return out;
 }

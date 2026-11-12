@@ -46,11 +46,28 @@ const Semaine = lazy(() => import("./pages/Semaine"));
 const Partage = lazy(() => import("./pages/Partage"));
 
 // écrans qui n'ont besoin que de l'index des recettes : ils s'affichent sans attendre le détail (étapes, conseils…)
-const INDEX_ONLY = new Set(["", "explorer", "region", "profil", "biblio", "imports", "credits", "apprendre", "dictionnaire", "ingredient", "icones", "frigo", "courses", "partage"]);
+const INDEX_ONLY = new Set([
+  "",
+  "explorer",
+  "region",
+  "profil",
+  "biblio",
+  "imports",
+  "credits",
+  "apprendre",
+  "dictionnaire",
+  "ingredient",
+  "icones",
+  "frigo",
+  "courses",
+  "partage",
+]);
 
-const Loading = () => <main className="page" id="contenu" tabIndex={-1} aria-busy="true"><p className="meta">Chargement…</p></main>;
-
-
+const Loading = () => (
+  <main className="page" id="contenu" tabIndex={-1} aria-busy="true">
+    <p className="meta">Chargement…</p>
+  </main>
+);
 
 export default function App() {
   const route = useRoute();
@@ -61,11 +78,14 @@ export default function App() {
   // l'écran change aussi sans changer d'adresse (fin de l'accueil de bienvenue) : l'état d'accueil fait partie de la clé
   useScreenChange(`${onboarded ? 1 : 0}|${route.path.join("/")}?${route.query.toString()}`);
   useUsageCounter(route.path[0]);
-  useEffect(() => { recordStartup(); }, []);
+  useEffect(() => {
+    recordStartup();
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
-    if (settings.theme === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", settings.theme);
+    if (settings.theme === "auto") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", settings.theme);
     root.style.setProperty("--scale", String(settings.textScale));
     root.classList.toggle("readable", settings.readableFont);
     root.classList.toggle("big-text", settings.textScale >= 1.4);
@@ -85,65 +105,183 @@ export default function App() {
   const [p0, p1] = route.path;
   const details = useDetails();
   const needsDetails = !INDEX_ONLY.has(p0 ?? "");
-  if (p0 === "cuisine" && p1) return details ? <Suspense fallback={<Loading />}><Cook id={p1} /></Suspense> : <Loading />;
-  if (!onboarded && p0 !== "profil") return <Suspense fallback={<Loading />}><Onboarding /></Suspense>;
+  if (p0 === "cuisine" && p1)
+    return details ? (
+      <Suspense fallback={<Loading />}>
+        <Cook id={p1} />
+      </Suspense>
+    ) : (
+      <Loading />
+    );
+  if (!onboarded && p0 !== "profil")
+    return (
+      <Suspense fallback={<Loading />}>
+        <Onboarding />
+      </Suspense>
+    );
 
   let page;
   switch (p0 ?? "") {
-    case "": page = <Home />; break;
-    case "explorer": page = <Explore />; break;
-    case "region": page = <Region id={p1} />; break;
-    case "recherche": page = <Search q={route.query.get("q") ?? ""} />; break;
-    case "frigo": page = <Frigo key={route.query.get("avec") ?? ""} avec={route.query.get("avec") ?? ""} />; break;
-    case "courses": page = <Courses />; break;
-    case "recette": page = <RecipePage id={p1} q={route.query} />; break;
-    case "techniques": page = <TechniquesPage />; break;
-    case "technique": page = <TechniquePage id={p1} />; break;
-    case "pains": page = <Pains />; break;
-    case "sauces": page = <Sauces />; break;
-    case "fetes": page = <Fetes />; break;
-    case "menu": page = <MenuPage id={p1} />; break;
-    case "zero-dechet": page = <ZeroDechet />; break;
-    case "restes": page = <Restes key={route.query.get("r") ?? ""} preset={route.query.get("r")} />; break;
-    case "bien-choisir": page = <Marche />; break;
-    case "pique-nique": page = <PiqueNique />; break;
-    case "street-food": page = <StreetFood />; break;
-    case "enfants": page = <Enfants />; break;
-    case "imports": page = <Imports key={route.query.toString()} q={route.query} />; break;
-    case "biblio": page = <Biblio />; break;
-    case "profil": page = <Profil />; break;
-    case "credits": page = <Credits />; break;
-    case "apprendre": page = <Apprendre />; break;
-    case "icones": if (!import.meta.env.DEV) { page = null; break; } page = <main className="page" id="contenu" tabIndex={-1}><h1>Icônes ATLAS</h1><div className="icon-sheet">{ICON_NAMES.map((n) => <figure key={n}><Icon name={n} size={40} /><figcaption>{n}</figcaption></figure>)}</div></main>; break;
-    case "semaine": page = <Semaine key={route.query.get("ajout") ?? ""} add={route.query.get("ajout")} />; break;
-    case "partage": page = <Partage key={route.query.get("d") ?? ""} d={route.query.get("d") ?? ""} />; break;
-    case "recettes": page = <Catalogue q0={route.query.get("q") ?? ""} />; break;
-    case "dictionnaire": page = <DictionaryPage q0={route.query.get("q") ?? ""} />; break;
-    case "ingredient": page = <IngredientPage key={p1} slug={p1} />; break;
-    default: page = <main className="page" id="contenu" tabIndex={-1}><h1>Page introuvable</h1><a href={href("/")}>Retour à l'accueil</a></main>;
+    case "":
+      page = <Home />;
+      break;
+    case "explorer":
+      page = <Explore />;
+      break;
+    case "region":
+      page = <Region id={p1} />;
+      break;
+    case "recherche":
+      page = <Search q={route.query.get("q") ?? ""} />;
+      break;
+    case "frigo":
+      page = <Frigo key={route.query.get("avec") ?? ""} avec={route.query.get("avec") ?? ""} />;
+      break;
+    case "courses":
+      page = <Courses />;
+      break;
+    case "recette":
+      page = <RecipePage id={p1} q={route.query} />;
+      break;
+    case "techniques":
+      page = <TechniquesPage />;
+      break;
+    case "technique":
+      page = <TechniquePage id={p1} />;
+      break;
+    case "pains":
+      page = <Pains />;
+      break;
+    case "sauces":
+      page = <Sauces />;
+      break;
+    case "fetes":
+      page = <Fetes />;
+      break;
+    case "menu":
+      page = <MenuPage id={p1} />;
+      break;
+    case "zero-dechet":
+      page = <ZeroDechet />;
+      break;
+    case "restes":
+      page = <Restes key={route.query.get("r") ?? ""} preset={route.query.get("r")} />;
+      break;
+    case "bien-choisir":
+      page = <Marche />;
+      break;
+    case "pique-nique":
+      page = <PiqueNique />;
+      break;
+    case "street-food":
+      page = <StreetFood />;
+      break;
+    case "enfants":
+      page = <Enfants />;
+      break;
+    case "imports":
+      page = <Imports key={route.query.toString()} q={route.query} />;
+      break;
+    case "biblio":
+      page = <Biblio />;
+      break;
+    case "profil":
+      page = <Profil />;
+      break;
+    case "credits":
+      page = <Credits />;
+      break;
+    case "apprendre":
+      page = <Apprendre />;
+      break;
+    case "icones":
+      if (!import.meta.env.DEV) {
+        page = null;
+        break;
+      }
+      page = (
+        <main className="page" id="contenu" tabIndex={-1}>
+          <h1>Icônes ATLAS</h1>
+          <div className="icon-sheet">
+            {ICON_NAMES.map((n) => (
+              <figure key={n}>
+                <Icon name={n} size={40} />
+                <figcaption>{n}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </main>
+      );
+      break;
+    case "semaine":
+      page = <Semaine key={route.query.get("ajout") ?? ""} add={route.query.get("ajout")} />;
+      break;
+    case "partage":
+      page = <Partage key={route.query.get("d") ?? ""} d={route.query.get("d") ?? ""} />;
+      break;
+    case "recettes":
+      page = <Catalogue q0={route.query.get("q") ?? ""} />;
+      break;
+    case "dictionnaire":
+      page = <DictionaryPage q0={route.query.get("q") ?? ""} />;
+      break;
+    case "ingredient":
+      page = <IngredientPage key={p1} slug={p1} />;
+      break;
+    default:
+      page = (
+        <main className="page" id="contenu" tabIndex={-1}>
+          <h1>Page introuvable</h1>
+          <a href={href("/")}>Retour à l'accueil</a>
+        </main>
+      );
   }
   const active = tabOf(p0); // fiche recette, mode cuisine : aucun onglet
   const onProfile = PROFILE_MATCH.includes(p0 ?? "");
 
   return (
     <div className="shell">
-      <a className="skip" href="#contenu" onClick={(e) => { e.preventDefault(); document.getElementById("contenu")?.focus(); }}>Aller au contenu</a>
+      <a
+        className="skip"
+        href="#contenu"
+        onClick={(e) => {
+          e.preventDefault();
+          document.getElementById("contenu")?.focus();
+        }}
+      >
+        Aller au contenu
+      </a>
       <nav className="nav" aria-label="Navigation principale">
-        <a className="brand" href={href("/")}><img src="./icons/icon.svg" alt="" width="32" height="32" /> <span>ATLAS</span></a>
+        <a className="brand" href={href("/")}>
+          <img src="./icons/icon.svg" alt="" width="32" height="32" /> <span>ATLAS</span>
+        </a>
         {TABS.map((t) => (
           <a key={t.to} href={href(t.to)} className={`tab ${active === t ? "on" : ""}`} aria-current={active === t ? "page" : undefined}>
-            <span className="tab-ic" aria-hidden="true"><Icon name={t.icon} size={26} /></span><span className="tab-lb">{t.label}</span>
+            <span className="tab-ic" aria-hidden="true">
+              <Icon name={t.icon} size={26} />
+            </span>
+            <span className="tab-lb">{t.label}</span>
           </a>
         ))}
         <a href={href("/profil")} className={`tab tab-profile ${onProfile ? "on" : ""}`} aria-current={onProfile ? "page" : undefined} aria-label="Profil et réglages">
-          <span className="tab-ic" aria-hidden="true"><Icon name="chef" size={26} /></span><span className="tab-lb">Profil</span>
+          <span className="tab-ic" aria-hidden="true">
+            <Icon name="chef" size={26} />
+          </span>
+          <span className="tab-lb">Profil</span>
         </a>
       </nav>
       <div className="content">
         {pwa.updateReady && (
-          <div className="update" role="status">Une nouvelle version d'ATLAS est prête. <button className="btn small" onClick={applyUpdate}>Mettre à jour</button></div>
+          <div className="update" role="status">
+            Une nouvelle version d'ATLAS est prête.{" "}
+            <button className="btn small" onClick={applyUpdate}>
+              Mettre à jour
+            </button>
+          </div>
         )}
-        <ErrorBoundary resetKey={route.path.join("/")}><Suspense fallback={<Loading />}>{needsDetails && !details ? <Loading /> : page}</Suspense></ErrorBoundary>
+        <ErrorBoundary resetKey={route.path.join("/")}>
+          <Suspense fallback={<Loading />}>{needsDetails && !details ? <Loading /> : page}</Suspense>
+        </ErrorBoundary>
       </div>
       <TimerDock />
       <Toasts />

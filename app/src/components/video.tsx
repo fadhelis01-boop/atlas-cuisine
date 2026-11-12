@@ -9,7 +9,13 @@ import { safeHref, safeUrl } from "../lib/safe";
 // Rien n'est chargé chez TikTok ou YouTube avant que l'on appuie sur ▶ (RGPD, Tome 1 §19.1).
 // Les carrousels photo TikTok et les liens courts (vm.tiktok.com) ne sont pas intégrables : ils s'ouvrent dans l'application d'origine.
 
-export interface PlayableVideo { title: string; url: string; embed: string; source: string; author?: string }
+export interface PlayableVideo {
+  title: string;
+  url: string;
+  embed: string;
+  source: string;
+  author?: string;
+}
 
 /** « tt:<id> », « yt:<id> » ou « ys:<id> » (YouTube Short, vertical) à partir d'un lien, ou chaîne vide si la vidéo n'est pas intégrable. */
 export function embedOf(url: string): string {
@@ -33,11 +39,26 @@ function playerSrc(embed: string): string {
 let current: PlayableVideo | null = null;
 const ls = new Set<() => void>();
 export function playVideo(v: PlayableVideo) {
-  if (!v.embed) { const u = safeUrl(v.url); if (u) window.open(u, "_blank", "noopener"); return; }
-  current = v; ls.forEach((l) => l());
+  if (!v.embed) {
+    const u = safeUrl(v.url);
+    if (u) window.open(u, "_blank", "noopener");
+    return;
+  }
+  current = v;
+  ls.forEach((l) => l());
 }
-export function closeVideo() { current = null; ls.forEach((l) => l()); }
-const useCurrent = () => useSyncExternalStore((cb) => { ls.add(cb); return () => ls.delete(cb); }, () => current);
+export function closeVideo() {
+  current = null;
+  ls.forEach((l) => l());
+}
+const useCurrent = () =>
+  useSyncExternalStore(
+    (cb) => {
+      ls.add(cb);
+      return () => ls.delete(cb);
+    },
+    () => current,
+  );
 
 /** Lecteur en surimpression, monté une fois dans l'application et dans le mode cuisine. */
 export function VideoHost() {
@@ -57,12 +78,24 @@ export function VideoHost() {
       <div className={`video-box ${vertical ? "vertical" : ""}`} onClick={(e) => e.stopPropagation()}>
         <div className="video-head">
           <span className="video-title">{v.title}</span>
-          <button ref={close} className="btn small ghost" onClick={closeVideo} aria-label="Fermer la vidéo"><Icon name="close" size={18} /></button>
+          <button ref={close} className="btn small ghost" onClick={closeVideo} aria-label="Fermer la vidéo">
+            <Icon name="close" size={18} />
+          </button>
         </div>
-        <iframe src={playerSrc(v.embed)} title={v.title} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+        <iframe
+          src={playerSrc(v.embed)}
+          title={v.title}
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
+        />
         <p className="small video-foot">
-          {v.source}{v.author && v.source === "TikTok" ? ` · @${v.author}` : v.author && v.author !== v.source ? ` · ${v.author}` : ""} · vidéo de son auteur·e, lue depuis {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}.{" "}
-          <a href={safeHref(v.url)} target="_blank" rel="noopener noreferrer">Ouvrir dans {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}</a>
+          {v.source}
+          {v.author && v.source === "TikTok" ? ` · @${v.author}` : v.author && v.author !== v.source ? ` · ${v.author}` : ""} · vidéo de son auteur·e, lue depuis{" "}
+          {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}.{" "}
+          <a href={safeHref(v.url)} target="_blank" rel="noopener noreferrer">
+            Ouvrir dans {v.embed.startsWith("tt:") ? "TikTok" : "YouTube"}
+          </a>
         </p>
       </div>
     </div>
@@ -73,7 +106,8 @@ export function VideoHost() {
 export function PlayButton({ v, label }: { v: PlayableVideo; label?: string }) {
   return (
     <button className="play" onClick={() => playVideo(v)} aria-label={`${v.embed ? "Lire" : "Ouvrir"} la vidéo : ${v.title}`}>
-      {v.embed ? "▶" : "↗"}{label ? ` ${label}` : ""}
+      {v.embed ? "▶" : "↗"}
+      {label ? ` ${label}` : ""}
     </button>
   );
 }
@@ -85,8 +119,20 @@ export function ImportRow({ i, extra }: { i: ImportEntry; extra?: string }) {
     <li className="import-row">
       <PlayButton v={v} />
       <span>
-        <a href={safeHref(i.url)} target="_blank" rel="noopener noreferrer">{i.title}</a>{" "}
-        <span className="meta">· {i.source === "TikTok" ? `@${i.author}` : i.source === "YouTube" ? `▶ ${i.author}` : i.source}{i.lang ? ` · ${{ en: "🇬🇧 en anglais", de: "🇩🇪 en allemand", nl: "🇳🇱 en néerlandais" }[i.lang]}` : ""}{i.embed?.startsWith("ys:") ? " · short" : ""}{i.sub ? ` · ${i.sub}` : ""}{i.pork ? " · 🐖" : ""}{i.alcohol ? " · 🍷" : ""}{i.fete ? " · 🎉" : ""}{i.photo ? " · photos" : ""}{extra ? ` · ${extra}` : ""}</span>
+        <a href={safeHref(i.url)} target="_blank" rel="noopener noreferrer">
+          {i.title}
+        </a>{" "}
+        <span className="meta">
+          · {i.source === "TikTok" ? `@${i.author}` : i.source === "YouTube" ? `▶ ${i.author}` : i.source}
+          {i.lang ? ` · ${{ en: "🇬🇧 en anglais", de: "🇩🇪 en allemand", nl: "🇳🇱 en néerlandais" }[i.lang]}` : ""}
+          {i.embed?.startsWith("ys:") ? " · short" : ""}
+          {i.sub ? ` · ${i.sub}` : ""}
+          {i.pork ? " · 🐖" : ""}
+          {i.alcohol ? " · 🍷" : ""}
+          {i.fete ? " · 🎉" : ""}
+          {i.photo ? " · photos" : ""}
+          {extra ? ` · ${extra}` : ""}
+        </span>
       </span>
     </li>
   );
