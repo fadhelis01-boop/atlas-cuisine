@@ -3483,5 +3483,193 @@
  "recette/panzerotti": {
   "i": 1,
   "from": "v10/recette/panzerotti"
+ },
+ "recette/steak_au_poivre": {
+  "i": 3,
+  "from": "v11/recette/steak_au_poivre"
+ },
+ "recette/canard_orange": {
+  "i": 3,
+  "from": "v11/recette/canard_orange"
+ },
+ "recette/tete_de_veau_gribiche": {
+  "i": 3,
+  "from": "v11/recette/tete_de_veau_gribiche"
+ },
+ "recette/pate_en_croute": {
+  "i": 1,
+  "from": "v11/recette/pate_en_croute"
+ },
+ "recette/foie_gras_mi_cuit": {
+  "i": 1,
+  "from": "v11/recette/foie_gras_mi_cuit"
+ },
+ "recette/waterzoi_poulet": {
+  "i": 6,
+  "from": "v11/recette/waterzoi_poulet"
+ },
+ "recette/andouillette_moutarde": {
+  "i": 5,
+  "from": "v11/recette/andouillette_moutarde"
+ },
+ "recette/boudin_noir_pommes": {
+  "i": 2,
+  "from": "v11/recette/boudin_noir_pommes"
+ },
+ "recette/pommes_dauphine": {
+  "i": 0,
+  "from": "v11/recette/pommes_dauphine"
+ },
+ "recette/pommes_boulangere": {
+  "i": 0,
+  "from": "v11/recette/pommes_boulangere"
+ },
+ "recette/vichyssoise": {
+  "i": 7,
+  "from": "v11/recette/vichyssoise"
+ },
+ "recette/cuisses_grenouilles_persillade": {
+  "i": 2,
+  "from": "v11/recette/cuisses_grenouilles_persillade"
+ },
+ "recette/cervelle_de_canut": {
+  "i": 1,
+  "from": "v11/recette/cervelle_de_canut"
+ },
+ "recette/ris_de_veau_morilles": {
+  "i": 4,
+  "from": "v11/recette/ris_de_veau_morilles"
+ },
+ "recette/rognons_veau_moutarde": {
+  "i": 3,
+  "from": "v11/recette/rognons_veau_moutarde"
+ },
+ "recette/foie_veau_persillade": {
+  "i": 4,
+  "from": "v11/recette/foie_veau_persillade"
+ },
+ "recette/civet_chevreuil": {
+  "i": 4,
+  "from": "v11/recette/civet_chevreuil"
+ },
+ "recette/pintade_choux": {
+  "i": 5,
+  "from": "v11/recette/pintade_choux"
+ },
+ "recette/fond_blanc_volaille": {
+  "i": 0,
+  "from": "v11/recette/fond_blanc_volaille"
+ },
+ "recette/fumet_poisson": {
+  "i": 0,
+  "from": "v11/recette/fumet_poisson"
+ },
+ "recette/sauce_mornay": {
+  "i": 1,
+  "from": "v11/recette/sauce_mornay"
+ },
+ "recette/sauce_bordelaise": {
+  "i": 3,
+  "from": "v11/recette/sauce_bordelaise"
+ },
+ "recette/sauce_ravigote": {
+  "i": 0,
+  "from": "v11/recette/sauce_ravigote"
+ },
+ "recette/sauce_soubise": {
+  "i": 2,
+  "from": "v11/recette/sauce_soubise"
+ },
+ "recette/sauce_morilles": {
+  "i": 0,
+  "from": "v11/recette/sauce_morilles"
+ },
+ "recette/truite_amandes": {
+  "i": 1,
+  "from": "v11/recette/truite_amandes"
+ },
+ "recette/thon_basquaise": {
+  "i": 0,
+  "from": "v11/recette/thon_basquaise"
+ },
+ "recette/langoustines_mayonnaise": {
+  "i": 1,
+  "from": "v11/recette/langoustines_mayonnaise"
+ },
+ "recette/homard_grille_beurre": {
+  "i": 4,
+  "from": "v11/recette/homard_grille_beurre"
+ },
+ "recette/tourteau_mayonnaise": {
+  "i": 3,
+  "from": "v11/recette/tourteau_mayonnaise"
+ },
+ "recette/encornets_persillade": {
+  "i": 7,
+  "from": "v11/recette/encornets_persillade"
+ },
+ "recette/pate_a_choux": {
+  "i": 0,
+  "from": "v11/recette/pate_a_choux"
+ },
+ "recette/religieuse_chocolat": {
+  "i": 0,
+  "from": "v11/recette/religieuse_chocolat"
+ },
+ "recette/saint_honore": {
+  "i": 2,
+  "from": "v11/recette/saint_honore"
+ },
+ "recette/opera": {
+  "i": 1,
+  "from": "v11/recette/opera"
+ },
+ "recette/peche_melba": {
+  "i": 1,
+  "from": "v11/recette/peche_melba"
+ },
+ "recette/succes_praline": {
+  "i": 1,
+  "from": "v11/recette/succes_praline"
+ },
+ "recette/merveilleux": {
+  "i": 0,
+  "from": "v11/recette/merveilleux"
+ },
+ "recette/nonnettes_dijon": {
+  "i": 0,
+  "from": "v11/recette/nonnettes_dijon"
+ },
+ "recette/calissons_aix": {
+  "i": 6,
+  "from": "v11/recette/calissons_aix"
+ },
+ "recette/pates_de_fruits": {
+  "i": 2,
+  "from": "v11/recette/pates_de_fruits"
+ },
+ "recette/pain_aux_raisins": {
+  "i": 2,
+  "from": "v11/recette/pain_aux_raisins"
+ },
+ "recette/pain_viennois": {
+  "i": 1,
+  "from": "v11/recette/pain_viennois"
+ },
+ "recette/pralines_roses": {
+  "i": 1,
+  "from": "v11/recette/pralines_roses"
+ },
+ "recette/civet_lievre": {
+  "i": 3,
+  "from": "v11/recette/civet_lievre"
+ },
+ "recette/daube_sanglier": {
+  "i": 0,
+  "from": "v11/recette/daube_sanglier"
+ },
+ "recette/pithiviers_amandes": {
+  "i": 3,
+  "from": "v11/recette/pithiviers_amandes"
  }
 }

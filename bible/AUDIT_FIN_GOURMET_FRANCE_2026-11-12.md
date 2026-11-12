@@ -37,5 +37,5 @@ mesuré sur les données exportées (`app/src/data/recipes.json`), puis corrigé
 - 64 fiches françaises du quotidien ou des enfants ont encore moins de 4 étapes. Elles sont lisibles, mais pas au niveau étalon. Il faut les reprendre par lots, en commençant par les plats les plus proposés.
 - La plupart des fiches sans astuce restent sans astuce.
 - Le lièvre à la royale et le plateau de fruits de mer (un assemblage plus qu'une recette) ne sont pas en fiche.
-- Les nouvelles fiches reçoivent leurs photos libres dans une passe séparée.
+- Photos libres : 47 des 63 nouvelles fiches illustrées (`illustrations/collect_v11.py`, `choix_v11.txt`). Restent sans photo juste : pommes Anna, artichauts, pigeon, fond brun, court-bouillon, Choron, poivrade, raie, maquereaux au vin blanc, bulots, bavarois, vacherin, puits d'amour, faisan, sauces diable et charcutière.
 - Toutes ces fiches restent à tester en cuisine.
