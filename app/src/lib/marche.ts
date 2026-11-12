@@ -35,7 +35,8 @@ export const RAYONS: Rayon[] = [
         tip: "Petit truc de primeur : le pédoncule s'enlève et le dessous est vert = mûr à point ; brun = trop mûr." },
     ] },
   { id: "fruits", title: "Fruits", icon: "strawberry", who: "le maraîcher",
-    intro: "Certains fruits continuent de mûrir après la cueillette (banane, avocat, kiwi, mangue, poire, pêche, abricot, tomate), d'autres jamais (fraise, cerise, raisin, agrumes, ananas, melon, pastèque) : ceux-là s'achètent prêts à manger.",
+    intro: "Certains fruits continuent de mûrir après la cueillette (banane, avocat, kiwi, mangue, poire, pêche, abricot, tomate), d'autres jamais " +
+      "(fraise, cerise, raisin, agrumes, ananas, melon, pastèque) : ceux-là s'achètent prêts à manger.",
     items: [
       { name: "Fraises, cerises, petits fruits", refs: ["Fraise", "Cerise / griotte", "Framboise / mûre / myrtille"],
         good: "Brillants, parfumés à un mètre, colorés jusqu'au pédoncule ; queue verte et fraîche pour les cerises.",
@@ -47,11 +48,14 @@ export const RAYONS: Rayon[] = [
       { name: "Pommes, poires", refs: ["Pomme", "Poire"], good: "Pommes fermes et parfumées ; poire qui cède un peu près de la queue.",
         avoid: "Meurtrissures étendues, chair farineuse (pomme) ou blette au cœur (poire)." },
       { name: "Bananes, mangues, ananas", refs: ["Banane", "Mangue", "Ananas"],
-        good: "Banane jaune tachetée pour manger, jaune-vert pour dans 3 jours ; mangue qui cède sous le doigt et sent bon au pédoncule ; ananas parfumé à la base, une feuille du centre s'arrache facilement.",
+        good: "Banane jaune tachetée pour manger, jaune-vert pour dans 3 jours ; mangue qui cède sous le doigt et sent bon au pédoncule ; ananas parfumé à " +
+          "la base, une feuille du centre s'arrache facilement.",
         avoid: "Ananas qui sent le fermenté, mangue ridée." },
     ] },
   { id: "viandes", title: "Viandes", icon: "steak", who: "le boucher",
-    intro: "Le bon morceau dépend de la cuisson : les morceaux nobles (filet, entrecôte, rumsteck) se saisissent vite ; les morceaux riches en collagène (paleron, joue, jarret, macreuse) doivent mijoter longtemps et deviennent fondants. Se tromper de morceau, c'est la première cause de viande dure.",
+    intro: "Le bon morceau dépend de la cuisson : les morceaux nobles (filet, entrecôte, rumsteck) se saisissent vite ; les morceaux riches en collagène " +
+      "(paleron, joue, jarret, macreuse) doivent mijoter longtemps et deviennent fondants. Se tromper de morceau, c'est la première cause de viande " +
+      "dure.",
     items: [
       { name: "Bœuf", refs: ["Rumsteck", "Entrecôte", "Bavette", "Côte de bœuf", "Paleron", "Joue de bœuf", "Jarret de bœuf", "Macreuse / gîte"],
         good: "Rouge sombre à rouge vif, persillée de fins filets de gras blanc crème (le goût et le moelleux) ; maturée quelques semaines pour les pièces à griller.",
@@ -71,7 +75,8 @@ export const RAYONS: Rayon[] = [
         tip: "Tripes : demande-les « blanchies », le long nettoyage est fait." },
     ] },
   { id: "poissons", title: "Poissons", icon: "fish", who: "le poissonnier",
-    intro: "Un poisson frais sent la mer, l'iode, l'algue : jamais « le poisson ». C'est le produit le plus fragile de ta liste de courses : il s'achète en dernier, voyage au frais et se cuisine dans les 24 heures.",
+    intro: "Un poisson frais sent la mer, l'iode, l'algue : jamais « le poisson ». C'est le produit le plus fragile de ta liste de courses : il s'achète " +
+      "en dernier, voyage au frais et se cuisine dans les 24 heures.",
     items: [
       { name: "Poisson entier", refs: ["Dorade", "Bar / loup", "Maquereau", "Sardine (fraîche / conserve)"],
         good: "Œil bombé, noir et brillant ; ouïes rouge vif et humides ; peau brillante, écailles bien accrochées ; chair ferme : le doigt ne laisse pas de trace.",
@@ -114,11 +119,14 @@ export const RATTRAPAGES: Rattrapage[] = [
     jeter: "Une viande dure n'est pas dangereuse ; une viande qui sent l'aigre, colle ou a dépassé sa date l'est : voir « Viande ou volaille à la date limite ».",
     recipes: ["hachis_parmentier", "marinade_tandoori"] },
   { id: "poisson-moins-frais", title: "Poisson pas de première fraîcheur",
-    ok: "Seulement s'il sent encore neutre ou légèrement marin, sans odeur d'ammoniaque, et avant sa date limite : sa chair est un peu molle, il a perdu son éclat. Il reste sain, mais n'est plus bon cru.",
+    ok: "Seulement s'il sent encore neutre ou légèrement marin, sans odeur d'ammoniaque, et avant sa date limite : sa chair est un peu molle, il a " +
+      "perdu son éclat. Il reste sain, mais n'est plus bon cru.",
     how: ["Plus de cru ni de cuisson rosée (tartare, ceviche, sushi, mi-cuit) : il se cuit à cœur.",
       "Cuissons qui pardonnent : en sauce (curry, tajine, à la tomate), en court-bouillon, en papillote avec citron et herbes.",
       "Émietté après cuisson : croquettes, brandade, parmentier, rillettes.", "Un bain de 10 min dans du lait ou de l'eau citronnée raffermit la chair et atténue le goût fort."],
-    jeter: "Odeur d'ammoniaque ou de « poisson » marquée, chair visqueuse ou qui reste creusée sous le doigt, œil enfoncé gris, ouïes brunes, date dépassée. Thon, maquereau, sardine, anchois mal conservés peuvent contenir de l'histamine : la cuisson ne la détruit pas. Un goût piquant ou poivré sur la langue : on recrache et on jette. En cas de doute, on ne rattrape pas un poisson.",
+    jeter: "Odeur d'ammoniaque ou de « poisson » marquée, chair visqueuse ou qui reste creusée sous le doigt, œil enfoncé gris, ouïes brunes, date " +
+      "dépassée. Thon, maquereau, sardine, anchois mal conservés peuvent contenir de l'histamine : la cuisson ne la détruit pas. Un goût piquant ou " +
+      "poivré sur la langue : on recrache et on jette. En cas de doute, on ne rattrape pas un poisson.",
     recipes: ["croquettes_poisson", "brandade"] },
   { id: "viande-douteuse", title: "Viande ou volaille à la date limite", ok: "La date limite de consommation (DLC, « à consommer jusqu'au ») est une limite de sécurité, pas une suggestion.",
     how: ["Avant la date, viande à l'odeur neutre : cuis-la aujourd'hui, à cœur, ou congèle-la tout de suite (le jour de la date au plus tard).",
