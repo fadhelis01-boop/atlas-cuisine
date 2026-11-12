@@ -214,3 +214,23 @@ console.log("   TikTok Asie : fiches sans vidéo créditée", tiktok126.join(","
   "· carte : sans origine", sansCarte126.length, "· régions entières", larges126, "· régions entre parenthèses", regParen126.join(",") || 0, "· points", pt126);
 check("126 TikTok Asie (Morgane, Ryuji, Lynja) en fiches et vidéos ; carte d'origine pour chaque fiche, régions rangées",
   !tiktok126.length && !attach126.length && !sansCarte126.length && larges126 <= 10 && !regParen126.length && pt126);
+
+// 127 audit « cuisinier expert de la street food » (12/11/2026, bible/AUDIT_STREET_FOOD_2026-11-12.md) : une vraie rubrique
+// (familles choisies à la main, soirées, gestes, sécurité), les classiques de rue du monde présents, chacun avec la vidéo
+// de recette la plus aimée de TikTok ; mini-carte d'origine sur les vignettes.
+import { FAMILLES as F127, SOIREES as S127, STREET_IDS as SID127 } from "../src/lib/streetfood";
+import { readFileSync as rf127 } from "node:fs";
+const SF127 = ["esquites", "tlayuda", "sopes", "hot_dog_maison", "philly_cheesesteak", "anticuchos", "choripan", "coxinha", "acaraje", "salchipapa",
+  "doubles_trinidad", "jamaican_patty", "galette_saucisse_volaille", "panisse", "suppli", "piadina", "langos", "zapiekanka", "trdelnik", "sabich",
+  "kumpir", "tantuni", "balik_ekmek", "bambalouni", "mahjouba", "rolex_ouganda", "akara_niebe", "jianbing", "eomuk_tang", "martabak_manis",
+  "roujiamo_boeuf", "egg_waffle", "dan_bing"];
+const missing127 = [...SID127].filter((id) => !RECIPE_BY_ID[id]);
+const petites127 = F127.filter((f) => f.ids.length < 10).map((f) => f.id);
+const soirees127 = S127.flatMap((s) => s.ids).filter((id) => !RECIPE_BY_ID[id]);
+const sansVideo127 = SF127.filter((id) => !RECIPE_BY_ID[id] || !(V126[id] ?? RECIPE_BY_ID[id].videos).some((v) => /tiktok\.com\/@/.test(v.url)));
+const porc127 = SF127.filter((id) => RECIPE_BY_ID[id] && ev124(RECIPE_BY_ID[id]).pork !== "ok");
+const cardMap127 = /CardMap/.test(rf127("src/components/ui.tsx", "utf8"));
+console.log("   street food : fiches", SID127.size, "· absentes", missing127.join(",") || 0, "· familles maigres", petites127.join(",") || 0, "· soirées cassées", soirees127.join(",") || 0,
+  "· classiques sans vidéo", sansVideo127.join(",") || 0, "· avec porc", porc127.join(",") || 0, "· carte sur vignettes", cardMap127);
+check("127 street food : rubrique à familles (≥ 130 fiches), classiques du monde présents avec leur vidéo TikTok, sans porc ; mini-carte sur les vignettes",
+  SID127.size >= 130 && !missing127.length && !petites127.length && !soirees127.length && !sansVideo127.length && !porc127.length && cardMap127);

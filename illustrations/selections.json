@@ -3915,5 +3915,137 @@
  "recette/maquereaux_vin_blanc": {
   "i": 0,
   "from": "v15/recette/maquereaux_vin_blanc"
+ },
+ "recette/esquites": {
+  "i": 4,
+  "from": "v16/recette/esquites"
+ },
+ "recette/tlayuda": {
+  "i": 0,
+  "from": "v16/recette/tlayuda"
+ },
+ "recette/sopes": {
+  "i": 2,
+  "from": "v16/recette/sopes"
+ },
+ "recette/hot_dog_maison": {
+  "i": 4,
+  "from": "v16/recette/hot_dog_maison"
+ },
+ "recette/philly_cheesesteak": {
+  "i": 1,
+  "from": "v16/recette/philly_cheesesteak"
+ },
+ "recette/anticuchos": {
+  "i": 1,
+  "from": "v16/recette/anticuchos"
+ },
+ "recette/choripan": {
+  "i": 7,
+  "from": "v16/recette/choripan"
+ },
+ "recette/coxinha": {
+  "i": 7,
+  "from": "v16/recette/coxinha"
+ },
+ "recette/acaraje": {
+  "i": 5,
+  "from": "v16/recette/acaraje"
+ },
+ "recette/salchipapa": {
+  "i": 1,
+  "from": "v16/recette/salchipapa"
+ },
+ "recette/doubles_trinidad": {
+  "i": 0,
+  "from": "v16/recette/doubles_trinidad"
+ },
+ "recette/jamaican_patty": {
+  "i": 0,
+  "from": "v16/recette/jamaican_patty"
+ },
+ "recette/galette_saucisse_volaille": {
+  "i": 5,
+  "from": "v16/recette/galette_saucisse_volaille"
+ },
+ "recette/panisse": {
+  "i": 1,
+  "from": "v16/recette/panisse"
+ },
+ "recette/suppli": {
+  "i": 3,
+  "from": "v16/recette/suppli"
+ },
+ "recette/piadina": {
+  "i": 1,
+  "from": "v16/recette/piadina"
+ },
+ "recette/langos": {
+  "i": 2,
+  "from": "v16/recette/langos"
+ },
+ "recette/zapiekanka": {
+  "i": 0,
+  "from": "v16/recette/zapiekanka"
+ },
+ "recette/trdelnik": {
+  "i": 4,
+  "from": "v16/recette/trdelnik"
+ },
+ "recette/sabich": {
+  "i": 0,
+  "from": "v16/recette/sabich"
+ },
+ "recette/kumpir": {
+  "i": 0,
+  "from": "v16/recette/kumpir"
+ },
+ "recette/tantuni": {
+  "i": 0,
+  "from": "v16/recette/tantuni"
+ },
+ "recette/balik_ekmek": {
+  "i": 1,
+  "from": "v16/recette/balik_ekmek"
+ },
+ "recette/bambalouni": {
+  "i": 1,
+  "from": "v16/recette/bambalouni"
+ },
+ "recette/mahjouba": {
+  "i": 1,
+  "from": "v16/recette/mahjouba"
+ },
+ "recette/rolex_ouganda": {
+  "i": 4,
+  "from": "v16/recette/rolex_ouganda"
+ },
+ "recette/akara_niebe": {
+  "i": 4,
+  "from": "v16/recette/akara_niebe"
+ },
+ "recette/jianbing": {
+  "i": 3,
+  "from": "v16/recette/jianbing"
+ },
+ "recette/eomuk_tang": {
+  "i": 5,
+  "from": "v16/recette/eomuk_tang"
+ },
+ "recette/martabak_manis": {
+  "i": 6,
+  "from": "v16/recette/martabak_manis"
+ },
+ "recette/roujiamo_boeuf": {
+  "i": 2,
+  "from": "v16/recette/roujiamo_boeuf"
+ },
+ "recette/egg_waffle": {
+  "i": 1,
+  "from": "v16/recette/egg_waffle"
+ },
+ "recette/dan_bing": {
+  "i": 1,
+  "from": "v16/recette/dan_bing"
  }
 }

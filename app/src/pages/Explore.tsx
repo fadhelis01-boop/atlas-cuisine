@@ -6,7 +6,7 @@ import { Page, Section } from "../components/ui";
 import { Photo, photoOf } from "../components/photo";
 
 const TILE_PHOTO: Record<string, string> = { "/explorer": "rubrique/explorer", "/frigo": "rubrique/frigo", "/enfants": "rubrique/enfants", "/pains": "rubrique/pains",
-  "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports", "/pique-nique": "rubrique/pique_nique" };
+  "/sauces": "rubrique/sauces", "/techniques": "rubrique/techniques", "/fetes": "rubrique/fetes", "/zero-dechet": "rubrique/zero_dechet", "/imports": "rubrique/imports", "/pique-nique": "rubrique/pique_nique", "/street-food": "recette/tacos_al_pastor" };
 
 const CATS = [
   { to: "/recettes", icon: "search", label: "Toutes les recettes, avec filtres", sub: "type, temps, niveau, budget, occasion" },
@@ -17,6 +17,7 @@ const CATS = [
   { to: "/sauces", icon: "sauce", label: "Sauces maison", sub: "mayo, algérienne, samouraï, frites…" },
   { to: "/enfants", icon: "kid", label: "Recettes pour enfants", sub: "par âge, avec sécurité" },
   { to: "/fetes", icon: "cake", label: "Repas de fêtes", sub: "calendrier, menus, boissons" },
+  { to: "/street-food", icon: "taco", label: "Street food", sub: "sandwichs, galettes, fritures, brochettes, douceurs des marchés" },
   { to: "/pique-nique", icon: "leaf", label: "Pique-nique et gamelle", sub: "enfants, grands, du monde, anti-gaspi" },
   { to: "/restes", icon: "plate", label: "Cuisine des restes", sub: "entrée, plat, sandwich, dessert ou menu complet" },
   { to: "/bien-choisir", icon: "cart", label: "Bien choisir, bien rattraper", sub: "maraîcher, boucher, poissonnier ; trop mûr, viande dure" },

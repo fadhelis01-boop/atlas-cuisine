@@ -11290,6 +11290,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/acaraje": {
+  "path": "img/recette/acaraje",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bf9078",
+  "author": "Nahtanom",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Acaraj%C3%A9_na_Bahia.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Acarajé na Bahia.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/accras_morue": {
   "path": "img/recette/accras_morue",
   "sizes": [
@@ -11509,6 +11526,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/akara_niebe": {
+  "path": "img/recette/akara_niebe",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bb8252",
+  "author": "Taoheedah",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Akara;Bean_Cake.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Akara;Bean Cake.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/akoume": {
   "path": "img/recette/akoume",
   "sizes": [
@@ -11676,6 +11710,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Andouillette_grille%C3%A9_2.jpg",
   "source": "Wikimedia Commons",
   "title": "Andouillette grilleé 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/anticuchos": {
+  "path": "img/recette/anticuchos",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#726052",
+  "author": "Ser Amantio di Nicolao",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Anticuchos_on_a_skewer,_Raices_Peruvian_Cuisine.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Anticuchos on a skewer, Raices Peruvian Cuisine.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12223,6 +12274,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/balik_ekmek": {
+  "path": "img/recette/balik_ekmek",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b89d73",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bal%C4%B1k-ekmek_in_Ankara.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Balık-ekmek in Ankara.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ballotine_poulet_camembert": {
   "path": "img/recette/ballotine_poulet_camembert",
   "sizes": [
@@ -12237,6 +12305,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Stuffed_Chicken_3.jpg",
   "source": "Wikimedia Commons",
   "title": "Stuffed Chicken 3.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/bambalouni": {
+  "path": "img/recette/bambalouni",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#997b5c",
+  "author": "Yamen",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bambalouni_05.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Bambalouni 05.JPG",
   "kind": "photo",
   "avif": true
  },
@@ -15128,6 +15213,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/choripan": {
+  "path": "img/recette/choripan",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b6532f",
+  "author": "Horacio Cambeiro",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chorip%C3%A1n_(argentine_sandwich_with_chorizo_and_Savora).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Choripán (argentine sandwich with chorizo and Savora).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/chou_chinois_farci_volaille": {
   "path": "img/recette/chou_chinois_farci_volaille",
   "sizes": [
@@ -15876,6 +15978,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/coxinha": {
+  "path": "img/recette/coxinha",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8f7a60",
+  "author": "Horacio Cambeiro",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Coxinhas_made_in_Puerto_Iguaz%C3%BA,_Misiones,_Argentina.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Coxinhas made in Puerto Iguazú, Misiones, Argentina.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/crema_caffe": {
   "path": "img/recette/crema_caffe",
   "sizes": [
@@ -16590,6 +16709,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/dan_bing": {
+  "path": "img/recette/dan_bing",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#998363",
+  "author": "Joy",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dan_Bing_(Taiwanese_egg_crepe).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dan Bing (Taiwanese egg crepe).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/dan_dan_noodles": {
   "path": "img/recette/dan_dan_noodles",
   "sizes": [
@@ -16879,6 +17015,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/doubles_trinidad": {
+  "path": "img/recette/doubles_trinidad",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9a9376",
+  "author": "Grueslayer",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:FOOD_Doubles_2.jpg",
+  "source": "Wikimedia Commons",
+  "title": "FOOD Doubles 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/dubu_jorim": {
   "path": "img/recette/dubu_jorim",
   "sizes": [
@@ -17031,6 +17184,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/egg_waffle": {
+  "path": "img/recette/egg_waffle",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#866031",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Bubble_waffle_at_Brighton_Christmas_market_2022.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bubble waffle at Brighton Christmas market 2022.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/egusi_soup": {
   "path": "img/recette/egusi_soup",
   "sizes": [
@@ -17167,6 +17337,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/eomuk_tang": {
+  "path": "img/recette/eomuk_tang",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b19a7e",
+  "author": "LR0725",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%EC%98%A4%EB%8E%85%EA%B3%BC_%EB%A7%A4%EC%9A%B4%EC%98%A4%EB%8E%85.jpg",
+  "source": "Wikimedia Commons",
+  "title": "오뎅과 매운오뎅.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/escalopes_dinde_champignons": {
   "path": "img/recette/escalopes_dinde_champignons",
   "sizes": [
@@ -17181,6 +17368,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:J%C3%A4gerschnitzel_IMG_0936.jpg",
   "source": "Wikimedia Commons",
   "title": "Jägerschnitzel IMG 0936.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/esquites": {
+  "path": "img/recette/esquites",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#937d6e",
+  "author": "Jj saezdeo",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Esquites_at_Coyoacan_neighborhood_in_Mexico_City.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Esquites at Coyoacan neighborhood in Mexico City.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18182,6 +18386,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Galette_des_rois_dllu.jpg",
   "source": "Wikimedia Commons",
   "title": "Galette des rois dllu.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/galette_saucisse_volaille": {
+  "path": "img/recette/galette_saucisse_volaille",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#57433c",
+  "author": "Laurent GUEDON from Paris, France",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:La_galette_saucisse_de_Rennes_(3503247167).jpg",
+  "source": "Wikimedia Commons",
+  "title": "La galette saucisse de Rennes (3503247167).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19391,6 +19612,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/hot_dog_maison": {
+  "path": "img/recette/hot_dog_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ad761e",
+  "author": "stu_spivack",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hot_dog_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Hot dog 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/hot_honey_chicken_burger": {
   "path": "img/recette/hot_honey_chicken_burger",
   "sizes": [
@@ -19628,6 +19866,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/jamaican_patty": {
+  "path": "img/recette/jamaican_patty",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a28731",
+  "author": "ritcharnd moskow from Toshi Station, USA",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jamaican_patties_and_redstripe.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Jamaican patties and redstripe.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/jambalaya": {
   "path": "img/recette/jambalaya",
   "sizes": [
@@ -19676,6 +19931,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Onde-onde_isi_kacang.JPG",
   "source": "Wikimedia Commons",
   "title": "Onde-onde isi kacang.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/jianbing": {
+  "path": "img/recette/jianbing",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#897348",
+  "author": "Haha169",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jianbing_Unwrapped.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Jianbing Unwrapped.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20614,6 +20886,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/kumpir": {
+  "path": "img/recette/kumpir",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8a8370",
+  "author": "Atilim Gunes Baydin",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Kumpir2.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Kumpir2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/kunefe": {
   "path": "img/recette/kunefe",
   "sizes": [
@@ -20747,6 +21036,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lamingtons-2.jpg",
   "source": "Wikimedia Commons",
   "title": "Lamingtons-2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/langos": {
+  "path": "img/recette/langos",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ab8a52",
+  "author": "Elekes Andor",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:The_last_L%C3%A1ngos.jpg",
+  "source": "Wikimedia Commons",
+  "title": "The last Lángos.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21395,6 +21701,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/mahjouba": {
+  "path": "img/recette/mahjouba",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7e4d39",
+  "author": "Indif",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mhadjeb.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mhadjeb.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/maki_maison": {
   "path": "img/recette/maki_maison",
   "sizes": [
@@ -21766,6 +22089,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Market_Jelbana.jpg",
   "source": "Wikimedia Commons",
   "title": "Market Jelbana.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/martabak_manis": {
+  "path": "img/recette/martabak_manis",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#624b32",
+  "author": "Malikpb",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Martabak_manis_coklat_keju_khas_indonesia.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Martabak manis coklat keju khas indonesia.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24402,6 +24742,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/panisse": {
+  "path": "img/recette/panisse",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#503317",
+  "author": "Mon Œil",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Panisses_frits_%C3%A0_l%27huile_d%27olive.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Panisses frits à l'huile d'olive.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/panna_cotta": {
   "path": "img/recette/panna_cotta",
   "sizes": [
@@ -25369,6 +25726,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/philly_cheesesteak": {
+  "path": "img/recette/philly_cheesesteak",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e8a70",
+  "author": "JoshBerglund19",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Philly_Cheesesteak_-_5449870218.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Philly Cheesesteak - 5449870218.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pho_boeuf": {
   "path": "img/recette/pho_boeuf",
   "sizes": [
@@ -25383,6 +25757,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pho_Bo_by_Banh_%26_Mee_in_Kirkgate_Market.jpg",
   "source": "Wikimedia Commons",
   "title": "Pho Bo by Banh & Mee in Kirkgate Market.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/piadina": {
+  "path": "img/recette/piadina",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ac956c",
+  "author": "Cristian Ungureanu",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Piadina_Sandwich_Breakfast_with_Salad_and_Tomatoes.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Piadina Sandwich Breakfast with Salad and Tomatoes.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -28085,6 +28476,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/rolex_ouganda": {
+  "path": "img/recette/rolex_ouganda",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#6c564c",
+  "author": "Roxanne.heston",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Rolex_wrap.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Rolex wrap.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/romazava": {
   "path": "img/recette/romazava",
   "sizes": [
@@ -28187,6 +28595,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/roujiamo_boeuf": {
+  "path": "img/recette/roujiamo_boeuf",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a8906e",
+  "author": "Francesc Fort",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:King_Baos_-_Roujiamo.jpg",
+  "source": "Wikimedia Commons",
+  "title": "King Baos - Roujiamo.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/rouladen_boeuf_version": {
   "path": "img/recette/rouladen_boeuf_version",
   "sizes": [
@@ -28235,6 +28660,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Simmered-miso-mackerel.jpg",
   "source": "Wikimedia Commons",
   "title": "Simmered-miso-mackerel.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sabich": {
+  "path": "img/recette/sabich",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7e7a7c",
+  "author": "Gilabrand",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sabich.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sabich.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -28912,6 +29354,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:A_plate_of_homemade_%C3%A0b%C3%A0ch%C3%A0.jpg",
   "source": "Wikimedia Commons",
   "title": "A plate of homemade àbàchà.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/salchipapa": {
+  "path": "img/recette/salchipapa",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9a7a5d",
+  "author": "Josefito123",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Salchipapas_20220704_121159.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Salchipapas 20220704 121159.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -30205,6 +30664,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sopes": {
+  "path": "img/recette/sopes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b09f7b",
+  "author": "Dahyana Yasada R. R.",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Antojitos_Mexicanos.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Antojitos Mexicanos.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sorbet_fraise": {
   "path": "img/recette/sorbet_fraise",
   "sizes": [
@@ -31089,6 +31565,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/suppli": {
+  "path": "img/recette/suppli",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7d513d",
+  "author": "FrederikBianko",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vari_Suppl%C3%AC.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Vari Supplì.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sushi_burrito": {
   "path": "img/recette/sushi_burrito",
   "sizes": [
@@ -31630,6 +32123,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Inside_the_Tangia.jpg",
   "source": "Wikimedia Commons",
   "title": "Inside the Tangia.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tantuni": {
+  "path": "img/recette/tantuni",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ac8760",
+  "author": "Joquee",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tantuni_sokak_yeme%C4%9Fi.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tantuni sokak yemeği.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -32396,6 +32906,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/tlayuda": {
+  "path": "img/recette/tlayuda",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#947156",
+  "author": "François Calvaresi",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tlayuda_de_cecina_y_chorizo_en_Coyoac%C3%A1n.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tlayuda de cecina y chorizo en Coyoacán.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tlitli_poulet": {
   "path": "img/recette/tlitli_poulet",
   "sizes": [
@@ -32664,6 +33191,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tourti%C3%A8re_g%C3%A2teau_2.JPG",
   "source": "Wikimedia Commons",
   "title": "Tourtière gâteau 2.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/trdelnik": {
+  "path": "img/recette/trdelnik",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a28c51",
+  "author": "Thibault Taillandier",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Trdeln%C3%ADk_roll.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Trdelník roll.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -33616,6 +34160,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Closeup_image_of_za%27atar,_a_blend_of_origanum_syriacum_(hyssop,_sumac,_sesame_seeds_and_salt.jpg",
   "source": "Wikimedia Commons",
   "title": "Closeup image of za'atar, a blend of origanum syriacum (hyssop, sumac, sesame seeds and salt.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/zapiekanka": {
+  "path": "img/recette/zapiekanka",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a76543",
+  "author": "MichalPL",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Polish_zapiekanka,_June_2021.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Polish zapiekanka, June 2021.jpg",
   "kind": "photo",
   "avif": true
  },

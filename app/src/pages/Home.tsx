@@ -1,3 +1,4 @@
+import { STREET_IDS } from "../lib/streetfood";
 import { Icon } from "../components/icons";
 import { useMemo, useState } from "react";
 import { RECIPES, RECIPE_BY_ID } from "../lib/data";
@@ -46,7 +47,7 @@ const CRAVINGS: { id: string; icon: string; label: string; test: (r: Recipe) => 
   { id: "salade", icon: "leaf", label: "Salades repas", test: (r) => r.cats.includes("salade") },
   { id: "chocolat", icon: "chocolate", label: "Chocolat", test: (r) => (r.role === "dessert" || r.role === "boisson" || r.kind === "Base") && has(r, /chocolat|cacao|praline/) },
   { id: "patisserie", icon: "cupcake", label: "Pâtisserie", test: (r) => (r.role === "dessert" || r.kind === "Pain" || r.kind === "Base") && (r.techniques.some((t) => PASTRY.test(norm(t))) || r.regionPath.includes("Chocolaterie")) },
-  { id: "street", icon: "taco", label: "Street-food", test: (r) => /taco|burger|kebab|bao|banh|bokit|fataya|empanada|samoussa|falafel|souvlaki|suya|arepa|lahmacun|pan bagnat|bourek|briouat|nem|gyoza|frites|churros|elote|pizza|croque|poutine/.test(norm(r.title)) },
+  { id: "street", icon: "taco", label: "Street-food", test: (r) => STREET_IDS.has(r.id) }, // rubrique choisie à la main (12/11) : un mot du titre ne suffit pas
   { id: "vege", icon: "broccoli", label: "Végétarien", test: (r) => r.role === "plat" && evaluate(r).flesh.length === 0 },
   { id: "mer", icon: "fish", label: "Poissons & mer", test: (r) => r.role !== "dessert" && r.profile.includes("poisson") },
   { id: "epice", icon: "chili", label: "Ça pique", test: (r) => r.profile.includes("epice") && r.role === "plat" },

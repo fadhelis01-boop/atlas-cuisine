@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "curry_pois_chiches_express", "fiskefrikadeller", "curry_legumes_coco", "spaghetti_sautes_crevettes", "bacalhau_bras", "dhal_epinards_coco", "linguine_moules_scarole",
-  "shiro_wat", "fiskesuppe", "anda_curry", "falafels", "shakshuka_verte_feta", "sukiyaki", "pad_kra_pao_poulet", "merlu_beurre_blanc_poireaux",
-  "bunny_chow_haricots", "thukpa", "pyttipanna_boeuf", "bamia_gombo", "saumon_cajun_noirci", "ful_medames", "garbanzos_espinacas", "spaghetti_sautes_legumes_oeufs",
-  "chop_suey_boeuf", "riz_viande_hachee", "sandwich_raclette_piquant", "chou_oeufs_saute", "gratin_chou_fleur_lentilles", "rigatoni_brocoli_saucisse",
+  "curry_pois_chiches_express", "moules_frites", "curry_legumes_coco", "pancit_bihon", "eomuk_tang", "moules_marinieres", "thiou_poulet", "atakilt_wat",
+  "thukpa", "curry_fidjien_legumes", "linguine_moules_scarole", "salade_haricots_blancs_thon", "yasai_kare", "shakshuka_verte_feta", "vermicelles_riz_sautes_legumes", "moqueca",
+  "dhal_epinards_coco", "ramen_coreen_champignons_cremeux", "bacalhau_bras", "fiskesuppe", "anda_curry", "parippu", "gado_gado", "locro_vegetarien",
+  "choripan", "cocido_madrileno_version", "bar_croute_sel", "raclette_maison", "sukiyaki", "pasta_e_patate",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

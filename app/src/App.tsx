@@ -33,6 +33,7 @@ const ZeroDechet = lazy(() => import("./pages/ZeroDechet"));
 const Restes = lazy(() => import("./pages/Restes"));
 const Marche = lazy(() => import("./pages/Marche"));
 const PiqueNique = lazy(() => import("./pages/PiqueNique"));
+const StreetFood = lazy(() => import("./pages/StreetFood"));
 const Enfants = lazy(() => import("./pages/Enfants"));
 const Imports = lazy(() => import("./pages/Imports"));
 const Biblio = lazy(() => import("./pages/Biblio"));
@@ -106,6 +107,7 @@ export default function App() {
     case "restes": page = <Restes key={route.query.get("r") ?? ""} preset={route.query.get("r")} />; break;
     case "bien-choisir": page = <Marche />; break;
     case "pique-nique": page = <PiqueNique />; break;
+    case "street-food": page = <StreetFood />; break;
     case "enfants": page = <Enfants />; break;
     case "imports": page = <Imports key={route.query.toString()} q={route.query} />; break;
     case "biblio": page = <Biblio />; break;

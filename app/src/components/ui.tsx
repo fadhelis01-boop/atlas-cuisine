@@ -1,3 +1,4 @@
+import { CardMap } from "./OriginMap";
 import { Icon } from "./icons";
 import { useState, type ReactNode } from "react";
 import { ALLERGENS, MACRO_BY_ID } from "../lib/data";
@@ -58,7 +59,7 @@ export function RecipeCard({ r, note }: { r: Recipe; note?: ReactNode }) {
   return (
     <article className={`card rcard ${v.availability === "hidden" ? "dim" : ""}`}>
       <a href={href(`/recette/${r.id}`)} className="rcard-link">
-        <Cover r={r} />
+        <div className="rcard-cover"><Cover r={r} /><CardMap r={r} /></div>
         <div className="rcard-body">
           <h3>{r.title}</h3>
           <p className="meta"><Icon name={MACRO_BY_ID[r.macro]?.icon ?? "globe"} size={15} className="ic-inline" /> {r.regionPath.slice(1).join(" › ") || r.regionPath[0]} · <Icon name="timer" size={14} className="ic-inline" />{minutes(r.active)}{r.rest ? ` + ${minutes(r.rest)}` : ""} · {levelLabel(r.level)}</p>

@@ -51,6 +51,11 @@ for (const f of fc.features) {
   }
   c[name] = proj(geoCentroid(best)).map((v) => Math.round(v * 10) / 10);
 }
+// fond de carte en un seul tracé (vignettes des fiches : un seul <symbol> partagé, cf. OriginMap.tsx)
+const landTopo = JSON.parse(readFileSync(new URL("../node_modules/world-atlas/land-110m.json", import.meta.url)));
+const landFc = feature(landTopo, landTopo.objects.land);
+const land = geoPath(proj).digits(0)({ type: "FeatureCollection", features: landFc.features.map((f) => ({ ...f, geometry: { ...f.geometry,
+  coordinates: f.geometry.type === "MultiPolygon" ? f.geometry.coordinates.filter((p) => p[0].every(([, lat]) => lat > -60)) : f.geometry.coordinates } })) });
 const pts = Object.fromEntries(Object.entries(POINTS).map(([k, [lat, lon]]) => [k, proj([lon, lat]).map((v) => Math.round(v * 10) / 10)]));
-writeFileSync(new URL("../src/data/worldmap.json", import.meta.url), JSON.stringify({ w: W, h: H, d, c, pts }));
-console.log("worldmap.json :", Object.keys(d).length, "pays,", Object.keys(pts).length, "points,", JSON.stringify({ d, c, pts }).length, "octets");
+writeFileSync(new URL("../src/data/worldmap.json", import.meta.url), JSON.stringify({ w: W, h: H, d, c, pts, land }));
+console.log("worldmap.json :", Object.keys(d).length, "pays,", Object.keys(pts).length, "points,", JSON.stringify({ d, c, pts, land }).length, "octets");

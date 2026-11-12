@@ -296,3 +296,9 @@ main:focus { outline: none; } /* cible du focus après un changement d'écran : 
 .om-wide { fill: var(--saffron); stroke: var(--surface); stroke-width: .3; }
 .om-dot { fill: var(--action); stroke: var(--surface); stroke-width: .8; }
 .om-halo { fill: var(--action); opacity: .25; }
+
+/* mini-carte d'origine sur les vignettes (12/11/2026) */
+.rcard-cover { position: relative; }
+.card-map { position: absolute; left: 6px; bottom: 6px; width: 64px; height: auto; padding: 2px 3px; border-radius: 6px;
+  background: color-mix(in srgb, var(--surface) 85%, transparent); box-shadow: 0 1px 3px rgb(0 0 0 / 25%); pointer-events: none; }
+.cm-land { fill: color-mix(in srgb, var(--border) 75%, var(--surface)); }

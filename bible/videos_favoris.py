@@ -287,3 +287,48 @@ EN_PLUS_2026_11_12 = {
 }
 for _k, _v in EN_PLUS_2026_11_12.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# 12/11/2026 (audit street food) : pour chaque plat de rue, la vidéo de recette la plus aimée de la recherche TikTok
+EN_PLUS_2026_11_12B = {
+    "birria_res": [T + "@alexrioscooks/video/7479163426002963742"],
+    "burger_maison": [T + "@malcomsfood2/video/7630865865625390358"],
+    "kebab_poulet_pain_maison": [T + "@chef_theo_lignani/video/7500623095204531478"],
+    "tacos_lyonnais": [T + "@seizemay/video/7222710329401281798"],
+    "esquites": [T + "@bytesbyry/video/7651302831944781070"],
+    "tlayuda": [T + "@lacocinadelingee/video/7628027831968156948"],
+    "sopes": [T + "@marya_guzman/video/7471001161877687598"],
+    "hot_dog_maison": [T + "@totocuistot/video/7526209142080474390"],
+    "philly_cheesesteak": [T + "@gumball.cuisine/video/7685059203068611862"],
+    "bretzels": [T + "@cookwithhali/video/7681424712139935006"],
+    "anticuchos": [T + "@chefrodrigofernandini/video/7475032921359813918"],
+    "choripan": [T + "@chefrodrigofernandini/video/7693949016777723167"],
+    "coxinha": [T + "@receitasdepaioficial/video/7524506982640782597"],
+    "acaraje": [T + "@_bethmedeiros/video/7686523991376366869"],
+    "salchipapa": [T + "@botanas_blofis/video/7694050622370352391"],
+    "doubles_trinidad": [T + "@thegrubworkskitchen/video/7678791875825814806"],
+    "jamaican_patty": [T + "@chefdwightsmith/video/7258991926869904646"],
+    "galette_saucisse_volaille": [T + "@pierreoliviercollet/video/7445596399766375702"],
+    "panisse": [T + "@mamagiulia3/video/7686165964571888928"],
+    "suppli": [T + "@cucinaconruben/video/7614087439728102678"],
+    "piadina": [T + "@cookist/video/7491624410202410262"],
+    "langos": [T + "@cabbageakos/video/7129545814782790917"],
+    "zapiekanka": [T + "@grillinwithdad/video/7206473219090468142"],
+    "trdelnik": [T + "@skotska.kralovna/video/7576586325457915158"],
+    "sabich": [T + "@yohanattia/video/7633093951284727058"],
+    "kumpir": [T + "@madameyasscomedie/video/7555559594160819478"],
+    "tantuni": [T + "@yemektimess/video/7677214816905235733"],
+    "kunefe": [T + "@thefoodner/video/7217371047065095429"],
+    "balik_ekmek": [T + "@unicornsinthekitchen/video/7375236652244995370"],
+    "bambalouni": [T + "@cook_withgaby/video/7402206688641699104"],
+    "mahjouba": [T + "@ideerecette13/video/7623450659341225238"],
+    "rolex_ouganda": [T + "@lifewithlexima/video/7657610196595805458"],
+    "akara_niebe": [T + "@niangcook/video/7255723030385560858"],
+    "jianbing": [T + "@sandencuisine/video/7594782030932495638"],
+    "eomuk_tang": [T + "@yuzujoy/video/7603863633616997663"],
+    "martabak_manis": [T + "@firhan_ashari/video/7558054625342016779"],
+    "roujiamo_boeuf": [T + "@wokundgluck/video/7653251726698482966"],
+    "egg_waffle": [T + "@thefriedcook1/video/7275206380380917038"],
+    "dan_bing": [T + "@esze.e/video/7503387919785135391"],
+}
+for _k, _v in EN_PLUS_2026_11_12B.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
