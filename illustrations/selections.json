@@ -4047,5 +4047,33 @@
  "recette/dan_bing": {
   "i": 1,
   "from": "v16/recette/dan_bing"
+ },
+ "recette/poisson_pane_maison": {
+  "i": 4,
+  "from": "v17/recette/poisson_pane_maison"
+ },
+ "recette/semoule_au_lait": {
+  "i": 7,
+  "from": "v17/recette/semoule_au_lait"
+ },
+ "recette/oeuf_coque_mouillettes": {
+  "i": 7,
+  "from": "v17/recette/oeuf_coque_mouillettes"
+ },
+ "recette/roti_porc_moutarde_miel": {
+  "i": 0,
+  "from": "v17/recette/roti_porc_moutarde_miel"
+ },
+ "recette/gratin_poisson_epinards": {
+  "i": 1,
+  "from": "v17/recette/gratin_poisson_epinards"
+ },
+ "recette/yaourts_maison": {
+  "i": 2,
+  "from": "v17/recette/yaourts_maison"
+ },
+ "recette/biscuit_roule_confiture": {
+  "i": 6,
+  "from": "v17/recette/biscuit_roule_confiture"
  }
 }

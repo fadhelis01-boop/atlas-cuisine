@@ -262,3 +262,25 @@ const bloc129 = prof129.slice(prof129.indexOf("const SCREEN_LABEL"), prof129.ind
 const sansLibelle129 = routes129.filter((r) => !new RegExp(`(^|[ \\t])"?${r}"?: "`, "m").test(bloc129));
 console.log("   profil : routes", routes129.length, "· sans libellé", sansLibelle129.join(",") || 0);
 check("129 profil : chaque écran a un libellé en clair dans « Ce qui te sert le plus »", routes129.length > 20 && !sansLibelle129.length && /screenLabel\(k\)/.test(prof129));
+
+// 130 audit « cuisinier de 20 ans, chef de famille de 4 enfants » (13/11/2026, bible/AUDIT_FAMILLE_NOMBREUSE_2026-11-13.md) :
+// classiques du quotidien familial présents ; planificateur « cantine » (soirs d'école plus végétaux) ; goûters de la semaine.
+import { autoPlan as ap130, weekDays as wd130, proteinOf as po130 } from "../src/lib/planner";
+const FAM130 = ["poisson_pane_maison", "semoule_au_lait", "oeuf_coque_mouillettes", "roti_porc_moutarde_miel", "gratin_poisson_epinards", "yaourts_maison", "biscuit_roule_confiture", "frites_legumes_four"];
+const miss130 = FAM130.filter((id) => !RECIPE_BY_ID[id]);
+const prof130 = { noPork: false, alcohol: "allowed", strict: false, vegetarian: false, allergens: [], adult: false, kidsAge: 6, equipment: ["four", "plaques"], onboarded: true, household: { adults: 2, kids: [4, 7, 10, 13] } } as unknown as Profile;
+const days130 = wd130(0);
+const meat130 = (cantine: boolean) => {
+  let n = 0;
+  for (let seed = 1; seed <= 12; seed++) {
+    const p = ap130(days130, {}, { slots: ["soir"], weekdayMax: 45, zone: "nord", profile: prof130, leftovers: null, seed, cantine });
+    n += days130.filter((d) => [1, 2, 4, 5].includes(new Date(`${d}T12:00:00`).getDay()) && p[d]?.soir && ["boeuf", "agneau", "porc", "volaille"].includes(po130(RECIPE_BY_ID[p[d]!.soir!]))).length;
+  }
+  return n;
+};
+const sans130 = meat130(false), avec130 = meat130(true);
+const sem130 = rf127("src/pages/Semaine.tsx", "utf8");
+console.log("   famille nombreuse : classiques manquants", miss130.join(",") || 0, "· soirs d'école avec viande sur 12 semaines : sans cantine", sans130, "/ avec cantine", avec130,
+  "· goûters de la semaine", /Les goûters de la semaine/.test(sem130));
+check("130 famille nombreuse : classiques présents, mode cantine (moins de viande les soirs d'école), goûters de la semaine",
+  !miss130.length && avec130 < sans130 * 0.6 && /Les goûters de la semaine/.test(sem130) && /cantine: !!prefs\.cantine/.test(sem130));

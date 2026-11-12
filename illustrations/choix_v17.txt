@@ -1,0 +1,7 @@
+poisson_pane_maison 4
+semoule_au_lait 7
+oeuf_coque_mouillettes 7
+roti_porc_moutarde_miel 0
+gratin_poisson_epinards 1
+yaourts_maison 2
+biscuit_roule_confiture 6

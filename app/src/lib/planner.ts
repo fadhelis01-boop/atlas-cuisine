@@ -64,6 +64,7 @@ export interface AutoOptions {
   sundayMenu?: boolean; // dimanche midi : entrée et dessert ajoutés au grand plat
   kidsVerdict?: Record<string, "oui" | "non">; // carnet : « les enfants ont aimé » (bonus) ou non (écarté)
   today?: string; // date du jour (AAAA-MM-JJ) : pas de plat « à lancer la veille » pour ce soir (audit chef + famille)
+  cantine?: boolean; // enfants à la cantine le midi (lun, mar, jeu, ven) : le soir complète, plutôt végétal, œufs, poisson (audit famille 13/11)
 }
 
 /** Un « grand plat » : long ou de fête. Un seul par jour de week-end (audit gourmet). */
@@ -167,6 +168,8 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
           (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0) +
           (dow === 0 && slot === "midi" && isBigDish(r) ? 3 : 0) + // le dimanche midi, le grand plat de la semaine
           (o.kidsVerdict?.[r.id] === "oui" ? 2 : 0) + // plébiscité par les enfants
+          // jour de cantine : la viande a souvent été servie à midi ; le soir, légumes, légumineuses, œufs ou poisson
+          (o.cantine && slot === "soir" && [1, 2, 4, 5].includes(dow) ? (["boeuf", "agneau", "porc", "volaille"].includes(proteinOf(r)) ? -4 : 3) : 0) +
           (mainOf(r).some((m) => mains.has(m)) ? -8 : 0) + // même produit principal déjà dans la semaine
           -2.5 * Math.max(0, specials.size + specialOf(r).filter((x) => !specials.has(x)).length - 3) * (specialOf(r).some((x) => !specials.has(x)) ? 1 : 0)
         );

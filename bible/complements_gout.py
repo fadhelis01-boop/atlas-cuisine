@@ -46,6 +46,8 @@ ACIDE = {
     "jianbing": ("1 c. à c.|de vinaigre de cidre (sauce)|" + CIDRE + "|1?", "Une goutte de vinaigre dans la sauce hoisin (le vinaigre noir, si tu en as) : elle devient moins lourde."),
     "roujiamo_boeuf": ("1 c. à s.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre (noir, si tu en as) sur la viande hachée avant de garnir : il coupe le gras du braisé."),
     "dan_bing": ("1 c. à c.|de vinaigre de cidre (sauce)|" + CIDRE + "|1?", "Pour tremper, à la taïwanaise : sauce soja sucrée et quelques gouttes de vinaigre, ou sauce piment."),
+    "gratin_poisson_epinards": ("1|citron, en quartiers (à table)|Citron|1?", "Un quartier de citron à table : quelques gouttes sur le poisson allègent la béchamel."),
+    "oeuf_coque_mouillettes": ("200 g|de tomates cerises (à côté)|Tomate cerise|1?", "À côté, quelques tomates cerises : leur acidité répond au jaune et au beurre."),
     "char_siu_poulet": PICKLES,
     "poulet_teriyaki": PICKLES,
     "saumon_teriyaki": PICKLES,

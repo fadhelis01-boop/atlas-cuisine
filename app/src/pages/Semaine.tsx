@@ -90,6 +90,7 @@ export default function Semaine({ add }: { add: string | null }) {
         sundayMenu: prefs.slots.includes("midi"),
         kidsVerdict,
         today: weekDays(0)[0],
+        cantine: !!prefs.cantine,
       }),
     );
   };
@@ -111,6 +112,7 @@ export default function Semaine({ add }: { add: string | null }) {
       seed: Date.now(),
       recent: new Set([...recent, ...(cur ? [cur] : [])]),
       today: weekDays(0)[0],
+      cantine: !!prefs.cantine,
     });
     // ne remplir que la case demandée, et pas avec le même plat
     const pick = filled[day]?.[slot];
@@ -205,6 +207,24 @@ export default function Semaine({ add }: { add: string | null }) {
             : `${dayName(prevIso(d)).replace(/^./, (c) => c.toUpperCase())} soir`,
       })),
   );
+  // goûters de la semaine (audit famille 13/11) : une fournée le dimanche qui tient jusqu'au jeudi (ou se congèle),
+  // trois idées différentes chaque semaine ; le planificateur ne prévoyait que midis et soirs
+  const gouters = useMemo(() => {
+    const zone = zoneOf(zoneSetting);
+    const list = RECIPES.filter(
+      (r) =>
+        r.kind === "Goûter / dessert" &&
+        r.age !== null &&
+        r.age <= 3 &&
+        r.level === 1 && // goûter de tous les jours : facile et économique, pas une pâtisserie de fête
+        r.cost === "€" &&
+        verdict(r, profile).availability !== "hidden" &&
+        /([4-9]|1\d) jours|semaine|cong[eé]l/i.test(r.storage ?? ""),
+    ).sort((a, b) => seasonFit(b, zone).score - seasonFit(a, zone).score || a.id.localeCompare(b.id));
+    if (list.length < 3) return [];
+    const w = Math.floor(new Date(`${days[0]}T12:00:00`).getTime() / (7 * 86400000));
+    return [0, 1, 2].map((k) => list[(w * 3 + k) % list.length]);
+  }, [zoneSetting, profile, days]);
   // boisson maison de la semaine (audit gourmet) : sans alcool, de saison, change chaque semaine
   const drink = useMemo(() => {
     const zone = zoneOf(zoneSetting);
@@ -269,6 +289,9 @@ export default function Semaine({ add }: { add: string | null }) {
             </Chip>
           ))}
         </span>
+        <label className="switch" title="Lundi, mardi, jeudi et vendredi : la viande a souvent été servie à midi">
+          <input type="checkbox" checked={!!prefs.cantine} onChange={(e) => setPrefs({ cantine: e.target.checked })} /> Cantine le midi : soirs plus légers
+        </label>
         <label className="field inline">
           En semaine, au plus
           <select value={prefs.weekdayMax} onChange={(e) => setPrefs({ weekdayMax: +e.target.value })}>
@@ -406,6 +429,18 @@ export default function Semaine({ add }: { add: string | null }) {
           </li>
         ))}
       </ol>
+      {gouters.length > 0 && (
+        <p className="small">
+          <Icon name="cupcake" size={15} className="ic-inline" /> Les goûters de la semaine, à préparer le dimanche :{" "}
+          {gouters.map((r, i) => (
+            <span key={r.id}>
+              {i > 0 && (i === gouters.length - 1 ? " et " : ", ")}
+              <a href={href(`/recette/${r.id}`)}>{r.title.split(" (")[0]}</a>
+            </span>
+          ))}
+          . Ils tiennent plusieurs jours en boîte (ou se congèlent) ; avec un fruit et un laitage, c'est le goûter complet.
+        </p>
+      )}
       {drink && (
         <p className="small">
           <Icon name="cup" size={15} className="ic-inline" /> La boisson maison de la semaine : <a href={href(`/recette/${drink.id}`)}>{drink.title.split(" (")[0]}</a>, à préparer

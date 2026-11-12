@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+"""Audit « cuisinier de 20 ans et chef de famille de 4 enfants » (13/11/2026, AUDIT_FAMILLE_NOMBREUSE_2026-11-13.md) :
+les classiques du quotidien familial français encore absents. Quantités pour une grande tablée (6), gestes que les enfants
+peuvent faire, conservation et congélation. NON TESTÉS (Tome 7 §2)."""
+from recipes_v2_base import *
+
+Q = "France › Cuisine du quotidien"; E = "France › Cuisine des enfants"
+
+K("poisson_pane_maison", "Poisson pané maison (bâtonnets croustillants au four)", "Fish sticks maison", E, "P", 1, 6, 25, 15, "€€", "Plaque de four, papier cuisson, 3 assiettes creuses.",
+  "Les bâtonnets que les enfants réclament, sans additif : du cabillaud ou du lieu en bâtonnets, passés dans la farine, l'œuf et une chapelure dorée au four avec un filet d'huile. Croustillants dehors, nacrés dedans, avec une purée ou des frites au four.",
+  ["800 g|de filets de cabillaud ou de lieu, sans arêtes|Cabillaud / morue fraîche|3", f"60 g|de farine|{F55}|1", f"2|œufs|{OEUF}|2", "150 g|de chapelure (ou panko)|Panko|2",
+   f"40 g|de parmesan râpé (facultatif)|{PARM}|1?", f"4 c. à s.|d'huile|{HN}|1", f"1|citron|{CIT}|1", f"-|sel|{SEL}|1"],
+  ["**Préparer.** Four à 220 °C. Filets épongés, vérifiés du bout des doigts (arêtes retirées à la pince), coupés en bâtonnets de 2 cm sur 8 ; salés.",
+   "**Paner.** Trois assiettes : farine ; œufs battus ; chapelure mêlée au parmesan et à 2 c. à s. d'huile. Chaque bâtonnet passé dans les trois, chapelure bien pressée.",
+   "**Cuire.** Sur la plaque en une couche, espacés, un filet d'huile ; 12 à 15 min, retournés à mi-cuisson : dorés, la chair s'effeuille et est opaque à cœur.",
+   "**Servir.** Aussitôt, avec des quartiers de citron, une purée ou des frites au four et une sauce au yaourt."],
+  tips=["Les enfants panent très bien : chacun son assiette, on se lave les mains après le poisson cru.", "Se congèlent crus et panés, à plat : 18 à 20 min au four sans décongeler."],
+  keep="Panés crus : 3 mois au congélateur.", age=1, kids="✓ dès 1 an, arêtes vérifiées. Les enfants panent.", cats=["enfants"], profil=["poisson"], tech=["Paner à l'anglaise"])
+K("semoule_au_lait", "Semoule au lait (vanille et caramel)", "Semoule au lait", E, "D", 1, 6, 10, 15, "€", "Casserole à fond épais, ramequins.",
+  "Le dessert de grand-mère qui se prépare en 15 minutes avec ce qu'on a toujours : du lait, de la semoule, du sucre et de la vanille. Servi tiède ou froid, nappé de caramel ou de confiture.",
+  [f"1 l|de lait entier|{LAIT}|3", "90 g|de semoule fine|Semoule de blé (fine/moyenne)|3", f"80 g|de sucre|{SUCRE}|2", f"1 c. à c.|de vanille en poudre (ou 1 gousse)|{VAN}|1",
+   "4 c. à s.|de caramel ou de confiture (pour servir)|Caramel (sucre + eau)|1?", f"1 pincée|de sel|{SEL}|1"],
+  ["**Chauffer.** Lait, sucre, vanille et sel portés à frémissement, en surveillant : le lait monte vite.",
+   "**Verser.** Semoule en pluie en fouettant, feu doux : pas de grumeaux.",
+   "**Cuire.** 8 à 10 min à feu doux en remuant sans arrêt (la semoule attache au fond) : elle épaissit et nappe la cuillère.",
+   "**Servir.** En ramequins ; tiède, ou 2 h au frais pour qu'elle prenne. Caramel ou confiture dessus."],
+  tips=["Elle épaissit beaucoup en refroidissant : retire-la du feu quand elle est encore crémeuse.", "Un zeste d'orange ou quelques raisins secs pour changer."],
+  keep="3 jours au frigo, filmée.", age=1, kids="✓ dès 1 an.", cats=["enfants", "vegetarien", "express"], profil=["sucre"])
+K("oeuf_coque_mouillettes", "Œuf à la coque et mouillettes beurrées", "Œuf à la coque", E, "P", 1, 4, 5, 4, "€", "Petite casserole, coquetiers, minuteur.",
+  "Le dîner léger du dimanche soir ou le petit-déjeuner des enfants : un œuf au jaune coulant et au blanc juste pris, des mouillettes de pain grillé beurré à tremper. Tout est dans le minutage.",
+  [f"8|œufs extra-frais (2 par personne)|{OEUF}|3", "8|tranches de pain de campagne ou de mie|Pain de campagne / complet|2", f"40 g|de beurre demi-sel|{BEURRE}|1", f"-|fleur de sel|{SEL}|1", "1/2 bouquet|de ciboulette (facultatif)|Ciboulette|1?"],
+  ["**Sortir les œufs.** 30 min avant : à température ambiante, ils ne se fendent pas dans l'eau bouillante.",
+   "**Cuire.** Eau bouillante ; œufs déposés à la cuillère ; 3 min pile pour un gros œuf (calibre L), 2 min 40 pour un moyen : blanc pris, jaune coulant.",
+   "**Mouillettes.** Pain grillé, beurré, coupé en bâtonnets de 1,5 cm.",
+   "**Servir.** Œufs en coquetier, sommet tranché au couteau d'un coup sec, pincée de fleur de sel ; on trempe."],
+  tips=["Œuf à la coque : le jaune reste cru. Pour les moins de 1 an, les femmes enceintes et les personnes fragiles, préfère l'œuf mollet (6 min) ou dur.", "Le minuteur fait tout : lance-le quand l'eau reprend l'ébullition."],
+  keep="Le jour même.", age=1, kids="✓ dès 1 an en œuf mollet (6 min) ; à la coque pour les plus grands.", cats=["enfants", "vegetarien", "express", "brunch"], profil=["leger"], tech=["Œufs : cuissons"])
+K("roti_porc_moutarde_miel", "Rôti du dimanche moutarde-miel, pommes de terre fondantes", "Rôti de porc au four", Q, "P", 1, 6, 20, 75, "€€", "Plat à four, thermomètre si possible.",
+  "Le rôti du dimanche des familles : une pièce badigeonnée de moutarde et de miel, rôtie sur un lit d'oignons et de pommes de terre qui cuisent dans le jus. Les restes font les sandwichs du lundi. Il existe en version dinde ou veau.",
+  ["1,2 kg|de rôti de porc (échine ou filet)|Côte / rôti de porc|3", f"1 kg|de pommes de terre|{PDT}|3", f"2|oignons|{OIG}|1", "2 c. à s.|de moutarde à l'ancienne|Moutarde à l'ancienne|1",
+   f"1 c. à s.|de miel|{MIEL}|1", f"4 gousses|d'ail en chemise|{AIL}|1", f"3 brins|de thym|{THYM}|1", f"2 c. à s.|d'huile|{HN}|1", f"-|sel, poivre|{SEL}|1"],
+  ["**Préparer.** Four à 180 °C. Rôti sorti du frigo 30 min avant. Pommes de terre en quartiers, oignons en lamelles, ail, thym, huile, sel dans le plat.",
+   "**Badigeonner.** Moutarde et miel mélangés, étalés sur le rôti salé et poivré ; posé sur les légumes, 10 cl d'eau au fond.",
+   "**Rôtir.** 1 h 10 à 1 h 20 (environ 60 min par kg), arrosé deux fois : jus clair quand on pique, 70 °C à cœur au thermomètre ; pommes de terre fondantes et dorées.",
+   "**Reposer.** 10 min sous aluminium avant de trancher : le jus se répartit. Tranches fines, jus du plat versé dessus."],
+  tips=["Les tranches restantes : sandwich du lundi ou gamelle, avec des cornichons et de la moutarde.", "Un rôti trop cuit sèche : le thermomètre est le meilleur ami du rôti du dimanche."],
+  var=[("Sans porc", ["pork"], {"Côte / rôti de porc": [("Dinde (escalope, cuisse, filet)", 1.0)]}, "Porc → **rôti de dinde** (1 h, 74 °C à cœur) ou de veau (1 h, 68 °C). **À tester**.")],
+  keep="3 jours au frigo ; tranches se congèlent.", age=1, kids="✓ dès 1 an, viande coupée fin.", cats=["enfants"], fetes=["Repas de famille"], profil=["gras"], tech=["Rôtir"])
+K("gratin_poisson_epinards", "Gratin de poisson aux épinards et à la béchamel", "Gratin de poisson", Q, "P", 1, 6, 25, 25, "€€", "Plat à gratin, casserole.",
+  "Le plat qui fait manger du poisson et des épinards aux enfants : des morceaux de poisson blanc et des épinards fondus sous une béchamel au fromage, gratinés. Avec du riz ou une purée.",
+  ["800 g|de filets de poisson blanc (colin, cabillaud), sans arêtes|Colin, lieu noir, merlu|3", "600 g|d'épinards (frais ou surgelés)|Épinard|3", f"50 cl|de lait|{LAIT}|2",
+   f"40 g|de beurre|{BEURRE}|1", f"40 g|de farine|{F55}|1", f"80 g|d'emmental râpé|{GRUY}|2", f"1 pincée|de muscade|{MUSC}|1", f"1 gousse|d'ail|{AIL}|1", f"-|sel, poivre|{SEL}|1"],
+  ["**Épinards.** Fondus 5 min à la poêle avec l'ail (surgelés : décongelés et pressés) ; bien égouttés, sinon le gratin rend de l'eau.",
+   "**Béchamel.** Beurre fondu, farine, 2 min sans colorer ; lait froid en fouettant, 5 min : elle nappe ; muscade, sel, la moitié du fromage.",
+   "**Monter.** Four à 200 °C. Épinards au fond du plat, poisson en morceaux de 4 cm salé, béchamel par-dessus, reste du fromage.",
+   "**Gratiner.** 20 à 25 min : doré et bouillonnant, poisson opaque qui s'effeuille. 5 min de repos avant de servir."],
+  tips=["Vérifie les arêtes du bout des doigts : c'est ce qui rassure les parents et les enfants.", "Se prépare la veille, cru, couvert au frigo : 30 min de cuisson."],
+  keep="2 jours au frigo.", age=1, kids="✓ dès 1 an, arêtes vérifiées.", cats=["enfants"], profil=["poisson", "gras"], tech=["Faire un roux", "Gratiner"])
+K("yaourts_maison", "Yaourts maison nature (sans yaourtière)", "Yaourts maison", E, "D", 1, 8, 10, 600, "€", "8 pots en verre, four ou cocotte, thermomètre.",
+  "Des yaourts nature fermes et doux, pour moins cher et sans emballage : du lait, un yaourt pour ensemencer, et une nuit au chaud. Les enfants les sucrent eux-mêmes au miel, à la compote ou à la confiture.",
+  [f"1 l|de lait entier|{LAIT}|3", "1|yaourt nature (le ferment)|Yaourt nature|3", "4 c. à s.|de lait en poudre (yaourts plus fermes, facultatif)|Lait en poudre|1?"],
+  ["**Chauffer.** Lait (et lait en poudre) à 85 °C, 2 min, puis refroidi à 43-45 °C : un doigt y tient 10 secondes sans brûler.",
+   "**Ensemencer.** Yaourt fouetté avec une louche de lait tiède, puis tout le lait : bien mélangé.",
+   "**Couver.** En pots propres, au four éteint préchauffé à 40 °C (lumière allumée) ou dans une cocotte enveloppée d'une couverture, 8 à 10 h sans bouger : ils sont pris.",
+   "**Refroidir.** Couverts, 4 h au frigo avant de manger : ils raffermissent. Garde un pot pour la prochaine fournée."],
+  tips=["Au-delà de 50 °C, les ferments meurent ; en dessous de 40 °C, ils travaillent mal : le thermomètre aide.", "Un yaourt de la fournée sert de ferment pour la suivante, 4 à 5 fois, puis on repart d'un yaourt du commerce."],
+  keep="7 jours au frigo.", age=1, kids="✓ dès 1 an.", cats=["enfants", "vegetarien", "zero_dechet"], profil=["leger"])
+K("biscuit_roule_confiture", "Biscuit roulé à la confiture", "Biscuit roulé", E, "G", 2, 8, 20, 10, "€", "Plaque de four, papier cuisson, torchon propre.",
+  "Le gâteau d'anniversaire des petits et le goûter du mercredi : une génoise fine et souple cuite en 8 minutes, roulée tiède autour de la confiture, saupoudrée de sucre glace. Le tourbillon fait toujours son effet.",
+  [f"4|œufs|{OEUF}|3", f"100 g|de sucre|{SUCRE}|2", f"100 g|de farine|{F55}|2", "250 g|de confiture (fraise, abricot) ou de pâte à tartiner|Confiture / gelée|2", "2 c. à s.|de sucre glace|Sucre glace|1",
+   f"1 pincée|de sel|{SEL}|1"],
+  ["**Monter.** Four à 200 °C. Œufs et sucre fouettés 8 à 10 min : très mousseux, trois fois le volume, le mélange fait le ruban.",
+   "**Incorporer.** Farine tamisée en deux fois, soulevée à la spatule sans tourner : la mousse ne doit pas retomber.",
+   "**Cuire.** Étalée sur 1 cm sur la plaque chemisée ; 8 à 9 min : blonde, elle reprend sa forme sous le doigt.",
+   "**Rouler.** Retournée aussitôt sur un torchon humide, papier retiré ; roulée tiède avec le torchon, 5 min ; déroulée, confiture étalée, roulée serrée. Sucre glace."],
+  tips=["Roulée chaude, elle ne casse pas : c'est le geste qui compte, pas la recette.", "Les enfants étalent la confiture et saupoudrent le sucre glace."],
+  keep="3 jours dans une boîte ; 4 jours au frais.", age=1, kids="✓ dès 1 an. Les enfants garnissent et décorent.", cats=["enfants", "vegetarien"], fetes=["Anniversaire"], profil=["sucre"], tech=["Biscuits de base"])
+K("frites_legumes_four", "Frites de légumes au four (carotte, panais, patate douce)", "Frites de légumes", E, "A", 1, 6, 15, 30, "€", "2 plaques de four, papier cuisson.",
+  "Des bâtonnets de légumes rôtis, croustillants aux bords et fondants dedans, qui se mangent avec les doigts comme des frites : la porte d'entrée des légumes racines pour les enfants.",
+  [f"3|carottes|{CAROTTE}|2", "2|panais|Panais / rutabaga|2", "1|patate douce|Patate douce|2", f"3 c. à s.|d'huile d'olive|{HO}|1", f"1 c. à c.|de paprika doux|{PAPRIKA}|1",
+   "1 c. à s.|de fécule de maïs (pour le croustillant)|Fécule de maïs (maïzena)|1?", f"-|sel|{SEL}|1"],
+  ["**Couper.** Four à 220 °C. Légumes épluchés, en bâtonnets de 1 cm, tous de la même taille : ils cuisent ensemble.",
+   "**Enrober.** Fécule, paprika, huile et sel dans un saladier, bien mélangés à la main.",
+   "**Rôtir.** En une seule couche sur deux plaques, sans qu'ils se touchent (sinon ils cuisent à la vapeur) ; 25 à 30 min, retournés à mi-cuisson : bords dorés.",
+   "**Servir.** Aussitôt, avec une sauce yaourt ou du ketchup maison."],
+  tips=["Deux plaques plutôt qu'une : entassés, les légumes ramollissent au lieu de rôtir.", "Les enfants enrobent les bâtonnets avec les mains."],
+  keep="Le jour même ; réchauffés au four.", age=1, kids="✓ dès 1 an (bâtonnets bien tendres pour les petits).", cats=["enfants", "vegetarien"], profil=["leger"])

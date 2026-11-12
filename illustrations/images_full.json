@@ -12834,6 +12834,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/biscuit_roule_confiture": {
+  "path": "img/recette/biscuit_roule_confiture",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c5bb94",
+  "author": "Ocdp",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Swiss_roll_003.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Swiss roll 003.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/biscuits_cuillere": {
   "path": "img/recette/biscuits_cuillere",
   "sizes": [
@@ -19153,6 +19170,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/gratin_poisson_epinards": {
+  "path": "img/recette/gratin_poisson_epinards",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#967050",
+  "author": "Jacklee",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fish_and_gratin_dauphinois,_Annecy,_France_-_20130713.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fish and gratin dauphinois, Annecy, France - 20130713.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/gratin_pommes_terre_poulet": {
   "path": "img/recette/gratin_pommes_terre_poulet",
   "sizes": [
@@ -23605,6 +23639,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/oeuf_coque_mouillettes": {
+  "path": "img/recette/oeuf_coque_mouillettes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e8374",
+  "author": "SteveR-",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "page": "https://www.flickr.com/photos/98621709@N00/3187287323",
+  "source": "Openverse (flickr)",
+  "title": "Marmite Egg Cup",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/oeuf_parfait_petits_pois": {
   "path": "img/recette/oeuf_parfait_petits_pois",
   "sizes": [
@@ -26337,6 +26388,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/poisson_pane_maison": {
+  "path": "img/recette/poisson_pane_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c28c51",
+  "author": "Andy Li",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Fish_Fingers_-_RYBKA_2024-01-25.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Fish Fingers - RYBKA 2024-01-25.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/poivrons_farcis_riz": {
   "path": "img/recette/poivrons_farcis_riz",
   "sizes": [
@@ -28578,6 +28646,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/roti_porc_moutarde_miel": {
+  "path": "img/recette/roti_porc_moutarde_miel",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#6a5953",
+  "author": "Sara Goldsmith",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Roast_pork_loin,_potatoes_(2585116058).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Roast pork loin, potatoes (2585116058).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/rougail_saucisses": {
   "path": "img/recette/rougail_saucisses",
   "sizes": [
@@ -30271,6 +30356,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:One_scotch_egg_(No_jar_of_Marmite).jpg",
   "source": "Wikimedia Commons",
   "title": "One scotch egg (No jar of Marmite).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/semoule_au_lait": {
+  "path": "img/recette/semoule_au_lait",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9ec287",
+  "author": "Микола Василечко",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BD%D0%BD%D0%B0_%D0%BA%D0%B0%D1%88%D0%B0_-_20250808_182334.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Манна каша - 20250808 182334.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -34075,6 +34177,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_cyclonebill_-_Gr%C3%A6sk_yoghurt_med_honning_og_valn%C3%B8dder_(1).jpg",
   "source": "Wikimedia Commons",
   "title": "Flickr - cyclonebill - Græsk yoghurt med honning og valnødder (1).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/yaourts_maison": {
+  "path": "img/recette/yaourts_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7d8078",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sampling_finished_yogurt.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sampling finished yogurt.jpg",
   "kind": "photo",
   "avif": true
  },
