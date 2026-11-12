@@ -253,3 +253,12 @@ const ok128 = {
 console.log("   UI/UX :", JSON.stringify(ok128));
 check("128 UI/UX : sommaire des pages longues, Fêtes allégée, recherche sans impasse, titre d'accueil, sommaire de fiche dégagé, cibles 44 px, clavier « Rechercher »",
   Object.values(ok128).every(Boolean));
+
+// 129 (12/11/2026) : « Ce qui te sert le plus » (Profil) nomme chaque écran en clair, jamais par son identifiant brut
+// (« zero-dechet », « street-food »). Chaque route de l'appli a son libellé.
+const app129 = rf127("src/App.tsx", "utf8"), prof129 = rf127("src/pages/Profil.tsx", "utf8");
+const routes129 = [...app129.matchAll(/case "([a-z-]+)":/g)].map((m) => m[1]);
+const bloc129 = prof129.slice(prof129.indexOf("const SCREEN_LABEL"), prof129.indexOf("};", prof129.indexOf("const SCREEN_LABEL")));
+const sansLibelle129 = routes129.filter((r) => !new RegExp(`(^|[ \\t])"?${r}"?: "`, "m").test(bloc129));
+console.log("   profil : routes", routes129.length, "· sans libellé", sansLibelle129.join(",") || 0);
+check("129 profil : chaque écran a un libellé en clair dans « Ce qui te sert le plus »", routes129.length > 20 && !sansLibelle129.length && /screenLabel\(k\)/.test(prof129));

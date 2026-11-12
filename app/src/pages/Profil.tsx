@@ -587,8 +587,27 @@ const SCREEN_LABEL: Record<string, string> = {
   restes: "Restes",
   enfants: "Enfants",
   techniques: "Techniques",
+  technique: "Fiches techniques",
   profil: "Profil",
+  region: "Régions du monde",
+  pains: "Pains et pâtes",
+  sauces: "Sauces",
+  menu: "Menus",
+  "zero-dechet": "Zéro déchet",
+  "bien-choisir": "Bien choisir",
+  "pique-nique": "Pique-nique",
+  "street-food": "Street food",
+  imports: "Favoris importés",
+  credits: "Crédits",
+  apprendre: "Apprendre",
+  icones: "Icônes",
+  partage: "Partage",
+  recettes: "Toutes les recettes",
+  dictionnaire: "Dictionnaire",
+  ingredient: "Fiches ingrédients",
 };
+/** Libellé d'un écran ; un écran ajouté plus tard sans libellé reste lisible (« nouvel-ecran » → « Nouvel ecran »). */
+const screenLabel = (k: string) => SCREEN_LABEL[k] ?? (k.charAt(0).toUpperCase() + k.slice(1)).replace(/-/g, " ");
 /** Ce que l'appareil mesure lui-même, sans rien envoyer (audit dév/UX 2026-10-21 §5.7-5.8). */
 function DeviceInfo() {
   const usage = useStore((s) => s.usage) ?? {};
@@ -610,7 +629,7 @@ function DeviceInfo() {
           "Le temps d'ouverture s'affichera après la prochaine ouverture."
         )}
       </p>
-      {top.length > 0 && <p className="small">Ce qui te sert le plus : {top.map(([k, n]) => `${SCREEN_LABEL[k] ?? k} (${n})`).join(", ")}.</p>}
+      {top.length > 0 && <p className="small">Ce qui te sert le plus : {top.map(([k, n]) => `${screenLabel(k)} (${n})`).join(", ")}.</p>}
       <label className="switch">
         <input
           type="checkbox"
