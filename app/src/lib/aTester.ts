@@ -5,10 +5,10 @@ import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
 export const PRIORITE: string[] = [
-  "moules_frites", "nikujaga", "curry_legumes_coco", "locro_vegetarien", "chop_suey_boeuf", "bacalhau_bras", "pyttipanna_boeuf", "linguine_moules_scarole",
-  "sapasui", "muffins_oeufs_legumes", "dhal_epinards_coco", "tajine_poulet_citron", "fiskefrikadeller", "anda_curry", "bar_croute_macadamia", "salade_haricots_blancs_thon",
-  "cassolettes_crevettes_poireaux", "yasai_kare", "fiskesuppe", "falafels", "goan_fish_curry", "pates_pesto_vert_poireau", "shakshuka_verte_feta", "bamia_gombo",
-  "chou_oeufs_saute", "curry_pois_chiches_express", "moules_marinieres", "gratin_chou_fleur_lentilles", "lieu_croute_herbes", "kottu_roti",
+  "moules_frites", "curry_pois_chiches_express", "fiskefrikadeller", "curry_legumes_coco", "spaghetti_sautes_crevettes", "shakshuka_verte_feta", "muffins_oeufs_legumes", "bacalhau_bras",
+  "dhal_epinards_coco", "linguine_moules_scarole", "thiou_poulet", "yasai_kare", "fiskesuppe", "chana_masala", "chop_suey_boeuf", "salade_haricots_blancs_thon",
+  "anda_curry", "choucroute_mer", "thukpa", "crevettes_coco_citron_vert", "nouilles_sautees_legumes_oeuf", "gratin_chou_fleur_lentilles", "nikujaga", "falafels",
+  "goan_fish_curry", "pad_see_ew", "moules_normande", "pyttipanna_boeuf", "encornets_persillade", "dal_tadka",
 ];
 
 /** Ce qu'on note à chaque essai, dans « Mon carnet » de la fiche. */

@@ -3,6 +3,7 @@
 // YouTube et vers les favoris TikTok importés qui traitent du sujet. Rédaction : NON TESTÉE (Tome 7 §2).
 
 import { MORE_TECHNIQUES } from "./techniques2";
+import { ASIA_TECHNIQUES } from "./techniques3";
 
 export interface Technique {
   id: string;
@@ -150,17 +151,24 @@ const BASE: Technique[] = [
     errors: ["Sauce versée trop tôt : la peau ramollit et le sucre brûle."], keys: ["cuire côté peau", "laquer"], query: "cuisson poulet côté peau croustillante" },
   { id: "wok", name: "Sauter au wok (ou à la poêle)", family: "Équipement", level: 1,
     why: "Cuisson très rapide qui garde le croquant des légumes.", gear: "Wok ou grande poêle ; tout coupé avant d'allumer.",
-    steps: ["Mise en place complète : la cuisson dure 5 minutes.", "Wok fumant, peu d'huile neutre.", "Cuis par petites quantités, en remuant sans cesse.", "Sauce à la fin, 30 s."],
+    steps: ["Mise en place complète : la cuisson dure 5 minutes.",
+      "Wok préchauffé à sec 2 min, jusqu'à fumer ; puis peu d'huile neutre (arachide, colza), qui doit onduler.",
+      "Cuis par petites fournées (300 g au plus), viande d'abord, réservée ; puis les légumes, du plus dur au plus tendre, en remuant sans cesse.",
+      "Laisse 20 à 30 s sans toucher de temps en temps : c'est là que se fait le goût grillé (wok hei).",
+      "Sauce à la fin, versée le long des parois brûlantes, 30 s."],
     errors: ["Trop d'ingrédients à la fois : ça bout au lieu de sauter.", "Sur induction : poêle à fond plat plutôt qu'un wok rond."], keys: ["sauter au wok"], query: "sauter au wok à la maison induction" },
 ];
 
-export const TECHNIQUES: Technique[] = [...BASE, ...MORE_TECHNIQUES];
+export const TECHNIQUES: Technique[] = [...BASE, ...MORE_TECHNIQUES, ...ASIA_TECHNIQUES];
 
 export const TECH_BY_ID = Object.fromEntries(TECHNIQUES.map((t) => [t.id, t]));
 
 /** Associe un libellé de technique d'une recette à une fiche. */
 export function techniqueFor(label: string): Technique | undefined {
   const l = label.toLowerCase();
+  // le mot exact d'abord (« Riz à sushi » ne doit pas tomber sur la fiche générale du riz), puis l'inclusion
+  const exact = TECHNIQUES.find((t) => t.keys.some((key) => key.toLowerCase() === l));
+  if (exact) return exact;
   return TECHNIQUES.find((t) => t.keys.some((key) => { const k = key.toLowerCase(); return l === k || l.includes(k) || k.includes(l); }));
 }
 

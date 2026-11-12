@@ -29,6 +29,9 @@ for _d in RECIPES:
     if _ac:
         if not _d["accords_a"]: _d["accords_a"] = list(_ac[0])
         if not _d["accords_sa"]: _d["accords_sa"] = list(_ac[1])
+# audit cuisines d'Asie (12/11/2026) : régions, faux végétariens, riz rincé, wok fumant, thé et accords
+import complements_asie as _ASIE
+print("audit cuisines d'Asie :", _ASIE.apply(RECIPES))
 # audit chef professionnel (12/11/2026) : cuisson à cœur, repos des viandes, corrections ponctuelles
 import complements_pro as _PRO
 print("audit chef pro :", _PRO.apply(RECIPES))
@@ -164,7 +167,7 @@ RULES = [
 # 12 macro-régions (Tome 1 §5.1) ; les libellés du Tome 1, du Tome 4 et des fiches sont ramenés à un identifiant
 MACRO_KEYS = [("france", "France"), ("europe_sud", "Europe du Sud"), ("europe_nord", "Europe du Nord"), ("maghreb", "Maghreb"),
               ("maghreb", "Afrique du Nord"), ("afrique", "Afrique subsaharienne"), ("moyen_orient", "Moyen-Orient"),
-              ("asie_sud_est", "Asie du Sud-Est"), ("asie_sud", "Asie du Sud"), ("asie_est", "Asie de l'Est"),
+              ("asie_sud_est", "Asie du Sud-Est"), ("asie_sud", "Asie du Sud"), ("asie_sud", "Asie centrale"), ("asie_est", "Asie de l'Est"),
               ("amerique_nord", "Amérique du Nord"), ("amerique_latine", "Amérique latine"), ("oceanie", "Océanie")]
 def macro_id(label):
     for k, prefix in MACRO_KEYS:

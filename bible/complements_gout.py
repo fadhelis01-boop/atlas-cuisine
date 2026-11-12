@@ -33,6 +33,9 @@ ACIDE = {
     "muffins_oeufs_legumes": ("200 g|de tomates cerises, pour servir|Tomate cerise|1?", "Avec quelques tomates cerises : leur acidité allège l'œuf et le fromage."),
     "plov": ("3|tomates (salade achichuk)|Tomate|1?", "À côté, la salade achichuk : tomates et oignon en fines lamelles, sel, poivre ; sa fraîcheur équilibre le riz gras."),
     # Asie
+    "agneau_cumin_xinjiang": ("1 c. à c.|de vinaigre de cidre|" + CIDRE + "|1?", "Un trait de vinaigre au dernier moment (le vinaigre noir chinois, si tu en as) : il réveille le cumin et coupe le gras de l'agneau."),
+    "agedashi_tofu": ("1|citron (ou yuzu), en quartiers|Citron|1?", "Quelques gouttes de citron (de yuzu au Japon) sur le radis râpé : il allège la friture."),
+    "samgyetang": ("1 c. à s.|de vinaigre de cidre (radis vinaigré)|" + CIDRE + "|1?", "À côté, comme en Corée, du kimchi de radis (kkakdugi), ou des dés de radis au vinaigre et au sel : son acidité répond au bouillon doux."),
     "char_siu_poulet": PICKLES,
     "poulet_teriyaki": PICKLES,
     "saumon_teriyaki": PICKLES,

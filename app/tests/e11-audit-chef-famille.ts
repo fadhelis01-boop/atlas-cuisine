@@ -171,3 +171,26 @@ const bol124 = RECIPES.filter((r) => r.ingredients.some((l) => /^\d+(\/\d+)? bol
 console.log("   chef pro : repères à cœur", core124, "· sans faux repère", noFalse124, "· gluten ha kao", gluten124, "· fours chiffrés", oven124, "· pesées au bol", bol124.map((r) => r.id).join(",") || 0);
 check("124 chef pro : cuisson à cœur chiffrée pour la volaille et la viande hachée, sans faux repère ; amidon de blé = gluten ; fours et fritures chiffrés ; pas de pesée au bol",
   core124 && noFalse124 && gluten124 && oven124 && !bol124.length);
+
+// 125 audit « cuisinier senior, cuisines d'Asie » (12/11/2026, bible/AUDIT_CUISINE_ASIATIQUE_2026-11-12.md) : classiques
+// de chaque pays présents, pas de faux végétarien (sauce de poisson, dashi à la bonite), riz rincé, wok fumant, régions
+// rangées, fiches techniques d'Asie, une boisson conseillée sur chaque plat d'Asie.
+import { TECHNIQUES as T125, techniqueFor as tf125 } from "../src/lib/techniques";
+const ASIE_IDS = ["xiao_long_bao", "hong_shao_rou", "agneau_cumin_xinjiang", "mantou", "dan_tat", "takoyaki", "sukiyaki", "yakisoba", "dorayaki", "agedashi_tofu",
+  "samgyetang", "jajangmyeon", "doenjang_jjigae", "hotteok", "buuz", "vindaloo", "khichdi", "poha", "rava_idli", "vada_pav", "pani_puri", "rasam", "kulfi", "jalebi",
+  "dal_bhat", "momo_legumes", "thukpa", "shorshe_maach", "panang_poulet", "gai_yang", "com_tam", "bun_bo_hue", "cha_ca_hanoi", "char_kway_teow", "kaya_toast", "mohinga", "lagman", "nasu_dengaku",
+  "teh_tarik", "cha_yen", "ca_phe_sua_da", "boricha"];
+const missing125 = ASIE_IDS.filter((id) => !RECIPE_BY_ID[id]);
+const asie125 = RECIPES.filter((r) => /^asie/.test(r.macro));
+const FISH125 = /Sauce de poisson|Dashi|Bonite|Pâte de crevettes|Crevettes séchées|Anchois|Fumet/;
+const fauxVeg125 = RECIPES.filter((r) => r.cats.includes("vegetarien") && r.ingredients.some((l) => !l.optional && FISH125.test(l.ref ?? ""))).map((r) => r.id);
+const curry125 = RECIPES.filter((r) => r.cats.includes("vegetarien") && r.ingredients.some((l) => /Pâte de curry/.test(l.ref ?? "") && !/sans crevettes/.test(l.label))).map((r) => r.id);
+const riz125 = asie125.filter((r) => r.id !== "nam_tok_boeuf" && r.ingredients.some((l) => /Riz rond|Riz gluant/.test(l.ref ?? "") && l.weight >= 2) && !/rinc|lave|eau claire|tremp/.test(norm(r.steps.join(" ")))).map((r) => r.id);
+const wok125 = asie125.filter((r) => !/curry|kai_jeow|kadai/.test(r.id) && /wok/.test(norm(r.equipment + " " + r.steps.join(" "))) && !/fum|feu vif|tres chaud|tres vif|feu maximal|feu fort/.test(norm(r.steps.join(" ")))).map((r) => r.id);
+const regions125 = [...new Set(asie125.map((r) => r.regionPath.join(" › ")))].filter((p) => /\(|Ouzbékistan/.test(p) && !p.startsWith("Asie centrale") || p === "Asie de l'Est");
+const tech125 = ["dashi", "riz-asie", "plier-raviolis", "tadka", "pate-curry", "nouilles-asie", "lacto-fermentation"].every((id) => T125.some((t) => t.id === id)) && tf125("Riz à sushi")?.id === "riz-asie";
+const drinks125 = asie125.filter((r) => r.role === "plat" && !r.drinksNoAlcohol.length).map((r) => r.id);
+console.log("   cuisines d'Asie : classiques manquants", missing125.join(",") || 0, "· faux végétariens", [...fauxVeg125, ...curry125].join(",") || 0, "· riz non rincé", riz125.join(",") || 0,
+  "· wok sans repère", wok125.join(",") || 0, "· régions", regions125.join(",") || 0, "· techniques", tech125, "· plats sans boisson", drinks125.length);
+check("125 cuisines d'Asie : classiques présents, aucun faux végétarien, riz rincé ou trempé, wok fumant, régions rangées, fiches techniques d'Asie, une boisson sur chaque plat",
+  !missing125.length && !fauxVeg125.length && !curry125.length && !riz125.length && !wok125.length && !regions125.length && tech125 && !drinks125.length);
