@@ -43,5 +43,5 @@ mesuré sur les données exportées (`app/src/data/recipes.json`), puis corrigé
 ## 4. Reste à faire
 
 - 15 classiques sans photo juste (les banques libres n'en ont pas) : pommes Anna, pigeon, fond brun, court-bouillon, Choron, poivrade, raie, maquereaux au vin blanc, bulots, bavarois, vacherin, puits d'amour, faisan, sauces diable et charcutière. À photographier soi-même lors des tests.
-- 65 entrées et desserts français ont encore moins de 4 étapes (souvent des préparations courtes : salades, mousses, compotes).
+- ~~65 entrées et desserts français en moins de 4 étapes~~ : réécrits le 12/11 (`complements_etapes_fr3.py`, `complements_etapes_fr4.py`, mêmes ingrédients) ; test 123 étendu aux entrées et desserts.
 - Toutes ces fiches restent à tester en cuisine.

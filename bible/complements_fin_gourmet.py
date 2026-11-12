@@ -136,7 +136,9 @@ ASTUCES.pop("pissaladiere_")
 # les 64 plats français du quotidien réécrits au niveau étalon (complements_etapes_fr*.py)
 from complements_etapes_fr import ETAPES as _E1, ASTUCES as _A1
 from complements_etapes_fr2 import ETAPES as _E2, ASTUCES as _A2
-for _e in (_E1, _E2): ETAPES.update(_e)
+from complements_etapes_fr3 import ETAPES as _E3
+from complements_etapes_fr4 import ETAPES as _E4
+for _e in (_E1, _E2, _E3, _E4): ETAPES.update(_e)
 for _a in (_A1, _A2): ASTUCES.update(_a)
 # une astuce pour chaque fiche française qui n'en avait aucune
 from complements_astuces_fr import ASTUCES as _A3

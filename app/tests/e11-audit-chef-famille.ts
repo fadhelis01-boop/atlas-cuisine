@@ -148,7 +148,7 @@ const FG_IDS = ["steak_au_poivre", "canard_orange", "tete_de_veau_gribiche", "pa
 const missing123 = FG_IDS.filter((id) => !RECIPE_BY_ID[id]);
 const ETALONS_FG = ["moules_marinieres", "sole_normande", "bouchees_reine", "blanquette_poulet", "baeckeoffe_volaille", "pissaladiere", "quenelles_nantua_simple", "croque_monsieur", "saint_jacques_poelees"];
 const shortFG = ETALONS_FG.filter((id) => (RECIPE_BY_ID[id]?.steps.length ?? 0) < 4)
-  .concat(RECIPES.filter((r) => r.macro === "france" && r.role === "plat" && r.steps.length < 4).map((r) => r.id)); // les 64 du quotidien aussi (12/11)
+  .concat(RECIPES.filter((r) => r.macro === "france" && ["plat", "entree", "dessert"].includes(r.role) && ["Plat", "Entrée", "Dessert"].includes(r.kind) && r.steps.length < 4).map((r) => r.id)); // plats, entrées et desserts du quotidien aussi (12/11)
 const terroir = RECIPES.filter((r) => r.macro === "france" && r.role === "plat" && !/enfants|quotidien|Anti-gaspi|Food fusion/.test(r.regionPath.join(" ")));
 const sansAccord = terroir.filter((r) => !r.drinksAlcohol.length || !r.drinksNoAlcohol.length);
 const sansAstuceFR = RECIPES.filter((r) => r.macro === "france" && !r.tips.length).map((r) => r.id); // 12/11 : une astuce par fiche française
