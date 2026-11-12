@@ -16,7 +16,7 @@ import { ALLERGENS, INGREDIENTS, RECIPE_BY_ID, useRecipeVideos } from "../lib/da
 import { evaluateLines, verdict } from "../lib/engine";
 import { href, goBack } from "../lib/router";
 import { pushRecent, setState, toggleFavorite, uid, useProfile, useStore, getState } from "../lib/store";
-import { durationsIn, gestureLabel, minutes, ovenPlan, plain, scaleQty, scaleStep, costLabel, levelLabel } from "../lib/text";
+import { durationsIn, gestureLabel, minutes, norm, ovenPlan, plain, scaleQty, scaleStep, costLabel, levelLabel } from "../lib/text";
 import { speak, stopSpeaking, ttsAvailable } from "../lib/speech";
 import { startTimer } from "../lib/timers";
 import { techniqueFor, youtubeSearch } from "../lib/techniques";
@@ -103,6 +103,24 @@ function Lexique({ text }: { text: string }) {
       <dl>{terms.map((t) => <div key={t.term}><dt>{t.tech ? <a href={href(`/technique/${t.tech}`)}>{t.term}</a> : t.term}</dt><dd>{t.def}</dd></div>)}</dl>
     </details>
   );
+}
+
+// audit chef professionnel (12/11/2026) : la convention du four, ce que change le nombre de portions, la règle du froid
+const OVEN_NOTE = "Températures données pour un four en chaleur statique (sauf mention « chaleur tournante ») ; en chaleur tournante, "
+  + "compte 15 à 20 °C de moins et surveille quelques minutes plus tôt. Chaque four chauffe différemment : fie-toi aux repères de chaque étape.";
+const COLD_RULE = "Au frais moins de 2 h après la cuisson, dans une boîte fermée peu profonde (il refroidit vite) ; "
+  + "réchauffé une seule fois, jusqu'à être fumant à cœur (63 °C au moins).";
+function scaleNote(r: Recipe, factor: number): string {
+  const t = norm(`${r.title} ${r.equipment} ${r.steps.join(" ")}`);
+  const parts = ["Quantités adaptées."];
+  if (/moule|cercle|cake|gateau|tarte|terrine|plat a gratin/.test(t))
+    parts.push(factor > 1 ? "Garde la même épaisseur : un moule plus grand (ou deux moules) ; le temps reste proche, vérifie la cuisson à la lame." : "Prends un moule plus petit pour garder la même épaisseur ; vérifie la cuisson quelques minutes plus tôt.");
+  if (/roti|gigot|poulet entier|volaille entiere|cote de boeuf|canard entier|pintade/.test(t))
+    parts.push("Une pièce plus grosse ou plus petite change le temps de cuisson : fie-toi au thermomètre, pas à la minuterie.");
+  if (r.role === "dessert" && /levure|levain|blancs? (montes?|en neige)|meringue|genoise|biscuit/.test(t) && factor > 2)
+    parts.push("En pâtisserie, au-delà du double, fais deux fournées plutôt qu'une grande.");
+  if (parts.length === 1) parts.push("Les temps et températures ne changent pas ; une poêle ou une cocotte trop pleine cuit moins bien : en deux fois s'il le faut.");
+  return parts.join(" ");
 }
 
 const TOC: [string, string][] = [["r-ingredients", "Ingrédients"], ["r-etapes", "Étapes"], ["r-finition", "Finition"], ["r-aide", "Si ça rate"]];
@@ -306,6 +324,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
             <span><strong>{portions}</strong> {r.role === "boisson" || r.kind === "Sauce" ? "portions" : "personnes"}</span>
             <button className="btn small ghost" onClick={() => setPortions(portions + 1)} aria-label="Plus de portions">+</button>
           </div>
+          {Math.abs(factor - 1) > 0.01 && <p className="small scale-note"><Icon name="alert" size={16} className="ic-inline" /> {scaleNote(r, factor)}</p>}
           <ul className="ingredients">
             {lines.map((l, i) => (
               <li key={i} className={l.optional ? "opt" : ""}>
@@ -326,6 +345,7 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
 
         <Section title="Étapes" id="r-etapes">
           <BeforeYouStart r={r} />
+          {/\bfour\b/i.test(r.steps.join(" ")) && /\d{2,3} ?°C/.test(r.steps.join(" ")) && <p className="small oven-note">{OVEN_NOTE}</p>}
           <ol className="steps">
             {r.steps.map((s, i) => (
               <li key={i}>
@@ -367,7 +387,8 @@ export default function RecipePage({ id, q }: { id: string; q: URLSearchParams }
       <summary><h2 className="h3">Bon à savoir : conservation, enfants, boissons</h2></summary>
       <Section title="Conservation"><p>{/cong[eé]l/i.test(r.storage) && <span className="pill freeze"><Icon name="snowflake" size={14} className="ic-inline" /> Se congèle : double les quantités et garde une part pour un soir pressé</span>}
         {/cong[eé]l/i.test(r.storage) && <button type="button" className="btn small ghost" onClick={() => { setPortions(portions * 2); document.getElementById("r-ingredients")?.scrollIntoView({ behavior: "smooth" }); }}>Doubler pour en congeler la moitié ({portions * 2} parts)</button>}
-        {" "}{plain(r.storage)}</p></Section>
+        {" "}{plain(r.storage)}</p>
+        {/frigo/i.test(r.storage) && r.role !== "boisson" && <p className="small">{r.role === "dessert" ? COLD_RULE.split(" ; ")[0] + "." : COLD_RULE}</p>}</Section>
       <Section title="Enfants">
         <p>{plain(r.kids)}</p>
         {r.kidHelp && <p><Icon name="kid" size={16} className="ic-inline" /> {r.kidHelp}</p>}

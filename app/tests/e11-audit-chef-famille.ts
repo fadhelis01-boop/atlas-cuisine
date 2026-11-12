@@ -158,3 +158,16 @@ console.log("   fin gourmet : classiques manquants", missing123.length, "· éta
   "· régions FR", regionsFR.size, "· fiches FR sans astuce", sansAstuceFR.length);
 check("123 fin gourmet : classiques, fonds et sauces, gibier et abats, grande pâtisserie présents ; classiques régionaux en ≥ 4 étapes ; accord régional sur chaque plat de terroir ; régions unifiées ; gestes au lexique",
   !missing123.length && !shortFG.length && !sansAccord.length && !regionsFR.has("Bourgogne") && !regionsFR.has("Franche-Comté") && !regionsFR.has("—") && termsFG && !sansAstuceFR.length);
+
+// 124 audit « chef professionnel senior » (12/11/2026) : la volaille et la viande hachée cuites vite ont un repère à cœur
+// chiffré ; pas de faux repère sur le magret, le boudin ou le poulet déjà cuit ; amidon de blé = gluten ; fours et fritures
+// chiffrés ; pas de pesées au bol dans une recette.
+import { evaluate as ev124 } from "../src/lib/engine";
+const core124 = ["souvlaki_poulet", "burger_maison", "escalopes_dinde_champignons", "gyoza", "tacos_al_pastor"].every((id) => RECIPE_BY_ID[id].steps.some((s) => /(74|70) °C/.test(s)));
+const noFalse124 = ["magret_cerises", "boudin_noir_pommes", "croque_poulet_pesto", "soupe_alphabet"].every((id) => !RECIPE_BY_ID[id].steps.some((s) => /Volaille cuite à cœur|Viande hachée : 70|Saucisses et porc cuits/.test(s)));
+const gluten124 = ev124(RECIPE_BY_ID.ha_kao).allergens.has("GL");
+const oven124 = /250 à 280 °C/.test(RECIPE_BY_ID.pizza_margherita.steps.join(" ")) && /170 °C/.test(RECIPE_BY_ID.kelewele.steps.join(" "));
+const bol124 = RECIPES.filter((r) => r.ingredients.some((l) => /^\d+(\/\d+)? bols?$/.test(l.qty.trim()) && /^(Farine|Sucre|Riz|Fécule|Semoule)/.test(l.ref ?? "")));
+console.log("   chef pro : repères à cœur", core124, "· sans faux repère", noFalse124, "· gluten ha kao", gluten124, "· fours chiffrés", oven124, "· pesées au bol", bol124.map((r) => r.id).join(",") || 0);
+check("124 chef pro : cuisson à cœur chiffrée pour la volaille et la viande hachée, sans faux repère ; amidon de blé = gluten ; fours et fritures chiffrés ; pas de pesée au bol",
+  core124 && noFalse124 && gluten124 && oven124 && !bol124.length);

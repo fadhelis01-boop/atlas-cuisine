@@ -1,0 +1,68 @@
+import detail from "../../src/data/recipes_detail.json";
+import { RECIPES, INGREDIENTS, mergeDetails } from "../../src/lib/data";
+import { evaluate } from "../../src/lib/engine";
+import { norm } from "../../src/lib/text";
+mergeDetails(detail as never);
+const P = RECIPES.filter((r) => ["plat", "entree", "dessert"].includes(r.role));
+const txt = (r: any) => norm(r.steps.join(" "));
+const out: Record<string, unknown> = {};
+// 1. volailles sans repère de cuisson à cœur
+const volaille = P.filter((r) => r.ingredients.some((l) => /poulet|dinde|canard|pintade|caille|volaille/i.test(l.ref ?? "") && l.weight >= 2) && /(rot|four|poel|grill|frit|saisi|cuit|mijot|braise)/.test(txt(r)));
+const volNoCore = volaille.filter((r) => !/(7[0-9]|8[0-5]) ?.?c|jus (est )?clair|cuit a coeur|blanc a coeur|se detache|s.effiloch|plus de rose|chair (est )?blanche/.test(txt(r)));
+out.volaille = [volaille.length, volNoCore.length, volNoCore.slice(0, 25).map((r) => r.id).join(" ")];
+// 2. viande hachée / porc sans cuisson à cœur
+const hache = P.filter((r) => r.ingredients.some((l) => /hach|porc|saucisse|merguez/i.test(l.ref ?? "") && l.weight >= 2));
+const hacheNo = hache.filter((r) => !/(6[5-9]|7[0-9]) ?.?c|cuit a coeur|plus de rose|bien cuit|cuits? a coeur|chaude?s? a coeur|jus clair/.test(txt(r)));
+out.hache = [hache.length, hacheNo.length, hacheNo.slice(0, 25).map((r) => r.id).join(" ")];
+// 3. étapes de four sans température
+const fourNoT = P.filter((r) => r.steps.some((s) => /\bfour\b|enfourn/i.test(s)) && !/\d{2,3} ?°/.test(r.steps.join(" ")));
+out.fourSansTemp = [fourNoT.length, fourNoT.slice(0, 25).map((r) => r.id).join(" ")];
+// 4. thermostat à l'ancienne
+out.thermostat = RECIPES.filter((r) => /\(th\.|thermostat/.test(r.steps.join(" "))).length;
+// 5. friture sans température d'huile
+const frit = RECIPES.filter((r) => /friture|frire|frit(es)? .*huile|bain d.huile/i.test(r.steps.join(" ") + r.equipment) && r.ingredients.some((l) => /huile/i.test(l.label) && /(50 cl|1 l|75 cl|1,5 l|litre)/i.test(l.qty + " " + l.label)));
+const fritNo = frit.filter((r) => !/1[5-9]\d ?°/.test(r.steps.join(" ")));
+out.friture = [frit.length, fritNo.length, fritNo.slice(0, 25).map((r) => r.id).join(" ")];
+// 6. lignes hors référentiel qui portent un allergène dans le libellé, sans « extra »
+const ALL = /\b(lait|beurre|creme|fromage|oeuf|farine|ble|pain|pate|brioche|crevette|homard|crabe|moule|huitre|poisson|anchois|noix|noisette|amande|pistache|cajou|arachide|cacahuete|sesame|soja|moutarde|celeri|lupin)/;
+const allerg: string[] = [];
+for (const r of RECIPES) for (const l of r.ingredients) if (!l.ref && ALL.test(norm(l.label)) && !(l.extra ?? []).length) allerg.push(`${r.id}: ${l.label}`);
+out.allergenesHorsRef = [allerg.length, allerg.slice(0, 40).join(" | ")];
+// 7. riz cuit / restes sans consigne de refroidissement
+const riz = RECIPES.filter((r) => /riz cuit|riz froid|reste de riz/.test(norm(r.ingredients.map((l) => l.label).join(" "))));
+out.rizRestes = [riz.length, riz.filter((r) => !/refroidi|frigo|24 h|1 jour/.test(norm(r.storage + " " + r.tips.join(" ")))).map((r) => r.id).join(" ")];
+// 8. portions : viande par part
+const meatPer: string[] = [];
+for (const r of P.filter((x) => x.role === "plat")) {
+  let g = 0;
+  for (const l of r.ingredients) {
+    const sec = INGREDIENTS[l.ref ?? ""]?.section ?? "";
+    if (!/^(Viandes|Poissons)/.test(sec) || l.weight < 3) continue;
+    const m = l.qty.replace(",", ".").match(/^([\d.]+)\s*(kg|g)\b/);
+    if (m) g += parseFloat(m[1]) * (m[2] === "kg" ? 1000 : 1);
+  }
+  const pp = g / r.portions;
+  if (g && (pp < 80 || pp > 450)) meatPer.push(`${r.id}:${Math.round(pp)}g`);
+}
+out.viandeParPart = [meatPer.length, meatPer.slice(0, 30).join(" ")];
+// 9. lignes sans quantité (hors sel/poivre/eau, optionnelles)
+const noQty = RECIPES.filter((r) => r.ingredients.some((l) => !l.qty.trim() && l.ref && !/^(Sel|Poivre)/.test(l.ref) && !l.optional));
+out.sansQuantite = [noQty.length, noQty.slice(0, 20).map((r) => r.id).join(" ")];
+// 10. cuisson œufs / crème : bain-marie sans T, crème anglaise sans 83/84 °C
+const anglaise = RECIPES.filter((r) => /creme anglaise|nappe la cuillere|a la nappe/.test(txt(r)) && r.ingredients.some((l) => /jaune|oeuf/i.test(l.ref ?? "")) && /lait|creme/.test(norm(r.ingredients.map((l) => l.label).join(" "))));
+out.anglaise = [anglaise.length, anglaise.filter((r) => !/8[0-5] ?.?c/.test(txt(r))).map((r) => r.id).slice(0, 20).join(" ")];
+// 11. sel : plats salés sans sel nommé nulle part (liste ni étapes)
+const noSalt = P.filter((r) => r.role !== "dessert" && !r.ingredients.some((l) => /sel/i.test(l.ref ?? "") || /\bsel\b/i.test(l.label)) && !/\bsel|salee?s?\b|sale\b/.test(txt(r)));
+out.sansSel = [noSalt.length, noSalt.slice(0, 25).map((r) => r.id).join(" ")];
+// 12. repos de viande rôtie / grillée
+const roti = P.filter((r) => r.ingredients.some((l) => /(rôti|gigot|côte de bœuf|entrecôte|magret|rumsteck|bavette|filet)/i.test((l.ref ?? "") + l.label) && l.weight === 3) && /(rot|grill|saisi|poel)/.test(txt(r)));
+out.reposViande = [roti.length, roti.filter((r) => !/repos|reposer|repose/.test(txt(r))).map((r) => r.id).slice(0, 25).join(" ")];
+// 13. poisson cru / œuf cru / lait cru : avertissement grossesse
+const raw = RECIPES.filter((r) => /cru|tartare|carpaccio|ceviche|marine au citron|sashimi|crudo/.test(norm(r.title)) && r.ingredients.some((l) => /(Saumon|Thon|Bœuf|Bar|Dorade|poisson)/i.test(l.ref ?? "")));
+out.cruSansAvert = [raw.length, raw.filter((r) => !/enceinte|cru/.test(norm(r.tips.join(" ") + r.kids))).map((r) => r.id).join(" ")];
+// 14. pâtisserie : pesées en volume (tasses, verres)
+out.volumes = RECIPES.filter((r) => r.ingredients.some((l) => /\b(tasse|verre|bol)\b/i.test(l.qty))).map((r) => r.id).slice(0, 30).join(" ");
+// 15. ratios pâte brisée / sucrée
+const pb = RECIPES.filter((r) => /pate_brisee|pate_sucree|pate_sablee/.test(r.id)).map((r) => `${r.id}: ${r.ingredients.map((l) => l.qty + " " + l.label).join(" ; ")}`);
+out.pates = pb;
+console.log(JSON.stringify(out, null, 1));

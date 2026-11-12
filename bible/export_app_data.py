@@ -29,6 +29,9 @@ for _d in RECIPES:
     if _ac:
         if not _d["accords_a"]: _d["accords_a"] = list(_ac[0])
         if not _d["accords_sa"]: _d["accords_sa"] = list(_ac[1])
+# audit chef professionnel (12/11/2026) : cuisson à cœur, repos des viandes, corrections ponctuelles
+import complements_pro as _PRO
+print("audit chef pro :", _PRO.apply(RECIPES))
 # audit gourmet §4.2 : l'acidité que chaque cuisine donne au plat (dans la recette ou à table), ou la raison de s'en passer
 from complements_gout import ACIDE as _ACIDE, EXTRA as _EXTRA_G, SALADE as _SALADE, SANS_ACIDE as _SANS_ACIDE
 _BYB = {d["id"]: d for d in RECIPES}
