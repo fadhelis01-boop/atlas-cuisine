@@ -128,4 +128,5 @@ SANS_ACIDE = {
     "rfissa": "Fenugrec, ras el-hanout, lentilles : saveur chaude voulue, sans acide.",
     "tajine_agneau_pruneaux": "Sucré-salé du tajine aux pruneaux : le miel et le fruit tiennent la place de l'acide.",
     "sapasui": "Vermicelles sautés samoans, simples par tradition (soja, gingembre).",
+    "chaffle": "Juste un œuf et du fromage fondu : l'acide casserait cette simplicité ; servi en sandwich, la garniture (cornichon, tomate) l'apporte déjà.",
 }
