@@ -11,13 +11,17 @@ import { href } from "../lib/router";
 import { zoneOf } from "../lib/season";
 import { setState, uid, useProfile, useStore } from "../lib/store";
 import { minutes } from "../lib/text";
-import type { Leftover } from "../lib/types";
+import type { Leftover, Recipe } from "../lib/types";
 import { Chip, Cover, Page } from "../components/ui";
 import { toast } from "../lib/toast";
 import { encodeShare, shareUrl, weekToIcs } from "../lib/partage";
 import { downloadText, sendLink } from "../lib/sendLink";
+import { batchPlan, batchSuggestions, batchable, safeForDay, RANGEMENT, type Phase } from "../lib/batch";
 
 const SLOT_LABEL: Record<Slot, string> = { midi: "Midi", soir: "Soir" };
+type CantineKind = "viande" | "poisson" | "oeuf" | "vegetarien";
+const CANTINE_LABEL: Record<CantineKind, string> = { viande: "viande", poisson: "poisson", oeuf: "œufs", vegetarien: "végé" };
+const PHASE_LABEL: Record<Phase, string> = { long: "D'abord, ce qui mijote longtemps", four: "Pendant ce temps, au four", plaques: "Pour finir, sur les plaques" };
 /** Libellé d'un accompagnement : fiche reliée ou produit à acheter. */
 export const sideLabel = (side: string) =>
   side.startsWith("achat:") ? side.slice(6).split(" (")[0].split(" / ")[0].toLowerCase() : (RECIPE_BY_ID[side]?.title.split(" (")[0].toLowerCase() ?? side);
@@ -76,6 +80,14 @@ export default function Semaine({ add }: { add: string | null }) {
     setState((s) => {
       s.weekPrefs = { ...prefs, ...p };
     });
+  const cantineMenu = useStore((s) => s.cantineMenu) ?? {};
+  const setCantine = (day: string, v: CantineKind | "") =>
+    setState((s) => {
+      const next = { ...(s.cantineMenu ?? {}) };
+      if (v) next[day] = v;
+      else delete next[day];
+      s.cantineMenu = next;
+    });
   const fill = (base: WeekPlan, onlyDays = days) => {
     if (!left) return;
     save(
@@ -91,6 +103,7 @@ export default function Semaine({ add }: { add: string | null }) {
         kidsVerdict,
         today: weekDays(0)[0],
         cantine: !!prefs.cantine,
+        cantineMenu,
       }),
     );
   };
@@ -113,6 +126,7 @@ export default function Semaine({ add }: { add: string | null }) {
       recent: new Set([...recent, ...(cur ? [cur] : [])]),
       today: weekDays(0)[0],
       cantine: !!prefs.cantine,
+      cantineMenu,
     });
     // ne remplir que la case demandée, et pas avec le même plat
     const pick = filled[day]?.[slot];
@@ -243,6 +257,37 @@ export default function Semaine({ add }: { add: string | null }) {
   const budget = Math.round((planned.reduce((a, id) => a + (COST_PER_PART[RECIPE_BY_ID[id]?.cost ?? "€€"] ?? 4), 0) * prefs.people) / 5) * 5;
   const slotsShown: Slot[] = (["midi", "soir"] as Slot[]).filter((s) => prefs.slots.includes(s) || days.some((d) => plan[d]?.[s]));
 
+  // cuisine du dimanche (audit famille nombreuse, suite) : 3 ou 4 plats de la semaine qui tiennent plusieurs jours ou se
+  // congèlent, préparés d'un coup. `eatDays` = dans combien de jours (à partir d'aujourd'hui) chaque plat choisi est mangé.
+  const eatDays = useMemo(() => {
+    const m: Record<string, number> = {};
+    days.forEach((d, i) => {
+      for (const id of [plan[d]?.midi, plan[d]?.soir]) if (id && m[id] === undefined) m[id] = i;
+    });
+    return m;
+  }, [plan, days]);
+  const batchInWeek = useMemo(
+    () =>
+      [...new Set(planned)]
+        .map((id) => RECIPE_BY_ID[id])
+        .filter((r): r is Recipe => !!r && batchable(r))
+        // d'abord ceux que le frigo (ou le congélateur) tient bien jusqu'au jour prévu : ce sont les meilleurs candidats
+        // à cuisiner d'avance ; les autres restent proposables, mais pas choisis par défaut
+        .sort((a, b) => {
+          const sa = safeForDay(a, eatDays[a.id] ?? 9) ? 0 : 1;
+          const sb = safeForDay(b, eatDays[b.id] ?? 9) ? 0 : 1;
+          return sa - sb || (eatDays[a.id] ?? 9) - (eatDays[b.id] ?? 9);
+        }),
+    [planned.join(), eatDays],
+  );
+  const batchSuggested = useMemo(
+    () => (batchInWeek.length >= 2 ? [] : batchSuggestions(new Set(planned), (r) => verdict(r, profile).availability !== "hidden")),
+    [batchInWeek.length, planned.join(), profile],
+  );
+  const [batchPicked, setBatchPicked] = useState<string[] | null>(null);
+  const batchIds = (batchPicked ?? batchInWeek.slice(0, 4).map((r) => r.id)).filter((id) => batchInWeek.some((r) => r.id === id));
+  const session = useMemo(() => batchPlan(batchIds, eatDays), [batchIds.join(), eatDays]);
+
   return (
     <Page title="Ma semaine" sub="Les repas des 7 prochains jours : de saison, rapides en semaine, variés, et les restes d'un jour servent le lendemain." back="/">
       {adding && (
@@ -292,6 +337,25 @@ export default function Semaine({ add }: { add: string | null }) {
         <label className="switch" title="Lundi, mardi, jeudi et vendredi : la viande a souvent été servie à midi">
           <input type="checkbox" checked={!!prefs.cantine} onChange={(e) => setPrefs({ cantine: e.target.checked })} /> Cantine le midi : soirs plus légers
         </label>
+        {prefs.cantine && (
+          <div className="cantine-days" role="group" aria-label="Ce que la cantine a servi">
+            {days
+              .filter((d) => [1, 2, 4, 5].includes(new Date(`${d}T12:00:00`).getDay()))
+              .map((d) => (
+                <label key={d} className="field inline small" title={`Ce qu'a servi la cantine ${dayName(d)} midi, pour ajuster le dîner`}>
+                  {dayName(d).slice(0, 3)}.
+                  <select value={cantineMenu[d] ?? ""} onChange={(e) => setCantine(d, e.target.value as CantineKind | "")}>
+                    <option value="">Pas précisé</option>
+                    {(Object.keys(CANTINE_LABEL) as CantineKind[]).map((k) => (
+                      <option key={k} value={k}>
+                        {CANTINE_LABEL[k]}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ))}
+          </div>
+        )}
         <label className="field inline">
           En semaine, au plus
           <select value={prefs.weekdayMax} onChange={(e) => setPrefs({ weekdayMax: +e.target.value })}>
@@ -524,6 +588,78 @@ export default function Semaine({ add }: { add: string | null }) {
                   </li>
                 ))}
               </ul>
+            </section>
+          )}
+          {(batchInWeek.length > 0 || batchSuggested.length > 0) && (
+            <section className="section batch-session">
+              <h2 className="h3">
+                <Icon name="chef" size={22} className="ic-inline" /> Cuisine du dimanche
+              </h2>
+              {batchInWeek.length > 0 ? (
+                <>
+                  <p className="small">Coche les plats à préparer d'un coup ; ils tiennent plusieurs jours ou se congèlent, pour les repas qui suivent.</p>
+                  <ul className="batch-pick">
+                    {batchInWeek.map((r) => {
+                      const on = batchIds.includes(r.id);
+                      return (
+                        <li key={r.id}>
+                          <label className="field inline">
+                            <input
+                              type="checkbox"
+                              checked={on}
+                              onChange={() => {
+                                const base = batchPicked ?? batchInWeek.slice(0, 4).map((x) => x.id);
+                                setBatchPicked(on ? base.filter((id) => id !== r.id) : [...base, r.id]);
+                              }}
+                            />{" "}
+                            <a href={href(`/recette/${r.id}`)}>{r.title.split(" (")[0]}</a>
+                            {eatDays[r.id] !== undefined && <span className="meta"> · {eatDays[r.id] === 0 ? "ce midi ou ce soir" : `dans ${eatDays[r.id]} j`}</span>}
+                          </label>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {session.recipes.length > 0 && (
+                    <>
+                      <ol className="batch-phases">
+                        {(["long", "four", "plaques"] as Phase[])
+                          .filter((p) => session.phases[p].length > 0)
+                          .map((p) => (
+                            <li key={p}>
+                              <strong>{PHASE_LABEL[p]} :</strong> {session.phases[p].map((r) => r.title.split(" (")[0]).join(", ")}
+                            </li>
+                          ))}
+                      </ol>
+                      {session.veg.length > 0 && (
+                        <p className="small">
+                          Lave et coupe d'un coup pour ces plats : {session.veg.join(", ").toLowerCase()}.
+                        </p>
+                      )}
+                      <p className="small">Séance d'environ {minutes(session.minutes)}, mise en place comprise.</p>
+                      <ul className="pn-list">
+                        {session.storage.map(({ r, where, warn }) => (
+                          <li key={r.id} className={warn ? "warn-text" : undefined}>
+                            {warn && <Icon name="alert" size={16} className="ic-inline" />} <strong>{r.title.split(" (")[0]} :</strong> {where}.
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="pn-list">
+                        {RANGEMENT.map((s) => (
+                          <li key={s}>
+                            <Icon name="alert" size={16} className="ic-inline" /> {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </>
+              ) : (
+                <p className="small">
+                  Ta semaine n'a pas encore 2 plats qui se prêtent à une grande cuisson : {batchSuggested.map((r) => r.title.split(" (")[0]).join(", ")}
+                  {batchSuggested.length > 0 ? " en seraient de bons candidats. " : ""}
+                  Touche « Planifier » sur leur fiche pour les ajouter à la semaine.
+                </p>
+              )}
             </section>
           )}
         </>

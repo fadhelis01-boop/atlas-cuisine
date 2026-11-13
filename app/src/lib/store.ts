@@ -79,6 +79,10 @@ export interface State {
   week?: Record<string, { midi?: string; soir?: string; entree?: string; dessert?: string }>; // planificateur : date ISO → plats du midi et du soir
   pantry?: string[]; // placard supposé toujours présent (frigo), modifiable
   weekPrefs?: { people: number; slots: ("midi" | "soir")[]; weekdayMax: number; gamelles?: number; cantine?: boolean };
+  // ce que la cantine a servi ce jour-là (date ISO), pour ajuster le dîner précisément plutôt que par une règle générale
+  // (audit famille nombreuse 13/11, suite) : un déjeuner d'œufs à la cantine n'appelle pas le même soir qu'un déjeuner de poisson
+  cantineMenu?: Record<string, "viande" | "poisson" | "oeuf" | "vegetarien">;
+  batchDone?: Record<string, string[]>; // cuisine du dimanche faite : date du dimanche → plats préparés (pour l'historique et ne pas la reproposer vide)
   restes?: { id: string; cooked: string }[]; // mes restes cuits : type de reste (lib/restes.ts) + date de cuisson, pour l'alerte de conservation
   weekHistory?: Record<string, string>; // plat → dernière date où il a été planifié (mémoire de 8 semaines du planificateur)
   usage?: Record<string, number>; // écrans ouverts (compteur local, jamais envoyé ; joint à l'export du carnet si la personne le veut)

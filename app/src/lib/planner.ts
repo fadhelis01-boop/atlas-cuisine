@@ -65,6 +65,24 @@ export interface AutoOptions {
   kidsVerdict?: Record<string, "oui" | "non">; // carnet : « les enfants ont aimé » (bonus) ou non (écarté)
   today?: string; // date du jour (AAAA-MM-JJ) : pas de plat « à lancer la veille » pour ce soir (audit chef + famille)
   cantine?: boolean; // enfants à la cantine le midi (lun, mar, jeu, ven) : le soir complète, plutôt végétal, œufs, poisson (audit famille 13/11)
+  // ce que la cantine a réellement servi ce jour-là (date ISO → type), plus précis que la règle générale ci-dessus
+  // quand on le connaît (audit famille nombreuse, suite) : un déjeuner d'œufs n'appelle pas la même chose qu'un poisson
+  cantineMenu?: Record<string, "viande" | "poisson" | "oeuf" | "vegetarien">;
+}
+const CANTINE_MEAT = new Set(["boeuf", "agneau", "porc", "volaille"]);
+/** Ce que le dîner doit compenser quand on connaît le menu de la cantine de midi, ou la règle générale sinon. */
+function cantineScore(r: Recipe, day: string, slot: Slot, dow: number, o: AutoOptions): number {
+  if (slot !== "soir") return 0;
+  const known = o.cantineMenu?.[day];
+  const p = proteinOf(r);
+  if (known) {
+    if (known === "viande") return CANTINE_MEAT.has(p) ? -5 : 3;
+    if (known === "poisson") return p === "poisson" ? -5 : 1;
+    if (known === "oeuf") return p === "oeufs" ? -5 : 1;
+    if (known === "vegetarien") return p === "vegetal" ? -1 : 3; // la cantine était légère, le soir peut nourrir davantage
+  }
+  if (o.cantine && [1, 2, 4, 5].includes(dow)) return CANTINE_MEAT.has(p) ? -4 : 3; // règle générale, sans détail du jour
+  return 0;
 }
 
 /** Un « grand plat » : long ou de fête. Un seul par jour de week-end (audit gourmet). */
@@ -168,8 +186,8 @@ export function autoPlan(days: string[], plan: WeekPlan, o: AutoOptions): WeekPl
           (st === "légumineuses" && count.legumes < 2 ? 2 + 3 * progress : 0) +
           (dow === 0 && slot === "midi" && isBigDish(r) ? 3 : 0) + // le dimanche midi, le grand plat de la semaine
           (o.kidsVerdict?.[r.id] === "oui" ? 2 : 0) + // plébiscité par les enfants
-          // jour de cantine : la viande a souvent été servie à midi ; le soir, légumes, légumineuses, œufs ou poisson
-          (o.cantine && slot === "soir" && [1, 2, 4, 5].includes(dow) ? (["boeuf", "agneau", "porc", "volaille"].includes(proteinOf(r)) ? -4 : 3) : 0) +
+          // jour de cantine : complète ce qui a été servi à midi plutôt que de le répéter (audit famille nombreuse)
+          cantineScore(r, day, slot, dow, o) +
           (mainOf(r).some((m) => mains.has(m)) ? -8 : 0) + // même produit principal déjà dans la semaine
           -2.5 * Math.max(0, specials.size + specialOf(r).filter((x) => !specials.has(x)).length - 3) * (specialOf(r).some((x) => !specials.has(x)) ? 1 : 0)
         );

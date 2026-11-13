@@ -42,6 +42,10 @@ Les mesures portent sur les 1 519 fiches exportées et sur le planificateur de s
 
 ## 4. Reste à faire (proposé)
 
-- Une vraie séance de « cuisine du dimanche » : 3 ou 4 plats préparés en 2 heures, dans le bon ordre (four d'abord, puis plaques), avec une seule liste. La semaine donne déjà « à préparer à l'avance » et « lave et coupe d'un coup ».
-- Indiquer dans la semaine ce que la cantine a servi (menu du jour saisi ou importé), pour ajuster finement le dîner.
 - Aucune recette n'est testée en cuisine.
+
+## 5. Suite (13/11/2026) : cantine précise et cuisine du dimanche
+
+- **Menu de cantine jour par jour** : en plus de la case « Cantine le midi », un sélecteur par jour d'école (viande, poisson, œufs, végé, ou « pas précisé »). Le dîner du soir compense précisément ce qui a été servi à midi, au lieu de la seule règle générale. Contrôle automatique : test 131.
+- **Cuisine du dimanche** (`src/lib/batch.ts`) : parmi les plats de la semaine qui tiennent plusieurs jours ou se congèlent, une séance groupée avec l'ordre du cuisinier (mijotés longs d'abord, four pendant ce temps, plaques pour finir), la mise en place commune, une durée estimée, et pour chaque plat où le ranger. Si la semaine n'a pas assez de plats adaptés, des suggestions sont proposées.
+  - Garde-fou de fraîcheur : si le délai avant le repas dépasse ce que le plat garantit au frigo (et qu'il ne se congèle pas), une alerte le dit clairement plutôt que d'affirmer à tort que c'est sans risque.

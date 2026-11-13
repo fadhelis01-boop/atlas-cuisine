@@ -302,3 +302,11 @@ main:focus { outline: none; } /* cible du focus après un changement d'écran : 
 .card-map { position: absolute; left: 6px; bottom: 6px; width: 64px; height: auto; padding: 2px 3px; border-radius: 6px;
   background: color-mix(in srgb, var(--surface) 85%, transparent); box-shadow: 0 1px 3px rgb(0 0 0 / 25%); pointer-events: none; }
 .cm-land { fill: color-mix(in srgb, var(--border) 75%, var(--surface)); }
+
+/* cuisine du dimanche et cantine (13/11/2026) */
+.cantine-days { display: flex; flex-wrap: wrap; gap: 10px 14px; margin: 4px 0 8px; }
+.field.inline.small { gap: 4px; font-size: .9rem; }
+.field.inline.small select { font-size: .9rem; padding: 2px 4px; }
+.batch-pick { list-style: none; padding: 0; margin: 0 0 10px; display: flex; flex-direction: column; gap: 6px; }
+.batch-phases { margin: 8px 0; padding-left: 20px; }
+.batch-phases li { margin-bottom: 4px; }

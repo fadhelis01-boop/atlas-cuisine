@@ -191,6 +191,22 @@ export function sanitizeState(raw: unknown): { state: Record<string, unknown>; r
     : {};
   s.restes = list(raw.restes, 200, (x) => (typeof x.id === "string" ? { id: str(x.id, 80), cooked: str(x.cooked, 40) } : null));
   if (isObj(raw.weekPrefs)) s.weekPrefs = raw.weekPrefs;
+  const CANTINE_KINDS = new Set(["viande", "poisson", "oeuf", "vegetarien"]);
+  s.cantineMenu = isObj(raw.cantineMenu)
+    ? Object.fromEntries(
+        Object.entries(raw.cantineMenu)
+          .filter(([k, v]) => isDay(k) && typeof v === "string" && CANTINE_KINDS.has(v))
+          .slice(0, 400),
+      )
+    : {};
+  s.batchDone = isObj(raw.batchDone)
+    ? Object.fromEntries(
+        Object.entries(raw.batchDone)
+          .filter(([k, v]) => isDay(k) && Array.isArray(v))
+          .slice(0, 200)
+          .map(([k, v]) => [k, (v as unknown[]).filter((x) => typeof x === "string" && ID.test(x)).slice(0, 10)]),
+      )
+    : {};
   if (isObj(raw.settings)) {
     const st = raw.settings as Record<string, unknown>;
     s.settings = {

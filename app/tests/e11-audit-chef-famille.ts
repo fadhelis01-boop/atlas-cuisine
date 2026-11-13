@@ -284,3 +284,32 @@ console.log("   famille nombreuse : classiques manquants", miss130.join(",") || 
   "· goûters de la semaine", /Les goûters de la semaine/.test(sem130));
 check("130 famille nombreuse : classiques présents, mode cantine (moins de viande les soirs d'école), goûters de la semaine",
   !miss130.length && avec130 < sans130 * 0.6 && /Les goûters de la semaine/.test(sem130) && /cantine: !!prefs\.cantine/.test(sem130));
+
+// 131 (13/11/2026, suite audit famille nombreuse) : menu de cantine précis (jour par jour) ajusté finement par le
+// planificateur ; cuisine du dimanche (bible/batch.ts) qui ne garantit jamais une fraîcheur qu'elle n'a pas.
+import { batchPlan as bp131, safeForDay as sf131, batchable as ba131 } from "../src/lib/batch";
+const prof131 = { noPork: false, alcohol: "allowed", strict: false, vegetarian: false, allergens: [], adult: false, kidsAge: 6, equipment: ["four", "plaques"], onboarded: true } as unknown as Profile;
+const days131 = weekDays(0);
+// un jour où la cantine a servi du poisson : le dîner du soir évite le poisson plus souvent qu'avec la règle générale seule
+const fishSoir = (menu?: Record<string, "viande" | "poisson" | "oeuf" | "vegetarien">) => {
+  let n = 0;
+  for (let seed = 1; seed <= 20; seed++) {
+    const p = autoPlan(days131, {}, { slots: ["soir"], weekdayMax: 45, zone: "nord", profile: prof131, leftovers: null, seed, cantineMenu: menu });
+    const r = RECIPE_BY_ID[p[days131[1]]?.soir ?? ""];
+    if (r && /poisson/.test(evaluate(r).flesh.join(""))) n++; // heuristique simple : un plat de poisson le lendemain (jour 1)
+  }
+  return n;
+};
+const poissonNu = fishSoir(), poissonSu = fishSoir({ [days131[1]]: "poisson" });
+// la fraîcheur d'un plat batch-cuisiné n'est jamais présentée comme sûre si elle ne l'est pas
+const unsafe131 = bp131(["nikujaga"], { nikujaga: 4 }).storage[0]; // nikujaga : 3 jours au frigo, sans congélation
+const safe131 = bp131(["dal_tadka"], { dal_tadka: 2 }).storage[0]; // dal tadka : 4 jours au frigo
+// gratin_poisson_epinards ne tient que 2 jours au frigo (sa propre fiche) et ne se congèle pas : il reste à raison exclu.
+const batchHasRecipes = ["poisson_pane_maison", "roti_porc_moutarde_miel"].filter((id) => RECIPE_BY_ID[id] && ba131(RECIPE_BY_ID[id]));
+const gratinExclu = !ba131(RECIPE_BY_ID.gratin_poisson_epinards);
+console.log("   cantine précise : poisson le lendemain sans menu connu", poissonNu, "/ avec cantine « poisson » ce jour-là", poissonSu,
+  "· alerte fraîcheur (nikujaga, jour 4)", unsafe131.warn, "· pas d'alerte à tort (dal tadka, jour 2)", safe131.warn,
+  "· plats de l'audit famille éligibles à la cuisine du dimanche", batchHasRecipes.join(","));
+check("131 cantine précise (jour par jour) et cuisine du dimanche sans fausse promesse de fraîcheur",
+  poissonSu <= poissonNu && unsafe131.warn === true && safe131.warn === false && !sf131(RECIPE_BY_ID.nikujaga, 4) && batchHasRecipes.length === 2 && gratinExclu
+  && /cantineMenu/.test(rf127("src/pages/Semaine.tsx", "utf8")) && /Cuisine du dimanche/.test(rf127("src/pages/Semaine.tsx", "utf8")));
