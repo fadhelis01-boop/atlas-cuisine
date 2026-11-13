@@ -113,7 +113,20 @@ vert sur l'avocat pour la bandeja paisa.
 
 **Non fait, à faire dans une passe ultérieure** : aucune fiche n'a de vidéo TikTok créditée sauf le rasmalai (crédité
 avant que la recherche TikTok ne tombe en erreur serveur 500, de façon persistante, pendant tout le reste de la session —
-retenter plus tard). Les illustrations (photos libres) n'ont pas non plus été cherchées pour ces 42 fiches.
+retenter plus tard).
+
+## 8. Illustrations (13/11/2026, suite)
+
+`collect_v18.py` (Commons/Openverse, licences libres uniquement) → planches de contact relues une à une →
+`choix_v18.txt` → fusion dans `candidats.json`/`selections.json` → `process.py`. **38 fiches sur 42 illustrées**
+(1 212 images publiées sur le dépôt ; budget de démarrage inchangé, les photos sont chargées à la demande).
+
+4 fiches sans photo convenable, à reprendre avec d'autres mots-clés :
+- `obleas_dulce_de_leche` : aucun résultat libre trouvé pour ce plat précis.
+- `chaffle`, `baked_oats` : les résultats montraient des barres de céréales/granola, pas le plat réel (gaufre minute
+  au fromage, bol cuit au four individuel) — mots-clés anglais trop génériques.
+- `nouilles_a_lail` (garlic noodles) : résultats sans rapport (pâtes tomate, saumon, coquilles Saint-Jacques) —
+  « garlic noodles » seul ramène trop de bruit, essayer « buttery garlic noodles » ou un terme plus spécifique.
 
 Budget de démarrage : 398/400 Ko après ces 4 vagues (contre 390/400 avant). La marge restante (2 Ko) est désormais très
 faible : toute nouvelle fiche devra d'abord alléger l'index (`app/src/lib/data.ts`) avant d'en ajouter.
