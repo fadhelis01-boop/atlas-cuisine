@@ -145,7 +145,7 @@ K("chocolat_dubai", "Chocolat façon Dubaï (tablette pistache et kadaïfi crous
         "séchant : ça reste très bon, juste moins parfait visuellement.", "Le kadaïfi doit être complètement "
         "froid avant de le mélanger à la pâte de pistache, sinon elle devient huileuse."],
   keep="2 semaines au frigo, dans une boîte hermétique (le kadaïfi ramollit à l'air libre).", age=3,
-  kids="✓ dès 3 ans.", cats=["vegetarien", "fetes"], profil=["sucre", "gras"])
+  kids="✓ dès 3 ans.", cats=["vegetarien", "fetes"], profil=["sucre", "gras"], tech=["Tempérer le chocolat"])
 K("cinnamon_rolls", "Cinnamon rolls (brioches roulées à la cannelle, glaçage au fromage frais)", "Cinnamon rolls", US, "G", 2, 12, 30, 150, "€€",
   "Rouleau à pâtisserie, plat à four, robot ou pétrissage à la main.",
   "Les roulés moelleux du brunch américain, viraux pour leur cœur qui s'étire en spirale de cannelle fondue, "

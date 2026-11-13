@@ -67,4 +67,5 @@ K("saag_paneer", "Saag paneer (épinards aux épices et dés de fromage frais in
    "**Finir.** Dés de paneer remis dans les épinards, 3 min juste pour les tiédir sans qu'ils durcissent."],
   tips=["Le paneer devient caoutchouteux s'il cuit trop longtemps dans la sauce : on l'y remet juste à la fin.",
         "Sans paneer trouvé : la recette maison de paneer (fromage frais pressé) est rapide et déjà dans l'appli."],
-  keep="3 jours au frigo.", age=1, kids="✓ dès 1 an.", cats=["enfants", "vegetarien"], profil=["epice", "gras"])
+  keep="3 jours au frigo.", age=1, kids="✓ dès 1 an.", cats=["enfants", "vegetarien"], profil=["epice", "gras"],
+  tech=["Faire un fromage frais maison (chenna, paneer, ricotta express)"])

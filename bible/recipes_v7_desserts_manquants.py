@@ -47,7 +47,7 @@ K("rasmalai", "Rasmalai (palets de fromage frais au lait safrané, cardamome et 
         "humide : égoutte et presse davantage la prochaine fois."],
   keep="3 jours au frigo, bien couverts (ne se congèle pas, le fromage frais devient granuleux).", age=2,
   kids="✓ dès 2 ans, en petits morceaux.", cats=["fetes", "vegetarien"], fetes=["Repas de famille"], profil=["sucre"],
-  credit=C(V("nombeah", "7618266509651184917")))
+  tech=["Faire un fromage frais maison (chenna, paneer, ricotta express)"], credit=C(V("nombeah", "7618266509651184917")))
 K("gajar_halwa", "Gajar halwa (halwa de carotte au lait, cardamome et pistache)", "गाजर का हलवा", IN, "D", 1, 6, 15, 45, "€",
   "Grande poêle ou sauteuse large, râpe.",
   "Le halwa de carotte des maisons indiennes en hiver : des carottes râpées longuement mijotées dans le lait jusqu'à "
@@ -243,7 +243,7 @@ K("leche_flan", "Leche flan (flan au lait concentré, caramel bien amer)", "Lech
         "fouet électrique.", "Un caramel trop clair donne un flan fade : il doit presque sentir la fumée avant d'être "
         "versé."],
   keep="4 jours au frigo, démoulé et couvert.", age=2, kids="✓ dès 2 ans.", cats=["enfants", "vegetarien"],
-  fetes=["Repas de famille"], profil=["sucre", "gras"])
+  fetes=["Repas de famille"], profil=["sucre", "gras"], tech=["Caramel et cuissons du sucre"])
 K("bibingka", "Bibingka (gâteau de riz vapeur-four, feuille de bananier et œuf salé)", "Bibingka", PH, "D", 2, 8, 20, 25, "€€",
   "Moule rond chemisé de feuille de bananier (ou de papier cuisson huilé), four.",
   "Le gâteau qu'on vend sur des braises devant les églises pendant les messes de l'Aube de Noël aux Philippines : "
@@ -328,4 +328,4 @@ K("picarones", "Picarones (beignets péruviens à la citrouille et à la patate 
   tips=["La pâte très collante est normale, ne rajoute pas trop de farine sinon les picarones durcissent : mouille-toi "
         "les mains plutôt.", "Sans chancaca, un sirop de sucre roux à la cannelle donne un goût très proche."],
   keep="Le jour même, meilleurs chauds ; se réchauffent 5 min au four.", age=2, kids="✓ dès 2 ans.",
-  cats=["enfants", "vegetarien"], profil=["sucre", "gras"])
+  cats=["enfants", "vegetarien"], profil=["sucre", "gras"], tech=["Frire en sécurité (et double cuisson)"])

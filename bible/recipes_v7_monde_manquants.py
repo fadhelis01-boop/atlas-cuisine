@@ -145,7 +145,8 @@ K("xiaolongbao", "Xiaolongbao (raviolis chinois à la soupe, porc et bouillon g�
         "Porc → **poulet haché avec un peu de peau** (le gras garde la farce juteuse) et bouillon de volaille. **À tester**.")],
   keep="Farcis crus, 1 jour au frigo ou 1 mois au congélateur (cuits directement à la vapeur, sans décongeler, "
        "2 min de plus) ; cuits, à manger aussitôt.", age=4, kids="Attention à la chaleur du bouillon intérieur : "
-       "dès 4 ans, en soufflant bien avant de croquer.", cats=[], profil=["gras"])
+       "dès 4 ans, en soufflant bien avant de croquer.", cats=[], profil=["gras"],
+  tech=["Plier les raviolis asiatiques (gyoza, wonton, siu mai, momo)"])
 K("asado_argentin", "Asado argentin (bœuf grillé à la braise, chorizo criollo, chimichurri)", "Asado", AR, "P", 2, 8, 20, 90, "€€€",
   "Barbecue à braise (ou four + plancha), pince longue, planche à découper large.",
   "Le rituel du dimanche en Argentine, plus une méthode qu'une recette : une braise de bois ou de charbon réduite "
@@ -268,7 +269,7 @@ K("patacones", "Patacones (tostones, plantain vert aplati et refrit, sel et ail)
   tips=["Trop mûr (peau qui jaunit), le plantain devient sucré et ne tient pas à la double friture : il faut la "
         "variété bien verte et ferme.", "Les enfants aplatissent très bien les tronçons tièdes."],
   keep="Le jour même, recroustillés 5 min au four si besoin.", age=2, kids="✓ dès 2 ans. Les enfants aplatissent.",
-  cats=["enfants", "vegetarien", "express"], profil=["leger"])
+  cats=["enfants", "vegetarien", "express"], profil=["leger"], tech=["Frire en sécurité (et double cuisson)"])
 K("bunuelos_colombianos", "Buñuelos colombiens (beignets de fromage frais, boules dorées de Noël)", "Buñuelos", CO, "G", 1, 16, 20, 15, "€",
   "Friteuse ou casserole profonde, écumoire.",
   "Les boules dorées qu'on fait frire par dizaines pour les fêtes de fin d'année en Colombie : une pâte à la "

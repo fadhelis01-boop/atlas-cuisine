@@ -88,3 +88,57 @@ Chaque fiche créditera la vidéo TikTok la plus vue/aimée trouvée pour ce pla
 `tiktok.com/search/video?q=<plat>`, ou comptes déjà exploités dans ce projet — Le Riz Jaune, Cooking with Morgane, Eryn,
 Ryuji, Lynja — et « Ethan Bernat » à identifier). Illustration par photo libre via le pipeline `illustrations/collect_vN.py`
 existant. Décision du propriétaire pas encore demandée sur l'ordre de ces 5 priorités.
+
+## 6. Mise en œuvre (13/11/2026, suite)
+
+Les 5 priorités ont été écrites le jour même, dans l'ordre : **42 fiches nouvelles** au total.
+
+- `recipes_v7_desserts_manquants.py` (priorité 1, 14 fiches) : rasmalai, gajar halwa, barfi, ladoo, falooda, maamoul,
+  qatayef, sütlaç, halo-halo, leche flan, bibingka, turon, quindim, picarones.
+- `recipes_v7_monde_manquants.py` (priorités 2 et 3, 13 fiches) : sisig, lechon kawali, kare-kare (Philippines) ; dosa,
+  xiaolongbao, asado argentin, bangers and mash, haggis (façon terrine, sans la panse — décision du propriétaire si une
+  version 100 % traditionnelle doit s'y ajouter) ; bandeja paisa, patacones, buñuelos colombiens, obleas, completo
+  italiano (Colombie/Chili). **Correction en cours de route** : « tortilla española » était déjà dans l'appli
+  (`tortilla_espanola`) — mon audit initial l'avait classée à tort comme manquante (titre français « Tortilla de
+  patatas », pas « tortilla española »), retirée de la liste avant d'écrire la fiche.
+- `recipes_v7_vege_tiktok.py` (correctif + début priorité 4, 3 fiches) : pâtes feta au four, nouilles à l'ail, saag
+  paneer. Les fiches carnées des priorités 2-3 avaient fait tomber la part de plats végétariens sous le seuil mesuré
+  (test 63, ≥ 33 %) ; ces 3 fiches, elles-mêmes très vues sur TikTok, l'ont rétablie.
+- `recipes_v7_tiktok_viral.py` (fin priorité 4, 12 fiches) : smash burger, dalgona coffee, butter board, chaffle,
+  baked oats, birria ramen, chocolat façon Dubaï, cinnamon rolls, red velvet cake, trifle anglais, corn ribs, cronut.
+
+**Chaque plat sans élément acide** (test 85) a reçu un ajout authentique plutôt qu'un acide forcé : sawsawan (vinaigre
+et piment) pour le kare-kare, chimichurri relié en sous-recette pour l'asado, moutarde anglaise pour le haggis, citron
+vert sur l'avocat pour la bandeja paisa.
+
+**Non fait, à faire dans une passe ultérieure** : aucune fiche n'a de vidéo TikTok créditée sauf le rasmalai (crédité
+avant que la recherche TikTok ne tombe en erreur serveur 500, de façon persistante, pendant tout le reste de la session —
+retenter plus tard). Les illustrations (photos libres) n'ont pas non plus été cherchées pour ces 42 fiches.
+
+Budget de démarrage : 398/400 Ko après ces 4 vagues (contre 390/400 avant). La marge restante (2 Ko) est désormais très
+faible : toute nouvelle fiche devra d'abord alléger l'index (`app/src/lib/data.ts`) avant d'en ajouter.
+
+## 7. Audit du dico et des techniques (13/11/2026, en tant que cuisinier senior)
+
+Mesuré sur l'ensemble du catalogue (pas seulement les 42 fiches du jour) : chaque mot de jargon culinaire employé dans
+une étape doit soit être expliqué dans `glossaire.ts` (le lexique du débutant, détecté automatiquement par régulière
+sur le texte), soit renvoyer à une fiche technique existante.
+
+- **Fiche technique manquante repérée** : faire un fromage frais maison (chenna, paneer) — utilisé dans mes deux
+  nouvelles fiches indiennes (rasmalai, saag paneer) mais aucune fiche technique ne l'expliquait. Ajoutée
+  (`techniques2.ts`, famille « Produits laitiers maison », id `fromage-frais-maison`) et reliée aux deux fiches.
+- **6 mots de jargon utilisés dans des dizaines de fiches existantes mais jamais expliqués dans le lexique**, repérés
+  par mesure (comparaison mot-utilisé / mot-défini sur tout le corpus) : **fond brun**, **court-bouillon**,
+  **déveiner**, **détendre**, **caraméliser**, **pincer** (au sens « pincer les sucs », fond de veau). Ajoutés à
+  `glossaire.ts`, reliés à la fiche technique du bouillon ou du caramel quand elle existe.
+- **Quenelle** : mot utilisé dans 4 fiches (quenelles de brochet, féroce d'avocat « en quenelles », île flottante,
+  dumplings de poulet) dans deux sens différents (la boulette façonnée à la cuillère, et la quenelle lyonnaise
+  pochée) ; aucune des deux définie. Ajoutée.
+- **Vérifié et déjà couvert** (pour éviter les doublons) : parer, flamber, singer, brider, concasser, zester,
+  chiffonnade, effilocher, tempérer, clarifier, beurre clarifié, chemiser — tous déjà dans le lexique malgré une
+  première mesure erronée (comparaison sensible à la casse, corrigée).
+- **Vérifié, non utilisé dans le catalogue** (pas d'ajout nécessaire) : suprêmes, lever les filets, clouter, canneler,
+  désosser.
+
+Reste à faire si on va plus loin : mesurer de la même façon les définitions d'ingrédients rares du dictionnaire
+(`dico_*.py`) plutôt que le seul vocabulaire des étapes — non fait dans cette passe.

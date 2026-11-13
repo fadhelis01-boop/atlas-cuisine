@@ -885,4 +885,27 @@ export const MORE_TECHNIQUES: Technique[] = [
     keys: ["cup", "tasse", "oz", "once", "fahrenheit", "conversion"],
     query: "convertir cups en grammes pâtisserie",
   },
+  // ——— Produits laitiers maison (audit des manques, 13/11/2026) ———
+  {
+    id: "fromage-frais-maison",
+    name: "Faire un fromage frais maison (chenna, paneer, ricotta express)",
+    family: "Produits laitiers maison",
+    level: 1,
+    why: "La base de nombreux desserts et plats indiens (rasmalai, paneer, barfi) : juste du lait et un acide, sans présure ni affinage, prêt en 30 minutes.",
+    gear: "Grande casserole, mousseline ou torchon fin propre, passoire.",
+    steps: [
+      "Porte le lait entier à ébullition (il ne tranche pas avant).",
+      "Hors du feu, verse le jus de citron ou le vinaigre en filet jusqu'à ce que le petit-lait devienne clair et que des grains blancs se séparent nettement : c'est le signal, pas une durée fixe.",
+      "Verse dans une mousseline posée sur une passoire ; rince à l'eau froide pour enlever le goût acide.",
+      "Égoutte 20 à 30 min, pendu ou sous un poids : plus tu presses, plus le fromage est ferme (paneer à découper) ; moins tu presses, plus il reste moelleux (chenna, pour le rasmalai).",
+      "Pour le chenna (rasmalai, barfi) : pétris ensuite la pâte encore tiède 8 à 10 min sur un plan lisse jusqu'à ce qu'elle devienne souple et sans grain, sinon les palets se fendent à la cuisson.",
+    ],
+    errors: [
+      "Le lait ne tranche pas : il n'était pas assez chaud, ou pas assez d'acide — ajoute un peu plus de citron et laisse reposer 1 à 2 min avant d'égoutter.",
+      "Paneer caoutchouteux une fois cuit : il a trop cuit dans la sauce — on l'y ajoute toujours en toute fin, juste pour le tiédir.",
+    ],
+    noGear: "Sans mousseline : un torchon fin propre (jamais utilisé pour autre chose que la cuisine) fait aussi bien l'affaire.",
+    keys: ["faire un fromage frais (chenna/paneer)", "chenna", "paneer maison", "fromage frais maison", "faire du paneer"],
+    query: "faire du paneer maison chenna lait citron",
+  },
 ];
