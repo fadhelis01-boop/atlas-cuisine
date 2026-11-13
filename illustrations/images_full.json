@@ -11900,6 +11900,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/asado_argentin": {
+  "path": "img/recette/asado_argentin",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a8917b",
+  "author": "Tubby3",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Asado_de_la_Fiesta_de_las_Comunidades_en_Ruiz_de_Montoya,_Misiones,_Argentina_(16596).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Asado de la Fiesta de las Comunidades en Ruiz de Montoya, Misiones, Argentina (16596).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ash_reshteh": {
   "path": "img/recette/ash_reshteh",
   "sizes": [
@@ -12376,6 +12393,40 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/bandeja_paisa": {
+  "path": "img/recette/bandeja_paisa",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a06036",
+  "author": "TitiNicola",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bandeja_Paisa_-_Comida_tipica_colombiana.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bandeja Paisa - Comida tipica colombiana.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/bangers_mash": {
+  "path": "img/recette/bangers_mash",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#714d35",
+  "author": "JIP",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bangers_and_mash_with_beer_in_Tampere.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bangers and mash with beer in Tampere.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/banh_cuon": {
   "path": "img/recette/banh_cuon",
   "sizes": [
@@ -12475,6 +12526,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Sheng_jian_bao_-_Cheung_Hing_Kee,_Hong_Kong_(2024).jpg",
   "source": "Wikimedia Commons",
   "title": "Sheng jian bao - Cheung Hing Kee, Hong Kong (2024).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/barfi": {
+  "path": "img/recette/barfi",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aba58d",
+  "author": "Newuse86",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Avalakki_burfi.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Avalakki burfi.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -12750,6 +12818,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/bibingka": {
+  "path": "img/recette/bibingka",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#96663f",
+  "author": "Obsidian Soul",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Bibingka_(Philippines).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Bibingka (Philippines).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/bigos_volaille": {
   "path": "img/recette/bigos_volaille",
   "sizes": [
@@ -12781,6 +12866,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Muesli_with_Berries.jpg",
   "source": "Wikimedia Commons",
   "title": "Muesli with Berries.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/birria_ramen": {
+  "path": "img/recette/birria_ramen",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b07d26",
+  "author": "Wotancito",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Birriamen.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Birriamen.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -13990,6 +14092,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/bunuelos_colombianos": {
+  "path": "img/recette/bunuelos_colombianos",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa4b20",
+  "author": "John Alexis Guerra Gómez",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bu%C3%B1uelos_Colombianos_(24221303805).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Buñuelos Colombianos (24221303805).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/burger_halloumi_croustillant": {
   "path": "img/recette/burger_halloumi_croustillant",
   "sizes": [
@@ -14072,6 +14191,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Los_Gallitos_-_October_31_2022_-_Sarah_Stierch_04.jpg",
   "source": "Wikimedia Commons",
   "title": "Los Gallitos - October 31 2022 - Sarah Stierch 04.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/butter_board": {
+  "path": "img/recette/butter_board",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b0733e",
+  "author": "Recteq",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Butter_board.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Butter board.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -15179,6 +15315,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/chocolat_dubai": {
+  "path": "img/recette/chocolat_dubai",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b1a48d",
+  "author": "WiseWoman",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dubai-Schokolade-Riegel-Angeschnitten.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dubai-Schokolade-Riegel-Angeschnitten.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/chocolat_mexicain": {
   "path": "img/recette/chocolat_mexicain",
   "sizes": [
@@ -15451,6 +15604,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/cinnamon_rolls": {
+  "path": "img/recette/cinnamon_rolls",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#caaf9d",
+  "author": "Pannet",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Homemade_Cinnamon_rolls_04.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Homemade Cinnamon rolls 04.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/citronnade_menthe": {
   "path": "img/recette/citronnade_menthe",
   "sizes": [
@@ -15638,6 +15808,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/completo_italiano": {
+  "path": "img/recette/completo_italiano",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9d8250",
+  "author": "Rodolfo Ditzel Lacoa",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:El_tremendo_chilen%C3%ADsimo_COMPLETO.JPG",
+  "source": "Wikimedia Commons",
+  "title": "El tremendo chilenísimo COMPLETO.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/compote_pommes_poires": {
   "path": "img/recette/compote_pommes_poires",
   "sizes": [
@@ -15805,6 +15992,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pelas_Jagung_in_Bojonegoro.jpg",
   "source": "Wikimedia Commons",
   "title": "Pelas Jagung in Bojonegoro.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/corn_ribs": {
+  "path": "img/recette/corn_ribs",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#926f40",
+  "author": "eebAMDG",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Corn_ribs,_Wagamama_Battersea_Power_Station,_2026-04-19.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Corn ribs, Wagamama Battersea Power Station, 2026-04-19.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -16284,6 +16488,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/cronut": {
+  "path": "img/recette/cronut",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bc9569",
+  "author": "LWYang from USA",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dominique_Ansel_Bakery_(15900018301).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dominique Ansel Bakery (15900018301).jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/croque_kimchi": {
   "path": "img/recette/croque_kimchi",
   "sizes": [
@@ -16692,6 +16913,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/dalgona_coffee": {
+  "path": "img/recette/dalgona_coffee",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a6845e",
+  "author": "Kguirnela",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dalgona_coffee.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Dalgona coffee.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/damper": {
   "path": "img/recette/damper",
   "sizes": [
@@ -16995,6 +17233,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Ethiopian_wat.jpg",
   "source": "Wikimedia Commons",
   "title": "Ethiopian wat.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/dosa_instantane": {
+  "path": "img/recette/dosa_instantane",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#584945",
+  "author": "Sameer.siddhanti",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Butter_Masala_Dosa.png",
+  "source": "Wikimedia Commons",
+  "title": "Butter Masala Dosa.png",
   "kind": "photo",
   "avif": true
  },
@@ -17453,6 +17708,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Falafel_1.JPG",
   "source": "Wikimedia Commons",
   "title": "Falafel 1.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/falooda": {
+  "path": "img/recette/falooda",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#d2b5a1",
+  "author": "Thamizhpparithi Maari",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Falooda_of_salem.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Falooda of salem.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18335,6 +18607,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Somtam_kaiyang_khaoniaow.jpg",
   "source": "Wikimedia Commons",
   "title": "Somtam kaiyang khaoniaow.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/gajar_halwa": {
+  "path": "img/recette/gajar_halwa",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a26263",
+  "author": "Sharvarism",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Delicious_Gajar_Ka_Halwa.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Delicious Gajar Ka Halwa.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19476,6 +19765,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/haggis_facon_maison": {
+  "path": "img/recette/haggis_facon_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#886e36",
+  "author": "Stuart Mudie",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Haggis,_neeps_an_tatties.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Haggis, neeps an tatties.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/haleem": {
   "path": "img/recette/haleem",
   "sizes": [
@@ -19507,6 +19813,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Halloumi-2.jpg",
   "source": "Wikimedia Commons",
   "title": "Halloumi-2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/halo_halo": {
+  "path": "img/recette/halo_halo",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#816948",
+  "author": "bingbing from Quezon City, Philippines",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Halo_halo1.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Halo halo1.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20169,6 +20492,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Chicken_karaage_003.jpg",
   "source": "Wikimedia Commons",
   "title": "Chicken karaage 003.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/kare_kare": {
+  "path": "img/recette/kare_kare",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b68768",
+  "author": "Obsidian Soul",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Kare-kare_(Philippines)_03.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Kare-kare (Philippines) 03.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -20988,6 +21328,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/ladoo": {
+  "path": "img/recette/ladoo",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8b593d",
+  "author": "Nandhinikandhasamy",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Laddu_Sweet.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Laddu Sweet.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/lagman": {
   "path": "img/recette/lagman",
   "sizes": [
@@ -21239,6 +21596,40 @@
   "page": "https://commons.wikimedia.org/wiki/File:Chilli_Garlic_Chuntney_and_Namkeen_Lassi.JPG",
   "source": "Wikimedia Commons",
   "title": "Chilli Garlic Chuntney and Namkeen Lassi.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/leche_flan": {
+  "path": "img/recette/leche_flan",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#cf9a72",
+  "author": "Marife.altabano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Leche_Flan_01.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Leche Flan 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/lechon_kawali": {
+  "path": "img/recette/lechon_kawali",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c08f62",
+  "author": "Ralff Nestor Nacor",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lechon_Kawali,_Mar_2024.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Lechon Kawali, Mar 2024.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21613,6 +22004,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Potato_fritters.jpg",
   "source": "Wikimedia Commons",
   "title": "Potato fritters.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/maamoul": {
+  "path": "img/recette/maamoul",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b5743a",
+  "author": "fugzu",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mamoul_biscotti_libanesi.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Mamoul biscotti libanesi.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -25150,6 +25558,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/patacones": {
+  "path": "img/recette/patacones",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b67d45",
+  "author": "Arlene Campusano",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tostones_rellenos_con_camarones.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Tostones rellenos con camarones.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/patatas_bravas": {
   "path": "img/recette/patatas_bravas",
   "sizes": [
@@ -25434,6 +25859,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:P%C3%A2tes_de_fruits_d%27Auvergne_2.JPG",
   "source": "Wikimedia Commons",
   "title": "Pâtes de fruits d'Auvergne 2.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pates_feta_au_four": {
+  "path": "img/recette/pates_feta_au_four",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#cd6250",
+  "author": "Delicious Adventures",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Baked_feta_pasta.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Baked feta pasta.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -25842,6 +26284,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Picadillo_and_rice.jpg",
   "source": "Wikimedia Commons",
   "title": "Picadillo and rice.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/picarones": {
+  "path": "img/recette/picarones",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c2a78c",
+  "author": "Auteur·e inconnu·e",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Peru_Picarones.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Peru Picarones.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -27609,6 +28068,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/qatayef": {
+  "path": "img/recette/qatayef",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a2825f",
+  "author": "Benoît Prieur",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Qatayef_libanais_(dessert)_%C3%A0_Lyon.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Qatayef libanais (dessert) à Lyon.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/quatre_quarts": {
   "path": "img/recette/quatre_quarts",
   "sizes": [
@@ -27742,6 +28218,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Quiche_aux_poireaux,_ch%C3%A8vre_et_chorizo.jpg",
   "source": "Wikimedia Commons",
   "title": "Quiche aux poireaux, chèvre et chorizo.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/quindim": {
+  "path": "img/recette/quindim",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c9702c",
+  "author": "Tamorlan",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Quindim_-_San_Miguel-_2011.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Quindim - San Miguel- 2011.JPG",
   "kind": "photo",
   "avif": true
  },
@@ -27932,6 +28425,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/rasmalai": {
+  "path": "img/recette/rasmalai",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#be6351",
+  "author": "Miansari66",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Ras_Malai.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Ras Malai.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/ratatouille": {
   "path": "img/recette/ratatouille",
   "sizes": [
@@ -28048,6 +28558,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:%D8%B7%D8%A8%D9%82_%D8%A7%D9%84%D8%B1%D8%B4%D8%AA%D8%A9.jpg",
   "source": "Wikimedia Commons",
   "title": "طبق الرشتة.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/red_velvet_cake": {
+  "path": "img/recette/red_velvet_cake",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#5e403c",
+  "author": "Flickr user ~Twon~ : https://www.flickr.com/photos/twon/",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_velvet_cake_slice.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Red velvet cake slice.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -28728,6 +29255,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Summer_roll.jpg",
   "source": "Wikimedia Commons",
   "title": "Summer roll.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/saag_paneer": {
+  "path": "img/recette/saag_paneer",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#656025",
+  "author": "Jeff Warren",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Saag_paneer.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Saag paneer.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -30597,6 +31141,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sisig": {
+  "path": "img/recette/sisig",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7c553b",
+  "author": "Ej Afable",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sizzling_Sisig.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Sizzling Sisig.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/siu_mai": {
   "path": "img/recette/siu_mai",
   "sizes": [
@@ -30627,6 +31188,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Spicy_Sloppy_Lentils_(4053891921).jpg",
   "source": "Wikimedia Commons",
   "title": "Spicy Sloppy Lentils (4053891921).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/smash_burger": {
+  "path": "img/recette/smash_burger",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b69069",
+  "author": "Wiki.cullin",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Double_Smash_Burger_with_Fries.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Double Smash Burger with Fries.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -31698,6 +32276,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Thai_Sweet_Potato_Burrito_-_Happy_Maki_2023-12-11.jpg",
   "source": "Wikimedia Commons",
   "title": "Thai Sweet Potato Burrito - Happy Maki 2023-12-11.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/sutlac": {
+  "path": "img/recette/sutlac",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7e6c64",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Turkish_rice_pudding_(s%C3%BCtla%C3%A7).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Turkish rice pudding (sütlaç).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -33330,6 +33925,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/trifle_anglais": {
+  "path": "img/recette/trifle_anglais",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#825631",
+  "author": "Black Stripe",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Trifle_layers.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Trifle layers.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/tripes_caen_version": {
   "path": "img/recette/tripes_caen_version",
   "sizes": [
@@ -33548,6 +34160,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Tombet.jpg",
   "source": "Wikimedia Commons",
   "title": "Tombet.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/turon": {
+  "path": "img/recette/turon",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c5a580",
+  "author": "Herbertkikoy",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Pinoy_Turon.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Pinoy Turon.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -34046,6 +34675,23 @@
  },
  "recette/xiao_long_bao": {
   "path": "img/recette/xiao_long_bao",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bb9171",
+  "author": "Maksym Kozlenko",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2019-02-22_Xiaolongbao_in_%22Taste_Of_Shanghai%22_restaurant,_Sydney,_Australia.jpg",
+  "source": "Wikimedia Commons",
+  "title": "2019-02-22 Xiaolongbao in \"Taste Of Shanghai\" restaurant, Sydney, Australia.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/xiaolongbao": {
+  "path": "img/recette/xiaolongbao",
   "sizes": [
    400,
    800,
