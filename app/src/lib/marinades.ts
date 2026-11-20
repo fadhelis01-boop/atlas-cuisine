@@ -48,6 +48,66 @@ export const marinadeRecipes = (p?: Protein): (Recipe & { entry: MarinadeEntry }
     .map((m) => (RECIPE_BY_ID[m.id] ? { ...RECIPE_BY_ID[m.id], entry: m } : null))
     .filter((r): r is Recipe & { entry: MarinadeEntry } => !!r);
 
+/** Marinade express « à la louche » (pas une fiche complète : pas de région, pas de filtre allergène) : proportions pour
+ * environ 500 g de viande, volaille, poisson ou légumes, trouvée dans les favoris TikTok (UI/UX 21/11/2026) — gardée à
+ * côté des marinades complètes plutôt que transformée en 12 fiches quasi identiques qui auraient noyé la rubrique. */
+export interface QuickMarinade {
+  id: string;
+  name: string;
+  ingredients: string[];
+}
+export const QUICK_MARINADES: QuickMarinade[] = [
+  { id: "miel_moutarde", name: "Miel-moutarde", ingredients: ["1 c. à s. de miel", "1 c. à s. d'huile", "1 c. à c. de moutarde", "½ c. à c. de paprika"] },
+  { id: "ail_persil", name: "Ail & persil", ingredients: ["2 c. à s. d'huile d'olive", "2 c. à s. de jus de citron", "1 gousse d'ail", "1 c. à s. de persil"] },
+  { id: "citron_herbes", name: "Citron & herbes", ingredients: ["Jus de ½ citron", "2 c. à s. d'huile d'olive", "1 gousse d'ail", "1 c. à c. de thym ou origan"] },
+  { id: "paprika_fume_express", name: "Paprika fumé", ingredients: ["2 c. à s. d'huile", "1 c. à c. de paprika fumé", "1 c. à c. de miel", "1 gousse d'ail"] },
+  { id: "soja_miel", name: "Soja & miel", ingredients: ["2 c. à s. de sauce soja", "1 c. à s. de miel", "1 c. à s. d'huile", "½ c. à c. de gingembre"] },
+  { id: "curry_coco_express", name: "Curry & coco", ingredients: ["10 cl de crème de coco", "1 c. à c. de curry", "Zeste de ½ citron vert", "1 c. à s. d'huile"] },
+  { id: "barbecue_express", name: "Barbecue", ingredients: ["3 c. à s. de ketchup", "1 c. à s. de miel", "1 c. à s. de sauce soja", "1 c. à c. de paprika fumé"] },
+  { id: "herbes_provence_express", name: "Herbes de Provence", ingredients: ["2 c. à s. d'huile d'olive", "1 c. à c. d'herbes de Provence", "1 gousse d'ail", "1 c. à c. de jus de citron"] },
+  { id: "orange_gingembre", name: "Orange & gingembre", ingredients: ["4 c. à s. de jus d'orange", "1 c. à s. de sauce soja", "1 c. à c. de miel", "½ c. à c. de gingembre"] },
+  { id: "oignon_epices", name: "Oignon & épices", ingredients: ["½ oignon haché", "2 c. à s. d'huile d'olive", "1 c. à c. de paprika", "½ c. à c. de cumin"] },
+  { id: "speciale_grillades", name: "Spéciale grillades", ingredients: ["2 c. à s. de sauce soja", "1 c. à s. de vinaigre de riz", "1 c. à c. de miel", "½ c. à c. de gingembre"] },
+  { id: "balsamique_thym", name: "Balsamique & thym", ingredients: ["2 c. à s. d'huile d'olive", "1 c. à s. de crème balsamique", "1 c. à c. de concentré de tomate", "½ c. à c. de thym"] },
+];
+export const QUICK_MARINADES_CREDIT = { author: "@les.petites.fiche", url: "https://www.tiktok.com/@les.petites.fiche/photo/7708056823709846817" };
+
+/** Assaisonnements secs par aliment (pas par viande précise comme les marinades) : la question posée en cuisine n'est pas
+ * toujours « quelle marinade pour mon agneau » mais aussi « qu'est-ce que je saupoudre sur mon riz/mes pommes de
+ * terre » — un angle mort du coin Marinades, chef senior 21/11/2026. Pas de liquide, pas de repos : prêts à l'emploi. */
+export interface SpiceMix {
+  id: string;
+  name: string;
+  ingredients: string[];
+  use: string;
+}
+export const SPICE_MIXES: SpiceMix[] = [
+  {
+    id: "epices_pommes_de_terre",
+    name: "Pommes de terre (rôties ou sautées)",
+    ingredients: ["1 c. à c. de paprika", "1 c. à c. d'ail semoule", "1 c. à c. de persil séché", "½ c. à c. de poivre", "gros sel"],
+    use: "Mélangé à l'huile avant de rôtir, ou saupoudré en fin de cuisson à la poêle, pour 500 g de pommes de terre.",
+  },
+  {
+    id: "epices_riz",
+    name: "Riz (nature ou pilaf)",
+    ingredients: ["1 c. à c. de cumin moulu", "½ c. à c. de curcuma", "1 c. à c. de coriandre moulue", "1 feuille de laurier"],
+    use: "Ajouté à sec dans l'eau de cuisson du riz (1 verre de riz), ou revenu 30 s dans le beurre avant d'ajouter le riz pour un pilaf.",
+  },
+  {
+    id: "epices_poulet",
+    name: "Poulet (rôti, grillé ou en morceaux)",
+    ingredients: ["1 c. à c. de paprika fumé", "1 c. à c. d'ail semoule", "½ c. à c. d'oignon semoule", "½ c. à c. de thym", "poivre"],
+    use: "Massé directement sur la peau ou la chair crue, pour 500 g de poulet, avant four ou poêle.",
+  },
+  {
+    id: "epices_boeuf",
+    name: "Bœuf (steak, haché ou mijoté)",
+    ingredients: ["1 c. à c. de cumin moulu", "1 c. à c. de coriandre moulue", "1 c. à c. de poivre noir concassé", "½ c. à c. de paprika fumé"],
+    use: "Massé sur la viande crue avant saisie, ou ajouté en début de cuisson pour un mijoté, pour 500 g de bœuf.",
+  },
+];
+
 /** Repères de cuisinier, valables pour n'importe quelle marinade liquide (pas pour un cure à sec comme le gravlax). */
 export const REPERES_MARINADE: [string, string][] = [
   ["Un acide (citron, vinaigre, yaourt)", "attendrit et parfume, mais une pièce fine ou un fruit de mer y « cuit » au-delà de 30 min : jamais toute une nuit pour des crevettes ou du poisson."],
@@ -55,6 +115,12 @@ export const REPERES_MARINADE: [string, string][] = [
   ["Jeter la marinade qui a touché la viande crue", "ou la faire bouillir au moins 2 min avant de l'utiliser en sauce de service — jamais crue sur une viande déjà cuite."],
   ["Essuyer l'excédent avant de griller", "la marinade qui dégouline brûle et noircit avant que la viande ne soit cuite à cœur."],
   ["Entailler ou piquer les pièces épaisses", "la marinade ne pénètre que quelques millimètres ; sur un gigot ou un rôti, elle ne parfume vraiment qu'en surface sans ce geste."],
-  ["Saler tôt, sauf la marinade sèche", "le sel d'une marinade liquide peut rester plusieurs heures sans assécher ; à l'inverse, un cure comme le gravlax EST le sel : jamais de raccourci sur son temps de repos."],
-  ["Un rub sec n'attendrit pas", "contrairement à une marinade liquide ou à un cure, un rub d'épices (BBQ) ne fait que parfumer et croûter en surface : c'est la cuisson longue et douce qui attendrit la viande, pas le rub."],
+  [
+    "Saler tôt, sauf la marinade sèche",
+    "le sel d'une marinade liquide peut rester plusieurs heures sans assécher ; à l'inverse, un cure comme le gravlax EST le sel : jamais de raccourci sur son temps de repos.",
+  ],
+  [
+    "Un rub sec n'attendrit pas",
+    "contrairement à une marinade liquide ou à un cure, un rub d'épices (BBQ) ne fait que parfumer et croûter en surface : c'est la cuisson longue et douce qui attendrit la viande, pas le rub.",
+  ],
 ];

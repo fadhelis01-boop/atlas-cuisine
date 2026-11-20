@@ -159,6 +159,7 @@ body { background-color: var(--bg); background-image: radial-gradient(var(--dots
 .before { border-left: 5px solid var(--herb); margin-bottom: 12px; } .before ul { margin: 6px 0 0; }
 .lexique dl { margin: 8px 0 0; } .lexique dt { font-weight: 700; margin-top: 8px; } .lexique dd { margin: 2px 0 0; color: var(--text-2); }
 .rescue { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.rescue.nolist { list-style: none; padding: 0; margin: 0; }
 .rescue details { margin: 0; border-left: 5px solid var(--saffron); } .rescue summary { cursor: pointer; }
 .filters { background: var(--surface); border-radius: var(--r-card); box-shadow: var(--shadow); padding: 8px 12px; margin: 8px 0; }
 .filters .chips { margin: 4px 0; } .filters select { width: auto; min-height: 40px; }
