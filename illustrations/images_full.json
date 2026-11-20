@@ -11409,6 +11409,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/agnamahogo": {
+  "path": "img/recette/agnamahogo",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9e7649",
+  "author": "Pangou Stephane",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Le_riz_et_le_saka-saka.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Le riz et le saka-saka.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/agneau_cumin_xinjiang": {
   "path": "img/recette/agneau_cumin_xinjiang",
   "sizes": [
@@ -13361,6 +13378,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/borani_banjan": {
+  "path": "img/recette/borani_banjan",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#8c756b",
+  "author": "Nissy-KITAQ",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Afghan_cuisine_egg_plant_with_yogurt.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Afghan cuisine egg plant with yogurt.JPG",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/borek_feuilles_riz": {
   "path": "img/recette/borek_feuilles_riz",
   "sizes": [
@@ -14873,6 +14907,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/chaffle": {
+  "path": "img/recette/chaffle",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ab906d",
+  "author": "Missvain",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kivelstadt_Cellars_%26_Winegarten_-_July_24_2022_-_Sarah_Stierch_04.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Kivelstadt Cellars & Winegarten - July 24 2022 - Sarah Stierch 04.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/chai_masala": {
   "path": "img/recette/chai_masala",
   "sizes": [
@@ -15465,6 +15516,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Choucroute_d%27Alsace_026.jpg",
   "source": "Wikimedia Commons",
   "title": "Choucroute d'Alsace 026.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/choukouya_poulet": {
+  "path": "img/recette/choukouya_poulet",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#aa7d55",
+  "author": "Cyriac Gbogou",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Choukouya_de_poulet.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Choukouya de poulet.JPG",
   "kind": "photo",
   "avif": true
  },
@@ -16366,6 +16434,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Cr%C3%AApe_au_coco_05.jpg",
   "source": "Wikimedia Commons",
   "title": "Crêpe au coco 05.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/crepes_gari_coco": {
+  "path": "img/recette/crepes_gari_coco",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ce8627",
+  "author": "David Monniaux",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Crepes_dsc07085.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Crepes dsc07085.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -17317,6 +17402,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Dubu-jorim.jpg",
   "source": "Wikimedia Commons",
   "title": "Dubu-jorim.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/duchess_potatoes": {
+  "path": "img/recette/duchess_potatoes",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b89b7a",
+  "author": "Frank C. Müller",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Herzoginkartoffel_(fcm).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Herzoginkartoffel (fcm).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -18406,6 +18508,22 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/french_dip_sandwich": {
+  "path": "img/recette/french_dip_sandwich",
+  "sizes": [
+   400,
+   800
+  ],
+  "color": "#8d6537",
+  "author": "Davinic",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:French_Dip_Sandwich.jpg",
+  "source": "Wikimedia Commons",
+  "title": "French Dip Sandwich.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/frijoles_negros_cubanos": {
   "path": "img/recette/frijoles_negros_cubanos",
   "sizes": [
@@ -18658,6 +18776,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Galette_de_sarrasin_compl%C3%A8te_bretonne.jpg",
   "source": "Wikimedia Commons",
   "title": "Galette de sarrasin complète bretonne.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/galette_oignons_pdt_fromage": {
+  "path": "img/recette/galette_oignons_pdt_fromage",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#b16820",
+  "author": "Dianeira",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Patatopita.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Patatopita.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -19235,6 +19370,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Gnocchi_di_patate_del_Fucino.jpg",
   "source": "Wikimedia Commons",
   "title": "Gnocchi di patate del Fucino.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/gnocchi_pain_rassis": {
+  "path": "img/recette/gnocchi_pain_rassis",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c0a487",
+  "author": "AtlanteanAstorian",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:2022-06-26_-_Neukirchen.jpg",
+  "source": "Wikimedia Commons",
+  "title": "2022-06-26 - Neukirchen.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -21766,6 +21918,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Lemonade_2.jpg",
   "source": "Wikimedia Commons",
   "title": "Lemonade 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/limonade_suisse": {
+  "path": "img/recette/limonade_suisse",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#767142",
+  "author": "Melsj",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Limonada_su%C3%AD%C3%A7a.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Limonada suíça.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -24676,6 +24845,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/pain_a_kebab_turc": {
+  "path": "img/recette/pain_a_kebab_turc",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#a97d6e",
+  "author": "E4024",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hashas_kebab.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Hashas kebab.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/pain_au_lait": {
   "path": "img/recette/pain_au_lait",
   "sizes": [
@@ -24707,6 +24893,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Pain_aux_raisins_02.jpg",
   "source": "Wikimedia Commons",
   "title": "Pain aux raisins 02.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/pain_brochette_ivoirien": {
+  "path": "img/recette/pain_brochette_ivoirien",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#847365",
+  "author": "Cyriac Gbogou",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Brochette_de_viande_aussi_appel%C3%A9_%22pain_chien%22_en_C%C3%B4te_d%27Ivoire.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Brochette de viande aussi appelé \"pain chien\" en Côte d'Ivoire.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -25011,6 +25214,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Palak_Paneer_(Cottage_cheese_in_spinach_gravy).jpg",
   "source": "Wikimedia Commons",
   "title": "Palak Paneer (Cottage cheese in spinach gravy).jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/paleron_boeuf_confit_7h": {
+  "path": "img/recette/paleron_boeuf_confit_7h",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#c4a993",
+  "author": "Ceeseven",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Braised_Beef_Cheek.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Braised Beef Cheek.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -28816,6 +29036,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/riz_au_gras_togolais": {
+  "path": "img/recette/riz_au_gras_togolais",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#ca5017",
+  "author": "Skarfmacaronne",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jollof_rice_and_Dodo.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Jollof rice and Dodo.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/riz_au_lait": {
   "path": "img/recette/riz_au_lait",
   "sizes": [
@@ -30598,6 +30835,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/sauce_ranch_maison": {
+  "path": "img/recette/sauce_ranch_maison",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#bba283",
+  "author": "Whitney from Chicago, IL",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ranch_dressing.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Ranch dressing.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/sauce_ravigote": {
   "path": "img/recette/sauce_ravigote",
   "sizes": [
@@ -31341,6 +31595,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B9%84%E0%B8%82%E0%B9%88%E0%B9%80%E0%B8%84%E0%B9%87%E0%B8%A1_%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3_%E0%B8%95%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%94_Tumtaad_%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B5%E0%B9%88_01.jpg",
   "source": "Wikimedia Commons",
   "title": "ตำไทยไข่เค็ม ส้มตำ ตำถาด Tumtaad กระบี่ 01.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/somun": {
+  "path": "img/recette/somun",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#785b39",
+  "author": "BiHVolim",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sarajevski_somun.JPG",
+  "source": "Wikimedia Commons",
+  "title": "Sarajevski somun.JPG",
   "kind": "photo",
   "avif": true
  },

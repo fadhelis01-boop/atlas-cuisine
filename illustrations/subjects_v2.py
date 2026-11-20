@@ -5,6 +5,9 @@ import json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 _R = json.load(open(os.path.join(HERE, "..", "app", "src", "data", "recipes.json"), encoding="utf-8"))
+# « source » est dans le détail (budget de démarrage allégé le 20/11/2026), pas dans l'index : fusionné ici.
+_DET = json.load(open(os.path.join(HERE, "..", "app", "src", "data", "recipes_detail.json"), encoding="utf-8"))
+for _r in _R: _r["source"] = _DET.get(_r["id"], {}).get("source", _r.get("source", ""))
 
 # Indices anglais (Flickr / Commons trouvent mieux) pour les titres français génériques
 HINT = {

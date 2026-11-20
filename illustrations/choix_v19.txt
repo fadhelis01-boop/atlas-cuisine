@@ -1,0 +1,16 @@
+agnamahogo 3
+galette_oignons_pdt_fromage 1
+paleron_boeuf_confit_7h 4
+pain_a_kebab_turc 3
+somun 0
+pain_brochette_ivoirien 0
+limonade_suisse 0
+duchess_potatoes 0
+choukouya_poulet 1
+riz_au_gras_togolais 6
+borani_banjan 0
+french_dip_sandwich 2
+gnocchi_pain_rassis 6
+sauce_ranch_maison 1
+crepes_gari_coco 0
+chaffle 2
