@@ -34,6 +34,7 @@ const Restes = lazy(() => import("./pages/Restes"));
 const Marche = lazy(() => import("./pages/Marche"));
 const PiqueNique = lazy(() => import("./pages/PiqueNique"));
 const StreetFood = lazy(() => import("./pages/StreetFood"));
+const Marinades = lazy(() => import("./pages/Marinades"));
 const Enfants = lazy(() => import("./pages/Enfants"));
 const Imports = lazy(() => import("./pages/Imports"));
 const Biblio = lazy(() => import("./pages/Biblio"));
@@ -175,6 +176,9 @@ export default function App() {
       break;
     case "street-food":
       page = <StreetFood />;
+      break;
+    case "marinades":
+      page = <Marinades />;
       break;
     case "enfants":
       page = <Enfants />;

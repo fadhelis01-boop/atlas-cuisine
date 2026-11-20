@@ -31,7 +31,7 @@ console.error = (...a: unknown[]) => { errors.push(a.map(String).join(" ").slice
 
 const ROUTES = ["", "explorer", "region/france", "recherche?q=lunchbox", "recherche?q=enfant%20difficile%20legumes", "frigo", "courses", "recette/hachis_parmentier",
   "recette/tripes_caen_version", "cuisine/hachis_parmentier", "techniques", "pains", "sauces", "fetes", "zero-dechet", "enfants", "imports", "biblio", "profil",
-  "credits", "apprendre", "semaine", "recettes", "dictionnaire", "ingredient/avocat", "restes?r=volaille,riz,fruits", "bien-choisir", "pique-nique"];
+  "credits", "apprendre", "semaine", "recettes", "dictionnaire", "ingredient/avocat", "restes?r=volaille,riz,fruits", "bien-choisir", "pique-nique", "marinades"];
 
 const { createRoot } = await import("react-dom/client");
 const { act } = await import("react");

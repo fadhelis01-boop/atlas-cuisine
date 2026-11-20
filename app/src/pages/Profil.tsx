@@ -597,6 +597,7 @@ const SCREEN_LABEL: Record<string, string> = {
   "bien-choisir": "Bien choisir",
   "pique-nique": "Pique-nique",
   "street-food": "Street food",
+  marinades: "Marinades",
   imports: "Favoris importés",
   credits: "Crédits",
   apprendre: "Apprendre",

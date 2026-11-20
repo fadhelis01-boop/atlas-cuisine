@@ -24,6 +24,7 @@ export const TABS = [
       "apprendre",
       "pique-nique",
       "street-food",
+      "marinades",
     ],
   },
   { to: "/semaine", label: "Ma semaine", icon: "calendar", match: ["semaine", "courses", "restes", "partage"] },
