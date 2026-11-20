@@ -11,7 +11,7 @@ const TILE_PHOTO: Record<string, string> = {
   "/enfants": "rubrique/enfants",
   "/pains": "rubrique/pains",
   "/sauces": "rubrique/sauces",
-  "/marinades": "recette/gravlax_saumon_marinade",
+  "/marinades": "recette/mojo_cubain_porc",
   "/techniques": "rubrique/techniques",
   "/fetes": "rubrique/fetes",
   "/zero-dechet": "rubrique/zero_dechet",

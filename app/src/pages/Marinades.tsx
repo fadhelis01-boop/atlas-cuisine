@@ -14,7 +14,7 @@ export default function Marinades() {
   const list = useMemo(() => marinadeRecipes(p === "tout" ? undefined : p), [p]);
   return (
     <Page
-      photo="rubrique/sauces"
+      photo="recette/mojo_cubain_porc"
       title="Marinades"
       back="/explorer"
       sub="Les marinades du monde entier, classées par viande ou poisson : pays d'origine, temps de repos, et le geste du cure à sec (gravlax) à côté de la marinade liquide classique."
