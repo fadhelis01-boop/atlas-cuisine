@@ -4,9 +4,15 @@ sauces et condiments, aucune pour l'agneau, les crevettes ou le tofu, et aucune 
 (gravlax) à côté de la marinade liquide classique. 6 fiches nouvelles comblent ces angles morts, chacune réutilisable
 sur n'importe quelle pièce de viande/poisson du même type, pas liée à un seul plat fini. NON TESTÉES (Tome 7 §2)."""
 from recipes_v2_base import *
+from recipes_v6_tiktok_plats import C
+
+TT = "https://www.tiktok.com/"
+def V(author, vid):
+    return (f"@{author}", f"{TT}@{author}/video/{vid}")
 
 MAG = "Afrique du Nord › Maghreb"; CU = "Amérique latine & Caraïbes › Cuba"; VN = "Asie du Sud-Est › Vietnam"
 MX = "Amérique latine › Mexique"; CN = "Asie de l'Est › Chine"; SU = "Europe du Nord › Suède"
+US = "Amérique du Nord › États-Unis"
 GAMBAS = "Gambas / bouquet"; AGNEAU_MORCEAUX = "Gigot d'agneau"
 FILET_PORC = "Filet mignon de porc"; CITRONNELLE = "Citronnelle"; NUOCMAM = "Sauce de poisson (nuoc-mâm, nam pla)"
 TOFU_F = "Tofu (ferme / soyeux)"; SAUMON_PAVE = "Saumon (frais, pavé)"; HARISSA = "Harissa (tube/pâte)"
@@ -137,3 +143,92 @@ K("gravlax_saumon_marinade", "Gravlax de saumon (marinade sèche au sel, sucre e
   keep="5 jours au frigo une fois tranché, bien enveloppé ; se congèle entier avant tranchage.", age=4,
   kids="Pour les grands à partir de 4 ans ; à éviter pour les femmes enceintes et les personnes fragiles (poisson "
        "cru, même salé).", cats=[], fetes=["Noël et Nouvel An"], profil=["acide", "sucre"])
+K("marinade_rouge_africaine", "Marinade rouge ouest-africaine (tomate, ail, piment)", "Marinade rouge", "Afrique subsaharienne › Côte d'Ivoire", "Ba", 1, 8, 15, 120, "€",
+  "Mixeur.",
+  "La marinade qui revient dans toutes les cuisines d'Afrique de l'Ouest sous un nom différent : concentré de "
+  "tomate, ail, gingembre et piment mixés avec un bouillon cube, pour un poulet ou un poisson qui part au four "
+  "ou au grill avec une couleur et un goût profonds dès la sortie du four.",
+  [f"4 c. à s.|de concentré de tomate|{CONC}|2", f"8 gousses|d'ail|{AIL}|2", f"3 cm|de gingembre frais|{GING}|1",
+   f"2|piments frais (plus ou moins selon le goût)|{PIMENT}|1", f"2|cubes de bouillon, émiettés|Bouillon cube volaille|1",
+   f"4 c. à s.|d'huile|{HN}|2", f"1 c. à c.|de paprika|{PAPRIKA}|1", f"-|sel|{SEL}|1"],
+  ["**Mixer.** Ail, gingembre et piments mixés avec un peu d'huile jusqu'à une pâte fine.",
+   "**Finir.** Concentré de tomate, cubes émiettés, paprika et sel ajoutés, mixés de nouveau : pâte rouge "
+   "épaisse et homogène.",
+   "**Mariner.** Poulet ou poisson entaillé, enrobé généreusement de la pâte avec les mains ; au moins 2 h au "
+   "frigo, mieux toute une nuit pour un poulet entier.",
+   "**Cuire.** Au four (200 °C, 25 à 35 min selon la pièce), au grill ou à la poêle (20 à 25 min en retournant) ; la "
+   "pâte colore et caramélise en surface tout en gardant la chair juteuse dessous."],
+  tips=["Cette marinade se congèle très bien en portions : en préparer le double et en garder pour la prochaine "
+        "fois.", "Sur un poisson entier, elle se glisse aussi dans deux ou trois entailles profondes pour "
+        "parfumer jusqu'à l'arête."],
+  keep="1 semaine au frigo ; plusieurs mois au congélateur en portions.", age=3,
+  kids="✓ dès 3 ans, moins pimenté.", cats=["sauces"], profil=["epice", "acide"],
+  credit=C(V("dadyeats", "7623101280000511254")))
+K("shawarma_marinade", "Marinade shawarma (yaourt, citron, concentré de tomate, épices)", "Marinade shawarma", "Moyen-Orient › Liban", "Ba", 1, 6, 10, 240, "€",
+  "Saladier, fouet.",
+  "La marinade du shawarma de rue libanais : un yaourt qui attendrit, du concentré de tomate pour la couleur et "
+  "le fond de goût, de l'ail fumé et des épices shawarma. Distincte du tandoori indien (pas de curcuma ni de "
+  "piment fort) et du tzatziki-ail de la chich taouk.",
+  [f"4 c. à s.|de yaourt nature|{YAO}|2", f"4 c. à s.|d'huile d'olive|{HO}|2", f"1/2|citron (jus)|{CIT}|1",
+   f"4 gousses|d'ail, écrasées|{AIL}|1", f"1 c. à c.|de concentré de tomate|{CONC}|1",
+   f"1 c. à s.|d'épices à shawarma (cumin, paprika, cannelle, curcuma à parts égales)|{CUMIN}|1",
+   f"1 kg|de hauts de cuisse de poulet désossés, en lamelles (pour l'exemple)|{CUISSE}|3", f"-|sel, poivre|{SEL}|1"],
+  ["**Mélanger.** Yaourt, huile, jus de citron, ail, concentré de tomate et épices fouettés ensemble ; sel, "
+   "poivre.",
+   "**Mariner.** Poulet en lamelles enrobé généreusement ; au moins 4 h au frigo, idéalement toute une nuit pour "
+   "que l'acidité du yaourt attendrisse bien la viande.",
+   "**Empiler et cuire.** Lamelles empilées sur une broche verticale improvisée (ou simplement sautées très "
+   "chaudes à la poêle, en plusieurs fois sans entasser) jusqu'à bien dorées et légèrement croustillantes sur "
+   "les bords.",
+   "**Servir.** Tranché fin, en pain pita avec une sauce à l'ail et des crudités."],
+  tips=["Le concentré de tomate est ce qui distingue vraiment cette marinade du tandoori ou du tikka indiens : "
+        "ne le saute pas, c'est lui qui donne la couleur et le goût caractéristiques.", "Sans broche, empiler les "
+        "lamelles marinées sur une pique à brochette et les griller au four donne un résultat très proche."],
+  keep="Marinade seule, 4 jours au frigo ; poulet mariné, 2 jours cru.", age=3, kids="✓ dès 3 ans.",
+  cats=["sauces"], profil=["acide"], credit=C(V("lesgourmandisesdeloubna", "7608906113584614689")))
+K("velveting_poulet_chinois", "Velouté de poulet à la chinoise (marinade pour sauté au wok)", "Velveting", "Asie de l'Est › Chine", "Ba", 2, 4, 10, 20, "€",
+  "Saladier, wok.",
+  "La technique des restaurants chinois qui rend le poulet bluffant de tendreté dans un sauté au wok : une courte "
+  "marinade à la fécule, au blanc d'œuf et à une pincée de bicarbonate, qui forme une fine enveloppe protectrice "
+  "autour de chaque morceau pendant la cuisson très vive.",
+  [f"500 g|de blanc de poulet, en fines lanières|{BLANC_P}|3", f"1|blanc d'œuf|Blanc d'œuf|2",
+   f"2 c. à c.|de fécule de maïs (maïzena)|Fécule de maïs (maïzena)|2", f"1 c. à s.|de sauce soja claire|{SOJA}|1",
+   f"1/4 c. à c.|de bicarbonate de soude|Bicarbonate de soude|1", f"1 c. à c.|d'huile de sésame|Huile de sésame (grillée)|1?",
+   f"-|poivre blanc|{POIVRE}|1?"],
+  ["**Mélanger.** Poulet, blanc d'œuf, fécule, soja, bicarbonate et huile de sésame mélangés à la main dans un "
+   "saladier jusqu'à ce que chaque lanière soit uniformément enrobée d'une pellicule légèrement collante.",
+   "**Reposer.** 20 à 30 min au frigo (pas plus d'une heure : le bicarbonate finirait par rendre la texture trop "
+   "molle).",
+   "**Pré-cuire.** Juste avant le sauté : lanières plongées 30 à 45 secondes dans l'eau frémissante ou l'huile "
+   "tiède (120 °C), séparées à la spatule, puis égouttées — c'est cette étape qui « scelle » l'enveloppe.",
+   "**Sauter.** Ajoutées en toute fin dans le wok très chaud avec la sauce du plat, 1 à 2 min seulement : elles "
+   "restent moelleuses et nacrées, jamais sèches, même en les réchauffant."],
+  tips=["Le bicarbonate est la vraie astuce : il attendrit les fibres en quelques minutes, mais une pincée "
+        "suffit — trop en mettre donne un goût savonneux.", "Cette marinade est une étape technique, pas un plat "
+        "en soi : elle se termine toujours par un sauté au wok avec d'autres ingrédients et une sauce."],
+  keep="Poulet enrobé cru, 4 h au frigo avant la pré-cuisson.", age=3, kids="✓ dès 3 ans.", cats=["sauces"],
+  profil=["acide"], credit=C(V("wokundgluck", "7578490268094057750")))
+K("bbq_rub_americain", "BBQ rub américain (épices sèches, sans marinade liquide)", "BBQ dry rub", US, "Ba", 1, 10, 10, 0, "€",
+  "Bol, fouet ou bocal à secouer.",
+  "Le troisième geste du coin marinades, après la marinade liquide et le cure à sec du gravlax : un mélange "
+  "d'épices et de sucre roux appliqué sec, sans aucun liquide, qui forme une croûte parfumée et caramélisée à la "
+  "cuisson lente au four ou au barbecue — la base de toutes les côtes de porc et poitrines fumées américaines.",
+  [f"2 c. à s.|de paprika|{PAPRIKA}|2", f"1 c. à s.|de paprika doux (ou fumé)|{PFUME}|1",
+   f"1/2 c. à c.|de piment de Cayenne (facultatif)|{CAYENNE}|1?", f"4 c. à s.|de sucre roux (cassonade)|{SUCRE}|2",
+   f"1 c. à s.|de sel|{SEL}|1", f"1 c. à c.|de poivre noir moulu|{POIVRE}|1", f"1/2 c. à c.|de cumin moulu|{CUMIN}|1",
+   f"2 c. à s.|de poudre d'ail et d'oignon mélangées|Poudre d'ail / d'oignon|1"],
+  ["**Mélanger.** Tous les ingrédients mélangés ensemble dans un bol, en écrasant les éventuels grumeaux de "
+   "cassonade à la fourchette.",
+   "**Conserver.** Versé dans un bocal hermétique à l'abri de la lumière : il se garde plusieurs mois, comme un "
+   "mélange d'épices.",
+   "**Appliquer.** Massé généreusement sur la viande crue et bien sèche (jamais mouillée, sinon il ne forme pas "
+   "de croûte), sur toutes les faces ; laissé reposer à température ambiante 30 min à 1 h avant de cuire, ou "
+   "toute une nuit au frigo pour une pièce épaisse.",
+   "**Cuire.** Au four très doux (110-130 °C, 3 à 5 h selon l'épaisseur), ou au barbecue à couvercle fermé le même "
+   "temps : le sucre caramélise lentement en une croûte sombre et collante (le fameux « bark »), sans jamais brûler "
+   "à cette température."],
+  tips=["Contrairement à une marinade liquide, le rub n'attendrit pas la viande : c'est la cuisson longue et "
+        "douce qui s'en charge, pas les épices.", "Se prépare en grande quantité à l'avance : il ne s'abîme pas "
+        "au placard."],
+  keep="6 mois dans un bocal fermé, à l'abri de la lumière.", age=3, kids="✓ dès 3 ans.", cats=["sauces"], profil=["epice", "sucre"],
+  credit=C(V("jerome.cuisine", "7625975845227842819")))

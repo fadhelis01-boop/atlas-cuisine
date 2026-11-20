@@ -20,6 +20,7 @@ export interface MarinadeEntry {
   id: string;
   proteins: Protein[];
   cure?: boolean; // marinade sèche (sel + sucre) qui « cuit » sans chaleur, pas une marinade liquide classique
+  dry?: boolean; // rub sec (épices + sucre) appliqué sans liquide, mais qui a toujours besoin d'une cuisson normale ensuite
 }
 
 export const MARINADES: MarinadeEntry[] = [
@@ -36,6 +37,10 @@ export const MARINADES: MarinadeEntry[] = [
   { id: "crevettes_citron_vert_marinade", proteins: ["crevettes", "poisson"] },
   { id: "tofu_marinade_soja_gingembre", proteins: ["vegetal"] },
   { id: "gravlax_saumon_marinade", proteins: ["poisson"], cure: true },
+  { id: "marinade_rouge_africaine", proteins: ["volaille", "poisson"] },
+  { id: "shawarma_marinade", proteins: ["volaille", "agneau"] },
+  { id: "velveting_poulet_chinois", proteins: ["volaille"] },
+  { id: "bbq_rub_americain", proteins: ["porc", "volaille"], dry: true },
 ];
 
 export const marinadeRecipes = (p?: Protein): (Recipe & { entry: MarinadeEntry })[] =>
@@ -51,4 +56,5 @@ export const REPERES_MARINADE: [string, string][] = [
   ["Essuyer l'excédent avant de griller", "la marinade qui dégouline brûle et noircit avant que la viande ne soit cuite à cœur."],
   ["Entailler ou piquer les pièces épaisses", "la marinade ne pénètre que quelques millimètres ; sur un gigot ou un rôti, elle ne parfume vraiment qu'en surface sans ce geste."],
   ["Saler tôt, sauf la marinade sèche", "le sel d'une marinade liquide peut rester plusieurs heures sans assécher ; à l'inverse, un cure comme le gravlax EST le sel : jamais de raccourci sur son temps de repos."],
+  ["Un rub sec n'attendrit pas", "contrairement à une marinade liquide ou à un cure, un rub d'épices (BBQ) ne fait que parfumer et croûter en surface : c'est la cuisson longue et douce qui attendrit la viande, pas le rub."],
 ];

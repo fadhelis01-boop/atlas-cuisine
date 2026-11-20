@@ -560,7 +560,7 @@ dump("recipe_videos.json", VIDS)
 # Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index garde ce qu'il faut aux cartes, à la recherche, au moteur et au
 # planificateur ; le détail d'une fiche (étapes, introduction, vidéos, conseils, matériel, conservation) part dans un second
 # fichier, lu juste après le premier affichage (et tout de suite par les écrans qui en ont besoin).
-DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp", "source", "verified")
+DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp", "source", "verified", "prot")
 detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
 # « kids » omis quand il vaut exactement la phrase par défaut déduite de l'âge (reconstruite par data.ts à la lecture) :
 # ~1 140 fiches sur 1 590 suivent ce seul patron, l'omettre allège le budget de démarrage (audit budget 20/11/2026).

@@ -17,7 +17,7 @@ export default function Marinades() {
       photo="recette/mojo_cubain_porc"
       title="Marinades"
       back="/explorer"
-      sub="Les marinades du monde entier, classées par viande ou poisson : pays d'origine, temps de repos, et le geste du cure à sec (gravlax) à côté de la marinade liquide classique."
+      sub="Les marinades du monde entier, classées par viande ou poisson : pays d'origine, temps de repos, et les trois gestes — marinade liquide, cure à sec (gravlax) et rub sec (BBQ) — distingués sur chaque fiche."
     >
       <Section title={`${p === "tout" ? "Toutes les marinades" : PROTEIN_LABEL[p]} (${list.length})`}>
         <div className="chips" role="group" aria-label="Viande ou poisson">
@@ -40,7 +40,7 @@ export default function Marinades() {
             const m = list.find((x) => x.id === r.id)!;
             return (
               <p className="small">
-                <Icon name="timer" size={14} className="ic-inline" /> {m.entry.cure ? "Cure à sec : " : "Repos : "}
+                <Icon name="timer" size={14} className="ic-inline" /> {m.entry.cure ? "Cure à sec : " : m.entry.dry ? "Rub sec, repos : " : "Repos : "}
                 {minutes(r.rest)} · {(r.regionPath ?? []).slice(-1)[0] ?? r.macro}
               </p>
             );
