@@ -11,18 +11,22 @@ import type { CatalogueEntry, ImportEntry, IngredientRef, Leftover, MacroId, Rec
 export const INGREDIENTS = ingredientsJson as unknown as Record<string, IngredientRef>;
 // Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index (cartes, recherche, moteur, planificateur) est lu en JSON.parse,
 // deux fois plus rapide qu'un littéral JavaScript ; le détail d'une fiche arrive juste après le premier affichage.
-const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "" };
+const DETAIL_EMPTY = { steps: [] as string[], intro: "", videos: [] as Recipe["videos"], tips: [] as string[], equipment: "", storage: "", source: "", verified: "" };
 // Ingrédients de l'index en tableaux [réf., poids, facultatif?, allergènes du libellé?] : la réf. est le rang de l'ingrédient dans
 // ingredients.json (même ordre de clés), sauf « SUB:… » et null. Quantité et libellé arrivent avec le détail (mergeDetails) ;
 // en attendant, le libellé est le nom de l'ingrédient (assez pour les rangées de l'accueil et les filtres).
 type PackedLine = [number | string | null, number, (0 | 1)?, string?];
 const ING_KEYS = Object.keys(INGREDIENTS);
 const shortName = (ref: string | null) => (ref ? (ref.startsWith("SUB:") ? ref.slice(4).replace(/_/g, " ") : ref.split(" (")[0].split(" / ")[0]).toLowerCase() : "");
+// « kids » omis de l'index quand il vaut exactement la phrase par défaut (déduite de l'âge) : reconstruite ici, pour
+// alléger le budget de démarrage sans rien changer pour les pages qui lisent r.kids (audit budget 20/11/2026).
+const defaultKids = (age: number | null) => (age != null ? `✓ dès ${age} an${age > 1 ? "s" : ""}.` : null);
 export const RECIPES = (JSON.parse(recipesRaw) as (Omit<Recipe, "ingredients"> & { ingredients: PackedLine[] })[]).map(
   (r) =>
     Object.assign(r, {
       ...DETAIL_EMPTY,
       ...r,
+      kids: r.kids || defaultKids(r.age),
       ingredients: r.ingredients.map(([rf, weight, opt, al]) => {
         const ref = typeof rf === "number" ? ING_KEYS[rf] : rf;
         return {
@@ -75,7 +79,7 @@ export function useImportLibrary(): ImportEntry[] {
 
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
-type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp">> & { lines?: [string, string][] };
+type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp" | "source" | "verified">> & { lines?: [string, string][] };
 let DETAILS = false;
 let detP: Promise<void> | null = null;
 const detLs = new Set<() => void>();

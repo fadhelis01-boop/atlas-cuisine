@@ -332,3 +332,20 @@ EN_PLUS_2026_11_12B = {
 }
 for _k, _v in EN_PLUS_2026_11_12B.items():
     EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]
+
+# favoris ajoutés entre le 10-11/11 et le 20/11/2026 : plats déjà dans ATLAS
+EN_PLUS_2026_11_20 = {
+    "spaghetti_carbonara": [T + "@bortipastabar/video/7704054374275779870"],
+    "croque_monsieur": [T + "@angelinaparis1903/video/7693220045689736481"],
+    "butter_chicken": [T + "@cookrate.com/video/7693579259117341954"],
+    "boeuf_wellington_sans_porc": [T + "@cuisineactuelle/video/7581565390791200033"],
+    "mousse_chocolat_blanc": [T + "@oukhtycook_/video/7689807759587446048"],
+    "caramels_beurre_sale": [T + "@3eme_cercle/video/7698688084161891616"],
+    "sauce_poivre": [T + "@lechefologue/video/7706209558934474017"],
+    "cheese_naan": [T + "@leo_hokfelt/video/7707288603826638102"],
+    "chocolat_chaud_viennois": [T + "@norberttarayre.off/video/7698056714087615777"],
+    "zaalouk": [T + "@african.culturefr/video/7704781803814456609"],
+    "fufu_igname": [T + "@inesessenam/video/7707733756966112545"],
+}
+for _k, _v in EN_PLUS_2026_11_20.items():
+    EN_PLUS[_k] = EN_PLUS.get(_k, []) + [u for u in _v if u not in EN_PLUS.get(_k, [])]

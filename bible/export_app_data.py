@@ -308,7 +308,7 @@ CAT_OF = {"Repas de fêtes": "fetes", "Afrique de l'Ouest": "afrique", "Maghreb"
 imports = []
 sys.path.insert(0, IMP)
 from hors_cuisine import is_hors_cuisine as _hors_cuisine  # liste privée (recettes-classees/prive), vide si absente
-for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("favoris_createurs_2026-11-04_classes.md", "TikTok"), ("favoris_createurs_2026-11-10_classes.md", "TikTok"), ("favoris_createurs_2026-11-11_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
+for fname, source in (("tiktok_favoris_classes.md", "TikTok"), ("createurs_tiktok_classes.md", "TikTok"), ("favoris_createurs_2026-10-22_classes.md", "TikTok"), ("favoris_createurs_2026-10-29_classes.md", "TikTok"), ("favoris_createurs_2026-11-04_classes.md", "TikTok"), ("favoris_createurs_2026-11-10_classes.md", "TikTok"), ("favoris_createurs_2026-11-11_classes.md", "TikTok"), ("favoris_2026-11-20_classes.md", "TikTok"), ("cookingwithmorgane_classees.md", "Cooking with Morgane"), ("createurs_youtube_classes.md", "YouTube"), ("ajouts_classes.md", "Ajouts")):
     p = os.path.join(IMP, fname)
     if not os.path.exists(p): continue
     sec = None; subsec = ""
@@ -560,8 +560,14 @@ dump("recipe_videos.json", VIDS)
 # Démarrage léger (audit dév/UX 2026-10-21 §2.1) : l'index garde ce qu'il faut aux cartes, à la recherche, au moteur et au
 # planificateur ; le détail d'une fiche (étapes, introduction, vidéos, conseils, matériel, conservation) part dans un second
 # fichier, lu juste après le premier affichage (et tout de suite par les écrans qui en ont besoin).
-DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp")
+DETAIL = ("steps", "intro", "videos", "tips", "equipment", "storage", "credit", "kidHelp", "source", "verified")
 detail = {r["id"]: {k: r[k] for k in DETAIL if k in r} for r in recipes}
+# « kids » omis quand il vaut exactement la phrase par défaut déduite de l'âge (reconstruite par data.ts à la lecture) :
+# ~1 140 fiches sur 1 590 suivent ce seul patron, l'omettre allège le budget de démarrage (audit budget 20/11/2026).
+for r in recipes:
+    age = r.get("age")
+    default_kids = f"✓ dès {age} an{'s' if (age or 0) > 1 else ''}." if age is not None else None
+    if r.get("kids") == default_kids: r["kids"] = None
 index = [{k: v for k, v in r.items() if k not in DETAIL} for r in recipes]
 # Ingrédients de l'index en tableaux [réf., poids(, 1 si facultatif)(, allergènes du libellé)] ; quantité et libellé dans le détail.
 # Historique : tableaux [quantité, libellé, réf., poids] : 13 Ko compressés de moins au
