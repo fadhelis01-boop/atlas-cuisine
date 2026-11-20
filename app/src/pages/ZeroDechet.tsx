@@ -3,12 +3,14 @@ import { Icon } from "../components/icons";
 import { useImportLibrary, RECIPES, RECIPE_BY_ID } from "../lib/data";
 import { ANATOMIE, CONSERVATION, DLC_DDM } from "../lib/content";
 import { href } from "../lib/router";
-import { MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
+import { MoreGrid, MoreList, Page, Section, useMore, useVisible } from "../components/ui";
 
 export default function ZeroDechet() {
   const IMPORT_LIBRARY = useImportLibrary();
   const list = useVisible(RECIPES.filter((r) => r.cats.includes("zero_dechet")));
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "zero_dechet" || i.cat === "fait_maison");
+  const anatomie = useMore(ANATOMIE, 8);
+  const conservation = useMore(CONSERVATION, 8);
   return (
     <Page
       photo="rubrique/zero_dechet"
@@ -35,7 +37,7 @@ export default function ZeroDechet() {
               </tr>
             </thead>
             <tbody>
-              {ANATOMIE.map((a) => (
+              {anatomie.shown.map((a) => (
                 <tr key={a.ing}>
                   <th>{a.ing}</th>
                   <td>{a.parts}</td>
@@ -54,6 +56,7 @@ export default function ZeroDechet() {
             </tbody>
           </table>
         </div>
+        {anatomie.more}
       </Section>
       <Section title="Recettes anti-gaspi">
         <MoreGrid items={list} />
@@ -74,7 +77,7 @@ export default function ZeroDechet() {
       <Section title="Conserver sans risque">
         <table className="table">
           <tbody>
-            {CONSERVATION.map(([a, b]) => (
+            {conservation.shown.map(([a, b]) => (
               <tr key={a}>
                 <th>{a}</th>
                 <td>{b}</td>
@@ -82,6 +85,7 @@ export default function ZeroDechet() {
             ))}
           </tbody>
         </table>
+        {conservation.more}
         <p className="small">{DLC_DDM}</p>
         <p>
           Ton <a href={href("/frigo")}>frigo virtuel</a> classe tes produits par date et propose d'abord les recettes qui utilisent ce qui arrive à échéance.
