@@ -16505,6 +16505,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/crevettes_citron_vert_marinade": {
+  "path": "img/recette/crevettes_citron_vert_marinade",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#cda057",
+  "author": "Eximiousincorp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Grilled_Shrimp_Skewers.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Grilled Shrimp Skewers.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/crevettes_sauce_piquante": {
   "path": "img/recette/crevettes_sauce_piquante",
   "sizes": [
@@ -19696,6 +19713,23 @@
   "kind": "photo",
   "avif": true
  },
+ "recette/gravlax_saumon_marinade": {
+  "path": "img/recette/gravlax_saumon_marinade",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#dd9071",
+  "author": "Tiia Monto",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Gravlax_2.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Gravlax 2.jpg",
+  "kind": "photo",
+  "avif": true
+ },
  "recette/gricia_version": {
   "path": "img/recette/gricia_version",
   "sizes": [
@@ -20067,6 +20101,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Harissa_Sauce.JPG",
   "source": "Wikimedia Commons",
   "title": "Harissa Sauce.JPG",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/harissa_marinade_agneau": {
+  "path": "img/recette/harissa_marinade_agneau",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#97866e",
+  "author": "John Thompson from Iqaluit",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ju_Xiang_Yuan_Restaurant,_Ottawa_-_Grilled_Lamb_(6453828095).jpg",
+  "source": "Wikimedia Commons",
+  "title": "Ju Xiang Yuan Restaurant, Ottawa - Grilled Lamb (6453828095).jpg",
   "kind": "photo",
   "avif": true
  },
@@ -23397,6 +23448,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Mojo_Pic%C3%B3n_en_Lanzarote.jpg",
   "source": "Wikimedia Commons",
   "title": "Mojo Picón en Lanzarote.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/mojo_cubain_porc": {
+  "path": "img/recette/mojo_cubain_porc",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#6b6355",
+  "author": "Rastapopulous",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:LechonVictoriaDeGarzon.JPG",
+  "source": "Wikimedia Commons",
+  "title": "LechonVictoriaDeGarzon.JPG",
   "kind": "photo",
   "avif": true
  },
@@ -27369,6 +27437,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Potatoes,_boiled,_with_olive_oil,_garlic,_salt_-_Massachusetts.jpg",
   "source": "Wikimedia Commons",
   "title": "Potatoes, boiled, with olive oil, garlic, salt - Massachusetts.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/porc_citronnelle_vietnamien": {
+  "path": "img/recette/porc_citronnelle_vietnamien",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#7d634b",
+  "author": "HungryHuy",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vietnamese_grilled_pork_with_rice_noodles_and_fish_sauce.jpg",
+  "source": "Wikimedia Commons",
+  "title": "Vietnamese grilled pork with rice noodles and fish sauce.jpg",
   "kind": "photo",
   "avif": true
  },
@@ -33922,6 +34007,23 @@
   "page": "https://commons.wikimedia.org/wiki/File:Mushroom_on_Toast_-_The_Canopy_2025-06-08.jpg",
   "source": "Wikimedia Commons",
   "title": "Mushroom on Toast - The Canopy 2025-06-08.jpg",
+  "kind": "photo",
+  "avif": true
+ },
+ "recette/tofu_marinade_soja_gingembre": {
+  "path": "img/recette/tofu_marinade_soja_gingembre",
+  "sizes": [
+   400,
+   800,
+   1200
+  ],
+  "color": "#9c7634",
+  "author": "Masahiko Satoh",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%E8%B1%86%E8%85%90%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD_(10725311003).jpg",
+  "source": "Wikimedia Commons",
+  "title": "豆腐ステーキ (10725311003).jpg",
   "kind": "photo",
   "avif": true
  },
