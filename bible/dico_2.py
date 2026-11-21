@@ -124,6 +124,7 @@ D2 = {
 "Shiitake": ("shiitake mushrooms", "Champignon asiatique au goût boisé (umami).", "Sautés, ramen, bouillons ; séché : très parfumé.", ""),
 "Pleurote": ("oyster mushrooms", "Champignon tendre en éventail.", "Poêlé, en tom kha.", ""),
 "Cèpe / girolle / morille": ("porcini chanterelles", "Champignons sauvages de saison.", "Poêlés simplement ; morilles à la crème.", "8-11"),
+"Truffe (fraîche ou pelures)": ("fresh truffle", "Champignon souterrain très parfumé et très cher.", "Les pelures en bocal suffisent pour parfumer une sauce.", "11-3"),
 "Champignon noir séché": ("wood ear mushroom dried", "Champignon asiatique croquant.", "Réhydraté : nems, soupes.", ""),
 "Chou blanc / rouge": ("white cabbage red cabbage", "Choux pommés.", "Coleslaw, chou rouge braisé, kimchi, choucroute.", "9-3"),
 "Chou vert / frisé / kale": ("kale cabbage", "Choux à feuilles.", "Garbure, caldo verde, chips de kale.", "10-3"),

@@ -320,6 +320,7 @@
 | Shiitake | — | — | 🟡 | Pieds → bouillon umami |
 | Pleurote | — | — | 🟡 | |
 | Cèpe / girolle / morille | — | — | 🟠 | ⚠️ morille crue toxique ; cueillette = pharmacien/mycologue |
+| Truffe (fraîche ou pelures) | — | — | 🔴 | Très chère ; pelures en bocal, bien moins coûteuses, suffisent à parfumer |
 | Champignon noir séché | — | — | 🟠 | |
 | Chou blanc / rouge | — | — | 🟢 | Trognon → bouillon, râpé |
 | Chou vert / frisé / kale | — | — | 🟢 | |
@@ -630,6 +631,8 @@
 |---|---|---|---|---|
 | Moutarde de Dijon | MO, SU? | ALC~? (vin blanc/verjus) | 🟢 | Vérifier vin blanc |
 | Moutarde à l'ancienne | MO, SU? | ALC~? | 🟢 | |
+| Moutarde jaune américaine (douce) | MO | — | 🟡 | Beaucoup moins forte que la Dijon |
+| Raifort (crème ou râpé) | — | — | 🟡 | Remplace mal le wasabi (goût plus terreux) |
 | Ketchup | CE?, SU? | — | 🟢 | Additifs fréquents |
 | Mayonnaise industrielle | OE, MO, SU? | — | 🟢 | |
 | Sauce soja claire | SO, GL | ALC~ | 🟢 | Fermentation |

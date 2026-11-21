@@ -79,6 +79,8 @@ D4 = {
 # ---- Condiments & bases
 "Moutarde de Dijon": ("dijon mustard jar", "Moutarde forte de graines brunes. ⚠️ Moutarde ; traces d'alcool possibles (vin blanc ou verjus selon les marques).", "Vinaigrettes, mayonnaise, lapin à la moutarde.", ""),
 "Moutarde à l'ancienne": ("whole grain mustard", "Moutarde aux grains entiers.", "Sauces, maquereaux.", ""),
+"Moutarde jaune américaine (douce)": ("yellow mustard bottle", "Moutarde douce à base de graines blanches et de curcuma.", "Sauces de burgers et de hot-dogs, hot-dogs maison.", ""),
+"Raifort (crème ou râpé)": ("horseradish root cream", "Racine piquante râpée ou en crème.", "Rosbif, sauce Alabama, remplace mal le wasabi.", ""),
 "Ketchup": ("ketchup bottle", "Sauce tomate sucrée vinaigrée.", "Recette maison sans sirop de glucose dans l'appli.", ""),
 "Mayonnaise industrielle": ("mayonnaise jar", "Mayonnaise du commerce.", "Maison : 5 minutes (recette liée).", ""),
 "Sauce soja claire": ("soy sauce bottle", "Sauce fermentée de soja et blé. ⚠️ Soja, gluten.", "Salée et umami : sautés, marinades.", ""),

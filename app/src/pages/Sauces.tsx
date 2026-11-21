@@ -1,9 +1,12 @@
 import { Icon } from "../components/icons";
 import { ImportRow } from "../components/video";
-import { useState } from "react";
-import { useImportLibrary, RECIPES } from "../lib/data";
+import { useMemo, useState } from "react";
+import { useImportLibrary } from "../lib/data";
 import { useProfile } from "../lib/store";
-import { Chip, MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
+import { SAUCES, SAUCE_FAMILY_LABEL, sauceRecipes, type SauceFamily } from "../lib/sauces";
+import { Chip, MoreGrid, MoreList, Page, Section } from "../components/ui";
+
+const FAMILIES: SauceFamily[] = ["fastfood", "france", "monde"];
 
 // « Sauce Builder » (Tome 1 §11.3) : base → profil → aromates ; proportions, étapes et conservation calculées.
 type Base = "oeuf" | "aquafaba" | "yaourt" | "tomate" | "tahini" | "huile";
@@ -146,22 +149,41 @@ function Builder() {
 
 export default function Sauces() {
   const IMPORT_LIBRARY = useImportLibrary();
-  const list = useVisible(RECIPES.filter((r) => r.cats.includes("sauces")));
+  const [f, setF] = useState<SauceFamily | "tout">("tout");
+  const list = useMemo(() => sauceRecipes(f === "tout" ? undefined : f), [f]);
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "sauces" || i.cat === "fait_maison");
   return (
     <Page
       photo="rubrique/sauces"
       title="Sauces maison"
-      sub="Au plus simple, sans additif ni conservateur : mayonnaise, algérienne, samouraï, sauce blanche, barbecue, ketchup… et les frites qui vont avec."
+      sub={
+        "Au plus simple, sans additif ni conservateur, classées en trois familles pour trouver la sienne : les " +
+        "sauces de fast-food et de snack, les classiques de France, et les sauces du monde."
+      }
       back="/explorer"
     >
       <div className="card pad charte">
         <strong>La charte ATLAS des sauces</strong> : aucun E-numéro, conservateur, exhausteur ou arôme artificiel ; 8 ingrédients maximum, trouvables en supermarché ; une durée de
         conservation honnête ; une version sans œuf quand c'est possible ; sans porc et sans alcool garantis (vinaigre de cidre plutôt que de vin pour les profils stricts).
       </div>
-      <h2 className="sr">Les sauces</h2>
-      <MoreGrid items={list} />
-      <Section title="Crée ta sauce (Sauce Builder)">
+      <Section title={`${f === "tout" ? "Toutes les sauces" : SAUCE_FAMILY_LABEL[f]} (${list.length})`}>
+        <div className="chips" role="group" aria-label="Famille de sauce">
+          <Chip on={f === "tout"} onClick={() => setF("tout")}>
+            Tout ({SAUCES.length})
+          </Chip>
+          {FAMILIES.map((x) => {
+            const n = sauceRecipes(x).length;
+            return n ? (
+              <Chip key={x} on={f === x} onClick={() => setF(x)}>
+                {SAUCE_FAMILY_LABEL[x]} ({n})
+              </Chip>
+            ) : null;
+          })}
+        </div>
+        <MoreGrid key={f} items={list} />
+      </Section>
+      <Section title="Crée ta propre sauce (Sauce Builder)">
+        <p className="small">Pas trouvé ton bonheur ci-dessus, ou envie d'inventer la tienne ? Compose-la en 3 étapes.</p>
         <Builder />
       </Section>
       {tiktok.length > 0 && (
