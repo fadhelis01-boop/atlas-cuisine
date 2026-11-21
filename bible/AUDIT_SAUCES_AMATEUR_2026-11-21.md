@@ -2,8 +2,8 @@
 
 Le regard de quelqu'un qui veut faire une sauce mais ne sait pas laquelle : peut-être recréer un classique de
 fast-food vu sur TikTok, peut-être une sauce française qu'il a mangée au restaurant, peut-être découvrir une sauce
-du monde. Parcours de `/sauces` (`app/src/pages/Sauces.tsx`) et des 113 fiches `cats: ["sauces"]`. Rien n'a été
-corrigé : ce document liste les angles morts, par ordre de gravité.
+du monde. Parcours de `/sauces` (`app/src/pages/Sauces.tsx`) et des 113 fiches `cats: ["sauces"]`. Les 7 constats ont
+tous été corrigés le jour même (commit `cc1b7e8`) : voir « 5. Corrigé » à la fin de ce document.
 
 ## 1. Constats mesurés
 
@@ -47,3 +47,31 @@ me convient »).
 - **#6** : combler les trous ciblés identifiés (tonkatsu, unagi, ssamjang, zhug/skhug, baba ganoush, banana ketchup).
 - **#7** : une recherche par intention dédiée aux sauces (« pour des frites », « piquant », « sans cuisson », « pour du
   poisson »), à côté du Sauce Builder plutôt qu'à sa place.
+
+## 5. Corrigé (21/11/2026, commit `cc1b7e8`)
+
+- **#1** : nouveau `app/src/lib/sauces.ts`, liste organisée à la main de 90 vraies sauces (sur les 130 fiches
+  `cats: ["sauces"]`, marinades et nouvelles fiches comprises) — exclut les 38 marinades, mélanges d'épices secs,
+  bouillons/fonds et intrus isolés repérés au constat n°1, sans toucher aux `cats` des fiches elles-mêmes (moins
+  risqué qu'une refonte de l'export, et cohérent avec la façon dont `marinades.ts` gère déjà sa propre liste à part).
+- **#2** : puces de filtre par famille sur `/sauces`, sur le modèle du coin Marinades : Fast-food & snack (19),
+  Classiques de France (37), Sauces du monde (34). Vérifié en local et en ligne : le filtre fonctionne, les
+  compteurs sont justes.
+- **#3** : 5 sauces de fast-food écrites — Big Mac, façon Chick-fil-A, blanche Alabama, yum yum (teppanyaki), et la
+  sauce douce et acidulée de McDonald's, **sourcée et créditée sur TikTok** (@simplylemmons, ingrédients exacts
+  donnés dans sa légende : confiture d'abricot et de pêche, miel, vinaigre de vin blanc, soja, moutarde). Les autres
+  (Big Mac, Chick-fil-A, Alabama, yum yum) sont des recettes copiées des dizaines de fois, très proches d'une vidéo
+  à l'autre : écrites à partir de cette connaissance culinaire publique plutôt que d'une seule vidéo précise, comme
+  pour le gravlax ou la marinade au vin rouge plus tôt dans cet audit.
+- **#4 et #5** : `sauce_veloute`, `sauce_espagnole`, `sauce_perigueux`, `sauce_chasseur`, `aioli` et
+  `remoulade_francaise` ajoutées comme fiches autonomes, réutilisables indépendamment du plat où elles apparaissaient
+  jusqu'ici.
+- **#6** : `sauce_tonkatsu`, `sauce_unagi`, `ssamjang`, `zhug`, `baba_ganoush`, `banana_ketchup` ajoutées.
+- **#7** : les trois familles de filtre répondent directement à la question de découverte (« je veux une sauce de
+  fast-food / un classique français / une sauce du monde ») ; le Sauce Builder reste à côté pour qui veut inventer la
+  sienne, avec un texte d'intro qui le présente comme un second choix plutôt que la porte d'entrée de la page.
+
+**Ingrédients manquants ajoutés au Tome 3** pour rendre ces fiches réalisables : « Moutarde jaune américaine
+(douce) » et « Raifort (crème ou râpé) » (sauces américaines), « Truffe (fraîche ou pelures) » (Périgueux) —
+référencés dans `BIBLE_TOME3_REFERENTIEL_INGREDIENTS.md` et dans les dictionnaires illustrés (`dico_2.py`,
+`dico_4.py`).
