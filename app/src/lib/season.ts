@@ -45,7 +45,7 @@ export function seasonOf(zone: Zone, d = new Date()): Season {
 export const SEASON_LABEL: Record<Season, string> = { hiver: "hiver", printemps: "printemps", ete: "été", automne: "automne", tropiques: "saison chaude toute l'année" };
 
 const COMFORT =
-  /soupe|veloute|potage|bouillon|harira|chorba|bortsch|garbure|pot-au-feu|daube|bourguignon|blanquette|navarin|cassoulet|tartiflette|fondue|raclette|aligot|truffade|gratin|hachis|parmentier|goulash|carbonade|baeckeoffe|choucroute|mijot|ragout|stew|joue|souris|7 heures|sept heures|confit|lasagne|moussaka|chili|curry|dal|ramen|pho|chocolat chaud|chai|lait d.or|tajine|couscous|mafe|ndole|rendang/;
+  /soupe|veloute|potage|bouillon|harira|chorba|bortsch|garbure|pot-au-feu|daube|bourguignon|blanquette|navarin|cassoulet|tartiflette|fondue|raclette|aligot|truffade|gratin|hachis|parmentier|goulash|carbonade|baeckeoffe|choucroute|mijot|ragout|stew|joue|souris|7 heures|sept heures|confit|lasagne|moussaka|chili|curry|\bdal\b|ramen|pho|chocolat chaud|chai|lait d.or|tajine|couscous|mafe|ndole|rendang/;
 const FRESH =
   /salade|gaspacho|gazpacho|ceviche|tartare|carpaccio|poke|taboule|fattouche|panzanella|pan bagnat|crudit|sorbet|glace|granite|smoothie|limonade|citronnade|mojito|agua|the glace|horchata|bissap|ginger|brochette|grill|barbecue|plancha|souvlaki|kofta|poisson cru|kokoda|som tam|rouleaux de printemps|bo bun|tzatziki|raita|elote|pico/;
 const TROPICAL_PRODUCE = new Set([

@@ -5,7 +5,7 @@ import { useScreenChange } from "./lib/a11y";
 import { PROFILE_MATCH, TABS, tabOf } from "./lib/nav";
 import { recordStartup, useUsageCounter } from "./lib/mesures";
 import { useStore } from "./lib/store";
-import { useDetails } from "./lib/data";
+import { useDetails, useRecipeDetail } from "./lib/data";
 import { useTimerLoop } from "./lib/timers";
 import { applyUpdate, usePwa } from "./lib/pwa";
 import TimerDock from "./components/TimerDock";
@@ -47,10 +47,13 @@ const Semaine = lazy(() => import("./pages/Semaine"));
 const Partage = lazy(() => import("./pages/Partage"));
 
 // écrans qui n'ont besoin que de l'index des recettes : ils s'affichent sans attendre le détail (étapes, conseils…)
+// Élargi le 21/11/2026 (audit dév senior §1) : ces pages n'affichent que des cartes (titre, région, temps) via
+// MoreGrid/RecipeCard, jamais une étape, une astuce ou une conservation — vérifié un par un avant ajout.
 const INDEX_ONLY = new Set([
   "",
   "explorer",
   "region",
+  "recherche",
   "profil",
   "biblio",
   "imports",
@@ -62,7 +65,21 @@ const INDEX_ONLY = new Set([
   "frigo",
   "courses",
   "partage",
+  "recettes",
+  "techniques",
+  "technique",
+  "pains",
+  "sauces",
+  "fetes",
+  "zero-dechet",
+  "restes",
+  "pique-nique",
+  "street-food",
+  "marinades",
 ]);
+// écrans qui balaient tout le catalogue (conservation/congélation de chaque fiche) : ils ont besoin des 12 lots de
+// détail, pas d'un seul ; tous les autres (une fiche, le mode cuisine) ne chargent que le lot de cette fiche.
+const FULL_DETAIL_ROUTES = new Set(["semaine", "menu", "bien-choisir", "enfants"]);
 
 const Loading = () => (
   <main className="page" id="contenu" tabIndex={-1} aria-busy="true">
@@ -104,10 +121,14 @@ export default function App() {
   }, []);
 
   const [p0, p1] = route.path;
-  const details = useDetails();
+  const needsAllDetails = FULL_DETAIL_ROUTES.has(p0 ?? "");
+  const allDetails = useDetails(needsAllDetails);
+  const singleId = p0 === "recette" || p0 === "cuisine" ? p1 : undefined;
+  const singleReady = useRecipeDetail(singleId);
   const needsDetails = !INDEX_ONLY.has(p0 ?? "");
+  const detailsBlocked = needsAllDetails ? !allDetails : singleId ? !singleReady : false;
   if (p0 === "cuisine" && p1)
-    return details ? (
+    return singleReady ? (
       <Suspense fallback={<Loading />}>
         <Cook id={p1} />
       </Suspense>
@@ -284,7 +305,7 @@ export default function App() {
           </div>
         )}
         <ErrorBoundary resetKey={route.path.join("/")}>
-          <Suspense fallback={<Loading />}>{needsDetails && !details ? <Loading /> : page}</Suspense>
+          <Suspense fallback={<Loading />}>{needsDetails && detailsBlocked ? <Loading /> : page}</Suspense>
         </ErrorBoundary>
       </div>
       <TimerDock />

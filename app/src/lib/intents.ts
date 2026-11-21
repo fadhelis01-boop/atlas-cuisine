@@ -14,7 +14,7 @@ export interface Intent {
 }
 const veg = (r: Recipe) => evaluate(r).flesh.length === 0;
 const BREAKFAST =
-  /pancake|porridge|granola|crepe|gaufre|brunch|muesli|oeufs? (brouill|cocotte|benedicte|mollet)|toast|pain perdu|smoothie|overnight|chia|tartine|shakshuka|menemen|omelette|bol |bowl/;
+  /pancake|porridge|granola|crepe|gaufre|brunch|muesli|oeufs? (brouill|cocotte|benedicte|mollet)|toast|pain perdu|smoothie|overnight|\bchia\b|tartine|shakshuka|menemen|omelette|bol |bowl/;
 
 const RULES: [RegExp, Intent][] = [
   [/\b(rapide|rapides|vite|express|presse|pressee|en 15 min|15 min|20 min|minute)\b/, { id: "rapide", label: "rapide (≤ 30 min)", test: (r) => r.active + r.rest <= 30 }],
@@ -28,7 +28,7 @@ const RULES: [RegExp, Intent][] = [
     /\b(sans four|pas de four|sans cuisson au four|a la poele|plaque)\b/,
     { id: "nofour", label: "sans four", test: (r) => !ovenPlan(r.steps) && !/four|enfourn/i.test(r.equipment) },
   ],
-  [/\b(sans cuisson|cru|crue|no cook)\b/, { id: "cru", label: "sans cuisson", test: (r) => r.rest <= 5 && !/cui|four|poele|feu|bouill|fri/i.test(r.steps.join(" ")) }],
+  [/\b(sans cuisson|cru|crue|no cook)\b/, { id: "cru", label: "sans cuisson", test: (r) => r.rest <= 5 && !/\bcui|four|poele|\bfeu\b|bouill|\bfri/i.test(r.steps.join(" ")) }],
   [/\b(facile|facil|simple|debutant|debutante|inratable|basique)\b/, { id: "facile", label: "facile", test: (r) => r.level === 1 }],
   [/\b(dessert|desserts|sucre|sucree|gouter|patisserie)\b/, { id: "dessert", label: "dessert", test: (r) => r.role === "dessert" }],
   [/\b(entree|entrees)\b/, { id: "entree", label: "entrée", test: (r) => r.role === "entree" }],
@@ -39,7 +39,7 @@ const RULES: [RegExp, Intent][] = [
     {
       id: "brunch",
       label: "petit-déjeuner, brunch",
-      test: (r) => r.cats.includes("brunch") || BREAKFAST.test(norm(r.title)) || (r.role === "dessert" && r.active <= 20 && /pain|crepe|gaufre|yaourt|fruit/.test(norm(r.title))),
+      test: (r) => r.cats.includes("brunch") || BREAKFAST.test(norm(r.title)) || (r.role === "dessert" && r.active <= 20 && /\bpain|crepe|gaufre|yaourt|fruit/.test(norm(r.title))),
     },
   ],
   [
@@ -68,7 +68,7 @@ const RULES: [RegExp, Intent][] = [
       label: "légumes bien cachés",
       test: (r) =>
         r.role !== "dessert" &&
-        /cache|veloute|soupe|gratin|galette|boulette|cake|muffin|pizza|lasagne|hachis|parmentier|frittata|croquette|quiche|crumble|pates sauce|bolognaise|pancake/.test(
+        /cache|veloute|soupe|gratin|galette|\bboulette|cake|muffin|pizza|lasagne|hachis|parmentier|frittata|croquette|quiche|crumble|pates sauce|bolognaise|pancake/.test(
           norm(r.title),
         ) &&
         r.ingredients.some((l) => !!l.ref && /Légumes/.test(INGREDIENTS[l.ref]?.section ?? "")),

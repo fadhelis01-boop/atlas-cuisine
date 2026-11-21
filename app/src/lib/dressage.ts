@@ -35,7 +35,7 @@ const RULES: [RegExp, string, "s" | "d" | "*"][] = [
     "s",
   ],
   [
-    /mousse|creme |panna cotta|flan|ile flottante|tiramisu|verrine|riz au lait|kheer|mahalabia|pudding|creme brulee|creme caramel/,
+    /\bmousse\b|creme |panna cotta|flan|ile flottante|tiramisu|verrine|riz au lait|kheer|mahalabia|\bpudding\b|creme brulee|creme caramel/,
     "Sers bien froid en verrines ou coupelles ; au moment de servir, un élément croquant (biscuit émietté, fruits secs torréfiés) et un fruit frais ou un " + "zeste.",
     "d",
   ],
@@ -46,7 +46,7 @@ const RULES: [RegExp, string, "s" | "d" | "*"][] = [
   ],
   [/glace|sorbet/, "Sors la glace 5 à 10 min avant pour qu'elle se boule bien ; cuillère trempée dans l'eau chaude, coupes refroidies au congélateur.", "d"],
   [
-    /pain|baguette|brioche|fougasse|focaccia|naan|pita|bagel|ciabatta|bretzel|croissant|viennois/,
+    /\bpain|baguette|brioche|fougasse|focaccia|naan|\bpita|bagel|ciabatta|bretzel|croissant|viennois/,
     "Laisse refroidir sur une grille avant de trancher (la mie finit de cuire) ; pour le servir tiède, 5 min au four à 180 °C suffisent.",
     "*",
   ],
@@ -57,22 +57,22 @@ const RULES: [RegExp, string, "s" | "d" | "*"][] = [
     "s",
   ],
   [
-    /saumon|cabillaud|dorade|bar |sole|lieu|maquereau|sardine|thon|poisson|merlu|truite|saint jacques|gambas|crevette|moule|calamar|bacalhau|morue|brandade/,
+    /saumon|cabillaud|dorade|\bbar\b|\bsole\b|\blieu\b|maquereau|sardine|thon|poisson|merlu|truite|saint jacques|gambas|crevette|\bmoule|calamar|bacalhau|morue|brandade/,
     "Côté peau en haut s'il est croustillant (la sauce dessous, jamais dessus) ; un quartier de citron, de l'aneth ou du persil, une pincée de fleur de " + "sel.",
     "s",
   ],
   [
-    /pates|spaghetti|risotto|gnocchi|nouilles|udon|ramen|pad thai|yakisoba|tagliatelle|penne|cacio|carbonara/,
+    /pates|spaghetti|risotto|gnocchi|\bnouilles\b|\budon\b|ramen|pad thai|yakisoba|tagliatelle|penne|cacio|carbonara/,
     "Assiettes creuses chaudes ; enroule les pâtes avec une pince et une louche pour faire un nid ; parmesan, herbes ou piment, et un filet d'huile au " + "dernier moment.",
     "s",
   ],
   [
-    /gratin|tarte|quiche|lasagne|moussaka|hachis|parmentier|tartiflette|pizza|flammekueche|pie|clafoutis sale|cake sale|tian/,
+    /gratin|tarte|quiche|lasagne|moussaka|hachis|parmentier|tartiflette|pizza|flammekueche|\bpie\b|clafoutis sale|cake sale|\btian\b/,
     "Laisse tiédir 5 à 10 min avant de couper : les parts se tiennent ; une salade verte bien assaisonnée à côté apporte fraîcheur et couleur.",
     "s",
   ],
   [
-    /tajine|curry|cari|colombo|mafe|yassa|daube|blanquette|bourguignon|ragout|navarin|osso buco|rendang|moambe|chili|dal|chana|stew|goulash|carbonade|poule au pot|pot au feu|mijote|wot|feijoada|cassoulet|couscous|biryani|paella|jollof|thieb/,
+    /tajine|curry|cari|colombo|mafe|yassa|daube|blanquette|bourguignon|ragout|navarin|osso buco|rendang|moambe|chili|\bdal\b|chana|stew|goulash|carbonade|poule au pot|pot au feu|mijote|wot|feijoada|cassoulet|couscous|biryani|paella|jollof|thieb/,
     "Assiettes creuses chaudes ; la viande ou les légumes d'abord, la sauce nappée sans noyer, la garniture (riz, semoule, pain) à côté ; herbes fraîches, " +
       "zeste ou oignon frit juste avant de servir.",
     "s",
@@ -115,7 +115,7 @@ export function balanceOf(r: Recipe): string | null {
   const veg = secs.some((x) => /^Légumes/.test(x));
   const starch =
     secs.some((x) => /^(Légumineuses|Farines)/.test(x)) ||
-    flatten(r.ingredients).some((l) => /pomme de terre|patate|manioc|igname|plantain|riz|pâtes|semoule|pain/i.test(l.ref ?? ""));
+    flatten(r.ingredients).some((l) => /pomme de terre|patate|manioc|igname|plantain|\briz\b|pâtes|semoule|\bpain/i.test(l.ref ?? ""));
   const meat = secs.some((x) => /^(Viandes|Poissons|Porc)/.test(x));
   const prot = r.prot != null ? r.prot >= LIGHT_PROT : meat || secs.some((x) => /^(Œufs|Légumineuses)/.test(x));
   // audit gourmet §4.2 : on chiffre les protéines (estimation) et on dit quoi ajouter quand le plat est léger, sans trahir la recette

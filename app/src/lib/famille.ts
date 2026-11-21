@@ -71,10 +71,10 @@ export function starchOf(r: Recipe): Starch {
   );
   if (/lentille|pois chiche|haricots (rouges|blancs|noirs)|feves|dal\b|pois casses/.test(t)) return "légumineuses";
   if (/pomme de terre|patate|frites|puree|gnocchi|tartiflette|raclette|parmentier|rosti/.test(t)) return "pomme de terre";
-  if (/pates|spaghetti|nouilles|tagliatelle|penne|lasagne|macaroni|udon|ramen|ravioli/.test(t)) return "pâtes";
+  if (/pates|spaghetti|\bnouilles\b|tagliatelle|penne|lasagne|macaroni|\budon\b|ramen|ravioli/.test(t)) return "pâtes";
   if (/\briz\b|risotto|paella|biryani|pilaf/.test(t)) return "riz";
   if (/semoule|couscous|boulgour|quinoa/.test(t)) return "semoule";
-  if (/pain|tortilla|pita|wrap|burger|pizza|croque|tartine/.test(t)) return "pain";
+  if (/\bpain|tortilla|\bpita|wrap|burger|pizza|croque|tartine/.test(t)) return "pain";
   return null;
 }
 /** Plats riches en fromage fondu ou en crème : une fois par semaine suffit. */

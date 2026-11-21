@@ -9,7 +9,7 @@
     "dev": "vite",
     "test": "rolldown -c rolldown.tests.mjs && node .tmp/test/engine.test.mjs",
     "typecheck": "tsc --noEmit",
-    "build": "npm run test && npm run smoke && tsc --noEmit && node scripts/lignes.mjs && vite build && node scripts/prune-photos.mjs && node scripts/budget.mjs",
+    "build": "npm run test && npm run smoke && tsc --noEmit && node scripts/lignes.mjs && node scripts/check-regex-collisions.mjs && vite build && node scripts/prune-photos.mjs && node scripts/budget.mjs",
     "preview": "vite preview",
     "deploy": "npm run build && node scripts/deploy.mjs",
     "icons": "node scripts/make-icons.mjs",

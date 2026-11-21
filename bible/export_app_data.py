@@ -603,7 +603,17 @@ from renommages import RENAMES
 _ids_all = {r["id"] for r in recipes}
 assert all(n in _ids_all and o not in _ids_all for o, n in RENAMES.items()), "renommage : l'ancien nom existe encore ou le nouveau manque"
 dump("ingredients.json", ingredients); dump("recipes.json", index); dump("recipes_detail.json", detail); dump("rules.json", RULES); dump("renames.json", RENAMES)
-print(f"recettes : index {len(json.dumps(index, ensure_ascii=False)) // 1024} Ko, détail {len(json.dumps(detail, ensure_ascii=False)) // 1024} Ko")
+# Découpage en lots (audit dév senior 21/11/2026 §1) : data.ts ne charge plus recipes_detail.json en un seul bloc (2 Mo,
+# bloquait l'affichage de toute fiche le temps de télécharger les étapes des 1600 autres) ; une fiche ne tire que son
+# propre lot. recipes_detail.json complet reste généré pour les tests (imports directs dans tests/*.ts), mais n'est
+# plus référencé par l'application elle-même : seuls les lots le sont.
+SHARD_N = 12
+def shard_of(rid):
+    return sum(map(ord, rid)) % SHARD_N
+shards = [{} for _ in range(SHARD_N)]
+for rid, d in detail.items(): shards[shard_of(rid)][rid] = d
+for i, sh in enumerate(shards): dump(f"recipes_detail_{i}.json", sh)
+print(f"recettes : index {len(json.dumps(index, ensure_ascii=False)) // 1024} Ko, détail {len(json.dumps(detail, ensure_ascii=False)) // 1024} Ko en {SHARD_N} lots")
 dump("catalogue.json", catalogue); dump("imports.json", imports)
 print(f"zéro déchet : {ZW_COUNT} ingrédients entamés repérés dans {sum(1 for v in LEFT.values() if v)} fiches")
 print(f"vidéos liées : {sum(len(v) for v in VIDEOS.values())} sur {len(VIDEOS)} fiches ; imports lisibles dans l'app : {sum(1 for i in imports if i.get('embed'))}")

@@ -80,10 +80,42 @@ export function useImportLibrary(): ImportEntry[] {
 export const RECIPE_BY_ID: Record<string, Recipe> = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
 type Detail = Partial<Pick<Recipe, "steps" | "intro" | "videos" | "tips" | "equipment" | "storage" | "credit" | "kidHelp" | "source" | "verified" | "prot">> & { lines?: [string, string][] };
-let DETAILS = false;
-let detP: Promise<void> | null = null;
+// Démarrage léger, suite (audit dév senior 21/11/2026 §1) : le détail de 1600+ fiches ne se télécharge plus en un seul
+// bloc de 2 Mo qui bloquait l'affichage de n'importe quelle fiche le temps de recevoir les étapes des 1600 autres.
+// Il est coupé en 12 lots (export_app_data.py, même fonction de répartition `shardOf`) ; une fiche ne charge que le
+// sien (`useRecipeDetail`), les écrans qui balaient tout le catalogue (Ma semaine, menus, Bien choisir, Enfants)
+// chargent les 12 (`useDetails`).
+const SHARD_N = 12;
+const shardOf = (id: string): number => {
+  let s = 0;
+  for (let i = 0; i < id.length; i++) s += id.charCodeAt(i);
+  return s % SHARD_N;
+};
+// 12 imports statiques plutôt qu'un `import.meta.glob` (propre à Vite) : marche aussi sous rolldown (tests, smoke),
+// qui rend chaque chunk de lot repérable au build sans transformation spéciale.
+const SHARD_LOADERS: (() => Promise<string>)[] = [
+  () => import("../data/recipes_detail_0.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_1.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_2.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_3.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_4.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_5.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_6.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_7.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_8.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_9.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_10.json?raw").then((m) => m.default as unknown as string),
+  () => import("../data/recipes_detail_11.json?raw").then((m) => m.default as unknown as string),
+];
+const shardLoaded = new Array<boolean>(SHARD_N).fill(false);
+const shardPromises = new Array<Promise<void> | undefined>(SHARD_N);
+const shardListeners: Set<() => void>[] = Array.from({ length: SHARD_N }, () => new Set());
+let DETAILS = false; // vrai une fois que chaque fiche a son détail (par lots dans l'appli, en un coup dans les tests)
+const detailedIds = new Set<string>(); // par id, pas par `r.steps !== undefined` : RECIPES part déjà de steps: [] (DETAIL_EMPTY)
 const detLs = new Set<() => void>();
-/** Complète les fiches avec leur détail (étapes, introduction, vidéos, conseils, matériel, conservation). */
+/** Complète les fiches avec leur détail (étapes, introduction, vidéos, conseils, matériel, conservation). Marque
+ *  `detailsReady()` vrai une fois que chaque fiche en a un, que ça vienne des 12 lots (l'appli) ou d'un seul appel
+ *  avec le fichier complet (les tests, qui ne passent jamais par `loadShard`). */
 export function mergeDetails(d: Record<string, Detail>) {
   for (const [id, { lines, ...x }] of Object.entries(d)) {
     const r = RECIPE_BY_ID[id];
@@ -96,27 +128,59 @@ export function mergeDetails(d: Record<string, Detail>) {
         l.label = label;
       }
     }); // quantités et libellés
+    detailedIds.add(id);
   }
-  DETAILS = true;
   markDetails();
-  detLs.forEach((l) => l());
+  if (detailedIds.size >= RECIPES.length && !DETAILS) {
+    DETAILS = true;
+    detLs.forEach((l) => l());
+  }
 }
-export function loadDetails(): Promise<void> {
-  detP ??= import("../data/recipes_detail.json?raw").then((m) => mergeDetails(JSON.parse(m.default) as Record<string, Detail>));
-  return detP;
+function loadShard(i: number): Promise<void> {
+  shardPromises[i] ??= SHARD_LOADERS[i]().then((raw) => {
+    mergeDetails(JSON.parse(raw) as Record<string, Detail>);
+    shardLoaded[i] = true;
+    shardListeners[i].forEach((l) => l());
+  });
+  return shardPromises[i]!;
+}
+/** Charge le détail d'une seule fiche. */
+export function loadDetailFor(id: string): Promise<void> {
+  return loadShard(shardOf(id));
+}
+/** Charge le détail de toutes les fiches : pour les écrans qui balaient tout le catalogue (Ma semaine, menus, Bien
+ *  choisir, Enfants), pas pour une fiche seule (voir `useRecipeDetail`). */
+export function loadAllDetails(): Promise<void> {
+  return Promise.all(Array.from({ length: SHARD_N }, (_, i) => loadShard(i))).then(() => undefined);
 }
 export const detailsReady = () => DETAILS;
-/** Pour un écran qui lit les étapes ou les conseils : vrai quand le détail est là (il se redessine à son arrivée). */
-export function useDetails(): boolean {
+/** Pour un écran qui balaie tout le catalogue : vrai quand les 12 lots sont là. `active=false` ne déclenche pas le
+ *  chargement (route qui n'en a pas besoin pour l'instant), juste la lecture de l'état déjà connu. */
+export function useDetails(active = true): boolean {
   return useSyncExternalStore(
     (cb) => {
       detLs.add(cb);
-      void loadDetails();
+      if (active) void loadAllDetails();
       return () => {
         detLs.delete(cb);
       };
     },
     () => DETAILS,
+  );
+}
+/** Pour une seule fiche (recette, mode cuisine) : vrai dès que SON lot est chargé, pas besoin d'attendre les 11 autres. */
+export function useRecipeDetail(id: string | undefined): boolean {
+  const i = id ? shardOf(id) : -1;
+  return useSyncExternalStore(
+    (cb) => {
+      if (i < 0) return () => {};
+      shardListeners[i].add(cb);
+      void loadShard(i);
+      return () => {
+        shardListeners[i].delete(cb);
+      };
+    },
+    () => i < 0 || shardLoaded[i],
   );
 }
 export const INGREDIENT_NAMES = Object.keys(INGREDIENTS);

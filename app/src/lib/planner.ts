@@ -40,9 +40,9 @@ export function proteinOf(r: Recipe): string {
     .filter((l) => l.ref && l.weight >= 2)
     .map((l) => norm(l.ref!))
     .join(" ");
-  if (/saumon|cabillaud|morue|thon|sardine|maquereau|dorade|bar |sole|lieu|colin|lotte|poisson|crevette|gambas|moule|calamar|saint jacques/.test(refs)) return "poisson";
+  if (/saumon|cabillaud|morue|thon|sardine|maquereau|dorade|\bbar\b|\bsole\b|\blieu\b|colin|\blotte\b|poisson|crevette|gambas|\bmoule|calamar|saint jacques/.test(refs)) return "poisson";
   if (/poulet|volaille|dinde|canard|pintade|caille/.test(refs)) return "volaille";
-  if (/boeuf|veau|paleron|joue|steak|rumsteck|bavette|hache|jarret|cote de/.test(refs)) return "boeuf";
+  if (/boeuf|\bveau\b|paleron|joue|steak|rumsteck|bavette|hache|jarret|cote de/.test(refs)) return "boeuf";
   if (/agneau|gigot|mouton|chevre \//.test(refs)) return "agneau";
   if (/porc|lardons|jambon|saucisse de toulouse|chorizo \(/.test(refs)) return "porc";
   if (/oeuf/.test(refs)) return "oeufs";
@@ -424,7 +424,7 @@ export function consolidate(items: { id: string; factor: number }[], month = new
 
 // ---------------------------------------------------------------- préparation à l'avance (cuisine en lot)
 const AHEAD =
-  /marin|pate (a pain|a pizza|brisee|sucree)|petri|bouillon|fumet|sauce|pesto|vinaigrette|chermoula|nokoss|creme patissiere|repos une nuit|la veille|une nuit|tremper|trempe/;
+  /\bmarin|pate (a pain|a pizza|brisee|sucree)|petri|bouillon|fumet|sauce|pesto|vinaigrette|chermoula|nokoss|creme patissiere|repos une nuit|la veille|une nuit|tremper|trempe/;
 const LAST_MINUTE = /\bfrire\b|friture|frits?\b|servir|dresser|au dernier moment|aussitot|tout de suite/;
 const NOT_AHEAD = /Ail|Oignon|Échalote|Pomme de terre|Tomate|Avocat|Salade|Champignon|Aubergine|Concombre|Roquette|Endive|Épinard|Cresson|Patate douce|Céleri-rave|Artichaut/;
 /** Une étape qui se fait vraiment à l'avance : nommée (« Sauce. », « Mariner. »…) par un geste d'avance, jamais une cuisson
