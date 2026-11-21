@@ -361,7 +361,7 @@ K("jambon_dinde_maison", "Jambon de dinde maison (cuit, sans conservateur inutil
   "Le geste du charcutier simplifié, en version volaille : un blanc de dinde en saumure deux jours avec du sel "
   "nitrité (pour une couleur rose et une vraie sécurité alimentaire, pas pour le goût), puis poché longuement à "
   "basse température. Pas une recette à l'improvisation, mais un vrai jambon maison.",
-  [f"1,5 kg|de blanc de dinde, en un seul morceau, roulé et ficelé|Blanc de poulet|3",
+  [f"1,5 kg|de blanc de dinde, en un seul morceau, roulé et ficelé|Dinde (escalope, cuisse, filet)|3",
    f"2 l|d'eau (pour la saumure)|{EAU}|3", f"150 g|de sel nitrité, dosé selon l'indication du paquet (jamais à l'œil)|{SELNITRITE}|3",
    f"50 g|de sucre|{SUCRE}|1", f"2|feuilles de laurier|{LAURIER}|1", f"1 c. à c.|de grains de poivre|{POIVRE}|1",
    f"2|clous de girofle|Clou de girofle|1?", f"8|cornichons (pour servir)|{CORNICHON}|1?"],

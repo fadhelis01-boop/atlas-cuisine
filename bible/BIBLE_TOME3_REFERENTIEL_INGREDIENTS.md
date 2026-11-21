@@ -75,6 +75,9 @@
 | Épaule / tendron de veau | — | — | 🟢 | Blanquette |
 | Rôti de veau | — | — | 🟢 | |
 | Foie de veau | — | — | 🟡 | |
+| Tête de veau | — | — | 🟠 | Vendue roulée et ficelée par le tripier, souvent avec la langue |
+| Ris de veau | — | — | 🟠 | Dégorger à l'eau froide avant cuisson |
+| Rognons de veau | — | — | 🟠 | Cuisson vive et courte |
 | Gigot d'agneau | — | — | 🟢 | Os → bouillon, restes → samoussas |
 | Épaule d'agneau | — | — | 🟢 | |
 | Collier d'agneau | — | — | 🟡 | |
@@ -88,11 +91,16 @@
 | Dinde (escalope, cuisse, filet) | — | — | 🟢 | |
 | Canard : magret, cuisse | — | — | 🟢 | Graisse → pommes de terre, confit |
 | Canard entier / carcasse | — | — | 🟡 | |
+| Foie gras de canard cru | — | — | 🟠 | Lobe cru à déveiner ; mi-cuit en terrine ou poêlé |
 | Pintade | — | — | 🟡 | |
 | Caille | — | — | 🟡 | |
 | Lapin | — | — | 🟡 | |
 | Cerf / biche / chevreuil | — | — | 🟠 | Gibier, saisonnier |
 | **Sanglier** | — | **PORC?** (suidé) | 🟠 | ⚠️ **Assimilé porc** pour les régimes sans porc |
+| Pigeonneau | — | — | 🟠 | Gibier d'élevage, prêt à cuire |
+| Lièvre | — | — | 🟠 | Gibier à poil, saisonnier ; souvent vendu avec son foie |
+| Faisan | — | — | 🟠 | Gibier à plumes, saisonnier |
+| Cuisses de grenouilles | — | — | 🟠 | Fraîches ou surgelées |
 | Chèvre / cabri | — | — | 🟠 | Fêtes maghrébines |
 
 ---

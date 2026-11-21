@@ -10,7 +10,7 @@ ECHA = "Échalote"
 
 K("civet_lievre", "Civet de lièvre (sauce liée au foie et au chocolat noir)", "Civet de lièvre", "France › Centre-Val de Loire", "P", 3, 6, 40, 1620, "€€€", "Grande cocotte.",
   "Le plat de chasse le plus réputé de Sologne : le lièvre mariné au vin rouge, mijoté longuement, la sauce liée (traditionnellement au sang, ici au foie mixé et au chocolat noir), avec des lardons et des champignons.",
-  ["1|lièvre découpé (2,5 kg), avec le foie|-|3", "75 cl|de vin rouge corsé|Vin rouge|3", "150 g|de lardons|Lardons|2", "250 g|de champignons|Champignon de Paris|2", f"2|oignons|{OIG}|1", f"2|carottes|{CAROTTE}|1", "1|bouquet garni|Laurier|1", f"2 c. à s.|de farine|{F55}|1", f"30 g|de chocolat noir|{CHOCO}|1", f"3 c. à s.|d'huile|{HN}|1"],
+  ["1|lièvre découpé (2,5 kg), avec le foie|Lièvre|3", "75 cl|de vin rouge corsé|Vin rouge|3", "150 g|de lardons|Lardons|2", "250 g|de champignons|Champignon de Paris|2", f"2|oignons|{OIG}|1", f"2|carottes|{CAROTTE}|1", "1|bouquet garni|Laurier|1", f"2 c. à s.|de farine|{F55}|1", f"30 g|de chocolat noir|{CHOCO}|1", f"3 c. à s.|d'huile|{HN}|1"],
   ["**Mariner (la veille).** Morceaux, vin, oignons et carottes en rondelles, bouquet ; 24 h au frais ; foie gardé à part, filmé.",
    "**Saisir.** Morceaux égouttés, épongés, dans l'huile fumante, en plusieurs fois : bien bruns ; lardons dorés ; singer (farine, 1 min).",
    "**Mijoter.** Marinade bouillie et écumée versée dessus, sel ; feu doux 2 h 30 à 3 h : la chair se détache ; champignons poêlés en fin.",
@@ -29,7 +29,7 @@ K("daube_sanglier", "Daube de sanglier aux cèpes", "Daube de sanglier", "France
   keep="3 jours au frigo ; se congèle.", age=None, kids="✓ dès 3 ans en version sans alcool.", fetes=["Repas de famille", "Noël"], profil=["viande_rouge"], tech=["Mariner", "Mijoter"])
 K("faisan_chou_cocotte", "Faisan en cocotte aux raisins et au chou", "Faisan en cocotte", "France › Hauts-de-France", "P", 2, 4, 30, 70, "€€€", "Cocotte.",
   "Le faisan, maigre et parfumé, doré puis cuit à couvert pour rester moelleux, avec des raisins frais et un chou braisé. Le plat de chasse le plus doux.",
-  ["1|faisan (1,2 kg) prêt à cuire|-|3", "1|petit chou vert|Chou vert / frisé / kale|2", "250 g|de raisins blancs|Raisin|2", f"40 g|de beurre|{BEURRE}|2", f"20 cl|de fond de volaille|{BOUILLON}|1", f"1|oignon|{OIG}|1", "4|baies de genièvre|Baies de genièvre|1?", f"1/2|citron|{CIT}|1"],
+  ["1|faisan (1,2 kg) prêt à cuire|Faisan|3", "1|petit chou vert|Chou vert / frisé / kale|2", "250 g|de raisins blancs|Raisin|2", f"40 g|de beurre|{BEURRE}|2", f"20 cl|de fond de volaille|{BOUILLON}|1", f"1|oignon|{OIG}|1", "4|baies de genièvre|Baies de genièvre|1?", f"1/2|citron|{CIT}|1"],
   ["**Brider.** Faisan salé, bridé, enveloppé d'une feuille de chou blanchie : il ne sèche pas.",
    "**Dorer.** Cocotte, beurre, 10 min sur toutes les faces ; réservé ; oignon, chou blanchi en lanières, genièvre, fond.",
    "**Cuire.** Faisan sur le chou, couvert, four 180 °C 45 min : cuisses à 75 °C, blancs encore juteux ; 10 min de repos.",
@@ -63,7 +63,7 @@ K("sauce_charcutiere", "Sauce charcutière (moutarde et cornichons)", "Sauce cha
 
 K("lievre_royale", "Lièvre à la royale (version accessible, roulé farci au foie gras)", "Lièvre à la royale", "France › Cuisine de chef", "P", 3, 8, 90, 2880, "€€€", "Grande cocotte, ficelle de cuisine, thermomètre, mixeur.",
   "Le monument de la cuisine de chasse, attribué au sénateur Couteaux : un lièvre désossé, farci de ses abats, de foie gras et de veau, roulé, braisé longuement au vin rouge, et servi avec une sauce liée au foie, sombre et brillante. Cette version garde le principe en deux jours, sans le sang.",
-  ["1|lièvre (2,5 kg), désossé par le volailler, avec le cœur, le foie et les rognons|-|3", "150 g|de foie gras cru|-|2", "300 g|d'épaule de veau hachée|Épaule / tendron de veau|2", f"2|échalotes|{ECHA}|1", "1,5 L|de vin rouge corsé|Vin rouge|3", "4 cl|de cognac (facultatif)|Cognac / armagnac / brandy|1?", f"2|carottes|{CAROTTE}|1", f"2|oignons|{OIG}|1", "1|bouquet garni|Laurier|1", f"30 g|de chocolat noir|{CHOCO}|1", f"30 g|de beurre froid|{BEURRE}|1"],
+  ["1|lièvre (2,5 kg), désossé par le volailler, avec le cœur, le foie et les rognons|Lièvre|3", "150 g|de foie gras cru|Foie gras de canard cru|2", "300 g|d'épaule de veau hachée|Épaule / tendron de veau|2", f"2|échalotes|{ECHA}|1", "1,5 L|de vin rouge corsé|Vin rouge|3", "4 cl|de cognac (facultatif)|Cognac / armagnac / brandy|1?", f"2|carottes|{CAROTTE}|1", f"2|oignons|{OIG}|1", "1|bouquet garni|Laurier|1", f"30 g|de chocolat noir|{CHOCO}|1", f"30 g|de beurre froid|{BEURRE}|1"],
   ["**Mariner (J-1).** Chair désossée étalée, vin, cognac, carottes, oignons, bouquet ; 24 h au frais ; foie du lièvre gardé à part.",
    "**Farce.** Veau, cœur et rognons hachés, échalotes, sel (14 g/kg), poivre, foie gras en dés : bien liée.",
    "**Rouler.** Chair épongée, à plat, farce au centre, roulée serré et ficelée tous les 3 cm ; saisie dans le beurre sur toutes les faces : brune.",

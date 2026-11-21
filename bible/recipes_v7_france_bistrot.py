@@ -32,7 +32,7 @@ K("canard_orange", "Canard à l'orange (sauce bigarade)", "Canard à l'orange", 
   var=[("Sans alcool", ["alcohol"], {"Grand Marnier / Cointreau / triple sec": [("Jus de pomme / raisin / orange (pur jus)", 1.0)]}, "Grand Marnier → **zeste et jus d'orange en plus**. **À tester**.")])
 K("tete_de_veau_gribiche", "Tête de veau, sauce gribiche", "Tête de veau", "France › Cuisine de bistrot", "P", 2, 6, 30, 180, "€€", "Grande marmite.",
   "Le plat des amateurs d'abats : une tête de veau roulée (achetée prête chez le tripier), cuite longuement dans un bouillon aromatique, servie tiède avec la langue, des pommes vapeur et une sauce gribiche aux câpres et cornichons.",
-  ["1,5 kg|de tête de veau roulée et ficelée (avec la langue)|-|3", f"2|carottes|{CAROTTE}|1", f"2|oignons piqués de clous de girofle|{OIG}|1", "1|bouquet garni|Laurier|1", f"2 c. à s.|de farine|{F55}|1", f"1|citron|{CIT}|1", f"1 kg|de pommes de terre|{PDT}|2", "1|bol de sauce gribiche (fiche Gribiche)|SUB:sauce_gribiche|2"],
+  ["1,5 kg|de tête de veau roulée et ficelée (avec la langue)|Tête de veau|3", f"2|carottes|{CAROTTE}|1", f"2|oignons piqués de clous de girofle|{OIG}|1", "1|bouquet garni|Laurier|1", f"2 c. à s.|de farine|{F55}|1", f"1|citron|{CIT}|1", f"1 kg|de pommes de terre|{PDT}|2", "1|bol de sauce gribiche (fiche Gribiche)|SUB:sauce_gribiche|2"],
   ["**Blanchir.** Tête et langue à l'eau froide, à ébullition 5 min, égouttées, rincées : les impuretés partent.",
    "**Blanc de cuisson.** Eau froide, farine délayée, jus de citron (la chair reste blanche), carottes, oignons, bouquet, gros sel ; à frémissement, 2 h 30 à 3 h : une lame entre sans aucune résistance.",
    "**Langue.** Pelée tiède, en tranches.",
@@ -51,7 +51,7 @@ K("pate_en_croute", "Pâté en croûte maison (volaille et veau, ou porc)", "Pâ
   keep="5 jours au frigo, filmé.", age=3, cats=[], fetes=["Noël", "Apéritif dînatoire", "Repas de famille"], profil=["gras"], tech=["Foncer"])
 K("foie_gras_mi_cuit", "Foie gras de canard mi-cuit en terrine", "Foie gras mi-cuit", "France › Nouvelle-Aquitaine", "E", 3, 8, 40, 2880, "€€€", "Petite terrine, thermomètre, plat à bain-marie.",
   "Le foie gras des fêtes fait à la maison : un lobe déveiné, assaisonné de sel et de poivre, cuit très doucement au bain-marie jusqu'à 50 °C à cœur, pressé et mûri deux jours. Fondant, rosé, sans goût de gras.",
-  ["1|lobe de foie gras de canard cru extra (500 g)|-|3", "7 g|de sel fin|Sel fin / gros sel / fleur de sel|2", f"2 g|de poivre blanc|{POIVRE}|1", "1 g|de sucre|Sucre blanc / roux / cassonade / vergeoise|1", "2 cl|d'armagnac ou de porto (facultatif)|Porto|1?"],
+  ["1|lobe de foie gras de canard cru extra (500 g)|Foie gras de canard cru|3", "7 g|de sel fin|Sel fin / gros sel / fleur de sel|2", f"2 g|de poivre blanc|{POIVRE}|1", "1 g|de sucre|Sucre blanc / roux / cassonade / vergeoise|1", "2 cl|d'armagnac ou de porto (facultatif)|Porto|1?"],
   ["**Déveiner.** Foie 1 h à température ambiante (souple) ; lobes ouverts, veines tirées délicatement avec la pointe d'un couteau, sans hacher le foie.",
    "**Assaisonner.** Sel, poivre, sucre, alcool ; tassé dans la terrine en chassant l'air, filmé, 12 h au frigo.",
    "**Cuire.** Bain-marie à 70 °C (eau frémissante dans le four à 90 °C), 35 à 45 min : 50 °C à cœur au thermomètre ; la graisse jaune perle.",
@@ -129,7 +129,7 @@ K("artichauts_vinaigrette", "Artichauts vinaigrette", "Artichauts", "France › 
   keep="1 jour au frigo (cuits).", age=2, cats=["vegetarien", "leger"], profil=["acide", "leger"])
 K("cuisses_grenouilles_persillade", "Cuisses de grenouilles en persillade", "Grenouilles persillade", "France › Auvergne-Rhône-Alpes", "E", 1, 4, 15, 10, "€€", "Grande poêle.",
   "La spécialité de la Dombes : des cuisses de grenouilles farinées, sautées au beurre jusqu'à dorer, puis enrobées d'ail et de persil. La chair, fine comme celle d'un poulet, se mange avec les doigts.",
-  ["800 g|de cuisses de grenouilles (surgelées)|-|3", f"60 g|de beurre|{BEURRE}|2", f"4|gousses d'ail|{AIL}|1", f"1|botte de persil|{PERSIL}|2", f"3 c. à s.|de farine|{F55}|1", f"1|citron|{CIT}|1"],
+  ["800 g|de cuisses de grenouilles (surgelées)|Cuisses de grenouilles|3", f"60 g|de beurre|{BEURRE}|2", f"4|gousses d'ail|{AIL}|1", f"1|botte de persil|{PERSIL}|2", f"3 c. à s.|de farine|{F55}|1", f"1|citron|{CIT}|1"],
   ["**Décongeler.** Une nuit au frigo, épongées très sèches.",
    "**Fariner.** Salées, poivrées, farine, excédent tapoté.",
    "**Sauter.** Beurre moussant, à feu vif, en deux fois, 3 min par face : dorées, chair qui se détache de l'os.",
@@ -147,7 +147,7 @@ K("cervelle_de_canut", "Cervelle de canut (fromage blanc aux herbes, Lyon)", "Ce
 # ---------------- Abats ----------------
 K("ris_de_veau_morilles", "Ris de veau aux morilles", "Ris de veau aux morilles", "France › Cuisine de chef", "P", 3, 4, 40, 30, "€€€", "Casserole, poêle, poids.",
   "L'abat le plus fin : des ris de veau dégorgés, blanchis, pressés, puis dorés au beurre noisette et servis avec une sauce crémée aux morilles. Le plat des grandes occasions.",
-  ["600 g|de ris de veau|-|3", "30 g|de morilles séchées (ou 200 g fraîches)|Cèpe / girolle / morille|3", f"2|échalotes|{ECHA}|1", f"25 cl|de crème|{FL}|2", f"15 cl|de fond de veau|{FOND}|1", f"40 g|de beurre|{BEURRE}|2", f"2 c. à s.|de farine|{F55}|1", "4 cl|de vin jaune ou de madère (facultatif)|Madère / marsala / xérès|1?"],
+  ["600 g|de ris de veau|Ris de veau|3", "30 g|de morilles séchées (ou 200 g fraîches)|Cèpe / girolle / morille|3", f"2|échalotes|{ECHA}|1", f"25 cl|de crème|{FL}|2", f"15 cl|de fond de veau|{FOND}|1", f"40 g|de beurre|{BEURRE}|2", f"2 c. à s.|de farine|{F55}|1", "4 cl|de vin jaune ou de madère (facultatif)|Madère / marsala / xérès|1?"],
   ["**Dégorger et blanchir.** Ris 4 h dans l'eau froide changée souvent ; eau froide salée, à frémissement 3 min ; rafraîchis, peau et nerfs retirés, pressés entre deux plaques avec un poids 2 h au frigo.",
    "**Morilles.** Réhydratées 30 min dans l'eau tiède, rincées (sable), eau filtrée gardée.",
    "**Sauce.** Beurre, échalotes, morilles 3 min ; alcool, eau des morilles, fond, réduit de moitié ; crème, 5 min : nappante.",
@@ -157,7 +157,7 @@ K("ris_de_veau_morilles", "Ris de veau aux morilles", "Ris de veau aux morilles"
   keep="Le jour même.", age=6, cats=[], fetes=["Noël", "Repas de famille"], profil=["gras"], tech=["Dégorger"])
 K("rognons_veau_moutarde", "Rognons de veau à la moutarde", "Rognons à la moutarde", "France › Cuisine de bistrot", "P", 2, 4, 20, 10, "€€", "Grande poêle.",
   "Les rognons de veau dégraissés, coupés en morceaux, saisis très vite pour rester rosés, puis nappés d'une sauce à la crème et à la moutarde. Avec du riz ou des pâtes fraîches.",
-  ["800 g|de rognons de veau|-|3", f"2|échalotes|{ECHA}|1", f"2 c. à s.|de moutarde de Dijon (+ 1 à l'ancienne)|{DIJON}|2", f"20 cl|de crème|{CF_}|2", "4 cl|de cognac (facultatif)|Cognac / armagnac / brandy|1?", f"20 g|de beurre|{BEURRE}|1", f"1 c. à s.|d'huile|{HN}|1", f"1/2|botte de persil|{PERSIL}|1"],
+  ["800 g|de rognons de veau|Rognons de veau|3", f"2|échalotes|{ECHA}|1", f"2 c. à s.|de moutarde de Dijon (+ 1 à l'ancienne)|{DIJON}|2", f"20 cl|de crème|{CF_}|2", "4 cl|de cognac (facultatif)|Cognac / armagnac / brandy|1?", f"20 g|de beurre|{BEURRE}|1", f"1 c. à s.|d'huile|{HN}|1", f"1/2|botte de persil|{PERSIL}|1"],
   ["**Parer.** Graisse et nerfs blancs retirés, rognons en morceaux de 3 cm.",
    "**Saisir.** Poêle fumante, huile, 2 min en remuant : saisis, rosés ; dans une passoire 5 min (ils rendent un jus amer, jeté).",
    "**Sauce.** Beurre, échalotes 2 min, cognac, crème, 3 min ; hors du feu, moutardes.",
@@ -192,7 +192,7 @@ K("pintade_choux", "Pintade rôtie au chou et aux lardons", "Pintade au chou", "
   keep="2 jours au frigo.", age=1, cats=["enfants"], fetes=["Repas de famille"], profil=["gras"], kids="✓ dès 1 an, chair effilochée.")
 K("pigeon_petits_pois", "Pigeon rôti aux petits pois à la française", "Pigeon aux petits pois", "France › Cuisine de chef", "P", 3, 2, 30, 25, "€€€", "Cocotte, poêle.",
   "Le pigeonneau rôti rosé, le jus réduit avec ses abattis, et des petits pois à la française (laitue, petits oignons, beurre). Chair rouge et tendre, à servir rosée.",
-  ["2|pigeonneaux prêts à cuire|-|3", "400 g|de petits pois (frais ou surgelés)|Petits pois / pois gourmands|3", "1|cœur de laitue|Salade (laitue, batavia)|1", "8|petits oignons|Oignon nouveau / cébette|1", f"50 g|de beurre|{BEURRE}|2", f"15 cl|de fond de volaille|{FOND}|1", f"1 c. à c.|de sucre|{SUCRE}|0"],
+  ["2|pigeonneaux prêts à cuire|Pigeonneau|3", "400 g|de petits pois (frais ou surgelés)|Petits pois / pois gourmands|3", "1|cœur de laitue|Salade (laitue, batavia)|1", "8|petits oignons|Oignon nouveau / cébette|1", f"50 g|de beurre|{BEURRE}|2", f"15 cl|de fond de volaille|{FOND}|1", f"1 c. à c.|de sucre|{SUCRE}|0"],
   ["**Rôtir.** Pigeons salés, bridés ; cocotte, beurre, 3 min par face ; four 200 °C 10 à 12 min : filets à 55 °C (rosés) ; repos 8 min.",
    "**Petits pois.** Beurre, oignons 3 min, petits pois, laitue émincée, sucre, sel, 5 cl d'eau ; à couvert 10 min : tendres et brillants.",
    "**Jus.** Cocotte dégraissée, fond, sucs grattés, réduit 3 min : sirupeux ; une noix de beurre.",

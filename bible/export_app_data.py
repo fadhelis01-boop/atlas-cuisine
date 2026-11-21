@@ -298,6 +298,13 @@ for line in open(T4, encoding="utf-8"):
         if len(c) >= 6 and c[0] not in ("Titre", "") and not set(c[0]) <= set("-: "):
             catalogue.append({"title": strip_md(c[0]), "macro": macro_id(macro), "region": region or macro, "type": c[1], "level": c[2],
                               "pork": c[3], "alcohol": c[4], "kids": c[5], "notes": strip_md(c[6]) if len(c) > 6 else ""})
+# « Au programme » ne doit annoncer que des classiques pas encore écrits : un titre déjà publié comme fiche (même sous
+# un sous-titre, « Karantika (flan de pois chiche...) » compte comme « Karantika ») est retiré ici plutôt que laissé à
+# l'affichage, où il apparaissait à tort deux fois dans le même écran de recherche (audit cuisinier amateur 21/11/2026).
+_WRITTEN_TITLES = {r["title"].split(" (")[0].strip().lower() for r in recipes}
+_cat_before = len(catalogue)
+catalogue = [c for c in catalogue if c["title"].strip().lower() not in _WRITTEN_TITLES]
+print(f"catalogue : {_cat_before - len(catalogue)} entrées déjà écrites retirées de « au programme » ({len(catalogue)} restantes)")
 
 # ---------------------------------------------------------------- imports classés (TikTok + sites)
 IMP = os.path.join(HERE, "..", "recettes-classees")
