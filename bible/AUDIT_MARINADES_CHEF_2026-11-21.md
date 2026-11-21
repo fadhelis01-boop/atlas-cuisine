@@ -2,7 +2,8 @@
 
 Relecture de métier de la rubrique `/marinades` (`app/src/lib/marinades.ts`, `app/src/pages/Marinades.tsx`) et de ses
 17 fiches, croisée avec les 1605 fiches de la bible pour mesurer ce qui existe déjà ailleurs sans être rattaché au
-coin. Rien n'a été corrigé : ce document liste les angles morts, par ordre de gravité.
+coin. Les 8 constats ont tous été corrigés le jour même (commit `76e7a7e`) : voir « 5. Corrigé » à la fin de ce
+document.
 
 ## 1. Constats mesurés
 
@@ -54,3 +55,32 @@ marinades, ce qui brouille la promesse éditoriale du coin pour les 12 autres fi
   l'inverse.
 - **#8** : au moins une marinade pour légumes à griller (type miso-mirin pour aubergine, nasu dengaku) et une pour
   fruits de mer autres que la crevette.
+
+## 5. Corrigé (21/11/2026, commit `76e7a7e`)
+
+- **#1** : `marinade_vin_rouge` ajoutée (vin rouge, carottes, oignon, ail, bouquet garni, 12 à 24 h), réutilisable pour
+  un futur braisé ou civet ; son texte cite `coq_au_vin`, `daube_provencale`, `civet_lievre` et `lievre_royale` comme
+  l'utilisant déjà telle quelle.
+- **#2 et #3** : les 5 fiches bundlées (`harissa_marinade_agneau`, `mojo_cubain_porc`, `porc_citronnelle_vietnamien`,
+  `shawarma_marinade`, `crevettes_citron_vert_marinade`) réécrites en vraies marinades génériques : la pièce de viande
+  est sortie de la liste d'ingrédients vers le texte des étapes, comme `marinade_bulgogi`. Vérifié sur la fiche
+  shawarma : l'ingrédient « poulet » a disparu de la liste, le texte dit « poulet (ou agneau, même proportions) ».
+- **#4** : section « D'autres marinades, dans des recettes complètes » ajoutée sur `/marinades`, avec 6 liens vers des
+  familles entières (babeurre, achiote-agrumes mexicaine ×2, adobo philippin, glaçage hoisin chinois, sauce d'huître
+  cambodgienne) sans dupliquer de contenu. Le lien inverse (bloc sur les 119 fiches concernées) n'a pas été fait : trop
+  de fiches pour cette session, resterait à faire.
+- **#5 et #6** : le ceviche devient un 4e geste nommé dans `REPERES_MARINADE`, avec un flag `acid` sur `MarinadeEntry` ;
+  `poisson_cru_fidji` (kokoda) et `poisson_cru_tahitienne` rattachés. `Protein` élargi avec `oeuf`, `ajitama` (œufs
+  marinés au soja) rattaché avec sa propre catégorie dans les puces de filtre.
+- **#7** : `bbq_rub_americain` passé de `repos: 0` à `repos: 30` (min), cohérent avec le texte de sa fiche.
+- **#8** : `marinade_miso_aubergine` (nasu dengaku, sourcée sur TikTok @chey__nese, 30,2K j'aime, ingrédients exacts
+  dans la légende) et `marinade_calamars_citron_persillade` (sourcée sur TikTok @poesiadefogon, 67,1K j'aime — une
+  sauce-marinade ail/citron/persil espagnole à la fois badigeonnée avant cuisson et servie en nappage) ajoutées.
+  Tofu & légumes passe de 1 à 3 fiches, Crevettes & fruits de mer de 2 à 3.
+
+**Bug trouvé en vérifiant en local** (pas dans la liste d'origine) : le titre « marinade_vin_rouge_classique » (id
+d'origine) contenait « classique », qui contient lui-même la sous-chaîne « lassi » — collision avec le motif
+`/lassi/` de `src/lib/dressage.ts` (choix de la « finition et dressage » affichée sur la fiche), qui affichait à tort
+un conseil de présentation de boisson (« verres passés au congélateur ») sur une marinade. Même défaut de limite de
+mot que l'audit cuisinier amateur avait trouvé dans `art.tsx` la veille. Corrigé par un renommage de l'id
+(`marinade_vin_rouge`) et l'ajout d'une limite de mot (`\blassi\b`) au motif de `dressage.ts`.
