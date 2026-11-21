@@ -15,7 +15,7 @@ export interface Finish {
 // [motif, finition, pour : s = salé, d = sucré, * = tout]
 const RULES: [RegExp, string, "s" | "d" | "*"][] = [
   [
-    /boisson|smoothie|lassi|limonade|jus |the glace|sirop|milkshake|chai|chocolat chaud|horchata|ayran|cafe/,
+    /boisson|smoothie|\blassi\b|limonade|jus |the glace|sirop|milkshake|chai|chocolat chaud|horchata|ayran|cafe/,
     "Verres passés 10 min au congélateur ; la garniture (rondelle d'agrume, feuille de menthe) au bord du verre, ajoutée au moment de servir.",
     "*",
   ],

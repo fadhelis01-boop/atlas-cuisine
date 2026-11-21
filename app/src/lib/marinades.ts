@@ -4,7 +4,7 @@
 import { RECIPE_BY_ID } from "./data";
 import type { Recipe } from "./types";
 
-export type Protein = "boeuf" | "agneau" | "porc" | "volaille" | "poisson" | "crevettes" | "vegetal";
+export type Protein = "boeuf" | "agneau" | "porc" | "volaille" | "poisson" | "crevettes" | "vegetal" | "oeuf";
 
 export const PROTEIN_LABEL: Record<Protein, string> = {
   boeuf: "Bœuf",
@@ -14,6 +14,7 @@ export const PROTEIN_LABEL: Record<Protein, string> = {
   poisson: "Poisson",
   crevettes: "Crevettes & fruits de mer",
   vegetal: "Tofu & légumes",
+  oeuf: "Œufs",
 };
 
 export interface MarinadeEntry {
@@ -21,6 +22,7 @@ export interface MarinadeEntry {
   proteins: Protein[];
   cure?: boolean; // marinade sèche (sel + sucre) qui « cuit » sans chaleur, pas une marinade liquide classique
   dry?: boolean; // rub sec (épices + sucre) appliqué sans liquide, mais qui a toujours besoin d'une cuisson normale ensuite
+  acid?: boolean; // ceviche : l'acide « cuit » chimiquement sans aucune chaleur, 4e geste à côté de liquide/cure/rub
 }
 
 export const MARINADES: MarinadeEntry[] = [
@@ -33,7 +35,7 @@ export const MARINADES: MarinadeEntry[] = [
   { id: "chermoula", proteins: ["poisson"] },
   { id: "harissa_marinade_agneau", proteins: ["agneau", "boeuf", "volaille"] },
   { id: "mojo_cubain_porc", proteins: ["porc", "volaille", "crevettes"] },
-  { id: "porc_citronnelle_vietnamien", proteins: ["porc", "boeuf", "volaille"] },
+  { id: "porc_citronnelle_vietnamien", proteins: ["porc", "boeuf", "volaille", "vegetal"] },
   { id: "crevettes_citron_vert_marinade", proteins: ["crevettes", "poisson"] },
   { id: "tofu_marinade_soja_gingembre", proteins: ["vegetal"] },
   { id: "gravlax_saumon_marinade", proteins: ["poisson"], cure: true },
@@ -41,6 +43,29 @@ export const MARINADES: MarinadeEntry[] = [
   { id: "shawarma_marinade", proteins: ["volaille", "agneau"] },
   { id: "velveting_poulet_chinois", proteins: ["volaille"] },
   { id: "bbq_rub_americain", proteins: ["porc", "volaille"], dry: true },
+  { id: "marinade_vin_rouge", proteins: ["boeuf", "agneau"] },
+  { id: "marinade_miso_aubergine", proteins: ["vegetal"] },
+  { id: "marinade_calamars_citron_persillade", proteins: ["crevettes"] },
+  { id: "ajitama", proteins: ["oeuf"] },
+  { id: "poisson_cru_fidji", proteins: ["poisson"], acid: true },
+  { id: "poisson_cru_tahitienne", proteins: ["poisson"], acid: true },
+];
+
+/** Marinades déjà écrites dans la bible comme étapes de vraies recettes, trop nombreuses (plus de cent) pour
+ * toutes devenir des fiches du coin, mais dont les familles manquaient totalement ici (chef senior 21/11/2026) :
+ * babeurre, achiote-agrumes, vinaigre-ail-laurier philippin, glaçage hoisin chinois, sauce d'huître cambodgienne.
+ * Un lien direct vers la recette plutôt qu'une fiche dupliquée. */
+export interface OtherMarinade {
+  id: string;
+  family: string;
+}
+export const OTHER_MARINADES: OtherMarinade[] = [
+  { id: "buttermilk_fried_chicken", family: "Babeurre (États-Unis)" },
+  { id: "pollo_pibil", family: "Achiote et agrumes (Yucatán, Mexique)" },
+  { id: "tacos_al_pastor", family: "Achiote, piments séchés et ananas (al pastor, Mexique)" },
+  { id: "adobo_poulet", family: "Vinaigre, soja, ail et laurier (adobo, Philippines)" },
+  { id: "char_siu_poulet", family: "Glaçage hoisin (char siu, Chine)" },
+  { id: "lok_lak", family: "Sauce d'huître et poivre-citron (Cambodge)" },
 ];
 
 export const marinadeRecipes = (p?: Protein): (Recipe & { entry: MarinadeEntry })[] =>
@@ -122,5 +147,11 @@ export const REPERES_MARINADE: [string, string][] = [
   [
     "Un rub sec n'attendrit pas",
     "contrairement à une marinade liquide ou à un cure, un rub d'épices (BBQ) ne fait que parfumer et croûter en surface : c'est la cuisson longue et douce qui attendrit la viande, pas le rub.",
+  ],
+  [
+    "Le ceviche est un 4e geste, pas un oubli de la cuisson",
+    "un poisson ou un fruit de mer très frais, coupé fin et mariné dans beaucoup d'acide (citron vert), « cuit » " +
+      "chimiquement en 10 à 20 min sans aucune chaleur : c'est voulu, à condition de ne jamais dépasser ce temps " +
+      "(voir kokoda, poisson cru tahitien) — différent d'une marinade acide ordinaire qui, elle, cuit toujours ensuite.",
   ],
 ];

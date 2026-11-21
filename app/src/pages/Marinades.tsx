@@ -5,6 +5,7 @@ import { safeHref } from "../lib/safe";
 import { minutes } from "../lib/text";
 import {
   MARINADES,
+  OTHER_MARINADES,
   PROTEIN_LABEL,
   QUICK_MARINADES,
   QUICK_MARINADES_CREDIT,
@@ -13,11 +14,12 @@ import {
   marinadeRecipes,
   type Protein,
 } from "../lib/marinades";
+import { RECIPE_BY_ID } from "../lib/data";
 import { Chip, MoreGrid, MoreList, Page, Section } from "../components/ui";
 
 // Rubrique Marinades (audit UI/UX senior, 20/11/2026) : réunit les marinades jusque-là dispersées dans les sauces et
 // condiments, classées par type de viande/poisson puis par pays, temps de repos visible sur chaque fiche.
-const PROTEINS: Protein[] = ["boeuf", "agneau", "porc", "volaille", "poisson", "crevettes", "vegetal"];
+const PROTEINS: Protein[] = ["boeuf", "agneau", "porc", "volaille", "poisson", "crevettes", "vegetal", "oeuf"];
 
 export default function Marinades() {
   const [p, setP] = useState<Protein | "tout">("tout");
@@ -28,8 +30,9 @@ export default function Marinades() {
       title="Marinades"
       back="/explorer"
       sub={
-        "Les marinades du monde entier, classées par viande ou poisson : pays d'origine, temps de repos, et les trois " +
-        "gestes — marinade liquide, cure à sec (gravlax) et rub sec (BBQ) — distingués sur chaque fiche."
+        "Les marinades du monde entier, classées par viande, poisson, légume ou œuf : pays d'origine, temps de " +
+        "repos, et les quatre gestes — marinade liquide, cure à sec (gravlax), rub sec (BBQ) et ceviche à l'acide " +
+        "— distingués sur chaque fiche."
       }
     >
       <Section title={`${p === "tout" ? "Toutes les marinades" : PROTEIN_LABEL[p]} (${list.length})`}>
@@ -53,7 +56,8 @@ export default function Marinades() {
             const m = list.find((x) => x.id === r.id)!;
             return (
               <p className="small">
-                <Icon name="timer" size={14} className="ic-inline" /> {m.entry.cure ? "Cure à sec : " : m.entry.dry ? "Rub sec, repos : " : "Repos : "}
+                <Icon name="timer" size={14} className="ic-inline" />{" "}
+                {m.entry.cure ? "Cure à sec : " : m.entry.dry ? "Rub sec, repos : " : m.entry.acid ? "Ceviche, repos à l'acide : " : "Repos : "}
                 {minutes(r.rest)} · {(r.regionPath ?? []).slice(-1)[0] ?? r.macro}
               </p>
             );
@@ -105,6 +109,23 @@ export default function Marinades() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section title="D'autres marinades, dans des recettes complètes">
+        <p className="small">
+          Ces familles de marinade n'ont pas de fiche à part dans ce coin, mais elles existent déjà, intégrées à une recette complète : suis le lien pour voir la marinade dans son
+          contexte.
+        </p>
+        <ul className="links-list">
+          {OTHER_MARINADES.map((o) => {
+            const r = RECIPE_BY_ID[o.id];
+            return r ? (
+              <li key={o.id}>
+                <a href={href(`/recette/${o.id}`)}>{r.title}</a> <span className="small meta">· {o.family}</span>
+              </li>
+            ) : null;
+          })}
+        </ul>
       </Section>
 
       <Section title="Les repères du cuisinier, pour n'importe quelle marinade">

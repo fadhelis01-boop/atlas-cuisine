@@ -3,8 +3,8 @@
 Le regard de quelqu'un qui ne connaît pas la cuisine professionnelle, qui déclare un régime (végétarien, sans porc,
 allergies) et fait confiance à l'application pour le tenir. Parcours réel de l'appli en local (onboarding, accueil,
 recherche, fiches, filtres, frigo, profil, enfants, Ma semaine) avec vérification systématique sur les données
-exportées (`recipes.json`, `recipes_detail.json`, `catalogue.json`) pour chiffrer chaque constat. Rien n'a été corrigé :
-ce document liste les angles morts trouvés, par ordre de gravité.
+exportées (`recipes.json`, `recipes_detail.json`, `catalogue.json`) pour chiffrer chaque constat. Les 4 constats ont
+tous été corrigés le jour même (commit `34979a8`) : voir « 5. Corrigé » à la fin de ce document.
 
 ## 1. Constats mesurés
 
@@ -31,7 +31,7 @@ piégeuses pour un amateur (abats, gibier) : impossible de deviner au titre seul
 constat n°4 touche la confiance différemment : voir le même plat listé comme « déjà là » et « à venir » dans le même
 écran fait douter de la fiabilité de tout le reste.
 
-## 4. Pistes de correction (non appliquées)
+## 4. Pistes de correction
 
 - **#1** : référencer les 9 ingrédients manquants au Tome 3 (tête de veau, foie gras, cuisses de grenouilles, ris et
   rognons de veau, pigeon, lièvre, faisan) — ou, à défaut, ajouter une règle de secours dans `isFlesh`/l'export qui
@@ -44,3 +44,24 @@ constat n°4 touche la confiance différemment : voir le même plat listé comme
   automatique.
 - **#4** : à l'export, retirer de `catalogue.json` toute entrée dont le titre normalisé existe déjà dans `recipes.json`
   (le mécanisme de renommages existe déjà pour les doublons de recettes, le même genre de croisement s'applique ici).
+
+## 5. Corrigé (21/11/2026, commit `34979a8`)
+
+- **#1** : les 9 ingrédients référencés au Tome 3 (`BIBLE_TOME3_REFERENTIEL_INGREDIENTS.md` + `dico_1.py`, section
+  Viandes & volailles) et les 9 fiches mises à jour. Vérifié de bout en bout : profil Végétarien actif → fiche « Tête
+  de veau » → bandeau « Cette recette ne convient pas à ton foyer : contient de la viande ou du poisson » (absent
+  avant correction).
+- **#2** : « Jambon de dinde maison » référence désormais « Dinde (escalope, cuisse, filet) ».
+- **#3** : motifs à risque entourés de `\b` ou de négations ciblées (`confit(?!ure)`) dans `art.tsx` ; « raie » ajouté
+  aux poissons, « jambalaya » aux plats de riz. Un script de simulation de `dishEmoji` sur les 1601 titres (respectant
+  l'ordre « premier motif qui matche gagne ») a servi à mesurer avant/après : 113 fiches avec une icône fausse par
+  collision avant, moins de 35 après (le reste étant des correspondances fortuites mais correctes, ex. « mayo » dans
+  « mayonnaise »).
+- **#4** : à l'export, `catalogue.json` est désormais croisé avec `recipes.json` et les 185 entrées déjà publiées sont
+  retirées (381 → 196 entrées dans « Au programme »).
+
+**Effet de bord corrigé en même temps** : réparer le filtre végétarien a fait basculer 7 plats d'abats/gibier du côté
+« non végétarien », repassant la part de plats végétariens sous 33 % (test 63). 4 nouveaux plats végétariens pour
+compenser (`bible/recipes_v7_vege_2026_11_21.py` : gratin de blettes, poêlée de pleurotes et châtaignes, tofu laqué à
+l'orange, galettes de lentilles corail) ; `PRIORITE` (`app/src/lib/aTester.ts`) régénérée (test 83, le planificateur
+avait changé).
