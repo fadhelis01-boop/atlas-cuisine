@@ -112,6 +112,9 @@ function BeforeYouStart({ r }: { r: Recipe }) {
           </li>
         ) : null}
         <li>Lis toute la recette une fois, puis prépare et pèse tous les ingrédients (la « mise en place ») : la cuisson va ensuite plus vite que prévu.</li>
+        {r.steps.length >= 4 && (
+          <li>Repère les éléments à faire arriver en même temps (féculent, sauce, légumes, viande qui repose) : rien ne doit attendre froid dans l'assiette.</li>
+        )}
         {r.equipment && <li>Matériel : {plain(r.equipment)}</li>}
         {eqNotes.map((t) => (
           <li key={t} className="eq-note">
@@ -224,6 +227,11 @@ function FinishBlock({ r }: { r: Recipe }) {
       )}
       <p>{f.plate}</p>
       {f.green && <p className="small">{f.green}</p>}
+      {f.hygiene && (
+        <p className="small warn">
+          <Icon name="alert" size={16} className="ic-inline" /> {f.hygiene}
+        </p>
+      )}
       {balanceOf(r) && (
         <p className="small">
           <Icon name="broccoli" size={16} className="ic-inline" /> {balanceOf(r)}

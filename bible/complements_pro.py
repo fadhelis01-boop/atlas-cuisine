@@ -66,6 +66,38 @@ def cuisson_a_coeur(d):
     d["steps"] = list(d["steps"][:i]) + [s + ("" if s.endswith((".", ":", ";")) else ".") + " " + phrase] + list(d["steps"][i + 1:])
     return kind
 
+BRAISE = re.compile(
+    r"tajine|curry|cari|colombo|mafe|yassa|daube|blanquette|bourguignon|ragout|navarin|osso buco|rendang|moambe|"
+    r"\bdal\b|chana|stew|goulash|carbonade|poule au pot|pot au feu|mijote|wot|feijoada|cassoulet"
+)
+TEXTURAL_CUE = re.compile(r"s.effiloch|se defait|tendre[s]? a la fourchette|s.ecrase|pointe d.un couteau|pointe du couteau")
+
+def test_textural(d):
+    """Braisés/mijotés (audit chef pro senior 21/11/2026 §4) : un repère de cuisson indépendant du minuteur, comme
+    le test au doigt déjà posé sur les grillades — la cuisson réelle d'un mijoté varie avec la pièce et le feu."""
+    if d.get("kind") != "Plat" or not BRAISE.search(_n(d.get("title", ""))):
+        return False
+    text = _n(" ".join(d["steps"]))
+    if TEXTURAL_CUE.search(text):
+        return False
+    i = None
+    for k, s in enumerate(d["steps"]):
+        if COOK.search(_n(s)) and LONG.search(_n(s)):
+            i = k
+    if i is None:
+        for k, s in enumerate(d["steps"]):
+            if COOK.search(_n(s)):
+                i = k
+    if i is None:
+        return False
+    s = d["steps"][i].rstrip()
+    d["steps"] = (
+        list(d["steps"][:i])
+        + [s + ("" if s.endswith((".", ":", ";")) else ".") + " La pointe d'un couteau (ou une fourchette) s'enfonce sans résistance : c'est prêt."]
+        + list(d["steps"][i + 1 :])
+    )
+    return True
+
 def repos_viande(d):
     """Repos des pièces de viande rouge saisies, grillées ou rôties ; renvoie True si ajouté."""
     if d.get("kind") != "Plat" or not _main_refs(d, RED):
@@ -113,9 +145,10 @@ def apply(recipes):
             out.append(x)
         assert hit, (i, label)
         d["ing"] = out
-    stats = {"volaille": 0, "hache": 0, "repos": 0}
+    stats = {"volaille": 0, "hache": 0, "repos": 0, "textural": 0}
     for d in recipes:
         k = cuisson_a_coeur(d)
         if k: stats[k] += 1
         if repos_viande(d): stats["repos"] += 1
+        if test_textural(d): stats["textural"] += 1
     return stats

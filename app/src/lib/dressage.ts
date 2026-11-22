@@ -10,6 +10,7 @@ export interface Finish {
   taste: string | null;
   plate: string;
   green: string | null;
+  hygiene: string | null;
 }
 
 // [motif, finition, pour : s = salé, d = sucré, * = tout]
@@ -82,6 +83,12 @@ const DEFAULT_SALE =
   "Assiette chaude pour un plat chaud, froide pour un plat froid ; essuie les bords avec un papier ; une touche verte (herbes) ou acide (citron) au dernier moment.";
 const DEFAULT_SUCRE = "Assiettes à dessert à température ambiante ; un fruit frais, quelques feuilles de menthe ou un zeste au moment de servir.";
 const HERBS = /persil|coriandre|ciboulette|basilic|menthe|aneth|cerfeuil|estragon|oignon nouveau|cebette/;
+// Hygiène croisée (audit chef pro senior 21/11/2026 §1) : volaille crue + herbe de finition crue dans la même
+// fiche, le scénario où une planche ou des mains touchées par le cru contaminent un élément qui ne cuira plus.
+const RAW_POULTRY = new Set([
+  "Poulet entier", "Blanc de poulet", "Cuisse / pilon de poulet", "Ailes de poulet", "Foies / gésiers de volaille",
+  "Dinde (escalope, cuisse, filet)", "Canard : magret, cuisse", "Canard entier / carcasse", "Pintade", "Caille",
+]);
 
 export function finishFor(r: Recipe): Finish {
   const t = norm(`${r.title} ${r.kind} ${r.id.replace(/_/g, " ")}`);
@@ -93,14 +100,19 @@ export function finishFor(r: Recipe): Finish {
   const taste =
     salty && !/goute|rectifi/.test(steps)
       ? "Il manque de relief ? une pincée de sel. Lourd ou plat ? un trait de citron ou de vinaigre. Trop acide (tomate) ? une pincée de sucre. Trop salé ? un " +
-        "peu d'eau, de crème ou de pomme de terre."
+        "peu d'eau, de crème ou de pomme de terre. Sec, ou la sauce a trop réduit ? un filet d'huile, une noix de beurre ou une cuillère de crème."
       : null;
   const hasHerb = flatten(r.ingredients).some((l) => HERBS.test(norm(`${l.ref ?? ""} ${l.label}`)));
   const green =
     salty && !hasHerb && /Plat|Entrée|Accompagnement/.test(r.kind)
       ? "Pour la couleur : quelques brins d'herbe fraîche (persil, ciboulette, coriandre) ciselés au dernier moment rendent l'assiette plus appétissante."
       : null;
-  return { taste, plate, green };
+  const hasRawPoultry = flatten(r.ingredients).some((l) => l.ref && RAW_POULTRY.has(l.ref));
+  const hygiene =
+    hasRawPoultry && hasHerb
+      ? "Planche et couteau à part pour la volaille crue ; lave-toi les mains avant de toucher l'herbe de finition ou tout élément qui ne cuira plus."
+      : null;
+  return { taste, plate, green, hygiene };
 }
 
 /** En dessous, un plat est « léger en protéines » (repère : environ 20 à 30 g par repas principal pour un adulte). */
