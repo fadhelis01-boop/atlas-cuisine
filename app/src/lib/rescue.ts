@@ -67,6 +67,11 @@ const CARDS: { when: RegExp; problem: string; fix: string; tech?: string; ing?: 
   { when: /gateau|cake|genoise|muffin|madeleine|biscuit|quatre.quarts/, problem: "Le gâteau est sec",
     fix: "Imbibe-le d'un sirop (1 volume de sucre pour 2 d'eau, chauffés, parfumés) ou sers-le avec une crème anglaise, une compote. La prochaine fois : 5 min " +
       "de moins, et vérifie la température de ton four (beaucoup chauffent plus qu'affiché)." },
+  { when: /brioche|kougelhopf|pain au lait|kanelbullar|cinnamon roll|cannelle/, problem: "La brioche est sèche au démoulage",
+    fix: "Trop de farine ajoutée en façonnant (une pâte briochée doit rester un peu collante) ou four trop chaud pour une pâte riche en beurre et en œuf, qui " +
+      "dore et dessèche plus vite qu'un pain classique : baisse de 10 à 15 °C la prochaine fois, couvre d'alu si elle dore trop tôt. Déjà sèche : sers-la " +
+      "tranchée et toastée avec du beurre et de la confiture, ou en pain perdu.",
+    tech: "petrir" },
   { when: /pate brisee|pate sucree|tarte|fond de tarte|foncer/, problem: "Le fond de tarte a rétréci ou est détrempé",
     fix: "Rétréci : la pâte avait été étirée ou n'avait pas assez reposé au froid ; elle reste bonne. Détrempé : cuis le fond à blanc avant de garnir, et dore-le au jaune d'œuf 2 min.",
     tech: "pate-sucree" },

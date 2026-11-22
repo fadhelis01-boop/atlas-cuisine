@@ -35,6 +35,9 @@ print("audit cuisines d'Asie :", _ASIE.apply(RECIPES))
 # audit chef professionnel (12/11/2026) : cuisson à cœur, repos des viandes, corrections ponctuelles
 import complements_pro as _PRO
 print("audit chef pro :", _PRO.apply(RECIPES))
+# audit amateur pains/pâtisserie (22/11/2026) : repère visuel de pousse en plus de la durée
+import complements_patisserie as _PATE
+print("audit pâtisserie amateur :", _PATE.apply(RECIPES))
 # audit gourmet §4.2 : l'acidité que chaque cuisine donne au plat (dans la recette ou à table), ou la raison de s'en passer
 from complements_gout import ACIDE as _ACIDE, EXTRA as _EXTRA_G, SALADE as _SALADE, SANS_ACIDE as _SANS_ACIDE
 _BYB = {d["id"]: d for d in RECIPES}

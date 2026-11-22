@@ -1,8 +1,11 @@
 import { ImportRow } from "../components/video";
-import { useState } from "react";
-import { useImportLibrary, RECIPES } from "../lib/data";
+import { useMemo, useState } from "react";
+import { useImportLibrary } from "../lib/data";
 import { href } from "../lib/router";
-import { MoreGrid, MoreList, Page, Section, useVisible } from "../components/ui";
+import { PAINS, PAIN_FAMILY_LABEL, painRecipes, type PainFamily } from "../lib/pains";
+import { Chip, MoreGrid, MoreList, Page, Section } from "../components/ui";
+
+const FAMILIES: PainFamily[] = ["plat", "leve", "feuillete", "brioche", "crepe", "base"];
 
 /** Calculateur de pâte en pourcentages boulangers (Tome 1 §10.4). Farine = 100 %. */
 function DoughCalc() {
@@ -94,8 +97,13 @@ function DoughCalc() {
         </tbody>
       </table>
       <p className="small">
-        Ne confonds pas levure boulangère (sèche ou fraîche) et levure chimique. Farines : T45 pâtisserie, T55 usage courant et pizza, T65 baguette tradition, T80 et plus :
-        semi-complète et complète.
+        Ne confonds pas levure boulangère (sèche ou fraîche) et levure chimique : la boulangère (ce calculateur) fait lever une pâte à pain par fermentation, sur des heures ;
+        la chimique (type levure Alsacienne) fait gonfler une pâte à gâteau à la cuisson, sans attente — ne remplace jamais l'une par l'autre. Pour une recette qui demande de
+        la levure chimique : compte environ 1 sachet (11 g) pour 500 g de farine, à mélanger à sec avec la farine (jamais dans l'eau).
+      </p>
+      <p className="small">
+        <strong>Pas encore de levain actif ?</strong> Remplace-le par de la levure boulangère : environ 1 % du poids de farine en levure sèche (ou 3 % en fraîche) à la place du
+        levain, et compte une pousse 3 à 4 fois plus courte (quelques heures au lieu d'une nuit) — le goût sera moins acidulé, mais la mie sera comparable.
       </p>
     </div>
   );
@@ -103,16 +111,32 @@ function DoughCalc() {
 
 export default function Pains() {
   const IMPORT_LIBRARY = useImportLibrary();
-  const list = useVisible(RECIPES.filter((r) => r.cats.includes("pains")));
+  const [f, setF] = useState<PainFamily | "tout">("tout");
+  const list = useMemo(() => painRecipes(f === "tout" ? undefined : f), [f]);
   const tiktok = IMPORT_LIBRARY.filter((i) => i.cat === "pains");
   return (
     <Page
       photo="rubrique/pains"
       title="Pains, pâtes & bases"
-      sub="Les recettes les plus simples et les plus réussies, faites avec un four ménager et le matériel d'une cuisine française."
+      sub="Les recettes les plus simples et les plus réussies, faites avec un four ménager et le matériel d'une cuisine française, classées en six familles pour trouver son niveau."
       back="/explorer"
     >
-      <MoreGrid items={list} />
+      <Section title={`${f === "tout" ? "Toutes les recettes" : PAIN_FAMILY_LABEL[f]} (${list.length})`}>
+        <div className="chips" role="group" aria-label="Famille de pain">
+          <Chip on={f === "tout"} onClick={() => setF("tout")}>
+            Tout ({PAINS.length})
+          </Chip>
+          {FAMILIES.map((x) => {
+            const n = painRecipes(x).length;
+            return n ? (
+              <Chip key={x} on={f === x} onClick={() => setF(x)}>
+                {PAIN_FAMILY_LABEL[x]} ({n})
+              </Chip>
+            ) : null;
+          })}
+        </div>
+        <MoreGrid key={f} items={list} />
+      </Section>
       <Section title="Calculateur de pâte">
         <DoughCalc />
       </Section>
