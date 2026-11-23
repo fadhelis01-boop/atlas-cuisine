@@ -118,8 +118,16 @@ const ALLOWED = new Set([
   "frit|refrit",
 ]);
 
+// Plancher minimal (audit dév/UX senior 23/11/2026 §4) : « aucune collision » ne veut rien dire si le script a
+// tourné à vide (corpus vide par une exception avalée, chemin mal orthographié dans FILES, extraction de regex
+// cassée) — rien ne distinguait alors un résultat propre d'un script cassé. Seuils choisis sous les comptes réels
+// (2992 mots, ~90 regex sur les 8 fichiers au 23/11/2026) pour laisser de la marge sans perdre le signal.
+const MIN_CORPUS_WORDS = 1000;
+const MIN_REGEXES = 20;
+
 const corpus = buildCorpus();
 let hits = 0;
+let regexCount = 0;
 for (const file of FILES) {
   let src;
   try {
@@ -128,6 +136,7 @@ for (const file of FILES) {
     continue;
   }
   for (const { regex, source, line } of extractRegexes(src)) {
+    regexCount++;
     for (const word of corpus) {
       const hit = midWordHit(regex, word);
       if (hit && !ALLOWED.has(`${hit.match}|${word}`)) {
@@ -137,7 +146,13 @@ for (const file of FILES) {
     }
   }
 }
-if (hits === 0) console.log(`check-regex-collisions : aucune collision au milieu d'un mot (${FILES.length} fichiers, ${corpus.length} mots du corpus)`);
+if (corpus.length < MIN_CORPUS_WORDS || regexCount < MIN_REGEXES) {
+  console.error(
+    `check-regex-collisions : plancher non atteint (corpus ${corpus.length} mots, ${regexCount} regex extraites — attendu ≥ ${MIN_CORPUS_WORDS} et ≥ ${MIN_REGEXES}) : le script a tourné à vide, ce n'est pas un résultat propre.`,
+  );
+  process.exit(1);
+}
+if (hits === 0) console.log(`check-regex-collisions : aucune collision au milieu d'un mot (${FILES.length} fichiers, ${regexCount} regex, ${corpus.length} mots du corpus)`);
 else {
   console.error(`check-regex-collisions : ${hits} collision(s) à vérifier (chaque alerte n'est pas forcément un bug : regex déjà bornée par \\b ailleurs dans la ligne, texte normalisé différemment…)`);
   process.exit(1);

@@ -1,5 +1,6 @@
 import { useState, useSyncExternalStore } from "react";
 import imagesJson from "../data/images.json";
+import { lazyRetry } from "../lib/chunkRetry";
 
 // Photos d'illustration (illustrations/process.py) : recadrées 4:3, étalonnées. Publiées (audit dév/UX 2026-10-21 §2.6) :
 // AVIF en 400 et 800 px pour tous les navigateurs récents, WebP 400 en secours ; le 1200 px reste dans le dépôt, pas en ligne.
@@ -31,7 +32,7 @@ let MORE: Record<string, PhotoMeta> | null = null;
 let moreP: Promise<void> | null = null;
 const moreLs = new Set<() => void>();
 export function loadMoreImages() {
-  moreP ??= import("../data/images_more.json").then((m) => {
+  moreP ??= lazyRetry(() => import("../data/images_more.json"))().then((m) => {
     MORE = expand(m.default as unknown as Record<string, Partial<PhotoMeta>>);
     Object.assign(IMAGES, MORE);
     moreLs.forEach((l) => l());
@@ -58,7 +59,7 @@ let CREDITS: Record<string, PhotoCredit> | null = null;
 let credP: Promise<Record<string, PhotoCredit>> | null = null;
 const credListeners = new Set<() => void>();
 export function loadCredits(): Promise<Record<string, PhotoCredit>> {
-  credP ??= import("../data/credits.json").then((m) => {
+  credP ??= lazyRetry(() => import("../data/credits.json"))().then((m) => {
     CREDITS = m.default as unknown as Record<string, PhotoCredit>;
     credListeners.forEach((l) => l());
     return CREDITS;

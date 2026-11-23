@@ -6,6 +6,7 @@ import rulesJson from "../data/rules.json";
 import catalogueJson from "../data/catalogue.json";
 import { setRenames } from "./store";
 import { markDetails } from "./mesures";
+import { lazyRetry } from "./chunkRetry";
 import type { CatalogueEntry, ImportEntry, IngredientRef, Leftover, MacroId, Recipe, Rule } from "./types";
 
 export const INGREDIENTS = ingredientsJson as unknown as Record<string, IngredientRef>;
@@ -56,7 +57,7 @@ let IMP: ImportEntry[] | null = null;
 let impP: Promise<ImportEntry[]> | null = null;
 const impListeners = new Set<() => void>();
 export function loadImports(): Promise<ImportEntry[]> {
-  impP ??= import("../data/imports.json").then((m) => {
+  impP ??= lazyRetry(() => import("../data/imports.json"))().then((m) => {
     IMP = m.default as unknown as ImportEntry[];
     impListeners.forEach((l) => l());
     return IMP;
@@ -137,7 +138,9 @@ export function mergeDetails(d: Record<string, Detail>) {
   }
 }
 function loadShard(i: number): Promise<void> {
-  shardPromises[i] ??= SHARD_LOADERS[i]().then((raw) => {
+  // lazyRetry (audit dév/UX senior 23/11/2026) : même recharge de secours que les pages, si ce lot a disparu
+  // depuis un déploiement entre-temps.
+  shardPromises[i] ??= lazyRetry(SHARD_LOADERS[i])().then((raw) => {
     mergeDetails(JSON.parse(raw) as Record<string, Detail>);
     shardLoaded[i] = true;
     shardListeners[i].forEach((l) => l());
@@ -293,7 +296,7 @@ let LEFT: Record<string, Leftover[]> | null = null;
 let leftP: Promise<Record<string, Leftover[]>> | null = null;
 const leftListeners = new Set<() => void>();
 export function loadLeftovers(): Promise<Record<string, Leftover[]>> {
-  leftP ??= import("../data/leftovers.json").then((m) => {
+  leftP ??= lazyRetry(() => import("../data/leftovers.json"))().then((m) => {
     LEFT = m.default as unknown as Record<string, Leftover[]>;
     leftListeners.forEach((l) => l());
     return LEFT;
@@ -306,7 +309,7 @@ let VIDS: Record<string, Recipe["videos"]> | null = null;
 let vidP: Promise<Record<string, Recipe["videos"]>> | null = null;
 const vidListeners = new Set<() => void>();
 export function loadRecipeVideos() {
-  vidP ??= import("../data/recipe_videos.json").then((m) => {
+  vidP ??= lazyRetry(() => import("../data/recipe_videos.json"))().then((m) => {
     VIDS = m.default as unknown as Record<string, Recipe["videos"]>;
     vidListeners.forEach((l) => l());
     return VIDS;

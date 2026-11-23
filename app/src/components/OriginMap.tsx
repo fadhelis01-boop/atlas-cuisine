@@ -2,6 +2,7 @@
 // territoire (12/11/2026). La carte (≈ 40 Ko compressés) n'est chargée qu'à l'ouverture d'une fiche, une seule fois.
 import { useEffect, useState } from "react";
 import { origineOf } from "../lib/origine";
+import { lazyRetry } from "../lib/chunkRetry";
 import type { Recipe } from "../lib/types";
 
 interface WorldMap { w: number; h: number; d: Record<string, string>; c: Record<string, [number, number]>; pts: Record<string, [number, number]>; land: string }
@@ -19,7 +20,7 @@ function sprite(m: WorldMap) {
   path.setAttribute("d", m.land);
   sym.appendChild(path); svg.appendChild(sym); document.body.appendChild(svg);
 }
-const load = () => (pending ??= import("../data/worldmap.json").then((m) => { cache = (m.default ?? m) as unknown as WorldMap; sprite(cache); return cache; }));
+const load = () => (pending ??= lazyRetry(() => import("../data/worldmap.json"))().then((m) => { cache = (m.default ?? m) as unknown as WorldMap; sprite(cache); return cache; }));
 function useWorldMap() {
   const [map, setMap] = useState<WorldMap | null>(cache);
   useEffect(() => { if (!map) load().then(setMap).catch(() => undefined); }, [map]);

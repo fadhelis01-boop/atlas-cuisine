@@ -1,7 +1,7 @@
 // Coin marinades (audit UI/UX senior, 20/11/2026) : les marinades étaient dispersées dans les sauces et condiments,
 // sans vue d'ensemble par type de viande/poisson ni temps de repos visible. Cette rubrique les réunit, classées par
 // protéine puis par pays, chacune réutilisable sur la pièce de son choix (pas liée à un seul plat fini).
-import { RECIPE_BY_ID } from "./data";
+import { curatedRecipes } from "./catalog";
 import type { Recipe } from "./types";
 
 export type Protein = "boeuf" | "agneau" | "porc" | "volaille" | "poisson" | "crevettes" | "vegetal" | "oeuf";
@@ -20,9 +20,13 @@ export const PROTEIN_LABEL: Record<Protein, string> = {
 export interface MarinadeEntry {
   id: string;
   proteins: Protein[];
-  cure?: boolean; // marinade sèche (sel + sucre) qui « cuit » sans chaleur, pas une marinade liquide classique
-  dry?: boolean; // rub sec (épices + sucre) appliqué sans liquide, mais qui a toujours besoin d'une cuisson normale ensuite
-  acid?: boolean; // ceviche : l'acide « cuit » chimiquement sans aucune chaleur, 4e geste à côté de liquide/cure/rub
+  // Les 4 gestes sont mutuellement exclusifs (liquide = champ absent) : un champ unique plutôt que 3 booléens
+  // indépendants, pour qu'écrire les deux à la fois soit impossible plutôt que juste déconseillé (audit dév/UX
+  // senior 23/11/2026 §5).
+  geste?:
+    | "cure" // marinade sèche (sel + sucre) qui « cuit » sans chaleur, pas une marinade liquide classique
+    | "dry" // rub sec (épices + sucre) appliqué sans liquide, mais qui a toujours besoin d'une cuisson normale ensuite
+    | "acid"; // ceviche : l'acide « cuit » chimiquement sans aucune chaleur, 4e geste à côté de liquide/cure/rub
 }
 
 export const MARINADES: MarinadeEntry[] = [
@@ -38,17 +42,17 @@ export const MARINADES: MarinadeEntry[] = [
   { id: "porc_citronnelle_vietnamien", proteins: ["porc", "boeuf", "volaille", "vegetal"] },
   { id: "crevettes_citron_vert_marinade", proteins: ["crevettes", "poisson"] },
   { id: "tofu_marinade_soja_gingembre", proteins: ["vegetal"] },
-  { id: "gravlax_saumon_marinade", proteins: ["poisson"], cure: true },
+  { id: "gravlax_saumon_marinade", proteins: ["poisson"], geste: "cure" },
   { id: "marinade_rouge_africaine", proteins: ["volaille", "poisson"] },
   { id: "shawarma_marinade", proteins: ["volaille", "agneau"] },
   { id: "velveting_poulet_chinois", proteins: ["volaille"] },
-  { id: "bbq_rub_americain", proteins: ["porc", "volaille"], dry: true },
+  { id: "bbq_rub_americain", proteins: ["porc", "volaille"], geste: "dry" },
   { id: "marinade_vin_rouge", proteins: ["boeuf", "agneau"] },
   { id: "marinade_miso_aubergine", proteins: ["vegetal"] },
   { id: "marinade_calamars_citron_persillade", proteins: ["crevettes"] },
   { id: "ajitama", proteins: ["oeuf"] },
-  { id: "poisson_cru_fidji", proteins: ["poisson"], acid: true },
-  { id: "poisson_cru_tahitienne", proteins: ["poisson"], acid: true },
+  { id: "poisson_cru_fidji", proteins: ["poisson"], geste: "acid" },
+  { id: "poisson_cru_tahitienne", proteins: ["poisson"], geste: "acid" },
 ];
 
 /** Marinades déjà écrites dans la bible comme étapes de vraies recettes, trop nombreuses (plus de cent) pour
@@ -68,10 +72,7 @@ export const OTHER_MARINADES: OtherMarinade[] = [
   { id: "lok_lak", family: "Sauce d'huître et poivre-citron (Cambodge)" },
 ];
 
-export const marinadeRecipes = (p?: Protein): (Recipe & { entry: MarinadeEntry })[] =>
-  MARINADES.filter((m) => !p || m.proteins.includes(p))
-    .map((m) => (RECIPE_BY_ID[m.id] ? { ...RECIPE_BY_ID[m.id], entry: m } : null))
-    .filter((r): r is Recipe & { entry: MarinadeEntry } => !!r);
+export const marinadeRecipes = (p?: Protein): (Recipe & { entry: MarinadeEntry })[] => curatedRecipes(MARINADES, (m) => !p || m.proteins.includes(p));
 
 /** Marinade express « à la louche » (pas une fiche complète : pas de région, pas de filtre allergène) : proportions pour
  * environ 500 g de viande, volaille, poisson ou légumes, trouvée dans les favoris TikTok (UI/UX 21/11/2026) — gardée à

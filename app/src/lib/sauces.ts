@@ -2,7 +2,7 @@
 // dans une liste plate, sans classement ni filtre — et plus d'un tiers n'étaient pas des sauces (marinades, mélanges
 // d'épices secs, bouillons, fonds, et même des frites). Liste organisée à la main, uniquement de vraies sauces,
 // classées par famille comme le demande justement l'amateur indécis : fast-food, classiques de France, monde.
-import { RECIPE_BY_ID } from "./data";
+import { curatedRecipes } from "./catalog";
 import type { Recipe } from "./types";
 
 export type SauceFamily = "fastfood" | "france" | "monde";
@@ -114,7 +114,4 @@ export const SAUCES: SauceEntry[] = [
   { id: "mayonnaise_japonaise", family: "monde" },
 ];
 
-export const sauceRecipes = (f?: SauceFamily): (Recipe & { entry: SauceEntry })[] =>
-  SAUCES.filter((s) => !f || s.family === f)
-    .map((s) => (RECIPE_BY_ID[s.id] ? { ...RECIPE_BY_ID[s.id], entry: s } : null))
-    .filter((r): r is Recipe & { entry: SauceEntry } => !!r);
+export const sauceRecipes = (f?: SauceFamily): (Recipe & { entry: SauceEntry })[] => curatedRecipes(SAUCES, (s) => !f || s.family === f);

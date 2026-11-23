@@ -2,7 +2,7 @@
 // affichées en une seule grille, sans filtre, mélangeant des familles très différentes (galette minute à la poêle
 // et tourage de croissants) — exactement ce que `bible/CONVENTIONS_LISTES_RUBRIQUE.md` range dans « puces de
 // filtre » dès que les catégories sont peu nombreuses et se cherchent d'avance.
-import { RECIPE_BY_ID } from "./data";
+import { curatedRecipes } from "./catalog";
 import type { Recipe } from "./types";
 
 export type PainFamily = "plat" | "leve" | "feuillete" | "brioche" | "crepe" | "base";
@@ -75,7 +75,4 @@ export const PAINS: PainEntry[] = [
   { id: "pate_a_choux", family: "base" },
 ];
 
-export const painRecipes = (f?: PainFamily): (Recipe & { entry: PainEntry })[] =>
-  PAINS.filter((p) => !f || p.family === f)
-    .map((p) => (RECIPE_BY_ID[p.id] ? { ...RECIPE_BY_ID[p.id], entry: p } : null))
-    .filter((r): r is Recipe & { entry: PainEntry } => !!r);
+export const painRecipes = (f?: PainFamily): (Recipe & { entry: PainEntry })[] => curatedRecipes(PAINS, (p) => !f || p.family === f);

@@ -57,7 +57,13 @@ export default function Marinades() {
             return (
               <p className="small">
                 <Icon name="timer" size={14} className="ic-inline" />{" "}
-                {m.entry.cure ? "Cure à sec : " : m.entry.dry ? "Rub sec, repos : " : m.entry.acid ? "Ceviche, repos à l'acide : " : "Repos : "}
+                {m.entry.geste === "cure"
+                  ? "Cure à sec : "
+                  : m.entry.geste === "dry"
+                    ? "Rub sec, repos : "
+                    : m.entry.geste === "acid"
+                      ? "Ceviche, repos à l'acide : "
+                      : "Repos : "}
                 {minutes(r.rest)} · {(r.regionPath ?? []).slice(-1)[0] ?? r.macro}
               </p>
             );

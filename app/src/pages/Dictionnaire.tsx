@@ -9,6 +9,7 @@ import { norm } from "../lib/text";
 import { MONTHS, localMonth, marketOfMonth, zoneOf } from "../lib/season";
 import { Grid, Page, RecipeCard, Section, useVisible, useMore } from "../components/ui";
 import { Credit, Photo, photoOf, useMoreImages } from "../components/photo";
+import { lazyRetry } from "../lib/chunkRetry";
 
 // Dictionnaire illustré des ingrédients (Tome 13 §8) : chargé à la demande (import dynamique) pour garder
 // l'ouverture de l'application rapide ; ensuite en cache hors connexion comme le reste.
@@ -27,7 +28,7 @@ export function useDico() {
   const [d, setD] = useState(cache);
   useEffect(() => {
     if (cache) return;
-    pending ??= import("../data/dico.json").then((m) => (cache = m.default as unknown as Record<string, DicoEntry>));
+    pending ??= lazyRetry(() => import("../data/dico.json"))().then((m) => (cache = m.default as unknown as Record<string, DicoEntry>));
     pending.then(setD);
   }, []);
   return d;

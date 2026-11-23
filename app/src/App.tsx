@@ -18,33 +18,36 @@ import Search from "./pages/Search";
 import RecipePage from "./pages/RecipePage";
 import { DictionaryPage, IngredientPage } from "./pages/Dictionnaire";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { lazyRetry } from "./lib/chunkRetry";
 
 // pages chargées à la demande (audit dév 🟠 8) : l'accueil, les fiches et la recherche restent dans le fichier principal
-const Frigo = lazy(() => import("./pages/Frigo"));
-const Courses = lazy(() => import("./pages/Courses"));
-const Cook = lazy(() => import("./pages/Cook"));
-const TechniquesPage = lazy(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquesPage })));
-const TechniquePage = lazy(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquePage })));
-const Pains = lazy(() => import("./pages/Pains"));
-const Sauces = lazy(() => import("./pages/Sauces"));
-const Fetes = lazy(() => import("./pages/Fetes"));
-const MenuPage = lazy(() => import("./pages/Menu"));
-const ZeroDechet = lazy(() => import("./pages/ZeroDechet"));
-const Restes = lazy(() => import("./pages/Restes"));
-const Marche = lazy(() => import("./pages/Marche"));
-const PiqueNique = lazy(() => import("./pages/PiqueNique"));
-const StreetFood = lazy(() => import("./pages/StreetFood"));
-const Marinades = lazy(() => import("./pages/Marinades"));
-const Enfants = lazy(() => import("./pages/Enfants"));
-const Imports = lazy(() => import("./pages/Imports"));
-const Biblio = lazy(() => import("./pages/Biblio"));
-const Profil = lazy(() => import("./pages/Profil"));
-const Onboarding = lazy(() => import("./pages/Onboarding"));
-const Credits = lazy(() => import("./pages/Credits"));
-const Catalogue = lazy(() => import("./pages/Catalogue"));
-const Apprendre = lazy(() => import("./pages/Apprendre"));
-const Semaine = lazy(() => import("./pages/Semaine"));
-const Partage = lazy(() => import("./pages/Partage"));
+// `lazyRetry` (audit dév/UX senior 23/11/2026) : recharge une fois si le chunk a disparu (déploiement entre-temps)
+// plutôt que de rester bloqué sur « Chargement… ».
+const Frigo = lazy(lazyRetry(() => import("./pages/Frigo")));
+const Courses = lazy(lazyRetry(() => import("./pages/Courses")));
+const Cook = lazy(lazyRetry(() => import("./pages/Cook")));
+const TechniquesPage = lazy(lazyRetry(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquesPage }))));
+const TechniquePage = lazy(lazyRetry(() => import("./pages/Techniques").then((m) => ({ default: m.TechniquePage }))));
+const Pains = lazy(lazyRetry(() => import("./pages/Pains")));
+const Sauces = lazy(lazyRetry(() => import("./pages/Sauces")));
+const Fetes = lazy(lazyRetry(() => import("./pages/Fetes")));
+const MenuPage = lazy(lazyRetry(() => import("./pages/Menu")));
+const ZeroDechet = lazy(lazyRetry(() => import("./pages/ZeroDechet")));
+const Restes = lazy(lazyRetry(() => import("./pages/Restes")));
+const Marche = lazy(lazyRetry(() => import("./pages/Marche")));
+const PiqueNique = lazy(lazyRetry(() => import("./pages/PiqueNique")));
+const StreetFood = lazy(lazyRetry(() => import("./pages/StreetFood")));
+const Marinades = lazy(lazyRetry(() => import("./pages/Marinades")));
+const Enfants = lazy(lazyRetry(() => import("./pages/Enfants")));
+const Imports = lazy(lazyRetry(() => import("./pages/Imports")));
+const Biblio = lazy(lazyRetry(() => import("./pages/Biblio")));
+const Profil = lazy(lazyRetry(() => import("./pages/Profil")));
+const Onboarding = lazy(lazyRetry(() => import("./pages/Onboarding")));
+const Credits = lazy(lazyRetry(() => import("./pages/Credits")));
+const Catalogue = lazy(lazyRetry(() => import("./pages/Catalogue")));
+const Apprendre = lazy(lazyRetry(() => import("./pages/Apprendre")));
+const Semaine = lazy(lazyRetry(() => import("./pages/Semaine")));
+const Partage = lazy(lazyRetry(() => import("./pages/Partage")));
 
 // écrans qui n'ont besoin que de l'index des recettes : ils s'affichent sans attendre le détail (étapes, conseils…)
 // Élargi le 21/11/2026 (audit dév senior §1) : ces pages n'affichent que des cartes (titre, région, temps) via
