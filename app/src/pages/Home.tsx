@@ -22,11 +22,16 @@ import { PARCOURS } from "../lib/parcours";
 import { kidFriendly, tonightMin } from "../lib/famille";
 
 // Rubriques : chacune a sa couleur d'étiquette (palette « marché » du Tome 13 §6).
+// Marinades ajoutée (audit dév/UX senior 24/11/2026) : les seuls chemins jusqu'ici étaient Explorer (7ᵉ tuile sur
+// 14, après toute la grille des régions) ou chercher le mot « marinade » — rien depuis l'accueil. C'est un coin
+// « technique » (comme Techniques), pas une envie à manger : une tuile de rubrique, pas une puce d'envie, pour
+// rester cohérent avec la distinction déjà faite entre les deux rangées.
 const ENTRIES = [
   { to: "/explorer", icon: "globe", label: "Cuisines du monde", sub: "par région", tone: "tomato" },
   { to: "/frigo", icon: "carrot", label: "Avec ce que j'ai", sub: "dès 1 ingrédient", tone: "saffron" },
   { to: "/semaine", icon: "calendar", label: "Ma semaine", sub: "menus + courses", tone: "herb" },
   { to: "/techniques", icon: "knife", label: "Techniques", sub: "les gestes en photos", tone: "aubergine" },
+  { to: "/marinades", icon: "marinade", label: "Marinades", sub: "par viande, poisson, légume", tone: "chili" },
   { to: "/fetes", icon: "cake", label: "Fêtes & menus", sub: "recevoir", tone: "berry" },
   { to: "/enfants", icon: "kid", label: "Enfants", sub: "par âge", tone: "pistachio" },
 ];
@@ -36,6 +41,7 @@ const TILE_PHOTO: Record<string, string> = {
   "/enfants": "rubrique/enfants",
   "/pains": "rubrique/pains",
   "/sauces": "rubrique/sauces",
+  "/marinades": "recette/mojo_cubain_porc",
   "/techniques": "rubrique/techniques",
   "/fetes": "rubrique/fetes",
   "/zero-dechet": "rubrique/zero_dechet",
